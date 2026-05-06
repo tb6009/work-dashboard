@@ -1,0 +1,100 @@
+{
+  "id": "091",
+  "currentSituation": {
+    "summary": "기획안 v1.1 + 목차 v1.0 + 4p 압축본 완성. 시장조사 1차 + 학술 레퍼런스 1차 + 인스타 30명 발굴 완료. 원고 미착수.",
+    "phase": "기획·시장조사 단계 → 샘플 챕터 집필 직전",
+    "recentLogs": [
+      {
+        "date": "2026-05-03",
+        "title": "출판 기획안 v1.0~v1.1 + 목차 + SNS 30명 발굴",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260503_log.md",
+        "excerpt": "기획안 8항목 합본 v1.0, 5부×2장×80~90 서브챕터 목차, 4p 압축본, 30명 인스타 발굴 명단."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (현재 상태·다음 액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/PROJECT.md",
+      "fileKind": "md",
+      "summary": "출판 기획·집필 프로젝트 정의. 시장조사·학술 레퍼런스 진행 상태 명시.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "출판 기획안 v1.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/01_기획/08_출판기획안_v1.1.md",
+      "fileKind": "md",
+      "summary": "v1.0 정교화 — 타깃 독자, 차별점, 컨셉, 가제 확정.",
+      "modifiedAt": "2026-05-04"
+    },
+    {
+      "title": "목차 상세 v1.0",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/01_기획/05_목차_상세_v1.0.md",
+      "fileKind": "md",
+      "summary": "5부 × 2장 × 80~90개 서브챕터 — 종합 보고서 3장 기반 구성.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "4p 압축 기획안 (출판사 제안용)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/01_기획/06_출판기획안_4p압축_v1.0.md",
+      "fileKind": "md",
+      "summary": "docx 변환용 압축본 — 출판사 제안용.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "v1.1 정교화 제안 보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/01_기획/07_v1.1_정교화제안_보고서.md",
+      "fileKind": "md",
+      "summary": "v1.0 → v1.1 정교화 사유 정리.",
+      "modifiedAt": "2026-05-04"
+    },
+    {
+      "title": "DM 협업제안 초안",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/01_기획/09_DM협업제안_초안.md",
+      "fileKind": "md",
+      "summary": "30명 인스타 인플루언서 대상 DM 템플릿 초안.",
+      "modifiedAt": "2026-05-04"
+    },
+    {
+      "title": "30명 인스타 발굴 명단",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/06_SNS리서치/30명_발굴_명단.md",
+      "fileKind": "md",
+      "summary": "타깃 독자 도달 가능 인스타 계정 30명 — 책스타그램·심리·과학 카테고리 그룹화.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "그룹 분석 보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/091_몸과마음의과학 출판기획/06_SNS리서치/00_그룹_분석_보고서.md",
+      "fileKind": "md",
+      "summary": "30명을 카테고리별로 묶은 분석 — 메시지·시각결·반응 패턴.",
+      "modifiedAt": "2026-05-03"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "7채널 깊이 캡처 → 9축 평가",
+      "description": "발굴된 30명 중 핵심 7채널을 깊게 캡처하여 9축(메시지·시각·반응 등) 표준 양식으로 평가.",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "샘플 챕터 1편 집필",
+      "description": "5부 중 가장 임팩트 있는 한 챕터(서브챕터 2~3개)를 단행본 톤으로 초고 작성. 출판사 제안 시 동봉용.",
+      "priority": "high",
+      "estimate": "3~5일"
+    },
+    {
+      "title": "09·10 폴더 학술자료 인용 정리",
+      "description": "원본 PDF는 그대로 두고, 091/03_참고자료/에 발췌·인용·페이지 메모만 누적.",
+      "priority": "mid",
+      "estimate": "2일"
+    },
+    {
+      "title": "DM 발송 워크플로 확정",
+      "description": "초안 09를 토대로 실제 발송 절차·답변 템플릿·트래킹 시트.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

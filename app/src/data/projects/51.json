@@ -1,0 +1,111 @@
+{
+  "id": "51",
+  "currentSituation": {
+    "summary": "5편 논문 1차 요약 + 종합정리 완료(04-27). 챗봇 4단계 비교 설계 + 시스템프롬프트 4종 v1 작성(05-01).",
+    "phase": "이론 정리 완료 → 챗봇 평가 실증 단계 직전",
+    "recentLogs": [
+      {
+        "date": "2026-05-01",
+        "title": "챗봇 4단계 비교 설계 — UUID구조화/UUID서사/기본자기입력/진",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/00_프로세스/2026-05-01_4단계챗봇비교_설계로그.md",
+        "excerpt": "MITI 코드와 BOLT 평가법을 차용해 4종 챗봇 시스템프롬프트 v1 확정."
+      },
+      {
+        "date": "2026-05-01",
+        "title": "유사도 검증 설계",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/00_프로세스/2026-05-01_유사도검증설계_작업로그.md",
+        "excerpt": "실제 나 vs 페르소나 챗봇 유사도 평가 프로토콜 설계."
+      },
+      {
+        "date": "2026-05-01",
+        "title": "UUID 기반 vs 직접 입력 구분",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/00_프로세스/2026-05-01_UUID기반_vs_직접입력_구분로그.md"
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/PROJECT.md",
+      "fileKind": "md",
+      "summary": "5편 논문 식별 + 1차 요약·종합 완료 상태 기록.",
+      "modifiedAt": "2026-04-27"
+    },
+    {
+      "title": "진(집사) 챗봇 시스템프롬프트 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/04_연구/05_진_챗봇_시스템프롬프트_v1.md",
+      "fileKind": "md",
+      "summary": "00_personal 진 캐릭터 시스템프롬프트 — 영국 집사풍 톤.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "1.1 UUID구조화 챗봇 시스템프롬프트 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/04_연구/06_1_1_UUID구조화_챗봇_시스템프롬프트_v1.md",
+      "fileKind": "md",
+      "summary": "구조화된 UUID 데이터 기반 페르소나 — 4단계 비교의 첫 모드.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "1.2 UUID서사 챗봇 시스템프롬프트 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/04_연구/07_1_2_UUID서사_챗봇_시스템프롬프트_v1.md",
+      "fileKind": "md",
+      "summary": "UUID + 서사형 데이터 — 4단계 비교의 둘째 모드.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "1.3 기본자기입력 챗봇 시스템프롬프트 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/04_연구/08_1_3_기본자기입력_챗봇_시스템프롬프트_v1.md",
+      "fileKind": "md",
+      "summary": "사용자 직접 입력 기반 페르소나 — 4단계 비교의 셋째 모드.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "4단계 챗봇비교 연구설계",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/03_검증방법론/03_4단계_챗봇비교_연구설계.md",
+      "fileKind": "md",
+      "summary": "4종 챗봇의 정량 비교 설계 + 평가 메트릭.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "실제나-페르소나 유사도 검증설계",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/03_검증방법론/01_실제나_페르소나_유사도_검증설계.md",
+      "fileKind": "md",
+      "summary": "본인의 실제 발화 vs 페르소나 챗봇 발화의 유사도 측정 프로토콜.",
+      "modifiedAt": "2026-05-01"
+    },
+    {
+      "title": "박진현 ko-KR 매칭프로파일 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/051_페르소나 연구/04_연구/04_박진현_koKR_매칭프로파일_v1.md",
+      "fileKind": "md",
+      "summary": "본인 페르소나 ground truth 프로파일 — 비교 기준점.",
+      "modifiedAt": "2026-05-01"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "시스템프롬프트 4종 실제 구동 테스트",
+      "description": "v1 4종을 동일 시나리오에 돌려 응답 차이를 정성·정량 비교. 평가 메트릭은 03_4단계_챗봇비교_연구설계 참조.",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "10-마음 챗봇 v1.5에 MI×LLM 평가 체크리스트 적용",
+      "description": "종합정리에서 도출한 체크리스트를 마음 챗봇 평가에 적용해 검증 가능 여부 확인.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "BOLT 프레임워크 21_연구논문02 인용 가능 여부 검토",
+      "description": "Chiu, Sharma 2024 BOLT를 CPSF 본문에서 인용 가능한지 후반부(결과·방법론) 정밀 독해.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
+      "title": "BOLT 행동 분류 체계 부록 추가",
+      "description": "정밀 독해 결과를 02_종합정리 부록으로 정리.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

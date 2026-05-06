@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Yearly 2026 (v0.3)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  body { background: var(--gray-100); padding: 0; }
+
+  /* ── Top Nav ─────────────────────────────────────────── */
+  .topbar {
+    background: var(--white);
+    border-bottom: var(--border-1);
+    position: sticky; top: 0; z-index: 30;
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: var(--sp-4) var(--sp-8);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo {
+    width: 28px; height: 28px;
+    background: var(--black); color: var(--white);
+    display: grid; place-items: center;
+    font-size: var(--text-xs); font-weight: 700;
+  }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-size: var(--text-sm); font-weight: 700; color: var(--black); }
+  .brand-sub  { font-size: var(--text-2xs); color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 2px; }
+
+  .nav { display: flex; gap: 2px; }
+  .nav a {
+    padding: 6px 14px;
+    font-size: var(--text-sm); font-weight: 500;
+    color: var(--gray-500); text-decoration: none;
+  }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+
+  .build-info { font-size: var(--text-xs); color: var(--gray-400); text-align: right; }
+
+  /* ── Main ────────────────────────────────────────────── */
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-10) var(--sp-8) var(--sp-16); }
+
+  /* ── Hero ────────────────────────────────────────────── */
+  .hero { margin-bottom: var(--sp-12); }
+  .hero-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: var(--sp-8);
+  }
+  .hero-eyebrow {
+    font-size: var(--text-xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--sp-3);
+  }
+  .hero-title {
+    font-size: 80px; font-weight: 300;
+    color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1;
+    margin-bottom: var(--sp-3);
+  }
+  .hero-range { font-size: var(--text-sm); color: var(--gray-500); font-variant-numeric: tabular-nums; }
+  .hero-summary { text-align: right; max-width: 320px; }
+  .hero-summary-label { font-size: var(--text-2xs); color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: var(--sp-2); }
+  .hero-summary-text { font-size: var(--text-base); color: var(--gray-700); font-weight: 500; line-height: var(--leading-relaxed); }
+
+  /* KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--border-1); background: var(--gray-200); }
+  .kpi { background: var(--white); padding: var(--sp-5) var(--sp-6); }
+  .kpi-label {
+    font-size: var(--text-2xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: var(--sp-3);
+  }
+  .kpi-value {
+    font-size: var(--text-4xl); font-weight: 700; color: var(--black);
+    line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight);
+  }
+  .kpi-meta { font-size: var(--text-xs); color: var(--gray-500); margin-top: var(--sp-3); font-variant-numeric: tabular-nums; }
+
+  /* ── Section ─────────────────────────────────────────── */
+  .section { margin-bottom: var(--sp-12); }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-5);
+  }
+  .section-title { font-size: var(--text-xl); font-weight: 700; color: var(--black); letter-spacing: var(--tracking-tight); }
+  .section-meta  { font-size: var(--text-xs); color: var(--gray-400); }
+
+  /* ── 12-Month Grid ───────────────────────────────────── */
+  .months-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-200);
+    border: var(--border-1);
+  }
+  .month-card {
+    background: var(--white);
+    padding: var(--sp-5) var(--sp-5) var(--sp-4);
+    min-height: 132px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  .month-card.future { background: var(--gray-50); }
+  .month-card.future .month-name,
+  .month-card.future .month-files,
+  .month-card.future .month-top,
+  .month-card.future .month-milestone { color: var(--gray-300); }
+  .month-card.current::after {
+    content: 'CURRENT';
+    position: absolute; top: var(--sp-4); right: var(--sp-5);
+    font-size: 9px; font-weight: 700; letter-spacing: var(--tracking-wide);
+    background: var(--black); color: var(--white);
+    padding: 2px 6px;
+  }
+  .month-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-3);
+  }
+  .month-name {
+    font-size: var(--text-sm); font-weight: 600; color: var(--gray-500);
+    font-family: var(--font-mono); letter-spacing: var(--tracking-wide);
+  }
+  .month-files {
+    font-size: var(--text-3xl); font-weight: 700; color: var(--black);
+    font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight);
+    line-height: 1;
+  }
+  .month-files .unit { font-size: var(--text-xs); color: var(--gray-400); font-weight: 400; margin-left: 4px; }
+  .month-top {
+    display: flex; align-items: center; gap: var(--sp-2);
+    margin-top: var(--sp-3); margin-bottom: 4px;
+  }
+  .month-top-chip {
+    display: inline-block; width: 8px; height: 8px;
+    flex-shrink: 0;
+  }
+  .month-top-name {
+    font-size: var(--text-xs); color: var(--gray-700); font-weight: 600;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .month-milestone {
+    font-size: var(--text-xs); color: var(--gray-500);
+    line-height: var(--leading-tight);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .month-empty { color: var(--gray-300); }
+
+  /* ── Chart card (reused) ─────────────────────────────── */
+  .chart-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-6);
+  }
+  .chart-card-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-4);
+  }
+  .chart-card-title { font-size: var(--text-base); font-weight: 600; color: var(--gray-900); }
+  .chart-card-sub   { font-size: var(--text-xs); color: var(--gray-400); }
+  .chart-area-tall { width: 100%; height: 320px; }
+  .chart-area-gantt { width: 100%; height: 480px; }
+
+  /* Legend (custom) */
+  .type-legend {
+    display: flex; flex-wrap: wrap; gap: var(--sp-4);
+    margin-top: var(--sp-4);
+  }
+  .type-legend-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: var(--text-xs); color: var(--gray-500);
+  }
+  .type-legend-swatch { width: 10px; height: 10px; }
+
+  /* ── Vertical milestone timeline ─────────────────────── */
+  .vtimeline {
+    position: relative;
+    padding-left: var(--sp-8);
+  }
+  .vtimeline::before {
+    content: ''; position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--gray-200);
+  }
+  .vt-item {
+    position: relative;
+    padding-bottom: var(--sp-6);
+  }
+  .vt-item:last-child { padding-bottom: 0; }
+  .vt-dot {
+    position: absolute; left: calc(var(--sp-8) * -1 + 2px);
+    top: 6px; width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--gray-700);
+    box-shadow: 0 0 0 4px var(--white);
+  }
+  .vt-dot.milestone { background: var(--black); width: 13px; height: 13px; left: calc(var(--sp-8) * -1 + 1px); top: 5px; }
+  .vt-row {
+    display: flex; align-items: baseline; gap: var(--sp-4);
+    margin-bottom: 4px;
+  }
+  .vt-date {
+    font-size: var(--text-xs); color: var(--gray-500);
+    font-family: var(--font-mono);
+    min-width: 76px;
+  }
+  .vt-tag {
+    font-size: var(--text-2xs); font-weight: 600;
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+    padding: 2px 8px;
+  }
+  .vt-tag.milestone { background: var(--gray-900); color: var(--white); }
+  .vt-title {
+    font-size: var(--text-base); font-weight: 600; color: var(--gray-900);
+    letter-spacing: var(--tracking-tight);
+    padding-left: 92px;
+  }
+  .vt-title.milestone { font-weight: 700; }
+
+  /* ── Insight box ─────────────────────────────────────── */
+  .insight-box {
+    background: var(--warm-100);
+    padding: var(--sp-8);
+    border-left: 4px solid var(--black);
+  }
+  .insight-label {
+    font-size: var(--text-2xs); font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--sp-4);
+  }
+  .insight-list {
+    list-style: none; padding: 0; margin: 0;
+  }
+  .insight-list li {
+    font-size: var(--text-base); color: var(--gray-900);
+    line-height: var(--leading-relaxed);
+    font-weight: 500;
+    padding-left: var(--sp-5); position: relative;
+    margin-bottom: var(--sp-2);
+  }
+  .insight-list li:last-child { margin-bottom: 0; }
+  .insight-list li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--gray-400); font-weight: 400;
+  }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    margin-top: var(--sp-16); padding-top: var(--sp-6);
+    border-top: var(--border-1);
+  }
+  .footer-row {
+    display: flex; justify-content: space-between;
+    font-size: var(--text-xs); color: var(--gray-500);
+  }
+  .footer-row .mono { font-family: var(--font-mono); color: var(--gray-700); }
+  .footer-note { font-size: var(--text-2xs); color: var(--gray-400); margin-top: var(--sp-4); }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">朴</div>
+      <div class="brand-text">
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">CLOUDE_CODE · 27 PROJECTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">현재</a>
+      <a href="#">주간</a>
+      <a href="#">월간</a>
+      <a class="active" href="#">연간</a>
+      <a href="#">프로젝트</a>
+    </nav>
+    <div class="build-info">
+      Build · 2026-05-05 14:00<br>
+      <span style="color:var(--gray-300)">Next · 2026-05-11 09:00 (Mon)</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────── Hero ───────── -->
+  <section class="hero">
+    <div class="hero-head">
+      <div>
+        <div class="hero-eyebrow">YEARLY OVERVIEW</div>
+        <h1 class="hero-title num">2026</h1>
+        <div class="hero-range">5월 5일까지 · 27 프로젝트 · 누적 ~600 변경</div>
+      </div>
+      <div class="hero-summary">
+        <div class="hero-summary-label">한 줄 요약</div>
+        <div class="hero-summary-text">박사논문 두 트랙 동시 진행 · 신규 프로젝트 가속</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">총 변경 파일</div>
+        <div class="kpi-value num">596</div>
+        <div class="kpi-meta">md · tsx · html · sql</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Active 프로젝트</div>
+        <div class="kpi-value num">15</div>
+        <div class="kpi-meta">of 27 total</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신규 (YTD)</div>
+        <div class="kpi-value num">7</div>
+        <div class="kpi-meta">32 · 51 · 00 · 061 · 062 · 063 · 091</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">결정 (Milestones)</div>
+        <div class="kpi-value num">18</div>
+        <div class="kpi-meta">2건/월 평균</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 12-Month Grid ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">월별 활동 그리드</h2>
+      <div class="section-meta">3 × 4 · 1~5월 actual · 6~12월 placeholder</div>
+    </div>
+    <div class="months-grid" id="months-grid"></div>
+  </section>
+
+  <!-- ───────── Stacked Area Chart ───────── -->
+  <section class="section">
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <div>
+          <div class="chart-card-title">프로젝트 유형별 비중 (월별)</div>
+          <div class="chart-card-sub">stacked area · % of monthly file changes</div>
+        </div>
+        <div class="chart-card-sub">2026 · 1~5월 actual</div>
+      </div>
+      <div id="chart-stacked" class="chart-area-tall"></div>
+      <div class="type-legend" id="legend-types"></div>
+    </div>
+  </section>
+
+  <!-- ───────── Project Lifecycle Gantt ───────── -->
+  <section class="section">
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <div>
+          <div class="chart-card-title">프로젝트 라이프사이클</div>
+          <div class="chart-card-sub">top 15 · active span across 12 months · today marker</div>
+        </div>
+        <div class="chart-card-sub">vertical line = today (5/5)</div>
+      </div>
+      <div id="chart-gantt" class="chart-area-gantt"></div>
+    </div>
+  </section>
+
+  <!-- ───────── Annual Milestones ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">연간 결정 타임라인</h2>
+      <div class="section-meta">11건 · 시간순</div>
+    </div>
+    <div class="vtimeline" id="vtimeline"></div>
+  </section>
+
+  <!-- ───────── Annual Insight ───────── -->
+  <section class="section">
+    <div class="insight-box">
+      <div class="insight-label">Annual Insight · 2026 1H</div>
+      <ul class="insight-list">
+        <li>박사논문 두 트랙 동시 진행 (DSAPG, CPSF)</li>
+        <li>신규 프로젝트 7개 — 가속 페이즈 진입</li>
+        <li>출판 기획 첫 실행 (091)</li>
+        <li>관리 마스터 체계 구축 → 27개 프로젝트 동시 운영 가능</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────── Footer ───────── -->
+  <footer>
+    <div class="footer-row">
+      <div>
+        <div style="margin-bottom:4px;">Data sources</div>
+        <div class="mono">docs/logs/*.md · PROJECTS.md · file mtime · git log</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="margin-bottom:4px;">Build · 2026-05-05 14:00 KST</div>
+        <div>Next refresh · 2026-05-11 09:00 (Mon)</div>
+      </div>
+    </div>
+    <div class="footer-note">
+      Personal data (00_personal/data, reports/daily~monthly) excluded by allowlist filter.
+      Foundation: design/foundation/tokens.css (062_논문리더 v0.2 derived).
+    </div>
+  </footer>
+
+</main>
+
+<script>
+/* ───────── Palette ───────── */
+const PALETTE = {
+  black: '#000000', g900: '#1a1a1a', g700: '#404040',
+  g500: '#737373', g400: '#a3a3a3', g300: '#d4d4d4',
+  g200: '#e5e5e5', g100: '#f5f5f5', g50: '#fafafa',
+  warm100: '#ede7e0', warm500: '#8c7765', warm700: '#5c4a3c', warm900: '#2d231b',
+};
+
+const TYPE_COLOR = {
+  research:   '#c9918e',
+  publishing: '#bfac7e',
+  education:  '#c4a07a',
+  product:    '#8aa8c9',
+  design:     '#a593c2',
+  data:       '#8bb89a',
+  system:     '#94a0ad',
+};
+
+const TYPE_LABEL = {
+  research: 'RESEARCH', publishing: 'PUBLISHING', education: 'EDUCATION',
+  product: 'PRODUCT', design: 'DESIGN', data: 'DATA', system: 'SYSTEM',
+};
+
+/* ───────── 12-Month Grid Data ───────── */
+const months = [
+  { name: '1월',  files: 5,   top: null,             topType: null,     ms: null },
+  { name: '2월',  files: 55,  top: 'DSAPG',          topType: 'research', ms: '박사논문 트랙 시작' },
+  { name: '3월',  files: 173, top: 'DSAPG',          topType: 'research', ms: '레퍼런스 시스템 완성' },
+  { name: '4월',  files: 213, top: '51 페르소나',     topType: 'research', ms: '51 신규 등록' },
+  { name: '5월',  files: 142, top: '061 LifeOS',     topType: 'product',  ms: 'LifeOS 1일 배포', current: true },
+  { name: '6월',  future: true },
+  { name: '7월',  future: true },
+  { name: '8월',  future: true },
+  { name: '9월',  future: true },
+  { name: '10월', future: true },
+  { name: '11월', future: true },
+  { name: '12월', future: true },
+];
+
+document.getElementById('months-grid').innerHTML = months.map(m => {
+  if (m.future) {
+    return `<div class="month-card future">
+      <div class="month-head">
+        <div class="month-name">${m.name}</div>
+      </div>
+      <div class="month-files num">—</div>
+      <div class="month-top"><span class="month-empty" style="font-size:var(--text-xs)">미래</span></div>
+      <div class="month-milestone">—</div>
+    </div>`;
+  }
+  const topHtml = m.top
+    ? `<div class="month-top">
+        <span class="month-top-chip" style="background:${TYPE_COLOR[m.topType]}"></span>
+        <span class="month-top-name">${m.top}</span>
+        <span style="font-size:9px;font-weight:600;color:${TYPE_COLOR[m.topType]};letter-spacing:.06em;">${TYPE_LABEL[m.topType]}</span>
+      </div>`
+    : `<div class="month-top"><span class="month-empty" style="font-size:var(--text-xs)">—</span></div>`;
+  return `<div class="month-card${m.current ? ' current' : ''}">
+    <div class="month-head">
+      <div class="month-name">${m.name}</div>
+    </div>
+    <div class="month-files num">${m.files}<span class="unit">files</span></div>
+    ${topHtml}
+    <div class="month-milestone">${m.ms || '—'}</div>
+  </div>`;
+}).join('');
+
+/* ───────── Type Legend ───────── */
+document.getElementById('legend-types').innerHTML = Object.keys(TYPE_COLOR).map(k => `
+  <div class="type-legend-item">
+    <span class="type-legend-swatch" style="background:${TYPE_COLOR[k]}"></span>
+    <span>${TYPE_LABEL[k]}</span>
+  </div>
+`).join('');
+
+/* ───────── Stacked Area: Project type composition by month ─────────
+   Approach: 7 type series stacked. 1~5월 actual estimates summing to monthly totals.
+   6~12월 are zero (rendered dim by zero values; placeholder months still in axis).
+*/
+const monthAxis = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+
+/* Composition (file counts) — 1월:5, 2월:55, 3월:173, 4월:213, 5월:142 */
+const composition = {
+  research:   [2, 35, 130, 95, 25],
+  publishing: [0,  5,  15, 20, 18],
+  education:  [0,  3,   8, 18, 14],
+  product:    [1,  4,   8, 30, 60],
+  design:     [1,  3,   6, 22,  8],
+  data:       [1,  3,   4, 20,  9],
+  system:     [0,  2,   2,  8,  8],
+};
+/* pad to 12 months with zeros */
+const padded = Object.fromEntries(
+  Object.entries(composition).map(([k, arr]) => [k, [...arr, 0,0,0,0,0,0,0]])
+);
+
+const stackedChart = echarts.init(document.getElementById('chart-stacked'));
+stackedChart.setOption({
+  grid: { top: 24, right: 24, bottom: 36, left: 44 },
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: PALETTE.warm900, borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12, fontFamily: 'Inter' }
+  },
+  xAxis: {
+    type: 'category',
+    data: monthAxis,
+    axisLine: { lineStyle: { color: PALETTE.g300 } },
+    axisTick: { show: false },
+    axisLabel: { color: PALETTE.g500, fontSize: 11, fontFamily: 'Inter' }
+  },
+  yAxis: {
+    type: 'value',
+    splitLine: { lineStyle: { color: PALETTE.g100 } },
+    axisLabel: { color: PALETTE.g400, fontSize: 10, fontFamily: 'Inter' }
+  },
+  series: Object.keys(TYPE_COLOR).map(type => ({
+    name: TYPE_LABEL[type],
+    type: 'line',
+    stack: 'total',
+    smooth: 0.2,
+    symbol: 'none',
+    areaStyle: { color: TYPE_COLOR[type], opacity: 0.85 },
+    lineStyle: { width: 0 },
+    emphasis: { focus: 'series' },
+    data: padded[type],
+  })),
+});
+
+/* ───────── Gantt: Project lifecycle ─────────
+   Approach: ECharts custom series. Each row = project. Each bar = active span (start..end month index).
+   Colors by project type. Today line via markLine.
+*/
+const ganttData = [
+  // [yIndex, startMonth, endMonth, name, type]
+  [0,  1, 4.2, '05 DSAPG',         'research'],
+  [1,  3, 4.2, '21 CPSF',          'research'],
+  [2,  3, 4.2, '51 페르소나',       'research'],
+  [3,  3, 4.2, '091 출판',         'publishing'],
+  [4,  2, 4.2, '12 Data_Study',    'education'],
+  [5,  2, 4.2, '31 촬영',          'education'],
+  [6,  3, 4.2, '32 강연',          'education'],
+  [7,  0, 4.2, '10 일상다반사',     'product'],
+  [8,  3, 4.2, '061 LifeOS',       'product'],
+  [9,  4, 4.2, '062 논문리더',      'product'],
+  [10, 4, 4.2, '063 workDashboard','product'],
+  [11, 2, 4.2, '06 AI_Design',     'design'],
+  [12, 2, 4.2, '03 J스트라타',      'design'],
+  [13, 1, 4.2, '03 Data_Once',     'data'],
+  [14, 3, 4.2, '00 personal',      'system'],
+];
+
+const ganttChart = echarts.init(document.getElementById('chart-gantt'));
+ganttChart.setOption({
+  grid: { top: 20, right: 32, bottom: 32, left: 140 },
+  tooltip: {
+    backgroundColor: PALETTE.warm900, borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12, fontFamily: 'Inter' },
+    formatter: (p) => {
+      const d = p.data;
+      return `${d[3]}<br/>${TYPE_LABEL[d[4]]} · ${monthAxis[Math.floor(d[1])]} ~ active`;
+    }
+  },
+  xAxis: {
+    type: 'value',
+    min: 0, max: 12,
+    interval: 1,
+    axisLine: { lineStyle: { color: PALETTE.g300 } },
+    axisTick: { show: false },
+    splitLine: { lineStyle: { color: PALETTE.g100 } },
+    axisLabel: {
+      color: PALETTE.g500, fontSize: 10, fontFamily: 'Inter',
+      formatter: (v) => v >= 1 && v <= 12 ? `${v}월` : ''
+    },
+  },
+  yAxis: {
+    type: 'category',
+    inverse: true,
+    data: ganttData.map(d => d[3]),
+    axisLine: { lineStyle: { color: PALETTE.g300 } },
+    axisTick: { show: false },
+    axisLabel: { color: PALETTE.g700, fontSize: 11, fontFamily: 'Inter', fontWeight: 500 }
+  },
+  series: [{
+    type: 'custom',
+    renderItem: (params, api) => {
+      const yVal = api.value(0);
+      const start = api.coord([api.value(1), yVal]);
+      const end   = api.coord([api.value(2), yVal]);
+      const height = api.size([0, 1])[1] * 0.55;
+      return {
+        type: 'rect',
+        shape: {
+          x: start[0], y: start[1] - height / 2,
+          width: Math.max(end[0] - start[0], 2),
+          height: height,
+        },
+        style: { fill: TYPE_COLOR[api.value(4)], opacity: 0.9 }
+      };
+    },
+    encode: { x: [1, 2], y: 0, tooltip: [3, 4] },
+    data: ganttData,
+    markLine: {
+      symbol: 'none',
+      label: {
+        show: true, position: 'end',
+        formatter: 'TODAY 5/5',
+        color: PALETTE.black, fontSize: 10, fontWeight: 700, fontFamily: 'Inter'
+      },
+      lineStyle: { color: PALETTE.black, width: 1, type: 'solid' },
+      data: [{ xAxis: 4.15 }]
+    }
+  }]
+});
+
+/* ───────── Annual Milestones ───────── */
+const milestones = [
+  { date: '2026-02-XX', type: 'research',   title: 'DSAPG 박사논문 트랙 시작' },
+  { date: '2026-03-29', type: 'design',     title: 'AI_Design 시작' },
+  { date: '2026-04-15', type: 'design',     title: 'J스트라타 가이드라인' },
+  { date: '2026-04-19', type: 'research',   title: 'DSAPG 레퍼런스 시스템 완성' },
+  { date: '2026-04-24', type: 'system',     title: '관리 마스터 구축' },
+  { date: '2026-04-25', type: 'research',   title: 'CPSF 프로포절 SAI 프레임 확정 / 보살피고 v1.5β' },
+  { date: '2026-04-27', type: 'research',   title: '51 페르소나 신규 등록' },
+  { date: '2026-04-29', type: 'education',  title: '32 강연시리즈 트랙 신설 / 00_personal' },
+  { date: '2026-05-02', type: 'product',    title: 'LifeOS 1일 배포', milestone: true },
+  { date: '2026-05-03', type: 'product',    title: '하루 캐릭터 통합' },
+  { date: '2026-05-05', type: 'product',    title: '062 논문리더 / 063 workDashboard 시작' },
+];
+
+document.getElementById('vtimeline').innerHTML = milestones.map(m => {
+  const isMs = !!m.milestone;
+  return `<div class="vt-item">
+    <div class="vt-dot${isMs ? ' milestone' : ''}"></div>
+    <div class="vt-row">
+      <div class="vt-date">${m.date}</div>
+      <div class="vt-tag${isMs ? ' milestone' : ''}" style="${isMs ? '' : `background:${TYPE_COLOR[m.type]}33; color:${TYPE_COLOR[m.type]};`}">
+        ${isMs ? 'MILESTONE · ' : ''}${TYPE_LABEL[m.type]}
+      </div>
+    </div>
+    <div class="vt-title${isMs ? ' milestone' : ''}">${m.title}</div>
+  </div>`;
+}).join('');
+
+window.addEventListener('resize', () => {
+  stackedChart.resize();
+  ganttChart.resize();
+});
+</script>
+
+</body>
+</html>

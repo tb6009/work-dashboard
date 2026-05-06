@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Week 18</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:   { 50:'#EEF1F6', 100:'#D6DDE8', 500:'#3F567C', 700:'#1A2B4A', 900:'#0E1A30' },
+          gold:   { 100:'#F4ECDD', 500:'#C9A96E', 700:'#9C7E45' },
+          sage:   { 100:'#E5EDE7', 500:'#7C9885', 700:'#5A7665' },
+          cream:  '#FAF8F3',
+          ink:    '#0E1A30',
+        },
+        fontFamily: {
+          sans: ['Pretendard', 'system-ui', 'sans-serif'],
+          serif: ['"Noto Serif KR"', 'serif'],
+        },
+        boxShadow: {
+          card: '0 1px 2px rgba(14,26,48,0.06), 0 4px 12px rgba(14,26,48,0.04)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Pretendard', system-ui, sans-serif; }
+  .num-display { font-feature-settings: 'tnum'; letter-spacing: -0.02em; }
+  .scrollbar-thin::-webkit-scrollbar { height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #D6DDE8; border-radius: 3px; }
+  .label-active   { background:#E5EDE7; color:#5A7665; }
+  .label-paused   { background:#F4ECDD; color:#9C7E45; }
+  .label-archived { background:#EEF1F6; color:#3F567C; }
+  .label-new      { background:#1A2B4A; color:#fff; }
+  .strength-bar { background: linear-gradient(90deg, #C9A96E var(--w), #EEF1F6 var(--w)); }
+</style>
+</head>
+<body class="bg-cream text-ink">
+
+<!-- ───────── Top Navigation ───────── -->
+<header class="border-b border-navy-100 bg-white/80 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-[1280px] mx-auto px-8 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 bg-navy-700 text-white grid place-items-center font-serif text-sm">朴</div>
+      <div>
+        <div class="font-serif text-base text-navy-700 leading-tight">박진현 Work Dashboard</div>
+        <div class="text-[11px] text-navy-500 tracking-wide">cloude_Code · 27 Projects</div>
+      </div>
+    </div>
+    <nav class="flex items-center gap-1 text-sm">
+      <a class="px-3 py-1.5 bg-navy-700 text-white rounded">현재</a>
+      <a class="px-3 py-1.5 text-navy-500 hover:bg-navy-50 rounded">주간</a>
+      <a class="px-3 py-1.5 text-navy-500 hover:bg-navy-50 rounded">월간</a>
+      <a class="px-3 py-1.5 text-navy-500 hover:bg-navy-50 rounded">연간</a>
+      <a class="px-3 py-1.5 text-navy-500 hover:bg-navy-50 rounded">프로젝트</a>
+    </nav>
+    <div class="text-xs text-navy-500">
+      Build · 2026-05-05 14:00
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1280px] mx-auto px-8 py-10">
+
+  <!-- ───────── Hero ───────── -->
+  <section class="mb-12">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-gold-700 mb-2">CURRENT WEEK</div>
+        <h1 class="font-serif text-[44px] leading-none text-navy-900 mb-2">2026 · Week 18</h1>
+        <div class="text-navy-500 text-sm">2026-04-27 (월) ─ 2026-05-03 (일)</div>
+      </div>
+      <div class="text-right">
+        <div class="text-xs text-navy-500 mb-1">한 줄 요약</div>
+        <div class="font-serif text-navy-700 text-lg italic">"신규 3개·배포 1건·캐릭터 통합 1건"</div>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-4 gap-4">
+      <div class="bg-white border border-navy-100 p-6 shadow-card">
+        <div class="text-xs text-navy-500 uppercase tracking-wider mb-3">Active 프로젝트</div>
+        <div class="num-display text-[40px] text-navy-900 leading-none">15</div>
+        <div class="text-xs text-sage-700 mt-2">+2 this week</div>
+      </div>
+      <div class="bg-white border border-navy-100 p-6 shadow-card">
+        <div class="text-xs text-navy-500 uppercase tracking-wider mb-3">세션</div>
+        <div class="num-display text-[40px] text-navy-900 leading-none">4</div>
+        <div class="text-xs text-navy-500 mt-2">04-29, 05-01~03</div>
+      </div>
+      <div class="bg-white border border-navy-100 p-6 shadow-card">
+        <div class="text-xs text-navy-500 uppercase tracking-wider mb-3">신규 프로젝트</div>
+        <div class="num-display text-[40px] text-gold-700 leading-none">3</div>
+        <div class="text-xs text-navy-500 mt-2">32 · 061 · 062</div>
+      </div>
+      <div class="bg-white border border-navy-100 p-6 shadow-card">
+        <div class="text-xs text-navy-500 uppercase tracking-wider mb-3">변경 파일</div>
+        <div class="num-display text-[40px] text-navy-900 leading-none">142</div>
+        <div class="text-xs text-navy-500 mt-2">md · tsx · html · sql</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Charts Row ───────── -->
+  <section class="grid grid-cols-3 gap-6 mb-12">
+    <div class="col-span-2 bg-white border border-navy-100 p-6 shadow-card">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="font-serif text-xl text-navy-700">일별 활동 강도</h2>
+        <div class="text-xs text-navy-500">파일 변경 수 (md/tsx/html/json)</div>
+      </div>
+      <div id="chart-daily" style="width:100%;height:280px;"></div>
+    </div>
+    <div class="bg-white border border-navy-100 p-6 shadow-card">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="font-serif text-xl text-navy-700">프로젝트 비중</h2>
+        <div class="text-xs text-navy-500">% of changes</div>
+      </div>
+      <div id="chart-pie" style="width:100%;height:280px;"></div>
+    </div>
+  </section>
+
+  <!-- ───────── Decision Timeline ───────── -->
+  <section class="mb-12">
+    <div class="flex items-baseline justify-between mb-5">
+      <h2 class="font-serif text-2xl text-navy-700">의사결정 타임라인</h2>
+      <div class="text-xs text-navy-500">5건 · 가로 스크롤</div>
+    </div>
+    <div class="relative">
+      <div class="absolute left-0 right-0 top-[34px] h-px bg-navy-100"></div>
+      <div class="flex gap-4 overflow-x-auto scrollbar-thin pb-4 relative">
+
+        <article class="flex-shrink-0 w-[260px]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded-full bg-navy-700 ring-4 ring-cream"></div>
+            <div class="text-xs font-mono text-navy-500">04-29 (수)</div>
+          </div>
+          <div class="bg-white border border-navy-100 p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-wider text-gold-700 mb-1">PROJECT 32</div>
+            <h3 class="font-serif text-navy-900 mb-2">강연시리즈 트랙 신설</h3>
+            <p class="text-xs text-navy-500 leading-relaxed">단발성 폴더가 아니라 회차별 자산화 트랙으로 승격. K-MOOC(31)와 책임 분리.</p>
+          </div>
+        </article>
+
+        <article class="flex-shrink-0 w-[260px]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded-full bg-sage-500 ring-4 ring-cream"></div>
+            <div class="text-xs font-mono text-navy-500">04-29 (수)</div>
+          </div>
+          <div class="bg-white border border-navy-100 p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-wider text-sage-700 mb-1">PROJECT 00</div>
+            <h3 class="font-serif text-navy-900 mb-2">00_personal 단방향 권한</h3>
+            <p class="text-xs text-navy-500 leading-relaxed">개인 비서 시스템은 다른 폴더에 대해 읽기만 허용. 쓰기 절대 금지.</p>
+          </div>
+        </article>
+
+        <article class="flex-shrink-0 w-[260px]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded-full bg-navy-700 ring-4 ring-cream"></div>
+            <div class="text-xs font-mono text-navy-500">05-01 (금)</div>
+          </div>
+          <div class="bg-white border border-navy-100 p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-wider text-gold-700 mb-1">PROJECT 51</div>
+            <h3 class="font-serif text-navy-900 mb-2">챗봇 4단계 비교 설계</h3>
+            <p class="text-xs text-navy-500 leading-relaxed">UUID구조화 / UUID서사 / 기본자기입력 / 진 — 4종 시스템프롬프트 v1 확정.</p>
+          </div>
+        </article>
+
+        <article class="flex-shrink-0 w-[260px]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded-full bg-gold-500 ring-4 ring-cream"></div>
+            <div class="text-xs font-mono text-navy-500">05-02 (토)</div>
+          </div>
+          <div class="bg-white border border-gold-500 p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-wider text-gold-700 mb-1">PROJECT 061 · MILESTONE</div>
+            <h3 class="font-serif text-navy-900 mb-2">LifeOS 1일 만에 배포</h3>
+            <p class="text-xs text-navy-500 leading-relaxed">Next.js 16 + Supabase + ChatGPT API. Vercel 배포 완료 (life-os-7wj2).</p>
+          </div>
+        </article>
+
+        <article class="flex-shrink-0 w-[260px]">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded-full bg-navy-700 ring-4 ring-cream"></div>
+            <div class="text-xs font-mono text-navy-500">05-03 (일)</div>
+          </div>
+          <div class="bg-white border border-navy-100 p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-wider text-gold-700 mb-1">PROJECT 061</div>
+            <h3 class="font-serif text-navy-900 mb-2">'하루' 캐릭터 통합</h3>
+            <p class="text-xs text-navy-500 leading-relaxed">진+모미+마음 → 단일 비서 캐릭터. Daily Insight DB 기반 동적화.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Recent Weeks Navigation ───────── -->
+  <section class="mb-12">
+    <div class="flex items-baseline justify-between mb-5">
+      <h2 class="font-serif text-2xl text-navy-700">최근 주간 이동</h2>
+      <a class="text-xs text-navy-500 hover:text-navy-700 underline underline-offset-4">모든 주간 보기 →</a>
+    </div>
+    <div class="grid grid-cols-5 gap-3">
+      <a class="block bg-white border border-navy-100 p-4 hover:border-navy-700 transition">
+        <div class="text-xs font-mono text-navy-500 mb-1">2026-W14</div>
+        <div class="font-serif text-navy-700">04-06 ~ 04-12</div>
+        <div class="num-display text-2xl text-navy-900 mt-3">12<span class="text-xs text-navy-500 ml-1">files</span></div>
+      </a>
+      <a class="block bg-white border border-navy-100 p-4 hover:border-navy-700 transition">
+        <div class="text-xs font-mono text-navy-500 mb-1">2026-W15</div>
+        <div class="font-serif text-navy-700">04-13 ~ 04-19</div>
+        <div class="num-display text-2xl text-navy-900 mt-3">38<span class="text-xs text-navy-500 ml-1">files</span></div>
+      </a>
+      <a class="block bg-white border border-navy-100 p-4 hover:border-navy-700 transition">
+        <div class="text-xs font-mono text-navy-500 mb-1">2026-W16</div>
+        <div class="font-serif text-navy-700">04-20 ~ 04-26</div>
+        <div class="num-display text-2xl text-navy-900 mt-3">95<span class="text-xs text-navy-500 ml-1">files</span></div>
+      </a>
+      <a class="block bg-white border border-navy-100 p-4 hover:border-navy-700 transition">
+        <div class="text-xs font-mono text-navy-500 mb-1">2026-W17</div>
+        <div class="font-serif text-navy-700">04-27 ~ 05-03</div>
+        <div class="num-display text-2xl text-navy-900 mt-3">68<span class="text-xs text-navy-500 ml-1">files</span></div>
+      </a>
+      <a class="block bg-navy-700 text-white p-4 ring-2 ring-gold-500">
+        <div class="text-xs font-mono text-gold-100 mb-1">2026-W18 · CURRENT</div>
+        <div class="font-serif">04-27 ~ 05-03</div>
+        <div class="num-display text-2xl mt-3">142<span class="text-xs text-navy-100 ml-1">files</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────── Active Project Grid ───────── -->
+  <section class="mb-12">
+    <div class="flex items-baseline justify-between mb-5">
+      <h2 class="font-serif text-2xl text-navy-700">Active 프로젝트</h2>
+      <div class="text-xs text-navy-500">15개 · 강도 막대 = 이번 주 기여</div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4" id="project-grid">
+      <!-- 카드는 JS로 렌더 -->
+    </div>
+  </section>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="border-t border-navy-100 pt-6 mt-16">
+    <div class="flex justify-between text-xs text-navy-500">
+      <div>
+        <div class="mb-1">Data sources:</div>
+        <div class="font-mono text-navy-700">docs/logs/*.md · PROJECTS.md · file mtime · git log</div>
+      </div>
+      <div class="text-right">
+        <div class="mb-1">Build · 2026-05-05 14:00 KST</div>
+        <div>Next refresh · 2026-05-11 09:00 (Mon)</div>
+      </div>
+    </div>
+    <div class="text-[10px] text-navy-500 mt-4">
+      Personal data (00_personal/data, reports/daily~monthly) excluded by allowlist filter.
+      Built with Next.js 16 + ECharts. Deployed on Vercel.
+    </div>
+  </footer>
+
+</main>
+
+<script>
+/* ───────── Daily Activity Bar Chart ───────── */
+const dailyChart = echarts.init(document.getElementById('chart-daily'));
+dailyChart.setOption({
+  grid: { top: 20, right: 20, bottom: 40, left: 40 },
+  xAxis: {
+    type: 'category',
+    data: ['04-27\n월','04-28\n화','04-29\n수','04-30\n목','05-01\n금','05-02\n토','05-03\n일'],
+    axisLine: { lineStyle: { color: '#D6DDE8' } },
+    axisTick: { show: false },
+    axisLabel: { color: '#3F567C', fontSize: 11, lineHeight: 14 }
+  },
+  yAxis: {
+    type: 'value',
+    splitLine: { lineStyle: { color: '#EEF1F6' } },
+    axisLabel: { color: '#3F567C', fontSize: 10 }
+  },
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: '#1A2B4A',
+    borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12 }
+  },
+  series: [{
+    type: 'bar',
+    data: [5, 0, 25, 0, 30, 50, 40],
+    barWidth: 36,
+    itemStyle: {
+      color: (params) => {
+        // 토요일(05-02) = milestone 강조
+        return params.dataIndex === 5 ? '#C9A96E' : '#1A2B4A';
+      }
+    },
+    label: {
+      show: true,
+      position: 'top',
+      color: '#1A2B4A',
+      fontSize: 11,
+      formatter: (p) => p.value > 0 ? p.value : ''
+    }
+  }]
+});
+
+/* ───────── Project Weight Donut ───────── */
+const pieChart = echarts.init(document.getElementById('chart-pie'));
+pieChart.setOption({
+  tooltip: {
+    trigger: 'item',
+    backgroundColor: '#1A2B4A',
+    borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12 },
+    formatter: '{b}<br/>{c}% · {d}%'
+  },
+  legend: {
+    bottom: 0,
+    left: 'center',
+    itemWidth: 8,
+    itemHeight: 8,
+    textStyle: { color: '#3F567C', fontSize: 10 }
+  },
+  series: [{
+    type: 'pie',
+    radius: ['52%', '76%'],
+    center: ['50%', '42%'],
+    avoidLabelOverlap: true,
+    itemStyle: { borderColor: '#fff', borderWidth: 2 },
+    label: { show: false },
+    data: [
+      { value: 35, name: '061 LifeOS',     itemStyle: { color: '#1A2B4A' } },
+      { value: 20, name: '051 페르소나',    itemStyle: { color: '#3F567C' } },
+      { value: 18, name: '091 출판',       itemStyle: { color: '#C9A96E' } },
+      { value: 10, name: '32 강연',        itemStyle: { color: '#9C7E45' } },
+      { value: 8,  name: '062 논문리더',    itemStyle: { color: '#7C9885' } },
+      { value: 6,  name: '00 personal',    itemStyle: { color: '#5A7665' } },
+      { value: 3,  name: '관리 마스터',     itemStyle: { color: '#D6DDE8' } },
+    ]
+  }]
+});
+
+/* ───────── Active Project Cards ───────── */
+const projects = [
+  { id:'061', name:'LifeOS',           define:'개인 라이프 관리 웹앱 (Next.js+Supabase)',  next:'Recommendation DB 저장→주간 대시보드',     w:95, label:'new' },
+  { id:'051', name:'페르소나 연구',     define:'MI·LLM 상담 평가 + 챗봇 4단계 비교',       next:'시스템프롬프트 4종 실제 구동 테스트',      w:75, label:'active' },
+  { id:'091', name:'몸과마음의과학 출판', define:'09 자료 기반 단행본·전자책 출판 기획',       next:'7채널 깊이 캡처 → 9축 평가',              w:70, label:'active' },
+  { id:'062', name:'논문리더',          define:'Obsidian+Supabase 공유 Work 앱 v0.1',       next:'마이그레이션 SQL + 화면설계',              w:60, label:'new' },
+  { id:'32',  name:'강연시리즈',        define:'외부 강연·세미나 회차별 콘텐츠 트랙',         next:'01회차 슬라이드 HTML 렌더링',             w:55, label:'new' },
+  { id:'21',  name:'연구논문02 (CPSF)',  define:'박사 프로포절: AI×CPSF, SAI 중심 프레임',     next:'심사쟁점 #1 처리 → 본문 집필',            w:35, label:'active' },
+  { id:'05',  name:'DSAPG',            define:'박사논문 IJHCS 타겟, 레퍼런스 시스템 완성',   next:'논문 초안 집필 시작',                     w:30, label:'active' },
+  { id:'10',  name:'일상다반사',         define:'"마음" 챗봇 + 자료 자동수집',               next:'Phase 5 자문',                           w:25, label:'active' },
+  { id:'31',  name:'촬영용 스크립트',     define:'K-MOOC AI 시대의 비즈니스 디자인 대본',      next:'미완성 주차 파악',                        w:15, label:'active' },
+  { id:'22',  name:'Data_Kaywon',      define:'계원예대 2026 연구계획 수립',               next:'종합분석보고서 v08',                     w:10, label:'active' },
+  { id:'12',  name:'Data_Study',       define:'데이터 시각화·도표차트 강의',                next:'PPT 추가 사례 보완',                     w:8,  label:'active' },
+  { id:'11',  name:'디자인에이전트',     define:'"자인" 디자인 수업 도우미',                 next:'트렌드 자료 업데이트',                    w:6,  label:'active' },
+  { id:'03a', name:'Data_Once',        define:'Oncefilm 마케팅 리서치·페르소나 설계',       next:'persona_lab 결과 정리',                   w:4,  label:'active' },
+  { id:'03b', name:'Data_Jstrata',     define:'J스트라타 레스베라트롤크림 브랜드 디자인',     next:'가이드라인 최종 확정',                    w:3,  label:'active' },
+  { id:'06',  name:'AI_Design',        define:'Supanova 디자인 스킬 (랜딩페이지 엔진)',      next:'upstream 동기화 확인',                    w:2,  label:'active' },
+];
+
+const labelMap = {
+  new:      { cls:'label-new',      text:'NEW' },
+  active:   { cls:'label-active',   text:'ACTIVE' },
+  paused:   { cls:'label-paused',   text:'PAUSED' },
+  archived: { cls:'label-archived', text:'ARCHIVED' },
+};
+
+const grid = document.getElementById('project-grid');
+grid.innerHTML = projects.map(p => `
+  <article class="bg-white border border-navy-100 p-5 shadow-card hover:border-navy-700 transition cursor-pointer">
+    <div class="flex items-start justify-between mb-3">
+      <div class="flex items-baseline gap-2">
+        <span class="font-mono text-xs text-navy-500">#${p.id}</span>
+        <h3 class="font-serif text-lg text-navy-900">${p.name}</h3>
+      </div>
+      <span class="text-[9px] tracking-wider px-2 py-0.5 ${labelMap[p.label].cls}">${labelMap[p.label].text}</span>
+    </div>
+    <p class="text-xs text-navy-500 leading-relaxed mb-4 min-h-[32px]">${p.define}</p>
+    <div class="border-t border-navy-100 pt-3">
+      <div class="text-[10px] uppercase tracking-wider text-navy-500 mb-1">Next</div>
+      <div class="text-xs text-navy-700 mb-3">${p.next}</div>
+      <div class="flex items-center gap-2">
+        <div class="flex-1 h-1.5 bg-navy-50 rounded-full overflow-hidden">
+          <div class="h-full bg-gold-500" style="width:${p.w}%"></div>
+        </div>
+        <span class="text-[10px] font-mono text-navy-500 w-8 text-right">${p.w}%</span>
+      </div>
+    </div>
+  </article>
+`).join('');
+
+/* ───────── Resize ───────── */
+window.addEventListener('resize', () => {
+  dailyChart.resize();
+  pieChart.resize();
+});
+</script>
+
+</body>
+</html>

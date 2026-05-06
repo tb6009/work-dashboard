@@ -1,0 +1,65 @@
+{
+  "id": "32",
+  "currentSituation": {
+    "summary": "01회차 슬라이드 본문(569줄) + 디자인 브리프(291줄) 완료. HTML 렌더링 + 발표 후기 작성 남음.",
+    "phase": "01회차 콘텐츠 작성 완료 → 렌더링·발표 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-29",
+        "title": "32_강연시리즈 신규 트랙 신설 — 01회차 콘텐츠 승격",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260429_log.md",
+        "excerpt": "단발성 docs/PT_AI진화여정/ → 회차별 자산화 트랙으로 승격. 31번(K-MOOC)와 책임 분리 명문화."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (회차 목록·트랙 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/32_강연시리즈/PROJECT.md",
+      "fileKind": "md",
+      "summary": "외부 강연·세미나 회차별 콘텐츠 트랙 정의. 01회차 상세 + 7-Stage Arc.",
+      "modifiedAt": "2026-04-29"
+    },
+    {
+      "title": "01회차 슬라이드 본문",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/32_강연시리즈/01_AI진화여정_2026-04/01_슬라이드_본문.md",
+      "fileKind": "md",
+      "summary": "AI진화여정 22~25 슬라이드 본문 — 7-Stage Arc 기반 1인 프로페셔널 변화 서사.",
+      "modifiedAt": "2026-04-29"
+    },
+    {
+      "title": "01회차 디자인 브리프",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/32_강연시리즈/01_AI진화여정_2026-04/02_DESIGN_BRIEF.md",
+      "fileKind": "md",
+      "summary": "Editorial Navy + Warm Accent 비주얼 디렉션 (#1A2B4A / #C9A96E / #7C9885) — 폰트·여백·HEX 코드 명시.",
+      "modifiedAt": "2026-04-29"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "01회차 슬라이드 HTML 렌더링",
+      "description": "Claude Artifacts 또는 reveal.js로 22~25장 HTML 변환. 디자인 브리프 그대로 적용.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "발표 리허설 시간 측정",
+      "description": "25~30분 fit 체크. 슬라이드별 분량 조정 필요 시 본문 수정.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "발표 후 03_발표후기.md 추가",
+      "description": "청중 Q&A · 피드백 · 다음 회차 개선점 정리.",
+      "priority": "mid",
+      "estimate": "반나절 (발표 직후)"
+    },
+    {
+      "title": "시리즈화 검토",
+      "description": "AI진화여정을 코치 협회 외 추가 청중(교수·디자이너·1인기업)으로 확장 가능성 검토. 슬라이드 재사용 가이드라인 정형화.",
+      "priority": "low",
+      "estimate": "1일 (기획)"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

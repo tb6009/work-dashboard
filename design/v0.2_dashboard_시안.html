@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Week 18 (v0.2)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  body { background: var(--gray-100); padding: 0; }
+
+  /* ── Top Nav ─────────────────────────────────────────── */
+  .topbar {
+    background: var(--white);
+    border-bottom: var(--border-1);
+    position: sticky; top: 0; z-index: 30;
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: var(--sp-4) var(--sp-8);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo {
+    width: 28px; height: 28px;
+    background: var(--black); color: var(--white);
+    display: grid; place-items: center;
+    font-size: var(--text-xs); font-weight: 700;
+  }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-size: var(--text-sm); font-weight: 700; color: var(--black); }
+  .brand-sub  { font-size: var(--text-2xs); color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 2px; }
+
+  .nav { display: flex; gap: 2px; }
+  .nav a {
+    padding: 6px 14px;
+    font-size: var(--text-sm); font-weight: 500;
+    color: var(--gray-500); text-decoration: none;
+  }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+
+  .build-info { font-size: var(--text-xs); color: var(--gray-400); text-align: right; }
+
+  /* ── Main ────────────────────────────────────────────── */
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-10) var(--sp-8) var(--sp-16); }
+
+  /* ── Hero ────────────────────────────────────────────── */
+  .hero { margin-bottom: var(--sp-12); }
+  .hero-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: var(--sp-8);
+  }
+  .hero-eyebrow {
+    font-size: var(--text-xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--sp-2);
+  }
+  .hero-title {
+    font-size: 50px; font-weight: 300;
+    color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1;
+    margin-bottom: var(--sp-2);
+  }
+  .hero-range { font-size: var(--text-sm); color: var(--gray-500); font-variant-numeric: tabular-nums; }
+  .hero-summary { text-align: right; max-width: 320px; }
+  .hero-summary-label { font-size: var(--text-2xs); color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: var(--sp-2); }
+  .hero-summary-text { font-size: var(--text-base); color: var(--gray-700); font-weight: 500; line-height: var(--leading-relaxed); }
+
+  /* KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--border-1); background: var(--gray-200); }
+  .kpi {
+    background: var(--white); padding: var(--sp-5) var(--sp-6);
+  }
+  .kpi-label {
+    font-size: var(--text-2xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: var(--sp-3);
+  }
+  .kpi-value {
+    font-size: var(--text-4xl); font-weight: 700; color: var(--black);
+    line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight);
+  }
+  .kpi-value.accent { color: var(--gray-900); }
+  .kpi-meta { font-size: var(--text-xs); color: var(--gray-500); margin-top: var(--sp-3); font-variant-numeric: tabular-nums; }
+
+  /* ── Section ─────────────────────────────────────────── */
+  .section { margin-bottom: var(--sp-12); }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-5);
+  }
+  .section-title { font-size: var(--text-xl); font-weight: 700; color: var(--black); letter-spacing: var(--tracking-tight); }
+  .section-meta  { font-size: var(--text-xs); color: var(--gray-400); }
+
+  /* ── Charts ──────────────────────────────────────────── */
+  .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: var(--sp-5); }
+  .chart-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-6);
+  }
+  .chart-card-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-4);
+  }
+  .chart-card-title { font-size: var(--text-base); font-weight: 600; color: var(--gray-900); }
+  .chart-card-sub   { font-size: var(--text-xs); color: var(--gray-400); }
+  .chart-area { width: 100%; height: 260px; }
+
+  /* ── Timeline ────────────────────────────────────────── */
+  .timeline-track { position: relative; }
+  .timeline-line {
+    position: absolute; left: 0; right: 0; top: 30px;
+    height: 1px; background: var(--gray-200);
+  }
+  .timeline-list {
+    display: flex; gap: var(--sp-4); overflow-x: auto;
+    padding-bottom: var(--sp-4); position: relative;
+  }
+  .timeline-list::-webkit-scrollbar { height: 6px; }
+  .timeline-list::-webkit-scrollbar-thumb { background: var(--gray-300); }
+  .timeline-item { flex-shrink: 0; width: 248px; }
+  .timeline-marker { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+  .timeline-dot {
+    width: 11px; height: 11px; border-radius: 50%; background: var(--gray-700);
+    box-shadow: 0 0 0 4px var(--gray-100);
+  }
+  .timeline-dot.milestone { background: var(--black); width: 13px; height: 13px; }
+  .timeline-date { font-size: var(--text-xs); color: var(--gray-500); font-family: var(--font-mono); }
+  .timeline-card {
+    background: var(--white); border: var(--border-1); padding: var(--sp-4);
+  }
+  .timeline-card.milestone { border-color: var(--black); }
+  .timeline-tag {
+    font-size: var(--text-2xs); font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+    margin-bottom: var(--sp-2);
+  }
+  .timeline-tag.ms { color: var(--black); }
+  .timeline-card h3 { font-size: var(--text-base); font-weight: 700; color: var(--gray-900); margin-bottom: var(--sp-2); letter-spacing: var(--tracking-tight); }
+  .timeline-card p { font-size: var(--text-xs); color: var(--gray-500); line-height: var(--leading-relaxed); }
+
+  /* ── Recent Weeks ────────────────────────────────────── */
+  .weeks-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-3); }
+  .week-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-4); text-decoration: none; display: block;
+    transition: border-color .15s;
+  }
+  .week-card:hover { border-color: var(--gray-700); }
+  .week-card.current { background: var(--black); color: var(--white); border-color: var(--black); }
+  .week-id { font-size: var(--text-xs); font-family: var(--font-mono); color: var(--gray-500); margin-bottom: var(--sp-1); }
+  .week-card.current .week-id { color: var(--gray-300); }
+  .week-range { font-size: var(--text-sm); color: var(--gray-700); font-weight: 500; }
+  .week-card.current .week-range { color: var(--white); }
+  .week-files { font-size: var(--text-2xl); font-weight: 700; color: var(--black); margin-top: var(--sp-3); font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight); }
+  .week-card.current .week-files { color: var(--white); }
+  .week-files .unit { font-size: var(--text-xs); color: var(--gray-400); font-weight: 400; margin-left: 4px; }
+  .week-card.current .week-files .unit { color: var(--gray-300); }
+  .week-current-badge {
+    display: inline-block; font-size: 9px; font-weight: 700;
+    background: var(--white); color: var(--black);
+    padding: 1px 6px; margin-top: var(--sp-2);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  /* ══════════════════════════════════════════════════════
+     ACTIVE PROJECTS — 2 COLUMN GRID, 2 COLUMN INTERNAL
+     ══════════════════════════════════════════════════════ */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* 외부 2열 */
+    column-gap: 10px;                   /* 좌우 컬럼 사이 블록 분리 */
+    row-gap: 1px;                       /* 위아래는 얇은 라인만 */
+    background: var(--gray-200);        /* row-gap 1px 채우기 */
+  }
+  .project-tile {
+    position: relative;
+    background: var(--white);
+    padding: var(--sp-4) var(--sp-5) var(--sp-4) calc(var(--sp-5) + 4px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);  /* 내부 2열: 메타 / 액션 */
+    gap: var(--sp-5);
+    align-items: center;
+    min-height: 64px;
+    cursor: pointer;
+    transition: background .12s;
+    border-top: var(--border-1);
+    border-bottom: var(--border-1);
+  }
+  .project-tile:hover { background: var(--gray-50); }
+  /* 좌측 4px 컬러 스트립 — 프로젝트 유형 표시 (062 v0.3 패턴 차용) */
+  .project-tile::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--type-color, var(--gray-300));
+  }
+
+  /* 좌측 — 메타 영역 */
+  .tile-left { min-width: 0; }
+  .tile-head {
+    display: flex; align-items: center; gap: var(--sp-2);
+    margin-bottom: 2px;
+  }
+  .tile-id {
+    font-size: var(--text-xs); font-family: var(--font-mono);
+    color: var(--gray-400); font-weight: 500; min-width: 28px;
+  }
+  .tile-name {
+    font-size: var(--text-base); font-weight: 700; color: var(--gray-900);
+    letter-spacing: var(--tracking-tight);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tile-define {
+    font-size: var(--text-xs); color: var(--gray-500);
+    line-height: var(--leading-tight);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    margin-left: 36px;       /* tile-id 폭만큼 들여쓰기로 정렬 */
+  }
+  .tile-chip-row {
+    display: flex; align-items: center; gap: var(--sp-2); margin-left: 36px; margin-top: 4px;
+  }
+
+  /* 우측 — 액션 영역 */
+  .tile-right {
+    min-width: 0;
+    border-left: 1px solid var(--gray-200);
+    padding-left: var(--sp-5);
+  }
+  .tile-next-label {
+    font-size: 9px; font-weight: 700; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+    margin-bottom: 2px;
+  }
+  .tile-next {
+    font-size: var(--text-sm); color: var(--gray-900); font-weight: 500;
+    line-height: var(--leading-tight);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .tile-imp-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: var(--sp-2);
+  }
+  .tile-imp-pct {
+    font-size: var(--text-xs); color: var(--gray-500);
+    font-variant-numeric: tabular-nums; font-weight: 500;
+  }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    margin-top: var(--sp-16); padding-top: var(--sp-6);
+    border-top: var(--border-1);
+  }
+  .footer-row {
+    display: flex; justify-content: space-between;
+    font-size: var(--text-xs); color: var(--gray-500);
+  }
+  .footer-row .mono { font-family: var(--font-mono); color: var(--gray-700); }
+  .footer-note { font-size: var(--text-2xs); color: var(--gray-400); margin-top: var(--sp-4); }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">朴</div>
+      <div class="brand-text">
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">CLOUDE_CODE · 27 PROJECTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="active" href="#">현재</a>
+      <a href="#">주간</a>
+      <a href="#">월간</a>
+      <a href="#">연간</a>
+      <a href="#">프로젝트</a>
+    </nav>
+    <div class="build-info">
+      Build · 2026-05-05 14:00<br>
+      <span style="color:var(--gray-300)">Next · 2026-05-11 09:00 (Mon)</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────── Hero ───────── -->
+  <section class="hero">
+    <div class="hero-head">
+      <div>
+        <div class="hero-eyebrow">CURRENT WEEK</div>
+        <h1 class="hero-title num">2026 · Week 18</h1>
+        <div class="hero-range">2026-04-27 (월) ─ 2026-05-03 (일)</div>
+      </div>
+      <div class="hero-summary">
+        <div class="hero-summary-label">한 줄 요약</div>
+        <div class="hero-summary-text">신규 3개 · 배포 1건 · 캐릭터 통합 1건</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Active 프로젝트</div>
+        <div class="kpi-value num">15</div>
+        <div class="kpi-meta">+2 this week</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">세션</div>
+        <div class="kpi-value num">4</div>
+        <div class="kpi-meta">04-29 · 05-01~03</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신규 프로젝트</div>
+        <div class="kpi-value num">3</div>
+        <div class="kpi-meta">32 · 061 · 062</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">변경 파일</div>
+        <div class="kpi-value num">142</div>
+        <div class="kpi-meta">md · tsx · html · sql</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Charts Row ───────── -->
+  <section class="section">
+    <div class="charts-row">
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div class="chart-card-title">일별 활동 강도</div>
+          <div class="chart-card-sub">파일 변경 수 · md/tsx/html/json</div>
+        </div>
+        <div id="chart-daily" class="chart-area"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div class="chart-card-title">프로젝트 비중</div>
+          <div class="chart-card-sub">% of changes</div>
+        </div>
+        <div id="chart-pie" class="chart-area"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Decision Timeline ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">의사결정 타임라인</h2>
+      <div class="section-meta">5건 · 가로 스크롤</div>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-line"></div>
+      <div class="timeline-list">
+
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">04-29 (수)</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-tag">PROJECT 32</div>
+            <h3>강연시리즈 트랙 신설</h3>
+            <p>단발성 폴더가 아니라 회차별 자산화 트랙으로 승격. K-MOOC(31)와 책임 분리.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">04-29 (수)</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-tag">PROJECT 00</div>
+            <h3>00_personal 단방향 권한</h3>
+            <p>개인 비서 시스템은 다른 폴더에 대해 읽기만 허용. 쓰기 절대 금지.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">05-01 (금)</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-tag">PROJECT 51</div>
+            <h3>챗봇 4단계 비교 설계</h3>
+            <p>UUID구조화 / UUID서사 / 기본자기입력 / 진 — 4종 시스템프롬프트 v1 확정.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot milestone"></div>
+            <div class="timeline-date">05-02 (토)</div>
+          </div>
+          <div class="timeline-card milestone">
+            <div class="timeline-tag ms">PROJECT 061 · MILESTONE</div>
+            <h3>LifeOS 1일 만에 배포</h3>
+            <p>Next.js 16 + Supabase + ChatGPT API. Vercel 배포 완료 (life-os-7wj2).</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">05-03 (일)</div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-tag">PROJECT 061</div>
+            <h3>'하루' 캐릭터 통합</h3>
+            <p>진+모미+마음 → 단일 비서 캐릭터. Daily Insight DB 기반 동적화.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Recent Weeks ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">최근 주간 이동</h2>
+      <a class="section-meta" href="#" style="color:var(--gray-700);text-decoration:underline;text-underline-offset:3px;">모든 주간 보기 →</a>
+    </div>
+    <div class="weeks-grid">
+      <a class="week-card" href="#">
+        <div class="week-id">2026-W14</div>
+        <div class="week-range">04-06 ~ 04-12</div>
+        <div class="week-files">12<span class="unit">files</span></div>
+      </a>
+      <a class="week-card" href="#">
+        <div class="week-id">2026-W15</div>
+        <div class="week-range">04-13 ~ 04-19</div>
+        <div class="week-files">38<span class="unit">files</span></div>
+      </a>
+      <a class="week-card" href="#">
+        <div class="week-id">2026-W16</div>
+        <div class="week-range">04-20 ~ 04-26</div>
+        <div class="week-files">95<span class="unit">files</span></div>
+      </a>
+      <a class="week-card" href="#">
+        <div class="week-id">2026-W17</div>
+        <div class="week-range">04-27 ~ 05-03</div>
+        <div class="week-files">68<span class="unit">files</span></div>
+      </a>
+      <a class="week-card current" href="#">
+        <div class="week-id">2026-W18</div>
+        <div class="week-range">04-27 ~ 05-03</div>
+        <div class="week-files">142<span class="unit">files</span></div>
+        <div class="week-current-badge">CURRENT</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────── Active Projects (2-col grid, 2-col internal) ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">Active 프로젝트</h2>
+      <div class="section-meta">15개 · 좌(메타) ─ 우(다음 액션) · 중요도 = 점</div>
+    </div>
+    <div class="projects-grid" id="project-grid"></div>
+  </section>
+
+  <!-- ───────── Footer ───────── -->
+  <footer>
+    <div class="footer-row">
+      <div>
+        <div style="margin-bottom:4px;">Data sources</div>
+        <div class="mono">docs/logs/*.md · PROJECTS.md · file mtime · git log</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="margin-bottom:4px;">Build · 2026-05-05 14:00 KST</div>
+        <div>Next refresh · 2026-05-11 09:00 (Mon)</div>
+      </div>
+    </div>
+    <div class="footer-note">
+      Personal data (00_personal/data, reports/daily~monthly) excluded by allowlist filter.
+      Foundation: design/foundation/tokens.css (062_논문리더 v0.2 derived).
+    </div>
+  </footer>
+
+</main>
+
+<script>
+/* ───────── ECharts: greyscale + warm + type palette ───────── */
+const PALETTE = {
+  black: '#000000', g900: '#1a1a1a', g700: '#404040',
+  g500: '#737373', g400: '#a3a3a3', g300: '#d4d4d4',
+  g200: '#e5e5e5', g100: '#f5f5f5',
+  /* warm gray (orange-tinted) — bar 차트 기본 */
+  warm500: '#8c7765',
+  warm700: '#5c4a3c',
+  warm900: '#2d231b',
+  warm100: '#ede7e0',
+};
+
+/* Project type → color mapping (foundation tokens 동기화) */
+const TYPE_COLOR = {
+  research:   '#c9918e',  // red    — 박사논문·연구
+  publishing: '#bfac7e',  // amber  — 출판·집필
+  education:  '#c4a07a',  // orange — 강의·강연
+  product:    '#8aa8c9',  // blue   — 앱·챗봇
+  design:     '#a593c2',  // violet — 디자인·브랜드
+  data:       '#8bb89a',  // green  — 데이터·리서치
+  system:     '#94a0ad',  // slate  — 개인·인프라
+};
+
+/* Daily Activity — warm gray bars */
+const dailyChart = echarts.init(document.getElementById('chart-daily'));
+dailyChart.setOption({
+  grid: { top: 24, right: 16, bottom: 36, left: 36 },
+  xAxis: {
+    type: 'category',
+    data: ['04-27\n월','04-28\n화','04-29\n수','04-30\n목','05-01\n금','05-02\n토','05-03\n일'],
+    axisLine: { lineStyle: { color: PALETTE.g300 } },
+    axisTick: { show: false },
+    axisLabel: { color: PALETTE.g500, fontSize: 10, lineHeight: 13, fontFamily: 'Inter' }
+  },
+  yAxis: {
+    type: 'value',
+    splitLine: { lineStyle: { color: PALETTE.g100 } },
+    axisLabel: { color: PALETTE.g400, fontSize: 10, fontFamily: 'Inter' }
+  },
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: PALETTE.warm900,
+    borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12, fontFamily: 'Inter' }
+  },
+  series: [{
+    type: 'bar',
+    data: [5, 0, 25, 0, 30, 50, 40],
+    barWidth: 28,
+    itemStyle: {
+      color: (p) => p.dataIndex === 5 ? PALETTE.warm900 : PALETTE.warm500,
+      borderRadius: [1, 1, 0, 0]
+    },
+    label: {
+      show: true, position: 'top',
+      color: PALETTE.warm700, fontSize: 11, fontWeight: 600, fontFamily: 'Inter',
+      formatter: (p) => p.value > 0 ? p.value : ''
+    }
+  }]
+});
+
+/* Project Pie — by project type (color coding) */
+const pieChart = echarts.init(document.getElementById('chart-pie'));
+pieChart.setOption({
+  tooltip: {
+    trigger: 'item',
+    backgroundColor: PALETTE.warm900, borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12, fontFamily: 'Inter' },
+    formatter: '{b}<br/>{c}% · {d}%'
+  },
+  legend: {
+    bottom: 0, left: 'center',
+    itemWidth: 8, itemHeight: 8,
+    textStyle: { color: PALETTE.g500, fontSize: 10, fontFamily: 'Inter' }
+  },
+  series: [{
+    type: 'pie',
+    radius: ['52%', '76%'],
+    center: ['50%', '42%'],
+    avoidLabelOverlap: true,
+    itemStyle: { borderColor: '#fff', borderWidth: 2 },
+    label: { show: false },
+    data: [
+      { value: 35, name: '061 LifeOS',  itemStyle: { color: TYPE_COLOR.product } },
+      { value: 20, name: '051 페르소나', itemStyle: { color: TYPE_COLOR.research } },
+      { value: 18, name: '091 출판',    itemStyle: { color: TYPE_COLOR.publishing } },
+      { value: 10, name: '32 강연',     itemStyle: { color: TYPE_COLOR.education } },
+      { value:  8, name: '062 논문리더', itemStyle: { color: '#b0c2d3' } }, /* product 톤 약간 옅게 — 같은 유형 구분 */
+      { value:  6, name: '00 personal', itemStyle: { color: TYPE_COLOR.system } },
+      { value:  3, name: '관리 마스터',  itemStyle: { color: PALETTE.g300 } },
+    ]
+  }]
+});
+
+/* ───────── Active Project Tiles ─────────
+   type: research | publishing | education | product | design | data | system
+   ─────────────────────────────────────── */
+const projects = [
+  { id:'061', name:'LifeOS',           type:'product',    define:'개인 라이프 관리 웹앱 (Next.js+Supabase)',  next:'Recommendation DB 저장 → 주간 대시보드',  imp:5, pct:95, label:'new' },
+  { id:'051', name:'페르소나 연구',     type:'research',   define:'MI·LLM 상담 평가 + 챗봇 4단계 비교',       next:'시스템프롬프트 4종 실제 구동 테스트',     imp:4, pct:75, label:'active' },
+  { id:'091', name:'몸과마음의과학 출판', type:'publishing', define:'09 자료 기반 단행본·전자책 출판 기획',       next:'7채널 깊이 캡처 → 9축 평가',             imp:4, pct:70, label:'active' },
+  { id:'062', name:'논문리더',          type:'product',    define:'Obsidian+Supabase 공유 Work 앱 v0.1',       next:'마이그레이션 SQL + 화면설계',             imp:4, pct:60, label:'new' },
+  { id:'32',  name:'강연시리즈',        type:'education',  define:'외부 강연·세미나 회차별 콘텐츠 트랙',         next:'01회차 슬라이드 HTML 렌더링',            imp:3, pct:55, label:'new' },
+  { id:'21',  name:'연구논문02 (CPSF)',  type:'research',   define:'박사 프로포절: AI×CPSF, SAI 중심 프레임',     next:'심사쟁점 #1 처리 → 본문 집필',           imp:3, pct:35, label:'active' },
+  { id:'05',  name:'DSAPG',            type:'research',   define:'박사논문 IJHCS 타겟, 레퍼런스 시스템 완성',   next:'논문 초안 집필 시작',                    imp:3, pct:30, label:'active' },
+  { id:'10',  name:'일상다반사',         type:'product',    define:'"마음" 챗봇 + 자료 자동수집',               next:'Phase 5 자문',                          imp:2, pct:25, label:'active' },
+  { id:'31',  name:'촬영용 스크립트',     type:'education',  define:'K-MOOC AI 시대의 비즈니스 디자인 대본',      next:'미완성 주차 파악',                       imp:2, pct:15, label:'active' },
+  { id:'22',  name:'Data_Kaywon',      type:'data',       define:'계원예대 2026 연구계획 수립',               next:'종합분석보고서 v08',                    imp:2, pct:10, label:'active' },
+  { id:'12',  name:'Data_Study',       type:'education',  define:'데이터 시각화·도표차트 강의',                next:'PPT 추가 사례 보완',                    imp:1, pct:8,  label:'active' },
+  { id:'11',  name:'디자인에이전트',     type:'design',     define:'"자인" 디자인 수업 도우미',                 next:'트렌드 자료 업데이트',                   imp:1, pct:6,  label:'active' },
+  { id:'03a', name:'Data_Once',        type:'data',       define:'Oncefilm 마케팅 리서치·페르소나 설계',       next:'persona_lab 결과 정리',                  imp:1, pct:4,  label:'active' },
+  { id:'03b', name:'Data_Jstrata',     type:'design',     define:'J스트라타 레스베라트롤크림 브랜드 디자인',     next:'가이드라인 최종 확정',                   imp:1, pct:3,  label:'active' },
+  { id:'06',  name:'AI_Design',        type:'design',     define:'Supanova 디자인 스킬 (랜딩페이지 엔진)',      next:'upstream 동기화 확인',                   imp:1, pct:2,  label:'active' },
+];
+
+const labelMap = {
+  new:      { cls:'chip-new',      text:'NEW' },
+  active:   { cls:'chip-active',   text:'ACTIVE' },
+  paused:   { cls:'chip-paused',   text:'PAUSED' },
+  archived: { cls:'chip-archived', text:'ARCHIVED' },
+};
+
+function dotsHtml(level) {
+  return Array.from({length: 5}, (_, i) => {
+    if (i < level) {
+      const high = level >= 4 ? ' high' : '';
+      return `<span class="imp-dot active${high}"></span>`;
+    }
+    return `<span class="imp-dot"></span>`;
+  }).join('');
+}
+
+const TYPE_LABEL = {
+  research:'RESEARCH', publishing:'PUBLISHING', education:'EDUCATION',
+  product:'PRODUCT', design:'DESIGN', data:'DATA', system:'SYSTEM'
+};
+
+document.getElementById('project-grid').innerHTML = projects.map(p => `
+  <article class="project-tile" style="--type-color: ${TYPE_COLOR[p.type]};">
+    <div class="tile-left">
+      <div class="tile-head">
+        <span class="tile-id">#${p.id}</span>
+        <span class="tile-name">${p.name}</span>
+      </div>
+      <div class="tile-define">${p.define}</div>
+      <div class="tile-chip-row">
+        <span class="chip ${labelMap[p.label].cls}">${labelMap[p.label].text}</span>
+        <span style="font-size:10px;font-weight:600;color:${TYPE_COLOR[p.type]};letter-spacing:.06em;">${TYPE_LABEL[p.type]}</span>
+        <span class="imp-dots">${dotsHtml(p.imp)}</span>
+      </div>
+    </div>
+    <div class="tile-right">
+      <div class="tile-next-label">NEXT</div>
+      <div class="tile-next">${p.next}</div>
+      <div class="tile-imp-row">
+        <span class="tile-imp-pct num">contribution · ${p.pct}%</span>
+      </div>
+    </div>
+  </article>
+`).join('');
+
+window.addEventListener('resize', () => {
+  dailyChart.resize();
+  pieChart.resize();
+});
+</script>
+
+</body>
+</html>

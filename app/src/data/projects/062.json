@@ -1,0 +1,92 @@
+{
+  "id": "062",
+  "currentSituation": {
+    "summary": "Phase 0 — 데이터모델 v0.2 + Obsidian 스펙 + UI 시안 v0.3까지 완료. 화면설계 + Phase 1 백엔드 마이그레이션 직전.",
+    "phase": "Phase 0 (스펙 확정) — 90% 완료, Phase 1 진입 직전",
+    "recentLogs": [
+      {
+        "date": "2026-05-05",
+        "title": "062 신규 등록 + 데이터모델 v0.2 + Obsidian 스펙 + UI 시안 v0.3",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260505_log.md",
+        "excerpt": "Obsidian+Supabase 공유 Work 앱 스펙 확정. 크롬 익스텐션 시안 v0.2 → 모바일 포함 v0.3."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (아키텍처·결정사항·로드맵)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/PROJECT.md",
+      "fileKind": "md",
+      "summary": "v0.3 아키텍처 확정 + Phase 0~6 로드맵 + 미정 항목 5개 명시.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "데이터모델 v0.2",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/docs/01_데이터모델.md",
+      "fileKind": "md",
+      "summary": "paper_papers / paper_reading_logs / paper_topics / paper_paper_topics / paper_reminders 5테이블 스키마.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "Obsidian frontmatter 스펙",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/docs/02_obsidian_스펙.md",
+      "fileKind": "md",
+      "summary": "발췌·노트의 frontmatter 키 + 본문 헤딩 섹션 규약.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "Moonlight DOM 분석",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/docs/02_Moonlight_DOM_분석.md",
+      "fileKind": "md",
+      "summary": "참고 도구 Moonlight 의 DOM 구조 분석 — UI 패턴 차용 검토.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "UI 시안 v0.3 (모바일 포함)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/design/v0.3_시안_모바일포함.html",
+      "fileKind": "html",
+      "summary": "크롬 익스텐션 + 카드 리스트 + 모바일 대시보드 — Editorial Grayscale 시스템 정립 (063 foundation 원천).",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "UI 시안 v0.2 (크롬 익스텐션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/062_논문리더/design/v0.2_크롬익스텐션_시안.html",
+      "fileKind": "html",
+      "summary": "익스텐션 팝업 + 논문 카드 디자인 시스템 토큰 정의.",
+      "modifiedAt": "2026-05-05"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "Work 앱 화면설계 — docs/03_화면설계.md",
+      "description": "라우트 (/, /papers, /papers/[id], /topics, /settings) + 각 화면의 wireframe·상태·인터랙션 정리.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "디자인 무드보드 — design/00_무드보드.md",
+      "description": "톤·색·타이포 결정 근거 — 062는 LifeOS와 호환되게 정리.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "Supabase paper_* 테이블 마이그레이션 SQL",
+      "description": "01_데이터모델 v0.2 기반으로 마이그레이션 SQL 작성. RLS 정책 포함.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "Phase 2 — Next.js 16 앱 골격",
+      "description": "062_논문리더/app/ Next.js 프로젝트 생성. LifeOS lib/supabase 패턴 차용.",
+      "priority": "mid",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "미정 항목 5개 사용자 결정 받기",
+      "description": "Work 앱 도메인 / Obsidian Vault 위치 / Supabase env 분리 / 알람 통합 여부 / Auth 공유.",
+      "priority": "mid",
+      "estimate": "협의 1회"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

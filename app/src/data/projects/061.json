@@ -1,0 +1,102 @@
+{
+  "id": "061",
+  "currentSituation": {
+    "summary": "Design2 적용 + 4탭 네비 + '하루' 캐릭터 통합 + Daily Insight DB 동적화 완료. ChatGPT API 연결 + Vercel 배포 완료.",
+    "phase": "Phase 2 — 동적 데이터 연결 완료, 다음 퍼포먼스 대시보드 단계",
+    "recentLogs": [
+      {
+        "date": "2026-05-03",
+        "title": "Design2 대규모 업데이트 — 하루 캐릭터 통합 + Diary 페이지 + Daily Insight 동적화",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260503_log.md",
+        "excerpt": "모미+마음 → 하루로 통합. 기록(Diary) 페이지 신규. Daily Insight/Recommendation 하드코딩 제거 → DB 기반."
+      },
+      {
+        "date": "2026-05-02",
+        "title": "Life OS MVP 1일 만에 배포 — Next.js 16 + Supabase + ChatGPT API",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260502_log.md",
+        "excerpt": "00_personal 시스템을 061_LifeOS로 이동. Vercel 배포 완료 (life-os-7wj2.vercel.app)."
+      }
+    ],
+    "blockers": [
+      "ChatGPT API 크레딧 (Claude API → ChatGPT 전환 사유)",
+      "iOS Safari z-index / 16px input 레이아웃 미세 이슈"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (목적·아키텍처·다음 액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/PROJECT.md",
+      "fileKind": "md",
+      "summary": "00_personal에서 옮겨온 LifeOS 정의 문서. 진/모미/마음 캐릭터 시스템 정책.",
+      "modifiedAt": "2026-05-02"
+    },
+    {
+      "title": "하루 대화방 페이지 (Next.js)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/haru/page.tsx",
+      "fileKind": "tsx",
+      "summary": "진+모미+마음 통합 비서 캐릭터 대화방. 수면·운동·감정 자동 DB 저장.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "기록(Diary) 페이지",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/diary/page.tsx",
+      "fileKind": "tsx",
+      "summary": "날짜 스크롤 피커, 건강 입력, 감정 10종, 스케줄 3일, Daily Review 4질문.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "설정 페이지 (신규)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/settings/page.tsx",
+      "fileKind": "tsx",
+      "summary": "API 연결 / 데이터 관리 등 설정 패널.",
+      "modifiedAt": "2026-05-03"
+    },
+    {
+      "title": "Prototype Briefing (HTML 시안)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/prototype-briefing.html",
+      "fileKind": "html",
+      "summary": "Vercel 배포 직전의 프로토타입 시안 — 흰 배경 + 텍스트 중심 + 시간별 액센트.",
+      "modifiedAt": "2026-05-02"
+    },
+    {
+      "title": "Design Moodboard",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/design-moodboard.html",
+      "fileKind": "html",
+      "summary": "디자인 무드보드 — 톤·색·타이포 결정 근거.",
+      "modifiedAt": "2026-05-02"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "Recommendation 달성률 DB 저장",
+      "description": "Daily Insight/Recommendation 체크 결과를 DB에 누적 → 주간/월간 퍼포먼스 대시보드 구축의 전제 조건.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "기록 서브페이지 (Today / Week / Month) 기획·구현",
+      "description": "Diary 안에서 시간 범위별 탭 + 데이터 시각화 (수면 패턴, 감정 흐름, 달성률 차트).",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "Fitbit 연동 검토",
+      "description": "수면·운동 데이터를 Fitbit API에서 자동 수집 가능성 검토. 인증 방식·데이터 권한 조사부터.",
+      "priority": "mid",
+      "estimate": "반나절 (조사)"
+    },
+    {
+      "title": "Google Calendar 쓰기 연동",
+      "description": "현재 읽기만 — 쓰기 권한 추가하여 하루 대화에서 일정 등록 가능하게.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
+      "title": "iOS 레이아웃 안정화",
+      "description": "z-index, input 16px 강제, 모바일 Safari 특이사항 일괄 점검.",
+      "priority": "low",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

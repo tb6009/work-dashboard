@@ -46,11 +46,34 @@
 
 ## 3. 다음 액션
 
+- [x] **프로젝트 detail JSON 16개 추가** (2026-05-06) — 22개 중 20개 완비 (00 폴더 부재로 스킵)
+- [x] **주간 업데이트 인프라 구축** (2026-05-06)
+  - `scripts/extract-week.mjs` — Tier 1 자동 추출 (Node.js)
+  - `.claude/commands/주간업데이트.md` — Tier 2 Claude 슬래시 커맨드
+  - `docs/주간업데이트_가이드.md` — 표준 절차 문서
 - [ ] 5개 페이지 브라우저 검토 → UI 미세조정 v0.4 사이클
-- [ ] `data/weekly/*.json` 지난 4주(W14~W17) 소급 생성
-- [ ] `scripts/build-week.ts` — docs/logs + PROJECTS.md 파싱 → JSON 자동 생성
+- [ ] `data/weekly/*.json` 지난 4주(W14~W17) 소급 생성 — `extract-week.mjs` 사용
 - [ ] Vercel 배포 + URL 확보
-- [ ] Phase 3 — Claude cron으로 매주 월요일 09:00 자동 빌드
+- [ ] Phase 3 — Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
+- [ ] Phase 4 — Monthly·Yearly 집계 자동화
+
+## 3-1. 주간 업데이트 절차 요약
+
+매주 월요일 약 15~20분:
+
+```bash
+# 1. 자동 추출 (1분)
+node scripts/extract-week.mjs 2026-WXX
+
+# 2. Claude 보강 (10분) — VS Code에서 063_workDashboard 열고
+/주간업데이트 2026-WXX
+
+# 3. 검토 + 배포 (5분)
+cd app && npm run dev    # 시각 확인
+git add . && git commit -m "weekly: 2026-WXX" && git push
+```
+
+상세는 `docs/주간업데이트_가이드.md` 참조.
 
 ## 4. 작업 규칙·경계
 

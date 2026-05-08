@@ -1,0 +1,90 @@
+{
+  "id": "21",
+  "currentSituation": {
+    "summary": "CPSF 박사논문 — v3 프로포설 완성 + T1 4사례 분석. SAI 중심 프레임 확정(04-25), 이론 섹션 본문 작성 직전. 심사쟁점 8개 문서화 완료.",
+    "phase": "이론·문헌 정교화 → v4 박사논문 수준 서술 시작 직전",
+    "recentLogs": [
+      {
+        "date": "2026-04-25",
+        "title": "SAI 중심 프레임 확정 — T1 4사례(이기우 제외) 분석 진입",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260425_log.md",
+        "excerpt": "Situated AI(Kemp·Moser·Li) 정식 편입. 이론 섹션 본문 작성 직전. NEXT_SESSION.md 업데이트."
+      }
+    ],
+    "blockers": [
+      "심사쟁점 #1 (이론 기여 초점 좁히기) — DC 경계조건 vs 확장 vs SR 공백 중 택일 미완",
+      "심사쟁점 #5 (분석 프레임 확정) — RTA/Gioia/Template 중 선택 + Situated AI 통합 결정 미완"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md + CLAUDE.md (논문 마스터)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/CLAUDE.md",
+      "fileKind": "md",
+      "summary": "CPSF 박사논문 컨텍스트·이론 프레임·심사쟁점 마스터 문서.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "v3 연구프로포설 (md/docx/pdf/pptx)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/00_현재작업/05_연구프로포설_v3.md",
+      "fileKind": "md",
+      "summary": "v3 발표 슬라이드 수준 프로포설 — md/docx/pdf/pptx 4종 동기화.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "NEXT_SESSION.md (다음 세션 브리핑)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/00_현재작업/NEXT_SESSION.md",
+      "fileKind": "md",
+      "summary": "다음 세션 브리핑 — SAI 프레임 확정 후 작업 진입점.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "심사쟁점 대응 로그",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/08_연구관리/01_심사쟁점_대응로그.md",
+      "fileKind": "md",
+      "summary": "심사쟁점 8개 문서화 + 대응 방향. TOP3(#1·#5·#4) 우선순위 명시.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "T1 인터뷰 데이터 (05_인터뷰데이터/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/05_인터뷰데이터",
+      "fileKind": "other",
+      "summary": "T1 5개 사례(디자인 4 + 게임 1) 인터뷰 원본. 수정 금지.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "이론 프레임 작업장 (02_이론프레임/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/21_연구논문02/02_이론프레임",
+      "fileKind": "other",
+      "summary": "DC·SR·Situated AI 이론 프레임 작업장 — SAI 중심 정리 진행.",
+      "modifiedAt": "2026-04-25"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "심사쟁점 #1 또는 #5 집중 처리",
+      "description": "이론 기여 초점(#1) 또는 분석 프레임(#5) 중 한 쟁점 결론 도출 — 다음 진행의 lock-in.",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "v4 박사논문 수준 서술형 proposal 작성 시작",
+      "description": "v3 슬라이드 수준 → v4 본문형 박사논문 수준 서술. 이론 섹션 우선.",
+      "priority": "high",
+      "estimate": "2주 (섹션별)"
+    },
+    {
+      "title": "T1 4사례(이기우 제외) Cross-case 분석",
+      "description": "06_분석/Cross-case 폴더에 패턴·차이점 매트릭스 작성.",
+      "priority": "mid",
+      "estimate": "1주"
+    },
+    {
+      "title": "T2 인터뷰 설계 + IRB 준비 (5~6월)",
+      "description": "T2 자료수집(2026-06~08) 직전 단계로 프로토콜·IRB 준비.",
+      "priority": "mid",
+      "estimate": "2주"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

@@ -30,6 +30,7 @@ export interface ProjectContribution {
   pct: number;               // 0–100, this week's relative weight
   filesChanged: number;
   imp: 1 | 2 | 3 | 4 | 5;    // importance dots
+  did?: string;              // "이번 주 한 일" — 1-2 line summary, weekly tile에 표시
   nextAction?: string;
   deliverables?: string[];   // file paths or names
 }

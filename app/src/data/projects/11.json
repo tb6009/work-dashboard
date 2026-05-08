@@ -1,0 +1,73 @@
+{
+  "id": "11",
+  "currentSituation": {
+    "summary": "디자인 수업 도우미 '자인' — 11단계 개발 프로세스 + 5분야 자료 + 학생 평가 인프라 구축. 트렌드 데이터 업데이트 + 평가 기준 정교화 단계.",
+    "phase": "Active — 인프라 구축 완료, 운영 정교화 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 11-디자인에이전트 PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "5분야(UX·브랜드·비주얼·제품·공간) 자료 + 학생 평가·트렌드 인프라 정리."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (자인 정의·다음 액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/11-디자인에이전트/PROJECT.md",
+      "fileKind": "md",
+      "summary": "자인 에이전트 프로젝트 정의 — 5분야 자료·학생 평가·트렌드 인프라.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "11step 개발 프로세스",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/11-디자인에이전트/11step개발프로세스",
+      "fileKind": "other",
+      "summary": "자인 에이전트 11단계 개발 프로세스 문서.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "claude design process",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/11-디자인에이전트/claude design process",
+      "fileKind": "other",
+      "summary": "Claude 기반 디자인 프로세스 자료 — 에이전트 동작 기반.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "5분야 자료 (UX·브랜드·비주얼·제품·공간)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/11-디자인에이전트/자료",
+      "fileKind": "other",
+      "summary": "수업 분야별 참고 자료 모음 — 에이전트 답변 근거.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "대화 아카이브",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/11-디자인에이전트/대화아카이브",
+      "fileKind": "other",
+      "summary": "에이전트 대화 기록 누적 — 운영 개선 근거.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "최신 트렌드 데이터 업데이트",
+      "description": "5분야 트렌드 자료를 2026 최신 사례로 갱신. 매거진 발행 워크플로 정형화.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "학생 평가 기준 정교화 + 피드백 템플릿",
+      "description": "현행 평가 항목 검증, 피드백 템플릿 표준화. 6주차 과제 평가에 시범 적용.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "06_AI_Design 스킬 통합",
+      "description": "Supanova 디자인 스킬을 자인의 시각 산출물 생성 라인에 연결.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

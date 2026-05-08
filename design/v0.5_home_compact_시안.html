@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Home (v0.5 · compact)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font); background: var(--gray-100); color: var(--gray-900); -webkit-font-smoothing: antialiased; line-height: 1.4; }
+
+  .topbar { background: var(--white); border-bottom: 1px solid var(--gray-300); position: sticky; top: 0; z-index: 30; }
+  .topbar-inner { max-width: 1280px; margin: 0 auto; padding: var(--sp-3) var(--sp-8); display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo { width: 24px; height: 24px; background: var(--black); color: var(--white); display: grid; place-items: center; font-size: 11px; font-weight: 700; }
+  .brand-name { font-size: 13px; font-weight: 700; color: var(--black); }
+  .brand-sub { font-size: 10px; color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 1px; }
+  .nav { display: flex; gap: 0; }
+  .nav a { padding: 5px 12px; font-size: 12px; font-weight: 500; color: var(--gray-500); text-decoration: none; }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+  .build-info { font-size: 10px; color: var(--gray-400); text-align: right; font-family: var(--font-mono); line-height: 1.4; }
+
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-8) var(--sp-8) var(--sp-12); }
+
+  .hero { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-8); margin-bottom: var(--sp-6); padding-bottom: var(--sp-5); border-bottom: 2px solid var(--black); }
+  .hero-l { flex: 1; min-width: 0; }
+  .hero-eyebrow { font-size: 10px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wider); margin-bottom: 4px; font-family: var(--font-mono); }
+  .hero-week { font-family: var(--font-mono); font-weight: 600; color: var(--gray-900); }
+  .hero-title { font-size: 36px; font-weight: 300; color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1; margin: 0 0 6px 0; }
+  .hero-sub { font-size: 12px; color: var(--gray-500); font-variant-numeric: tabular-nums; }
+  .hero-summary { margin-top: 8px; font-size: 13px; color: var(--gray-700); line-height: 1.5; max-width: 720px; }
+  .hero-r { text-align: right; flex-shrink: 0; }
+  .hero-current-pill { display: inline-block; background: var(--black); color: var(--white); font-size: 9px; font-weight: 700; padding: 2px 6px; letter-spacing: var(--tracking-wide); margin-bottom: 4px; }
+  .hero-build { font-size: 10px; color: var(--gray-400); font-family: var(--font-mono); }
+
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--gray-300); background: var(--gray-200); margin-bottom: var(--sp-6); }
+  .kpi { background: var(--white); padding: 12px 16px; }
+  .kpi-label { font-size: 9px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: 4px; }
+  .kpi-value { font-size: 28px; font-weight: 700; color: var(--black); line-height: 1; letter-spacing: var(--tracking-tight); font-variant-numeric: tabular-nums; }
+  .kpi-value .unit { font-size: 12px; font-weight: 500; color: var(--gray-400); margin-left: 3px; letter-spacing: 0; }
+  .kpi-meta { font-size: 10px; color: var(--gray-500); margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .kpi-meta .delta { font-weight: 600; color: var(--gray-700); }
+
+  .sec { margin-bottom: var(--sp-6); }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid var(--gray-300); margin-bottom: var(--sp-3); }
+  .sec-title { font-size: 14px; font-weight: 700; color: var(--black); letter-spacing: var(--tracking-tight); }
+  .sec-meta { font-size: 10px; color: var(--gray-400); font-variant-numeric: tabular-nums; }
+
+  .daily { background: var(--white); border: 1px solid var(--gray-300); padding: 12px; }
+  .daily-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: end; height: 90px; }
+  .daily-col { display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .daily-bar { width: 100%; background: var(--warm-500); }
+  .daily-bar.peak { background: var(--warm-900); }
+  .daily-bar.zero { background: var(--gray-200); height: 2px !important; }
+  .daily-row-bottom { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-top: 6px; }
+  .daily-cell-bottom { text-align: center; }
+  .daily-day { font-size: 10px; font-family: var(--font-mono); color: var(--gray-700); font-variant-numeric: tabular-nums; }
+  .daily-files { font-size: 9px; color: var(--gray-400); font-variant-numeric: tabular-nums; margin-top: 1px; }
+
+  .two-col { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--sp-4); margin-bottom: var(--sp-6); }
+
+  .panel { background: var(--white); border: 1px solid var(--gray-300); }
+  .panel-head { padding: 10px 12px; border-bottom: 1px solid var(--gray-200); background: var(--gray-50); display: flex; justify-content: space-between; align-items: baseline; }
+  .panel-head-title { font-size: 11px; font-weight: 700; color: var(--gray-700); text-transform: uppercase; letter-spacing: var(--tracking-wider); }
+  .panel-head-meta { font-size: 10px; color: var(--gray-400); }
+
+  .ptile { position: relative; padding: 8px 12px 8px 14px; display: grid; grid-template-columns: 1fr auto; column-gap: 10px; align-items: start; }
+  .ptile + .ptile { border-top: 1px solid var(--gray-100); }
+  .ptile::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--ptile-color, var(--gray-300)); }
+  .ptile-l { min-width: 0; }
+  .ptile-line1 { font-size: 12px; font-weight: 600; color: var(--gray-900); line-height: 1.3; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .ptile-id { font-size: 10px; font-family: var(--font-mono); color: var(--gray-400); font-variant-numeric: tabular-nums; }
+  .ptile-type-chip { font-size: 8px; font-weight: 700; color: var(--white); background: var(--ptile-color); padding: 1px 4px; letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+  .ptile-new-chip { font-size: 8px; font-weight: 700; background: var(--color-green); color: var(--white); padding: 1px 4px; letter-spacing: var(--tracking-wide); }
+  .ptile-did { font-size: 11px; color: var(--gray-700); line-height: 1.4; margin-top: 2px; }
+  .ptile-r { text-align: right; }
+  .ptile-pct { font-size: 13px; font-weight: 700; color: var(--gray-900); font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: var(--tracking-tight); }
+  .ptile-pct .unit { font-size: 9px; color: var(--gray-400); font-weight: 500; margin-left: 1px; }
+  .ptile-imp { display: inline-flex; gap: 2px; margin-top: 4px; }
+  .ptile-imp-dot { width: 4px; height: 4px; background: var(--gray-200); border-radius: 50%; display: inline-block; }
+  .ptile-imp-dot.active { background: var(--gray-700); }
+
+  .timeline-item { display: grid; grid-template-columns: 56px 1fr; column-gap: 10px; padding: 8px 12px; }
+  .timeline-item + .timeline-item { border-top: 1px solid var(--gray-100); }
+  .timeline-date { font-size: 10px; font-family: var(--font-mono); color: var(--gray-500); font-variant-numeric: tabular-nums; line-height: 1.3; padding-top: 1px; }
+  .timeline-content { min-width: 0; }
+  .timeline-title { font-size: 11px; font-weight: 600; color: var(--gray-900); line-height: 1.3; }
+  .timeline-title.milestone::before { content: '★ '; color: var(--warm-700); }
+  .timeline-pid { font-size: 9px; font-family: var(--font-mono); color: var(--gray-400); margin-right: 4px; }
+  .timeline-desc { font-size: 11px; color: var(--gray-600); line-height: 1.4; margin-top: 2px; }
+
+  .weeks-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-2); }
+  .week-card { background: var(--white); border: 1px solid var(--gray-300); padding: 10px 12px; text-decoration: none; color: inherit; transition: transform 0.12s ease; }
+  .week-card:hover { transform: translateY(-1px); }
+  .week-card.empty { background: var(--gray-50); border-color: var(--gray-200); pointer-events: none; }
+  .week-card.current { background: var(--black); color: var(--white); border-color: var(--black); }
+  .wc-id { font-size: 10px; font-family: var(--font-mono); color: var(--gray-500); font-variant-numeric: tabular-nums; }
+  .week-card.current .wc-id { color: var(--gray-300); }
+  .week-card.empty .wc-id { color: var(--gray-300); }
+  .wc-range { font-size: 10px; color: var(--gray-700); font-variant-numeric: tabular-nums; margin-top: 1px; font-weight: 500; }
+  .week-card.current .wc-range { color: var(--white); opacity: 0.85; }
+  .week-card.empty .wc-range { color: var(--gray-300); }
+  .wc-files { font-size: 22px; font-weight: 700; color: var(--gray-900); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight); }
+  .week-card.current .wc-files { color: var(--white); }
+  .week-card.empty .wc-files { color: var(--gray-300); }
+  .wc-files .unit { font-size: 10px; font-weight: 500; color: var(--gray-400); margin-left: 2px; }
+  .week-card.current .wc-files .unit { color: var(--gray-300); }
+  .wc-pin { display: inline-block; font-size: 8px; font-weight: 700; padding: 1px 4px; background: var(--white); color: var(--black); margin-top: 6px; letter-spacing: var(--tracking-wide); }
+
+  .note { background: var(--warm-100); border-left: 3px solid var(--warm-500); padding: 8px 12px; margin-bottom: var(--sp-5); font-size: 11px; color: var(--gray-700); line-height: 1.5; }
+  .note strong { color: var(--gray-900); }
+  .note code { font-family: var(--font-mono); background: var(--white); padding: 0 4px; border: 1px solid var(--gray-200); font-size: 10px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">P</div>
+      <div>
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">063 · CURRENT WEEK</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#" class="active">CURRENT</a>
+      <a href="#">WEEKLY</a>
+      <a href="#">MONTHLY</a>
+      <a href="#">YEARLY</a>
+      <a href="#">PROJECTS</a>
+    </nav>
+    <div class="build-info">v0.5 · compact<br>2026-05-08</div>
+  </div>
+</div>
+
+<main>
+
+  <div class="note">
+    <strong>v0.5 Home (Current Week)</strong> — W19 진행 중 데이터 데모. 실제 운영 시 매주 월요일 <code>/주간업데이트</code> 슬래시 커맨드로 갱신.
+  </div>
+
+  <section class="hero">
+    <div class="hero-l">
+      <div class="hero-eyebrow">CURRENT WEEK · <span class="hero-week">2026-W19</span></div>
+      <h1 class="hero-title">이번 주</h1>
+      <div class="hero-sub">05-04 ~ 05-10 · 금요일 (D+5) · 진행 중</div>
+      <div class="hero-summary">
+        063 workDashboard 데이터 인프라 + Weekly 5-col 페이지 완성. 064 프로젝트매뉴얼·065 인터뷰 신규 등록.
+        061 LifeOS Recommendation DB 작업 진입.
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="hero-current-pill">CURRENT</div>
+      <div class="hero-build">last build<br>2026-05-08 14:02</div>
+    </div>
+  </section>
+
+  <section class="kpis">
+    <div class="kpi">
+      <div class="kpi-label">Active Projects</div>
+      <div class="kpi-value">12<span class="unit">/23</span></div>
+      <div class="kpi-meta"><span class="delta">+3</span> 신규 (063·064·065)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Sessions</div>
+      <div class="kpi-value">3<span class="unit">/7</span></div>
+      <div class="kpi-meta">월·목·금</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">New Projects</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-meta">064 매뉴얼, 065 인터뷰</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Files Changed</div>
+      <div class="kpi-value">38</div>
+      <div class="kpi-meta">06d · 24h 추정</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head">
+      <div class="sec-title">Daily Activity · W19</div>
+      <div class="sec-meta">files / day · peak = warm-900</div>
+    </div>
+    <div class="daily">
+      <div class="daily-grid">
+        <div class="daily-col"><div class="daily-bar" style="height:30%"></div></div>
+        <div class="daily-col"><div class="daily-bar zero"></div></div>
+        <div class="daily-col"><div class="daily-bar zero"></div></div>
+        <div class="daily-col"><div class="daily-bar" style="height:55%"></div></div>
+        <div class="daily-col"><div class="daily-bar peak" style="height:95%"></div></div>
+        <div class="daily-col"><div class="daily-bar" style="height:0%; background:transparent"></div></div>
+        <div class="daily-col"><div class="daily-bar" style="height:0%; background:transparent"></div></div>
+      </div>
+      <div class="daily-row-bottom">
+        <div class="daily-cell-bottom"><div class="daily-day">월</div><div class="daily-files">8</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day">화</div><div class="daily-files">0</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day">수</div><div class="daily-files">0</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day">목</div><div class="daily-files">14</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day">금</div><div class="daily-files">16</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day" style="color:var(--gray-300)">토</div><div class="daily-files" style="color:var(--gray-300)">—</div></div>
+        <div class="daily-cell-bottom"><div class="daily-day" style="color:var(--gray-300)">일</div><div class="daily-files" style="color:var(--gray-300)">—</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="two-col">
+
+    <div class="panel">
+      <div class="panel-head">
+        <div class="panel-head-title">This Week · Top Projects</div>
+        <div class="panel-head-meta">7 active · sorted by pct</div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-product);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">063</span>workDashboard <span class="ptile-type-chip">PRODUCT</span></div>
+          <div class="ptile-did">데이터 인프라 + Weekly 5-col 완성. 5컬럼 자동 감지. 컴팩트 디자인 v0.5.</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">38<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-product);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">061</span>LifeOS <span class="ptile-type-chip">PRODUCT</span></div>
+          <div class="ptile-did">Recommendation DB 저장 작업 시작 + 주간 대시보드 기획.</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">22<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-education);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">064</span>프로젝트매뉴얼 <span class="ptile-type-chip">EDUCATION</span> <span class="ptile-new-chip">NEW</span></div>
+          <div class="ptile-did">061·062·063 분석 + 학생용 인스트럭션 1차 초안 (3단계 구조).</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">15<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-data);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">065</span>인터뷰 <span class="ptile-type-chip">DATA</span> <span class="ptile-new-chip">NEW</span></div>
+          <div class="ptile-did">5단 작업 폴더 셋업 (data·transcripts·analysis·outputs·질문지).</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">10<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-product);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">062</span>논문리더 <span class="ptile-type-chip">PRODUCT</span></div>
+          <div class="ptile-did">마이그레이션 SQL 작업 진입.</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">8<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-publishing);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">091</span>몸과마음의과학 출판 <span class="ptile-type-chip">PUBLISHING</span></div>
+          <div class="ptile-did">7채널 깊이 캡처 → 9축 평가 시작.</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">5<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+
+      <div class="ptile" style="--ptile-color: var(--type-research);">
+        <div class="ptile-l">
+          <div class="ptile-line1"><span class="ptile-id">51</span>페르소나 연구 <span class="ptile-type-chip">RESEARCH</span></div>
+          <div class="ptile-did">시스템프롬프트 4종 구동 테스트.</div>
+        </div>
+        <div class="ptile-r">
+          <div class="ptile-pct">2<span class="unit">%</span></div>
+          <div class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <div class="panel-head-title">Decisions · Milestones</div>
+        <div class="panel-head-meta">5 events</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">05-08<br>금</div>
+        <div class="timeline-content">
+          <div class="timeline-title milestone"><span class="timeline-pid">063</span>Phase 1+2 완료</div>
+          <div class="timeline-desc">데이터 인프라 + Weekly 5-col 페이지 작동. 빌드 5/5 통과.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">05-08<br>금</div>
+        <div class="timeline-content">
+          <div class="timeline-title"><span class="timeline-pid">065</span>인터뷰 트랙 신설</div>
+          <div class="timeline-desc">5단 작업 구조 셋업. 인터뷰 주제·대상 미정.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">05-08<br>금</div>
+        <div class="timeline-content">
+          <div class="timeline-title"><span class="timeline-pid">064</span>프로젝트매뉴얼 신설</div>
+          <div class="timeline-desc">061·062·063 패턴 → 학생용 매뉴얼 트랙.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">05-07<br>목</div>
+        <div class="timeline-content">
+          <div class="timeline-title"><span class="timeline-pid">063</span>Weekly 5-col 디자인 확정</div>
+          <div class="timeline-desc">월별 4컬럼 (5주차 발생 시 5컬럼) + 최신순 + 1월 생략.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">05-04<br>월</div>
+        <div class="timeline-content">
+          <div class="timeline-title"><span class="timeline-pid">061</span>Recommendation DB 작업 진입</div>
+          <div class="timeline-desc">달성률 누적 → 주간/월간 퍼포먼스 대시보드의 전제 조건.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head">
+      <div class="sec-title">Recent Weeks</div>
+      <div class="sec-meta">5 weeks · 최신 → 과거</div>
+    </div>
+    <div class="weeks-strip">
+      <a href="#" class="week-card current">
+        <div class="wc-id">2026-W19</div>
+        <div class="wc-range">05-04 ~ 05-10</div>
+        <div class="wc-files">38<span class="unit">files</span></div>
+        <div class="wc-pin">CURRENT</div>
+      </a>
+      <a href="#" class="week-card">
+        <div class="wc-id">2026-W18</div>
+        <div class="wc-range">04-27 ~ 05-03</div>
+        <div class="wc-files">142<span class="unit">files</span></div>
+      </a>
+      <div class="week-card empty">
+        <div class="wc-id">2026-W17</div>
+        <div class="wc-range">04-20 ~ 04-26</div>
+        <div class="wc-files">—</div>
+      </div>
+      <div class="week-card empty">
+        <div class="wc-id">2026-W16</div>
+        <div class="wc-range">04-13 ~ 04-19</div>
+        <div class="wc-files">—</div>
+      </div>
+      <div class="week-card empty">
+        <div class="wc-id">2026-W15</div>
+        <div class="wc-range">04-06 ~ 04-12</div>
+        <div class="wc-files">—</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

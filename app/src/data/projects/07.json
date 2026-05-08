@@ -1,0 +1,66 @@
+{
+  "id": "07",
+  "currentSituation": {
+    "summary": "2026 계원 AID 재직자 교육 사업계획서·심사대응 — 수정제안서 초안(03-31) 제출 후 심사 결과 대기 상태.",
+    "phase": "Paused — 심사 결과 대기",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 07_AIDX PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "2026-03-30·31 사업계획서·심사대응 문서 일괄 정리. paused 상태 확정."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (사업 정의·상태)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/07_AIDX/PROJECT.md",
+      "fileKind": "md",
+      "summary": "묶음강좌 + AI·D30+ 집중캠프 두 트랙 정의. 심사 결과 대기 paused.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "사업계획서 정합성 평가 보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/07_AIDX/재직자 교육  ai 30 +/사업계획서_정합성_평가_보고서_2026-03-30.md",
+      "fileKind": "md",
+      "summary": "사업계획서 정합성 자체 평가 — 심사 대응 근거 자료.",
+      "modifiedAt": "2026-03-30"
+    },
+    {
+      "title": "심사대응·제안서 방향 정리",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/07_AIDX/재직자 교육  ai 30 +/심사대응_및_제안서방향_정리_2026-03-30.md",
+      "fileKind": "md",
+      "summary": "심사 예상 쟁점 + 제안서 보완 방향 — 03-31 수정제안서 토대.",
+      "modifiedAt": "2026-03-30"
+    },
+    {
+      "title": "수정제안서 초안",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/07_AIDX/재직자 교육  ai 30 +/수정제안서_초안포함_260331.md",
+      "fileKind": "md",
+      "summary": "03-31 제출 직전 수정제안서 초안 — 심사대응 반영.",
+      "modifiedAt": "2026-03-31"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "재활성화 조건 — 심사 결과 도착 시",
+      "description": "심사 결과 통지 받으면 보완 사항 반영하여 paused → active 전환.",
+      "priority": "high",
+      "estimate": "결과 도착 후 1주"
+    },
+    {
+      "title": "최종 사업계획서 제출 버전 정리",
+      "description": "심사 통과 시 hwp 변환 + 증빙문서 첨부하여 최종 제출 버전 확정.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
+      "title": "차년도(2027) 사업 방향 사전 검토",
+      "description": "현재 사업 결과를 바탕으로 22_Data_Kaywon 연구계획과 연계해 다음 라운드 준비.",
+      "priority": "low",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

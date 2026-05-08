@@ -7,7 +7,7 @@ const NAV_ITEMS: Array<{ key: NavKey; label: string; href: string }> = [
   { key: 'weekly',   label: '주간',     href: '/weekly' },
   { key: 'monthly',  label: '월간',     href: '/monthly/2026-05' },
   { key: 'yearly',   label: '연간',     href: '/yearly/2026' },
-  { key: 'projects', label: '프로젝트', href: '/projects/061' },
+  { key: 'projects', label: '프로젝트', href: '/projects' },
 ];
 
 interface Props {

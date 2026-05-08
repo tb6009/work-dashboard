@@ -1,0 +1,66 @@
+{
+  "id": "06",
+  "currentSituation": {
+    "summary": "Supanova 디자인 스킬 모음(taste/redesign/soft 4종) 보유. README 완성, upstream 동기화 + 실 프로젝트 적용 테스트 단계.",
+    "phase": "Active — 스킬 보유, 실 적용 테스트 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 06_AI_Design PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "supanova-design-skill-main 4스킬 정리. 실 프로젝트 적용 테스트 액션 명시."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (스킬 정의·다음 액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_AI_Design/PROJECT.md",
+      "fileKind": "md",
+      "summary": "Supanova 디자인 스킬 4종 정의 — taste·redesign·soft 등.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "Supanova 디자인 스킬 모음",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_AI_Design/supanova-design-skill-main",
+      "fileKind": "other",
+      "summary": "랜딩페이지 생성 엔진 스킬 4종 — taste(메인) + redesign(업그레이드) + soft($150k 에이전시 톤).",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "taste-skill (메인 디자인)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_AI_Design/supanova-design-skill-main/taste-skill",
+      "fileKind": "other",
+      "summary": "메인 랜딩페이지 생성 스킬 — 에이전시 퀄리티 미학 적용.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "README.md (사용법)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_AI_Design/supanova-design-skill-main/README.md",
+      "fileKind": "md",
+      "summary": "supanova.dev 기반 스킬 사용법·설치·라이선스 정리.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "최신 스킬 upstream 동기화 확인",
+      "description": "supanova.dev 측 최신 변경사항 검토 후 로컬 4종 스킬 업데이트 적용.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "실 프로젝트 적용 테스트 — 03_Data_Jstrata",
+      "description": "J스트라타 브랜드 가이드라인 PDF 또는 랜딩페이지에 taste-skill 적용해 퀄리티 검증.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
+      "title": "스킬 활용 가이드 한국어 본문 보강",
+      "description": "한국어 콘텐츠·Google Fonts·Pretendard 적용 사례 추가.",
+      "priority": "low",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

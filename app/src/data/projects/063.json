@@ -1,0 +1,98 @@
+{
+  "id": "063",
+  "currentSituation": {
+    "summary": "Phase 2 — Next.js 16 앱 5라우트 모두 200 OK + ECharts 7종 차트 + Foundation 통합 완료. v0.4 미세조정 + 지난 4주 소급 데이터 + 빌드 자동화 + Phase 3 cron 단계.",
+    "phase": "Phase 2 — Next.js 앱 구축 완료, Phase 3 자동화 진입 직전",
+    "recentLogs": [
+      {
+        "date": "2026-05-05",
+        "title": "Phase 2 Next.js 16 앱 구축 완료 — 5라우트 + 차트 7종",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260505_log.md",
+        "excerpt": "/, /weekly, /monthly/[m], /yearly/[y], /projects/[id] 모두 200 OK. PageShell·Topbar·Footer 공통 컴포넌트."
+      },
+      {
+        "date": "2026-05-02",
+        "title": "v0.3 드릴다운 4페이지 병렬 제작 + Foundation 정의",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260502_log.md",
+        "excerpt": "design/foundation/tokens.css + 4 HTML 시안. 062_논문리더 v0.2 그레이스케일 토큰 추출."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (대시보드 정의·Phase 로드맵)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/PROJECT.md",
+      "fileKind": "md",
+      "summary": "Phase 0~3 로드맵 + 5라우트 구성 + 데이터 레이어 + 차트 컴포넌트 명세.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "Foundation tokens.css",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/design/foundation/tokens.css",
+      "fileKind": "css",
+      "summary": "Editorial Grayscale 디자인 토큰 — 062 v0.2에서 추출, weight = hierarchy, no rounded.",
+      "modifiedAt": "2026-05-02"
+    },
+    {
+      "title": "Next.js 앱 — 5라우트",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/app",
+      "fileKind": "tsx",
+      "summary": "Next.js 16.2.4 + React 19 + Tailwind v4. App Router /, /weekly, /monthly/[m], /yearly/[y], /projects/[id].",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "ECharts 차트 컴포넌트 7종",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/components",
+      "fileKind": "tsx",
+      "summary": "DailyActivityBar·ProjectPie·WeeklyTrendLine·TypeBreakdownPie·WeeklyContributionBar·TypeStackedArea·ProjectGantt.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "데이터 레이어 (types + lib + json)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/data",
+      "fileKind": "json",
+      "summary": "types/dashboard.ts 스키마 + projects.json + weekly/2026-W18.json + lib/data.ts loader.",
+      "modifiedAt": "2026-05-05"
+    },
+    {
+      "title": "v0.3 드릴다운 4 시안 HTML",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/design",
+      "fileKind": "html",
+      "summary": "weekly_index·monthly_detail·project_detail·yearly 4 HTML — 차트·Gantt·타임라인 패턴.",
+      "modifiedAt": "2026-05-02"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "5페이지 브라우저 검토 + v0.4 미세조정",
+      "description": "5라우트 실 브라우저 점검 — 톤·간격·차트 가독성 미세조정 사이클.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "data/weekly/* 지난 4주(W14~W17) 소급 생성",
+      "description": "현재 W18 1주분만 보유. docs/logs + PROJECTS.md 파싱하여 4주 소급 채우기.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "scripts/build-week.ts 자동 빌드 스크립트",
+      "description": "docs/logs + PROJECTS.md 파싱 → weekly JSON 자동 생성. 새 파일만 생성, 기존 read-only.",
+      "priority": "high",
+      "estimate": "2일"
+    },
+    {
+      "title": "Vercel 배포 + URL 확보",
+      "description": "Next.js 16 앱 Vercel 배포. 환경변수·도메인 정리.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "Phase 3 — Claude cron 매주 월요일 09:00 자동 빌드",
+      "description": "build-week.ts 완성 후 매주 자동 실행되는 cron 등록.",
+      "priority": "mid",
+      "estimate": "1일"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "03a",
+  "currentSituation": {
+    "summary": "Oncefilm 마케팅 리서치 — original 원본 데이터 기반 자동수집 인프라 + persona_lab 운영 중. 페르소나 실험 결과 정리 단계.",
+    "phase": "Active — 자동수집 + persona_lab 실험 운영",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 03_Data_Once PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "27개 프로젝트 일괄 PROJECT.md+CLAUDE.md 이원화 체계 적용."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (정의·다음 액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_Data_Once/PROJECT.md",
+      "fileKind": "md",
+      "summary": "Oncefilm 마케팅 리서치 정의 — original/automation/persona_lab/instagram_analysis 구조 명시.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "원본 데이터 (original/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_Data_Once/original",
+      "fileKind": "other",
+      "summary": "결제·앱 오픈·온보딩·피드백 원본 데이터. 수정 금지 폴더.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "자동수집 파이프라인 (automation/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_Data_Once/automation",
+      "fileKind": "other",
+      "summary": "데이터 수집 자동화 스크립트 모음.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "persona_lab (페르소나 실험실)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_Data_Once/persona_lab",
+      "fileKind": "other",
+      "summary": "Oncefilm 사용자 페르소나 설계·실험 운영 공간.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "instagram_analysis (인스타 분석)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_Data_Once/instagram_analysis",
+      "fileKind": "other",
+      "summary": "인스타그램 분석 데이터 — Oncefilm 마케팅 채널 인사이트.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "persona_lab 최신 실험 결과 정리",
+      "description": "최근 운영된 페르소나 실험을 모아 인사이트 도출 — 마케팅 전략과 연결 가능한 형태로 정리.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "자동수집 파이프라인 안정화 점검",
+      "description": "automation/ 스크립트 동작 확인, 에러 핸들링 보강, 수집 주기 검증.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "인스타 분석 → 마케팅 액션 변환",
+      "description": "instagram_analysis 결과를 실제 콘텐츠/광고 전략으로 변환할 워크북 작성.",
+      "priority": "mid",
+      "estimate": "1일"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

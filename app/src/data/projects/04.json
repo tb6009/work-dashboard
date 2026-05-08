@@ -1,0 +1,59 @@
+{
+  "id": "04",
+  "currentSituation": {
+    "summary": "drive_merge.py scan/merge phase 구현 완료. 실 사용 테스트 단계에서 일시 정지 상태.",
+    "phase": "Paused — 도구 코드 완성, 실 사용 테스트 대기",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 04_antigravity PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "독립 도구 폴더로 정의. drive_merge.py 핵심 스크립트 명시."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (정의·상태)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/04_antigravity/PROJECT.md",
+      "fileKind": "md",
+      "summary": "드라이브 정리 유틸리티 프로젝트 정의 — paused 상태 명시.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "drive_merge.py (핵심 스크립트)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/04_antigravity/폴더정리/drive_merge.py",
+      "fileKind": "other",
+      "summary": "드라이브 스캔·병합 Python 스크립트. scan/merge phase 구현 완료.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "GPT 프롬프팅 가이드 노트북",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/04_antigravity/폴더정리/gpt-5-2_prompting_guide.ipynb",
+      "fileKind": "other",
+      "summary": "GPT 프롬프팅 참고 노트북 — 도구 개선 시 참조용.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "재활성화 조건 — 실 드라이브 적용 테스트",
+      "description": "드라이브 백업 확보 후 dry-run 모드로 실데이터 테스트. 결과 검증 후 본격 적용 검토.",
+      "priority": "low",
+      "estimate": "1일"
+    },
+    {
+      "title": "병합 결과 검증 로직 추가",
+      "description": "merge phase 후 무결성 검증(파일 수·해시 일치) 코드 보강.",
+      "priority": "low",
+      "estimate": "반나절"
+    },
+    {
+      "title": "재시작 트리거 명문화",
+      "description": "어떤 조건에서 paused → active 로 전환할지 PROJECT.md에 추가 (예: 드라이브 정리 필요 발생 시).",
+      "priority": "low",
+      "estimate": "30분"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

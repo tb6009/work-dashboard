@@ -1,0 +1,84 @@
+{
+  "id": "05",
+  "currentSituation": {
+    "summary": "DSAPG 박사논문(IJHCS 타겟) — 레퍼런스 시스템 + PPS 28문항 + SSR 검증체계 완성. 데이터 조건 D1~D4 재설계 + 논문 초안 집필 진입 단계.",
+    "phase": "이론·방법론 정교화 → 논문 초안 집필 직전",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 07_참고자료/GPT_정리 흡수",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "GPT 폴더에서 흡수한 참고자료 정리. 1문장 기여문 고정 + D1~D4 데이터 조건 구체화 작업 대기."
+      }
+    ],
+    "blockers": [
+      "1문장 기여문 최종 고정 미완 — 제목·초록 압축 필요",
+      "Kemp(2023) Situated AI 원문 PDF 직접 확보 필요",
+      "케이스 SME 선정 기준 재정의 (경로 B: 파트너십 + SNS 인사이트 제공)"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (논문 정체·진행 상태)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_DSAPG_연구프로젝트/PROJECT.md",
+      "fileKind": "md",
+      "summary": "DSAPG 방법론 논문 정의 — IJHCS 타겟, 레퍼런스 시스템 완성 단계.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "CLAUDE.md (연구 컨텍스트 마스터)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_DSAPG_연구프로젝트/CLAUDE.md",
+      "fileKind": "md",
+      "summary": "연구 핵심 요약·이론 프레임워크·DC×Situated AI 매핑·실험 설계 마스터 문서.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "논문 초안 (01_논문_초안/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_DSAPG_연구프로젝트/01_논문_초안",
+      "fileKind": "other",
+      "summary": "IJHCS 투고용 논문 초안 작업 폴더. Introduction + 방법론 섹션 우선.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "연구 흐름·전체 맥락 (08_연구관리/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_DSAPG_연구프로젝트/08_연구관리/연구흐름.md",
+      "fileKind": "md",
+      "summary": "연구 단계별 발전·전체 맥락·세션 로그 정리.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "참고자료 시스템 (07_참고자료/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_DSAPG_연구프로젝트/07_참고자료",
+      "fileKind": "other",
+      "summary": "REFERENCE_GUIDE + 카테고리별 INDEX.md (Cat2~6) — PDF 대신 INDEX에서 인용문 즉시 사용.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "논문 초안 집필 시작 — Introduction + 방법론",
+      "description": "1문장 기여문 고정 후 Introduction 본문 작성. 방법론 섹션은 DC×Situated AI 매핑 표 기반.",
+      "priority": "high",
+      "estimate": "1주 (섹션별)"
+    },
+    {
+      "title": "데이터 조건 D1~D4 구체화",
+      "description": "각 조건의 데이터 명세 + Contextual Richness 조작적 정의. 실험 설계 재조정의 핵심.",
+      "priority": "high",
+      "estimate": "2일"
+    },
+    {
+      "title": "IJHCS 투고 가이드라인 재확인 + 형식 맞춤",
+      "description": "최신 author guidelines 확인, 분량·인용 스타일 검증.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "Kemp(2023) Situated AI 원문 PDF 확보",
+      "description": "AMR에서 다운로드. 본문 직접 인용 필요 부분 확인.",
+      "priority": "mid",
+      "estimate": "1시간"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

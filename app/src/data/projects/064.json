@@ -1,0 +1,72 @@
+{
+  "id": "064",
+  "currentSituation": {
+    "summary": "061·062·063 분석 완료, 공통 프로세스 7단계 추출. 학생용 인스트럭션 1차 초안(3단계 구조) 작성. 사용자 검토 + 학생 눈높이 다듬기 단계.",
+    "phase": "분석 완료 → 학생 눈높이 검토",
+    "recentLogs": [
+      {
+        "date": "2026-05-08",
+        "title": "프로젝트매뉴얼 트랙 신규 등록 + 분석 완료",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260508_log.md",
+        "excerpt": "061·062·063 분석 → 공통 7단계 + 차이점 표 + 암묵적 패턴 후보. 학생용 인스트럭션 1차 초안(3단계)."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (목적·현재상태·다음액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/064_프로젝트매뉴얼/PROJECT.md",
+      "fileKind": "md",
+      "summary": "AI 입문자 학생용 단계별 인스트럭션 정리 작업장. 061/062/063을 read-only 참조.",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": "01_프로세스_분석보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/064_프로젝트매뉴얼/docs/01_프로세스_분석보고서.md",
+      "fileKind": "md",
+      "summary": "061·062·063 폴더 구조·문서 패턴·workflow 역추출 분석 (학생용 자료의 근거).",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": "02_학생용_인스트럭션_초안",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/064_프로젝트매뉴얼/docs/02_학생용_인스트럭션_초안.md",
+      "fileKind": "md",
+      "summary": "AI 입문자 학생을 위한 단계별 매뉴얼 1차 초안 (3단계 구조).",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": ".claude/CLAUDE.md (작업 지침)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/064_프로젝트매뉴얼/.claude/CLAUDE.md",
+      "fileKind": "md",
+      "summary": "참조 폴더 read-only · 학생 눈높이 · file_path 인용 원칙 명시.",
+      "modifiedAt": "2026-05-08"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "02 인스트럭션 초안 검토 + 톤·범위 확정",
+      "description": "사용자가 직접 읽고 학생 눈높이가 맞는지·범위가 적절한지 결정. 어휘 풀이 추가 여부도 함께.",
+      "priority": "high",
+      "estimate": "1일 (사용자 검토)"
+    },
+    {
+      "title": "AI 입문자 첫 벽 의견 수렴",
+      "description": "PROJECT.md 작성? CLAUDE.md 개념? 어디서 학생들이 가장 막히는지 의견 수렴 후 인스트럭션 강조점 조정.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "미니 실습 추가 여부 결정",
+      "description": "예: '내 프로젝트 PROJECT.md 30분 안에 작성하기' 같은 실습 과제 포함 여부.",
+      "priority": "mid",
+      "estimate": "반나절 (기획)"
+    },
+    {
+      "title": "산출물 형태 확정",
+      "description": "Markdown 매뉴얼 단독 / + 슬라이드 / + 워크북 중 어느 조합으로 갈지.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-08T00:00:00+09:00"
+}

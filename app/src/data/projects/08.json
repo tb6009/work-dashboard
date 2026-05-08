@@ -1,0 +1,90 @@
+{
+  "id": "08",
+  "currentSituation": {
+    "summary": "M&Serve 산학협력 — 페르소나 7인(밀다3+ahgreet4) + Claude API 인터뷰 앱 + 박사논문형 6장 보고서 + GitHub Pages 배포 완료. ahgreet 인터뷰 미완 + FGI 콘텐츠 제작 단계.",
+    "phase": "Active — 보고서 배포 완료, 미완 콘텐츠 보강 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 08_MNServe 3 서브 통합 정리",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "01_data·02_claude_site·03_gpt_site 3 서브 구조 명문화. SSR 0.884·ICC 0.891 검증 결과."
+      }
+    ],
+    "blockers": [
+      "ahgreet 페르소나 4인의 심층 인터뷰 MD 미작성 (밀다 3인만 완료)",
+      "FGI 페이지 '준비 중' 상태 — 실제 콘텐츠 미작성"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (3 서브 통합 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/PROJECT.md",
+      "fileKind": "md",
+      "summary": "M&Serve 산학협력 정의 — 페르소나 7인·6장 보고서·GitHub Pages 배포 상태.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "Claude API 인터뷰 앱 (interview.html)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/02_claude_site/인터뷰페이지_메인",
+      "fileKind": "html",
+      "summary": "Claude API 연동 페르소나 인터뷰 앱 — SSR 0.884, ICC 0.891 검증.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "원본 데이터 (01_data/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/01_data",
+      "fileKind": "other",
+      "summary": "공유 원본 데이터 소스. 02·03 서브가 read-only로 참조.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "리서치 프로세스 (researchProcess.md)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/02_claude_site/researchProcess.md",
+      "fileKind": "md",
+      "summary": "리서치 프로세스 상세 — OCEAN 5요인 + SSR 검증 절차.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "세션 history (135개 프롬프트)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/02_claude_site/history.md",
+      "fileKind": "md",
+      "summary": "전체 세션 기록·리서치 프로세스 — 135개 프롬프트 누적.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "GPT 비교 사이트 (03_gpt_site/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_MNServe/03_gpt_site",
+      "fileKind": "other",
+      "summary": "Claude vs GPT 비교 실험 사이트 — 동일 데이터셋 구동.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "ahgreet 페르소나 4인 심층 인터뷰 MD 작성",
+      "description": "밀다 3인은 완료, ahgreet 4인 미완. 동일 양식으로 MD 작성하여 보고서 완성도 100%.",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "FGI 페이지 실제 콘텐츠 제작",
+      "description": "현재 '준비 중' 상태. 페르소나 그룹 인터뷰 시나리오 + 결과 페이지 제작.",
+      "priority": "high",
+      "estimate": "2일"
+    },
+    {
+      "title": "참고문헌 PDF 다운로드 (arXiv 8건)",
+      "description": "보고서 인용 참고문헌 8건 PDF 확보 후 부록 링크 정합화.",
+      "priority": "mid",
+      "estimate": "1시간"
+    },
+    {
+      "title": "GitHub Pages 최신 동기화",
+      "description": "ahgreet·FGI 콘텐츠 추가 후 tb6009.github.io/persona/ 재배포.",
+      "priority": "mid",
+      "estimate": "30분"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

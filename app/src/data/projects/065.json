@@ -1,0 +1,77 @@
+{
+  "id": "065",
+  "currentSituation": {
+    "summary": "프로젝트 폴더 신규 생성 + 5단 작업 구조(01_data ~ 05_질문지) 셋업. 인터뷰 주제·대상·산출물 형식 미정.",
+    "phase": "폴더 셋업 완료 → 인터뷰 설계 단계",
+    "recentLogs": [
+      {
+        "date": "2026-05-08",
+        "title": "065 인터뷰 트랙 신규 생성",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260508_log.md",
+        "excerpt": "01_data / 02_transcripts / 03_analysis / 04_outputs / 05_질문지 + docs 5단 구조. 주제는 추후 확정."
+      }
+    ],
+    "blockers": [
+      "인터뷰 목적·핵심 질문 미확정",
+      "인터뷰 대상자 세그먼트 미확정",
+      "원본 자료 저장 규칙 + 개인정보 처리 기준 미확정"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (목적·현재상태·다음액션)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/065_인터뷰/PROJECT.md",
+      "fileKind": "md",
+      "summary": "인터뷰 자료 수집·전사·분석·산출물 작업장 정의.",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": "README.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/065_인터뷰/README.md",
+      "fileKind": "md",
+      "summary": "프로젝트 개요와 폴더 안내.",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": ".claude/CLAUDE.md (작업 지침)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/065_인터뷰/.claude/CLAUDE.md",
+      "fileKind": "md",
+      "summary": "원본 read-only · 익명화(P01·P02) · 미정 항목은 임의 확정 금지 원칙.",
+      "modifiedAt": "2026-05-08"
+    },
+    {
+      "title": "5단 작업 폴더 셋업",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/065_인터뷰/",
+      "fileKind": "other",
+      "summary": "01_data · 02_transcripts · 03_analysis · 04_outputs · 05_질문지 · docs.",
+      "modifiedAt": "2026-05-08"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "인터뷰 목적과 핵심 질문 확정",
+      "description": "이 프로젝트의 전제 — 무엇을 알아내려는 인터뷰인가. 확정 전 다른 작업 시작 안 함.",
+      "priority": "high",
+      "estimate": "반나절 (의사결정)"
+    },
+    {
+      "title": "인터뷰 대상자 세그먼트 목록 작성",
+      "description": "타깃 기준 + 모집 채널 + 인원수. 윤리 이슈도 함께 검토.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "docs/01_인터뷰_설계.md 초안",
+      "description": "목적·대상·질문지·진행 방식·분석 계획 5섹션 구조로 1차 작성.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "원본 저장 규칙 + 개인정보 기준 확정",
+      "description": "녹음·전사 보존 기간, 익명화 코드(P01·P02) 정책, 외부 공유 시 제거 항목 명시.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-08T00:00:00+09:00"
+}

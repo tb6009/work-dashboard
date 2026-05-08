@@ -189,3 +189,6 @@ body {
   line-height: var(--leading-relaxed);
   margin-left: 36px;
 }
+
+/* (project-tile-2col styles inlined into ActiveProjectTile component
+   due to Tailwind v4 preflight specificity issues) */

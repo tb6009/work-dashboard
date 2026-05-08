@@ -1,0 +1,66 @@
+{
+  "id": "09",
+  "currentSituation": {
+    "summary": "몸과마음의과학 수업 Q&A 에이전트 — 2025년 강의 자료 아카이브 완료. 2026년 강의 준비 시 재활성화 대기 paused 상태.",
+    "phase": "Paused — 2026년 강의 준비 시 재활성화 예정",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 09 PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "2025 강의자료·연구자료·분석 자료 정리. paused 상태 명문화."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (정의·상태)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09-몸과마음의과학/PROJECT.md",
+      "fileKind": "md",
+      "summary": "수업 Q&A 에이전트 프로젝트 정의 — 2025 자료 아카이브 + paused.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "2025 강의자료 (논문·연구자료·분석)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09-몸과마음의과학/2025_몸과마음의 과학",
+      "fileKind": "other",
+      "summary": "2025년 강의 시 사용한 논문·연구자료·분석 데이터 통합 아카이브.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "Coaching 문서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09-몸과마음의과학/Coaching",
+      "fileKind": "other",
+      "summary": "코칭 논문·로그·역량 수업 자료 — 코칭 시스템 자료.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "QA 아카이브",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09-몸과마음의과학/QA_아카이브",
+      "fileKind": "other",
+      "summary": "수업 Q&A 기록 — 에이전트 재활성화 시 학습 데이터로 활용.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "재활성화 조건 — 2026년 강의 일정 확정 시",
+      "description": "2026년 강의 개강 확정되면 paused → active 전환. QA_아카이브 활용 계획 수립.",
+      "priority": "low",
+      "estimate": "1일 (활성화 시)"
+    },
+    {
+      "title": "Q&A 에이전트 최신 강의 내용 반영",
+      "description": "2026 신규 강의자료 도입 시 에이전트 학습 자료 갱신.",
+      "priority": "low",
+      "estimate": "2일 (활성화 시)"
+    },
+    {
+      "title": "10-일상다반사와 자료 교차 참조 정리",
+      "description": "마음 챗봇(10번)과 자료 공유 라인 명문화. 중복·충돌 점검.",
+      "priority": "low",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

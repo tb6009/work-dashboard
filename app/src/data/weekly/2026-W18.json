@@ -22,21 +22,21 @@
   ],
 
   "projects": [
-    { "id": "061", "pct": 95, "filesChanged": 50, "imp": 5, "nextAction": "Recommendation DB 저장 → 주간 대시보드" },
-    { "id": "51",  "pct": 75, "filesChanged": 28, "imp": 4, "nextAction": "시스템프롬프트 4종 실제 구동 테스트" },
-    { "id": "091", "pct": 70, "filesChanged": 25, "imp": 4, "nextAction": "7채널 깊이 캡처 → 9축 평가" },
-    { "id": "062", "pct": 60, "filesChanged": 6,  "imp": 4, "nextAction": "마이그레이션 SQL + 화면설계" },
-    { "id": "32",  "pct": 55, "filesChanged": 4,  "imp": 3, "nextAction": "01회차 슬라이드 HTML 렌더링" },
-    { "id": "21",  "pct": 35, "filesChanged": 3,  "imp": 3, "nextAction": "심사쟁점 #1 처리 → 본문 집필" },
-    { "id": "05",  "pct": 30, "filesChanged": 2,  "imp": 3, "nextAction": "논문 초안 집필 시작" },
-    { "id": "10",  "pct": 25, "filesChanged": 2,  "imp": 2, "nextAction": "Phase 5 자문" },
-    { "id": "31",  "pct": 15, "filesChanged": 1,  "imp": 2, "nextAction": "미완성 주차 파악" },
-    { "id": "22",  "pct": 10, "filesChanged": 1,  "imp": 2, "nextAction": "종합분석보고서 v08" },
-    { "id": "12",  "pct": 8,  "filesChanged": 1,  "imp": 1, "nextAction": "PPT 추가 사례 보완" },
-    { "id": "11",  "pct": 6,  "filesChanged": 1,  "imp": 1, "nextAction": "트렌드 자료 업데이트" },
-    { "id": "03a", "pct": 4,  "filesChanged": 0,  "imp": 1, "nextAction": "persona_lab 결과 정리" },
-    { "id": "03b", "pct": 3,  "filesChanged": 0,  "imp": 1, "nextAction": "가이드라인 최종 확정" },
-    { "id": "06",  "pct": 2,  "filesChanged": 0,  "imp": 1, "nextAction": "upstream 동기화 확인" }
+    { "id": "061", "pct": 95, "filesChanged": 50, "imp": 5, "did": "하루 캐릭터 통합 + Daily Insight DB 동적화 + Vercel 배포",                "nextAction": "Recommendation DB 저장 → 주간 대시보드" },
+    { "id": "51",  "pct": 75, "filesChanged": 28, "imp": 4, "did": "시스템프롬프트 4종 v1 확정 (UUID·서사·자기입력·진)",                  "nextAction": "시스템프롬프트 4종 실제 구동 테스트" },
+    { "id": "091", "pct": 70, "filesChanged": 25, "imp": 4, "did": "출판 기획안 v1.1 + 목차 v1.0 + 30명 인스타 발굴",                     "nextAction": "7채널 깊이 캡처 → 9축 평가" },
+    { "id": "062", "pct": 60, "filesChanged": 6,  "imp": 4, "did": "데이터모델 v0.2 + Obsidian 스펙 + 시안 v0.3",                         "nextAction": "마이그레이션 SQL + 화면설계" },
+    { "id": "32",  "pct": 55, "filesChanged": 4,  "imp": 3, "did": "01회차 콘텐츠 작성 (슬라이드 본문 569줄 + 디자인 브리프)",            "nextAction": "01회차 슬라이드 HTML 렌더링" },
+    { "id": "21",  "pct": 35, "filesChanged": 3,  "imp": 3, "did": "T1 4사례 분석 + SAI 중심 프레임 확정",                                "nextAction": "심사쟁점 #1 처리 → 본문 집필" },
+    { "id": "05",  "pct": 30, "filesChanged": 2,  "imp": 3, "did": "데이터 조건 D1~D4 정교화, 1문장 기여문 검토",                          "nextAction": "논문 초안 집필 시작" },
+    { "id": "10",  "pct": 25, "filesChanged": 2,  "imp": 2, "did": "마음 챗봇 v1.5β 운영 + 자료/agents 자동수집",                          "nextAction": "Phase 5 자문" },
+    { "id": "31",  "pct": 15, "filesChanged": 1,  "imp": 2, "did": "K-MOOC 대본 진행 점검",                                                "nextAction": "미완성 주차 파악" },
+    { "id": "22",  "pct": 10, "filesChanged": 1,  "imp": 2, "did": "계원예대 종합분석보고서 v07 검토",                                    "nextAction": "종합분석보고서 v08" },
+    { "id": "12",  "pct": 8,  "filesChanged": 1,  "imp": 1, "did": "데이터 시각화 강의자료 사례 보강",                                     "nextAction": "PPT 추가 사례 보완" },
+    { "id": "11",  "pct": 6,  "filesChanged": 1,  "imp": 1, "did": "디자인 트렌드 매거진 자료 업데이트",                                   "nextAction": "트렌드 자료 업데이트" },
+    { "id": "03a", "pct": 4,  "filesChanged": 0,  "imp": 1, "did": "persona_lab 결과 정리",                                                "nextAction": "persona_lab 결과 정리" },
+    { "id": "03b", "pct": 3,  "filesChanged": 0,  "imp": 1, "did": "J스트라타 브랜드 가이드 미세 조정",                                    "nextAction": "가이드라인 최종 확정" },
+    { "id": "06",  "pct": 2,  "filesChanged": 0,  "imp": 1, "did": "Supanova upstream 동기화 점검",                                        "nextAction": "upstream 동기화 확인" }
   ],
 
   "decisions": [

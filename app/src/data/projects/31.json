@@ -1,0 +1,73 @@
+{
+  "id": "31",
+  "currentSituation": {
+    "summary": "K-MOOC 'AI 시대의 비즈니스 디자인' 14주차 촬영 대본 — 강의계획서 v04 + 주차별 대본 폴더 구성. 미완 주차 작성 + 촬영 일정 검토 단계.",
+    "phase": "Active — 대본 작성 진행 중",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 31_촬영용 스크립트 PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "K-MOOC 14주차 대본 트랙 정리. 32_강연시리즈와 책임 분리 명시."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (대본 트랙 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/31_촬영용 스크립트/PROJECT.md",
+      "fileKind": "md",
+      "summary": "K-MOOC 14주차 대본 프로젝트 정의 — 대본/목차/주차별 폴더.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "강의계획서 v04",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/31_촬영용 스크립트/Ai시대의 비지니스 디자인_v04.docx",
+      "fileKind": "other",
+      "summary": "강의 계획서 최신 버전 v04 — 14주차 전체 구성 명세.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "주차별 대본 폴더",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/31_촬영용 스크립트/대본",
+      "fileKind": "other",
+      "summary": "주차별 촬영 대본 작업 폴더 — 도입 2분·본론 35분·마무리 3분 기준.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "강의 목차 구조 (목차/)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/31_촬영용 스크립트/목차",
+      "fileKind": "other",
+      "summary": "14주차 강의 목차 트리 — 대본 작성 기준 구조.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "6주차 자료",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/31_촬영용 스크립트/6주차",
+      "fileKind": "other",
+      "summary": "6주차 관련 보조 자료 — 대본 작성 참고용.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "미완성 주차 대본 현황 파악 + 작성",
+      "description": "대본/ 폴더 점검하여 미완 주차 식별, 우선순위 매겨 순차 작성. 도입·본론·마무리 시간 기준 준수.",
+      "priority": "high",
+      "estimate": "주차별 1일 (전체 1~2주)"
+    },
+    {
+      "title": "촬영 스케줄에 맞춰 대본 최종 검토",
+      "description": "촬영 일정 확정되면 해당 주차 대본 리허설 + 시간 측정 + 수정.",
+      "priority": "high",
+      "estimate": "주차별 반나절"
+    },
+    {
+      "title": "12_Data_Study·07_AIDX 자료 인용 점검",
+      "description": "강의 자료 연계 프로젝트의 최신 자료를 대본에 반영.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

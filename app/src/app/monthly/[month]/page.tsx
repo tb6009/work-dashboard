@@ -1,189 +1,97 @@
+import Link from 'next/link';
 import PageShell from '@/components/layout/PageShell';
-import WeeklyTrendLine from '@/components/charts/WeeklyTrendLine';
-import TypeBreakdownPie, { TypeSlice } from '@/components/charts/TypeBreakdownPie';
-import { loadWeek, getProject } from '@/lib/data';
+import {
+  loadMonth,
+  loadWeek,
+  listAvailableMonths,
+  getProject,
+  getCurrentWeekId,
+} from '@/lib/data';
+import {
+  parseMonthId,
+  getMonthLabel,
+  getWeeksOfMonth,
+  parseWeekId,
+  getWeekRange,
+  getCurrentMonthId,
+} from '@/lib/calendar';
 import { TYPE_COLOR } from '@/lib/projectTypes';
-import type { ProjectType } from '@/types/dashboard';
 
-interface MonthlyPageProps {
+export const dynamic = 'force-dynamic';
+
+interface PageProps {
   params: Promise<{ month: string }>;
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   Hardcoded data for 2026-05 (per mockup v0.3).
-   For other months, render a "no data yet" message.
-   ───────────────────────────────────────────────────────────────── */
-
-interface WeekCard {
-  id: string;        // '2026-W18'
-  short: string;     // 'W18'
-  range: string;     // '04-27 ~ 05-03'
-  files: number | null;
-  topLabel: string;  // 'TOP' | 'UPCOMING'
-  topText: string;
-  state: 'current' | 'future';
-}
-
-const WEEK_CARDS_2026_05: WeekCard[] = [
-  {
-    id: '2026-W18',
-    short: 'W18',
-    range: '04-27 ~ 05-03',
-    files: 142,
-    topLabel: 'TOP',
-    topText: '061 LifeOS · product',
-    state: 'current',
-  },
-  { id: '2026-W19', short: 'W19', range: '05-04 ~ 05-10', files: null, topLabel: 'UPCOMING', topText: '데이터 미수집', state: 'future' },
-  { id: '2026-W20', short: 'W20', range: '05-11 ~ 05-17', files: null, topLabel: 'UPCOMING', topText: '데이터 미수집', state: 'future' },
-  { id: '2026-W21', short: 'W21', range: '05-18 ~ 05-24', files: null, topLabel: 'UPCOMING', topText: '데이터 미수집', state: 'future' },
-  { id: '2026-W22', short: 'W22', range: '05-25 ~ 05-31', files: null, topLabel: 'UPCOMING', topText: '데이터 미수집', state: 'future' },
-];
-
-interface MilestoneCard {
-  date: string;
-  weekday: string;
-  projectId: string;
-  title: string;
-  body: string;
-  isMilestone?: boolean;
-}
-
-const MILESTONES_2026_05: MilestoneCard[] = [
-  {
-    date: '04-29',
-    weekday: '수',
-    projectId: '32',
-    title: '강연시리즈 트랙 신설',
-    body: '단발성 폴더가 아니라 회차별 자산화 트랙으로 승격. K-MOOC(31)와 책임 분리.',
-  },
-  {
-    date: '04-29',
-    weekday: '수',
-    projectId: '00',
-    title: '00_personal 단방향 권한',
-    body: '개인 비서 시스템은 다른 폴더에 대해 읽기만 허용. 쓰기 절대 금지.',
-  },
-  {
-    date: '05-01',
-    weekday: '금',
-    projectId: '51',
-    title: '챗봇 4단계 비교 설계',
-    body: 'UUID구조화 / UUID서사 / 기본자기입력 / 진 — 4종 시스템프롬프트 v1 확정.',
-  },
-  {
-    date: '05-02',
-    weekday: '토',
-    projectId: '061',
-    title: 'LifeOS 1일 만에 배포',
-    body: 'Next.js 16 + Supabase + ChatGPT API. Vercel 배포 완료 (life-os-7wj2).',
-    isMilestone: true,
-  },
-  {
-    date: '05-03',
-    weekday: '일',
-    projectId: '061',
-    title: "'하루' 캐릭터 통합",
-    body: '진+모미+마음 → 단일 비서 캐릭터. Daily Insight DB 기반 동적화.',
-  },
-  {
-    date: '05-05',
-    weekday: '화',
-    projectId: '062',
-    title: '논문리더 스펙 v0.2',
-    body: 'Obsidian + 공유 Supabase + 독립 Next.js 16. 데이터모델 v0.2 확정.',
-  },
-];
-
-/** Gantt row spec.
- *  start/end indices into [W18, W19, W20, W21, W22] (0..4).
- *  partial: render the W18 (current) bar at 0.45 opacity.
- *  future: future-week bars (idx>0) rendered at 0.45 opacity. */
-interface GanttRow {
-  id: string;
-  name: string;
-  type: ProjectType;
-  start: number;
-  end: number;
-  partial: boolean;
-  future: boolean;
-}
-
-const GANTT_ROWS_2026_05: GanttRow[] = [
-  { id: '061', name: 'LifeOS',     type: 'product',    start: 0, end: 4, partial: false, future: true },
-  { id: '062', name: '논문리더',     type: 'product',    start: 0, end: 4, partial: false, future: true },
-  { id: '051', name: '페르소나',     type: 'research',   start: 0, end: 0, partial: false, future: false },
-  { id: '091', name: '출판',        type: 'publishing', start: 0, end: 0, partial: false, future: false },
-  { id: '32',  name: '강연시리즈',   type: 'education',  start: 0, end: 0, partial: false, future: false },
-  { id: '21',  name: 'CPSF',       type: 'research',   start: 0, end: 0, partial: true,  future: false },
-  { id: '05',  name: 'DSAPG',      type: 'research',   start: 0, end: 0, partial: true,  future: false },
-  { id: '00',  name: 'personal',   type: 'system',     start: 0, end: 0, partial: false, future: false },
-];
-
-const TYPE_BREAKDOWN_2026_05: TypeSlice[] = [
-  { name: 'product',    value: 43 },
-  { name: 'research',   value: 29 },
-  { name: 'publishing', value: 12 },
-  { name: 'education',  value: 8 },
-  { name: 'system',     value: 5 },
-  { name: 'data',       value: 3 },
-];
-
-/* ─────────────────────────────────────────────────────────────────
-   Page
-   ───────────────────────────────────────────────────────────────── */
-
-export default async function MonthlyPage({ params }: MonthlyPageProps) {
+export default async function MonthlyPage({ params }: PageProps) {
   const { month } = await params;
-
-  if (month !== '2026-05') {
+  const parsed = parseMonthId(month);
+  if (!parsed) {
     return (
       <PageShell active="monthly">
-        <div className="crumb-row" style={crumbStyle}>
-          <span style={{ color: 'var(--gray-500)' }}>Dashboard</span>
-          <span style={{ color: 'var(--gray-300)' }}>/</span>
-          <span style={{ color: 'var(--gray-500)' }}>월간</span>
-          <span style={{ color: 'var(--gray-300)' }}>/</span>
-          <span style={{ color: 'var(--gray-900)', fontWeight: 600 }}>{month}</span>
-        </div>
-        <div
-          style={{
-            background: 'var(--white)',
-            border: 'var(--border-1)',
-            padding: 'var(--sp-12)',
-            textAlign: 'center',
-            color: 'var(--gray-500)',
-            fontSize: 'var(--text-base)',
-          }}
-        >
-          {month} — 데이터 미수집
+        <div style={{ padding: 'var(--sp-16)', textAlign: 'center' }}>
+          <div style={{ fontSize: 'var(--text-base)', color: 'var(--gray-700)' }}>
+            잘못된 월 형식: <code>{month}</code>
+          </div>
+          <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginTop: 8 }}>
+            예: <code>/monthly/2026-05</code>
+          </div>
         </div>
       </PageShell>
     );
   }
 
-  // Pull current week (W18) for any cross-checks (currently used as a guard).
-  await loadWeek('2026-W18');
+  const monthly = await loadMonth(month);
+  const availableMonths = await listAvailableMonths();
+  const currentMonthId = getCurrentMonthId();
+  const currentWeekId = await getCurrentWeekId();
+
+  if (!monthly) {
+    return (
+      <PageShell active="monthly">
+        <NotAvailable month={month} availableMonths={availableMonths} currentMonthId={currentMonthId} />
+      </PageShell>
+    );
+  }
+
+  const ml = getMonthLabel(month);
+  const weekIds = getWeeksOfMonth(month);
+  const weeks = await Promise.all(weekIds.map(loadWeek));
+  const isCurrentMonth = month === currentMonthId;
 
   return (
     <PageShell active="monthly">
-      {/* Breadcrumb */}
-      <div style={crumbStyle}>
-        <span style={{ color: 'var(--gray-500)' }}>Dashboard</span>
+      {/* Crumbs */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 'var(--sp-2)',
+          fontSize: 'var(--text-xs)',
+          color: 'var(--gray-500)',
+          marginBottom: 'var(--sp-6)',
+        }}
+      >
+        <Link href="/" style={{ color: 'var(--gray-500)', textDecoration: 'none' }}>DASHBOARD</Link>
         <span style={{ color: 'var(--gray-300)' }}>/</span>
-        <span style={{ color: 'var(--gray-500)' }}>월간</span>
+        <Link href={`/yearly/${parsed.year}`} style={{ color: 'var(--gray-500)', textDecoration: 'none' }}>
+          {parsed.year}
+        </Link>
         <span style={{ color: 'var(--gray-300)' }}>/</span>
-        <span style={{ color: 'var(--gray-900)', fontWeight: 600 }}>2026-05</span>
+        <span style={{ color: 'var(--gray-900)', fontWeight: 600 }}>
+          {ml?.label} · {ml?.name}
+        </span>
       </div>
 
       {/* Hero */}
-      <section style={{ marginBottom: 'var(--sp-12)' }}>
+      <section style={{ marginBottom: 'var(--sp-8)' }}>
         <div
           style={{
             display: 'flex',
-            alignItems: 'flex-end',
             justifyContent: 'space-between',
-            marginBottom: 'var(--sp-8)',
+            alignItems: 'flex-end',
+            paddingBottom: 'var(--sp-5)',
+            borderBottom: isCurrentMonth ? '2px solid var(--black)' : '1px solid var(--gray-300)',
           }}
         >
           <div>
@@ -195,22 +103,22 @@ export default async function MonthlyPage({ params }: MonthlyPageProps) {
                 textTransform: 'uppercase',
                 letterSpacing: 'var(--tracking-wider)',
                 marginBottom: 'var(--sp-2)',
+                fontFamily: 'var(--font-mono)',
               }}
             >
-              MONTHLY DETAIL
+              MONTHLY · {month}
             </div>
             <h1
-              className="num"
               style={{
                 fontSize: 50,
                 fontWeight: 300,
                 color: 'var(--black)',
                 letterSpacing: 'var(--tracking-tight)',
                 lineHeight: 1,
-                marginBottom: 'var(--sp-2)',
+                margin: '0 0 var(--sp-2) 0',
               }}
             >
-              2026 · May
+              {ml?.name} · {parsed.year}
             </h1>
             <div
               style={{
@@ -219,35 +127,29 @@ export default async function MonthlyPage({ params }: MonthlyPageProps) {
                 fontVariantNumeric: 'tabular-nums',
               }}
             >
-              5주차 (W18 ~ W22) · 30일
+              {weekIds.length} weeks · {weeks.filter(w => w !== null).length} weeks 데이터 있음
+              {isCurrentMonth ? ' · CURRENT MONTH' : ''}
             </div>
           </div>
-          <div style={{ textAlign: 'right', maxWidth: 320 }}>
-            <div
+          {isCurrentMonth ? (
+            <span
               style={{
-                fontSize: 'var(--text-2xs)',
-                color: 'var(--gray-400)',
-                textTransform: 'uppercase',
+                fontSize: 9,
+                fontWeight: 700,
+                background: 'var(--black)',
+                color: 'var(--white)',
+                padding: '2px 6px',
                 letterSpacing: 'var(--tracking-wide)',
-                marginBottom: 'var(--sp-2)',
               }}
             >
-              한 줄 요약
-            </div>
-            <div
-              style={{
-                fontSize: 'var(--text-base)',
-                color: 'var(--gray-700)',
-                fontWeight: 500,
-                lineHeight: 'var(--leading-relaxed)',
-              }}
-            >
-              신규 3개 · 배포 1건 · W18 시작점 · 4주 미래
-            </div>
-          </div>
+              CURRENT
+            </span>
+          ) : null}
         </div>
+      </section>
 
-        {/* KPI grid */}
+      {/* KPI */}
+      <section style={{ marginBottom: 'var(--sp-8)' }}>
         <div
           style={{
             display: 'grid',
@@ -257,126 +159,244 @@ export default async function MonthlyPage({ params }: MonthlyPageProps) {
             background: 'var(--gray-200)',
           }}
         >
-          <Kpi label="총 변경 파일"  value="142" meta="W18 only · W19~22 미래" />
-          <Kpi label="평균 Active"   value="15"  meta="projects / week" />
-          <Kpi label="신규 프로젝트" value="3"   meta="32 · 061 · 062" />
-          <Kpi label="Milestones"   value="5"   meta="decisions this month" />
+          <Kpi label="총 변경 파일" value={monthly.aggregated.totalFiles} meta={`${weekIds.length} weeks 합산`} />
+          <Kpi label="평균 Active" value={monthly.aggregated.avgActive} meta="weekly 평균" />
+          <Kpi label="신규 프로젝트" value={monthly.aggregated.newProjectsCount} meta="이 달 등록" />
+          <Kpi label="Milestone" value={monthly.aggregated.milestonesCount} meta="중요 결정" />
         </div>
       </section>
 
-      {/* Week mini-cards */}
-      <section style={{ marginBottom: 'var(--sp-12)' }}>
-        <SectionHead title="주차별 요약" meta="5주 · 클릭하여 주간 상세로 이동" />
+      {/* Weeks of this month */}
+      <section style={{ marginBottom: 'var(--sp-8)' }}>
+        <SectionHead title="이 달의 주간" meta={`${weekIds.length} weeks`} />
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(5, 1fr)',
+            gridTemplateColumns: `repeat(${weekIds.length === 5 ? 5 : 4}, 1fr)`,
             gap: 'var(--sp-3)',
           }}
         >
-          {WEEK_CARDS_2026_05.map(card => (
-            <WeekCardEl key={card.id} card={card} />
-          ))}
+          {weekIds.map((wid, i) => {
+            const w = weeks[i];
+            const isCurrent = wid === currentWeekId;
+            const parsedW = parseWeekId(wid);
+            const range = parsedW ? getWeekRange(parsedW.year, parsedW.week) : null;
+
+            return (
+              <Link
+                key={wid}
+                href={w ? '/weekly' : '#'}
+                style={{
+                  background: isCurrent ? 'var(--black)' : w ? 'var(--white)' : 'var(--gray-50)',
+                  border: '1px solid',
+                  borderColor: isCurrent ? 'var(--black)' : w ? 'var(--gray-300)' : 'var(--gray-200)',
+                  color: isCurrent ? 'var(--white)' : 'inherit',
+                  padding: 'var(--sp-4)',
+                  textDecoration: 'none',
+                  pointerEvents: w ? 'auto' : 'none',
+                  display: 'block',
+                  minHeight: 110,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 'var(--text-xs)',
+                    fontFamily: 'var(--font-mono)',
+                    color: isCurrent ? 'var(--gray-300)' : w ? 'var(--gray-500)' : 'var(--gray-300)',
+                  }}
+                >
+                  {wid}
+                </div>
+                <div
+                  style={{
+                    fontSize: 'var(--text-xs)',
+                    color: isCurrent ? 'var(--white)' : w ? 'var(--gray-700)' : 'var(--gray-300)',
+                    fontWeight: 500,
+                    marginTop: 2,
+                  }}
+                >
+                  {range ? `${range.fromShort} ~ ${range.toShort}` : ''}
+                </div>
+                <div
+                  style={{
+                    fontSize: 'var(--text-2xl)',
+                    fontWeight: 700,
+                    color: isCurrent ? 'var(--white)' : w ? 'var(--black)' : 'var(--gray-300)',
+                    marginTop: 'var(--sp-3)',
+                    fontVariantNumeric: 'tabular-nums',
+                    letterSpacing: 'var(--tracking-tight)',
+                  }}
+                >
+                  {w ? w.kpis.filesChanged : '—'}
+                  {w ? (
+                    <span
+                      style={{
+                        fontSize: 'var(--text-xs)',
+                        fontWeight: 400,
+                        color: isCurrent ? 'var(--gray-300)' : 'var(--gray-400)',
+                        marginLeft: 4,
+                      }}
+                    >
+                      files
+                    </span>
+                  ) : null}
+                </div>
+                {isCurrent ? (
+                  <div
+                    style={{
+                      display: 'inline-block',
+                      fontSize: 9,
+                      fontWeight: 700,
+                      background: 'var(--white)',
+                      color: 'var(--black)',
+                      padding: '1px 6px',
+                      marginTop: 'var(--sp-2)',
+                      letterSpacing: 'var(--tracking-wide)',
+                    }}
+                  >
+                    CURRENT
+                  </div>
+                ) : null}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
-      {/* Charts row */}
-      <section style={{ marginBottom: 'var(--sp-12)' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '2fr 1fr',
-            gap: 'var(--sp-5)',
-          }}
-        >
-          <div style={chartCardStyle}>
-            <ChartCardHead title="주차별 활동 추이" sub="파일 변경 수 · W18 highlighted" />
-            <WeeklyTrendLine data={[142, null, null, null, null]} />
-          </div>
-          <div style={chartCardStyle}>
-            <ChartCardHead title="유형별 비중" sub="% of changes · 5월" />
-            <TypeBreakdownPie data={TYPE_BREAKDOWN_2026_05} />
-          </div>
-        </div>
-      </section>
-
-      {/* Project Lifecycle Gantt (HTML/CSS grid) */}
-      <section style={{ marginBottom: 'var(--sp-12)' }}>
-        <div style={chartCardStyle}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'baseline',
-              justifyContent: 'space-between',
-              marginBottom: 'var(--sp-4)',
-            }}
-          >
-            <div>
-              <div style={{ fontSize: 'var(--text-base)', fontWeight: 600, color: 'var(--gray-900)' }}>
-                프로젝트 라이프사이클
+      {/* Top Projects + Milestones */}
+      <section
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1.4fr 1fr',
+          gap: 'var(--sp-5)',
+          marginBottom: 'var(--sp-12)',
+        }}
+      >
+        <div>
+          <SectionHead title="이 달 Top Projects" meta={`${monthly.topProjects.length}개`} />
+          <div style={{ background: 'var(--white)', border: 'var(--border-1)' }}>
+            {monthly.topProjects.length === 0 ? (
+              <div style={{ padding: 'var(--sp-6)', color: 'var(--gray-400)', fontSize: 'var(--text-sm)' }}>
+                활동 없음
               </div>
-              <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>
-                5월 5주간 프로젝트별 활동 구간
-              </div>
-            </div>
-            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>
-              {GANTT_ROWS_2026_05.length} active projects
-            </div>
-          </div>
-
-          {/* Header row */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '220px repeat(5, 1fr)',
-              borderBottom: 'var(--border-1)',
-              paddingBottom: 'var(--sp-2)',
-              marginBottom: 'var(--sp-2)',
-            }}
-          >
-            <div style={ganttHeadCellStyle('label')}>PROJECT</div>
-            <div style={ganttHeadCellStyle('current')}>W18</div>
-            <div style={ganttHeadCellStyle()}>W19</div>
-            <div style={ganttHeadCellStyle()}>W20</div>
-            <div style={ganttHeadCellStyle()}>W21</div>
-            <div style={ganttHeadCellStyle()}>W22</div>
-          </div>
-
-          {/* Body rows */}
-          <div style={{ borderTop: 'var(--border-1)' }}>
-            {GANTT_ROWS_2026_05.map((row, idx) => (
-              <GanttRowEl key={row.id} row={row} isLast={idx === GANTT_ROWS_2026_05.length - 1} />
-            ))}
+            ) : (
+              monthly.topProjects.map((pid, i) => {
+                const meta = getProject(pid);
+                if (!meta) return null;
+                const color = TYPE_COLOR[meta.type];
+                return (
+                  <Link
+                    key={pid}
+                    href={`/projects/${pid}`}
+                    style={{
+                      position: 'relative',
+                      display: 'block',
+                      padding: 'var(--sp-3) var(--sp-5) var(--sp-3) calc(var(--sp-5) + 4px)',
+                      borderTop: i === 0 ? 'none' : '1px solid var(--gray-100)',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                    }}
+                  >
+                    <span
+                      aria-hidden
+                      style={{
+                        position: 'absolute',
+                        left: 0,
+                        top: 0,
+                        bottom: 0,
+                        width: 3,
+                        background: color,
+                      }}
+                    />
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+                      <span
+                        style={{
+                          fontSize: 'var(--text-xs)',
+                          fontFamily: 'var(--font-mono)',
+                          color: 'var(--gray-400)',
+                          fontWeight: 500,
+                        }}
+                      >
+                        {pid}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: 'var(--text-sm)',
+                          fontWeight: 600,
+                          color: 'var(--gray-900)',
+                        }}
+                      >
+                        {meta.name}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: 'var(--text-2xs)',
+                          color: color,
+                          textTransform: 'uppercase',
+                          fontWeight: 700,
+                          letterSpacing: 'var(--tracking-wide)',
+                          marginLeft: 'auto',
+                          fontFamily: 'var(--font-mono)',
+                        }}
+                      >
+                        #{i + 1}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginTop: 2 }}>
+                      {meta.define}
+                    </div>
+                  </Link>
+                );
+              })
+            )}
           </div>
         </div>
-      </section>
 
-      {/* Decision timeline */}
-      <section style={{ marginBottom: 'var(--sp-12)' }}>
-        <SectionHead title="의사결정 타임라인" meta={`${MILESTONES_2026_05.length}건 · 5월 전체 · 가로 스크롤`} />
-        <div style={{ position: 'relative' }}>
-          <div
-            style={{
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              top: 30,
-              height: 1,
-              background: 'var(--gray-200)',
-            }}
-          />
-          <div
-            style={{
-              display: 'flex',
-              gap: 'var(--sp-4)',
-              overflowX: 'auto',
-              paddingBottom: 'var(--sp-4)',
-              position: 'relative',
-            }}
-          >
-            {MILESTONES_2026_05.map((m, i) => (
-              <TimelineCard key={i} m={m} />
-            ))}
+        <div>
+          <SectionHead title="Milestones" meta={`${monthly.milestones.length}건`} />
+          <div style={{ background: 'var(--white)', border: 'var(--border-1)' }}>
+            {monthly.milestones.length === 0 ? (
+              <div style={{ padding: 'var(--sp-6)', color: 'var(--gray-400)', fontSize: 'var(--text-sm)' }}>
+                Milestone 없음
+              </div>
+            ) : (
+              monthly.milestones.map((m, i) => (
+                <div
+                  key={i}
+                  style={{
+                    padding: 'var(--sp-3) var(--sp-4)',
+                    borderTop: i === 0 ? 'none' : '1px solid var(--gray-100)',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 4 }}>
+                    <span
+                      style={{
+                        fontSize: 'var(--text-xs)',
+                        fontFamily: 'var(--font-mono)',
+                        color: 'var(--gray-500)',
+                      }}
+                    >
+                      {m.date.slice(5)}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 'var(--text-2xs)',
+                        color: 'var(--gray-400)',
+                        fontFamily: 'var(--font-mono)',
+                      }}
+                    >
+                      · #{m.projectId}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--gray-900)' }}>
+                    ★ {m.title}
+                  </div>
+                  <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginTop: 2 }}>
+                    {m.description}
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
@@ -384,11 +404,9 @@ export default async function MonthlyPage({ params }: MonthlyPageProps) {
   );
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   Sub-components (server-rendered, no interactivity)
-   ───────────────────────────────────────────────────────────────── */
+/* ─────────── Sub ─────────── */
 
-function Kpi({ label, value, meta }: { label: string; value: string; meta: string }) {
+function Kpi({ label, value, meta }: { label: string; value: number; meta: string }) {
   return (
     <div style={{ background: 'var(--white)', padding: 'var(--sp-5) var(--sp-6)' }}>
       <div
@@ -404,24 +422,17 @@ function Kpi({ label, value, meta }: { label: string; value: string; meta: strin
         {label}
       </div>
       <div
-        className="num"
         style={{
           fontSize: 'var(--text-4xl)',
           fontWeight: 700,
           color: 'var(--black)',
           lineHeight: 1,
+          fontVariantNumeric: 'tabular-nums',
         }}
       >
         {value}
       </div>
-      <div
-        style={{
-          fontSize: 'var(--text-xs)',
-          color: 'var(--gray-500)',
-          marginTop: 'var(--sp-3)',
-          fontVariantNumeric: 'tabular-nums',
-        }}
-      >
+      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginTop: 'var(--sp-3)' }}>
         {meta}
       </div>
     </div>
@@ -433,9 +444,9 @@ function SectionHead({ title, meta }: { title: string; meta: string }) {
     <div
       style={{
         display: 'flex',
-        alignItems: 'baseline',
         justifyContent: 'space-between',
-        marginBottom: 'var(--sp-5)',
+        alignItems: 'baseline',
+        marginBottom: 'var(--sp-4)',
       }}
     >
       <h2
@@ -453,354 +464,67 @@ function SectionHead({ title, meta }: { title: string; meta: string }) {
   );
 }
 
-function ChartCardHead({ title, sub }: { title: string; sub: string }) {
+function NotAvailable({
+  month,
+  availableMonths,
+  currentMonthId,
+}: {
+  month: string;
+  availableMonths: string[];
+  currentMonthId: string;
+}) {
   return (
     <div
       style={{
-        display: 'flex',
-        alignItems: 'baseline',
-        justifyContent: 'space-between',
-        marginBottom: 'var(--sp-4)',
-      }}
-    >
-      <div style={{ fontSize: 'var(--text-base)', fontWeight: 600, color: 'var(--gray-900)' }}>
-        {title}
-      </div>
-      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>{sub}</div>
-    </div>
-  );
-}
-
-function WeekCardEl({ card }: { card: WeekCard }) {
-  const isCurrent = card.state === 'current';
-  const isFuture = card.state === 'future';
-
-  const bg = isCurrent ? 'var(--black)' : isFuture ? 'var(--gray-50)' : 'var(--white)';
-  const borderStyle = isFuture ? 'dashed' : 'solid';
-  const borderColor = isCurrent ? 'var(--black)' : 'var(--gray-200)';
-  const idColor = isCurrent || isFuture ? 'var(--gray-300)' : 'var(--gray-500)';
-  const rangeColor = isCurrent ? 'var(--white)' : isFuture ? 'var(--gray-300)' : 'var(--gray-700)';
-  const filesColor = isCurrent ? 'var(--white)' : isFuture ? 'var(--gray-300)' : 'var(--black)';
-  const filesWeight = isFuture ? 300 : 700;
-  const topColor = isCurrent || isFuture ? 'var(--gray-300)' : 'var(--gray-500)';
-
-  return (
-    <div
-      style={{
-        background: bg,
-        border: `1px ${borderStyle} ${borderColor}`,
-        padding: 'var(--sp-4)',
-        minHeight: 140,
-        textDecoration: 'none',
-        display: 'block',
+        padding: 'var(--sp-16) var(--sp-12)',
+        textAlign: 'center',
+        background: 'var(--white)',
+        border: 'var(--border-1)',
       }}
     >
       <div
         style={{
-          fontSize: 'var(--text-xs)',
-          fontFamily: 'var(--font-mono)',
-          color: idColor,
-          marginBottom: 'var(--sp-1)',
-        }}
-      >
-        {card.id}
-      </div>
-      <div
-        style={{
-          fontSize: 'var(--text-sm)',
-          color: rangeColor,
-          fontWeight: 500,
-        }}
-      >
-        {card.range}
-      </div>
-      <div
-        className="num"
-        style={{
-          fontSize: 'var(--text-2xl)',
-          fontWeight: filesWeight,
-          color: filesColor,
-          marginTop: 'var(--sp-3)',
-        }}
-      >
-        {card.files === null ? (
-          '—'
-        ) : (
-          <>
-            {card.files}
-            <span
-              style={{
-                fontSize: 'var(--text-xs)',
-                color: isCurrent ? 'var(--gray-300)' : 'var(--gray-400)',
-                fontWeight: 400,
-                marginLeft: 4,
-              }}
-            >
-              files
-            </span>
-          </>
-        )}
-      </div>
-      <div
-        style={{
-          fontSize: 'var(--text-xs)',
-          color: topColor,
-          marginTop: 'var(--sp-2)',
-          lineHeight: 'var(--leading-tight)',
-        }}
-      >
-        <span
-          style={{
-            fontSize: 9,
-            fontWeight: 700,
-            color: 'var(--gray-400)',
-            textTransform: 'uppercase',
-            letterSpacing: 'var(--tracking-wide)',
-            display: 'block',
-            marginBottom: 2,
-          }}
-        >
-          {card.topLabel}
-        </span>
-        {card.topText}
-      </div>
-      {isCurrent && (
-        <div
-          style={{
-            display: 'inline-block',
-            fontSize: 9,
-            fontWeight: 700,
-            background: 'var(--white)',
-            color: 'var(--black)',
-            padding: '1px 6px',
-            marginTop: 'var(--sp-2)',
-            letterSpacing: 'var(--tracking-wide)',
-          }}
-        >
-          CURRENT
-        </div>
-      )}
-    </div>
-  );
-}
-
-function GanttRowEl({ row, isLast }: { row: GanttRow; isLast: boolean }) {
-  const color = TYPE_COLOR[row.type];
-  const project = getProject(row.id);
-  const displayName = project?.name ?? row.name;
-
-  // Build 5 cells (W18..W22)
-  const cells = [];
-  for (let i = 0; i < 5; i++) {
-    const inSpan = i >= row.start && i <= row.end;
-    const isCurrent = i === 0;
-
-    let bar: React.ReactNode = null;
-    if (inSpan) {
-      let left = '4%';
-      let right = '4%';
-      if (row.start === row.end) {
-        left = '15%';
-        right = '15%';
-      } else {
-        if (i === row.start) left = '15%';
-        if (i === row.end) right = '15%';
-        if (i > row.start && i < row.end) {
-          left = '0%';
-          right = '0%';
-        }
-      }
-      const isFuture = i > 0;
-      const partial = (row.partial && i === 0) || isFuture;
-      bar = (
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            height: 14,
-            left,
-            right,
-            background: color,
-            opacity: partial ? 0.45 : 1,
-            zIndex: 1,
-          }}
-        />
-      );
-    }
-
-    cells.push(
-      <div
-        key={i}
-        style={{
-          position: 'relative',
-          height: '100%',
-          borderLeft: '1px solid var(--gray-100)',
-          background: isCurrent ? 'var(--gray-50)' : 'transparent',
-        }}
-      >
-        {bar}
-      </div>
-    );
-  }
-
-  return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '220px repeat(5, 1fr)',
-        alignItems: 'center',
-        height: 36,
-        borderBottom: isLast ? 'none' : '1px solid var(--gray-100)',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 'var(--sp-2)',
-          paddingRight: 'var(--sp-3)',
-        }}
-      >
-        <div
-          style={{
-            width: 4,
-            height: 18,
-            background: color,
-            flexShrink: 0,
-          }}
-        />
-        <span
-          style={{
-            fontSize: 'var(--text-xs)',
-            fontFamily: 'var(--font-mono)',
-            color: 'var(--gray-400)',
-            fontWeight: 500,
-            minWidth: 28,
-          }}
-        >
-          #{row.id}
-        </span>
-        <span
-          style={{
-            fontSize: 'var(--text-sm)',
-            color: 'var(--gray-900)',
-            fontWeight: 600,
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {displayName}
-        </span>
-      </div>
-      {cells}
-    </div>
-  );
-}
-
-function TimelineCard({ m }: { m: MilestoneCard }) {
-  return (
-    <article style={{ flexShrink: 0, width: 248 }}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 'var(--sp-3)',
+          fontSize: 'var(--text-2xs)',
+          fontWeight: 700,
+          color: 'var(--gray-400)',
+          letterSpacing: 'var(--tracking-wider)',
+          textTransform: 'uppercase',
           marginBottom: 'var(--sp-3)',
         }}
       >
-        <div
-          style={{
-            width: m.isMilestone ? 13 : 11,
-            height: m.isMilestone ? 13 : 11,
-            borderRadius: '50%',
-            background: m.isMilestone ? 'var(--black)' : 'var(--gray-700)',
-            boxShadow: '0 0 0 4px var(--gray-100)',
-          }}
-        />
-        <div
-          style={{
-            fontSize: 'var(--text-xs)',
-            color: 'var(--gray-500)',
-            fontFamily: 'var(--font-mono)',
-          }}
-        >
-          {m.date} ({m.weekday})
-        </div>
+        MONTHLY DATA NOT AVAILABLE
       </div>
-      <div
-        style={{
-          background: 'var(--white)',
-          border: m.isMilestone ? '1px solid var(--black)' : 'var(--border-1)',
-          padding: 'var(--sp-4)',
-        }}
-      >
-        <div
-          style={{
-            fontSize: 'var(--text-2xs)',
-            fontWeight: 600,
-            color: m.isMilestone ? 'var(--black)' : 'var(--gray-500)',
-            textTransform: 'uppercase',
-            letterSpacing: 'var(--tracking-wide)',
-            marginBottom: 'var(--sp-2)',
-          }}
-        >
-          PROJECT {m.projectId}
-          {m.isMilestone ? ' · MILESTONE' : ''}
-        </div>
-        <h3
-          style={{
-            fontSize: 'var(--text-base)',
-            fontWeight: 700,
-            color: 'var(--gray-900)',
-            marginBottom: 'var(--sp-2)',
-            letterSpacing: 'var(--tracking-tight)',
-          }}
-        >
-          {m.title}
-        </h3>
-        <p
-          style={{
-            fontSize: 'var(--text-xs)',
-            color: 'var(--gray-500)',
-            lineHeight: 'var(--leading-relaxed)',
-          }}
-        >
-          {m.body}
-        </p>
+      <div style={{ fontSize: 'var(--text-base)', color: 'var(--gray-700)', marginBottom: 'var(--sp-5)' }}>
+        <strong>{month}</strong> 데이터 없음.
       </div>
-    </article>
+      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginBottom: 'var(--sp-3)' }}>
+        활동 있는 월:
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: 6, flexWrap: 'wrap' }}>
+        {availableMonths.length === 0 ? (
+          <span style={{ color: 'var(--gray-400)', fontSize: 'var(--text-xs)' }}>없음</span>
+        ) : (
+          availableMonths.map(m => (
+            <Link
+              key={m}
+              href={`/monthly/${m}`}
+              style={{
+                padding: '4px 10px',
+                fontSize: 'var(--text-xs)',
+                fontWeight: 600,
+                color: m === currentMonthId ? 'var(--white)' : 'var(--gray-700)',
+                background: m === currentMonthId ? 'var(--black)' : 'var(--white)',
+                border: '1px solid',
+                borderColor: m === currentMonthId ? 'var(--black)' : 'var(--gray-300)',
+                textDecoration: 'none',
+                fontFamily: 'var(--font-mono)',
+              }}
+            >
+              {m}
+            </Link>
+          ))
+        )}
+      </div>
+    </div>
   );
-}
-
-/* ─────────────────────────────────────────────────────────────────
-   Style helpers
-   ───────────────────────────────────────────────────────────────── */
-
-const crumbStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 'var(--sp-2)',
-  fontSize: 'var(--text-xs)',
-  color: 'var(--gray-500)',
-  marginBottom: 'var(--sp-6)',
-  fontFamily: 'var(--font-mono)',
-};
-
-const chartCardStyle: React.CSSProperties = {
-  background: 'var(--white)',
-  border: 'var(--border-1)',
-  padding: 'var(--sp-6)',
-};
-
-function ganttHeadCellStyle(variant?: 'label' | 'current'): React.CSSProperties {
-  return {
-    fontSize: 'var(--text-2xs)',
-    color: variant === 'current' ? 'var(--black)' : 'var(--gray-400)',
-    fontWeight: 600,
-    textTransform: 'uppercase',
-    letterSpacing: 'var(--tracking-wide)',
-    textAlign: variant === 'label' ? 'left' : 'center',
-  };
 }

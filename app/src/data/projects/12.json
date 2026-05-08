@@ -1,0 +1,80 @@
+{
+  "id": "12",
+  "currentSituation": {
+    "summary": "데이터 시각화·도표차트 읽는 법 강의자료 패키지 — 핵심 강의 md 3종 + 완성 PPT + Tableau 실습 데이터 보유. 사례 보완 + 실습 데이터 검증 단계.",
+    "phase": "Active — 패키지 완성, 사례 보완 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 12_Data_Study PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "강의자료 3종 md + pptx + Tableau 실습 데이터 정리."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (강의자료 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/PROJECT.md",
+      "fileKind": "md",
+      "summary": "데이터 시각화 강의자료 패키지 정의 — 3 md + pptx + Tableau 실습.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "01 데이터시각화·도표차트 읽는 법",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/01_데이터시각화_도표차트_읽는법.md",
+      "fileKind": "md",
+      "summary": "핵심 강의 자료 — 차트 읽기 원리·해석 프레임.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "02 한눈에 보는 차트 읽기 체크리스트",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/02_한눈에보는_차트읽기_체크리스트.md",
+      "fileKind": "md",
+      "summary": "학습자용 체크리스트 — 강의 후 자가 점검 도구.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "03 수업용 진행안",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/03_수업용_진행안_도표차트읽기.md",
+      "fileKind": "md",
+      "summary": "수업 진행 시나리오 — 시간 분배·실습 흐름 명시.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "강의자료 PPT (완성본)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/데이터시각화_도표차트_읽는법_강의자료.pptx",
+      "fileKind": "other",
+      "summary": "강의 직접 사용 PPT — 3 md 통합 시각본.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "Tableau 실습 데이터",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/12_Data_Study/tableau_test_data",
+      "fileKind": "other",
+      "summary": "수업 실습용 데이터셋 (수정 금지).",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "PPT에 추가 사례 보완",
+      "description": "최신 데이터 시각화 사례(2026 인포그래픽 트렌드 등) 추가. v2 버전 표기.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "Tableau 실습 데이터 검증·업데이트",
+      "description": "실습 시나리오에 맞는지 점검, 필요 시 신규 데이터셋 추가.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "22_Data_Kaywon 강의 연계 패키지화",
+      "description": "계원예대 강의에서 재사용할 수 있도록 강의자료 패키지 명세화.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

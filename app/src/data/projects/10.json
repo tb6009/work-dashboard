@@ -1,0 +1,85 @@
+{
+  "id": "10",
+  "currentSituation": {
+    "summary": "마음 챗봇 v1.5β 4-캐릭터 빌드 완료(04-25). 마음_프로덕트 3 서브 재구성 + 자료/agents 자동수집 운영 중. /v1.5/ 배포 + Phase 5 자문 대기.",
+    "phase": "v1.5β 빌드 완료 → 배포 + 자문 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-25",
+        "title": "보살피고 v1.5β 4-캐릭터 빌드 완료",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260425_log.md",
+        "excerpt": "학습자료 120편, 메인 v1.4 영향 0건. /v1.5/ 배포 + Phase 5 자문 대기."
+      },
+      {
+        "date": "2026-04-24",
+        "title": "마음_프로덕트 3 서브 재구성 (01_service / 02_brand_campaign / 03_blog_process)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "통합 구조 정립 — 자료/agents 자동수집 인프라 운영 중."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (3 서브 통합 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10-일상다반사/PROJECT.md",
+      "fileKind": "md",
+      "summary": "마음 챗봇 + 자료 자동수집 프로젝트 정의 — 3 서브 관계도·작업 모드 명시.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "01_service — 챗봇 에이전트 (Core)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10-일상다반사/마음_프로덕트/01_service",
+      "fileKind": "other",
+      "summary": "캐릭터 시트·로드맵·평가 계획 + v1.5β 4-캐릭터 빌드.",
+      "modifiedAt": "2026-04-25"
+    },
+    {
+      "title": "02_brand_campaign — 브랜드 시스템",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10-일상다반사/마음_프로덕트/02_brand_campaign",
+      "fileKind": "other",
+      "summary": "STEP1~5 브랜드 시리즈 — 캠페인·시각 시스템 단계별 진행.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "03_blog_process — 제작 기록 블로그",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10-일상다반사/마음_프로덕트/03_blog_process",
+      "fileKind": "other",
+      "summary": "블로그 시리즈 기획·제작 기록. 01·02 폴더는 read-only로 참조.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "자료/agents (자동수집 인프라)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10-일상다반사/자료/agents",
+      "fileKind": "other",
+      "summary": "원본 자료 자동수집 에이전트 운영 — 챗봇 학습 데이터 공급.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "/v1.5/ 배포 + Phase 5 자문",
+      "description": "v1.5β 4-캐릭터 빌드를 실 배포 경로 /v1.5/ 에 업로드. Phase 5 외부 자문 일정 확정.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "01_service IMPROVEMENT_PLAN.md 실행",
+      "description": "캐릭터 개선 계획에 적힌 항목들 순차 실행. 응답 품질·페르소나 일관성 점검.",
+      "priority": "high",
+      "estimate": "1주"
+    },
+    {
+      "title": "02_brand_campaign STEP 다음 단계 진행",
+      "description": "STEP1~5 시리즈 중 다음 단계 콘텐츠 제작.",
+      "priority": "mid",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "MI×LLM 평가 체크리스트 적용 (51번 연계)",
+      "description": "051_페르소나 연구의 MI×LLM 평가 체크리스트를 마음 챗봇 v1.5에 적용해 검증.",
+      "priority": "mid",
+      "estimate": "1~2일"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

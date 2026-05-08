@@ -35,8 +35,9 @@ export default function RootLayout({
     <html
       lang="ko"
       className={`${inter.variable} ${notoSansKR.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

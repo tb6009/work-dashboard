@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Weekly (v0.5 · compact)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--gray-100);
+    color: var(--gray-900);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+  }
+
+  /* ── Top Nav ──────────────────────────────────────────── */
+  .topbar { background: var(--white); border-bottom: 1px solid var(--gray-300); position: sticky; top: 0; z-index: 30; }
+  .topbar-inner { max-width: 1280px; margin: 0 auto; padding: var(--sp-3) var(--sp-8); display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo { width: 24px; height: 24px; background: var(--black); color: var(--white); display: grid; place-items: center; font-size: 11px; font-weight: 700; }
+  .brand-name { font-size: var(--text-sm); font-weight: 700; color: var(--black); }
+  .brand-sub  { font-size: 10px; color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 1px; }
+  .nav { display: flex; gap: 0; }
+  .nav a { padding: 5px 12px; font-size: 12px; font-weight: 500; color: var(--gray-500); text-decoration: none; }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+  .build-info { font-size: 10px; color: var(--gray-400); text-align: right; font-family: var(--font-mono); line-height: 1.4; }
+
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-8) var(--sp-8) var(--sp-12); }
+
+  /* ── Hero (compact) ─────────────────────────────────── */
+  .hero { margin-bottom: var(--sp-8); }
+  .hero-eyebrow { font-size: 10px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wider); margin-bottom: 4px; font-family: var(--font-mono); }
+  .hero-title { font-size: 36px; font-weight: 300; color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1; margin: 0 0 6px 0; }
+  .hero-sub { font-size: 12px; color: var(--gray-500); font-variant-numeric: tabular-nums; }
+
+  /* ── Year Tabs (compact) ────────────────────────────── */
+  .year-tabs { display: flex; gap: 0; border: 1px solid var(--gray-300); background: var(--white); margin-bottom: var(--sp-8); width: fit-content; }
+  .year-tab { padding: 8px 18px; font-size: 12px; font-weight: 600; color: var(--gray-500); text-decoration: none; font-variant-numeric: tabular-nums; border-right: 1px solid var(--gray-300); line-height: 1.2; }
+  .year-tab:last-child { border-right: 0; }
+  .year-tab.active { background: var(--black); color: var(--white); }
+  .year-tab.future { color: var(--gray-300); background: var(--gray-50); cursor: not-allowed; }
+  .year-tab-meta { display: block; font-size: 9px; font-weight: 500; opacity: 0.6; letter-spacing: var(--tracking-wide); text-transform: uppercase; margin-top: 1px; }
+
+  /* ── Month Section ────────────────────────────────── */
+  .month { margin-bottom: var(--sp-8); }
+  .month-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid var(--gray-300); margin-bottom: var(--sp-3); }
+  .month-head.current { border-bottom: 2px solid var(--black); }
+  .month-head-l { display: flex; align-items: baseline; gap: var(--sp-3); }
+  .month-num { font-size: 24px; font-weight: 300; color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1; font-variant-numeric: tabular-nums; }
+  .month-label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: var(--tracking-wider); }
+  .month-current-badge { display: inline-block; font-size: 9px; font-weight: 700; background: var(--black); color: var(--white); padding: 1px 5px; margin-left: 4px; letter-spacing: var(--tracking-wide); vertical-align: middle; }
+  .month-5w-badge { font-size: 9px; font-weight: 600; color: var(--gray-400); font-family: var(--font-mono); letter-spacing: var(--tracking-wide); }
+  .month-meta { font-size: 11px; color: var(--gray-400); font-variant-numeric: tabular-nums; }
+  .month-meta strong { color: var(--gray-700); font-weight: 600; }
+
+  /* ── Week Grid ──────────────────────────────────────── */
+  .week-grid { display: grid; gap: var(--sp-2); }
+  .week-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .week-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+  /* ── Week Column (compact) ──────────────────────────── */
+  .week-col {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    display: flex; flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .week-col:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .week-col.current { background: var(--black); color: var(--white); border-color: var(--black); }
+  .week-col.empty, .week-col.future { background: var(--gray-50); border-color: var(--gray-200); pointer-events: none; }
+
+  .week-head { padding: 8px 10px 6px; border-bottom: 1px solid var(--gray-200); position: relative; }
+  .week-col.current .week-head { border-bottom-color: rgba(255,255,255,0.15); }
+  .week-col.empty .week-head, .week-col.future .week-head { border-bottom-color: var(--gray-200); }
+
+  .week-id { font-size: 10px; font-family: var(--font-mono); color: var(--gray-500); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .week-col.current .week-id { color: var(--gray-300); }
+  .week-col.empty .week-id, .week-col.future .week-id { color: var(--gray-300); }
+
+  .week-range { font-size: 10px; color: var(--gray-700); font-variant-numeric: tabular-nums; font-weight: 500; line-height: 1.3; margin-top: 1px; }
+  .week-col.current .week-range { color: var(--white); opacity: 0.85; }
+  .week-col.empty .week-range, .week-col.future .week-range { color: var(--gray-300); }
+
+  .week-current-pill { position: absolute; top: 6px; right: 8px; background: var(--white); color: var(--black); font-size: 8px; font-weight: 700; padding: 1px 5px; letter-spacing: var(--tracking-wide); }
+
+  .week-body { padding: 6px 8px 8px; flex: 1; display: flex; flex-direction: column; gap: 4px; min-height: 240px; }
+
+  .empty-msg {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    color: var(--gray-300);
+    font-size: 11px; font-style: italic;
+    line-height: 1.5;
+  }
+  .week-col.current .empty-msg { color: rgba(255,255,255,0.5); }
+  .empty-msg .small { font-size: 9px; margin-top: 3px; }
+
+  /* ── Project Tile (compact) ─────────────────────────── */
+  .ptile {
+    position: relative;
+    padding: 4px 8px 4px 10px;
+  }
+  .ptile + .ptile { border-top: 1px solid var(--gray-100); }
+  .week-col.current .ptile + .ptile { border-top-color: rgba(255,255,255,0.06); }
+  .ptile::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--ptile-color, var(--gray-300));
+  }
+  .ptile-line1 {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-900);
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .week-col.current .ptile-line1 { color: var(--white); }
+  .ptile-id {
+    font-size: 9px;
+    font-family: var(--font-mono);
+    color: var(--gray-400);
+    font-variant-numeric: tabular-nums;
+  }
+  .ptile-imp { display: inline-flex; gap: 2px; margin-left: auto; vertical-align: middle; }
+  .ptile-imp-dot { width: 3px; height: 3px; background: var(--gray-200); border-radius: 50%; display: inline-block; }
+  .ptile-imp-dot.active { background: var(--gray-700); }
+  .week-col.current .ptile-imp-dot { background: rgba(255,255,255,0.2); }
+  .week-col.current .ptile-imp-dot.active { background: var(--white); }
+
+  .ptile-did {
+    font-size: 11px;
+    color: var(--gray-700);
+    line-height: 1.35;
+    margin-top: 1px;
+  }
+  .week-col.current .ptile-did { color: rgba(255,255,255,0.75); }
+
+  .more-link {
+    display: block;
+    margin-top: auto;
+    padding-top: 6px;
+    border-top: 1px dashed var(--gray-200);
+    font-size: 10px;
+    color: var(--gray-500);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+  .week-col.current .more-link { color: var(--gray-400); border-top-color: rgba(255,255,255,0.15); }
+
+  /* spec note */
+  .note {
+    background: var(--warm-100);
+    border-left: 3px solid var(--warm-500);
+    padding: 8px 12px;
+    margin-bottom: var(--sp-6);
+    font-size: 11px;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .note strong { color: var(--gray-900); }
+  .note code { font-family: var(--font-mono); background: var(--white); padding: 0 4px; border: 1px solid var(--gray-200); font-size: 10px; }
+
+  .note-checklist { margin-top: 6px; padding-left: 0; list-style: none; }
+  .note-checklist li { font-size: 11px; padding: 2px 0; }
+  .note-checklist li::before { content: '✓ '; color: var(--color-green); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">P</div>
+      <div>
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">063 · WEEKLY ARCHIVE</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">CURRENT</a>
+      <a href="#" class="active">WEEKLY</a>
+      <a href="#">MONTHLY</a>
+      <a href="#">YEARLY</a>
+      <a href="#">PROJECTS</a>
+    </nav>
+    <div class="build-info">v0.5 · compact<br>2026-05-08</div>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-eyebrow">WEEKLY ARCHIVE</div>
+    <h1 class="hero-title">모든 주간</h1>
+    <div class="hero-sub">2026 · 활동 있는 월만 표시 · 최신 → 과거 순</div>
+  </section>
+
+  <div class="year-tabs">
+    <a href="#" class="year-tab active">2026<span class="year-tab-meta">CURRENT</span></a>
+    <a href="#" class="year-tab future">2027<span class="year-tab-meta">UPCOMING</span></a>
+  </div>
+
+  <div class="note">
+    <strong>v0.5 변경점</strong> — ① 행간·padding·font 전반 컴팩트 (정보 밀도 ↑) ·
+    ② <strong>W19 (current week)에 061~065 모두 가시화</strong> — 데모 데이터 ·
+    ③ 5컬럼 케이스 4월(W14~W18) 그대로 유지
+    <ul class="note-checklist">
+      <li>061 LifeOS — W19 visible</li>
+      <li>062 논문리더 — W18 visible (#4 위치) + W19</li>
+      <li>063 workDashboard — W19 visible (newly active 5/5~)</li>
+      <li>064 프로젝트매뉴얼 — W19 visible (NEW · 5/8 등록)</li>
+      <li>065 인터뷰 — W19 visible (NEW · 5/8 등록)</li>
+    </ul>
+  </div>
+
+  <!-- ────────────────────────────────────────────────────
+       5월 — CURRENT MONTH (4-col)
+  ──────────────────────────────────────────────────────── -->
+  <section class="month">
+    <div class="month-head current">
+      <div class="month-head-l">
+        <span class="month-num">05</span>
+        <span class="month-label">MAY · 5월</span>
+        <span class="month-current-badge">CURRENT</span>
+      </div>
+      <div class="month-meta">데이터 수집 중 · 1 / 4 weeks</div>
+    </div>
+
+    <div class="week-grid cols-4">
+
+      <!-- W19 CURRENT — filled with demo current-week data -->
+      <a href="#" class="week-col current">
+        <div class="week-head">
+          <div class="week-id">2026-W19</div>
+          <div class="week-range">05-04 ~ 05-10</div>
+          <span class="week-current-pill">CURRENT</span>
+        </div>
+        <div class="week-body">
+          <div class="ptile" style="--ptile-color: var(--type-product);">
+            <div class="ptile-line1"><span class="ptile-id">061</span>LifeOS<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">Recommendation DB 저장 + 주간 대시보드 기획</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-product);">
+            <div class="ptile-line1"><span class="ptile-id">063</span>workDashboard<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i></span></div>
+            <div class="ptile-did">Phase 1·2 완료 — 데이터 인프라 + Weekly 5-col</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-product);">
+            <div class="ptile-line1"><span class="ptile-id">062</span>논문리더<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">마이그레이션 SQL + 화면설계 진입</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-education);">
+            <div class="ptile-line1"><span class="ptile-id">064</span>프로젝트매뉴얼<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">NEW · 061·062·063 분석 + 학생용 인스트럭션 초안</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-data);">
+            <div class="ptile-line1"><span class="ptile-id">065</span>인터뷰<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">NEW · 5단 폴더 셋업 (data·transcripts·analysis·outputs·질문지)</div>
+          </div>
+          <a href="#" class="more-link">+5 more (091, 51, 32, 21, 10)</a>
+        </div>
+      </a>
+
+      <!-- W20 future -->
+      <div class="week-col future">
+        <div class="week-head">
+          <div class="week-id">2026-W20</div>
+          <div class="week-range">05-11 ~ 05-17</div>
+        </div>
+        <div class="week-body"><div class="empty-msg">예정</div></div>
+      </div>
+
+      <!-- W21 future -->
+      <div class="week-col future">
+        <div class="week-head">
+          <div class="week-id">2026-W21</div>
+          <div class="week-range">05-18 ~ 05-24</div>
+        </div>
+        <div class="week-body"><div class="empty-msg">예정</div></div>
+      </div>
+
+      <!-- W22 future -->
+      <div class="week-col future">
+        <div class="week-head">
+          <div class="week-id">2026-W22</div>
+          <div class="week-range">05-25 ~ 05-31</div>
+        </div>
+        <div class="week-body"><div class="empty-msg">예정</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       4월 — 5-COL (W14~W18)
+  ──────────────────────────────────────────────────────── -->
+  <section class="month">
+    <div class="month-head">
+      <div class="month-head-l">
+        <span class="month-num">04</span>
+        <span class="month-label">APR · 4월</span>
+        <span class="month-5w-badge">5-WEEK</span>
+      </div>
+      <div class="month-meta"><strong>142 files</strong> · 1 / 5 weeks</div>
+    </div>
+
+    <div class="week-grid cols-5">
+
+      <div class="week-col empty">
+        <div class="week-head"><div class="week-id">2026-W14</div><div class="week-range">03-30 ~ 04-05</div></div>
+        <div class="week-body"><div class="empty-msg">백필 대기</div></div>
+      </div>
+      <div class="week-col empty">
+        <div class="week-head"><div class="week-id">2026-W15</div><div class="week-range">04-06 ~ 04-12</div></div>
+        <div class="week-body"><div class="empty-msg">백필 대기</div></div>
+      </div>
+      <div class="week-col empty">
+        <div class="week-head"><div class="week-id">2026-W16</div><div class="week-range">04-13 ~ 04-19</div></div>
+        <div class="week-body"><div class="empty-msg">백필 대기</div></div>
+      </div>
+      <div class="week-col empty">
+        <div class="week-head"><div class="week-id">2026-W17</div><div class="week-range">04-20 ~ 04-26</div></div>
+        <div class="week-body"><div class="empty-msg">백필 대기</div></div>
+      </div>
+
+      <!-- W18 — REAL DATA -->
+      <a href="#" class="week-col">
+        <div class="week-head"><div class="week-id">2026-W18</div><div class="week-range">04-27 ~ 05-03</div></div>
+        <div class="week-body">
+          <div class="ptile" style="--ptile-color: var(--type-product);">
+            <div class="ptile-line1"><span class="ptile-id">061</span>LifeOS<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i></span></div>
+            <div class="ptile-did">하루 캐릭터 통합 + Daily Insight DB 동적화 + Vercel 배포</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-research);">
+            <div class="ptile-line1"><span class="ptile-id">51</span>페르소나<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">시스템프롬프트 4종 v1 확정 (UUID·서사·자기입력·진)</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-publishing);">
+            <div class="ptile-line1"><span class="ptile-id">091</span>출판<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">기획안 v1.1 + 목차 + 30명 인스타 발굴</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-product);">
+            <div class="ptile-line1"><span class="ptile-id">062</span>논문리더<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">데이터모델 v0.2 + Obsidian 스펙 + 시안 v0.3</div>
+          </div>
+          <div class="ptile" style="--ptile-color: var(--type-education);">
+            <div class="ptile-line1"><span class="ptile-id">32</span>강연<span class="ptile-imp"><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot active"></i><i class="ptile-imp-dot"></i><i class="ptile-imp-dot"></i></span></div>
+            <div class="ptile-did">01회차 슬라이드 본문 + 디자인 브리프</div>
+          </div>
+          <a href="#" class="more-link">+10 more</a>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       3월 (4-col, all empty)
+  ──────────────────────────────────────────────────────── -->
+  <section class="month">
+    <div class="month-head">
+      <div class="month-head-l">
+        <span class="month-num">03</span>
+        <span class="month-label">MAR · 3월</span>
+      </div>
+      <div class="month-meta">데이터 미수집 · 0 / 4 weeks</div>
+    </div>
+    <div class="week-grid cols-4">
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W10</div><div class="week-range">03-02 ~ 03-08</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W11</div><div class="week-range">03-09 ~ 03-15</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W12</div><div class="week-range">03-16 ~ 03-22</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W13</div><div class="week-range">03-23 ~ 03-29</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────────────────────────
+       2월 (4-col, all empty)
+  ──────────────────────────────────────────────────────── -->
+  <section class="month">
+    <div class="month-head">
+      <div class="month-head-l">
+        <span class="month-num">02</span>
+        <span class="month-label">FEB · 2월</span>
+      </div>
+      <div class="month-meta">데이터 미수집 · 0 / 4 weeks</div>
+    </div>
+    <div class="week-grid cols-4">
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W6</div><div class="week-range">02-02 ~ 02-08</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W7</div><div class="week-range">02-09 ~ 02-15</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W8</div><div class="week-range">02-16 ~ 02-22</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+      <div class="week-col empty"><div class="week-head"><div class="week-id">2026-W9</div><div class="week-range">02-23 ~ 03-01</div></div><div class="week-body"><div class="empty-msg">백필 대기</div></div></div>
+    </div>
+  </section>
+
+  <div style="text-align: center; color: var(--gray-300); font-size: 11px; padding: var(--sp-6) 0; font-style: italic;">— 2026-01 (활동 미미, 표시 생략) —</div>
+
+</main>
+
+</body>
+</html>

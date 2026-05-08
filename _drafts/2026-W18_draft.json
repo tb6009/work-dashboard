@@ -1,0 +1,279 @@
+{
+  "week": "2026-W18",
+  "range": {
+    "from": "2026-04-27",
+    "to": "2026-05-03"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 10,
+    "sessions": 4,
+    "newProjects": 10,
+    "filesChanged": 40
+  },
+  "daily": [
+    {
+      "date": "2026-04-27",
+      "weekday": "월",
+      "filesChanged": 9,
+      "topProjectIds": [
+        "51",
+        "04",
+        "10"
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-29",
+      "weekday": "수",
+      "filesChanged": 22,
+      "topProjectIds": [
+        "04",
+        "32",
+        "10"
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-01",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-02",
+      "weekday": "토",
+      "filesChanged": 1,
+      "topProjectIds": [
+        "05"
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "weekday": "일",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "05",
+        "10"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "10",
+      "pct": 24,
+      "filesChanged": 10,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 22,
+      "filesChanged": 9,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "51",
+      "pct": 15,
+      "filesChanged": 6,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "32",
+      "pct": 12,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "05",
+      "pct": 12,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "31",
+      "pct": 5,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "21",
+      "pct": 2,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "09",
+      "pct": 2,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "22",
+      "pct": 2,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "00",
+      "pct": 2,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-04-27",
+      "projectId": "51",
+      "title": "**번호 체계**: 51번으로 등록 (PROJECTS.md 표 마지막에 추가)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-27",
+      "projectId": "51",
+      "title": "**중복 PDF 처리**: `2022.coling-1.293.pdf` ↔ `MI_Dataset_2022.co",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-27",
+      "projectId": "51",
+      "title": "**종합 정리 구조**: 두 줄기(MI 코딩 ↔ LLM-as-Judge)의 융합으로 BOLT를 정중앙에 배치",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-27",
+      "projectId": "51",
+      "title": "**MITI 15라벨 표는 한국어 챗봇 응답 예와 함께 정리** — 향후 \"마음\" 챗봇 평가에 직접 활용 가",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-27",
+      "projectId": "51",
+      "title": "**페르소나 챗봇 평가 체크리스트 (Phase 1~4)** 도출 — 데이터/자동평가/행동평가/임상윤리",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-29",
+      "projectId": "04",
+      "title": "**32번을 시리즈 트랙으로 정의** — 단발성 폴더가 아니라 회차별 콘텐츠 아카이브로 설계 (확장성 우선)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-29",
+      "projectId": "04",
+      "title": "**31번과 책임 분리 명문화** — K-MOOC(31) = 정규 강의, 외부 강연(32) = 회차별 독립",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-29",
+      "projectId": "04",
+      "title": "**10-일상다반사GPT는 PROJECTS.md 등록 제외** — ChatGPT 기반 별도 트랙으로 사용자가",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-29",
+      "projectId": "04",
+      "title": "**회차 폴더 명명 규약 확정**: `NN_제목_YYYY-MM/`",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-29",
+      "projectId": "04",
+      "title": "**AI진화여정 슬라이드는 본인 cloude_Code 워크플로 자체를 콘텐츠화한 메타 발표** — 추후 재사",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-02",
+      "projectId": "05",
+      "title": "디자인: 흰 배경 + 텍스트 중심 + 시간별 단일 액센트 컬러",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-02",
+      "projectId": "05",
+      "title": "DB: Supabase (PostgreSQL)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-02",
+      "projectId": "05",
+      "title": "AI: Claude API → ChatGPT API (gpt-4o-mini)로 전환",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-02",
+      "projectId": "05",
+      "title": "배포: Vercel (GitHub 자동 배포)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-03",
+      "projectId": "05",
+      "title": "모미+마음 → 하루 캐릭터 통합 (하나의 비서로)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-03",
+      "projectId": "05",
+      "title": "Claude API → ChatGPT API 전환 (크레딧 문제)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-03",
+      "projectId": "05",
+      "title": "Daily Insight/Recommendation 하드코딩 제거 → DB 기반 동적 생성",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-03",
+      "projectId": "05",
+      "title": "기록 탭에 Daily Review 4가지 질문 확정",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04",
+    "51",
+    "10",
+    "32",
+    "21",
+    "09",
+    "22",
+    "31",
+    "00",
+    "05"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-08T01:45:25.709Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-08T01:45:25.709Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

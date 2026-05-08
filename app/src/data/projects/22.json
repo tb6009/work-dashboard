@@ -1,0 +1,80 @@
+{
+  "id": "22",
+  "currentSituation": {
+    "summary": "계원예대 2026 연구계획 — 방향성 초안 + 데이터발굴 실행계획 + 연구계획서 + 연구제안서 4문서 완성. 종합분석보고서 v07 진행 중, v08 작성 단계.",
+    "phase": "Active — 4문서 완성, 종합보고서 v08 + 최종 제출 단계",
+    "recentLogs": [
+      {
+        "date": "2026-04-24",
+        "title": "관리 마스터 구축 — 22_Data_Kaywon PROJECT.md/CLAUDE.md 정비",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
+        "excerpt": "01~04 4문서 + 2024 데이터·종합보고서 v07 정리. 일관성점검 스킬 명문화."
+      }
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md (연구계획 정의)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/PROJECT.md",
+      "fileKind": "md",
+      "summary": "계원예대 2026 연구 방향·실행계획·제안서 4문서 정의.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "01 프로젝트 방향성 초안",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/01_프로젝트_방향성_초안.md",
+      "fileKind": "md",
+      "summary": "2026 연구 방향 초안 — 2024 데이터 분석 기반 신규 방향 도출.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "02 데이터발굴 실행계획",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/02_데이터발굴_실행계획.md",
+      "fileKind": "md",
+      "summary": "데이터 수집 실행 계획 — 02_Kaywon_scraping 도구와 연계.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "03 2026 연구계획서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/03_2026_연구계획서.md",
+      "fileKind": "md",
+      "summary": "2026년 연구 계획서 — 학술 문서 형식.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "04 2026 연구제안서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/04_2026_연구제안서.md",
+      "fileKind": "md",
+      "summary": "2026년 연구 제안서 — 최종 제출 버전 직전.",
+      "modifiedAt": "2026-04-24"
+    },
+    {
+      "title": "종합 분석 보고서 v07 (진행 중)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/Data_Kaywon_종합분석보고서_진행중07.pdf",
+      "fileKind": "pdf",
+      "summary": "2024 데이터 종합 분석 보고서 v07 — v08 작성 직전 상태.",
+      "modifiedAt": "2026-04-24"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "종합분석보고서 v08 작성 완료",
+      "description": "v07 진행 중 → v08 완결. 4문서와 정합성 점검 (/일관성점검 스킬 활용).",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "2026 연구제안서 최종 제출 버전 확정",
+      "description": "04 제안서 → 최종 제출본. 학교 양식 준수 + 일정 확정.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "07_AIDX 재직자 교육 결과 연계",
+      "description": "AID 사업 결과를 연구 사례로 통합 가능 여부 검토.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-06T00:00:00+09:00"
+}

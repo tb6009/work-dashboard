@@ -50,13 +50,19 @@ export default async function Home() {
       };
     });
 
-  // Active Projects — week.projects에 등장한 프로젝트만, pct 내림차순
+  // 전체 프로젝트 — 00 personal 제외, ID 오름차순. paused·new·active 모두 표시.
+  // 이번 주 contribution 있으면 pct/did 표시.
   const contribMap = new Map<string, ProjectContribution>(
     week.projects.map(p => [p.id, p]),
   );
-  const activeProjects = week.projects
-    .map(p => getProject(p.id))
-    .filter((p): p is NonNullable<ReturnType<typeof getProject>> => !!p);
+  const allProjects = PROJECTS
+    .filter(p => p.id !== '00')
+    .sort((a, b) => {
+      const numA = parseInt(a.id, 10);
+      const numB = parseInt(b.id, 10);
+      if (numA !== numB) return numA - numB;
+      return a.id.localeCompare(b.id);
+    });
 
   const fmtRange = `${week.range.from} (월) ─ ${week.range.to} (일)`;
   const isCurrentWeek = week.week === todayWeekId;
@@ -221,16 +227,27 @@ export default async function Home() {
             marginBottom: 'var(--sp-5)',
           }}
         >
-          <h2
-            style={{
-              fontSize: 'var(--text-xl)',
-              fontWeight: 700,
-              color: 'var(--black)',
-              letterSpacing: 'var(--tracking-tight)',
-            }}
-          >
-            Active 프로젝트
-          </h2>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sp-3)' }}>
+            <h2
+              style={{
+                fontSize: 'var(--text-xl)',
+                fontWeight: 700,
+                color: 'var(--black)',
+                letterSpacing: 'var(--tracking-tight)',
+              }}
+            >
+              전체 프로젝트
+            </h2>
+            <span
+              style={{
+                fontSize: 'var(--text-xs)',
+                color: 'var(--gray-400)',
+                fontVariantNumeric: 'tabular-nums',
+              }}
+            >
+              {allProjects.length}개 · ID 오름차순 · 클릭 → 상세
+            </span>
+          </div>
           <Link
             href="/projects"
             style={{
@@ -240,10 +257,10 @@ export default async function Home() {
               textUnderlineOffset: 3,
             }}
           >
-            전체 프로젝트 보기 →
+            필터 + 전체 보기 →
           </Link>
         </div>
-        <ActiveProjectsGrid projects={activeProjects} contributions={contribMap} />
+        <ActiveProjectsGrid projects={allProjects} contributions={contribMap} />
       </section>
     </PageShell>
   );

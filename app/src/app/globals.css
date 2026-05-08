@@ -192,3 +192,107 @@ body {
 
 /* (project-tile-2col styles inlined into ActiveProjectTile component
    due to Tailwind v4 preflight specificity issues) */
+
+/* ══════════════════════════════════════════════════════════════
+   Period Tabs (주 / 월) — Diary 패턴
+   ══════════════════════════════════════════════════════════════ */
+.period-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: var(--sp-6);
+}
+.period-tab {
+  padding: 14px 0;
+  margin-right: var(--sp-10);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--gray-400);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.period-tab.active {
+  color: var(--black);
+  border-bottom-color: var(--black);
+}
+.period-tab:hover { color: var(--gray-700); }
+
+/* ══════════════════════════════════════════════════════════════
+   Date Strip — 좌우 화살표 + 7개 셀
+   ══════════════════════════════════════════════════════════════ */
+.strip-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-8);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--gray-200);
+}
+.strip-arrow {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  display: grid;
+  place-items: center;
+  color: var(--gray-700);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s;
+}
+.strip-arrow:hover { background: var(--gray-50); border-color: var(--gray-700); }
+.strip-arrow.disabled { color: var(--gray-300); cursor: not-allowed; pointer-events: none; }
+
+.strip {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--sp-2);
+}
+.strip-cell {
+  text-align: center;
+  padding: 8px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: background .12s;
+}
+.strip-cell:hover { background: var(--gray-50); }
+.strip-cell-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--gray-400);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.strip-cell-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: var(--tracking-tight);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.strip-cell-meta {
+  font-size: 10px;
+  color: var(--gray-400);
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+}
+.strip-cell.selected {
+  background: var(--black);
+  color: var(--white);
+}
+.strip-cell.selected .strip-cell-label { color: var(--gray-300); }
+.strip-cell.selected .strip-cell-num { color: var(--white); }
+.strip-cell.selected .strip-cell-meta { color: var(--gray-300); }
+.strip-cell.future { pointer-events: none; }
+.strip-cell.future .strip-cell-label,
+.strip-cell.future .strip-cell-num,
+.strip-cell.future .strip-cell-meta { color: var(--gray-300); }
+.strip-cell.current:not(.selected) .strip-cell-num { color: #8aa8c9; }

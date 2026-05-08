@@ -2,11 +2,20 @@ import Link from 'next/link';
 
 type NavKey = 'current' | 'weekly' | 'monthly' | 'yearly' | 'projects';
 
+// 현재 월/연도 (Topbar 링크용)
+function nowMonthId(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+function nowYear(): string {
+  return String(new Date().getFullYear());
+}
+
 const NAV_ITEMS: Array<{ key: NavKey; label: string; href: string }> = [
   { key: 'current',  label: '현재',     href: '/' },
   { key: 'weekly',   label: '주간',     href: '/weekly' },
-  { key: 'monthly',  label: '월간',     href: '/monthly/2026-05' },
-  { key: 'yearly',   label: '연간',     href: '/yearly/2026' },
+  { key: 'monthly',  label: '월간',     href: `/monthly/${nowMonthId()}` },
+  { key: 'yearly',   label: '연간',     href: `/yearly/${nowYear()}` },
   { key: 'projects', label: '프로젝트', href: '/projects' },
 ];
 

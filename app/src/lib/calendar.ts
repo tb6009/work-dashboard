@@ -209,4 +209,58 @@ export function getCurrentMonthId(now: Date = new Date()): string {
   return `${y}-${m}`;
 }
 
+/* ─────────────────────────────────────────────────────────────
+   6. Strip Navigation 헬퍼 (v0.6 패턴)
+   ───────────────────────────────────────────────────────────── */
+
+/** 선택된 주차를 중심으로 N개 주차 ID 배열 반환 (centered, 기본 7) */
+export function getWeeksAround(centerWeekId: string, count: number = 7): string[] {
+  const parsed = parseWeekId(centerWeekId);
+  if (!parsed) return [];
+
+  const half = Math.floor(count / 2);
+  const result: string[] = [];
+
+  // ISO 주차는 단순히 ±1 더하기로 처리 (53주차 케이스는 약간 부정확하지만 충분)
+  for (let offset = -half; offset <= half; offset++) {
+    let week = parsed.week + offset;
+    let year = parsed.year;
+    while (week < 1) {
+      year -= 1;
+      week += 52; // 단순화 (53주차 무시)
+    }
+    while (week > 52) {
+      year += 1;
+      week -= 52;
+    }
+    result.push(toWeekId(year, week));
+  }
+  return result;
+}
+
+/** 선택된 월을 중심으로 N개 월 ID 배열 반환 (centered, 기본 7) */
+export function getMonthsAround(centerMonthId: string, count: number = 7): string[] {
+  const parsed = parseMonthId(centerMonthId);
+  if (!parsed) return [];
+
+  const half = Math.floor(count / 2);
+  const result: string[] = [];
+
+  for (let offset = -half; offset <= half; offset++) {
+    let month = parsed.month + offset;
+    let year = parsed.year;
+    while (month < 1) {
+      year -= 1;
+      month += 12;
+    }
+    while (month > 12) {
+      year += 1;
+      month -= 12;
+    }
+    const m = String(month).padStart(2, '0');
+    result.push(`${year}-${m}`);
+  }
+  return result;
+}
+
 export { WEEKDAY_KO };

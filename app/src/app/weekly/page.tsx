@@ -1,319 +1,362 @@
 import PageShell from '@/components/layout/PageShell';
-import WeekColumn from '@/components/weekly/WeekColumn';
+import PeriodTabs from '@/components/period/PeriodTabs';
+import WeekStrip from '@/components/period/WeekStrip';
+import PeriodProjectTile from '@/components/period/PeriodProjectTile';
+import DailyActivityBar from '@/components/charts/DailyActivityBar';
 import {
-  loadActiveMonthGroups,
-  listAvailableYears,
+  loadWeek,
   getCurrentWeekId,
+  getProject,
 } from '@/lib/data';
 import {
-  getMonthLabel,
-  getCurrentMonthId,
   parseWeekId,
   getWeekRange,
+  getMonthOfWeek,
+  getCurrentWeekId as calCurrentWeekId,
 } from '@/lib/calendar';
 
 export const dynamic = 'force-dynamic';
 
 interface PageProps {
-  searchParams: Promise<{ year?: string }>;
+  searchParams: Promise<{ w?: string }>;
 }
 
 export default async function WeeklyPage({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const availableYears = await listAvailableYears();
-  const requestedYear = sp.year;
-  // active year: 요청 있으면 그것, 없으면 가장 최신
-  const activeYear =
-    requestedYear && availableYears.includes(requestedYear)
-      ? requestedYear
-      : availableYears[0] ?? String(new Date().getFullYear());
 
-  const groups = await loadActiveMonthGroups(activeYear);
-  const currentMonthId = getCurrentMonthId();
-  const currentWeekId = await getCurrentWeekId();
+  // 선택된 주차 = 쿼리스트링 ?w= / 없으면 가장 최근 데이터 있는 주차
+  const fallbackWeekId = await getCurrentWeekId();
+  const selectedWeekId = sp.w ?? fallbackWeekId;
 
-  // 활동 미미한 월 자동 제외 (총 0건이면서 현재 월도 아닌 경우)
-  const visibleGroups = groups.filter(g => {
-    if (g.monthId === currentMonthId) return true; // current month always shown
-    return g.hasAnyData;
-  });
+  const week = await loadWeek(selectedWeekId);
+  const todayWeekId = calCurrentWeekId();
+  const isCurrentWeek = selectedWeekId === todayWeekId;
+
+  // 현재 월 ID (Topbar 월간 링크용)
+  const monthOfSelected = getMonthOfWeek(selectedWeekId) ?? '2026-04';
 
   return (
     <PageShell active="weekly">
-      <Hero year={activeYear} groupCount={visibleGroups.length} />
-      <YearTabs years={availableYears} activeYear={activeYear} />
+      {/* Period Tabs */}
+      <PeriodTabs
+        active="week"
+        weekHref={`/weekly?w=${selectedWeekId}`}
+        monthHref={`/monthly/${monthOfSelected}`}
+      />
 
-      <div>
-        {visibleGroups.map(g => {
-          const isCurrentMonth = g.monthId === currentMonthId;
-          const ml = getMonthLabel(g.monthId);
-          const cols = g.weekIds.length === 5 ? 5 : 4;
-          return (
-            <section key={g.monthId} style={{ marginBottom: 'var(--sp-12)' }}>
-              <MonthHead
-                monthId={g.monthId}
-                num={ml?.num ?? '??'}
-                label={ml?.label ?? ''}
-                name={ml?.name ?? ''}
-                isCurrent={isCurrentMonth}
-                totalFiles={g.totalFiles}
-                weekCount={g.weekIds.length}
-                filledCount={g.weeks.filter(w => w !== null).length}
-              />
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: `repeat(${cols}, 1fr)`,
-                  gap: 'var(--sp-3)',
-                }}
-              >
-                {g.weekIds.map((wid, i) => {
-                  const data = g.weeks[i] ?? null;
-                  const isFuture = isWeekFuture(wid);
-                  return (
-                    <WeekColumn
-                      key={wid}
-                      weekId={wid}
-                      data={data}
-                      currentWeekId={currentWeekId}
-                      isFuture={isFuture}
-                    />
-                  );
-                })}
-              </div>
-            </section>
-          );
-        })}
+      {/* Date Strip */}
+      <WeekStrip selectedWeekId={selectedWeekId} />
 
-        {visibleGroups.length === 0 ? (
-          <div
-            style={{
-              textAlign: 'center',
-              color: 'var(--gray-400)',
-              fontSize: 'var(--text-sm)',
-              padding: 'var(--sp-16) 0',
-            }}
-          >
-            {activeYear}년 데이터 없음.
-          </div>
-        ) : null}
-      </div>
+      {week ? (
+        <WeekDetail week={week} isCurrentWeek={isCurrentWeek} selectedWeekId={selectedWeekId} />
+      ) : (
+        <NoData weekId={selectedWeekId} isCurrentWeek={isCurrentWeek} />
+      )}
     </PageShell>
   );
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Sub-components
+   Week Detail (선택된 주차 상세)
    ───────────────────────────────────────────────────────────── */
 
-function Hero({ year, groupCount }: { year: string; groupCount: number }) {
-  return (
-    <section style={{ marginBottom: 'var(--sp-12)' }}>
-      <div
-        style={{
-          fontSize: 'var(--text-xs)',
-          fontWeight: 600,
-          color: 'var(--gray-400)',
-          textTransform: 'uppercase',
-          letterSpacing: 'var(--tracking-wider)',
-          marginBottom: 'var(--sp-2)',
-          fontFamily: 'var(--font-mono)',
-        }}
-      >
-        WEEKLY ARCHIVE
-      </div>
-      <h1
-        style={{
-          fontSize: 50,
-          fontWeight: 300,
-          color: 'var(--black)',
-          letterSpacing: 'var(--tracking-tight)',
-          lineHeight: 1,
-          margin: '0 0 var(--sp-3) 0',
-        }}
-      >
-        모든 주간
-      </h1>
-      <div
-        style={{
-          fontSize: 'var(--text-sm)',
-          color: 'var(--gray-500)',
-          fontVariantNumeric: 'tabular-nums',
-        }}
-      >
-        {year} · 활동 있는 월 {groupCount}개 · 최신 → 과거 순
-      </div>
-    </section>
-  );
+interface WeekDetailProps {
+  week: NonNullable<Awaited<ReturnType<typeof loadWeek>>>;
+  isCurrentWeek: boolean;
+  selectedWeekId: string;
 }
 
-function YearTabs({ years, activeYear }: { years: string[]; activeYear: string }) {
-  // 현재 연도 + 다음 연도(future placeholder)
-  const currentYearNum = Number(activeYear);
-  const tabs: Array<{ year: string; state: 'active' | 'past' | 'future' }> = [];
-  for (const y of years) tabs.push({ year: y, state: y === activeYear ? 'active' : 'past' });
-  const nextYear = String(currentYearNum + 1);
-  if (!years.includes(nextYear)) tabs.push({ year: nextYear, state: 'future' });
+function WeekDetail({ week, isCurrentWeek }: WeekDetailProps) {
+  const parsed = parseWeekId(week.week);
+  const range = parsed ? getWeekRange(parsed.year, parsed.week) : null;
+  const fmtRange = range
+    ? `${range.fromISO} (월) ─ ${range.toISO} (일)`
+    : '';
+
+  // 활동 일수
+  const sessionDays = week.daily.filter((d) => d.filesChanged > 0).length;
+
+  // 프로젝트 정렬 (pct 내림차순) — top 10
+  const topProjects = [...week.projects].sort((a, b) => b.pct - a.pct).slice(0, 10);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        gap: 0,
-        border: '1px solid var(--gray-300)',
-        background: 'var(--white)',
-        marginBottom: 'var(--sp-12)',
-        width: 'fit-content',
-      }}
-    >
-      {tabs.map((t, i) => {
-        const isActive = t.state === 'active';
-        const isFuture = t.state === 'future';
-        return (
-          <a
-            key={t.year}
-            href={isFuture ? '#' : `?year=${t.year}`}
-            style={{
-              padding: 'var(--sp-3) var(--sp-6)',
-              fontSize: 'var(--text-sm)',
-              fontWeight: 600,
-              background: isActive ? 'var(--black)' : isFuture ? 'var(--gray-50)' : 'var(--white)',
-              color: isActive ? 'var(--white)' : isFuture ? 'var(--gray-300)' : 'var(--gray-500)',
-              textDecoration: 'none',
-              fontVariantNumeric: 'tabular-nums',
-              letterSpacing: 'var(--tracking-tight)',
-              borderRight: i < tabs.length - 1 ? '1px solid var(--gray-300)' : 'none',
-              cursor: isFuture ? 'not-allowed' : 'pointer',
-              pointerEvents: isFuture ? 'none' : 'auto',
-            }}
-          >
-            {t.year}
+    <>
+      {/* HERO */}
+      <section style={{ marginBottom: 'var(--sp-6)' }}>
+        <div
+          style={{
+            fontSize: 'var(--text-xs)',
+            fontWeight: 600,
+            color: 'var(--gray-400)',
+            textTransform: 'uppercase',
+            letterSpacing: 'var(--tracking-wider)',
+            marginBottom: 'var(--sp-2)',
+            fontFamily: 'var(--font-mono)',
+          }}
+        >
+          WEEKLY · {week.week}
+          {isCurrentWeek ? (
             <span
               style={{
-                display: 'block',
+                marginLeft: 8,
+                background: 'var(--black)',
+                color: 'var(--white)',
+                padding: '1px 5px',
                 fontSize: 9,
-                fontWeight: 500,
-                opacity: 0.6,
-                letterSpacing: 'var(--tracking-wide)',
-                textTransform: 'uppercase',
-                marginTop: 2,
               }}
             >
-              {isActive ? 'CURRENT' : isFuture ? 'UPCOMING' : 'PAST'}
+              CURRENT
             </span>
-          </a>
-        );
-      })}
-    </div>
-  );
-}
-
-function MonthHead({
-  num,
-  label,
-  name,
-  isCurrent,
-  totalFiles,
-  weekCount,
-  filledCount,
-}: {
-  monthId: string;
-  num: string;
-  label: string;
-  name: string;
-  isCurrent: boolean;
-  totalFiles: number;
-  weekCount: number;
-  filledCount: number;
-}) {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'baseline',
-        justifyContent: 'space-between',
-        paddingBottom: 'var(--sp-3)',
-        borderBottom: isCurrent ? '2px solid var(--black)' : '1px solid var(--gray-300)',
-        marginBottom: 'var(--sp-5)',
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sp-3)' }}>
-        <span
+          ) : null}
+        </div>
+        <h1
           style={{
-            fontSize: 'var(--text-3xl)',
+            fontSize: 40,
             fontWeight: 300,
             color: 'var(--black)',
             letterSpacing: 'var(--tracking-tight)',
             lineHeight: 1,
+            margin: '0 0 var(--sp-2) 0',
+          }}
+        >
+          {week.week}
+        </h1>
+        <div
+          style={{
+            fontSize: 'var(--text-sm)',
+            color: 'var(--gray-500)',
             fontVariantNumeric: 'tabular-nums',
           }}
         >
-          {num}
-        </span>
-        <span
+          {fmtRange} · {sessionDays}일 활동
+        </div>
+        {week.summary ? (
+          <p
+            style={{
+              marginTop: 'var(--sp-3)',
+              fontSize: 'var(--text-base)',
+              color: 'var(--gray-700)',
+              lineHeight: 'var(--leading-relaxed)',
+              maxWidth: 720,
+            }}
+          >
+            {week.summary}
+          </p>
+        ) : null}
+      </section>
+
+      {/* KPI */}
+      <section style={{ marginBottom: 'var(--sp-6)' }}>
+        <div
           style={{
-            fontSize: 'var(--text-sm)',
-            fontWeight: 600,
-            color: 'var(--gray-500)',
-            textTransform: 'uppercase',
-            letterSpacing: 'var(--tracking-wider)',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: 0,
+            border: 'var(--border-1)',
+            background: 'var(--gray-200)',
           }}
         >
-          {label} · {name}
-        </span>
-        {isCurrent ? (
-          <span
-            style={{
-              display: 'inline-block',
-              fontSize: 9,
-              fontWeight: 700,
-              background: 'var(--black)',
-              color: 'var(--white)',
-              padding: '2px 6px',
-              marginLeft: 'var(--sp-2)',
-              letterSpacing: 'var(--tracking-wide)',
-            }}
-          >
-            CURRENT
-          </span>
-        ) : null}
-        {weekCount === 5 ? (
-          <span
-            style={{
-              fontSize: 'var(--text-2xs)',
-              fontWeight: 600,
-              color: 'var(--gray-400)',
-              fontFamily: 'var(--font-mono)',
-              letterSpacing: 'var(--tracking-wide)',
-            }}
-          >
-            5-WEEK
-          </span>
-        ) : null}
-      </div>
+          <Kpi label="Active 프로젝트" value={week.kpis.activeProjects} meta="이번 주 활동" />
+          <Kpi label="세션" value={week.kpis.sessions} meta={`${sessionDays}일 / 7일`} />
+          <Kpi label="신규 프로젝트" value={week.kpis.newProjects} meta={week.newProjects.join(' · ') || '—'} />
+          <Kpi label="변경 파일" value={week.kpis.filesChanged} meta="md · tsx · html · sql" />
+        </div>
+      </section>
+
+      {/* Daily Activity */}
+      <section style={{ marginBottom: 'var(--sp-6)' }}>
+        <SectionHead title="일별 활동 강도" meta="파일 변경 수 · peak = warm-900" />
+        <div style={{ background: 'var(--white)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
+          <DailyActivityBar daily={week.daily} />
+        </div>
+      </section>
+
+      {/* Top 10 — 1/3·2/3 ptile (week mode) */}
+      <section style={{ marginBottom: 'var(--sp-6)' }}>
+        <SectionHead
+          title="이번 주 프로젝트별 한 일"
+          meta={`${week.projects.length}개 활동 · pct 내림차순 · 상위 10`}
+        />
+        <div>
+          {topProjects.map((p) => {
+            const meta = getProject(p.id);
+            if (!meta) return null;
+            const metaLine = p.nextAction ? `NEXT · ${p.nextAction}` : undefined;
+            return (
+              <PeriodProjectTile
+                key={p.id}
+                projectId={p.id}
+                pct={p.pct}
+                imp={p.imp}
+                metaLine={metaLine}
+                narrative={p.did}
+              />
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Decisions */}
+      {week.decisions.length > 0 ? (
+        <section style={{ marginBottom: 'var(--sp-12)' }}>
+          <SectionHead
+            title="의사결정 · Milestone"
+            meta={`${week.decisions.length}건 · ${week.decisions.filter((d) => d.isMilestone).length} milestone`}
+          />
+          <div>
+            {week.decisions.map((d, i) => {
+              const ms = !!d.isMilestone;
+              const dateObj = new Date(d.date + 'T00:00:00+09:00');
+              const wd = ['일', '월', '화', '수', '목', '금', '토'][dateObj.getDay()];
+              return (
+                <div
+                  key={i}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '70px 1fr',
+                    columnGap: 'var(--sp-3)',
+                    padding: 'var(--sp-3) var(--sp-4)',
+                    background: 'var(--white)',
+                    border: '1px solid var(--gray-200)',
+                    borderTop: i === 0 ? 'var(--border-1)' : 'none',
+                    borderLeft: ms ? '3px solid var(--black)' : '1px solid var(--gray-200)',
+                  }}
+                >
+                  <div style={{ fontSize: 10, color: 'var(--gray-500)', fontFamily: 'var(--font-mono)', paddingTop: 2 }}>
+                    {d.date.slice(5)} ({wd})
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: 9, fontFamily: 'var(--font-mono)', color: 'var(--gray-400)' }}>
+                      PROJECT {d.projectId}
+                      {ms ? ' · MILESTONE' : ''}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 'var(--text-sm)',
+                        fontWeight: 600,
+                        color: 'var(--gray-900)',
+                        marginTop: 2,
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {ms ? '★ ' : ''}
+                      {d.title}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 'var(--text-xs)',
+                        color: 'var(--gray-600)',
+                        marginTop: 4,
+                        lineHeight: 'var(--leading-relaxed)',
+                      }}
+                    >
+                      {d.description}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
+    </>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Sub
+   ───────────────────────────────────────────────────────────── */
+
+function NoData({ weekId, isCurrentWeek }: { weekId: string; isCurrentWeek: boolean }) {
+  return (
+    <div
+      style={{
+        padding: 'var(--sp-16) var(--sp-12)',
+        textAlign: 'center',
+        background: 'var(--white)',
+        border: 'var(--border-1)',
+      }}
+    >
       <div
         style={{
-          fontSize: 'var(--text-xs)',
+          fontSize: 'var(--text-2xs)',
+          fontWeight: 700,
           color: 'var(--gray-400)',
-          fontVariantNumeric: 'tabular-nums',
+          letterSpacing: 'var(--tracking-wider)',
+          textTransform: 'uppercase',
+          marginBottom: 'var(--sp-3)',
         }}
       >
-        <strong style={{ color: 'var(--gray-700)', fontWeight: 600 }}>{totalFiles}</strong> files ·{' '}
-        {filledCount} / {weekCount} weeks
+        WEEKLY DATA NOT YET AVAILABLE
+      </div>
+      <div style={{ fontSize: 'var(--text-base)', color: 'var(--gray-700)', marginBottom: 'var(--sp-4)' }}>
+        <strong>{weekId}</strong> {isCurrentWeek ? '— 진행 중인 주차' : '데이터 없음'}.
+      </div>
+      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', fontFamily: 'var(--font-mono)' }}>
+        {isCurrentWeek
+          ? '다음 월요일에 /주간업데이트 슬래시 커맨드로 채울 수 있습니다.'
+          : `node scripts/extract-week.mjs ${weekId}`}
       </div>
     </div>
   );
 }
 
-/* ─────────────────────────────────────────────────────────────
-   Helpers
-   ───────────────────────────────────────────────────────────── */
+function Kpi({ label, value, meta }: { label: string; value: number; meta: string }) {
+  return (
+    <div style={{ background: 'var(--white)', padding: 'var(--sp-5) var(--sp-6)' }}>
+      <div
+        style={{
+          fontSize: 'var(--text-2xs)',
+          fontWeight: 600,
+          color: 'var(--gray-400)',
+          textTransform: 'uppercase',
+          letterSpacing: 'var(--tracking-wide)',
+          marginBottom: 'var(--sp-3)',
+        }}
+      >
+        {label}
+      </div>
+      <div
+        style={{
+          fontSize: 'var(--text-4xl)',
+          fontWeight: 700,
+          color: 'var(--black)',
+          lineHeight: 1,
+          fontVariantNumeric: 'tabular-nums',
+        }}
+      >
+        {value}
+      </div>
+      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-500)', marginTop: 'var(--sp-3)' }}>
+        {meta}
+      </div>
+    </div>
+  );
+}
 
-function isWeekFuture(weekId: string): boolean {
-  const parsed = parseWeekId(weekId);
-  if (!parsed) return false;
-  const range = getWeekRange(parsed.year, parsed.week);
-  // 빌드 타임 기준 — 오늘이 그 주 월요일보다 이전이면 future
-  const now = new Date();
-  return now < range.monday;
+function SectionHead({ title, meta }: { title: string; meta: string }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
+        paddingBottom: 'var(--sp-2)',
+        borderBottom: '1px solid var(--gray-300)',
+        marginBottom: 'var(--sp-3)',
+      }}
+    >
+      <h2
+        style={{
+          fontSize: 'var(--text-lg)',
+          fontWeight: 700,
+          color: 'var(--black)',
+          letterSpacing: 'var(--tracking-tight)',
+        }}
+      >
+        {title}
+      </h2>
+      <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>{meta}</div>
+    </div>
+  );
 }

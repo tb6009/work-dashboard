@@ -15,7 +15,8 @@ import {
   getWeekRange,
   getCurrentWeekId as calCurrentWeekId,
 } from '@/lib/calendar';
-import type { ProjectContribution } from '@/types/dashboard';
+import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
+import type { ProjectContribution, ProjectType } from '@/types/dashboard';
 
 export const dynamic = 'force-dynamic';
 
@@ -50,14 +51,39 @@ export default async function Home() {
       };
     });
 
-  // 전체 프로젝트 — 00 personal 제외, ID 오름차순. paused·new·active 모두 표시.
-  // 이번 주 contribution 있으면 pct/did 표시.
+  // 프로젝트 ID → type 매핑 (차트 바 색상용)
+  const projectTypeMap: Record<string, ProjectType> = {};
+  for (const p of PROJECTS) {
+    projectTypeMap[p.id] = p.type;
+  }
+
+  // 전체 프로젝트 — 00 personal 제외. 최신 작업 순 정렬.
+  // 1) paused/archived는 맨 아래
+  // 2) 이번 주 contribution pct 내림차순
+  // 3) pct 동률이면 createdAt 내림차순 (신규가 위)
+  // 4) 모두 동률이면 ID 오름차순
   const contribMap = new Map<string, ProjectContribution>(
     week.projects.map(p => [p.id, p]),
   );
   const allProjects = PROJECTS
     .filter(p => p.id !== '00')
     .sort((a, b) => {
+      // 1) paused/archived 맨 아래
+      const aDormant = a.status === 'paused' || a.status === 'archived';
+      const bDormant = b.status === 'paused' || b.status === 'archived';
+      if (aDormant !== bDormant) return aDormant ? 1 : -1;
+
+      // 2) pct desc (이번 주 활동량)
+      const aPct = contribMap.get(a.id)?.pct ?? 0;
+      const bPct = contribMap.get(b.id)?.pct ?? 0;
+      if (aPct !== bPct) return bPct - aPct;
+
+      // 3) createdAt desc (신규가 위)
+      if (a.createdAt && b.createdAt) return b.createdAt.localeCompare(a.createdAt);
+      if (a.createdAt) return -1;
+      if (b.createdAt) return 1;
+
+      // 4) ID 오름차순 fallback
       const numA = parseInt(a.id, 10);
       const numB = parseInt(b.id, 10);
       if (numA !== numB) return numA - numB;
@@ -165,8 +191,8 @@ export default async function Home() {
             gap: 'var(--sp-5)',
           }}
         >
-          <ChartCard title="일별 활동 강도" sub="파일 변경 수 · md/tsx/html/json">
-            <DailyActivityBar daily={week.daily} />
+          <ChartCard title="일별 활동 강도" sub="대표 프로젝트 유형 색상 · 파일 변경 수">
+            <DailyActivityBar daily={week.daily} projectTypeMap={projectTypeMap} />
           </ChartCard>
           <ChartCard title="프로젝트 비중" sub="% of changes">
             <ProjectPie slices={pieSlices} />
@@ -245,7 +271,7 @@ export default async function Home() {
                 fontVariantNumeric: 'tabular-nums',
               }}
             >
-              {allProjects.length}개 · ID 오름차순 · 클릭 → 상세
+              {allProjects.length}개 · 최신 작업 순 · 클릭 → 상세
             </span>
           </div>
           <Link
@@ -260,6 +286,7 @@ export default async function Home() {
             필터 + 전체 보기 →
           </Link>
         </div>
+        <TypeColorIndex />
         <ActiveProjectsGrid projects={allProjects} contributions={contribMap} />
       </section>
     </PageShell>
@@ -539,6 +566,53 @@ function RecentWeeks({ weeks, currentWeekId }: { weeks: string[]; currentWeekId:
           }}
         >
           데이터 미수집
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TypeColorIndex() {
+  const types = Object.keys(TYPE_COLOR) as ProjectType[];
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 'var(--sp-4)',
+        flexWrap: 'wrap',
+        marginBottom: 'var(--sp-4)',
+        padding: 'var(--sp-3) 0',
+      }}
+    >
+      {types.map(type => (
+        <div
+          key={type}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+          }}
+        >
+          <div
+            style={{
+              width: 10,
+              height: 10,
+              background: TYPE_COLOR[type],
+              flexShrink: 0,
+            }}
+          />
+          <span
+            style={{
+              fontSize: 'var(--text-2xs)',
+              fontWeight: 600,
+              color: 'var(--gray-500)',
+              textTransform: 'uppercase',
+              letterSpacing: 'var(--tracking-wide)',
+            }}
+          >
+            {TYPE_LABEL[type]}
+          </span>
         </div>
       ))}
     </div>

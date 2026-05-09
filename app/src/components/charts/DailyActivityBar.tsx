@@ -2,17 +2,19 @@
 
 import { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { WARM_GRAY, GREY } from '@/lib/projectTypes';
-import type { DailyActivity } from '@/types/dashboard';
+import { TYPE_COLOR, WARM_GRAY, GREY } from '@/lib/projectTypes';
+import type { DailyActivity, ProjectType } from '@/types/dashboard';
 
 interface Props {
   daily: DailyActivity[];
+  /** 프로젝트 ID → type 매핑. 대표 프로젝트 유형 색상으로 바를 칠함. */
+  projectTypeMap?: Record<string, ProjectType>;
 }
 
 /** ECharts daily activity bar.
- *  - Warm-gray bars; 토요일(milestone day) gets warm-900.
+ *  - 대표 프로젝트 유형 색상으로 바 표시. 매핑 없으면 warm-gray fallback.
  *  - Inits on mount, disposes on unmount, resizes on window resize. */
-export default function DailyActivityBar({ daily }: Props) {
+export default function DailyActivityBar({ daily, projectTypeMap }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -21,7 +23,14 @@ export default function DailyActivityBar({ daily }: Props) {
 
     const labels = daily.map(d => `${d.date.slice(5)}\n${d.weekday}`);
     const values = daily.map(d => d.filesChanged);
-    const milestoneIdx = daily.findIndex(d => d.weekday === '토');
+
+    /** 각 날짜의 대표 프로젝트 유형 색상 결정 */
+    const barColors = daily.map(d => {
+      if (!projectTypeMap || !d.topProjectIds?.length) return WARM_GRAY[500];
+      const topId = d.topProjectIds[0];
+      const type = projectTypeMap[topId];
+      return type ? TYPE_COLOR[type] : WARM_GRAY[500];
+    });
 
     chart.setOption({
       grid: { top: 24, right: 16, bottom: 36, left: 36 },
@@ -47,12 +56,11 @@ export default function DailyActivityBar({ daily }: Props) {
       series: [
         {
           type: 'bar',
-          data: values,
+          data: values.map((v, i) => ({
+            value: v,
+            itemStyle: { color: barColors[i] },
+          })),
           barWidth: 28,
-          itemStyle: {
-            color: (p: { dataIndex: number }) =>
-              p.dataIndex === milestoneIdx ? WARM_GRAY[900] : WARM_GRAY[500],
-          },
           label: {
             show: true,
             position: 'top',
@@ -72,7 +80,7 @@ export default function DailyActivityBar({ daily }: Props) {
       window.removeEventListener('resize', handleResize);
       chart.dispose();
     };
-  }, [daily]);
+  }, [daily, projectTypeMap]);
 
   return <div ref={ref} style={{ width: '100%', height: 260 }} />;
 }

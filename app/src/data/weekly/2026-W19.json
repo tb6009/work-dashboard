@@ -1,0 +1,44 @@
+{
+  "week": "2026-W19",
+  "range": { "from": "2026-05-04", "to": "2026-05-10" },
+  "status": "current",
+  "summary": "063 대시보드 v0.5~v0.6 리디자인 · Vercel 배포 · 061 LifeOS 지속 개선",
+
+  "kpis": {
+    "activeProjects": 15,
+    "sessions": 4,
+    "newProjects": 0,
+    "filesChanged": 123
+  },
+
+  "daily": [
+    { "date": "2026-05-04", "weekday": "월", "filesChanged": 0,  "topProjectIds": [] },
+    { "date": "2026-05-05", "weekday": "화", "filesChanged": 10, "topProjectIds": ["062", "05"] },
+    { "date": "2026-05-06", "weekday": "수", "filesChanged": 63, "topProjectIds": ["063"] },
+    { "date": "2026-05-07", "weekday": "목", "filesChanged": 5,  "topProjectIds": ["063"] },
+    { "date": "2026-05-08", "weekday": "금", "filesChanged": 50, "topProjectIds": ["063", "061"] },
+    { "date": "2026-05-09", "weekday": "토", "filesChanged": 11, "topProjectIds": ["063"] },
+    { "date": "2026-05-10", "weekday": "일", "filesChanged": 0,  "topProjectIds": [] }
+  ],
+
+  "projects": [
+    { "id": "063", "pct": 80, "filesChanged": 90, "imp": 5, "did": "v0.5 컴팩트 리디자인 4종 + v0.6 strip nav · Vercel 배포 완료 · 프로젝트 데이터 17개 생성", "nextAction": "GitHub 자동 배포 Root Directory 수정 · W14~W17 소급 데이터 생성" },
+    { "id": "061", "pct": 60, "filesChanged": 20, "imp": 4, "did": "LifeOS v0.9 Google Calendar OAuth 작업 · Vercel 배포 지속 개선", "nextAction": "Google Calendar OAuth 완료 · 모바일 UI 최적화" },
+    { "id": "062", "pct": 30, "filesChanged": 3,  "imp": 3, "did": "논문리더 스펙 보강", "nextAction": "마이그레이션 SQL + 화면설계" },
+    { "id": "05",  "pct": 30, "filesChanged": 7,  "imp": 3, "did": "DSAPG 디자인 원칙 확정 · 컬러 팔레트 Muted Pastel · 읽기 유형 5단계", "nextAction": "논문 초안 집필" }
+  ],
+
+  "decisions": [
+    { "date": "2026-05-05", "projectId": "05",  "title": "논문리더 디자인 원칙 확정",       "description": "흰 배경 + 그레이스케일 + 폰트 웨이트로 시각 위계. Muted Pastel 컬러 팔레트." },
+    { "date": "2026-05-05", "projectId": "05",  "title": "읽기 유형 5단계 체계",            "description": "Ready → Skim → Read → Deep → Reread. 중요도 1~5를 폰트 웨이트 300~700으로 시각화." },
+    { "date": "2026-05-06", "projectId": "063", "title": "063 대시보드 Next.js 앱 초기 구축", "description": "Next.js 16 + React 19 + Tailwind v4. 5개 라우트 + 인증(NextAuth) + ECharts 7종.", "isMilestone": true },
+    { "date": "2026-05-08", "projectId": "063", "title": "v0.5 컴팩트 UI 리디자인",         "description": "시안 4종 제작. 프로젝트 데이터 JSON 17개 생성. 전체 페이지 UI 리팩토링." },
+    { "date": "2026-05-08", "projectId": "063", "title": "Vercel 배포 완료",                "description": "work-dashboard-app.vercel.app 프로덕션 URL 확보. GitHub repo 연결.", "isMilestone": true },
+    { "date": "2026-05-09", "projectId": "063", "title": "v0.6 strip nav + monthly narrative", "description": "strip 스타일 네비게이션 + 월간 상세 페이지 내러티브 강화." }
+  ],
+
+  "newProjects": [],
+  "labelChanges": [],
+
+  "buildAt": "2026-05-09T13:00:00+09:00"
+}

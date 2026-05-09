@@ -2,7 +2,7 @@
 
 > 한 줄 정의: cloude_Code 27 프로젝트의 주간·월간·연간 작업 활동을 시각화하는 외부 공개 대시보드
 > 상태: 🟢 active
-> 최종 업데이트: 2026-05-05
+> 최종 업데이트: 2026-05-09
 
 ---
 
@@ -25,24 +25,38 @@
   - `v0.3_project_detail.html` — 061 LifeOS 상세 (KPI · 기여 추이 · 결정 history · 산출물 표)
   - `v0.3_yearly.html` — 2026 연간 (12개월 그리드 · stacked area · Gantt · milestone)
 - **v0.1 보존** — `design/v0.1_dashboard_시안.html` (Editorial Navy 톤, 기록용)
+- **v0.4 시안** — `design/v0.4_weekly_5col_시안.html` (주간 5열 레이아웃)
+- **v0.5 시안 4종** — compact 리디자인 (home, weekly, projects index, project detail)
+- **v0.6 시안 2종** — strip nav + home/weekly 시안
 
 ### Phase 2 — Next.js 16 앱 구축 완료 (2026-05-05/06)
 
 - **스택**: Next.js 16.2.4 + React 19.2.4 + Tailwind v4 + TypeScript (LifeOS와 동일)
 - **위치**: `app/` (src dir, App Router, ECharts npm)
-- **5개 라우트 모두 200 OK**:
-  - `/` — 홈 = 현재 주간 (Static)
-  - `/weekly` — 전체 주간 인덱스 (Static)
+- **6개 라우트 모두 200 OK**:
+  - `/` — 홈 = 현재 주간 (Dynamic)
+  - `/weekly` — 전체 주간 인덱스 (Dynamic)
   - `/monthly/[month]` — 월간 상세 (Dynamic, 현재 2026-05 데이터)
   - `/yearly/[year]` — 연간 (Dynamic, 현재 2026 데이터)
+  - `/projects` — 프로젝트 인덱스 (Dynamic)
   - `/projects/[id]` — 프로젝트 상세 (Dynamic, 061 LifeOS 데이터)
 - **공통 컴포넌트**: `PageShell` / `Topbar` / `Footer`
-- **데이터 레이어**: `types/dashboard.ts` 스키마 + `data/projects.json` + `data/weekly/2026-W18.json` + `lib/data.ts` loader
+- **프로젝트 컴포넌트**: `ActiveProjectsGrid` / `ActiveProjectTile`
+- **주간 컴포넌트**: `WeekColumn` / `ProjectTile`
+- **데이터 레이어**: `types/dashboard.ts` 스키마 + `data/projects.json` + `data/weekly/2026-W18.json` + `data/projects/*.json` (17개) + `lib/data.ts` loader
 - **차트 컴포넌트** (`'use client'` ECharts wrapper): `DailyActivityBar`, `ProjectPie`, `WeeklyTrendLine`, `TypeBreakdownPie`, `WeeklyContributionBar`, `TypeStackedArea`, `ProjectGantt`
 - **Foundation 통합**: `src/styles/tokens.css`(미러) → `globals.css`에서 `@import` + vtimeline/deliv/related 컴포넌트 스타일 추가
 - **Dev 서버**: `npm run dev` (`http://localhost:3001`, port 3000 점유 시 자동 swap)
 - 데이터: 2026-W18 (04-27 ~ 05-03) 하드코딩 1주분
 - 자동화·라우팅·드릴다운 미구현
+
+### Phase 3 — Vercel 배포 (2026-05-08)
+
+- **Vercel CLI 배포 완료** — `work-dashboard-app` 프로젝트
+- **Production URL**: `https://work-dashboard-app.vercel.app`
+- **GitHub repo**: `tb6009/work-dashboard` (main 브랜치)
+- **GitHub 자동 배포**: 연결됨, 단 Root Directory 설정 필요 (`app`)
+- **현재 이슈**: GitHub → Vercel 자동 배포 시 Root Directory 미설정으로 빌드 실패 → Vercel 웹 대시보드에서 `work-dashboard-app` > Settings > General > Root Directory = `app` 설정 필요
 
 ## 3. 다음 액션
 
@@ -51,10 +65,12 @@
   - `scripts/extract-week.mjs` — Tier 1 자동 추출 (Node.js)
   - `.claude/commands/주간업데이트.md` — Tier 2 Claude 슬래시 커맨드
   - `docs/주간업데이트_가이드.md` — 표준 절차 문서
-- [ ] 5개 페이지 브라우저 검토 → UI 미세조정 v0.4 사이클
+- [x] **v0.5 UI 컴팩트 리디자인** (2026-05-07) — 시안 4종 + 앱 반영
+- [x] **v0.6 strip nav + monthly narrative** (2026-05-08) — 시안 2종 + 앱 반영
+- [x] **Vercel 배포 + URL 확보** (2026-05-08) — `https://work-dashboard-app.vercel.app`
+- [ ] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정 (Vercel 웹 대시보드)
 - [ ] `data/weekly/*.json` 지난 4주(W14~W17) 소급 생성 — `extract-week.mjs` 사용
-- [ ] Vercel 배포 + URL 확보
-- [ ] Phase 3 — Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
+- [ ] Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화
 
 ## 3-1. 주간 업데이트 절차 요약

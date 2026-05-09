@@ -224,14 +224,14 @@ function FilterChips({ active, counts }: FilterChipsProps) {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 5,
-              padding: '6px 12px',
+              gap: 4,
+              padding: '4px 2px',
               fontSize: 'var(--text-xs)',
-              fontWeight: 600,
-              color: isOn ? 'var(--white)' : 'var(--gray-500)',
-              background: isOn ? 'var(--black)' : 'var(--white)',
-              border: '1px solid',
-              borderColor: isOn ? 'var(--black)' : 'var(--gray-300)',
+              fontWeight: isOn ? 700 : 500,
+              color: isOn ? 'var(--black)' : 'var(--gray-400)',
+              background: 'transparent',
+              border: 'none',
+              borderBottom: isOn ? '2px solid var(--black)' : '2px solid transparent',
               textDecoration: 'none',
             }}
           >
@@ -240,7 +240,7 @@ function FilterChips({ active, counts }: FilterChipsProps) {
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 'var(--text-2xs)',
-                opacity: 0.7,
+                opacity: 0.6,
               }}
             >
               {count}
@@ -299,21 +299,21 @@ function TypeFilterChips({ active, counts, statusParam }: TypeFilterChipsProps) 
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: 5,
-          padding: '5px 10px',
+          gap: 4,
+          padding: '4px 2px',
           fontSize: 'var(--text-2xs)',
-          fontWeight: 600,
-          color: active === 'all' ? 'var(--white)' : 'var(--gray-500)',
-          background: active === 'all' ? 'var(--black)' : 'var(--white)',
-          border: '1px solid',
-          borderColor: active === 'all' ? 'var(--black)' : 'var(--gray-300)',
+          fontWeight: active === 'all' ? 700 : 500,
+          color: active === 'all' ? 'var(--black)' : 'var(--gray-400)',
+          background: 'transparent',
+          border: 'none',
+          borderBottom: active === 'all' ? '2px solid var(--black)' : '2px solid transparent',
           textDecoration: 'none',
           textTransform: 'uppercase',
           letterSpacing: 'var(--tracking-wide)',
         }}
       >
         ALL
-        <span style={{ fontFamily: 'var(--font-mono)', opacity: 0.7 }}>
+        <span style={{ fontFamily: 'var(--font-mono)', opacity: 0.6 }}>
           {counts.all ?? 0}
         </span>
       </a>
@@ -321,7 +321,6 @@ function TypeFilterChips({ active, counts, statusParam }: TypeFilterChipsProps) 
         const isOn = type === active;
         const count = counts[type] ?? 0;
         if (count === 0) return null;
-        const sep = statusParam === 'all' ? '?' : '&';
         const href = statusParam === 'all'
           ? `/projects?type=${type}`
           : `/projects?status=${statusParam}&type=${type}`;
@@ -332,14 +331,14 @@ function TypeFilterChips({ active, counts, statusParam }: TypeFilterChipsProps) 
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 5,
-              padding: '5px 10px',
+              gap: 4,
+              padding: '4px 2px',
               fontSize: 'var(--text-2xs)',
-              fontWeight: 600,
-              color: isOn ? 'var(--white)' : 'var(--gray-600)',
-              background: isOn ? TYPE_COLOR[type] : 'var(--white)',
-              border: '1px solid',
-              borderColor: isOn ? TYPE_COLOR[type] : 'var(--gray-300)',
+              fontWeight: isOn ? 700 : 500,
+              color: isOn ? TYPE_COLOR[type] : 'var(--gray-400)',
+              background: 'transparent',
+              border: 'none',
+              borderBottom: isOn ? `2px solid ${TYPE_COLOR[type]}` : '2px solid transparent',
               textDecoration: 'none',
               textTransform: 'uppercase',
               letterSpacing: 'var(--tracking-wide)',
@@ -349,12 +348,12 @@ function TypeFilterChips({ active, counts, statusParam }: TypeFilterChipsProps) 
               style={{
                 width: 8,
                 height: 8,
-                background: isOn ? 'var(--white)' : TYPE_COLOR[type],
+                background: TYPE_COLOR[type],
                 flexShrink: 0,
               }}
             />
             {TYPE_LABEL[type]}
-            <span style={{ fontFamily: 'var(--font-mono)', opacity: 0.7 }}>
+            <span style={{ fontFamily: 'var(--font-mono)', opacity: 0.6 }}>
               {count}
             </span>
           </a>

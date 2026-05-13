@@ -2,19 +2,19 @@
   "week": "2026-W20",
   "range": { "from": "2026-05-11", "to": "2026-05-17" },
   "status": "current",
-  "summary": "마음 챗봇 403 해결·배포 · 091 출판기획안 v2.1 제출 · 065 인터뷰 톤 변환 · 063 대시보드 컬러 시스템",
+  "summary": "061 LifeOS v2.0 폐기→v0.9.3 복구 · 마음 챗봇 403 해결 · 091 출판기획안 v2.1 제출 · 063 대시보드 컬러",
 
   "kpis": {
     "activeProjects": 15,
-    "sessions": 3,
+    "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 85
+    "filesChanged": 150
   },
 
   "daily": [
-    { "date": "2026-05-11", "weekday": "월", "filesChanged": 45, "topProjectIds": ["10", "091", "065"] },
-    { "date": "2026-05-12", "weekday": "화", "filesChanged": 12, "topProjectIds": ["091", "062"] },
-    { "date": "2026-05-13", "weekday": "수", "filesChanged": 28, "topProjectIds": ["063", "091"] },
+    { "date": "2026-05-11", "weekday": "월", "filesChanged": 55, "topProjectIds": ["061", "10", "091"] },
+    { "date": "2026-05-12", "weekday": "화", "filesChanged": 35, "topProjectIds": ["061", "091"] },
+    { "date": "2026-05-13", "weekday": "수", "filesChanged": 40, "topProjectIds": ["061", "063"] },
     { "date": "2026-05-14", "weekday": "목", "filesChanged": 0,  "topProjectIds": [] },
     { "date": "2026-05-15", "weekday": "금", "filesChanged": 0,  "topProjectIds": [] },
     { "date": "2026-05-16", "weekday": "토", "filesChanged": 0,  "topProjectIds": [] },
@@ -22,22 +22,25 @@
   ],
 
   "projects": [
-    { "id": "091", "pct": 35, "filesChanged": 30, "imp": 5, "did": "출판기획안 v1.2→v2.1 제출본 8개 버전 진화 · 600명 데이터 익명화·마케팅 근거 · 샘플 원고 v0.3", "nextAction": "중간평가 데이터 합산 · 본문 4부 잠 챕터 확장 · 출판사 발송 패키지" },
-    { "id": "10",  "pct": 30, "filesChanged": 25, "imp": 4, "did": "보살피고 통합 빌드 403 해결 (User-Agent) · 모델 ID 4.6 통일 · 옛 링크 복원", "nextAction": "회귀 검증 6시나리오 · README 업데이트" },
-    { "id": "063", "pct": 15, "filesChanged": 12, "imp": 3, "did": "프로젝트 유형 컬러 시스템 적용 · 필터 버튼 디자인 수정 · W20 데이터 생성", "nextAction": "Vercel GitHub 자동 배포 Root Directory 수정" },
-    { "id": "065", "pct": 10, "filesChanged": 8,  "imp": 3, "did": "인터뷰 답변 박진현 톤 변환 Q4·Q10 시범 → Q1~Q10 전체 변환", "nextAction": "사용자 통합본 검토 · 발행본 확정" },
-    { "id": "062", "pct": 5,  "filesChanged": 5,  "imp": 2, "did": "Chrome Extension 구조 탐색", "nextAction": "마이그레이션 SQL + 화면설계" },
-    { "id": "081", "pct": 5,  "filesChanged": 5,  "imp": 2, "did": "Anchornode 프로젝트 셋업 (brand asset, gameaify, spica)", "nextAction": "브랜드 에셋 작업 진행" }
+    { "id": "061", "pct": 30, "filesChanged": 50, "imp": 5, "did": "v2.0 시도→폐기→v0.8.1 롤백 · v0.9.1~v0.9.3 점진 복구 (메모리 시스템, Calendar OAuth 수정, 홈 스케줄 체크)", "nextAction": "v0.9.3 안정화 · 모바일 UX 점검" },
+    { "id": "091", "pct": 25, "filesChanged": 30, "imp": 5, "did": "출판기획안 v1.2→v2.1 제출본 8개 버전 진화 · 600명 데이터 익명화·마케팅 근거 · 샘플 원고 v0.3", "nextAction": "중간평가 데이터 합산 · 본문 4부 잠 챕터 확장 · 출판사 발송 패키지" },
+    { "id": "10",  "pct": 20, "filesChanged": 25, "imp": 4, "did": "보살피고 통합 빌드 403 해결 (User-Agent) · 모델 ID 4.6 통일 · 옛 링크 복원", "nextAction": "회귀 검증 6시나리오 · README 업데이트" },
+    { "id": "063", "pct": 10, "filesChanged": 15, "imp": 3, "did": "프로젝트 유형 컬러 시스템 적용 · 필터 버튼 디자인 수정 · W20 데이터 생성", "nextAction": "Vercel GitHub 자동 배포 Root Directory 수정" },
+    { "id": "065", "pct": 7,  "filesChanged": 8,  "imp": 3, "did": "인터뷰 답변 박진현 톤 변환 Q4·Q10 시범 → Q1~Q10 전체 변환", "nextAction": "사용자 통합본 검토 · 발행본 확정" },
+    { "id": "062", "pct": 4,  "filesChanged": 5,  "imp": 2, "did": "Chrome Extension 구조 탐색", "nextAction": "마이그레이션 SQL + 화면설계" },
+    { "id": "081", "pct": 4,  "filesChanged": 5,  "imp": 2, "did": "Anchornode 프로젝트 셋업 (brand asset, gameaify, spica)", "nextAction": "브랜드 에셋 작업 진행" }
   ],
 
   "decisions": [
-    { "date": "2026-05-11", "projectId": "10",  "title": "워커 출처 차단 회피: User-Agent 명시",       "description": "workers.dev 기본 UA가 abuse pattern으로 차단. 명시적 User-Agent 추가로 해결." },
-    { "date": "2026-05-11", "projectId": "10",  "title": "Opus 4.6으로 통일",                          "description": "사용자 워크스페이스에 4.7 access 없음. 전 모델 ID를 4.6 기준으로 일괄 복구." },
-    { "date": "2026-05-11", "projectId": "091", "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",  "description": "디자이너(직업) x 행동 변화(연구 주제) x 과학(기준점) 세 층위 분리. 인터페이스 비유 폐기.", "isMilestone": true },
-    { "date": "2026-05-11", "projectId": "091", "title": "6부 구조 확정 + 600명 데이터 마케팅 근거화",    "description": "1부(항상성)+2부(마인드셋)+3~6부(일/잠/먹기/무너짐). 129명 응답 11테마 태그, 행동변화 33%." },
-    { "date": "2026-05-11", "projectId": "091", "title": "출판기획안 v2.1 표준양식 제출",               "description": "아고라 출판 수업 9칸 표 형식. 저자 docx 직접 편집 반영 최종본.", "isMilestone": true },
-    { "date": "2026-05-11", "projectId": "065", "title": "인터뷰 톤 변환 규칙 합의",                    "description": "존댓말 유지 + 박진현식 호흡 혼용. 시범 Q4·Q10 합의 후 전체 10문항 일괄 변환." },
-    { "date": "2026-05-13", "projectId": "063", "title": "프로젝트 유형 컬러 시스템 적용",              "description": "일별 바 차트 유형색 반영, 컬러 인덱스 범례, TYPE 필터 버튼 추가." }
+    { "date": "2026-05-11", "projectId": "061", "title": "LifeOS v2.0 폐기 결정",                      "description": "45 commits/114 files의 대규모 리팩토링 시도. UI 디테일·인터랙션 손실로 '작동이 안 된다' 체감 → v0.8.1로 롤백.", "isMilestone": true },
+    { "date": "2026-05-12", "projectId": "061", "title": "v2.0 Postmortem 작성 + v0.9.1 점진 복구 시작", "description": "폐기 원인 7가지 분석. 큰 리팩토링 대신 기존 코드 위에 기능을 layer로 얹는 방식으로 전환." },
+    { "date": "2026-05-13", "projectId": "061", "title": "v0.9.3 — 메모리 시스템 + Calendar OAuth 해결", "description": "하루 메모리(프로필+주간요약+오늘컨텍스트), 홈 스케줄 체크, Calendar KST/OAuth/쿠키 8시간 디버깅 해결." },
+    { "date": "2026-05-11", "projectId": "10",  "title": "워커 출처 차단 회피: User-Agent 명시",        "description": "workers.dev 기본 UA가 abuse pattern으로 차단. 명시적 User-Agent 추가로 해결." },
+    { "date": "2026-05-11", "projectId": "10",  "title": "Opus 4.6으로 통일",                           "description": "사용자 워크스페이스에 4.7 access 없음. 전 모델 ID를 4.6 기준으로 일괄 복구." },
+    { "date": "2026-05-11", "projectId": "091", "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",   "description": "디자이너(직업) x 행동 변화(연구 주제) x 과학(기준점) 세 층위 분리. 인터페이스 비유 폐기.", "isMilestone": true },
+    { "date": "2026-05-11", "projectId": "091", "title": "출판기획안 v2.1 표준양식 제출",                "description": "8개 버전 진화 후 아고라 출판 수업 9칸 표 형식 최종본. 600명 데이터 마케팅 근거화.", "isMilestone": true },
+    { "date": "2026-05-11", "projectId": "065", "title": "인터뷰 톤 변환 규칙 합의",                     "description": "존댓말 유지 + 박진현식 호흡 혼용. 시범 Q4·Q10 합의 후 전체 10문항 일괄 변환." },
+    { "date": "2026-05-13", "projectId": "063", "title": "프로젝트 유형 컬러 시스템 적용",               "description": "일별 바 차트 유형색 반영, 컬러 인덱스 범례, TYPE 필터 버튼 추가." }
   ],
 
   "newProjects": [],

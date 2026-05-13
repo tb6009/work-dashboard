@@ -1,0 +1,142 @@
+{
+  "week": "2026-W19",
+  "range": {
+    "from": "2026-05-04",
+    "to": "2026-05-10"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 2,
+    "sessions": 1,
+    "newProjects": 0,
+    "filesChanged": 10
+  },
+  "daily": [
+    {
+      "date": "2026-05-04",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-05",
+      "weekday": "화",
+      "filesChanged": 10,
+      "topProjectIds": [
+        "05",
+        "062"
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-07",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-08",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-09",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-10",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "05",
+      "pct": 70,
+      "filesChanged": 7,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "062",
+      "pct": 30,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**디자인 원칙**: 흰 배경 + 그레이스케일 + 폰트 웨이트로 시각 위계",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**컬러 팔레트**: Muted Pastel (채도 30~40%, 명도 70~80%) 확정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**읽기 유형**: Ready → Skim → Read → Deep → Reread (5단계)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**중요도**: 1~5 (폰트 웨이트 300~700으로 시각화)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**모바일 탭 순서**: 진행중 → Ready → 완료 → 전체",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**챗봇 이름**: 노트AI",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**역할 분리**: 모바일 = 아이디어 구체화 / 데스크톱 = 아카데믹 토론",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-05",
+      "projectId": "05",
+      "title": "**작업 규칙 추가**: UI 시안 먼저 → 승인 → 구현 (CLAUDE.md 반영)",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-05-09T03:51:30.942Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-09T03:51:30.942Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

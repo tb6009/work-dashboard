@@ -1,7 +1,7 @@
 {
   "week": "2026-W19",
   "range": { "from": "2026-05-04", "to": "2026-05-10" },
-  "status": "current",
+  "status": "closed",
   "summary": "063 대시보드 v0.5~v0.6 리디자인 · Vercel 배포 · 061 LifeOS 지속 개선",
 
   "kpis": {

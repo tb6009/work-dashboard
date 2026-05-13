@@ -1,102 +1,122 @@
 {
   "id": "061",
   "currentSituation": {
-    "summary": "Design2 적용 + 4탭 네비 + '하루' 캐릭터 통합 + Daily Insight DB 동적화 완료. ChatGPT API 연결 + Vercel 배포 완료.",
-    "phase": "Phase 2 — 동적 데이터 연결 완료, 다음 퍼포먼스 대시보드 단계",
+    "summary": "v2.0 대규모 리팩토링 시도 → 폐기 → v0.8.1 롤백 → v0.9.3 점진 복구 완료. 메모리 시스템 + Calendar OAuth 해결. Vercel 배포 운영 중.",
+    "phase": "Phase 3 — v0.9.3 안정화, v2.0 교훈 기반 점진 개선 전환",
     "recentLogs": [
       {
-        "date": "2026-05-03",
-        "title": "Design2 대규모 업데이트 — 하루 캐릭터 통합 + Diary 페이지 + Daily Insight 동적화",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260503_log.md",
-        "excerpt": "모미+마음 → 하루로 통합. 기록(Diary) 페이지 신규. Daily Insight/Recommendation 하드코딩 제거 → DB 기반."
+        "date": "2026-05-13",
+        "title": "v0.9.3 — 메모리 시스템 + Calendar OAuth 해결 + 다수 UX 개선",
+        "logFilePath": "",
+        "excerpt": "하루 메모리(프로필+주간요약+오늘컨텍스트), 홈 스케줄 체크, Week 네비, Recommendation 삭제, Calendar KST/OAuth 8시간 디버깅 해결."
       },
       {
-        "date": "2026-05-02",
-        "title": "Life OS MVP 1일 만에 배포 — Next.js 16 + Supabase + ChatGPT API",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260502_log.md",
-        "excerpt": "00_personal 시스템을 061_LifeOS로 이동. Vercel 배포 완료 (life-os-7wj2.vercel.app)."
+        "date": "2026-05-12",
+        "title": "v2.0 폐기 Postmortem + v0.8.1 롤백 + v0.9.1 복구 시작",
+        "logFilePath": "",
+        "excerpt": "45 commits/114 files 리팩토링 폐기. UI 디테일·인터랙션 손실이 원인. v0.8.1로 안전 롤백 후 점진 복구 전환."
+      },
+      {
+        "date": "2026-05-09",
+        "title": "v0.9.0 — 커피 트래킹 + Google Calendar 동기화 + Todo 삭제/시간",
+        "logFilePath": "",
+        "excerpt": "커피 스테퍼+차트+자동감지, Calendar→Supabase 동기화, Todo ✕삭제+시간표시, 디자인 진화 레포트."
       }
     ],
     "blockers": [
-      "ChatGPT API 크레딧 (Claude API → ChatGPT 전환 사유)",
-      "iOS Safari z-index / 16px input 레이아웃 미세 이슈"
+      {
+        "type": "postmortem",
+        "title": "v2.0 폐기 — 대규모 리팩토링의 교훈",
+        "description": "45 commits/114 files의 거대 분리 작업이 UI 디테일·인터랙션을 미세하게 깨뜨림. '분리=좋다' 가정의 함정. 향후 refactor는 사용자 명시 동의 + 점진 머지 필수.",
+        "linkedDoc": "data/projects/061_v2.0_timeline.md",
+        "severity": "resolved",
+        "resolvedAt": "2026-05-12"
+      },
+      {
+        "type": "env",
+        "title": "OPENAI_API_KEY 환경변수",
+        "description": "로컬 .env.local과 Vercel env 모두에 OPENAI_API_KEY 필요. 현재 localStorage 키 의존.",
+        "linkedDoc": "",
+        "severity": "medium"
+      },
+      {
+        "type": "rule",
+        "title": "향후 원칙: refactor 별도 동의 + 점진 머지",
+        "description": "'개선해주세요'는 새 기능 추가 의미. 파일 분리/refactor는 별도 명시 동의. main 머지 전 사용자가 dev에서 충분히 사용 후 승인.",
+        "linkedDoc": "data/projects/061_v2.0_timeline.md",
+        "severity": "permanent"
+      }
     ]
   },
   "deliverables": [
     {
-      "title": "PROJECT.md (목적·아키텍처·다음 액션)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/PROJECT.md",
+      "title": "v2.0 Postmortem 리포트",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/docs/2026-05-12_v2.0_postmortem.md",
       "fileKind": "md",
-      "summary": "00_personal에서 옮겨온 LifeOS 정의 문서. 진/모미/마음 캐릭터 시스템 정책.",
-      "modifiedAt": "2026-05-02"
+      "summary": "v2.0 폐기 원인 7가지 분석, 사용자 의도 미스매치, 향후 방지책 6가지.",
+      "modifiedAt": "2026-05-12"
     },
     {
-      "title": "하루 대화방 페이지 (Next.js)",
+      "title": "v0.9.3 CHANGELOG",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/CHANGELOG.md",
+      "fileKind": "md",
+      "summary": "v0.1~v0.9.3 전체 버전 히스토리. 메모리 시스템, Calendar OAuth, 홈 스케줄 체크 등.",
+      "modifiedAt": "2026-05-13"
+    },
+    {
+      "title": "하루 대화방 (v0.9.3)",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/haru/page.tsx",
       "fileKind": "tsx",
-      "summary": "진+모미+마음 통합 비서 캐릭터 대화방. 수면·운동·감정 자동 DB 저장.",
-      "modifiedAt": "2026-05-03"
+      "summary": "메모리 시스템 탑재 — 프로필+주간요약+오늘컨텍스트 기반 맞춤 대화.",
+      "modifiedAt": "2026-05-13"
     },
     {
-      "title": "기록(Diary) 페이지",
+      "title": "기록(Diary) 페이지 (v0.9.3)",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/diary/page.tsx",
       "fileKind": "tsx",
-      "summary": "날짜 스크롤 피커, 건강 입력, 감정 10종, 스케줄 3일, Daily Review 4질문.",
-      "modifiedAt": "2026-05-03"
+      "summary": "Today/Week/Month 탭. Week 주간 네비, 수면·커피 기준선, 감정 10색 차트.",
+      "modifiedAt": "2026-05-13"
     },
     {
-      "title": "설정 페이지 (신규)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/settings/page.tsx",
+      "title": "홈 페이지 (v0.9.3)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/page.tsx",
       "fileKind": "tsx",
-      "summary": "API 연결 / 데이터 관리 등 설정 패널.",
-      "modifiedAt": "2026-05-03"
+      "summary": "시간 기반 컬러, 3블록 브리핑, 스케줄 체크 버튼, 루틴 연속일수, Recommendation.",
+      "modifiedAt": "2026-05-13"
     },
     {
-      "title": "Prototype Briefing (HTML 시안)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/prototype-briefing.html",
+      "title": "디자인 진화 레포트 (Stage 1~8)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/docs/design-evolution-report.html",
       "fileKind": "html",
-      "summary": "Vercel 배포 직전의 프로토타입 시안 — 흰 배경 + 텍스트 중심 + 시간별 액센트.",
-      "modifiedAt": "2026-05-02"
-    },
-    {
-      "title": "Design Moodboard",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/personal/design-moodboard.html",
-      "fileKind": "html",
-      "summary": "디자인 무드보드 — 톤·색·타이포 결정 근거.",
-      "modifiedAt": "2026-05-02"
+      "summary": "v0.1~v0.8 디자인 변천사 인터랙티브 문서.",
+      "modifiedAt": "2026-05-09"
     }
   ],
   "nextTasks": [
     {
-      "title": "Recommendation 달성률 DB 저장",
-      "description": "Daily Insight/Recommendation 체크 결과를 DB에 누적 → 주간/월간 퍼포먼스 대시보드 구축의 전제 조건.",
+      "title": "v0.9.3 모바일 안정화",
+      "description": "iPhone 13 safe-area, iOS Safari z-index, 16px input 강제 등 모바일 특이사항 점검.",
       "priority": "high",
       "estimate": "1일"
     },
     {
-      "title": "기록 서브페이지 (Today / Week / Month) 기획·구현",
-      "description": "Diary 안에서 시간 범위별 탭 + 데이터 시각화 (수면 패턴, 감정 흐름, 달성률 차트).",
+      "title": "OPENAI_API_KEY 환경변수 정리",
+      "description": "Vercel env에 OPENAI_API_KEY 등록. localStorage 의존 제거.",
       "priority": "high",
-      "estimate": "2~3일"
+      "estimate": "30분"
+    },
+    {
+      "title": "v2.0 산출물 선별 cherry-pick",
+      "description": "회고 색상 시스템, 시간 네비 등 가치 있는 기능을 v0.9.x 위에 layer로 점진 도입.",
+      "priority": "mid",
+      "estimate": "기능당 반나절"
     },
     {
       "title": "Fitbit 연동 검토",
-      "description": "수면·운동 데이터를 Fitbit API에서 자동 수집 가능성 검토. 인증 방식·데이터 권한 조사부터.",
-      "priority": "mid",
-      "estimate": "반나절 (조사)"
-    },
-    {
-      "title": "Google Calendar 쓰기 연동",
-      "description": "현재 읽기만 — 쓰기 권한 추가하여 하루 대화에서 일정 등록 가능하게.",
-      "priority": "mid",
-      "estimate": "1일"
-    },
-    {
-      "title": "iOS 레이아웃 안정화",
-      "description": "z-index, input 16px 강제, 모바일 Safari 특이사항 일괄 점검.",
+      "description": "수면·운동 데이터를 Fitbit API에서 자동 수집 가능성 검토.",
       "priority": "low",
-      "estimate": "반나절"
+      "estimate": "반나절 (조사)"
     }
   ],
-  "buildAt": "2026-05-06T00:00:00+09:00"
+  "buildAt": "2026-05-13T15:00:00+09:00"
 }

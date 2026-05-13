@@ -161,19 +161,76 @@ function Column1({ data }: { data: ProjectWorkData }) {
             BLOCKERS
           </div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            {cs.blockers.map((b, i) => (
-              <li
-                key={i}
-                style={{
-                  fontSize: 'var(--text-xs)',
-                  color: 'var(--gray-700)',
-                  lineHeight: 'var(--leading-relaxed)',
-                  marginBottom: 4,
-                }}
-              >
-                — {b}
-              </li>
-            ))}
+            {cs.blockers.map((b, i) => {
+              if (typeof b === 'string') {
+                return (
+                  <li
+                    key={i}
+                    style={{
+                      fontSize: 'var(--text-xs)',
+                      color: 'var(--gray-700)',
+                      lineHeight: 'var(--leading-relaxed)',
+                      marginBottom: 4,
+                    }}
+                  >
+                    — {b}
+                  </li>
+                );
+              }
+              const sevColor = b.severity === 'resolved'
+                ? 'var(--gray-400)'
+                : b.severity === 'permanent'
+                  ? 'var(--warm-700)'
+                  : 'var(--gray-700)';
+              return (
+                <li
+                  key={i}
+                  style={{
+                    marginBottom: 'var(--sp-3)',
+                    paddingBottom: 'var(--sp-3)',
+                    borderBottom: i < cs.blockers!.length - 1 ? '1px solid var(--warm-200, #e8ddd0)' : 'none',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 3 }}>
+                    {b.severity && (
+                      <span
+                        style={{
+                          fontSize: 8,
+                          fontWeight: 700,
+                          letterSpacing: 'var(--tracking-wide)',
+                          textTransform: 'uppercase',
+                          color: sevColor,
+                        }}
+                      >
+                        {b.severity === 'resolved' ? 'RESOLVED' : b.severity === 'permanent' ? 'RULE' : b.severity.toUpperCase()}
+                      </span>
+                    )}
+                    <span
+                      style={{
+                        fontSize: 'var(--text-xs)',
+                        fontWeight: 600,
+                        color: b.severity === 'resolved' ? 'var(--gray-500)' : 'var(--gray-900)',
+                        textDecoration: b.severity === 'resolved' ? 'line-through' : 'none',
+                      }}
+                    >
+                      {b.title}
+                    </span>
+                  </div>
+                  {b.description && (
+                    <p
+                      style={{
+                        fontSize: 'var(--text-2xs)',
+                        color: 'var(--gray-500)',
+                        lineHeight: 'var(--leading-relaxed)',
+                        margin: 0,
+                      }}
+                    >
+                      {b.description}
+                    </p>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

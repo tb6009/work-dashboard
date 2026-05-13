@@ -29,13 +29,22 @@ export interface NextTask {
   estimate?: string;             // '반나절', '1일' 같은 추정
 }
 
+export interface BlockerEntry {
+  type?: string;                 // 'postmortem' | 'env' | 'rule' | etc.
+  title: string;
+  description?: string;
+  linkedDoc?: string;            // 관련 문서 경로 (상대 또는 절대)
+  severity?: string;             // 'resolved' | 'medium' | 'permanent' | etc.
+  resolvedAt?: string;           // ISO date
+}
+
 export interface ProjectWorkData {
   id: string;                    // '061', '32', '03a' etc.
   currentSituation: {
     summary: string;             // 한 줄로 현재 어디까지 왔는지
     phase?: string;              // 단계 라벨 (e.g. 'Phase 2 — Implementation')
     recentLogs: LogEntry[];      // 최신 3-5건, 최신순
-    blockers?: string[];         // 차단 요소가 있다면
+    blockers?: (string | BlockerEntry)[];  // 문자열 또는 객체
   };
   deliverables: Deliverable[];   // 클릭 가능한 결과물 3-8개
   nextTasks: NextTask[];         // 다음 액션 3-6개, 우선순위순

@@ -34,8 +34,7 @@
     { "id": "22",  "pct": 10, "filesChanged": 1,  "imp": 2, "did": "계원예대 종합분석보고서 v07 검토",                                    "nextAction": "종합분석보고서 v08" },
     { "id": "12",  "pct": 8,  "filesChanged": 1,  "imp": 1, "did": "데이터 시각화 강의자료 사례 보강",                                     "nextAction": "PPT 추가 사례 보완" },
     { "id": "11",  "pct": 6,  "filesChanged": 1,  "imp": 1, "did": "디자인 트렌드 매거진 자료 업데이트",                                   "nextAction": "트렌드 자료 업데이트" },
-    { "id": "03a", "pct": 4,  "filesChanged": 0,  "imp": 1, "did": "persona_lab 결과 정리",                                                "nextAction": "persona_lab 결과 정리" },
-    { "id": "03b", "pct": 3,  "filesChanged": 0,  "imp": 1, "did": "J스트라타 브랜드 가이드 미세 조정",                                    "nextAction": "가이드라인 최종 확정" },
+    { "id": "03",  "pct": 7,  "filesChanged": 0,  "imp": 1, "did": "Data_Once persona_lab 결과 정리 · Data_Jstrata 브랜드 가이드 조정",      "nextAction": "persona_lab 정리 · 가이드라인 확정" },
     { "id": "06",  "pct": 2,  "filesChanged": 0,  "imp": 1, "did": "Supanova upstream 동기화 점검",                                        "nextAction": "upstream 동기화 확인" }
   ],
 

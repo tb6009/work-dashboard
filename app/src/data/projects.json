@@ -1,7 +1,6 @@
 [
   { "id": "00",  "name": "personal",          "type": "system",     "define": "진·모미·마음 3 캐릭터 비서 시스템",                "status": "active" },
-  { "id": "03a", "name": "Data_Once",         "type": "data",       "define": "Oncefilm 마케팅 리서치·페르소나 설계",            "status": "active" },
-  { "id": "03b", "name": "Data_Jstrata",      "type": "design",     "define": "J스트라타 레스베라트롤크림 브랜드 디자인",          "status": "active" },
+  { "id": "03",  "name": "디자인실무프로젝트",  "type": "design",     "define": "디자인 실무 테스트 — Data_Once · Data_Jstrata · 관리비책 · 새론솔루션", "status": "active" },
   { "id": "04",  "name": "antigravity",       "type": "system",     "define": "드라이브 정리 유틸리티",                          "status": "paused" },
   { "id": "05",  "name": "DSAPG",             "type": "research",   "define": "박사논문 IJHCS 타겟, 레퍼런스 시스템 완성",         "status": "active" },
   { "id": "06",  "name": "AI_Design",         "type": "design",     "define": "Supanova 디자인 스킬 (랜딩페이지 엔진)",           "status": "active" },

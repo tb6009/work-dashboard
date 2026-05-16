@@ -3,6 +3,7 @@ import PageShell from '@/components/layout/PageShell';
 import DailyActivityBar from '@/components/charts/DailyActivityBar';
 import ProjectPie, { type PieSlice } from '@/components/charts/ProjectPie';
 import ActiveProjectsGrid from '@/components/projects/ActiveProjectsGrid';
+import ProjectComments from '@/components/ProjectComments';
 import {
   loadWeek,
   loadRecentWeeks,
@@ -199,6 +200,13 @@ export default async function Home() {
           </ChartCard>
         </div>
       </section>
+
+      {/* PROJECT COMMENTS — from LifeOS Supabase */}
+      <ProjectComments
+        weekStart={week.range.from}
+        weekEnd={week.range.to}
+        projectTypeMap={projectTypeMap}
+      />
 
       {/* DECISIONS TIMELINE */}
       {week.decisions.length > 0 ? (

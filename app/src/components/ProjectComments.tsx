@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { supabase } from '@/lib/supabase';
 import { TYPE_COLOR } from '@/lib/projectTypes';
 import type { ProjectType } from '@/types/dashboard';
@@ -15,14 +15,17 @@ interface Comment {
 }
 
 interface Props {
-  weekStart: string; // YYYY-MM-DD
-  weekEnd: string;   // YYYY-MM-DD
+  weekStart: string;
+  weekEnd: string;
   projectTypeMap: Record<string, ProjectType>;
 }
 
 export default function ProjectComments({ weekStart, weekEnd, projectTypeMap }: Props) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const [editText, setEditText] = useState('');
+  const editRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     supabase
@@ -38,15 +41,44 @@ export default function ProjectComments({ weekStart, weekEnd, projectTypeMap }: 
       });
   }, [weekStart, weekEnd]);
 
+  useEffect(() => {
+    if (editingId !== null && editRef.current) {
+      editRef.current.focus();
+      editRef.current.style.height = 'auto';
+      editRef.current.style.height = editRef.current.scrollHeight + 'px';
+    }
+  }, [editingId]);
+
+  const startEdit = (c: Comment) => {
+    setEditingId(c.id);
+    setEditText(c.comment);
+  };
+
+  const cancelEdit = () => {
+    setEditingId(null);
+    setEditText('');
+  };
+
+  const saveEdit = async (id: number) => {
+    if (!editText.trim()) return;
+    await supabase.from('project_comments').update({ comment: editText.trim() }).eq('id', id);
+    setComments(prev => prev.map(c => c.id === id ? { ...c, comment: editText.trim() } : c));
+    setEditingId(null);
+    setEditText('');
+  };
+
+  const deleteComment = async (id: number) => {
+    await supabase.from('project_comments').delete().eq('id', id);
+    setComments(prev => prev.filter(c => c.id !== id));
+  };
+
   if (loading) return null;
   if (comments.length === 0) return null;
 
-  // 프로젝트별 그룹
   const byProject = new Map<string, Comment[]>();
   for (const c of comments) {
-    const key = c.project_id;
-    if (!byProject.has(key)) byProject.set(key, []);
-    byProject.get(key)!.push(c);
+    if (!byProject.has(c.project_id)) byProject.set(c.project_id, []);
+    byProject.get(c.project_id)!.push(c);
   }
 
   return (
@@ -101,6 +133,7 @@ export default function ProjectComments({ weekStart, weekEnd, projectTypeMap }: 
             const datePart = c.date.slice(5);
             const type = projectTypeMap[c.project_id];
             const color = type ? TYPE_COLOR[type] : 'var(--gray-500)';
+            const isEditing = editingId === c.id;
 
             return (
               <article key={c.id} style={{ flexShrink: 0, width: 248 }}>
@@ -127,33 +160,133 @@ export default function ProjectComments({ weekStart, weekEnd, projectTypeMap }: 
                 <div
                   style={{
                     background: 'var(--white)',
-                    border: 'var(--border-1)',
+                    border: isEditing ? `1px solid ${color}` : 'var(--border-1)',
                     borderLeft: `3px solid ${color}`,
                     padding: 'var(--sp-4)',
                   }}
                 >
                   <div
                     style={{
-                      fontSize: 'var(--text-2xs)',
-                      fontWeight: 600,
-                      color: color,
-                      textTransform: 'uppercase',
-                      letterSpacing: 'var(--tracking-wide)',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
                       marginBottom: 'var(--sp-2)',
                     }}
                   >
-                    {c.project_name || c.project_id}
+                    <div
+                      style={{
+                        fontSize: 'var(--text-2xs)',
+                        fontWeight: 600,
+                        color: color,
+                        textTransform: 'uppercase',
+                        letterSpacing: 'var(--tracking-wide)',
+                      }}
+                    >
+                      {c.project_name || c.project_id}
+                    </div>
+                    {!isEditing && (
+                      <div style={{ display: 'flex', gap: 4 }}>
+                        <button
+                          onClick={() => startEdit(c)}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            cursor: 'pointer',
+                            fontSize: 11,
+                            color: 'var(--gray-400)',
+                            padding: '2px 4px',
+                          }}
+                        >
+                          수정
+                        </button>
+                        <button
+                          onClick={() => deleteComment(c.id)}
+                          style={{
+                            background: 'none',
+                            border: 'none',
+                            cursor: 'pointer',
+                            fontSize: 11,
+                            color: 'var(--gray-400)',
+                            padding: '2px 4px',
+                          }}
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    )}
                   </div>
-                  <p
-                    style={{
-                      fontSize: 'var(--text-xs)',
-                      color: 'var(--gray-700)',
-                      lineHeight: 'var(--leading-relaxed)',
-                      margin: 0,
-                    }}
-                  >
-                    {c.comment}
-                  </p>
+
+                  {isEditing ? (
+                    <div>
+                      <textarea
+                        ref={editRef}
+                        value={editText}
+                        onChange={(e) => {
+                          setEditText(e.target.value);
+                          e.target.style.height = 'auto';
+                          e.target.style.height = e.target.scrollHeight + 'px';
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); saveEdit(c.id); }
+                          if (e.key === 'Escape') cancelEdit();
+                        }}
+                        style={{
+                          width: '100%',
+                          fontSize: 'var(--text-xs)',
+                          color: 'var(--gray-700)',
+                          lineHeight: 'var(--leading-relaxed)',
+                          border: 'none',
+                          outline: 'none',
+                          resize: 'none',
+                          overflow: 'hidden',
+                          fontFamily: 'inherit',
+                          padding: 0,
+                          background: 'transparent',
+                        }}
+                      />
+                      <div style={{ display: 'flex', gap: 6, marginTop: 'var(--sp-2)' }}>
+                        <button
+                          onClick={() => saveEdit(c.id)}
+                          style={{
+                            background: 'var(--black)',
+                            color: 'var(--white)',
+                            border: 'none',
+                            fontSize: 10,
+                            fontWeight: 600,
+                            padding: '3px 10px',
+                            cursor: 'pointer',
+                            letterSpacing: 'var(--tracking-wide)',
+                          }}
+                        >
+                          저장
+                        </button>
+                        <button
+                          onClick={cancelEdit}
+                          style={{
+                            background: 'none',
+                            color: 'var(--gray-400)',
+                            border: '1px solid var(--gray-300)',
+                            fontSize: 10,
+                            padding: '3px 10px',
+                            cursor: 'pointer',
+                          }}
+                        >
+                          취소
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <p
+                      style={{
+                        fontSize: 'var(--text-xs)',
+                        color: 'var(--gray-700)',
+                        lineHeight: 'var(--leading-relaxed)',
+                        margin: 0,
+                      }}
+                    >
+                      {c.comment}
+                    </p>
+                  )}
                 </div>
               </article>
             );

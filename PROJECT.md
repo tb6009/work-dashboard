@@ -2,7 +2,7 @@
 
 > 한 줄 정의: cloude_Code 27 프로젝트의 주간·월간·연간 작업 활동을 시각화하는 외부 공개 대시보드
 > 상태: 🟢 active
-> 최종 업데이트: 2026-05-09
+> 최종 업데이트: 2026-05-17 (W20 일요일 업데이트 + 폴더 재구조화 대응)
 
 ---
 
@@ -68,10 +68,13 @@
 - [x] **v0.5 UI 컴팩트 리디자인** (2026-05-07) — 시안 4종 + 앱 반영
 - [x] **v0.6 strip nav + monthly narrative** (2026-05-08) — 시안 2종 + 앱 반영
 - [x] **Vercel 배포 + URL 확보** (2026-05-08) — `https://work-dashboard-app.vercel.app`
+- [x] **W20 일요일 업데이트** (2026-05-17) — 05-16 v1.6 자료 리서치 13편 + 05-17 워크스페이스 재구조화 반영
+- [x] **폴더 재구조화 대응** (2026-05-17) — `extract-week.mjs` WORKSPACE 두 단계 위로 수정 + `projects.json`에 `01`(관리 마스터) 추가
 - [ ] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정 (Vercel 웹 대시보드)
 - [ ] `data/weekly/*.json` 지난 4주(W14~W17) 소급 생성 — `extract-week.mjs` 사용
 - [ ] Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화
+- [ ] 재구조화 후속: 11(디자인매거진), 31/32(083/084) 등 폴더 경로 변경분 `projects.json`에 `path` 필드로 명시 검토
 
 ## 3-1. 주간 업데이트 절차 요약
 

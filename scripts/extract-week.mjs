@@ -25,8 +25,8 @@ import { fileURLToPath } from 'node:url';
 // 0. 경로 설정
 // ─────────────────────────────────────────────────────────────
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, '..');                 // 063_workDashboard/
-const WORKSPACE = resolve(ROOT, '..');                 // cloude_Code/
+const ROOT = resolve(__dirname, '..');                 // 063_workDashboard/ (06_Personal_Project/063_workDashboard 이전 후)
+const WORKSPACE = resolve(ROOT, '..', '..');           // cloude_Code/ (2026-05-17 재구조화 이후 두 단계 위)
 const LOGS_DIR = join(WORKSPACE, 'docs', 'logs');
 const PROJECTS_META_PATH = join(ROOT, 'app/src/data/projects.json');
 const WEEKLY_DIR = join(ROOT, 'app/src/data/weekly');

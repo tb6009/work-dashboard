@@ -1,0 +1,12 @@
+[
+  { "id": "01", "name": "admin",            "label": "전체 관리",          "description": "워크스페이스 관리 + 블로그 + 잡파일",      "order": 1, "hidden": false },
+  { "id": "02", "name": "Data_Kaywon",      "label": "계원예대 연구",       "description": "2026 연구계획 + 스크래핑 도구",          "order": 2, "hidden": false },
+  { "id": "03", "name": "school_project",   "label": "학교 프로젝트",       "description": "학교 컨설팅·리서치 묶음",                 "order": 3, "hidden": false },
+  { "id": "04", "name": "aSSIST",           "label": "aSSIST 강의",        "description": "aSSIST 수업실습",                       "order": 4, "hidden": false },
+  { "id": "05", "name": "phD_Research",     "label": "박사 연구",           "description": "논문·방법론·페르소나",                  "order": 5, "hidden": false },
+  { "id": "06", "name": "Personal_Project", "label": "개인 프로젝트",       "description": "개인 도구·실험 프로젝트",                 "order": 6, "hidden": false },
+  { "id": "07", "name": "_empty",           "label": "(빈 자리)",          "description": "아직 번호 줄 카테고리 없음. 다른 의미 없음.", "order": 7, "hidden": true },
+  { "id": "08", "name": "project",          "label": "외부 프로젝트",       "description": "브랜드·강의·강연",                       "order": 8, "hidden": false },
+  { "id": "09", "name": "몸과마음의과학",      "label": "몸과 마음의 과학",     "description": "강의·연구·출판 통합",                    "order": 9, "hidden": false },
+  { "id": "10", "name": "보고살피다",         "label": "보고살피다",          "description": "\"보살피고\" 챗봇 빌드 + 실험",            "order": 10, "hidden": false }
+]

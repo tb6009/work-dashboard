@@ -21,42 +21,42 @@
   "deliverables": [
     {
       "title": "PROJECT.md (대시보드 정의·Phase 로드맵)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/PROJECT.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/PROJECT.md",
       "fileKind": "md",
       "summary": "Phase 0~3 로드맵 + 5라우트 구성 + 데이터 레이어 + 차트 컴포넌트 명세.",
       "modifiedAt": "2026-05-05"
     },
     {
       "title": "Foundation tokens.css",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/design/foundation/tokens.css",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/design/foundation/tokens.css",
       "fileKind": "css",
       "summary": "Editorial Grayscale 디자인 토큰 — 062 v0.2에서 추출, weight = hierarchy, no rounded.",
       "modifiedAt": "2026-05-02"
     },
     {
       "title": "Next.js 앱 — 5라우트",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/app",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/src/app",
       "fileKind": "tsx",
       "summary": "Next.js 16.2.4 + React 19 + Tailwind v4. App Router /, /weekly, /monthly/[m], /yearly/[y], /projects/[id].",
       "modifiedAt": "2026-05-05"
     },
     {
       "title": "ECharts 차트 컴포넌트 7종",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/components",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/src/components",
       "fileKind": "tsx",
       "summary": "DailyActivityBar·ProjectPie·WeeklyTrendLine·TypeBreakdownPie·WeeklyContributionBar·TypeStackedArea·ProjectGantt.",
       "modifiedAt": "2026-05-05"
     },
     {
       "title": "데이터 레이어 (types + lib + json)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/app/src/data",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/src/data",
       "fileKind": "json",
       "summary": "types/dashboard.ts 스키마 + projects.json + weekly/2026-W18.json + lib/data.ts loader.",
       "modifiedAt": "2026-05-05"
     },
     {
       "title": "v0.3 드릴다운 4 시안 HTML",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/063_workDashboard/design",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/design",
       "fileKind": "html",
       "summary": "weekly_index·monthly_detail·project_detail·yearly 4 HTML — 차트·Gantt·타임라인 패턴.",
       "modifiedAt": "2026-05-02"

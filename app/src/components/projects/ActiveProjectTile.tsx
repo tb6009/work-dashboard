@@ -30,8 +30,9 @@ export default function ActiveProjectTile({ project, contribution, href }: Props
   const imp = contribution?.imp ?? 0;
   const high = imp >= 4;
 
-  // pct & next
+  // pct & did & next
   const pct = contribution?.pct;
+  const did = contribution?.did;
   const nextAction = contribution?.nextAction;
 
   // 라벨 분기 — paused는 RESUME WHEN, 그 외는 NEXT
@@ -141,7 +142,7 @@ export default function ActiveProjectTile({ project, contribution, href }: Props
         </div>
       </div>
 
-      {/* 우측 — 액션 */}
+      {/* 우측 — 액션 (이번 주 DID + NEXT) */}
       <div
         style={{
           minWidth: 0,
@@ -149,6 +150,37 @@ export default function ActiveProjectTile({ project, contribution, href }: Props
           paddingLeft: 'var(--sp-5)',
         }}
       >
+        {did ? (
+          <>
+            <div
+              style={{
+                fontSize: 9,
+                fontWeight: 700,
+                color: 'var(--gray-400)',
+                textTransform: 'uppercase',
+                letterSpacing: 'var(--tracking-wide)',
+                marginBottom: 2,
+              }}
+            >
+              DID
+            </div>
+            <div
+              style={{
+                fontSize: 'var(--text-sm)',
+                color: isPaused ? 'var(--gray-600)' : 'var(--gray-800)',
+                fontWeight: 400,
+                lineHeight: 'var(--leading-tight)',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+                marginBottom: 'var(--sp-2)',
+              }}
+            >
+              {did}
+            </div>
+          </>
+        ) : null}
         <div
           style={{
             fontSize: 9,

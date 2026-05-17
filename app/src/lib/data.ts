@@ -2,6 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import type {
   ProjectMeta,
+  CategoryMeta,
   WeeklySnapshot,
   MonthlySnapshot,
   YearlySnapshot,
@@ -10,6 +11,7 @@ import type {
 } from '@/types/dashboard';
 import type { ProjectWorkData } from '@/types/projectWork';
 import projectsRaw from '@/data/projects.json';
+import categoriesRaw from '@/data/categories.json';
 import {
   parseWeekId,
   getMonthOfWeek,
@@ -25,6 +27,40 @@ const PROJECT_BY_ID = new Map(PROJECTS.map(p => [p.id, p]));
 
 export function getProject(id: string): ProjectMeta | undefined {
   return PROJECT_BY_ID.get(id);
+}
+
+/** 카테고리 메타 — 2026-05-17 워크스페이스 재구조화 이후 추가. */
+export const CATEGORIES: CategoryMeta[] = (categoriesRaw as CategoryMeta[])
+  .slice()
+  .sort((a, b) => a.order - b.order);
+const CATEGORY_BY_ID = new Map(CATEGORIES.map(c => [c.id, c]));
+
+export function getCategory(id: string): CategoryMeta | undefined {
+  return CATEGORY_BY_ID.get(id);
+}
+
+/** 표시 가능한 카테고리만 (hidden 제외). */
+export function getVisibleCategories(): CategoryMeta[] {
+  return CATEGORIES.filter(c => !c.hidden);
+}
+
+/** 프로젝트를 categoryId 기준으로 그루핑. 그룹 내 ID 오름차순. */
+export function groupProjectsByCategory(projects: ProjectMeta[]): Map<string, ProjectMeta[]> {
+  const map = new Map<string, ProjectMeta[]>();
+  for (const p of projects) {
+    const cid = p.categoryId ?? '_uncategorized';
+    if (!map.has(cid)) map.set(cid, []);
+    map.get(cid)!.push(p);
+  }
+  for (const [, list] of map) {
+    list.sort((a, b) => {
+      const na = parseInt(a.id, 10);
+      const nb = parseInt(b.id, 10);
+      if (na !== nb) return na - nb;
+      return a.id.localeCompare(b.id);
+    });
+  }
+  return map;
 }
 
 /* ─────────────────────────────────────────────────────────────

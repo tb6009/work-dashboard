@@ -2,13 +2,13 @@
   "week": "2026-W20",
   "range": { "from": "2026-05-11", "to": "2026-05-17" },
   "status": "current",
-  "summary": "061 v2.0 폐기→v0.9.4 · 새론솔루션 UX 진단+시안3종 · 관리비책 캐릭터5인 · 091 출판기획 v2.1 · 마음 403 해결",
+  "summary": "061 v2.0 폐기→v0.9.4 · 새론솔루션 UX+시안3종 · 관리비책 캐릭터5인 · 091 출판기획 v2.1 · 마음 403 해결 · 10 v1.6 자료 리서치 13편 · 워크스페이스 27→10 재구조화",
 
   "kpis": {
-    "activeProjects": 17,
-    "sessions": 5,
-    "newProjects": 2,
-    "filesChanged": 220
+    "activeProjects": 18,
+    "sessions": 7,
+    "newProjects": 0,
+    "filesChanged": 272
   },
 
   "daily": [
@@ -17,19 +17,20 @@
     { "date": "2026-05-13", "weekday": "수", "filesChanged": 50, "topProjectIds": ["061", "063"] },
     { "date": "2026-05-14", "weekday": "목", "filesChanged": 45, "topProjectIds": ["03"] },
     { "date": "2026-05-15", "weekday": "금", "filesChanged": 35, "topProjectIds": ["061", "063"] },
-    { "date": "2026-05-16", "weekday": "토", "filesChanged": 0,  "topProjectIds": [] },
-    { "date": "2026-05-17", "weekday": "일", "filesChanged": 0,  "topProjectIds": [] }
+    { "date": "2026-05-16", "weekday": "토", "filesChanged": 17, "topProjectIds": ["10"] },
+    { "date": "2026-05-17", "weekday": "일", "filesChanged": 35, "topProjectIds": ["01", "063"] }
   ],
 
   "projects": [
-    { "id": "061", "pct": 28, "filesChanged": 60, "imp": 5, "did": "v2.0 폐기→v0.9.4 (BottomNav 순서, 스케줄 삭제✕, Design History 10단계, Calendar KST 수정)", "nextAction": "Calendar 시간 검증 · 모바일 UX 점검" },
-    { "id": "091", "pct": 18, "filesChanged": 30, "imp": 5, "did": "출판기획안 v1.2→v2.1 제출본 8개 버전 진화 · 600명 데이터 익명화·마케팅 근거 · 샘플 원고 v0.3", "nextAction": "중간평가 데이터 합산 · 본문 4부 잠 챕터 확장" },
-    { "id": "10",  "pct": 12, "filesChanged": 25, "imp": 4, "did": "보살피고 통합 빌드 403 해결 (User-Agent) · 모델 ID 4.6 통일 · 옛 링크 복원", "nextAction": "회귀 검증 6시나리오 · README 업데이트" },
-    { "id": "03",  "pct": 22, "filesChanged": 45, "imp": 4, "did": "새론솔루션 UX 진단+시안 3종 · 관리비책 캐릭터 5인 이미지 생성+프로세스 보고서", "nextAction": "새론 Figma 완성 · 관리비책 캐릭터 최종 선정" },
-    { "id": "063", "pct": 8,  "filesChanged": 20, "imp": 3, "did": "유형 컬러 시스템 · 필터 디자인 · W20 데이터 · 061 BLOCKERS · v2.0 타임라인", "nextAction": "Vercel GitHub 자동 배포 Root Directory 수정" },
-    { "id": "065", "pct": 5,  "filesChanged": 8,  "imp": 3, "did": "인터뷰 답변 박진현 톤 변환 Q1~Q10 전체", "nextAction": "사용자 통합본 검토 · 발행본 확정" },
-    { "id": "062", "pct": 4,  "filesChanged": 5,  "imp": 2, "did": "Chrome Extension 구조 탐색", "nextAction": "마이그레이션 SQL + 화면설계" },
-    { "id": "081", "pct": 3,  "filesChanged": 5,  "imp": 2, "did": "Anchornode 프로젝트 셋업", "nextAction": "브랜드 에셋 작업 진행" }
+    { "id": "061", "pct": 24, "filesChanged": 60, "imp": 5, "did": "v2.0 폐기→v0.9.4 (BottomNav 순서, 스케줄 삭제✕, Design History 10단계, Calendar KST 수정)", "nextAction": "Calendar 시간 검증 · 모바일 UX 점검" },
+    { "id": "091", "pct": 12, "filesChanged": 30, "imp": 5, "did": "출판기획안 v1.2→v2.1 제출본 8개 버전 진화 · 600명 데이터 익명화·마케팅 근거 · 샘플 원고 v0.3", "nextAction": "중간평가 데이터 합산 · 본문 4부 잠 챕터 확장" },
+    { "id": "10",  "pct": 17, "filesChanged": 42, "imp": 5, "did": "보살피고 통합 빌드 403 해결 (User-Agent) · 모델 ID 4.6 통일 · v1.6 자료 리서치 13편(운영체계+5트랙) · 위험·라이선스 도구 7개 사용 중단 정책 · v1.6 빌드 명세 + SNS 30채널 인벤토리", "nextAction": "회귀 검증 6시나리오 · v1.6 빌드 실행(Sonnet 4.6 vs Opus 4.7) · Agent 1 keywords/blacklist 승인" },
+    { "id": "03",  "pct": 18, "filesChanged": 45, "imp": 4, "did": "새론솔루션 UX 진단+시안 3종 · 관리비책 캐릭터 5인 이미지 생성+프로세스 보고서", "nextAction": "새론 Figma 완성 · 관리비책 캐릭터 최종 선정" },
+    { "id": "063", "pct": 10, "filesChanged": 25, "imp": 3, "did": "유형 컬러 시스템 · 필터 디자인 · W20 데이터 · 061 BLOCKERS · v2.0 타임라인 · 폴더 재구조화 대응(extract-week.mjs WORKSPACE 경로 수정, projects.json 01 추가)", "nextAction": "Vercel GitHub 자동 배포 Root Directory 수정 · W14~W17 소급" },
+    { "id": "01",  "pct": 12, "filesChanged": 30, "imp": 5, "did": "워크스페이스 27+ 폴더 → 10대 카테고리 대규모 재구조화 · 19GB tar.gz 백업 · 27 폴더 mv + 8 신규 상위 + 6 빈 폴더 삭제 · PROJECTS.md 전면 재작성", "nextAction": "VSCode 워크스페이스 재오픈 테스트 · 외부 참조 경로 일제 점검 · 백업 tar.gz 회수 결정" },
+    { "id": "065", "pct": 3,  "filesChanged": 8,  "imp": 3, "did": "인터뷰 답변 박진현 톤 변환 Q1~Q10 전체", "nextAction": "사용자 통합본 검토 · 발행본 확정" },
+    { "id": "062", "pct": 2,  "filesChanged": 5,  "imp": 2, "did": "Chrome Extension 구조 탐색", "nextAction": "마이그레이션 SQL + 화면설계" },
+    { "id": "081", "pct": 2,  "filesChanged": 5,  "imp": 2, "did": "Anchornode 프로젝트 셋업", "nextAction": "브랜드 에셋 작업 진행" }
   ],
 
   "decisions": [
@@ -43,13 +44,22 @@
     { "date": "2026-05-11", "projectId": "065", "title": "인터뷰 톤 변환 규칙 합의",                     "description": "존댓말 유지 + 박진현식 호흡 혼용. 시범 Q4·Q10 합의 후 전체 10문항 일괄 변환." },
     { "date": "2026-05-13", "projectId": "061", "title": "v0.9.4 — BottomNav 순서 + 스케줄 삭제(✕)",    "description": "기록↔하루 순서 교환. TODAY 스케줄 ✕ 삭제 버튼 추가. Design History Stage 9+10." },
     { "date": "2026-05-13", "projectId": "063", "title": "프로젝트 유형 컬러 시스템 적용",               "description": "일별 바 차트 유형색 반영, 컬러 인덱스 범례, TYPE 필터 버튼 추가." },
-    { "date": "2026-05-14", "projectId": "03", "title": "새론솔루션 UX 진단 + 시안 3종 완성",            "description": "하수악취 대시보드 6측면 진단. Light/Dark OLED/Map-First 3종 HTML 목업.", "isMilestone": true },
-    { "date": "2026-05-14", "projectId": "03", "title": "관리비책 캐릭터 이미지 5인 제작",              "description": "학생 5인 스케치 기반 캐릭터 생성. 표정·동작 시트 + 프로세스 보고서." },
-    { "date": "2026-05-15", "projectId": "061", "title": "Calendar KST 전체 경로 수정",                  "description": "날짜/시간 계산 전부 UTC→KST 변환. toKSTDateStr/toKSTTime 유틸 추가." }
+    { "date": "2026-05-14", "projectId": "03",  "title": "새론솔루션 UX 진단 + 시안 3종 완성",            "description": "하수악취 대시보드 6측면 진단. Light/Dark OLED/Map-First 3종 HTML 목업.", "isMilestone": true },
+    { "date": "2026-05-14", "projectId": "03",  "title": "관리비책 캐릭터 이미지 5인 제작",              "description": "학생 5인 스케치 기반 캐릭터 생성. 표정·동작 시트 + 프로세스 보고서." },
+    { "date": "2026-05-15", "projectId": "061", "title": "Calendar KST 전체 경로 수정",                  "description": "날짜/시간 계산 전부 UTC→KST 변환. toKSTDateStr/toKSTTime 유틸 추가." },
+    { "date": "2026-05-16", "projectId": "10",  "title": "v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서", "description": "00_운영원칙(출처 tier·메타데이터·공개가능성·양면구조·도구 제외) + INDEX + 5개 트랙 보고서 13편. 갭 분석(805편 인용), 캐릭터별 자료 시각화, C-SSRS 외부 확보, 한국 갱년기·UPF 보강, 디자인교육 사용자 의견 요청, 자문 패키지 §10 반영, SNS 동향 30채널.", "isMilestone": true },
+    { "date": "2026-05-16", "projectId": "10",  "title": "위험·라이선스 도구 7개 사용 중단 정책 (§10)",   "description": "임상 위험: C-SSRS·PC-PTSD-5·EAT-26 / 라이선스 회색지대: PSS·PSQI·Chalder·IPAQ. 챗봇을 평가자→동반자·연결자로 재정의. 자연어 키워드 감지 + 전문가 라우팅 표준 응답 4종.", "isMilestone": true },
+    { "date": "2026-05-16", "projectId": "10",  "title": "v1.6 빌드 명세 + v1.5↔v1.6 비교 매트릭스",      "description": "13개 차원 비교 점수 33→45(+36%). Sonnet 4.6 핸드오프 가능 수준 스펙. 회귀 체크리스트 A~F 포함." },
+    { "date": "2026-05-17", "projectId": "01",  "title": "워크스페이스 27+ 폴더 → 10대 카테고리 재구조화", "description": "왜 했나: 너무 많은 폴더가 한 깊이에 쌓이면서 번호·성격이 섞여 새 프로젝트 위치 결정 비용 누적, 관리 불가 상태. 어떻게 했나: 분류 기준은 '성격(목적·도메인) 단일성' — 같은 종류의 일을 같은 번호 아래로. 27 폴더 mv + 8 신규 상위(01_admin/02_Data_Kaywon/03_school_project/04_aSSIST/05_phD_Research/06_Personal_Project/08_project/09_몸과마음의과학/10_보고살피다) + 6 빈 폴더 삭제. 19GB tar.gz 사전 백업으로 안전망 확보 후 묶음 mv 5분 내 완료.", "isMilestone": true },
+    { "date": "2026-05-17", "projectId": "01",  "title": "번호 = 카테고리 정책 + 삭제/공백 결정",          "description": "01~10이 각각 단일 성격 카테고리. 04(antigravity)·07(AIDX) 삭제 — 장기 미사용 + 활용 가능성 낮음 + 분류 체계상 자리 애매. 07_은 의도적 공백이지만 미감·예약 의미는 없음 — 아직 그 번호를 줄 카테고리가 없을 뿐. docs/·skills/는 .claude/CLAUDE.md 직접 참조로 루트 유지. 10번 명칭 '보고살피다'는 챗봇 '보살피고'와 어감 차이 — '살피다'가 더 좋게 느껴진 네이밍 감각의 선택." },
+    { "date": "2026-05-17", "projectId": "063", "title": "재구조화 대응: extract-week.mjs · projects.json 갱신", "description": "063_workDashboard가 06_Personal_Project/ 하위로 이동 → WORKSPACE = resolve(ROOT, '..', '..') 두 단계 위로 수정. projects.json에 01(관리 마스터) 추가. 기존 ID는 역사 데이터 호환을 위해 유지." }
   ],
 
   "newProjects": [],
   "labelChanges": [],
 
-  "buildAt": "2026-05-15T18:00:00+09:00"
+  "buildAt": "2026-05-17T18:00:00+09:00",
+  "_meta": {
+    "note": "2026-05-17 워크스페이스 대규모 재구조화로 063_workDashboard 위치 변경. extract-week.mjs WORKSPACE 경로 수정 완료. 일부 프로젝트의 폴더 위치는 바뀌었으나 historical ID는 유지(예: 11→디자인매거진 폴더, 31/32→083/084 폴더 등). 04·07 paused 항목은 폴더 삭제됨."
+  }
 }

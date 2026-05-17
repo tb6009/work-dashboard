@@ -17,11 +17,22 @@ export type LabelStatus = 'active' | 'paused' | 'archived' | 'new';
 /** Static project metadata — rarely changes */
 export interface ProjectMeta {
   id: string;                // '061', '03a', '32'
+  categoryId?: string;       // '01'..'10' or '_archived'. 2026-05-17 카테고리화 이후 추가.
   name: string;
   type: ProjectType;
   define: string;
   createdAt?: string;        // ISO date
   status: LabelStatus;
+}
+
+/** Top-level category meta (2026-05-17 재구조화) */
+export interface CategoryMeta {
+  id: string;                // '01'..'10'
+  name: string;              // folder name suffix, e.g. 'admin', 'school_project'
+  label: string;             // 한국어 표시명
+  description: string;
+  order: number;
+  hidden: boolean;           // true면 /projects 인덱스에 미노출 (예: 07 빈 자리)
 }
 
 /** Per-week project contribution */

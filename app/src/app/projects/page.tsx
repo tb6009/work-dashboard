@@ -1,6 +1,12 @@
 import PageShell from '@/components/layout/PageShell';
 import ActiveProjectsGrid from '@/components/projects/ActiveProjectsGrid';
-import { PROJECTS, loadWeek, getCurrentWeekId } from '@/lib/data';
+import {
+  PROJECTS,
+  loadWeek,
+  getCurrentWeekId,
+  getVisibleCategories,
+  groupProjectsByCategory,
+} from '@/lib/data';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
 import type { ProjectMeta, ProjectContribution, LabelStatus, ProjectType } from '@/types/dashboard';
 
@@ -53,6 +59,11 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
   for (const t of Object.keys(TYPE_COLOR)) {
     typeCounts[t] = visible.filter(p => p.type === t).length;
   }
+
+  // 카테고리 그루핑 — 2026-05-17 재구조화 이후 추가
+  const categories = getVisibleCategories();
+  const groupedFiltered = groupProjectsByCategory(filtered);
+  const archivedFiltered = groupedFiltered.get('_archived') ?? [];
 
   return (
     <PageShell active="projects">
@@ -153,14 +164,12 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
           {filter === 'all' ? 'All Projects' : `${labelOf(filter)} Projects`}
         </h2>
         <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>
-          {filtered.length}개 · 카드 클릭 → 상세
+          {filtered.length}개 · 10대 카테고리 그루핑 · 카드 클릭 → 상세
         </div>
       </div>
 
-      {/* GRID — v0.2 패턴 (외부 2열 + 내부 2열) */}
-      {filtered.length > 0 ? (
-        <ActiveProjectsGrid projects={filtered} contributions={contribMap} />
-      ) : (
+      {/* CATEGORY SECTIONS — 2026-05-17 재구조화 반영, 항상 펼쳐진 수직 스택 */}
+      {filtered.length === 0 ? (
         <div
           style={{
             textAlign: 'center',
@@ -173,8 +182,106 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
         >
           {labelOf(filter)} 상태 프로젝트 없음.
         </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-10)' }}>
+          {categories.map(cat => {
+            const projects = groupedFiltered.get(cat.id) ?? [];
+            if (projects.length === 0) return null;
+            return (
+              <section key={cat.id}>
+                <CategoryHeader
+                  id={cat.id}
+                  label={cat.label}
+                  description={cat.description}
+                  count={projects.length}
+                />
+                <ActiveProjectsGrid projects={projects} contributions={contribMap} />
+              </section>
+            );
+          })}
+
+          {/* 삭제된 폴더 (04 antigravity · 07 AIDX) — 이력 보존용, 마지막에 약하게 노출 */}
+          {archivedFiltered.length > 0 && (
+            <section style={{ opacity: 0.6 }}>
+              <CategoryHeader
+                id="_archived"
+                label="삭제된 폴더 (이력 보존)"
+                description="2026-05-17 재구조화에서 폴더 삭제. 과거 weekly 데이터 호환을 위해 ID는 보존."
+                count={archivedFiltered.length}
+              />
+              <ActiveProjectsGrid projects={archivedFiltered} contributions={contribMap} />
+            </section>
+          )}
+        </div>
       )}
     </PageShell>
+  );
+}
+
+interface CategoryHeaderProps {
+  id: string;
+  label: string;
+  description: string;
+  count: number;
+}
+
+function CategoryHeader({ id, label, description, count }: CategoryHeaderProps) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'baseline',
+        justifyContent: 'space-between',
+        gap: 'var(--sp-4)',
+        marginBottom: 'var(--sp-3)',
+        paddingBottom: 'var(--sp-2)',
+        borderBottom: '1px solid var(--gray-300)',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sp-3)' }}>
+        <span
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: 'var(--text-2xs)',
+            fontWeight: 700,
+            color: 'var(--gray-400)',
+            letterSpacing: 'var(--tracking-wide)',
+          }}
+        >
+          {id}
+        </span>
+        <h3
+          style={{
+            fontSize: 'var(--text-lg)',
+            fontWeight: 600,
+            color: 'var(--black)',
+            letterSpacing: 'var(--tracking-tight)',
+            margin: 0,
+          }}
+        >
+          {label}
+        </h3>
+        <span
+          style={{
+            fontSize: 'var(--text-xs)',
+            color: 'var(--gray-500)',
+            fontWeight: 400,
+          }}
+        >
+          {description}
+        </span>
+      </div>
+      <span
+        style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: 'var(--text-2xs)',
+          color: 'var(--gray-400)',
+          fontVariantNumeric: 'tabular-nums',
+        }}
+      >
+        {count}
+      </span>
+    </div>
   );
 }
 

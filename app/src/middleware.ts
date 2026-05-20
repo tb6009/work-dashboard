@@ -2,7 +2,7 @@ import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
 
 /** Routes that require authentication. The home page (/) stays public. */
-const PROTECTED_PREFIXES = ['/weekly', '/monthly', '/yearly', '/projects'];
+const PROTECTED_PREFIXES = ['/daily', '/weekly', '/monthly', '/yearly', '/projects'];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;

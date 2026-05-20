@@ -1,0 +1,198 @@
+{
+  "week": "2026-W15",
+  "range": {
+    "from": "2026-04-06",
+    "to": "2026-04-12"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 7,
+    "sessions": 2,
+    "newProjects": 7,
+    "filesChanged": 10
+  },
+  "daily": [
+    {
+      "date": "2026-04-06",
+      "weekday": "월",
+      "filesChanged": 9,
+      "topProjectIds": [
+        "09",
+        "21",
+        "04"
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-08",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-09",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-10",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-11",
+      "weekday": "토",
+      "filesChanged": 1,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-12",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 45,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "06",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "22",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "21",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "10",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "31",
+      "pct": 9,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "학생 데이터는 원본 유지, `학생과제파일/`에 복사본으로 작업",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "사후검사 응답자 수 부족 (23-24명/140명) → 해석 시 주의 필요",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "에이전트 이름: \"몸과마음의과학\" (슬래시 명령어: `/몸과마음의과학`)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "데이터 분석 스킬 31종은 `~/.claude/skills/`에 글로벌 설치",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "단순 나열이 아닌 논문 간 dialogue(대화)와 tension(긴장)을 서술하는 integrative r",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "Han et al.(2025) \"Personality Illusion\"을 2.2절의 핵심 비판으로 배치 → ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "DC × Situated AI 매핑 테이블을 2.4절에 삽입하여 이론적 정합성을 시각적으로 제시",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "합성 데이터 계보(Rubin→Goodfellow→Argyle)를 2.3절에서 명시적으로 추적",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "각 소절 끝에 \"소결\" insight box + \"핵심 긴장/공백\" tension box로 논리 흐름 강조",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "",
+      "title": "HTML에 @media print 스타일 포함하여 인쇄 가능하도록 설계",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04",
+    "06",
+    "09",
+    "22",
+    "21",
+    "10",
+    "31"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-19T13:58:37.439Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-19T13:58:37.439Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

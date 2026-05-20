@@ -1,0 +1,133 @@
+{
+  "week": "2026-W15",
+  "range": {
+    "from": "2026-04-06",
+    "to": "2026-04-12"
+  },
+  "status": "closed",
+  "summary": "09 학생 데이터 정량분석 심화 + 에이전트 스킬 셋업 · 05 DSAPG 선행연구 2.1~2.6 통합 리뷰 HTML 완성 (integrative review · DC×SAI 매핑)",
+  "kpis": {
+    "activeProjects": 2,
+    "sessions": 2,
+    "newProjects": 0,
+    "filesChanged": 25
+  },
+  "daily": [
+    {
+      "date": "2026-04-06",
+      "weekday": "월",
+      "filesChanged": 22,
+      "topProjectIds": [
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "09",
+          "did": "학생 과제 데이터 정리 · 학생 질문지 작성 · 학생 변화 정성 분석 · 학생 변화 정량 분석 & 시각화",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260406_log.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-08",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-09",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-10",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-11",
+      "weekday": "토",
+      "filesChanged": 3,
+      "topProjectIds": [
+        "05"
+      ]
+    },
+    {
+      "date": "2026-04-12",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 70,
+      "filesChanged": 18,
+      "imp": 4,
+      "did": "학생과제 35 파일 6 폴더 분류 · 질문지 7 영역 35 문항 · 정성 8 변화 영역 + 인용 · 정량(마인드셋 -9.9%, PSS -3.5%, DASS-21 73.9% 정상, GPA 3.45→3.52) · 차트 10 종 · 메모리 5종 · /몸과마음의과학 스킬",
+      "nextAction": "DASS-21 하위 척도·PSQI·ESCQ 심화 분석 · 사후검사 응답률 개선 방안 · 학생 변화 데이터 연구 논문 정리"
+    },
+    {
+      "id": "05",
+      "pct": 30,
+      "filesChanged": 5,
+      "imp": 5,
+      "did": "선행연구 통합리뷰 HTML 55KB/675줄 — 2.1~2.6 6 소절 (페르소나 방법론 진화 · LLM 시뮬레이션 3단계 · SSR 합성설문 기반 · 경쟁전략 AI 확장 · 데이터 희소 SME · 연구 공백 종합) · DC × Situated AI 매핑 테이블",
+      "nextAction": "이론적 배경 섹션 집필 · 연구 방법 초안 · 케이스 브랜드 2개 확정 · SSR 비교 설문 5~7 문항"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "학생 데이터 원본 유지 + 학생과제파일/ 복사본 작업",
+      "description": "원본 절대 수정 금지 원칙. 35개 핵심 파일을 6개 하위(주차별/중간/기말/통합/코칭/성적)로 복사하여 분석 작업장 분리."
+    },
+    {
+      "date": "2026-04-06",
+      "projectId": "09",
+      "title": "사후검사 응답자 부족 (23~24명/140명) — 해석 주의 명시",
+      "description": "정량 분석 결과 해석 시 일반화 한계 표시. 응답률 개선 방안 별도 작업으로 분리."
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "05",
+      "title": "선행연구 = integrative review 형식 (dialogue + tension)",
+      "description": "단순 나열이 아닌 논문 간 대화·긴장을 서술. 각 소절 끝에 '소결' insight box + '핵심 긴장/공백' tension box로 논리 흐름 강조.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "05",
+      "title": "Han et al.(2025) Personality Illusion을 2.2 핵심 비판 배치",
+      "description": "낙관→확인→해체 3단계의 '해체' 단계 대표 문헌. PPS+SSR 이중 검증의 이론적 근거 확립."
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "05",
+      "title": "DC × Situated AI 매핑 테이블 2.4절 삽입",
+      "description": "Porter→Barney→Grant→Teece→Kemp 경쟁전략 진화에 AI 미시기반 매핑. 이론적 정합성 시각화."
+    },
+    {
+      "date": "2026-04-11",
+      "projectId": "05",
+      "title": "합성 데이터 계보 Rubin→Goodfellow→Argyle 2.3절 명시 추적",
+      "description": "통계적 imputation에서 GAN, LLM Silicon Sampling까지 계보. SSR의 방법론적 뿌리 정당화."
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-05-20T08:48:47.075Z",
+  "_meta": {
+    "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강."
+  }
+}

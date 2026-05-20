@@ -2,7 +2,7 @@
 
 > 한 줄 정의: cloude_Code 27 프로젝트의 주간·월간·연간 작업 활동을 시각화하는 외부 공개 대시보드
 > 상태: 🟢 active
-> 최종 업데이트: 2026-05-17 (W20 일요일 업데이트 + 폴더 재구조화 대응)
+> 최종 업데이트: 2026-05-20 (일간 페이지 추가 — /daily · daily[].entries[] 스키마 + 자동 추출 + W14~W20 백필)
 
 ---
 
@@ -71,7 +71,8 @@
 - [x] **W20 일요일 업데이트** (2026-05-17) — 05-16 v1.6 자료 리서치 13편 + 05-17 워크스페이스 재구조화 반영
 - [x] **폴더 재구조화 대응** (2026-05-17) — `extract-week.mjs` WORKSPACE 두 단계 위로 수정 + `projects.json`에 `01`(관리 마스터) 추가
 - [ ] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정 (Vercel 웹 대시보드)
-- [ ] `data/weekly/*.json` 지난 4주(W14~W17) 소급 생성 — `extract-week.mjs` 사용
+- [x] **W14~W17 소급 생성** (2026-05-19) — `app/src/data/weekly/` 4개 추가. extract-week.mjs draft + 일일 로그 의미 보강. W14(05 INDEX+03 Once+09 셋업) / W15(09 정량분석+05 선행연구 HTML) / W16(05 축 이동+10 보살피고 캐릭터+11 매거진 2호) / W17(10 3분할+6 에이전트+v1.5 베타+21 CPSF 8 쟁점)
+- [x] **일간 페이지 추가** (2026-05-20) — `/daily` 라우트 + `DailyRow` 컴포넌트. 현재 주의 활동 있는 날만 최신순. 좌측 큰 날짜 + 우측 프로젝트별 작업 내용. `daily[].entries[]` 스키마 신설 + `extract-daily-entries.mjs` 일일 로그 자동 파서 + W14~W20 12일 백필.
 - [ ] Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화
 - [ ] 재구조화 후속: 11(디자인매거진), 31/32(083/084) 등 폴더 경로 변경분 `projects.json`에 `path` 필드로 명시 검토

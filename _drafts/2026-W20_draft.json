@@ -1,0 +1,137 @@
+{
+  "week": "2026-W20",
+  "range": {
+    "from": "2026-05-11",
+    "to": "2026-05-17"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 4,
+    "sessions": 1,
+    "newProjects": 3,
+    "filesChanged": 27
+  },
+  "daily": [
+    {
+      "date": "2026-05-11",
+      "weekday": "월",
+      "filesChanged": 27,
+      "topProjectIds": [
+        "10",
+        "11",
+        "05"
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-13",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-14",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-15",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-16",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-17",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "10",
+      "pct": 41,
+      "filesChanged": 11,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "11",
+      "pct": 33,
+      "filesChanged": 9,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "05",
+      "pct": 19,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "09",
+      "pct": 7,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-05-11",
+      "projectId": "10",
+      "title": "**워커 출처 차단 회피**: User-Agent 헤더 명시 (workers.dev 기본 UA가 abuse ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "10",
+      "title": "**Opus 자리는 4.6으로 통일**: 사용자 워크스페이스에 4.7 access 없음",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "10",
+      "title": "**옛 링크 모두 보존**: 비교·롤백 가능성 + 사용자 익숙한 URL 유지",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "10",
+      "title": "**마이그레이션 코드 추가는 보류** (사용자 reject) — localStorage 옛 ID 잔존시 사용",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "11",
+    "10",
+    "09"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-13T05:46:35.826Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-13T05:46:35.826Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

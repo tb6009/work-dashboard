@@ -55,12 +55,20 @@ export interface DecisionEntry {
   isMilestone?: boolean;
 }
 
+/** One project's work on a single day — extracted from daily logs */
+export interface DailyEntry {
+  projectId: string;
+  did: string;               // section titles joined, max ~200 chars
+  logFilePath?: string;      // absolute path to source log
+}
+
 /** Daily activity bucket */
 export interface DailyActivity {
   date: string;              // YYYY-MM-DD
   weekday: string;           // '월'..'일'
   filesChanged: number;
   topProjectIds: string[];
+  entries?: DailyEntry[];    // per-project work from docs/logs/YYYYMMDD_log.md
 }
 
 /** Full weekly snapshot — one file per week */

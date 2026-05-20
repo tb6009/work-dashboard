@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-type NavKey = 'current' | 'weekly' | 'monthly' | 'yearly' | 'projects';
+type NavKey = 'current' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'projects';
 
 // 현재 월/연도 (Topbar 링크용)
 function nowMonthId(): string {
@@ -13,6 +13,7 @@ function nowYear(): string {
 
 const NAV_ITEMS: Array<{ key: NavKey; label: string; href: string }> = [
   { key: 'current',  label: '현재',     href: '/' },
+  { key: 'daily',    label: '일간',     href: '/daily' },
   { key: 'weekly',   label: '주간',     href: '/weekly' },
   { key: 'monthly',  label: '월간',     href: `/monthly/${nowMonthId()}` },
   { key: 'yearly',   label: '연간',     href: `/yearly/${nowYear()}` },

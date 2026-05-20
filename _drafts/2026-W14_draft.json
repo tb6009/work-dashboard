@@ -1,0 +1,192 @@
+{
+  "week": "2026-W14",
+  "range": {
+    "from": "2026-03-30",
+    "to": "2026-04-05"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 8,
+    "sessions": 2,
+    "newProjects": 8,
+    "filesChanged": 35
+  },
+  "daily": [
+    {
+      "date": "2026-03-30",
+      "weekday": "월",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "03",
+        "10",
+        "01"
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-05",
+      "weekday": "일",
+      "filesChanged": 17,
+      "topProjectIds": [
+        "04",
+        "05",
+        "51"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "03",
+      "pct": 28,
+      "filesChanged": 10,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 22,
+      "filesChanged": 8,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "10",
+      "pct": 14,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "05",
+      "pct": 11,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 8,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "51",
+      "pct": 6,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "31",
+      "pct": 6,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "09",
+      "pct": 6,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-03-30",
+      "projectId": "03",
+      "title": "INDEX.md 형식을 Cat3 수준으로 표준화 → 모든 카테고리 동일 구조",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-03-30",
+      "projectId": "03",
+      "title": "📌 인용 제안은 \"언제 쓸지 모르는\" 문제를 해결하는 핵심 기능",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-03-30",
+      "projectId": "03",
+      "title": "PDF 직독 금지 원칙 수립 → INDEX.md가 유일한 인용 출처",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "04",
+      "title": "W14 RSS 데이터를 모든 분석의 기준 데이터셋으로 확정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "04",
+      "title": "파티/이벤트 + 가족 모임 = 동일 중요도로 신규 마켓 추진",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "04",
+      "title": "소셜 필름 기능은 대표님 논의 후 결정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "04",
+      "title": "Once의 포지셔닝 = 이벤트+일상 하이브리드 (Blue Ocean)",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "03",
+    "10",
+    "01",
+    "04",
+    "05",
+    "51",
+    "31",
+    "09"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-19T13:58:37.402Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-19T13:58:37.402Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

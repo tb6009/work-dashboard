@@ -2,7 +2,7 @@ import Topbar from './Topbar';
 import Footer from './Footer';
 import { auth, signOut } from '@/auth';
 
-type NavKey = 'current' | 'weekly' | 'monthly' | 'yearly' | 'projects';
+type NavKey = 'current' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'projects';
 
 interface Props {
   active: NavKey;

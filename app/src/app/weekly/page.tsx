@@ -204,7 +204,7 @@ function WeekDetail({ week, isCurrentWeek }: WeekDetailProps) {
             meta={`${week.decisions.length}건 · ${week.decisions.filter((d) => d.isMilestone).length} milestone`}
           />
           <div>
-            {week.decisions.map((d, i) => {
+            {[...week.decisions].sort((a, b) => b.date.localeCompare(a.date)).map((d, i) => {
               const ms = !!d.isMilestone;
               const dateObj = new Date(d.date + 'T00:00:00+09:00');
               const wd = ['일', '월', '화', '수', '목', '금', '토'][dateObj.getDay()];

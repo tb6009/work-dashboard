@@ -405,98 +405,169 @@ interface Decision {
 }
 
 function DecisionsTimeline({ decisions }: { decisions: Decision[] }) {
+  // 시간순 (오래된 → 최신) — 가로 타임라인 멘탈모델 유지
+  const sorted = [...decisions].sort((a, b) => a.date.localeCompare(b.date));
+  const milestones = sorted.filter((d) => d.isMilestone);
+  const regulars = sorted.filter((d) => !d.isMilestone);
+
   return (
-    <div style={{ position: 'relative' }}>
-      <div
-        aria-hidden
-        style={{
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          top: 30,
-          height: 1,
-          background: 'var(--gray-200)',
-        }}
-      />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-5)' }}>
+      {milestones.length > 0 ? (
+        <TimelineStrip label="MILESTONE" sublabel={`${milestones.length}건`} items={milestones} milestone />
+      ) : null}
+      {regulars.length > 0 ? (
+        <TimelineStrip label="결정사항" sublabel={`${regulars.length}건`} items={regulars} />
+      ) : null}
+    </div>
+  );
+}
+
+interface StripProps {
+  label: string;
+  sublabel?: string;
+  items: Decision[];
+  milestone?: boolean;
+}
+
+function TimelineStrip({ label, sublabel, items, milestone = false }: StripProps) {
+  return (
+    <div>
+      {/* 행 헤더 */}
       <div
         style={{
           display: 'flex',
-          gap: 'var(--sp-4)',
-          overflowX: 'auto',
-          paddingBottom: 'var(--sp-4)',
-          position: 'relative',
+          alignItems: 'baseline',
+          gap: 'var(--sp-2)',
+          marginBottom: 'var(--sp-3)',
         }}
       >
-        {decisions.map((d, i) => {
-          const ms = !!d.isMilestone;
-          const dateObj = new Date(d.date + 'T00:00:00+09:00');
-          const wd = ['일', '월', '화', '수', '목', '금', '토'][dateObj.getDay()];
-          const datePart = d.date.slice(5);
-          return (
-            <article key={i} style={{ flexShrink: 0, width: 248 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sp-3)', marginBottom: 'var(--sp-3)' }}>
+        <span
+          style={{
+            fontSize: 10,
+            fontFamily: 'var(--font-mono)',
+            fontWeight: 700,
+            letterSpacing: 'var(--tracking-wider)',
+            background: milestone ? 'var(--black)' : 'transparent',
+            color: milestone ? 'var(--white)' : 'var(--gray-500)',
+            padding: milestone ? '2px 6px' : '0',
+          }}
+        >
+          {label}
+        </span>
+        {sublabel ? (
+          <span
+            style={{
+              fontSize: 10,
+              fontFamily: 'var(--font-mono)',
+              color: 'var(--gray-400)',
+            }}
+          >
+            {sublabel}
+          </span>
+        ) : null}
+      </div>
+
+      {/* 가로 타임라인 */}
+      <div style={{ position: 'relative' }}>
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 30,
+            height: 1,
+            background: milestone ? 'var(--gray-400)' : 'var(--gray-200)',
+          }}
+        />
+        <div
+          style={{
+            display: 'flex',
+            gap: 'var(--sp-4)',
+            overflowX: 'auto',
+            paddingBottom: 'var(--sp-4)',
+            position: 'relative',
+          }}
+        >
+          {items.map((d, i) => {
+            const ms = !!d.isMilestone;
+            const dateObj = new Date(d.date + 'T00:00:00+09:00');
+            const wd = ['일', '월', '화', '수', '목', '금', '토'][dateObj.getDay()];
+            const datePart = d.date.slice(5);
+            return (
+              <article key={i} style={{ flexShrink: 0, width: 248 }}>
                 <div
                   style={{
-                    width: ms ? 13 : 11,
-                    height: ms ? 13 : 11,
-                    borderRadius: '50%',
-                    background: ms ? 'var(--black)' : 'var(--gray-700)',
-                    boxShadow: '0 0 0 4px var(--gray-100)',
-                  }}
-                />
-                <div
-                  style={{
-                    fontSize: 'var(--text-xs)',
-                    color: 'var(--gray-500)',
-                    fontFamily: 'var(--font-mono)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 'var(--sp-3)',
+                    marginBottom: 'var(--sp-3)',
                   }}
                 >
-                  {datePart} ({wd})
+                  <div
+                    style={{
+                      width: ms ? 13 : 11,
+                      height: ms ? 13 : 11,
+                      borderRadius: '50%',
+                      background: ms ? 'var(--black)' : 'var(--gray-700)',
+                      boxShadow: '0 0 0 4px var(--gray-100)',
+                    }}
+                  />
+                  <div
+                    style={{
+                      fontSize: 'var(--text-xs)',
+                      color: 'var(--gray-500)',
+                      fontFamily: 'var(--font-mono)',
+                    }}
+                  >
+                    {datePart} ({wd})
+                  </div>
                 </div>
-              </div>
-              <div
-                style={{
-                  background: 'var(--white)',
-                  border: ms ? '1px solid var(--black)' : 'var(--border-1)',
-                  padding: 'var(--sp-4)',
-                }}
-              >
                 <div
                   style={{
-                    fontSize: 'var(--text-2xs)',
-                    fontWeight: 600,
-                    color: ms ? 'var(--black)' : 'var(--gray-500)',
-                    textTransform: 'uppercase',
-                    letterSpacing: 'var(--tracking-wide)',
-                    marginBottom: 'var(--sp-2)',
+                    background: 'var(--white)',
+                    border: ms ? '1px solid var(--black)' : 'var(--border-1)',
+                    padding: 'var(--sp-4)',
                   }}
                 >
-                  PROJECT {d.projectId}{ms ? ' · MILESTONE' : ''}
+                  <div
+                    style={{
+                      fontSize: 'var(--text-2xs)',
+                      fontWeight: 600,
+                      color: ms ? 'var(--black)' : 'var(--gray-500)',
+                      textTransform: 'uppercase',
+                      letterSpacing: 'var(--tracking-wide)',
+                      marginBottom: 'var(--sp-2)',
+                    }}
+                  >
+                    PROJECT {d.projectId}
+                    {ms ? ' · MILESTONE' : ''}
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: 'var(--text-base)',
+                      fontWeight: 700,
+                      color: 'var(--gray-900)',
+                      marginBottom: 'var(--sp-2)',
+                      letterSpacing: 'var(--tracking-tight)',
+                    }}
+                  >
+                    {d.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: 'var(--text-xs)',
+                      color: 'var(--gray-500)',
+                      lineHeight: 'var(--leading-relaxed)',
+                    }}
+                  >
+                    {d.description}
+                  </p>
                 </div>
-                <h3
-                  style={{
-                    fontSize: 'var(--text-base)',
-                    fontWeight: 700,
-                    color: 'var(--gray-900)',
-                    marginBottom: 'var(--sp-2)',
-                    letterSpacing: 'var(--tracking-tight)',
-                  }}
-                >
-                  {d.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: 'var(--text-xs)',
-                    color: 'var(--gray-500)',
-                    lineHeight: 'var(--leading-relaxed)',
-                  }}
-                >
-                  {d.description}
-                </p>
-              </div>
-            </article>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

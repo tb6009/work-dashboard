@@ -1,0 +1,169 @@
+{
+  "week": "2026-W14",
+  "range": {
+    "from": "2026-03-30",
+    "to": "2026-04-05"
+  },
+  "status": "closed",
+  "summary": "05 DSAPG INDEX 시스템 완성 (Cat2~6 표준화 + papers/ 분리) · 03 Once W14 RSS 자동화·EDA·신규 마켓 Blue Ocean 발굴 · 09 몸과마음의과학 학생 데이터·에이전트 셋업",
+  "kpis": {
+    "activeProjects": 4,
+    "sessions": 2,
+    "newProjects": 0,
+    "filesChanged": 50
+  },
+  "daily": [
+    {
+      "date": "2026-03-30",
+      "weekday": "월",
+      "filesChanged": 20,
+      "topProjectIds": [
+        "05"
+      ],
+      "entries": [
+        {
+          "projectId": "05",
+          "did": "Cat2~Cat6 INDEX.md Cat3 수준으로 전면 업그레이드 · Cat3 INDEX.md에 📌 인용 제안 추가 · REFERENCE_GUIDE.md 생성 (참고자료 네비게이션 허브) · CLAUDE.md 검색 워크플로우 추가",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260330_log.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-05",
+      "weekday": "일",
+      "filesChanged": 30,
+      "topProjectIds": [
+        "03",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "데이터 수집 자동화 파이프라인 구축 · W14 데이터 EDA · SNS 기반 실제 사용자 조사 · 신규 마켓 발굴 리서치 (STAGE 1-2 완료)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260405_log.md"
+        },
+        {
+          "projectId": "09",
+          "did": "몸과마음의과학 에이전트 구축 (09-몸과마음의과학/)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260405_log.md"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "05",
+      "pct": 40,
+      "filesChanged": 20,
+      "imp": 5,
+      "did": "Cat2/4/5/6 INDEX 전면 재작성(6섹션 표준 구조 + 📌 인용 제안) · REFERENCE_GUIDE.md 네비게이션 허브 · papers/ 분리(논문당 ~400토큰) · 10_페르소나설계 폴더 · CLAUDE.md PDF 직독 금지 워크플로우",
+      "nextAction": "1문장 기여문 고정 · 이론 슬리밍 (DC + Situated AI 2축) · 케이스 브랜드 2개 확정"
+    },
+    {
+      "id": "03",
+      "pct": 40,
+      "filesChanged": 20,
+      "imp": 5,
+      "did": "App Store RSS 5경쟁사 자동수집 + 주차 누적 dedup 파이프라인 · W14 611건 EDA(Dispo 1.74★·POV 4.51★) · Reddit 16쿼리 370건·TikTok·JoinMyMoment 발견 · 신규 마켓 STAGE 1-2 (웨딩 14%·비웨딩 50%·5 후보·Blue Ocean)",
+      "nextAction": "STAGE 3 페르소나 확장 · App Store 메타데이터 + TikTok 콘텐츠 · 대표님 보고 후 소셜 필름 결정"
+    },
+    {
+      "id": "09",
+      "pct": 15,
+      "filesChanged": 8,
+      "imp": 4,
+      "did": "학생과제파일/ 6 하위 폴더 + 35 핵심 데이터 정리 · 학생 질문지 7영역 35문항 · 정성 8 영역 분석 · 정량 분석(마인드셋 20.8→18.7 -9.9%, PSS 23.4→22.5 -3.5%) · 시각화 차트 10종 · CLAUDE.md + /몸과마음의과학 스킬",
+      "nextAction": "DASS-21 하위 척도 심화 분석 · PSQI 수면·ESCQ 감성역량 · 사후검사 응답률 개선"
+    },
+    {
+      "id": "01",
+      "pct": 5,
+      "filesChanged": 2,
+      "imp": 2,
+      "did": "메모리 시스템 구축 — user/project×2/reference/feedback 5개 + MEMORY.md 인덱스",
+      "nextAction": "메모리 운영 규칙 안정화"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-03-30",
+      "projectId": "05",
+      "title": "INDEX.md 6 섹션 표준 구조 — Cat3 수준으로 전 카테고리 통일",
+      "description": "논문별 6 섹션(핵심 기여/연구 방법/주요 결론/DSAPG 연관성·인용위치/즉시 사용 영문 인용문/📌 인용 제안) + 부록 A/B/C. Cat2(17편)·Cat4(10편)·Cat5(13편)·Cat6(15편) 전면 재작성.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-03-30",
+      "projectId": "05",
+      "title": "📌 인용 제안 = '언제 쓸지 모르는' 문제 해결의 핵심",
+      "description": "각 인용문 뒤에 '이 논문을 언제, 어떤 맥락에서 인용할지' 1~2문장 한국어 가이드 추가. 집필 중 즉시 검색 가능한 형태로 설계."
+    },
+    {
+      "date": "2026-03-30",
+      "projectId": "05",
+      "title": "PDF 직독 금지 원칙 — INDEX.md가 유일한 인용 출처",
+      "description": "CLAUDE.md에 '참고자료 검색 방법' 섹션 신설. 3단계 워크플로우: REFERENCE_GUIDE.md → 카테고리 INDEX.md → 인용문 복사. INDEX → papers/ 분리로 토큰 8k→400/편."
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "03",
+      "title": "W14 RSS 데이터 = 모든 분석의 기준 데이터셋 확정",
+      "description": "611건 전체 리뷰 EDA 완료. 경쟁사별 평점·시계열·키워드·버전·투표 분석. 이후 분석은 모두 W14를 baseline으로 비교."
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "03",
+      "title": "Once 포지셔닝 = 이벤트+일상 하이브리드 (Blue Ocean)",
+      "description": "STAGE 1-2 완료: 사용 맥락 분류 결과 비웨딩 50% 차지. 5개 마켓 후보(파티/이벤트, 가족 모임, 소셜 필름, 기업 이벤트, 여행). 경쟁사 공백 발견.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "03",
+      "title": "파티/이벤트 + 가족 모임 = 동일 중요도 신규 마켓 추진",
+      "description": "STAGE 2 시장 규모 정량화 결과. 단일 우선순위 대신 2개 마켓 병행 진입. 소셜 필름은 대표님 논의 후 결정."
+    },
+    {
+      "date": "2026-04-05",
+      "projectId": "09",
+      "title": "에이전트 이름 \"몸과마음의과학\" + /몸과마음의과학 슬래시 명령어",
+      "description": "수업 Q&A 에이전트로 정체성 확정. ~/.claude/skills/ 글로벌 데이터 분석 스킬 31종(nimrodfisher) + .claude/skills/몸과마음의과학/ 커스텀 스킬."
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-05-20T08:48:47.069Z",
+  "_meta": {
+    "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강. mechanical 추출의 노이즈 ID(31·51 등 단순 멘션)는 실제 활동 프로젝트만 남기도록 정리."
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "week": "2026-W16",
+  "range": {
+    "from": "2026-04-13",
+    "to": "2026-04-19"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 6,
+    "sessions": 2,
+    "newProjects": 6,
+    "filesChanged": 20
+  },
+  "daily": [
+    {
+      "date": "2026-04-13",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-14",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-15",
+      "weekday": "수",
+      "filesChanged": 4,
+      "topProjectIds": [
+        "04"
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-17",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-18",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-04-19",
+      "weekday": "일",
+      "filesChanged": 16,
+      "topProjectIds": [
+        "10",
+        "11",
+        "12"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "04",
+      "pct": 26,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "10",
+      "pct": 26,
+      "filesChanged": 5,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "11",
+      "pct": 16,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "12",
+      "pct": 16,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "08",
+      "pct": 11,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "03",
+      "pct": 5,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-04-15",
+      "projectId": "04",
+      "title": "✅ **연구 축 이동**: LLM 비교 중심 → 데이터 종류(Contextual Richness) 중심",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-15",
+      "projectId": "04",
+      "title": "✅ **프레이밍 재정의**: \"만들고 검증\" → \"Feasibility + Boundary condition",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-15",
+      "projectId": "04",
+      "title": "✅ **SNS 데이터 경로**: 경로 B(파트너십) 주축 + 경로 C 보조",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-15",
+      "projectId": "04",
+      "title": "✅ **논문 포지셔닝**: 실무-학계 bridging method paper",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-15",
+      "projectId": "04",
+      "title": "⏸️ **케이스 SME 선정**: 다음 세션으로 이월 (선정 기준에 \"SNS 인사이트 제공 가능성\" 추가 예",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "브랜드명 \"보살피고\" + 태그라인 \"보고, 살피고\" 확정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "마음이 = 메인 캐릭터 (AI가 숨이를 메인으로 오판 → 교수 즉시 교정)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "숨이 = 트라우마 전문 응급호흡기 (AI가 \"호흡 친구\"로 오판 → 교수 교정)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "코드 스킬의 한계 인식 → 이미지 생성 AI + 작가 스타일 조합으로 전환",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "크리에이터 포지션 \"스무살 전문가\" 확정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "블로그 핵심 관점: \"인간-AI 협업의 실제 기록\" (논문 연결)",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-04-19",
+      "projectId": "10",
+      "title": "교수가 블로그 도입부 직접 리라이트 시작 (AI 초안 → 교수 목소리로)",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04",
+    "10",
+    "11",
+    "08",
+    "12",
+    "03"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-19T13:58:37.472Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-19T13:58:37.472Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "week": "2026-W21",
+  "range": {
+    "from": "2026-05-18",
+    "to": "2026-05-24"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 13,
+    "sessions": 1,
+    "newProjects": 10,
+    "filesChanged": 19
+  },
+  "daily": [
+    {
+      "date": "2026-05-18",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-19",
+      "weekday": "화",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "04",
+        "10",
+        "05"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-21",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-22",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-23",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-24",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "04",
+      "pct": 27,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "05",
+      "pct": 20,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "10",
+      "pct": 20,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "09",
+      "pct": 13,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "03",
+      "pct": 7,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "12",
+      "pct": 7,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "11",
+      "pct": 7,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "06",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "31",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "51",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "21",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "00",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-05-19",
+      "projectId": "04",
+      "title": "**백필 weekly의 `newProjects` 비움** — 백필 시점에서는 모든 프로젝트가 신규로 잡히는 ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-19",
+      "projectId": "04",
+      "title": "**mechanical 추출의 ID 노이즈 정리** — `extract-week.mjs`가 단순 멘션·번호 ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-19",
+      "projectId": "04",
+      "title": "**status = 'closed'** 사용 — 스키마는 `current/past/future`지만 W18/",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "05",
+    "04",
+    "06",
+    "12",
+    "31",
+    "51",
+    "09",
+    "11",
+    "21",
+    "00"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-20T09:33:09.247Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-05-20T09:33:09.247Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

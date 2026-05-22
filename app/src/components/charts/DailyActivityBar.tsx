@@ -9,12 +9,14 @@ interface Props {
   daily: DailyActivity[];
   /** 프로젝트 ID → type 매핑. 대표 프로젝트 유형 색상으로 바를 칠함. */
   projectTypeMap?: Record<string, ProjectType>;
+  /** 차트 컨테이너 높이 (기본 260). 홈 페이지는 130으로 컴팩트. */
+  height?: number;
 }
 
 /** ECharts daily activity bar.
  *  - 대표 프로젝트 유형 색상으로 바 표시. 매핑 없으면 warm-gray fallback.
  *  - Inits on mount, disposes on unmount, resizes on window resize. */
-export default function DailyActivityBar({ daily, projectTypeMap }: Props) {
+export default function DailyActivityBar({ daily, projectTypeMap, height = 260 }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -82,5 +84,5 @@ export default function DailyActivityBar({ daily, projectTypeMap }: Props) {
     };
   }, [daily, projectTypeMap]);
 
-  return <div ref={ref} style={{ width: '100%', height: 260 }} />;
+  return <div ref={ref} style={{ width: '100%', height }} />;
 }

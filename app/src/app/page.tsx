@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import PageShell from '@/components/layout/PageShell';
 import DailyActivityBar from '@/components/charts/DailyActivityBar';
+import UpdatesNarrative from '@/components/period/UpdatesNarrative';
 import ProjectPie, { type PieSlice } from '@/components/charts/ProjectPie';
 import ActiveProjectsGrid from '@/components/projects/ActiveProjectsGrid';
 import ProjectComments from '@/components/ProjectComments';
@@ -193,7 +194,8 @@ export default async function Home() {
           }}
         >
           <ChartCard title="일별 활동 강도" sub="대표 프로젝트 유형 색상 · 파일 변경 수">
-            <DailyActivityBar daily={week.daily} projectTypeMap={projectTypeMap} />
+            <DailyActivityBar daily={week.daily} projectTypeMap={projectTypeMap} height={130} />
+            <UpdatesNarrative week={week} limit={4} />
           </ChartCard>
           <ChartCard title="프로젝트 비중" sub="% of changes">
             <ProjectPie slices={pieSlices} />

@@ -5,7 +5,7 @@
     "to": "2026-05-24"
   },
   "status": "current",
-  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (옛 11개 → 카테고리 prefix + aliases, 신규 13개 추가, 26→38) · 092 영상과제 25 파일(4컷만화·프롬프트·스토리보드) · 053 ResearchMasterBot 15 파일(scripts 6 + 연구문서 3 + 대시보드)",
+  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (11개 rename + aliases, 26→38) · 활동 자동 캡처 시스템 (Stop hook + fs extractor) — 병렬 세션 누락 해결",
   "kpis": {
     "activeProjects": 3,
     "sessions": 5,
@@ -24,16 +24,16 @@
       ],
       "entries": [
         {
-          "projectId": "092",
-          "did": "00_운영 README 셋업 · 01_기획/04_마음이_에너지_컬러가이드 · 02_대본/02_4컷만화_대본 v0.1 + 03_프롬프트/03_4컷만화 프롬프트 v0.1 · 생성이미지/character_dev README"
-        },
-        {
           "projectId": "061",
           "did": "[fs scan] ThesisTab.tsx · page.tsx · api.ts"
         },
         {
           "projectId": "062",
           "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 04_마음이_에너지_컬러가이드.md · 02_4컷만화_대본_v0.1.md · 03_4컷만화_프롬프트_v0.1.md · HISTORY.md · README.md"
         }
       ]
     },
@@ -54,16 +54,16 @@
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260519_log.md"
         },
         {
-          "projectId": "092",
-          "did": "092 PROJECT.md 정립 · 03_프롬프트/00_공통 앵커 + 01_Scene1 v0.2 + 04_에너지컬러별 6장면 + 05_시나리오기반 마음이 컷별 · 02_대본/03_에너지컬러별 미장센 · 07_수업자료/happy design language 분석 + infographic · 생성이미지 character_dev HISTORY"
-        },
-        {
           "projectId": "037",
           "did": "[fs scan] 01_happy_design_language_analysis.md · 01_happy_design_language_infographic.html"
         },
         {
           "projectId": "062",
           "did": "[fs scan] saved.js · v0.7_리더페이지_시안.html"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 03_에너지컬러별_미장센.md · 00_공통_앵커.md · 01_Scene1_프롬프트_v0.2_gpt.md · 04_에너지컬러별_6장면_프롬프트_v0.1.md · 05_시나리오기반_마음이_컷별_프롬프트_v0.1.md 외 3건"
         }
       ]
     },
@@ -84,16 +84,16 @@
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260520_log.md"
         },
         {
-          "projectId": "092",
-          "did": "01_기획/05_마음이 캐릭터 수정사항 · 02_대본/00_기본 방향성 지침 · 04_레퍼런스 README · 05_제작/02_마음이 캐릭터 재시작 노트 + 03_캐릭터디자인 프로세스 + 05_스토리보드"
+          "projectId": "03",
+          "did": "[fs scan] README.md · compositing_plan.md · project_brief.md · QC_REPORT.md · compositing_quality_review_v0.1.md 외 5건"
         },
         {
           "projectId": "053",
-          "did": "053 PROJECT.md + .claude/CLAUDE.md 셋업 · scripts/(prompts·download_papers·run_master_bot·server) · BIBLIOGRAPHY.md · RESEARCH_MASTER.md"
+          "did": "[fs scan] CLAUDE.md · PROJECT.md · run_server.sh · download_papers.py · prompts.py"
         },
         {
-          "projectId": "03",
-          "did": "[fs scan] README.md · compositing_plan.md · project_brief.md · QC_REPORT.md · compositing_quality_review_v0.1.md 외 5건"
+          "projectId": "092",
+          "did": "[fs scan] 05_마음이_캐릭터_수정사항.md · 00_기본_방향성_지침.md · 02_샷리스트_v0.3.md · README.md · 02_마음이_캐릭터_재시작_노트.md 외 5건"
         }
       ]
     },
@@ -115,20 +115,20 @@
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260521_log.md"
         },
         {
-          "projectId": "092",
-          "did": "02_대본/02_샷리스트 v0.3 · 05_제작/04_scene_design 작업프로세스 · 생성이미지/2026-05-21_image_generation_project (README + prompts/shot_prompts v0.1 + logs/HISTORY)"
-        },
-        {
-          "projectId": "053",
-          "did": "symposium_dashboard.html · scripts/download_all_pdfs.py · PERSONA_RESEARCH_HISTORY.md 갱신"
-        },
-        {
           "projectId": "03",
           "did": "[fs scan] logo_mockup_automation_process.md · HISTORY.md · FINAL_MODEL_QC_REPORT.md"
         },
         {
+          "projectId": "053",
+          "did": "[fs scan] EXPERIMENTAL_PAPER_PROPOSAL.md · LITERATURE_INDEX.md · SME_SILICON_SAMPLING_RESEARCH.md · download_all_pdfs.py · explore_assist.py 외 1건"
+        },
+        {
           "projectId": "066",
           "did": "[fs scan] README.md · SESSION_RESUME.md · refresh-prices.ts · index.html · package-lock.json 외 40건"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 04_scene_design_작업프로세스.md"
         }
       ]
     },
@@ -149,7 +149,7 @@
         },
         {
           "projectId": "053",
-          "did": "SME_SILICON_SAMPLING_RESEARCH.md · EXPERIMENTAL_PAPER_PROPOSAL.md · LITERATURE_INDEX.md · scripts/explore_assist.py"
+          "did": "[fs scan] run_master_bot.py · server.py"
         },
         {
           "projectId": "062",
@@ -268,6 +268,20 @@
       "title": "병렬 세션 활동 백필 — 092 영상과제·053 ResearchMasterBot",
       "description": "대시보드 데이터 흐름 진단 결과 docs/logs/*.md가 단일 Claude 세션에서만 작성되어 병렬 작업이 누락됨을 발견. 092(5/18~5/21 25파일)·053(5/20~5/22 15파일) 활동을 파일시스템 mtime 기반으로 수동 백필. extract-from-filesystem.mjs(B) + 세션 종료 자동 로그 hook(C) 후속 작업으로 자동화 예정.",
       "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "파일시스템 mtime 스캔 extractor 신설 (B)",
+      "description": "scripts/extract-from-filesystem.mjs — 워크스페이스 카테고리 폴더(01~10) mtime 스캔 후 경로에서 프로젝트 ID 추론. 산출물 본문 노출 금지 규칙 준수(파일명만 추출, 최대 5개). 로그 기반 entries는 보존하고 fs 기반은 보강만. EXPLICIT 매핑 38건 + 카테고리 umbrella fallback. dry-run 지원. W21 첫 실행으로 8건 추가 발견(061·062·037·03·066) — 특히 066 소규모조직_AI 45 파일(project01 풀스택)이 그동안 보이지 않다가 등장.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "Stop hook 자동 활동 캡처 (C)",
+      "description": "워크스페이스 .claude/settings.local.json에 Stop hook 등록 + scripts/auto-capture-activity.sh. 매 turn 종료마다 현재 ISO 주차 계산 → weekly JSON 없으면 extract-week.mjs로 신설 → extract-from-filesystem.mjs로 fs 활동 자동 반영. 30초 timeout, 실패해도 세션 흐름 무영향(/tmp/063_auto_capture.log 로깅). .claude/CLAUDE.md에 \"활동은 자동, 결정만 수기 로그\" 원칙 명문화. 어떤 Claude 세션이든(092, 053, 어떤 프로젝트든) 파일 변경은 자동으로 대시보드에 반영됨.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
@@ -292,7 +306,7 @@
   "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "buildAt": "2026-05-22T03:32:21.769Z",
+  "buildAt": "2026-05-22T04:46:06.310Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

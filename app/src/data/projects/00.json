@@ -1,0 +1,33 @@
+{
+  "id": "00",
+  "currentSituation": {
+    "summary": "진·모미·마음 3 캐릭터 비서 시스템. cloude_Code 워크스페이스 .claude/skills/ 글로벌 설치 + 메모리 시스템 연동.",
+    "phase": "활성 사용 중 (메모리·스킬 운영)",
+    "recentLogs": [
+      {
+        "date": "2026-04-25",
+        "title": "00_personal 메모리·스킬 운영 정착",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260425_log.md"
+      }
+    ],
+    "blockers": []
+  },
+  "deliverables": [
+    {
+      "title": "MEMORY.md + 메모리 5종",
+      "filePath": "/Users/jinhyunpark/.claude/projects/-Users-jinhyunpark/memory/",
+      "fileKind": "other",
+      "summary": "user / project×2 / reference / feedback 5개 + 인덱스.",
+      "modifiedAt": "2026-04-06"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "캐릭터별 운영 규칙 안정화",
+      "description": "진·모미·마음 호출 트리거 + 응답 톤 표준화.",
+      "priority": "mid",
+      "estimate": "이어가는 작업"
+    }
+  ],
+  "buildAt": "2026-05-22T00:00:00+09:00"
+}

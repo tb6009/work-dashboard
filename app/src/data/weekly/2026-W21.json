@@ -5,12 +5,12 @@
     "to": "2026-05-24"
   },
   "status": "current",
-  "summary": "063 W14~W17 weekly JSON 4개 소급 백필 · 일간 페이지(/daily) 신설 + entries[] 스키마 + 자동 추출 · 의사결정 타임라인 C-형식 그룹화 (MILESTONE + 일반)",
+  "summary": "063 W14~W17 weekly JSON 4개 소급 백필 · 일간 페이지(/daily) 신설 · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 인덱스 정합성 핫픽스 (081·102·103 메타 + 00 상세)",
   "kpis": {
     "activeProjects": 1,
-    "sessions": 2,
-    "newProjects": 0,
-    "filesChanged": 35
+    "sessions": 4,
+    "newProjects": 3,
+    "filesChanged": 48
   },
   "daily": [
     {
@@ -67,8 +67,17 @@
     {
       "date": "2026-05-22",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 8,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "워크스페이스 전체 스캔 · 깨진 링크 핫픽스 (즉시 가능한 3건 + α) · W21 weekly JSON 업데이트",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260522_log.md"
+        }
+      ]
     },
     {
       "date": "2026-05-23",
@@ -138,11 +147,28 @@
       "title": "Vercel CLI 우회 배포 + GitHub 자동 배포 이슈 잔존",
       "description": "27 파일 단일 commit + origin push. GitHub → Vercel 자동 배포가 Root Directory 미설정으로 실패 → vercel deploy --prod로 우회. 47초 빌드 후 production READY. / 와 /daily HTTP 200 확인. Root Directory 설정은 사용자가 웹 대시보드에서 직접 작업해야 자동 배포 복구됨.",
       "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "프로젝트 인덱스 정합성 핫픽스 — 081·102·103 메타 추가 + 00 상세 신설",
+      "description": "워크스페이스 전체 스캔 결과 누락 13개·위치 불일치 7개 발견. 즉시 깨진 링크만 우선 해결: (1) 081 Anchornode — W20 활동 기록 있으나 메타 없어 '(unknown project)'로 표시되던 것 정상화 (2) 102 GPT/Codex 실험·103 Gemini 실험 추가 — 보살피고 멀티 모델 트랙 가시화 (3) 00 personal 상세 JSON 신설 — /projects/00 404 해결 (4) stray 061_v2.0_timeline.md → docs/로 이동. 본격 재구조화(33개 신규 ID + aliases 마이그레이션)는 별도 결정 후 진행.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "워크스페이스 전체 스캔 — 신규 13·불일치 7 식별",
+      "description": "10개 카테고리 폴더 정밀 스캔. 신규: 001_블로그, 기초디자인, 코첼라, aSSIST 수업실습, 053 ResearchMasterBot, 056 연구논문03_persona, 066 소규모조직_AI, 082 ICCS, 092 영상과제, 102 GPT/Codex, 103 Gemini 등. 위치 불일치: 03·08·10·11·12·21·22·31·32·51 — 모두 재구조화 후 새 위치로 이동했으나 ID는 옛 위치 기준. (B) aliases[] + 마이그레이션 vs (A) 옛 ID 유지 + 신규만 추가 옵션 사용자 결정 대기."
     }
   ],
-  "newProjects": [],
+  "newProjects": [
+    "081",
+    "102",
+    "103"
+  ],
   "labelChanges": [],
-  "buildAt": "2026-05-21T22:14:45.139Z",
+  "buildAt": "2026-05-22T02:47:41.313Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

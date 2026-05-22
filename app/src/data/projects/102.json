@@ -1,0 +1,67 @@
+{
+  "id": "102",
+  "currentSituation": {
+    "summary": "보살피고 v1.5 GPT/Codex 환경 실험 폴더. 101_일상다반사에서 핵심만 복사한 GPT 작업용 최소 실행 패키지.",
+    "phase": "GPT 환경에서 v1.5 베타 테스트 단계",
+    "recentLogs": [
+      {
+        "date": "2026-05-17",
+        "title": "102_GPT_실험 폴더 셋업 (재구조화)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260517_log.md",
+        "excerpt": "101_일상다반사에서 마음_프로덕트(01_service + 04_캐릭터 + 12_모미마음이_Test) + outputs/마음_앱 + 자료/04_캐릭터_학습자료(19~21)만 복사."
+      }
+    ],
+    "blockers": [
+      "GPT Custom Instructions 초안 검증 미완"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/PROJECT.md",
+      "fileKind": "md",
+      "summary": "GPT 환경 최소 실행 패키지 정의 + 포함/제외 범위.",
+      "modifiedAt": "2026-05-17"
+    },
+    {
+      "title": "GPT_START.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/GPT_START.md",
+      "fileKind": "md",
+      "summary": "GPT 세션 시작 가이드.",
+      "modifiedAt": "2026-05-17"
+    },
+    {
+      "title": "GPT_CUSTOM_INSTRUCTIONS_DRAFT.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/GPT_CUSTOM_INSTRUCTIONS_DRAFT.md",
+      "fileKind": "md",
+      "summary": "GPT Custom Instructions 초안."
+    },
+    {
+      "title": "NEXT_ACTIONS.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/NEXT_ACTIONS.md",
+      "fileKind": "md",
+      "summary": "다음 액션 체크리스트."
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "GPT Custom Instructions 검증",
+      "description": "초안 → 실제 GPT 세션에서 4 캐릭터 위계·트라우마 보수성 원칙 작동 여부 확인.",
+      "priority": "high",
+      "estimate": "1~2일"
+    },
+    {
+      "title": "Claude(101) vs GPT(102) v1.5 베타 비교 평가",
+      "description": "동일 시나리오 10세트로 응답 품질·페르소나 일관성 평가.",
+      "priority": "mid",
+      "estimate": "1주"
+    },
+    {
+      "title": "GitHub Pages 배포 (별도 경로)",
+      "description": "GITHUB_PAGES_DEPLOY.md 절차 따라 GPT 버전 별도 URL 확보.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-22T00:00:00+09:00"
+}

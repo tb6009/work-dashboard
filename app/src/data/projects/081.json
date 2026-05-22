@@ -1,0 +1,54 @@
+{
+  "id": "081",
+  "currentSituation": {
+    "summary": "Anchor Node 브랜드 + gameaify · spica 3-track. 브랜드 에셋 작업 진행 중.",
+    "phase": "브랜드 아이덴티티 설계 단계",
+    "recentLogs": [
+      {
+        "date": "2026-05-11",
+        "title": "081 Anchornode 프로젝트 셋업",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260511_log.md",
+        "excerpt": "브랜드 + gameaify · spica 3-track 폴더 구조 셋업, 각 sub PROJECT.md 작성."
+      }
+    ],
+    "blockers": []
+  },
+  "deliverables": [
+    {
+      "title": "081 Anchornode PROJECT.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/PROJECT.md",
+      "fileKind": "md",
+      "summary": "브랜드 + gameaify + spica 3-track 정의.",
+      "modifiedAt": "2026-05-11"
+    },
+    {
+      "title": "gameaify sub-project",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/gameaify/PROJECT.md",
+      "fileKind": "md",
+      "summary": "gameaify 트랙 별도 PROJECT.md.",
+      "modifiedAt": "2026-05-11"
+    },
+    {
+      "title": "spica sub-project",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/spica/PROJECT.md",
+      "fileKind": "md",
+      "summary": "spica 트랙 별도 PROJECT.md.",
+      "modifiedAt": "2026-05-11"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "브랜드 에셋 1차 완성",
+      "description": "로고·컬러·타이포 3종 시안 → 사용자 검토.",
+      "priority": "high",
+      "estimate": "1주"
+    },
+    {
+      "title": "gameaify/spica 각 트랙 진행 상태 정리",
+      "description": "각 sub-project의 현재 단계와 다음 액션 1줄씩.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-05-22T00:00:00+09:00"
+}

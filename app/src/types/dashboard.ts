@@ -23,6 +23,7 @@ export interface ProjectMeta {
   define: string;
   createdAt?: string;        // ISO date
   status: LabelStatus;
+  aliases?: string[];        // 옛 ID (마이그레이션 이력). lookupProject가 fallback으로 검색.
 }
 
 /** Top-level category meta (2026-05-17 재구조화) */

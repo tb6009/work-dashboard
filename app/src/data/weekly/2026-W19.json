@@ -25,7 +25,7 @@
       "filesChanged": 10,
       "topProjectIds": [
         "062",
-        "05"
+        "051"
       ]
     },
     {
@@ -68,7 +68,7 @@
       "topProjectIds": [],
       "entries": [
         {
-          "projectId": "10",
+          "projectId": "101",
           "did": "챗봇 토큰 하네싱 재개 (Opus 계획 → Sonnet 실행 분리)",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260510_log.md"
         }
@@ -101,7 +101,7 @@
       "nextAction": "마이그레이션 SQL + 화면설계"
     },
     {
-      "id": "05",
+      "id": "051",
       "pct": 30,
       "filesChanged": 7,
       "imp": 3,
@@ -112,13 +112,13 @@
   "decisions": [
     {
       "date": "2026-05-05",
-      "projectId": "05",
+      "projectId": "051",
       "title": "논문리더 디자인 원칙 확정",
       "description": "흰 배경 + 그레이스케일 + 폰트 웨이트로 시각 위계. Muted Pastel 컬러 팔레트."
     },
     {
       "date": "2026-05-05",
-      "projectId": "05",
+      "projectId": "051",
       "title": "읽기 유형 5단계 체계",
       "description": "Ready → Skim → Read → Deep → Reread. 중요도 1~5를 폰트 웨이트 300~700으로 시각화."
     },
@@ -151,5 +151,5 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-20T08:48:47.088Z"
+  "buildAt": "2026-05-22T03:03:15.783Z"
 }

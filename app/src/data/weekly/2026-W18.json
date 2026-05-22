@@ -18,7 +18,7 @@
       "weekday": "월",
       "filesChanged": 5,
       "topProjectIds": [
-        "32"
+        "084"
       ]
     },
     {
@@ -32,12 +32,12 @@
       "weekday": "수",
       "filesChanged": 25,
       "topProjectIds": [
-        "32",
+        "084",
         "00"
       ],
       "entries": [
         {
-          "projectId": "32",
+          "projectId": "084",
           "did": "주간 점검 — 발견 사항 · 32_강연시리즈 신규 프로젝트 생성 · 31번 vs 32번 책임 분리",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260429_log.md"
         }
@@ -54,7 +54,7 @@
       "weekday": "금",
       "filesChanged": 30,
       "topProjectIds": [
-        "51"
+        "052"
       ]
     },
     {
@@ -92,7 +92,7 @@
       "nextAction": "Recommendation DB 저장 → 주간 대시보드"
     },
     {
-      "id": "51",
+      "id": "052",
       "pct": 75,
       "filesChanged": 28,
       "imp": 4,
@@ -116,7 +116,7 @@
       "nextAction": "마이그레이션 SQL + 화면설계"
     },
     {
-      "id": "32",
+      "id": "084",
       "pct": 55,
       "filesChanged": 4,
       "imp": 3,
@@ -124,7 +124,7 @@
       "nextAction": "01회차 슬라이드 HTML 렌더링"
     },
     {
-      "id": "21",
+      "id": "054",
       "pct": 35,
       "filesChanged": 3,
       "imp": 3,
@@ -132,7 +132,7 @@
       "nextAction": "심사쟁점 #1 처리 → 본문 집필"
     },
     {
-      "id": "05",
+      "id": "051",
       "pct": 30,
       "filesChanged": 2,
       "imp": 3,
@@ -140,7 +140,7 @@
       "nextAction": "논문 초안 집필 시작"
     },
     {
-      "id": "10",
+      "id": "101",
       "pct": 25,
       "filesChanged": 2,
       "imp": 2,
@@ -148,7 +148,7 @@
       "nextAction": "Phase 5 자문"
     },
     {
-      "id": "31",
+      "id": "083",
       "pct": 15,
       "filesChanged": 1,
       "imp": 2,
@@ -156,7 +156,7 @@
       "nextAction": "미완성 주차 파악"
     },
     {
-      "id": "22",
+      "id": "02",
       "pct": 10,
       "filesChanged": 1,
       "imp": 2,
@@ -164,7 +164,7 @@
       "nextAction": "종합분석보고서 v08"
     },
     {
-      "id": "12",
+      "id": "033",
       "pct": 8,
       "filesChanged": 1,
       "imp": 1,
@@ -172,7 +172,7 @@
       "nextAction": "PPT 추가 사례 보완"
     },
     {
-      "id": "11",
+      "id": "067",
       "pct": 6,
       "filesChanged": 1,
       "imp": 1,
@@ -188,7 +188,7 @@
       "nextAction": "persona_lab 정리 · 가이드라인 확정"
     },
     {
-      "id": "06",
+      "id": "012",
       "pct": 2,
       "filesChanged": 0,
       "imp": 1,
@@ -199,7 +199,7 @@
   "decisions": [
     {
       "date": "2026-04-29",
-      "projectId": "32",
+      "projectId": "084",
       "title": "강연시리즈 트랙 신설",
       "description": "단발성 폴더가 아니라 회차별 자산화 트랙으로 승격. K-MOOC(31)와 책임 분리."
     },
@@ -211,7 +211,7 @@
     },
     {
       "date": "2026-05-01",
-      "projectId": "51",
+      "projectId": "052",
       "title": "챗봇 4단계 비교 설계",
       "description": "UUID구조화 / UUID서사 / 기본자기입력 / 진 — 4종 시스템프롬프트 v1 확정."
     },
@@ -236,7 +236,7 @@
     }
   ],
   "newProjects": [
-    "32",
+    "084",
     "061",
     "062",
     "063"
@@ -263,5 +263,5 @@
       "to": "new"
     }
   ],
-  "buildAt": "2026-05-20T08:48:47.086Z"
+  "buildAt": "2026-05-22T03:03:15.782Z"
 }

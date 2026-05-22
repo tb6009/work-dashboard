@@ -19,12 +19,12 @@
       "filesChanged": 55,
       "topProjectIds": [
         "061",
-        "10",
+        "101",
         "091"
       ],
       "entries": [
         {
-          "projectId": "10",
+          "projectId": "101",
           "did": "차 진단 — 키 환경 차이 확인 · 차 진단 — 진단 버튼 추가 · 결정적 단서 · 해결 — User-Agent 명시",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260511_log.md"
         },
@@ -75,11 +75,11 @@
       "weekday": "토",
       "filesChanged": 17,
       "topProjectIds": [
-        "10"
+        "101"
       ],
       "entries": [
         {
-          "projectId": "10",
+          "projectId": "101",
           "did": "시스템 환경 정리 (세션 초반) · 자료 리서치 운영 체계 신설 · 운영원칙 신설 (총 11개 섹션, 11편 보고서로 운영) · 트랙별 작업 (11편 보고서) · 보강 자료 4편 초안 (05_자동수집/verified/ 이동 대기)",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260516_log.md"
         }
@@ -113,7 +113,7 @@
       "nextAction": "중간평가 데이터 합산 · 본문 4부 잠 챕터 확장"
     },
     {
-      "id": "10",
+      "id": "101",
       "pct": 17,
       "filesChanged": 42,
       "imp": 5,
@@ -191,13 +191,13 @@
     },
     {
       "date": "2026-05-11",
-      "projectId": "10",
+      "projectId": "101",
       "title": "워커 출처 차단 회피: User-Agent 명시",
       "description": "workers.dev 기본 UA가 abuse pattern으로 차단. 명시적 User-Agent 추가로 해결."
     },
     {
       "date": "2026-05-11",
-      "projectId": "10",
+      "projectId": "101",
       "title": "Opus 4.6으로 통일",
       "description": "사용자 워크스페이스에 4.7 access 없음. 전 모델 ID를 4.6 기준으로 일괄 복구."
     },
@@ -254,21 +254,21 @@
     },
     {
       "date": "2026-05-16",
-      "projectId": "10",
+      "projectId": "101",
       "title": "v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서",
       "description": "00_운영원칙(출처 tier·메타데이터·공개가능성·양면구조·도구 제외) + INDEX + 5개 트랙 보고서 13편. 갭 분석(805편 인용), 캐릭터별 자료 시각화, C-SSRS 외부 확보, 한국 갱년기·UPF 보강, 디자인교육 사용자 의견 요청, 자문 패키지 §10 반영, SNS 동향 30채널.",
       "isMilestone": true
     },
     {
       "date": "2026-05-16",
-      "projectId": "10",
+      "projectId": "101",
       "title": "위험·라이선스 도구 7개 사용 중단 정책 (§10)",
       "description": "임상 위험: C-SSRS·PC-PTSD-5·EAT-26 / 라이선스 회색지대: PSS·PSQI·Chalder·IPAQ. 챗봇을 평가자→동반자·연결자로 재정의. 자연어 키워드 감지 + 전문가 라우팅 표준 응답 4종.",
       "isMilestone": true
     },
     {
       "date": "2026-05-16",
-      "projectId": "10",
+      "projectId": "101",
       "title": "v1.6 빌드 명세 + v1.5↔v1.6 비교 매트릭스",
       "description": "13개 차원 비교 점수 33→45(+36%). Sonnet 4.6 핸드오프 가능 수준 스펙. 회귀 체크리스트 A~F 포함."
     },
@@ -294,7 +294,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-20T08:48:47.090Z",
+  "buildAt": "2026-05-22T03:03:15.784Z",
   "_meta": {
     "note": "2026-05-17 워크스페이스 대규모 재구조화로 063_workDashboard 위치 변경. extract-week.mjs WORKSPACE 경로 수정 완료. 일부 프로젝트의 폴더 위치는 바뀌었으나 historical ID는 유지(예: 11→디자인매거진 폴더, 31/32→083/084 폴더 등). 04·07 paused 항목은 폴더 삭제됨."
   }

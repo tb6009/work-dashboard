@@ -18,11 +18,11 @@
       "weekday": "월",
       "filesChanged": 20,
       "topProjectIds": [
-        "05"
+        "051"
       ],
       "entries": [
         {
-          "projectId": "05",
+          "projectId": "051",
           "did": "Cat2~Cat6 INDEX.md Cat3 수준으로 전면 업그레이드 · Cat3 INDEX.md에 📌 인용 제안 추가 · REFERENCE_GUIDE.md 생성 (참고자료 네비게이션 허브) · CLAUDE.md 검색 워크플로우 추가",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260330_log.md"
         }
@@ -82,7 +82,7 @@
   ],
   "projects": [
     {
-      "id": "05",
+      "id": "051",
       "pct": 40,
       "filesChanged": 20,
       "imp": 5,
@@ -117,20 +117,20 @@
   "decisions": [
     {
       "date": "2026-03-30",
-      "projectId": "05",
+      "projectId": "051",
       "title": "INDEX.md 6 섹션 표준 구조 — Cat3 수준으로 전 카테고리 통일",
       "description": "논문별 6 섹션(핵심 기여/연구 방법/주요 결론/DSAPG 연관성·인용위치/즉시 사용 영문 인용문/📌 인용 제안) + 부록 A/B/C. Cat2(17편)·Cat4(10편)·Cat5(13편)·Cat6(15편) 전면 재작성.",
       "isMilestone": true
     },
     {
       "date": "2026-03-30",
-      "projectId": "05",
+      "projectId": "051",
       "title": "📌 인용 제안 = '언제 쓸지 모르는' 문제 해결의 핵심",
       "description": "각 인용문 뒤에 '이 논문을 언제, 어떤 맥락에서 인용할지' 1~2문장 한국어 가이드 추가. 집필 중 즉시 검색 가능한 형태로 설계."
     },
     {
       "date": "2026-03-30",
-      "projectId": "05",
+      "projectId": "051",
       "title": "PDF 직독 금지 원칙 — INDEX.md가 유일한 인용 출처",
       "description": "CLAUDE.md에 '참고자료 검색 방법' 섹션 신설. 3단계 워크플로우: REFERENCE_GUIDE.md → 카테고리 INDEX.md → 인용문 복사. INDEX → papers/ 분리로 토큰 8k→400/편."
     },
@@ -162,7 +162,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-20T08:48:47.069Z",
+  "buildAt": "2026-05-22T03:03:15.775Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강. mechanical 추출의 노이즈 ID(31·51 등 단순 멘션)는 실제 활동 프로젝트만 남기도록 정리."
   }

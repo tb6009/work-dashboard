@@ -42,11 +42,11 @@
       "weekday": "금",
       "filesChanged": 35,
       "topProjectIds": [
-        "10"
+        "101"
       ],
       "entries": [
         {
-          "projectId": "10",
+          "projectId": "101",
           "did": "현재 상태 파악 · 백업 · 3개 폴더로 재구성 · 각 폴더에 .claude/CLAUDE.md 작성",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_log.md"
         }
@@ -57,17 +57,17 @@
       "weekday": "토",
       "filesChanged": 45,
       "topProjectIds": [
-        "10",
-        "21"
+        "101",
+        "054"
       ],
       "entries": [
         {
-          "projectId": "21",
+          "projectId": "054",
           "did": "v3 프로포설 박사 디펜스 관점 검토 · Situated AI 자료 이식 · 폴더 전면 재구성",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260425_log.md"
         },
         {
-          "projectId": "10",
+          "projectId": "101",
           "did": "v1.5 통합 리서치 계획서 (16개 운영 원칙 합의) · Phase 1 리서치 — 5트랙 병렬 (1라운드 + 2라운드) · 캐릭터 시각 정체성 확정 · v1.5 시스템 프롬프트 작성 (약 9KB / 2,500토큰)",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260425_log.md"
         }
@@ -82,7 +82,7 @@
   ],
   "projects": [
     {
-      "id": "10",
+      "id": "101",
       "pct": 75,
       "filesChanged": 60,
       "imp": 5,
@@ -90,7 +90,7 @@
       "nextAction": "GitHub PAT 토큰 재설정 · v1.5 git push → GitHub Pages 배포 · Phase 5 자문 의사결정 · launchd 등록"
     },
     {
-      "id": "21",
+      "id": "054",
       "pct": 25,
       "filesChanged": 20,
       "imp": 5,
@@ -101,78 +101,78 @@
   "decisions": [
     {
       "date": "2026-04-24",
-      "projectId": "10",
+      "projectId": "101",
       "title": "마음_프로덕트 3 분할 (01_service · 02_brand_campaign · 03_blog_process)",
       "description": "98 파일 단일 폴더 → 컨텍스트 로드 비용 폭주. 서비스(35)·브랜드(7)·블로그(59) 3 스트림 분리. 73MB 백업 zip 선행 후 이동.",
       "isMilestone": true
     },
     {
       "date": "2026-04-24",
-      "projectId": "10",
+      "projectId": "101",
       "title": "읽기 전용 강제 = CLAUDE.md 규칙 기반 (chmod 안 함)",
       "description": "03_blog_process에서 01_service/02_brand_campaign는 Read만 허용, Edit/Write/Delete/Move 금지. 파일시스템 chmod 대신 사용자 본인 수정 편의성 우선."
     },
     {
       "date": "2026-04-24",
-      "projectId": "10",
+      "projectId": "101",
       "title": "6 에이전트 자동수집 파이프라인 + 토큰 최적화 ($1~3/월)",
       "description": "Research Collector / QA Organizer / Character Distributor / Question Analyzer / Weekly Reporter / Character Monitor. 모델 매트릭스(Haiku 4.5·Sonnet 4.6·Opus 4.7) + Prompt caching + Batch API + JSON mode. 자료/ 단방향 의존.",
       "isMilestone": true
     },
     {
       "date": "2026-04-24",
-      "projectId": "10",
+      "projectId": "101",
       "title": "Sonnet 4.6 Phase 0+1 MVP 백그라운드 실행 — 15분 / 74k 토큰",
       "description": "Opus 4.7이 HANDOFF_SPEC 작성, Sonnet이 dispatch 실행. PubMed REST 직접 호출(MCP 의존 제거), Reddit PRAW→RSS fallback. E2E verified MD 1편 출력(match 0.72, character [모미])."
     },
     {
       "date": "2026-04-25",
-      "projectId": "10",
+      "projectId": "101",
       "title": "v1.5 트라우마 보수성·한계 인정·전문가 자문 의무 (원칙 14·15·16)",
       "description": "사용자 검증 어려운 영역은 무조건 사람 위임. 한계 인정 표준 응답(MI·TIC 5요소, 따뜻한 정직). Phase 5 자문 게이트 통과 전 운영 배포 금지."
     },
     {
       "date": "2026-04-25",
-      "projectId": "10",
+      "projectId": "101",
       "title": "v1.5 베타 별도 /v1.5/ 배포 — 메인 v1.4 영향 0건",
       "description": "806줄 / 42KB, 4 캐릭터 분기, 위기 키워드 강제 모달, 디스클레이머 동의, Opus 4.7 옵션. sw.js 캐시 키 bosalpigo-v15-1, manifest '보살피고 — 보고, 살피다'.",
       "isMilestone": true
     },
     {
       "date": "2026-04-25",
-      "projectId": "10",
+      "projectId": "101",
       "title": "자살예방 109 통합 일괄 치환 (1393 폐지·보복부 2024-01-01)",
       "description": "30개 파일 일괄 치환. 자살예방보도준칙 4.0 '극단적 선택' 표현 명문 금지 — 출력 문구 0건 확인."
     },
     {
       "date": "2026-04-25",
-      "projectId": "10",
+      "projectId": "101",
       "title": "MI Talk Time 원칙 — 사용자 발화 공간 보장",
       "description": "만담 횟수 동적(0~3 교환), 발화 길이 사용자 직전 × 1.5 이내, 마지막은 사용자에게 돌림, 페이스 미러링, 교정반사 금지, 침묵 OK. 캐릭터별 1턴 상한: 마음 3~5줄/모미 3~5줄/요기 3~6줄/숨이 2~4줄."
     },
     {
       "date": "2026-04-25",
-      "projectId": "21",
+      "projectId": "054",
       "title": "v3 프로포설 박사 디펜스 8 구조적 심사쟁점 도출",
       "description": "이론 기여 분산(DC 경계조건 vs 확장 vs SR 공백 혼재) · 2시점 종단 약점(1년 간격) · 분석단위 firm vs CEO 1인 데이터 불일치 · 사례 이질성(게임사 포함) · RTA × 선험 프레임 철학적 긴장 · RQ 중복 · 맥락 경계 불분명 · 핵심 문헌 누락(Doshi & Hauser, Brynjolfsson, Felin, Eisenhardt 2021).",
       "isMilestone": true
     },
     {
       "date": "2026-04-25",
-      "projectId": "21",
+      "projectId": "054",
       "title": "Situated AI 자료 이식 — DSAPG 원본 상대경로 참조 + CPSF 관점 새 INDEX",
       "description": "PDF 복사 X, 상대경로 링크로 단일 진실 원천 유지. DSAPG INDEX는 IJHCS 방법론 프레이밍이라 재사용 불가 → 6 핵심 문헌(Kemp 2023·Moser 2024·Li 2024·Krishna 2022·Ahmed) CPSF 관점 새 작성."
     },
     {
       "date": "2026-04-25",
-      "projectId": "21",
+      "projectId": "054",
       "title": "이전 주제분석 연구 아카이브 — 사례분석 방법으로 새 시작",
       "description": "07_참고자료/이전연구_주제분석방법/로 격리. 11 카테고리 폴더(00~09, 99) + CLAUDE.md 패턴 도입 (DSAPG 효과 검증)."
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-20T08:48:47.083Z",
+  "buildAt": "2026-05-22T03:03:15.782Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강. mechanical 추출의 노이즈 ID(04 antigravity·12 등 paused/관련 없는 멘션)는 정리."
   }

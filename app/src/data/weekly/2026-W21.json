@@ -5,12 +5,12 @@
     "to": "2026-05-24"
   },
   "status": "current",
-  "summary": "063 W14~W17 weekly JSON 4개 소급 백필 · 일간 페이지(/daily) 신설 · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 인덱스 정합성 핫픽스 (081·102·103 메타 + 00 상세)",
+  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (옛 11개 → 카테고리 prefix + aliases, 신규 13개 추가, 26→38)",
   "kpis": {
     "activeProjects": 1,
     "sessions": 4,
-    "newProjects": 3,
-    "filesChanged": 48
+    "newProjects": 16,
+    "filesChanged": 80
   },
   "daily": [
     {
@@ -160,13 +160,35 @@
       "projectId": "063",
       "title": "워크스페이스 전체 스캔 — 신규 13·불일치 7 식별",
       "description": "10개 카테고리 폴더 정밀 스캔. 신규: 001_블로그, 기초디자인, 코첼라, aSSIST 수업실습, 053 ResearchMasterBot, 056 연구논문03_persona, 066 소규모조직_AI, 082 ICCS, 092 영상과제, 102 GPT/Codex, 103 Gemini 등. 위치 불일치: 03·08·10·11·12·21·22·31·32·51 — 모두 재구조화 후 새 위치로 이동했으나 ID는 옛 위치 기준. (B) aliases[] + 마이그레이션 vs (A) 옛 ID 유지 + 신규만 추가 옵션 사용자 결정 대기."
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "옵션 B 채택 — aliases + 일괄 마이그레이션 (옛 ID 11개 → 카테고리 prefix 신규 ID)",
+      "description": "중장기 누적 부채 회피 위해 (B) 채택. ProjectMeta에 aliases?: string[] 추가, lookupProject가 alias도 검색. migrate-project-ids.mjs 스크립트로 11 detail JSON rename + 7 weekly JSON 81 참조 일괄 치환 (백업: _backups/migration_20260522.tar.gz). 매핑: 05→051(DSAPG), 06→012(AI_Design), 08→034(MNServe), 10→101(일상다반사), 11→067(디자인매거진), 12→033(Data_Study), 21→054(CPSF), 22→02(Data_Kaywon), 31→083(촬영용), 32→084(강연시리즈), 51→052(페르소나). 신규 13개 메타+stub JSON 추가 (011·031·032·035·036·037·038·04·053·055·056·066·082·092). projects.json 26 → 38개. 옛 04/07(antigravity/AIDX, 폴더 삭제됨)은 메타 삭제.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
-    "081",
-    "102",
-    "103"
+    "081", "102", "103",
+    "011", "031", "032", "035", "036", "037", "038",
+    "04", "053", "055", "056", "066", "082", "092"
   ],
+  "labelChanges": [
+    { "projectId": "012", "from": "active", "to": "active" },
+    { "projectId": "02",  "from": "active", "to": "active" },
+    { "projectId": "033", "from": "active", "to": "active" },
+    { "projectId": "034", "from": "active", "to": "active" },
+    { "projectId": "051", "from": "active", "to": "active" },
+    { "projectId": "052", "from": "active", "to": "active" },
+    { "projectId": "054", "from": "active", "to": "active" },
+    { "projectId": "067", "from": "active", "to": "active" },
+    { "projectId": "083", "from": "active", "to": "active" },
+    { "projectId": "084", "from": "active", "to": "active" },
+    { "projectId": "101", "from": "active", "to": "active" }
+  ],
+  "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
+  "_oldLabelChanges_replaced": [],
   "labelChanges": [],
   "buildAt": "2026-05-22T02:47:41.313Z",
   "_meta": {

@@ -57,7 +57,7 @@
       "weekday": "토",
       "filesChanged": 3,
       "topProjectIds": [
-        "05"
+        "051"
       ]
     },
     {
@@ -77,7 +77,7 @@
       "nextAction": "DASS-21 하위 척도·PSQI·ESCQ 심화 분석 · 사후검사 응답률 개선 방안 · 학생 변화 데이터 연구 논문 정리"
     },
     {
-      "id": "05",
+      "id": "051",
       "pct": 30,
       "filesChanged": 5,
       "imp": 5,
@@ -100,33 +100,33 @@
     },
     {
       "date": "2026-04-11",
-      "projectId": "05",
+      "projectId": "051",
       "title": "선행연구 = integrative review 형식 (dialogue + tension)",
       "description": "단순 나열이 아닌 논문 간 대화·긴장을 서술. 각 소절 끝에 '소결' insight box + '핵심 긴장/공백' tension box로 논리 흐름 강조.",
       "isMilestone": true
     },
     {
       "date": "2026-04-11",
-      "projectId": "05",
+      "projectId": "051",
       "title": "Han et al.(2025) Personality Illusion을 2.2 핵심 비판 배치",
       "description": "낙관→확인→해체 3단계의 '해체' 단계 대표 문헌. PPS+SSR 이중 검증의 이론적 근거 확립."
     },
     {
       "date": "2026-04-11",
-      "projectId": "05",
+      "projectId": "051",
       "title": "DC × Situated AI 매핑 테이블 2.4절 삽입",
       "description": "Porter→Barney→Grant→Teece→Kemp 경쟁전략 진화에 AI 미시기반 매핑. 이론적 정합성 시각화."
     },
     {
       "date": "2026-04-11",
-      "projectId": "05",
+      "projectId": "051",
       "title": "합성 데이터 계보 Rubin→Goodfellow→Argyle 2.3절 명시 추적",
       "description": "통계적 imputation에서 GAN, LLM Silicon Sampling까지 계보. SSR의 방법론적 뿌리 정당화."
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-20T08:48:47.075Z",
+  "buildAt": "2026-05-22T03:03:15.780Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강."
   }

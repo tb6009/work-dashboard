@@ -5,77 +5,155 @@
     "to": "2026-05-24"
   },
   "status": "current",
-  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (옛 11개 → 카테고리 prefix + aliases, 신규 13개 추가, 26→38)",
+  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (옛 11개 → 카테고리 prefix + aliases, 신규 13개 추가, 26→38) · 092 영상과제 25 파일(4컷만화·프롬프트·스토리보드) · 053 ResearchMasterBot 15 파일(scripts 6 + 연구문서 3 + 대시보드)",
   "kpis": {
-    "activeProjects": 1,
-    "sessions": 4,
+    "activeProjects": 3,
+    "sessions": 5,
     "newProjects": 16,
-    "filesChanged": 80
+    "filesChanged": 88
   },
   "daily": [
     {
       "date": "2026-05-18",
       "weekday": "월",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 5,
+      "topProjectIds": [
+        "092",
+        "061",
+        "062"
+      ],
+      "entries": [
+        {
+          "projectId": "092",
+          "did": "00_운영 README 셋업 · 01_기획/04_마음이_에너지_컬러가이드 · 02_대본/02_4컷만화_대본 v0.1 + 03_프롬프트/03_4컷만화 프롬프트 v0.1 · 생성이미지/character_dev README"
+        },
+        {
+          "projectId": "061",
+          "did": "[fs scan] ThesisTab.tsx · page.tsx · api.ts"
+        },
+        {
+          "projectId": "062",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        }
+      ]
     },
     {
       "date": "2026-05-19",
       "weekday": "화",
-      "filesChanged": 15,
+      "filesChanged": 24,
       "topProjectIds": [
-        "063"
+        "063",
+        "092",
+        "037",
+        "062"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "컨텍스트 확인 · Tier 1 자동 추출 (extract-week.mjs × 4회) · Tier 2 의미 보강 (일일 로그 6편 정독 후 수기 작성) · 주차별 핵심",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260519_log.md"
+        },
+        {
+          "projectId": "092",
+          "did": "092 PROJECT.md 정립 · 03_프롬프트/00_공통 앵커 + 01_Scene1 v0.2 + 04_에너지컬러별 6장면 + 05_시나리오기반 마음이 컷별 · 02_대본/03_에너지컬러별 미장센 · 07_수업자료/happy design language 분석 + infographic · 생성이미지 character_dev HISTORY"
+        },
+        {
+          "projectId": "037",
+          "did": "[fs scan] 01_happy_design_language_analysis.md · 01_happy_design_language_infographic.html"
+        },
+        {
+          "projectId": "062",
+          "did": "[fs scan] saved.js · v0.7_리더페이지_시안.html"
         }
       ]
     },
     {
       "date": "2026-05-20",
       "weekday": "수",
-      "filesChanged": 20,
+      "filesChanged": 34,
       "topProjectIds": [
-        "063"
+        "063",
+        "092",
+        "053",
+        "03"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "일간 페이지 (/daily) 신설 · ProjectComments 일간 통합 · 의사결정 타임라인 C-형식 (그룹화)",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260520_log.md"
+        },
+        {
+          "projectId": "092",
+          "did": "01_기획/05_마음이 캐릭터 수정사항 · 02_대본/00_기본 방향성 지침 · 04_레퍼런스 README · 05_제작/02_마음이 캐릭터 재시작 노트 + 03_캐릭터디자인 프로세스 + 05_스토리보드"
+        },
+        {
+          "projectId": "053",
+          "did": "053 PROJECT.md + .claude/CLAUDE.md 셋업 · scripts/(prompts·download_papers·run_master_bot·server) · BIBLIOGRAPHY.md · RESEARCH_MASTER.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] README.md · compositing_plan.md · project_brief.md · QC_REPORT.md · compositing_quality_review_v0.1.md 외 5건"
         }
       ]
     },
     {
       "date": "2026-05-21",
       "weekday": "목",
-      "filesChanged": 5,
+      "filesChanged": 13,
       "topProjectIds": [
-        "063"
+        "063",
+        "092",
+        "053",
+        "03",
+        "066"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "Git 정리 및 푸시 · Vercel CLI 직접 배포 · 배포 상태 확인",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260521_log.md"
+        },
+        {
+          "projectId": "092",
+          "did": "02_대본/02_샷리스트 v0.3 · 05_제작/04_scene_design 작업프로세스 · 생성이미지/2026-05-21_image_generation_project (README + prompts/shot_prompts v0.1 + logs/HISTORY)"
+        },
+        {
+          "projectId": "053",
+          "did": "symposium_dashboard.html · scripts/download_all_pdfs.py · PERSONA_RESEARCH_HISTORY.md 갱신"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] logo_mockup_automation_process.md · HISTORY.md · FINAL_MODEL_QC_REPORT.md"
+        },
+        {
+          "projectId": "066",
+          "did": "[fs scan] README.md · SESSION_RESUME.md · refresh-prices.ts · index.html · package-lock.json 외 40건"
         }
       ]
     },
     {
       "date": "2026-05-22",
       "weekday": "금",
-      "filesChanged": 8,
+      "filesChanged": 12,
       "topProjectIds": [
-        "063"
+        "063",
+        "053",
+        "062"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "워크스페이스 전체 스캔 · 깨진 링크 핫픽스 (즉시 가능한 3건 + α) · W21 weekly JSON 업데이트",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260522_log.md"
+        },
+        {
+          "projectId": "053",
+          "did": "SME_SILICON_SAMPLING_RESEARCH.md · EXPERIMENTAL_PAPER_PROPOSAL.md · LITERATURE_INDEX.md · scripts/explore_assist.py"
+        },
+        {
+          "projectId": "062",
+          "did": "[fs scan] background.js"
         }
       ]
     },
@@ -95,11 +173,27 @@
   "projects": [
     {
       "id": "063",
-      "pct": 100,
+      "pct": 40,
       "filesChanged": 40,
       "imp": 5,
       "did": "W14~W17 weekly JSON 4개 소급 백필 (extract-week.mjs draft + 일일 로그 6편 의미 보강, 12일 entries 추출) · /daily 라우트 + DailyRow + DailyListClient (좌측 큰 날짜 + 우측 프로젝트별 작업 + ProjectComments 날짜별 묶음) · daily[].entries[] 스키마 + extract-daily-entries.mjs 자동 파서 · lib/projects.ts 분리 (client-safe lookup) · 의사결정 타임라인 C-형식 그룹화 (MILESTONE 상단 / 일반 하단, 각 행 시간순) · 27 파일 단일 commit + origin push · vercel deploy --prod (47초, READY)",
       "nextAction": "Vercel GitHub Root Directory = app 설정 (웹 대시보드) · Claude cron 주간 자동 빌드 · Phase 4 monthly/yearly 집계 자동화"
+    },
+    {
+      "id": "092",
+      "pct": 35,
+      "filesChanged": 25,
+      "imp": 4,
+      "did": "4컷만화 대본/프롬프트 v0.1 · 마음이 에너지 컬러가이드 · PROJECT.md · 03_프롬프트 5종(공통 앵커·Scene1 v0.2·에너지컬러별 6장면·시나리오기반 컷별·4컷만화) · 02_대본(에너지컬러별 미장센·샷리스트 v0.3) · 05_제작(마음이 재시작·캐릭터디자인 프로세스·스토리보드·scene_design 작업프로세스) · 07_수업자료(happy design 분석·infographic) · 생성이미지/character_dev + 2026-05-21_image_generation_project",
+      "nextAction": "샷리스트 v0.4 + 이미지 생성 본격 진행 · 스토리보드 → 제작"
+    },
+    {
+      "id": "053",
+      "pct": 25,
+      "filesChanged": 15,
+      "imp": 4,
+      "did": "PROJECT.md + CLAUDE.md 셋업 · scripts 6종(prompts·download_papers·download_all_pdfs·run_master_bot·server·explore_assist) · 연구 문서 3종(SME_SILICON_SAMPLING_RESEARCH·EXPERIMENTAL_PAPER_PROPOSAL·LITERATURE_INDEX) · symposium_dashboard.html · BIBLIOGRAPHY/RESEARCH_MASTER + PERSONA_RESEARCH_HISTORY 갱신",
+      "nextAction": "symposium 발표 자료 마무리 · 실험 design prompt 정합성 검증"
     }
   ],
   "decisions": [
@@ -167,30 +261,38 @@
       "title": "옵션 B 채택 — aliases + 일괄 마이그레이션 (옛 ID 11개 → 카테고리 prefix 신규 ID)",
       "description": "중장기 누적 부채 회피 위해 (B) 채택. ProjectMeta에 aliases?: string[] 추가, lookupProject가 alias도 검색. migrate-project-ids.mjs 스크립트로 11 detail JSON rename + 7 weekly JSON 81 참조 일괄 치환 (백업: _backups/migration_20260522.tar.gz). 매핑: 05→051(DSAPG), 06→012(AI_Design), 08→034(MNServe), 10→101(일상다반사), 11→067(디자인매거진), 12→033(Data_Study), 21→054(CPSF), 22→02(Data_Kaywon), 31→083(촬영용), 32→084(강연시리즈), 51→052(페르소나). 신규 13개 메타+stub JSON 추가 (011·031·032·035·036·037·038·04·053·055·056·066·082·092). projects.json 26 → 38개. 옛 04/07(antigravity/AIDX, 폴더 삭제됨)은 메타 삭제.",
       "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "병렬 세션 활동 백필 — 092 영상과제·053 ResearchMasterBot",
+      "description": "대시보드 데이터 흐름 진단 결과 docs/logs/*.md가 단일 Claude 세션에서만 작성되어 병렬 작업이 누락됨을 발견. 092(5/18~5/21 25파일)·053(5/20~5/22 15파일) 활동을 파일시스템 mtime 기반으로 수동 백필. extract-from-filesystem.mjs(B) + 세션 종료 자동 로그 hook(C) 후속 작업으로 자동화 예정.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
-    "081", "102", "103",
-    "011", "031", "032", "035", "036", "037", "038",
-    "04", "053", "055", "056", "066", "082", "092"
+    "081",
+    "102",
+    "103",
+    "011",
+    "031",
+    "032",
+    "035",
+    "036",
+    "037",
+    "038",
+    "04",
+    "053",
+    "055",
+    "056",
+    "066",
+    "082",
+    "092"
   ],
-  "labelChanges": [
-    { "projectId": "012", "from": "active", "to": "active" },
-    { "projectId": "02",  "from": "active", "to": "active" },
-    { "projectId": "033", "from": "active", "to": "active" },
-    { "projectId": "034", "from": "active", "to": "active" },
-    { "projectId": "051", "from": "active", "to": "active" },
-    { "projectId": "052", "from": "active", "to": "active" },
-    { "projectId": "054", "from": "active", "to": "active" },
-    { "projectId": "067", "from": "active", "to": "active" },
-    { "projectId": "083", "from": "active", "to": "active" },
-    { "projectId": "084", "from": "active", "to": "active" },
-    { "projectId": "101", "from": "active", "to": "active" }
-  ],
+  "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "labelChanges": [],
-  "buildAt": "2026-05-22T02:47:41.313Z",
+  "buildAt": "2026-05-22T03:32:21.769Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

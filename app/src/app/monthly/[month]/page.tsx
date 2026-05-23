@@ -280,57 +280,59 @@ function MonthDetail({
         </div>
       </section>
 
-      {/* 1fr (sidebar) + 2fr (top 10 narrative) */}
+      {/* 한 달 요약 — 페이지 2/3 width hero */}
+      <section style={{ marginBottom: 'var(--sp-6)' }}>
+        <div
+          style={{
+            width: '66.66%',
+            background: 'var(--white)',
+            border: 'var(--border-1)',
+            padding: 'var(--sp-6) var(--sp-8)',
+          }}
+        >
+          <div
+            style={{
+              fontSize: 10,
+              fontWeight: 700,
+              color: 'var(--gray-500)',
+              textTransform: 'uppercase',
+              letterSpacing: 'var(--tracking-wide)',
+              marginBottom: 'var(--sp-3)',
+              fontFamily: 'var(--font-mono)',
+            }}
+          >
+            한 달 요약
+          </div>
+          <div style={{ fontSize: 'var(--text-base)', color: 'var(--gray-800)', lineHeight: 1.75 }}>
+            {top10.length > 0 ? (
+              <>
+                Top 활동 프로젝트는 <strong>#{top10[0][0]} {getProject(top10[0][0])?.name}</strong>
+                {top10[1] ? <> · <strong>#{top10[1][0]} {getProject(top10[1][0])?.name}</strong></> : ''}
+                {top10[2] ? <> · <strong>#{top10[2][0]} {getProject(top10[2][0])?.name}</strong></> : ''}.
+                {' '}총 <strong>{totalFilesChanged}</strong> files ·
+                <strong> {monthly.aggregated.newProjectsCount}</strong>개 신규 ·
+                milestone <strong>{monthly.aggregated.milestonesCount}</strong>건.
+                {weekIds.length === 5 ? ' (5-WEEK 월)' : ''}
+              </>
+            ) : (
+              '데이터 없음'
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* swap: 2fr (Milestone) + 1fr (sidebar: Top 10 · 주간 · Type) */}
       <section
         style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 2fr',
+          gridTemplateColumns: '2fr 1fr',
           gap: 'var(--sp-6)',
           alignItems: 'flex-start',
           marginBottom: 'var(--sp-12)',
         }}
       >
-        {/* LEFT — sidebar (sticky) */}
-        <aside
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 'var(--sp-5)',
-            position: 'sticky',
-            top: 80,
-          }}
-        >
-          {/* 한 달 요약 */}
-          <div style={{ background: 'var(--white)', border: 'var(--border-1)', padding: 'var(--sp-5)' }}>
-            <div
-              style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: 'var(--gray-500)',
-                textTransform: 'uppercase',
-                letterSpacing: 'var(--tracking-wide)',
-                marginBottom: 'var(--sp-3)',
-              }}
-            >
-              한 달 요약
-            </div>
-            <div style={{ fontSize: 13, color: 'var(--gray-700)', lineHeight: 1.7 }}>
-              {top10.length > 0 ? (
-                <>
-                  Top 활동 프로젝트는 <strong>#{top10[0][0]} {getProject(top10[0][0])?.name}</strong>
-                  {top10[1] ? ` · #${top10[1][0]} ${getProject(top10[1][0])?.name}` : ''}.
-                  {' '}
-                  총 {totalFilesChanged} files · {monthly.aggregated.newProjectsCount}개 신규
-                  · milestone {monthly.aggregated.milestonesCount}건.
-                  {weekIds.length === 5 ? ' (5-WEEK 월)' : ''}
-                </>
-              ) : (
-                '데이터 없음'
-              )}
-            </div>
-          </div>
-
-          {/* Milestone */}
+        {/* LEFT (2fr) — ★ Milestone (옛 Top 10 자리) */}
+        <div>
           {monthly.milestones.length > 0 ? (
             <div>
               <div
@@ -377,6 +379,105 @@ function MonthDetail({
               ))}
             </div>
           ) : null}
+        </div>
+
+        {/* RIGHT (1fr) — sidebar: Top 10 (compact) + 주간 + Type 분포 */}
+        <aside
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'var(--sp-5)',
+            position: 'sticky',
+            top: 80,
+          }}
+        >
+          {/* Top 10 (compact list) */}
+          <div>
+            <div
+              style={{
+                fontSize: 10,
+                fontWeight: 700,
+                color: 'var(--gray-500)',
+                textTransform: 'uppercase',
+                letterSpacing: 'var(--tracking-wide)',
+                padding: '0 4px var(--sp-2)',
+              }}
+            >
+              Top 10 · 이 달 진행 ({top10.length})
+            </div>
+            <div style={{ background: 'var(--white)', border: 'var(--border-1)' }}>
+              {top10.length === 0 ? (
+                <div style={{ padding: 'var(--sp-4)', fontSize: 11, color: 'var(--gray-500)', textAlign: 'center' }}>
+                  이 달 활동 데이터 없음
+                </div>
+              ) : (
+                top10.map(([pid, files], idx) => {
+                  const meta = getProject(pid);
+                  if (!meta) return null;
+                  const pct = Math.round((files / Math.max(totalFilesChanged, 1)) * 100);
+                  let imp = 0;
+                  for (const w of weeks) {
+                    if (!w) continue;
+                    const p = w.projects.find((p) => p.id === pid);
+                    if (p && p.imp > imp) imp = p.imp;
+                  }
+                  return (
+                    <Link
+                      key={pid}
+                      href={`/projects/${pid}`}
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: '24px 1fr auto',
+                        gap: 'var(--sp-2)',
+                        alignItems: 'center',
+                        padding: '8px 12px',
+                        borderTop: idx === 0 ? 'none' : '1px solid var(--gray-100)',
+                        borderLeft: `3px solid ${TYPE_COLOR[meta.type]}`,
+                        textDecoration: 'none',
+                        color: 'inherit',
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: 10,
+                          fontFamily: 'var(--font-mono)',
+                          color: 'var(--gray-400)',
+                          fontWeight: 700,
+                        }}
+                      >
+                        #{idx + 1}
+                      </span>
+                      <span style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--gray-900)', lineHeight: 1.2 }}>
+                          {meta.name}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: 9,
+                            fontFamily: 'var(--font-mono)',
+                            color: 'var(--gray-400)',
+                            marginTop: 2,
+                          }}
+                        >
+                          {pid} · {files}f · imp{imp}
+                        </span>
+                      </span>
+                      <span
+                        style={{
+                          fontSize: 13,
+                          fontWeight: 700,
+                          color: 'var(--gray-900)',
+                          fontVariantNumeric: 'tabular-nums',
+                        }}
+                      >
+                        {pct}%
+                      </span>
+                    </Link>
+                  );
+                })
+              )}
+            </div>
+          </div>
 
           {/* 이 달의 주간 */}
           <div>
@@ -484,74 +585,6 @@ function MonthDetail({
             </div>
           </div>
         </aside>
-
-        {/* RIGHT — Top 10 narrative */}
-        <div>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'baseline',
-              paddingBottom: 'var(--sp-2)',
-              borderBottom: '1px solid var(--gray-300)',
-              marginBottom: 'var(--sp-3)',
-            }}
-          >
-            <h2
-              style={{
-                fontSize: 'var(--text-lg)',
-                fontWeight: 700,
-                color: 'var(--black)',
-                letterSpacing: 'var(--tracking-tight)',
-              }}
-            >
-              Top 10 · 이 달 진행
-            </h2>
-            <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>
-              {top10.length}개 · 파일 변경 수 기준
-            </div>
-          </div>
-
-          {top10.length === 0 ? (
-            <div
-              style={{
-                padding: 'var(--sp-8)',
-                background: 'var(--white)',
-                border: 'var(--border-1)',
-                color: 'var(--gray-500)',
-                fontSize: 'var(--text-sm)',
-                textAlign: 'center',
-              }}
-            >
-              이 달 활동 데이터 없음.
-            </div>
-          ) : (
-            <div>
-              {top10.map(([pid, files], idx) => {
-                const meta = getProject(pid);
-                if (!meta) return null;
-                // imp는 그 달 weekly 중 최댓값
-                let imp = 0;
-                for (const w of weeks) {
-                  if (!w) continue;
-                  const p = w.projects.find((p) => p.id === pid);
-                  if (p && p.imp > imp) imp = p.imp;
-                }
-                return (
-                  <PeriodProjectTile
-                    key={pid}
-                    projectId={pid}
-                    rank={idx + 1}
-                    pct={Math.round((files / Math.max(totalFilesChanged, 1)) * 100)}
-                    imp={imp}
-                    metaLine={`${files} files`}
-                    narrative={buildNarrative(pid)}
-                  />
-                );
-              })}
-            </div>
-          )}
-        </div>
       </section>
     </>
   );

@@ -139,7 +139,8 @@
       "topProjectIds": [
         "063",
         "053",
-        "062"
+        "062",
+        "092"
       ],
       "entries": [
         {
@@ -154,6 +155,10 @@
         {
           "projectId": "062",
           "did": "[fs scan] background.js"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 스토리보드_AB_프롬프트전체_비교문서_v0.2.md"
         }
       ]
     },
@@ -161,7 +166,25 @@
       "date": "2026-05-23",
       "weekday": "토",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "061",
+        "091",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "061",
+          "did": "[fs scan] activity-tracker-input-flow.html · activity-tracker-mockup.html · routine-end-workflow.html · tags.ts"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] CLAUDE.md · 00_INDEX.md · 01_현재진단_평가.md · 02_업그레이드_전략.md · 03_출판기획안_v3.0_GPT초안.md 외 7건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W21.json"
+        }
+      ]
     },
     {
       "date": "2026-05-24",
@@ -306,7 +329,7 @@
   "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "buildAt": "2026-05-22T04:46:06.310Z",
+  "buildAt": "2026-05-23T06:36:20.652Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

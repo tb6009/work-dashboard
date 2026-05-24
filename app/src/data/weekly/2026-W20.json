@@ -765,7 +765,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-24T07:08:53.389Z",
+  "buildAt": "2026-05-24T22:16:25.675Z",
   "_meta": {
     "note": "2026-05-17 워크스페이스 대규모 재구조화로 063_workDashboard 위치 변경. extract-week.mjs WORKSPACE 경로 수정 완료. 일부 프로젝트의 폴더 위치는 바뀌었으나 historical ID는 유지(예: 11→디자인매거진 폴더, 31/32→083/084 폴더 등). 04·07 paused 항목은 폴더 삭제됨."
   }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 40 600 550" font-family="&#39;Avenir Next&#39;, &#39;Mulish&#39;, system-ui, -apple-system, sans-serif">
+  <defs>
+    
+  </defs>
+
+  
+  <text class="hd-section" x="80" y="115">Type</text>
+  <line class="divider" x1="80" y1="128" x2="620" y2="128"></line>
+
+  
+  <text class="hd-row" x="80" y="160">Word Mark</text>
+  <text class="bigjohn" x="315" y="162">Big John</text>
+  <text class="alpha-bigjohn" x="315" y="196">ABCDEFGHIJKLMNOPQRSTUVWXYZ</text>
+  <line class="divider" x1="80" y1="218" x2="620" y2="218"></line>
+
+  
+  <text class="hd-row" x="80" y="252">Main Type English</text>
+  <text class="hd-row-name" x="315" y="252">Avenir Next Family</text>
+
+  <text class="weight-label" x="275" y="292">Ultra Light</text>
+  <text class="alpha-ul" x="352" y="292">ABCDEFGHIJKLMNOPQRSTUVWXYZ</text>
+
+  <text class="weight-label" x="275" y="326">Regular</text>
+  <text class="alpha-rg" x="352" y="326">ABCDEFGHIJKLMNOPQRSTUVWXYZ</text>
+
+  <text class="weight-label" x="275" y="360">DemiBold</text>
+  <text class="alpha-db" x="352" y="360">ABCDEFGHIJKLMNOPQRSTUVWXYZ</text>
+
+  <line class="divider" x1="80" y1="385" x2="620" y2="385"></line>
+
+  
+  <text class="hd-row" x="80" y="412">Main Type Korean</text>
+  <text class="hd-row-name" x="315" y="412">나눔스퀘어 네오 OTF</text>
+
+  <text class="weight-label weight-label-kr" x="275" y="442">Light</text>
+  <text class="kr-text kr-light" x="352" y="442">앵커노드는 우주시민 모두에게 즐거움과 행복을 선사하는</text>
+  <text class="kr-text kr-light" x="352" y="461">게임과 콘텐츠를 개발합니다.</text>
+
+  <text class="weight-label weight-label-kr" x="275" y="492">Bold</text>
+  <text class="kr-text kr-bold" x="352" y="492">앵커노드는 우주시민 모두에게 즐거움과 행복을 선사하는</text>
+  <text class="kr-text kr-bold" x="352" y="511">게임과 콘텐츠를 개발합니다.</text>
+
+  <text class="weight-label weight-label-kr" x="275" y="544">Heavy</text>
+  <text class="kr-text kr-heavy" x="352" y="544">앵커노드는 우주시민 모두에게 즐거움과 행복을 선사하는</text>
+  <text class="kr-text kr-heavy" x="352" y="563">게임과 콘텐츠를 개발합니다.</text>
+</svg>

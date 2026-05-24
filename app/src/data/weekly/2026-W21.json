@@ -486,7 +486,93 @@
       "entries": [
         {
           "projectId": "063",
-          "did": "이미지 갤러리 시스템 — extract-images.mjs (whitelist + README caption) · public 복사 · ImageGallery 컴포넌트 (썸네일 + lightbox) · DailyRow 통합 · W21 77 이미지 / 47 attached"
+          "did": "이미지 갤러리 시스템 — extract-images.mjs (whitelist + README caption) · public 복사 · ImageGallery 컴포넌트 (썸네일 + lightbox) · DailyRow 통합 · W21 77 이미지 / 47 attached",
+          "images": [
+            {
+              "publicPath": "/project-images/063__111f0c57/01_skyblue_recovered_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/01_skyblue_recovered_scene.png",
+              "filename": "01_skyblue_recovered_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.604Z"
+            },
+            {
+              "publicPath": "/project-images/063__111f0c57/02_green_good_condition_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/02_green_good_condition_scene.png",
+              "filename": "02_green_good_condition_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.607Z"
+            },
+            {
+              "publicPath": "/project-images/063__111f0c57/03_yellow_warning_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/03_yellow_warning_scene.png",
+              "filename": "03_yellow_warning_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.615Z"
+            },
+            {
+              "publicPath": "/project-images/063__111f0c57/04_orange_low_energy_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/04_orange_low_energy_scene.png",
+              "filename": "04_orange_low_energy_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.618Z"
+            },
+            {
+              "publicPath": "/project-images/063__111f0c57/05_red_morning_classroom_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/05_red_morning_classroom_scene.png",
+              "filename": "05_red_morning_classroom_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.622Z"
+            },
+            {
+              "publicPath": "/project-images/063__111f0c57/06_red_depleted_class_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/06_red_depleted_class_scene.png",
+              "filename": "06_red_depleted_class_scene.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.628Z"
+            },
+            {
+              "publicPath": "/project-images/063__2ce54ad9/01_orange_warning_professor_classroom.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__25a0ca80/01_orange_warning_professor_classroom.png",
+              "filename": "01_orange_warning_professor_classroom.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.672Z"
+            },
+            {
+              "publicPath": "/project-images/063__a10f5181/01_sits_to_listen_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/01_sits_to_listen_simple_chair.png",
+              "filename": "01_sits_to_listen_simple_chair.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.676Z"
+            },
+            {
+              "publicPath": "/project-images/063__a10f5181/02_turns_dull_red_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/02_turns_dull_red_simple_chair.png",
+              "filename": "02_turns_dull_red_simple_chair.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.682Z"
+            },
+            {
+              "publicPath": "/project-images/063__a10f5181/03_drink_energy_drink_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/03_drink_energy_drink_simple_chair.png",
+              "filename": "03_drink_energy_drink_simple_chair.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.686Z"
+            },
+            {
+              "publicPath": "/project-images/063__3eb3031b/01_morning_class_professor_notices.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__38475849/01_morning_class_professor_notices.png",
+              "filename": "01_morning_class_professor_notices.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.537Z"
+            },
+            {
+              "publicPath": "/project-images/063__3eb3031b/02_last_night_study_screen.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__38475849/02_last_night_study_screen.png",
+              "filename": "02_last_night_study_screen.png",
+              "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
+              "mtime": "2026-05-24T05:24:41.540Z"
+            }
+          ]
         },
         {
           "projectId": "092",
@@ -744,7 +830,7 @@
   "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "buildAt": "2026-05-24T05:27:10.017Z",
+  "buildAt": "2026-05-24T05:52:39.560Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

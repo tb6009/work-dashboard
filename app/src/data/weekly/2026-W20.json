@@ -50,7 +50,294 @@
       "filesChanged": 50,
       "topProjectIds": [
         "061",
-        "063"
+        "063",
+        "035",
+        "081",
+        "092"
+      ],
+      "entries": [
+        {
+          "projectId": "035",
+          "did": "[이미지 50장] outputs",
+          "images": [
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/01_style_c_flat_people_pose_sheet.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/01_style_c_flat_people_pose_sheet.png",
+              "filename": "01_style_c_flat_people_pose_sheet.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T12:28:49.569Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/02_style_d_bighead_mascot_pose_sheet.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/02_style_d_bighead_mascot_pose_sheet.png",
+              "filename": "02_style_d_bighead_mascot_pose_sheet.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T12:30:01.403Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/03_style_a_blue_line_icon_set.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/03_style_a_blue_line_icon_set.png",
+              "filename": "03_style_a_blue_line_icon_set.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T12:31:27.276Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/04_style_bef_emotion_icon_set.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/04_style_bef_emotion_icon_set.png",
+              "filename": "04_style_bef_emotion_icon_set.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T12:36:08.662Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_01_practical_flat_8actions.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_01_practical_flat_8actions.png",
+              "filename": "action_style_01_practical_flat_8actions.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.708Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_02_rounded_sticker_8actions.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_02_rounded_sticker_8actions.png",
+              "filename": "action_style_02_rounded_sticker_8actions.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.708Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_03_line_color_hybrid_8actions.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_03_line_color_hybrid_8actions.png",
+              "filename": "action_style_03_line_color_hybrid_8actions.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.714Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_04_soft_editorial_8actions.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_04_soft_editorial_8actions.png",
+              "filename": "action_style_04_soft_editorial_8actions.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.725Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_05_bold_mascot_8actions.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_05_bold_mascot_8actions.png",
+              "filename": "action_style_05_bold_mascot_8actions.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.721Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/action_style_06_minimal_status_12icons.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/action_style_06_minimal_status_12icons.png",
+              "filename": "action_style_06_minimal_status_12icons.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T14:23:06.721Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/pure_reference_01_monoline_actions_12.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/pure_reference_01_monoline_actions_12.png",
+              "filename": "pure_reference_01_monoline_actions_12.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T15:07:42.540Z"
+            },
+            {
+              "publicPath": "/project-images/035__9a2fcd1a/pure_reference_02_bighead_actions_12.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/이지윤/image_generation_project/outputs/pure_reference_02_bighead_actions_12.png",
+              "filename": "pure_reference_02_bighead_actions_12.png",
+              "folderContext": "03_school_project / 관리비책 / 이지윤 / image_generation_project / outputs",
+              "mtime": "2026-05-13T15:07:42.548Z"
+            }
+          ]
+        },
+        {
+          "projectId": "081",
+          "did": "[이미지 20장] logo",
+          "images": [
+            {
+              "publicPath": "/project-images/081__6c4d6324/AnchorNode_CI_Guide_V01.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/AnchorNode_CI_Guide_V01.svg",
+              "filename": "AnchorNode_CI_Guide_V01.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-mono-reverse-tone.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-mono-reverse-tone.svg",
+              "filename": "anchor-symbol-mono-reverse-tone.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-mono-reverse.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-mono-reverse.svg",
+              "filename": "anchor-symbol-mono-reverse.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-mono-tone.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-mono-tone.svg",
+              "filename": "anchor-symbol-mono-tone.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-mono.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-mono.svg",
+              "filename": "anchor-symbol-mono.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-reverse.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-reverse.svg",
+              "filename": "anchor-symbol-reverse.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-v2.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-v2.svg",
+              "filename": "anchor-symbol-v2.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/anchor-symbol-v3.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/anchor-symbol-v3.svg",
+              "filename": "anchor-symbol-v3.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/logo01.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/logo01.svg",
+              "filename": "logo01.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/logo02.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/logo02.svg",
+              "filename": "logo02.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/logo03.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/logo03.svg",
+              "filename": "logo03.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            },
+            {
+              "publicPath": "/project-images/081__6c4d6324/logo05_type.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/081_Anchornode/brand asset01/assets/logo/logo05_type.svg",
+              "filename": "logo05_type.svg",
+              "folderContext": "08_project / 081_Anchornode / brand asset01 / assets / logo",
+              "mtime": "2026-05-13T02:59:08.000Z",
+              "purpose": "한 줄 정의: Anchor Node 브랜드 + 서비스(gameaify, spica) 3개 디자인 트랙을 한 곳에서 진행 상태: 🟢 active 최종 업데이트: 2026-05-13"
+            }
+          ]
+        },
+        {
+          "projectId": "092",
+          "did": "[이미지 17장] reference Image",
+          "images": [
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/239594a5ed14107fb258a1e15224e26b.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/239594a5ed14107fb258a1e15224e26b.jpg",
+              "filename": "239594a5ed14107fb258a1e15224e26b.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:41:10.927Z"
+            },
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/5c8f957b2f65e8e9666e049a1287d1fa.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/5c8f957b2f65e8e9666e049a1287d1fa.jpg",
+              "filename": "5c8f957b2f65e8e9666e049a1287d1fa.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:40:50.006Z"
+            },
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/627bccbe68b1b37b63e99518ee8d36d9.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/627bccbe68b1b37b63e99518ee8d36d9.jpg",
+              "filename": "627bccbe68b1b37b63e99518ee8d36d9.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:41:44.823Z"
+            },
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/8d5219a34264c8f598cc29d3d1a886b3.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/8d5219a34264c8f598cc29d3d1a886b3.jpg",
+              "filename": "8d5219a34264c8f598cc29d3d1a886b3.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:41:51.902Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/841b243f7bb1853efa916a891199bae5.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/841b243f7bb1853efa916a891199bae5.jpg",
+              "filename": "841b243f7bb1853efa916a891199bae5.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:43:08.240Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/9986dacafc37db7c000a20e3e703a895.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/9986dacafc37db7c000a20e3e703a895.jpg",
+              "filename": "9986dacafc37db7c000a20e3e703a895.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:42:32.308Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/9a308d3f789de1be8f2ee5d437635b35.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/9a308d3f789de1be8f2ee5d437635b35.jpg",
+              "filename": "9a308d3f789de1be8f2ee5d437635b35.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:42:42.784Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/b2d3fe30255663ab98ccbd7bb2b77118.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/b2d3fe30255663ab98ccbd7bb2b77118.jpg",
+              "filename": "b2d3fe30255663ab98ccbd7bb2b77118.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:43:00.355Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/dd9716c77c6463d2be8772deadf42ae6.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/dd9716c77c6463d2be8772deadf42ae6.jpg",
+              "filename": "dd9716c77c6463d2be8772deadf42ae6.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:42:23.998Z"
+            },
+            {
+              "publicPath": "/project-images/092__3d71cc14/df6ed85c0b92a0090363f92ef8ca3fa8.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/bg/df6ed85c0b92a0090363f92ef8ca3fa8.jpg",
+              "filename": "df6ed85c0b92a0090363f92ef8ca3fa8.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:42:09.591Z"
+            },
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/c3894deba6814b86c7569fe51fe8e39b.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/c3894deba6814b86c7569fe51fe8e39b.jpg",
+              "filename": "c3894deba6814b86c7569fe51fe8e39b.jpg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:41:27.701Z"
+            },
+            {
+              "publicPath": "/project-images/092__5f1e0e5b/videoframe_2896.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/03_참고자료/reference Image/background/videoframe_2896.png",
+              "filename": "videoframe_2896.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / 03_참고자료 / reference Image",
+              "mtime": "2026-05-13T05:39:50.761Z"
+            }
+          ]
+        }
       ]
     },
     {
@@ -58,7 +345,72 @@
       "weekday": "목",
       "filesChanged": 45,
       "topProjectIds": [
-        "03"
+        "03",
+        "035"
+      ],
+      "entries": [
+        {
+          "projectId": "035",
+          "did": "[이미지 8장] references · outputs",
+          "images": [
+            {
+              "publicPath": "/project-images/035__ee835c1f/1.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/1.png",
+              "filename": "1.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:35:34.984Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/2.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/2.png",
+              "filename": "2.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:35:40.201Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/3.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/3.png",
+              "filename": "3.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:35:41.535Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/4.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/4.png",
+              "filename": "4.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:35:53.180Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/5.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/5.png",
+              "filename": "5.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:35:59.740Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/6.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/6.png",
+              "filename": "6.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:36:09.659Z"
+            },
+            {
+              "publicPath": "/project-images/035__ee835c1f/7.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/김채린/image_generation_project/references/7.png",
+              "filename": "7.png",
+              "folderContext": "03_school_project / 관리비책 / 김채린 / image_generation_project / references",
+              "mtime": "2026-05-14T01:36:17.071Z"
+            },
+            {
+              "publicPath": "/project-images/035__6135ab42/20260514_manager_ref02_ultra_simple_line_studies.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/남서윤/image_generation_project/outputs/20260514_manager_ref02_ultra_simple_line_studies.png",
+              "filename": "20260514_manager_ref02_ultra_simple_line_studies.png",
+              "folderContext": "03_school_project / 관리비책 / 남서윤 / image_generation_project / outputs",
+              "mtime": "2026-05-14T09:13:04.193Z"
+            }
+          ]
+        }
       ]
     },
     {
@@ -91,7 +443,126 @@
       "filesChanged": 35,
       "topProjectIds": [
         "01",
-        "063"
+        "063",
+        "092",
+        "103"
+      ],
+      "entries": [
+        {
+          "projectId": "092",
+          "did": "[이미지 38장] generated_scene1",
+          "images": [
+            {
+              "publicPath": "/project-images/092__538071e5/Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "filename": "Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.678Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "filename": "Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.642Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "filename": "Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.635Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Empty_university_lecture_hall_202605102313.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Empty_university_lecture_hall_202605102313.jpeg",
+              "filename": "Empty_university_lecture_hall_202605102313.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.676Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "filename": "Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.653Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_holding_energy_drink_202605102307.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_holding_energy_drink_202605102307.jpeg",
+              "filename": "Female_student_holding_energy_drink_202605102307.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.670Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "filename": "Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.681Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_sitting_at_desk_202605102318.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_sitting_at_desk_202605102318.jpeg",
+              "filename": "Female_student_sitting_at_desk_202605102318.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.632Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "filename": "Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.638Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Female_student_walking_lecture_hall_202605102316.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Female_student_walking_lecture_hall_202605102316.jpeg",
+              "filename": "Female_student_walking_lecture_hall_202605102316.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.658Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "filename": "Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.645Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__538071e5/Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/04_레퍼런스/generated_scene1/Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "filename": "Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 04_레퍼런스 / generated_scene1",
+              "mtime": "2026-05-17T03:44:26.667Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            }
+          ]
+        },
+        {
+          "projectId": "103",
+          "did": "[이미지 1장] v1.6",
+          "images": [
+            {
+              "publicPath": "/project-images/103__cac38b8d/icon.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/103_Gemini_실험/outputs/보살핌_앱/v1.6/icon.svg",
+              "filename": "icon.svg",
+              "folderContext": "10_보고살피다 / 103_Gemini_실험 / outputs / 보살핌_앱 / v1.6",
+              "mtime": "2026-05-17T01:03:40.082Z"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -294,7 +765,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-22T03:03:15.784Z",
+  "buildAt": "2026-05-24T05:52:39.559Z",
   "_meta": {
     "note": "2026-05-17 워크스페이스 대규모 재구조화로 063_workDashboard 위치 변경. extract-week.mjs WORKSPACE 경로 수정 완료. 일부 프로젝트의 폴더 위치는 바뀌었으나 historical ID는 유지(예: 11→디자인매거진 폴더, 31/32→083/084 폴더 등). 04·07 paused 항목은 폴더 삭제됨."
   }

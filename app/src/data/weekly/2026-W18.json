@@ -25,7 +25,80 @@
       "date": "2026-04-28",
       "weekday": "화",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "052"
+      ],
+      "entries": [
+        {
+          "projectId": "052",
+          "did": "[이미지 9장] docs",
+          "images": [
+            {
+              "publicPath": "/project-images/052__e606b786/hero_benchmark_figure.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/devnotes/posts/assets/data-designer-got-skills/hero_benchmark_figure.png",
+              "filename": "hero_benchmark_figure.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__e606b786/hero_data_designer_got_skills.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/devnotes/posts/assets/data-designer-got-skills/hero_data_designer_got_skills.png",
+              "filename": "hero_data_designer_got_skills.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__c115c2ed/design-principles-hero.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/devnotes/posts/assets/design-principles/design-principles-hero.png",
+              "filename": "design-principles-hero.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__78577474/structured-outputs-sample-record.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/devnotes/posts/assets/structured-outputs-from-nemotron/structured-outputs-sample-record.png",
+              "filename": "structured-outputs-sample-record.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__8feb3269/deployment-enterprise-gateway.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/images/deployment-enterprise-gateway.png",
+              "filename": "deployment-enterprise-gateway.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__8feb3269/deployment-library-decentralized.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/images/deployment-library-decentralized.png",
+              "filename": "deployment-library-decentralized.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__8feb3269/deployment-microservice.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/images/deployment-microservice.png",
+              "filename": "deployment-microservice.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__8feb3269/rqa-blog.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/images/rqa-blog.png",
+              "filename": "rqa-blog.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            },
+            {
+              "publicPath": "/project-images/052__8feb3269/top-models.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/페르소나_연구/Data/DataDesigner-main/docs/images/top-models.png",
+              "filename": "top-models.png",
+              "folderContext": "05_phD_Research / 페르소나_연구 / Data / DataDesigner-main / docs",
+              "mtime": "2026-04-28T19:35:54.000Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-29",
@@ -33,13 +106,37 @@
       "filesChanged": 25,
       "topProjectIds": [
         "084",
-        "00"
+        "00",
+        "102"
       ],
       "entries": [
         {
           "projectId": "084",
           "did": "주간 점검 — 발견 사항 · 32_강연시리즈 신규 프로젝트 생성 · 31번 vs 32번 책임 분리",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260429_log.md"
+        },
+        {
+          "projectId": "102",
+          "did": "[이미지 2장] 마음_앱 · v1.5",
+          "images": [
+            {
+              "publicPath": "/project-images/102__606470b6/icon.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/outputs/마음_앱/icon.svg",
+              "filename": "icon.svg",
+              "folderContext": "10_보고살피다 / 102_GPT_실험 / outputs / 마음_앱",
+              "mtime": "2026-04-29T02:11:07.753Z",
+              "caption": "몸과 마음의 과학을 시니컬하고 유쾌하게 풀어주는 대화형 에이전트. Anthropic Claude API 기반 단일 HTML 웹앱 + PWA.",
+              "purpose": "원본 `../101_일상다반사`에서 보살피고/마음 프로젝트의 핵심만 복사한 GPT 작업용 폴더. 위치: `10_보고살피다/102_GPT_실험/` (2026-05-17 재구조) 목적: GPT 환경에서 같은 서비스 프로젝트를 이해하고, 테스트하고, v1.5 베타를 개선할 수 있도록 최소 실행 패키지를 제공한다."
+            },
+            {
+              "publicPath": "/project-images/102__4814b8bb/icon.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/102_GPT_실험/outputs/마음_앱/v1.5/icon.svg",
+              "filename": "icon.svg",
+              "folderContext": "10_보고살피다 / 102_GPT_실험 / outputs / 마음_앱 / v1.5",
+              "mtime": "2026-04-29T02:11:07.817Z",
+              "purpose": "원본 `../101_일상다반사`에서 보살피고/마음 프로젝트의 핵심만 복사한 GPT 작업용 폴더. 위치: `10_보고살피다/102_GPT_실험/` (2026-05-17 재구조) 목적: GPT 환경에서 같은 서비스 프로젝트를 이해하고, 테스트하고, v1.5 베타를 개선할 수 있도록 최소 실행 패키지를 제공한다."
+            }
+          ]
         }
       ]
     },
@@ -62,7 +159,66 @@
       "weekday": "토",
       "filesChanged": 50,
       "topProjectIds": [
-        "061"
+        "061",
+        "101"
+      ],
+      "entries": [
+        {
+          "projectId": "061",
+          "did": "[이미지 4장] 블로그",
+          "images": [
+            {
+              "publicPath": "/project-images/061__124296b3/LifeOS_design04.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/personal/블로그/LifeOS_design04.png",
+              "filename": "LifeOS_design04.png",
+              "folderContext": "06_Personal_Project / 061_LifeOS / personal / 블로그",
+              "mtime": "2026-05-02T23:22:18.474Z",
+              "caption": "메인 작업 폴더는 `10-일상다반사/마음_프로덕트/03_blog_process/` 입니다. 이 폴더는 빠른 접근을 위한 링크 모음이에요.",
+              "purpose": "한 줄 정의: 진(집사)·모미(PT)·마음(코치) 3 캐릭터가 일정·생산성·몸·마음·재정을 종합 관리하는 개인 시스템 상태: 🟢 active (MVP 단계) 최종 업데이트: 2026-04-29"
+            },
+            {
+              "publicPath": "/project-images/061__124296b3/lifeOS_design02.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/personal/블로그/lifeOS_design02.png",
+              "filename": "lifeOS_design02.png",
+              "folderContext": "06_Personal_Project / 061_LifeOS / personal / 블로그",
+              "mtime": "2026-05-02T23:17:52.785Z",
+              "caption": "메인 작업 폴더는 `10-일상다반사/마음_프로덕트/03_blog_process/` 입니다. 이 폴더는 빠른 접근을 위한 링크 모음이에요.",
+              "purpose": "한 줄 정의: 진(집사)·모미(PT)·마음(코치) 3 캐릭터가 일정·생산성·몸·마음·재정을 종합 관리하는 개인 시스템 상태: 🟢 active (MVP 단계) 최종 업데이트: 2026-04-29"
+            },
+            {
+              "publicPath": "/project-images/061__124296b3/lifeOS_design03.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/personal/블로그/lifeOS_design03.png",
+              "filename": "lifeOS_design03.png",
+              "folderContext": "06_Personal_Project / 061_LifeOS / personal / 블로그",
+              "mtime": "2026-05-02T23:22:18.464Z",
+              "caption": "메인 작업 폴더는 `10-일상다반사/마음_프로덕트/03_blog_process/` 입니다. 이 폴더는 빠른 접근을 위한 링크 모음이에요.",
+              "purpose": "한 줄 정의: 진(집사)·모미(PT)·마음(코치) 3 캐릭터가 일정·생산성·몸·마음·재정을 종합 관리하는 개인 시스템 상태: 🟢 active (MVP 단계) 최종 업데이트: 2026-04-29"
+            },
+            {
+              "publicPath": "/project-images/061__124296b3/lifeOS_design031.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/personal/블로그/lifeOS_design031.png",
+              "filename": "lifeOS_design031.png",
+              "folderContext": "06_Personal_Project / 061_LifeOS / personal / 블로그",
+              "mtime": "2026-05-02T23:22:18.437Z",
+              "caption": "메인 작업 폴더는 `10-일상다반사/마음_프로덕트/03_blog_process/` 입니다. 이 폴더는 빠른 접근을 위한 링크 모음이에요.",
+              "purpose": "한 줄 정의: 진(집사)·모미(PT)·마음(코치) 3 캐릭터가 일정·생산성·몸·마음·재정을 종합 관리하는 개인 시스템 상태: 🟢 active (MVP 단계) 최종 업데이트: 2026-04-29"
+            }
+          ]
+        },
+        {
+          "projectId": "101",
+          "did": "[이미지 1장] v1.5",
+          "images": [
+            {
+              "publicPath": "/project-images/101__31484c69/icon.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/outputs/마음_앱/v1.5/icon.svg",
+              "filename": "icon.svg",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / outputs / 마음_앱 / v1.5",
+              "mtime": "2026-05-02T21:51:09.789Z",
+              "purpose": "한 줄 정의: \"보살피고(BOSALPIGO)\" 4 캐릭터(마음·모미·요기·숨이) 챗봇 + 자료 자동수집 (3 서브 통합 구조) 상태: 🟢 active 위치: `10_보고살피다/101_일상다반사/` (2026-05-17 재구조) 최종 업데이트: 2026-05-17"
+            }
+          ]
+        }
       ]
     },
     {
@@ -263,5 +419,5 @@
       "to": "new"
     }
   ],
-  "buildAt": "2026-05-22T03:03:15.782Z"
+  "buildAt": "2026-05-24T05:52:39.558Z"
 }

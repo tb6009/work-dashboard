@@ -17,26 +17,177 @@
       "date": "2026-04-13",
       "weekday": "월",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "031",
+        "032"
+      ],
+      "entries": [
+        {
+          "projectId": "031",
+          "did": "[이미지 3장] 02_concept_posters",
+          "images": [
+            {
+              "publicPath": "/project-images/031__df91fdfa/01_poster_A_warm_lab.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Jstrata/02_concept_posters/01_poster_A_warm_lab.png",
+              "filename": "01_poster_A_warm_lab.png",
+              "folderContext": "03_school_project / Data_Jstrata / 02_concept_posters",
+              "mtime": "2026-04-13T08:26:48.296Z",
+              "purpose": "한 줄 정의: J스트라타 레스베라트롤크림 브랜드 디자인 (3시안 · 콘셉트 포스터 · 가이드라인) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/031__df91fdfa/02_poster_B_vintners_note.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Jstrata/02_concept_posters/02_poster_B_vintners_note.png",
+              "filename": "02_poster_B_vintners_note.png",
+              "folderContext": "03_school_project / Data_Jstrata / 02_concept_posters",
+              "mtime": "2026-04-13T08:26:48.788Z",
+              "purpose": "한 줄 정의: J스트라타 레스베라트롤크림 브랜드 디자인 (3시안 · 콘셉트 포스터 · 가이드라인) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/031__df91fdfa/03_poster_C_clinical_poetry.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Jstrata/02_concept_posters/03_poster_C_clinical_poetry.png",
+              "filename": "03_poster_C_clinical_poetry.png",
+              "folderContext": "03_school_project / Data_Jstrata / 02_concept_posters",
+              "mtime": "2026-04-13T08:26:49.055Z",
+              "purpose": "한 줄 정의: J스트라타 레스베라트롤크림 브랜드 디자인 (3시안 · 콘셉트 포스터 · 가이드라인) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            }
+          ]
+        },
+        {
+          "projectId": "032",
+          "did": "[이미지 10장] analysis_log",
+          "images": [
+            {
+              "publicPath": "/project-images/032__d7c31ca4/phase1_01_word_emoji.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase1_outputs/phase1_01_word_emoji.png",
+              "filename": "phase1_01_word_emoji.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:13:36.132Z"
+            },
+            {
+              "publicPath": "/project-images/032__d7c31ca4/phase1_02_sentiment.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase1_outputs/phase1_02_sentiment.png",
+              "filename": "phase1_02_sentiment.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:13:36.224Z"
+            },
+            {
+              "publicPath": "/project-images/032__d7c31ca4/phase1_03_active_commenters.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase1_outputs/phase1_03_active_commenters.png",
+              "filename": "phase1_03_active_commenters.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:13:36.415Z"
+            },
+            {
+              "publicPath": "/project-images/032__72dfa7e6/phase2_01_overlap_matrix.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase2_outputs/phase2_01_overlap_matrix.png",
+              "filename": "phase2_01_overlap_matrix.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:17:34.161Z"
+            },
+            {
+              "publicPath": "/project-images/032__72dfa7e6/phase2_02_super_commenters.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase2_outputs/phase2_02_super_commenters.png",
+              "filename": "phase2_02_super_commenters.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:17:34.581Z"
+            },
+            {
+              "publicPath": "/project-images/032__72dfa7e6/phase2_03_top_pairs.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase2_outputs/phase2_03_top_pairs.png",
+              "filename": "phase2_03_top_pairs.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:17:34.723Z"
+            },
+            {
+              "publicPath": "/project-images/032__72dfa7e6/phase2_04_uniqueness.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase2_outputs/phase2_04_uniqueness.png",
+              "filename": "phase2_04_uniqueness.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:17:34.924Z"
+            },
+            {
+              "publicPath": "/project-images/032__72dfa7e6/phase2_05_network.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase2_outputs/phase2_05_network.png",
+              "filename": "phase2_05_network.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:17:35.176Z"
+            },
+            {
+              "publicPath": "/project-images/032__c00844a5/phase3_01_comparison.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase3_outputs/phase3_01_comparison.png",
+              "filename": "phase3_01_comparison.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:27:09.479Z"
+            },
+            {
+              "publicPath": "/project-images/032__c94ad562/phase4_01_engagement.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase4_outputs/phase4_01_engagement.png",
+              "filename": "phase4_01_engagement.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-13T02:27:54.608Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-14",
       "weekday": "화",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "032"
+      ],
+      "entries": [
+        {
+          "projectId": "032",
+          "did": "[이미지 1장] analysis_log",
+          "images": [
+            {
+              "publicPath": "/project-images/032__cf091a79/phase6_01_overview.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/analysis_log/phase6_full_outputs/phase6_01_overview.png",
+              "filename": "phase6_01_overview.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / analysis_log",
+              "mtime": "2026-04-14T00:59:38.558Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-15",
       "weekday": "수",
       "filesChanged": 1,
       "topProjectIds": [
-        "051"
+        "051",
+        "032"
       ],
       "entries": [
         {
           "projectId": "051",
           "did": "현재 상태 점검 · 연구질문 재정의 (중요) · 연구 축의 이동 (중요) · 실험 설계 재조정 방향",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260415_log.md"
+        },
+        {
+          "projectId": "032",
+          "did": "[이미지 2장] design_system",
+          "images": [
+            {
+              "publicPath": "/project-images/032__55d4f9b1/K2_아이콘_세트_HanjiSpecimen.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/design_system/K2_아이콘_세트_HanjiSpecimen.png",
+              "filename": "K2_아이콘_세트_HanjiSpecimen.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / design_system",
+              "mtime": "2026-04-15T01:51:35.079Z",
+              "purpose": "한 줄 정의: Oncefilm 마케팅 리서치·페르소나 설계 (자동수집·persona_lab 운영 중) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/032__55d4f9b1/아이콘_스타일_12종_테스트.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/Data_Once/instagram_analysis/influencer_research/design_system/아이콘_스타일_12종_테스트.png",
+              "filename": "아이콘_스타일_12종_테스트.png",
+              "folderContext": "03_school_project / Data_Once / instagram_analysis / influencer_research / design_system",
+              "mtime": "2026-04-15T04:01:32.108Z",
+              "purpose": "한 줄 정의: Oncefilm 마케팅 리서치·페르소나 설계 (자동수집·persona_lab 운영 중) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            }
+          ]
         }
       ]
     },
@@ -167,7 +318,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-22T03:03:15.781Z",
+  "buildAt": "2026-05-24T05:52:39.556Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강."
   }

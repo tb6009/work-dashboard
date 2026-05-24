@@ -17,19 +17,223 @@
       "date": "2026-04-20",
       "weekday": "월",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "101"
+      ],
+      "entries": [
+        {
+          "projectId": "101",
+          "did": "[이미지 12장] blog",
+          "images": [
+            {
+              "publicPath": "/project-images/101__d1c37639/a1-taste-bogo.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/a1-taste-bogo.png",
+              "filename": "a1-taste-bogo.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:18.479Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/a2-taste-salpigo.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/a2-taste-salpigo.png",
+              "filename": "a2-taste-salpigo.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:23.324Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/a3-taste-salpim.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/a3-taste-salpim.png",
+              "filename": "a3-taste-salpim.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:27.122Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/b1-canvas-identity.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/b1-canvas-identity.png",
+              "filename": "b1-canvas-identity.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:30.186Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/b2-canvas-philosophy.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/b2-canvas-philosophy.png",
+              "filename": "b2-canvas-philosophy.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:32.977Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/b3-canvas-mood.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/b3-canvas-mood.png",
+              "filename": "b3-canvas-mood.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:35.834Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/c1-uiux-light.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/c1-uiux-light.png",
+              "filename": "c1-uiux-light.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:38.618Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/c2-uiux-dark.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/c2-uiux-dark.png",
+              "filename": "c2-uiux-dark.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:41.481Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/c3-uiux-quad.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/c3-uiux-quad.png",
+              "filename": "c3-uiux-quad.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:44.396Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/d1-token-typo.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/d1-token-typo.png",
+              "filename": "d1-token-typo.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:47.091Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/d2-token-color.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/d2-token-color.png",
+              "filename": "d2-token-color.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:49.926Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            },
+            {
+              "publicPath": "/project-images/101__d1c37639/d3-token-grid.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/마음_프로덕트/03_blog_process/blog/images/d3-token-grid.png",
+              "filename": "d3-token-grid.png",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / 마음_프로덕트 / 03_blog_process / blog",
+              "mtime": "2026-04-20T09:27:52.675Z",
+              "purpose": "한 줄 정의: \"마음\" 블로그·제작 기록 (01_service·02_brand 읽기 전용) 상태: 🟢 active 최종 업데이트: 2026-04-24"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-21",
       "weekday": "화",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "067"
+      ],
+      "entries": [
+        {
+          "projectId": "067",
+          "did": "[이미지 1장] uploads",
+          "images": [
+            {
+              "publicPath": "/project-images/067__682b5bd7/스크린샷 2026-04-22 오전 12.26.27.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/스크린샷 2026-04-22 오전 12.26.27.png",
+              "filename": "스크린샷 2026-04-22 오전 12.26.27.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-21T22:45:58.000Z",
+              "purpose": "한 줄 정의: \"자인\" 디자인 수업 도우미 (5분야 자료 + 학생 평가 + 트렌드) 위치: `06_Personal_Project/디자인매거진/` (구 `11-디자인에이전트`, 2026-05-17 재구조) 상태: 🟢 active 최종 업데이트: 2026-05-17"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-22",
       "weekday": "수",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "067"
+      ],
+      "entries": [
+        {
+          "projectId": "067",
+          "did": "[이미지 10장] uploads",
+          "images": [
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_01.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_01.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_01.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:10.748Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_02.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_02.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_02.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:11.171Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_03.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_03.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_03.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:11.398Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_04.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_04.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_04.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:11.611Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_05.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_05.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_05.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:11.801Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_06.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_06.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_06.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:12.031Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_07.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_07.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_07.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:12.241Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_08.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_08.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_08.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:12.454Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_09.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_09.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_09.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:12.662Z"
+            },
+            {
+              "publicPath": "/project-images/067__5c6d52a2/AnchorNode_CI_Guide_V011_페이지_10.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/디자인매거진/claude design process/test01/uploads/guide/AnchorNode_CI_Guide_V011_페이지_10.png",
+              "filename": "AnchorNode_CI_Guide_V011_페이지_10.png",
+              "folderContext": "06_Personal_Project / 디자인매거진 / claude design process / test01 / uploads",
+              "mtime": "2026-04-22T02:09:12.851Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-04-23",
@@ -172,7 +376,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-22T03:03:15.782Z",
+  "buildAt": "2026-05-24T05:52:39.557Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강. mechanical 추출의 노이즈 ID(04 antigravity·12 등 paused/관련 없는 멘션)는 정리."
   }

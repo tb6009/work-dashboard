@@ -17,7 +17,24 @@
       "date": "2026-05-04",
       "weekday": "월",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "066"
+      ],
+      "entries": [
+        {
+          "projectId": "066",
+          "did": "[이미지 1장] 제품 정보_알렉산더 칼더 액자",
+          "images": [
+            {
+              "publicPath": "/project-images/066__221f913e/블루 프레임_알렉산더 칼더.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/블루 프레임_알렉산더 칼더.jpg",
+              "filename": "블루 프레임_알렉산더 칼더.jpg",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-04T09:32:21.000Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "date": "2026-05-05",
@@ -26,6 +43,38 @@
       "topProjectIds": [
         "062",
         "051"
+      ],
+      "entries": [
+        {
+          "projectId": "062",
+          "did": "[이미지 3장] images",
+          "images": [
+            {
+              "publicPath": "/project-images/062__40620bfb/icon-128.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/062_논문리더/app/chrome-extension/images/icon-128.png",
+              "filename": "icon-128.png",
+              "folderContext": "06_Personal_Project / 062_논문리더 / app / chrome-extension / images",
+              "mtime": "2026-05-05T14:18:30.926Z",
+              "purpose": "한 줄 정의: 주제별 논문 읽기 활동을 주간·월간 단위로 시각화하는 리딩 라이프로그. Chrome Extension (Moonlight 캡쳐) + Supabase + Obsidian. 상태: 🟢 active 최종 업데이트: 2026-05-18 (워크스페이스 재구조화 이후 경로 정정 + 실제 v0.1 구현 = Chrome Extension 반영) 현"
+            },
+            {
+              "publicPath": "/project-images/062__40620bfb/icon-16.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/062_논문리더/app/chrome-extension/images/icon-16.png",
+              "filename": "icon-16.png",
+              "folderContext": "06_Personal_Project / 062_논문리더 / app / chrome-extension / images",
+              "mtime": "2026-05-05T14:18:30.889Z",
+              "purpose": "한 줄 정의: 주제별 논문 읽기 활동을 주간·월간 단위로 시각화하는 리딩 라이프로그. Chrome Extension (Moonlight 캡쳐) + Supabase + Obsidian. 상태: 🟢 active 최종 업데이트: 2026-05-18 (워크스페이스 재구조화 이후 경로 정정 + 실제 v0.1 구현 = Chrome Extension 반영) 현"
+            },
+            {
+              "publicPath": "/project-images/062__40620bfb/icon-48.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/062_논문리더/app/chrome-extension/images/icon-48.png",
+              "filename": "icon-48.png",
+              "folderContext": "06_Personal_Project / 062_논문리더 / app / chrome-extension / images",
+              "mtime": "2026-05-05T14:18:30.890Z",
+              "purpose": "한 줄 정의: 주제별 논문 읽기 활동을 주간·월간 단위로 시각화하는 리딩 라이프로그. Chrome Extension (Moonlight 캡쳐) + Supabase + Obsidian. 상태: 🟢 active 최종 업데이트: 2026-05-18 (워크스페이스 재구조화 이후 경로 정정 + 실제 v0.1 구현 = Chrome Extension 반영) 현"
+            }
+          ]
+        }
       ]
     },
     {
@@ -33,7 +82,100 @@
       "weekday": "수",
       "filesChanged": 63,
       "topProjectIds": [
-        "063"
+        "063",
+        "011",
+        "066"
+      ],
+      "entries": [
+        {
+          "projectId": "011",
+          "did": "[이미지 7장] images",
+          "images": [
+            {
+              "publicPath": "/project-images/011__ed5a2873/lifeOS_design02.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/v1_stage1-2_무드보드/lifeOS_design02.png",
+              "filename": "lifeOS_design02.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.604Z"
+            },
+            {
+              "publicPath": "/project-images/011__ccbfb469/lifeOS_design03.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/v2_stage3_브리핑/lifeOS_design03.png",
+              "filename": "lifeOS_design03.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.613Z"
+            },
+            {
+              "publicPath": "/project-images/011__852f0743/lifeOS_design031.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/v3_stage5_프로토타입/lifeOS_design031.png",
+              "filename": "lifeOS_design031.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.623Z"
+            },
+            {
+              "publicPath": "/project-images/011__e8147f54/LifeOS_design04.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/v4_stage7_현재/LifeOS_design04.png",
+              "filename": "LifeOS_design04.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.630Z"
+            },
+            {
+              "publicPath": "/project-images/011__29504e5a/lifeOS-github.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/인프라_스크린샷/lifeOS-github.png",
+              "filename": "lifeOS-github.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.635Z"
+            },
+            {
+              "publicPath": "/project-images/011__29504e5a/lifeOS_Vercel.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/인프라_스크린샷/lifeOS_Vercel.png",
+              "filename": "lifeOS_Vercel.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.636Z"
+            },
+            {
+              "publicPath": "/project-images/011__29504e5a/lifeOS_supabase.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/01_admin/001_블로그/02_프로젝트별/061_LifeOS/images/인프라_스크린샷/lifeOS_supabase.png",
+              "filename": "lifeOS_supabase.png",
+              "folderContext": "01_admin / 001_블로그 / 02_프로젝트별 / 061_LifeOS / images",
+              "mtime": "2026-05-06T00:26:33.637Z"
+            }
+          ]
+        },
+        {
+          "projectId": "066",
+          "did": "[이미지 4장] 제품 정보_알렉산더 칼더 액자",
+          "images": [
+            {
+              "publicPath": "/project-images/066__221f913e/공간 연출2.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/공간 연출2.jpg",
+              "filename": "공간 연출2.jpg",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-06T02:26:29.000Z"
+            },
+            {
+              "publicPath": "/project-images/066__221f913e/대표 작품1.jpg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/대표 작품1.jpg",
+              "filename": "대표 작품1.jpg",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-06T02:08:04.000Z"
+            },
+            {
+              "publicPath": "/project-images/066__221f913e/대표 작품2.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/대표 작품2.jpeg",
+              "filename": "대표 작품2.jpeg",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-06T02:07:41.000Z"
+            },
+            {
+              "publicPath": "/project-images/066__221f913e/알렉산더 칼더_인물.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/알렉산더 칼더_인물.png",
+              "filename": "알렉산더 칼더_인물.png",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-06T02:01:57.000Z"
+            }
+          ]
+        }
       ]
     },
     {
@@ -41,7 +183,37 @@
       "weekday": "목",
       "filesChanged": 5,
       "topProjectIds": [
-        "063"
+        "063",
+        "066"
+      ],
+      "entries": [
+        {
+          "projectId": "066",
+          "did": "[이미지 3장] 제품 정보_알렉산더 칼더 액자",
+          "images": [
+            {
+              "publicPath": "/project-images/066__221f913e/공간 연출4.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/공간 연출4.png",
+              "filename": "공간 연출4.png",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-07T01:47:20.000Z"
+            },
+            {
+              "publicPath": "/project-images/066__221f913e/공간 연출5.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/공간 연출5.png",
+              "filename": "공간 연출5.png",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-07T01:47:21.000Z"
+            },
+            {
+              "publicPath": "/project-images/066__221f913e/공간 연출6.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/066_소규모조직_AI/project01/reference/제품 정보_알렉산더 칼더 액자/공간 연출6.jpeg",
+              "filename": "공간 연출6.jpeg",
+              "folderContext": "06_Personal_Project / 066_소규모조직_AI / project01 / reference / 제품 정보_알렉산더 칼더 액자",
+              "mtime": "2026-05-07T01:47:21.000Z"
+            }
+          ]
+        }
       ]
     },
     {
@@ -65,12 +237,127 @@
       "date": "2026-05-10",
       "weekday": "일",
       "filesChanged": 0,
-      "topProjectIds": [],
+      "topProjectIds": [
+        "092"
+      ],
       "entries": [
         {
           "projectId": "101",
           "did": "챗봇 토큰 하네싱 재개 (Opus 계획 → Sonnet 실행 분리)",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260510_log.md"
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260510_log.md",
+          "images": [
+            {
+              "publicPath": "/project-images/101__081d669e/icon.svg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/10_보고살피다/101_일상다반사/outputs/마음_앱/icon.svg",
+              "filename": "icon.svg",
+              "folderContext": "10_보고살피다 / 101_일상다반사 / outputs / 마음_앱",
+              "mtime": "2026-05-10T06:53:34.719Z",
+              "caption": "몸과 마음의 과학을 시니컬하고 유쾌하게 풀어주는 대화형 에이전트. Anthropic Claude API 기반 단일 HTML 웹앱 + PWA.",
+              "purpose": "한 줄 정의: \"보살피고(BOSALPIGO)\" 4 캐릭터(마음·모미·요기·숨이) 챗봇 + 자료 자동수집 (3 서브 통합 구조) 상태: 🟢 active 위치: `10_보고살피다/101_일상다반사/` (2026-05-17 재구조) 최종 업데이트: 2026-05-17"
+            }
+          ]
+        },
+        {
+          "projectId": "092",
+          "did": "[이미지 16장] outputs",
+          "images": [
+            {
+              "publicPath": "/project-images/092__83387f34/Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "filename": "Cinematic_film_aesthetic_pastel_…_202605102311 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:11:49.122Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "filename": "Cinematic_film_aesthetic_pastel_…_202605102311.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:11:49.319Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "filename": "Empty_university_lecture_hall_202605102313 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:13:28.324Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Empty_university_lecture_hall_202605102313.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Empty_university_lecture_hall_202605102313.jpeg",
+              "filename": "Empty_university_lecture_hall_202605102313.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:13:28.517Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "filename": "Female_student_holding_energy_drink_202605102307 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:08:10.554Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_holding_energy_drink_202605102307.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_holding_energy_drink_202605102307.jpeg",
+              "filename": "Female_student_holding_energy_drink_202605102307.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:08:11.016Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "filename": "Female_student_sitting_at_desk_202605102318 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:18:56.037Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_sitting_at_desk_202605102318.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_sitting_at_desk_202605102318.jpeg",
+              "filename": "Female_student_sitting_at_desk_202605102318.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:18:56.196Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "filename": "Female_student_walking_lecture_hall_202605102316 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:16:46.717Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Female_student_walking_lecture_hall_202605102316.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Female_student_walking_lecture_hall_202605102316.jpeg",
+              "filename": "Female_student_walking_lecture_hall_202605102316.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:16:29.487Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "filename": "Korean_university_lecture_hall_m…_202605102311 (1).jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:11:14.788Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            },
+            {
+              "publicPath": "/project-images/092__83387f34/Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/03_claude/outputs/Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "filename": "Korean_university_lecture_hall_m…_202605102311.jpeg",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 03_claude / outputs",
+              "mtime": "2026-05-10T14:11:15.045Z",
+              "purpose": "한 줄 정의: 「AI Filmmaking II — See Like a Director, Create with AI」 수업 과제 작업장 상태: 🟢 active 최종 업데이트: 2026-05-10"
+            }
+          ]
         }
       ]
     }
@@ -151,5 +438,5 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-22T03:03:15.783Z"
+  "buildAt": "2026-05-24T05:52:39.558Z"
 }

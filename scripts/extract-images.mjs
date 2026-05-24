@@ -23,10 +23,12 @@ const WEEKLY_DIR = join(ROOT, 'app/src/data/weekly');
 const PUBLIC_IMG_DIR = join(ROOT, 'app/public/project-images');
 const PROJECTS_META_PATH = join(ROOT, 'app/src/data/projects.json');
 
-const weekId = process.argv[2];
-const DRY = process.argv.includes('--dry');
-if (!weekId || !/^\d{4}-W\d{2}$/.test(weekId)) {
-  console.error('사용법: node scripts/extract-images.mjs YYYY-WXX [--dry]');
+const args = process.argv.slice(2);
+const DRY = args.includes('--dry');
+const BACKFILL = args.includes('--backfill');
+const weekId = args.find((a) => /^\d{4}-W\d{2}$/.test(a));
+if (!BACKFILL && !weekId) {
+  console.error('사용법:\n  node scripts/extract-images.mjs YYYY-WXX [--dry]\n  node scripts/extract-images.mjs --backfill [--dry]   (모든 weekly JSON 일괄 갱신)');
   process.exit(1);
 }
 
@@ -42,8 +44,21 @@ function isoWeekRange(year, week) {
   sunday.setUTCDate(monday.getUTCDate() + 7);
   return { from: monday, to: sunday };
 }
-const [yStr, wStr] = weekId.split('-W');
-const { from: weekFrom, to: weekTo } = isoWeekRange(+yStr, +wStr);
+let weekFrom = null, weekTo = null;
+if (weekId) {
+  const [yStr, wStr] = weekId.split('-W');
+  const range = isoWeekRange(+yStr, +wStr);
+  weekFrom = range.from; weekTo = range.to;
+}
+/** date → 'YYYY-WXX' iso week id */
+function dateToWeekId(d) {
+  const target = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const day = target.getUTCDay() || 7;
+  target.setUTCDate(target.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(target.getUTCFullYear(), 0, 1));
+  const week = Math.ceil(((target - yearStart) / 86400000 + 1) / 7);
+  return `${target.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+}
 
 // ─── EXPLICIT 매핑 (extract-from-filesystem.mjs와 동일)
 const EXPLICIT = {
@@ -117,7 +132,8 @@ function walk(dir) {
     else if (IMG_EXT.test(e.name)) {
       try {
         const st = statSync(abs);
-        if (st.mtime >= weekFrom && st.mtime < weekTo && st.size <= MAX_IMG_SIZE && isWhitelistImage(abs)) {
+        const inRange = BACKFILL ? true : (st.mtime >= weekFrom && st.mtime < weekTo);
+        if (inRange && st.size <= MAX_IMG_SIZE && isWhitelistImage(abs)) {
           const id = findProjectId(abs);
           if (id) collected.push({ abs, rel, mtime: st.mtime, projectId: id, size: st.size });
         }
@@ -233,38 +249,66 @@ if (DRY) {
 }
 
 // ─── weekly JSON 갱신: daily[].entries[].images[]
-const weeklyPath = join(WEEKLY_DIR, `${weekId}.json`);
-if (!existsSync(weeklyPath)) { console.error(`❌ ${weekId}.json 없음`); process.exit(1); }
-const w = JSON.parse(readFileSync(weeklyPath, 'utf-8'));
-
-let attached = 0;
-for (const day of w.daily) {
-  const dayImages = manifest.filter(m => m.date === day.date);
-  if (dayImages.length === 0) continue;
-  // 프로젝트별 그룹핑
-  const byProject = new Map();
-  for (const m of dayImages) {
-    if (!byProject.has(m.projectId)) byProject.set(m.projectId, []);
-    byProject.get(m.projectId).push(m.image);
-  }
-  if (!day.entries) day.entries = [];
-  for (const [pid, images] of byProject) {
-    // 최대 12장
-    const top = images.slice(0, 12);
-    const existing = day.entries.find(e => e.projectId === pid);
-    if (existing) {
-      existing.images = top;
-    } else {
-      day.entries.push({
-        projectId: pid,
-        did: `[이미지 ${images.length}장] ${[...new Set(top.map(i => i.folderContext.split(' / ').pop()))].join(' · ')}`,
-        images: top,
-      });
-      if (!day.topProjectIds.includes(pid)) day.topProjectIds.push(pid);
+//     단일 주차 또는 backfill 모드에 따라 대상 weekly 결정
+function applyToWeekly(targetWeekId) {
+  const weeklyPath = join(WEEKLY_DIR, `${targetWeekId}.json`);
+  if (!existsSync(weeklyPath)) return { found: false, attached: 0 };
+  const w = JSON.parse(readFileSync(weeklyPath, 'utf-8'));
+  let attached = 0;
+  for (const day of w.daily) {
+    const dayImages = manifest.filter((m) => m.date === day.date);
+    if (dayImages.length === 0) continue;
+    const byProject = new Map();
+    for (const m of dayImages) {
+      if (!byProject.has(m.projectId)) byProject.set(m.projectId, []);
+      byProject.get(m.projectId).push(m.image);
     }
-    attached += top.length;
+    if (!day.entries) day.entries = [];
+    for (const [pid, images] of byProject) {
+      const top = images.slice(0, 12);
+      const existing = day.entries.find((e) => e.projectId === pid);
+      if (existing) {
+        existing.images = top;
+      } else {
+        day.entries.push({
+          projectId: pid,
+          did: `[이미지 ${images.length}장] ${[...new Set(top.map((i) => i.folderContext.split(' / ').pop()))].join(' · ')}`,
+          images: top,
+        });
+        if (!day.topProjectIds.includes(pid)) day.topProjectIds.push(pid);
+      }
+      attached += top.length;
+    }
   }
+  w.buildAt = new Date().toISOString();
+  writeFileSync(weeklyPath, JSON.stringify(w, null, 2) + '\n', 'utf-8');
+  return { found: true, attached };
 }
-w.buildAt = new Date().toISOString();
-writeFileSync(weeklyPath, JSON.stringify(w, null, 2) + '\n', 'utf-8');
-console.log(`✅ ${weekId}.json 갱신 — ${attached} 이미지 attached`);
+
+if (BACKFILL) {
+  // mtime → week 그룹핑 후 각 weekly 일괄 갱신
+  const byWeek = new Map();
+  for (const m of manifest) {
+    const wid = dateToWeekId(new Date(m.image.mtime));
+    if (!byWeek.has(wid)) byWeek.set(wid, 0);
+    byWeek.set(wid, byWeek.get(wid) + 1);
+  }
+  const sorted = [...byWeek.keys()].sort();
+  console.log(`📦 영향 weekly: ${sorted.length}개`);
+  let totalAttached = 0, missing = [];
+  for (const wid of sorted) {
+    const { found, attached } = applyToWeekly(wid);
+    if (found) {
+      console.log(`  ✅ ${wid}: ${attached} attached (${byWeek.get(wid)} 후보)`);
+      totalAttached += attached;
+    } else {
+      missing.push(wid);
+      console.log(`  ⚠️  ${wid}: weekly JSON 없음 (${byWeek.get(wid)} 후보 스킵)`);
+    }
+  }
+  console.log(`\n✅ 총 ${totalAttached} 이미지 attached, ${missing.length} 주차 스킵 (${missing.slice(0,5).join(', ')}${missing.length>5?' ...':''})`);
+} else {
+  const { found, attached } = applyToWeekly(weekId);
+  if (!found) { console.error(`❌ ${weekId}.json 없음`); process.exit(1); }
+  console.log(`✅ ${weekId}.json 갱신 — ${attached} 이미지 attached`);
+}

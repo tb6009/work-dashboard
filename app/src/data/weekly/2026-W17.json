@@ -376,7 +376,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-05-24T05:52:39.557Z",
+  "buildAt": "2026-05-24T07:08:53.385Z",
   "_meta": {
     "note": "2026-05-19 W14~W17 소급 백필. extract-week.mjs draft 기반 + 일일 로그 의미 보강. mechanical 추출의 노이즈 ID(04 antigravity·12 등 paused/관련 없는 멘션)는 정리."
   }

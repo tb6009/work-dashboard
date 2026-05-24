@@ -85,6 +85,7 @@ const EXPLICIT = {
   '03_school_project/새론솔루션': '036',
   '03_school_project/기초디자인': '037',
   '03_school_project/코첼라': '038',
+  '03_school_project/RISE': '039',
   '04_aSSIST/수업실습': '04',
   '05_phD_Research/DSAPG': '051',
   '05_phD_Research/페르소나_연구': '052',
@@ -111,7 +112,8 @@ const EXPLICIT = {
 };
 
 function findProjectId(absPath) {
-  const rel = relative(WORKSPACE, absPath);
+  // macOS NFD → NFC 정규화 (한글 폴더명 매칭)
+  const rel = relative(WORKSPACE, absPath).normalize('NFC');
   // 가장 깊은(긴) 매칭부터
   const candidates = Object.keys(EXPLICIT).sort((a, b) => b.length - a.length);
   for (const prefix of candidates) {

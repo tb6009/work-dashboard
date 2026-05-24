@@ -170,7 +170,8 @@
         "063",
         "092",
         "053",
-        "03"
+        "03",
+        "038"
       ],
       "entries": [
         {
@@ -287,6 +288,96 @@
               "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
             }
           ]
+        },
+        {
+          "projectId": "038",
+          "did": "[이미지 137장] logos_transparent · logos_transparent_hq",
+          "images": [
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L01_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L01_transparent.png",
+              "filename": "L01_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.825Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L02_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L02_transparent.png",
+              "filename": "L02_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.832Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L03_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L03_transparent.png",
+              "filename": "L03_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.846Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L04_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L04_transparent.png",
+              "filename": "L04_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.853Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L05_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L05_transparent.png",
+              "filename": "L05_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.857Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L06_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L06_transparent.png",
+              "filename": "L06_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.863Z"
+            },
+            {
+              "publicPath": "/project-images/038__d6dd4a61/L07_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent/L07_transparent.png",
+              "filename": "L07_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent",
+              "mtime": "2026-05-20T21:43:58.880Z"
+            },
+            {
+              "publicPath": "/project-images/038__f29b26d0/L01_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent_hq/L01_transparent.png",
+              "filename": "L01_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent_hq",
+              "mtime": "2026-05-20T22:00:25.888Z"
+            },
+            {
+              "publicPath": "/project-images/038__f29b26d0/L02_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent_hq/L02_transparent.png",
+              "filename": "L02_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent_hq",
+              "mtime": "2026-05-20T22:00:25.895Z"
+            },
+            {
+              "publicPath": "/project-images/038__f29b26d0/L03_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent_hq/L03_transparent.png",
+              "filename": "L03_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent_hq",
+              "mtime": "2026-05-20T22:00:25.908Z"
+            },
+            {
+              "publicPath": "/project-images/038__f29b26d0/L04_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent_hq/L04_transparent.png",
+              "filename": "L04_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent_hq",
+              "mtime": "2026-05-20T22:00:25.916Z"
+            },
+            {
+              "publicPath": "/project-images/038__f29b26d0/L05_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/assets/logos_transparent_hq/L05_transparent.png",
+              "filename": "L05_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / assets / logos_transparent_hq",
+              "mtime": "2026-05-20T22:00:25.920Z"
+            }
+          ]
         }
       ]
     },
@@ -299,7 +390,8 @@
         "092",
         "053",
         "03",
-        "066"
+        "066",
+        "038"
       ],
       "entries": [
         {
@@ -371,6 +463,96 @@
               "filename": "03_close_medium_maeum_drinks_professor_teaches.png",
               "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
               "mtime": "2026-05-21T11:45:37.066Z"
+            }
+          ]
+        },
+        {
+          "projectId": "038",
+          "did": "[이미지 27장] model_final",
+          "images": [
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L01_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L01_REF-01_final_board.png",
+              "filename": "L01_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.507Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L02_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L02_REF-01_final_board.png",
+              "filename": "L02_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.730Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L03_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L03_REF-01_final_board.png",
+              "filename": "L03_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.964Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L04_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L04_REF-01_final_board.png",
+              "filename": "L04_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:06.189Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L05_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L05_REF-01_final_board.png",
+              "filename": "L05_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:06.418Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L06_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L06_REF-01_final_board.png",
+              "filename": "L06_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:06.659Z"
+            },
+            {
+              "publicPath": "/project-images/038__26aa8cc5/L07_REF-01_final_board.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/boards/L07_REF-01_final_board.png",
+              "filename": "L07_REF-01_final_board.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:06.917Z"
+            },
+            {
+              "publicPath": "/project-images/038__c190338f/L01_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/logos_exact/L01_transparent.png",
+              "filename": "L01_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.247Z"
+            },
+            {
+              "publicPath": "/project-images/038__c190338f/L02_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/logos_exact/L02_transparent.png",
+              "filename": "L02_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.513Z"
+            },
+            {
+              "publicPath": "/project-images/038__c190338f/L03_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/logos_exact/L03_transparent.png",
+              "filename": "L03_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.744Z"
+            },
+            {
+              "publicPath": "/project-images/038__c190338f/L04_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/logos_exact/L04_transparent.png",
+              "filename": "L04_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:05.972Z"
+            },
+            {
+              "publicPath": "/project-images/038__c190338f/L05_transparent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/코첼라/image_generation_project/outputs/model_final/logos_exact/L05_transparent.png",
+              "filename": "L05_transparent.png",
+              "folderContext": "03_school_project / 코첼라 / image_generation_project / outputs / model_final",
+              "mtime": "2026-05-21T00:26:06.193Z"
             }
           ]
         }
@@ -449,7 +631,8 @@
         "061",
         "091",
         "03",
-        "01"
+        "01",
+        "039"
       ],
       "entries": [
         {
@@ -471,6 +654,10 @@
         {
           "projectId": "01",
           "did": "[fs scan] app.jsx · artboard-editorial.jsx · artboard-grid.jsx · artboard-quiet.jsx · design-canvas.jsx 외 2건"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] project-map.md · RISE_AI산학협력_시각증거형_제작메모.md · RISE_PT_리서치강화_발표메모.md · RISE_PT_시각화_검증_및_개선제안.md · RISE_PT_시각화_확장계획.md 외 3건"
         }
       ]
     },
@@ -481,7 +668,8 @@
       "topProjectIds": [
         "063",
         "092",
-        "091"
+        "091",
+        "061"
       ],
       "entries": [
         {
@@ -489,88 +677,88 @@
           "did": "이미지 갤러리 시스템 — extract-images.mjs (whitelist + README caption) · public 복사 · ImageGallery 컴포넌트 (썸네일 + lightbox) · DailyRow 통합 · W21 77 이미지 / 47 attached",
           "images": [
             {
-              "publicPath": "/project-images/063__111f0c57/01_skyblue_recovered_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/01_skyblue_recovered_scene.png",
-              "filename": "01_skyblue_recovered_scene.png",
+              "publicPath": "/project-images/063__49608471/lifeOS-github.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__29504e5a/lifeOS-github.png",
+              "filename": "lifeOS-github.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.604Z"
+              "mtime": "2026-05-24T05:52:38.525Z"
             },
             {
-              "publicPath": "/project-images/063__111f0c57/02_green_good_condition_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/02_green_good_condition_scene.png",
-              "filename": "02_green_good_condition_scene.png",
+              "publicPath": "/project-images/063__49608471/lifeOS_Vercel.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__29504e5a/lifeOS_Vercel.png",
+              "filename": "lifeOS_Vercel.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.607Z"
+              "mtime": "2026-05-24T05:52:38.526Z"
             },
             {
-              "publicPath": "/project-images/063__111f0c57/03_yellow_warning_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/03_yellow_warning_scene.png",
-              "filename": "03_yellow_warning_scene.png",
+              "publicPath": "/project-images/063__49608471/lifeOS_supabase.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__29504e5a/lifeOS_supabase.png",
+              "filename": "lifeOS_supabase.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.615Z"
+              "mtime": "2026-05-24T05:52:38.527Z"
             },
             {
-              "publicPath": "/project-images/063__111f0c57/04_orange_low_energy_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/04_orange_low_energy_scene.png",
-              "filename": "04_orange_low_energy_scene.png",
+              "publicPath": "/project-images/063__e707db25/lifeOS_design031.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__852f0743/lifeOS_design031.png",
+              "filename": "lifeOS_design031.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.618Z"
+              "mtime": "2026-05-24T05:52:38.522Z"
             },
             {
-              "publicPath": "/project-images/063__111f0c57/05_red_morning_classroom_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/05_red_morning_classroom_scene.png",
-              "filename": "05_red_morning_classroom_scene.png",
+              "publicPath": "/project-images/063__4c6108b8/lifeOS_design03.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__ccbfb469/lifeOS_design03.png",
+              "filename": "lifeOS_design03.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.622Z"
+              "mtime": "2026-05-24T05:52:38.521Z"
             },
             {
-              "publicPath": "/project-images/063__111f0c57/06_red_depleted_class_scene.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__11e65fce/06_red_depleted_class_scene.png",
-              "filename": "06_red_depleted_class_scene.png",
+              "publicPath": "/project-images/063__eab80fc9/LifeOS_design04.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__e8147f54/LifeOS_design04.png",
+              "filename": "LifeOS_design04.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.628Z"
+              "mtime": "2026-05-24T05:52:38.523Z"
             },
             {
-              "publicPath": "/project-images/063__2ce54ad9/01_orange_warning_professor_classroom.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__25a0ca80/01_orange_warning_professor_classroom.png",
-              "filename": "01_orange_warning_professor_classroom.png",
+              "publicPath": "/project-images/063__34cd6f07/lifeOS_design02.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/011__ed5a2873/lifeOS_design02.png",
+              "filename": "lifeOS_design02.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.672Z"
+              "mtime": "2026-05-24T05:52:38.519Z"
             },
             {
-              "publicPath": "/project-images/063__a10f5181/01_sits_to_listen_simple_chair.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/01_sits_to_listen_simple_chair.png",
-              "filename": "01_sits_to_listen_simple_chair.png",
+              "publicPath": "/project-images/063__4082e048/floria-bottom.webp",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/012__bb3c15e3/floria-bottom.webp",
+              "filename": "floria-bottom.webp",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.676Z"
+              "mtime": "2026-05-24T05:52:38.528Z"
             },
             {
-              "publicPath": "/project-images/063__a10f5181/02_turns_dull_red_simple_chair.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/02_turns_dull_red_simple_chair.png",
-              "filename": "02_turns_dull_red_simple_chair.png",
+              "publicPath": "/project-images/063__4082e048/floria-full.webp",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/012__bb3c15e3/floria-full.webp",
+              "filename": "floria-full.webp",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.682Z"
+              "mtime": "2026-05-24T05:52:38.531Z"
             },
             {
-              "publicPath": "/project-images/063__a10f5181/03_drink_energy_drink_simple_chair.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__2a709f38/03_drink_energy_drink_simple_chair.png",
-              "filename": "03_drink_energy_drink_simple_chair.png",
+              "publicPath": "/project-images/063__4082e048/floria-top.webp",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/012__bb3c15e3/floria-top.webp",
+              "filename": "floria-top.webp",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.686Z"
+              "mtime": "2026-05-24T05:52:38.532Z"
             },
             {
-              "publicPath": "/project-images/063__3eb3031b/01_morning_class_professor_notices.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__38475849/01_morning_class_professor_notices.png",
-              "filename": "01_morning_class_professor_notices.png",
+              "publicPath": "/project-images/063__373644e4/선호도_유지_상승_Part1.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/02__4eec5c1b/선호도_유지_상승_Part1.png",
+              "filename": "선호도_유지_상승_Part1.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.537Z"
+              "mtime": "2026-05-24T05:52:38.534Z"
             },
             {
-              "publicPath": "/project-images/063__3eb3031b/02_last_night_study_screen.png",
-              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/092__38475849/02_last_night_study_screen.png",
-              "filename": "02_last_night_study_screen.png",
+              "publicPath": "/project-images/063__373644e4/선호도_유지_상승_Part2.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/project-images/02__4eec5c1b/선호도_유지_상승_Part2.png",
+              "filename": "선호도_유지_상승_Part2.png",
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
-              "mtime": "2026-05-24T05:24:41.540Z"
+              "mtime": "2026-05-24T05:52:38.534Z"
             }
           ]
         },
@@ -670,12 +858,25 @@
               "mtime": "2026-05-24T04:02:40.238Z",
               "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
               "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__c2421718/01_dark_room_phone.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.2/01_dark_room_phone.png",
+              "filename": "01_dark_room_phone.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T05:59:41.451Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md` 업데이트 내역: Scene 6(자야 하",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
             }
           ]
         },
         {
           "projectId": "091",
           "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        },
+        {
+          "projectId": "061",
+          "did": "[fs scan] WorkTab.tsx · RoutineList.tsx · TodoList.tsx"
         }
       ]
     }
@@ -830,7 +1031,7 @@
   "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "buildAt": "2026-05-24T05:52:39.560Z",
+  "buildAt": "2026-05-24T07:10:22.123Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

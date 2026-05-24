@@ -68,6 +68,7 @@ const EXPLICIT = {
   '03_school_project/Data_Study': '033', '03_school_project/MNServe': '034',
   '03_school_project/관리비책': '035', '03_school_project/새론솔루션': '036',
   '03_school_project/기초디자인': '037', '03_school_project/코첼라': '038',
+  '03_school_project/RISE': '039',
   '04_aSSIST/수업실습': '04',
   '05_phD_Research/DSAPG': '051', '05_phD_Research/페르소나_연구': '052',
   '05_phD_Research/053_ResearchMasterBot': '053', '05_phD_Research/연구논문02': '054',
@@ -83,7 +84,8 @@ const EXPLICIT = {
   '10_보고살피다/103_Gemini_실험': '103',
 };
 function findProjectId(absPath) {
-  const rel = relative(WORKSPACE, absPath);
+  // macOS는 한글 파일명을 NFD로 저장, 소스 키는 NFC → 정규화 필요
+  const rel = relative(WORKSPACE, absPath).normalize('NFC');
   const cands = Object.keys(EXPLICIT).sort((a, b) => b.length - a.length);
   for (const prefix of cands) {
     if (rel.startsWith(prefix + '/') || rel === prefix) return EXPLICIT[prefix];
@@ -99,7 +101,7 @@ const IMG_WHITELIST_KEYWORDS = [
   '02_brand_campaign', 'posters', 'outputs', '_design',
 ];
 function isWhitelistImage(absPath) {
-  const rel = relative(WORKSPACE, absPath);
+  const rel = relative(WORKSPACE, absPath).normalize('NFC');
   return IMG_WHITELIST_KEYWORDS.some(k => rel.includes(k));
 }
 

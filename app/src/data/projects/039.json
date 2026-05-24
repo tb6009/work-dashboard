@@ -1,0 +1,19 @@
+{
+  "id": "039",
+  "currentSituation": {
+    "summary": "AI 산학협력 시각화 (PT/접촉시트/근거자료) — 03_school_project/RISE/",
+    "phase": "시각화 계획 + 근거자료 단계",
+    "recentLogs": [],
+    "blockers": []
+  },
+  "deliverables": [],
+  "nextTasks": [
+    {
+      "title": "RISE PT 시각화 확장계획 진행",
+      "description": "04_시각화계획/ 산출물 정리",
+      "priority": "high",
+      "estimate": "1주"
+    }
+  ],
+  "buildAt": "2026-05-24T00:00:00+09:00"
+}

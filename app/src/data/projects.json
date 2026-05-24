@@ -15,6 +15,7 @@
   { "id": "036", "categoryId": "03",        "name": "새론솔루션",         "type": "design",     "define": "광주 남구 스마트 하수악취 대시보드 UX — 03_school_project/새론솔루션/", "status": "active", "createdAt": "2026-05-14" },
   { "id": "037", "categoryId": "03",        "name": "기초디자인",         "type": "design",     "define": "happy design language 분석 — 03_school_project/기초디자인/", "status": "new",    "createdAt": "2026-05-22" },
   { "id": "038", "categoryId": "03",        "name": "코첼라",             "type": "design",     "define": "이미지 생성·로고·reference — 03_school_project/코첼라/", "status": "new",    "createdAt": "2026-05-22" },
+  { "id": "039", "categoryId": "03",        "name": "RISE",              "type": "design",     "define": "AI 산학협력 시각화 (PT/접촉시트/근거자료) — 03_school_project/RISE/", "status": "active", "createdAt": "2026-05-24" },
 
   { "id": "04",  "categoryId": "04",        "name": "aSSIST 수업실습",    "type": "education",  "define": "aSSIST 수업실습 학생 작업장 — 04_aSSIST/수업실습/", "status": "active", "createdAt": "2026-05-22" },
 

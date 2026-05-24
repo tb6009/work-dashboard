@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import PageShell from '@/components/layout/PageShell';
 import WeeklyContributionBar from '@/components/charts/WeeklyContributionBar';
 import ProjectWorkPanel from '@/components/ProjectWorkPanel';
-import { getProject, loadWeek, loadProjectWork, CURRENT_WEEK_ID } from '@/lib/data';
+import { getProject, loadWeek, loadProjectWork, loadProjectDailyActivity, getCurrentWeekId } from '@/lib/data';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
+import ProjectActivityFeed from '@/components/period/ProjectActivityFeed';
 
 function buildWeekly(currentPct: number) {
   return [
@@ -40,10 +41,13 @@ export default async function ProjectPage({
   const typeLabel = TYPE_LABEL[project.type];
 
   const work = await loadProjectWork(id);
-  const week = await loadWeek(CURRENT_WEEK_ID);
+  const currentWeekId = await getCurrentWeekId();
+  const week = await loadWeek(currentWeekId);
   const contribution = week?.projects.find(p => p.id === id);
   const currentPct = contribution?.pct ?? 0;
   const filesChanged = contribution?.filesChanged ?? 0;
+  const activities = await loadProjectDailyActivity(id);
+  const totalImages = activities.reduce((s, a) => s + (a.images?.length ?? 0), 0);
 
   return (
     <PageShell active="projects">
@@ -63,7 +67,7 @@ export default async function ProjectPage({
               marginBottom: 'var(--sp-10)',
             }}
           >
-            <Kpi label="총 변경 파일" value={String(filesChanged)} meta={`이번 주 (${CURRENT_WEEK_ID})`} />
+            <Kpi label="총 변경 파일" value={String(filesChanged)} meta={`이번 주 (${currentWeekId})`} />
             <Kpi label="결과물" value={String(work.deliverables.length)} meta="클릭 → VS Code" />
             <Kpi label="다음 작업" value={String(work.nextTasks.length)} meta="우선순위순" />
             <Kpi
@@ -74,12 +78,21 @@ export default async function ProjectPage({
                   <span style={{ fontSize: 24, fontWeight: 500, color: 'var(--gray-500)', marginLeft: 2 }}>%</span>
                 </>
               }
-              meta="W18 기준"
+              meta={`${currentWeekId} 기준`}
             />
           </div>
 
           {/* ── 3-column WORK PANEL (현재 상황 / 결과물 / 다음 작업) ── */}
           <ProjectWorkPanel data={work} />
+
+          {/* ── 일간 활동 feed (entries + images, 최신순) ── */}
+          <section style={{ marginBottom: 'var(--sp-12)' }}>
+            <SectionHead
+              title="일간 활동"
+              meta={`${activities.length}일 · ${totalImages} 이미지 · 최신순`}
+            />
+            <ProjectActivityFeed activities={activities} />
+          </section>
 
           {/* ── Weekly Contribution Chart ── */}
           <section style={{ marginBottom: 'var(--sp-12)' }}>

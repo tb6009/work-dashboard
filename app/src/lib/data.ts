@@ -120,6 +120,39 @@ export async function loadRecentWeeks(n: number = 5): Promise<WeeklySnapshot[]> 
   return all.slice(0, n);
 }
 
+/** 한 프로젝트의 모든 일간 활동 (entries) 수집 — 최신순.
+ *  weekly JSON 전체를 scan해서 해당 projectId 의 entries[] 만 평탄화. */
+export interface ProjectDailyActivity {
+  date: string;
+  weekday: string;
+  weekId: string;
+  filesChanged: number;
+  did: string;
+  logFilePath?: string;
+  images?: import('@/types/dashboard').DailyImage[];
+}
+export async function loadProjectDailyActivity(projectId: string): Promise<ProjectDailyActivity[]> {
+  const weeks = await loadAllWeeks();
+  const out: ProjectDailyActivity[] = [];
+  for (const w of weeks) {
+    for (const day of w.daily) {
+      const matching = (day.entries ?? []).filter(e => e.projectId === projectId);
+      for (const e of matching) {
+        out.push({
+          date: day.date,
+          weekday: day.weekday,
+          weekId: w.week,
+          filesChanged: day.filesChanged,
+          did: e.did,
+          logFilePath: e.logFilePath,
+          images: e.images,
+        });
+      }
+    }
+  }
+  return out.sort((a, b) => b.date.localeCompare(a.date));
+}
+
 /** 현재 주차 = listWeekIds()의 가장 최신. data가 없으면 fallback id 반환. */
 export async function getCurrentWeekId(): Promise<string> {
   const ids = await listWeekIds();

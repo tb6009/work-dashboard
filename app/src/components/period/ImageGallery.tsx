@@ -46,7 +46,8 @@ export default function ImageGallery({ images }: Props) {
         {visible.map((img, i) => (
           <button
             key={i}
-            onClick={() => setSelectedIdx(i)}
+            type="button"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedIdx(i); }}
             style={{
               width: 80,
               height: 80,
@@ -61,7 +62,8 @@ export default function ImageGallery({ images }: Props) {
         ))}
         {overflow > 0 ? (
           <button
-            onClick={() => setSelectedIdx(visible.length)}
+            type="button"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedIdx(visible.length); }}
             style={{
               width: 80,
               height: 80,

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { DailyActivity } from '@/types/dashboard';
 import { lookupProject } from '@/lib/projects';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
+import ImageGallery from './ImageGallery';
 
 export interface DailyRowComment {
   id: number;
@@ -215,6 +216,9 @@ export default function DailyRow({ day, isToday, comments = [] }: Props) {
                   }}
                 >
                   {entry.did}
+                  {entry.images && entry.images.length > 0 ? (
+                    <ImageGallery images={entry.images} />
+                  ) : null}
                 </div>
               </Link>
             );

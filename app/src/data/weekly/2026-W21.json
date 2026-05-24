@@ -5,12 +5,12 @@
     "to": "2026-05-24"
   },
   "status": "current",
-  "summary": "063 W14~W17 백필 · 일간 페이지(/daily) · 의사결정 타임라인 C-형식 · Vercel 배포 · 프로젝트 ID 전면 마이그레이션 (11개 rename + aliases, 26→38) · 활동 자동 캡처 시스템 (Stop hook + fs extractor) — 병렬 세션 누락 해결",
+  "summary": "063 W14~W17 백필 · /daily 신설 · 의사결정 C-형식 · 프로젝트 ID 마이그레이션 (26→38) · 활동 자동 캡처 (Stop hook + fs extractor) · 월간 페이지 재구성 · 이미지 갤러리 시스템 (썸네일 + lightbox)",
   "kpis": {
     "activeProjects": 3,
-    "sessions": 5,
+    "sessions": 7,
     "newProjects": 16,
-    "filesChanged": 88
+    "filesChanged": 106
   },
   "daily": [
     {
@@ -33,7 +33,93 @@
         },
         {
           "projectId": "092",
-          "did": "[fs scan] 04_마음이_에너지_컬러가이드.md · 02_4컷만화_대본_v0.1.md · 03_4컷만화_프롬프트_v0.1.md · HISTORY.md · README.md"
+          "did": "[fs scan] 04_마음이_에너지_컬러가이드.md · 02_4컷만화_대본_v0.1.md · 03_4컷만화_프롬프트_v0.1.md · HISTORY.md · README.md",
+          "images": [
+            {
+              "publicPath": "/project-images/092__6985d6b5/01_red_classroom_4head_round_face_test.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/01_red_classroom_4head_round_face_test.png",
+              "filename": "01_red_classroom_4head_round_face_test.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:24:01.572Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/02_red_classroom_face_10percent_long_test.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/02_red_classroom_face_10percent_long_test.png",
+              "filename": "02_red_classroom_face_10percent_long_test.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:24:01.572Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/03_red_classroom_face_5percent_long_test.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/03_red_classroom_face_5percent_long_test.png",
+              "filename": "03_red_classroom_face_5percent_long_test.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:24:01.617Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/04_maeum_4head_subtle_oval_turnaround.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/04_maeum_4head_subtle_oval_turnaround.png",
+              "filename": "04_maeum_4head_subtle_oval_turnaround.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:24:01.640Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/05_maeum_5head_turnaround.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/05_maeum_5head_turnaround.png",
+              "filename": "05_maeum_5head_turnaround.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:24:01.689Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/06_energy_color_guide_first_pass.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/06_energy_color_guide_first_pass.png",
+              "filename": "06_energy_color_guide_first_pass.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:27:12.052Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/07_open_desk_leg_visibility_test.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/07_open_desk_leg_visibility_test.png",
+              "filename": "07_open_desk_leg_visibility_test.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:27:12.051Z"
+            },
+            {
+              "publicPath": "/project-images/092__6985d6b5/08_full_body_energy_meter_test.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/08_full_body_energy_meter_test.png",
+              "filename": "08_full_body_energy_meter_test.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:27:12.051Z"
+            },
+            {
+              "publicPath": "/project-images/092__11e65fce/01_skyblue_recovered_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/09_energy_scene_tests/01_skyblue_recovered_scene.png",
+              "filename": "01_skyblue_recovered_scene.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:26:37.853Z"
+            },
+            {
+              "publicPath": "/project-images/092__11e65fce/02_green_good_condition_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/09_energy_scene_tests/02_green_good_condition_scene.png",
+              "filename": "02_green_good_condition_scene.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:26:37.849Z"
+            },
+            {
+              "publicPath": "/project-images/092__11e65fce/03_yellow_warning_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/09_energy_scene_tests/03_yellow_warning_scene.png",
+              "filename": "03_yellow_warning_scene.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:26:37.850Z"
+            },
+            {
+              "publicPath": "/project-images/092__11e65fce/04_orange_low_energy_scene.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/09_energy_scene_tests/04_orange_low_energy_scene.png",
+              "filename": "04_orange_low_energy_scene.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-18T07:26:37.850Z"
+            }
+          ]
         }
       ]
     },
@@ -63,7 +149,16 @@
         },
         {
           "projectId": "092",
-          "did": "[fs scan] 03_에너지컬러별_미장센.md · 00_공통_앵커.md · 01_Scene1_프롬프트_v0.2_gpt.md · 04_에너지컬러별_6장면_프롬프트_v0.1.md · 05_시나리오기반_마음이_컷별_프롬프트_v0.1.md 외 3건"
+          "did": "[fs scan] 03_에너지컬러별_미장센.md · 00_공통_앵커.md · 01_Scene1_프롬프트_v0.2_gpt.md · 04_에너지컬러별_6장면_프롬프트_v0.1.md · 05_시나리오기반_마음이_컷별_프롬프트_v0.1.md 외 3건",
+          "images": [
+            {
+              "publicPath": "/project-images/092__772cc84b/01_superpower_energy_drink_hesitation.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/11_final_scene/01_superpower_energy_drink_hesitation.png",
+              "filename": "01_superpower_energy_drink_hesitation.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-19T14:12:25.924Z"
+            }
+          ]
         }
       ]
     },
@@ -93,7 +188,105 @@
         },
         {
           "projectId": "092",
-          "did": "[fs scan] 05_마음이_캐릭터_수정사항.md · 00_기본_방향성_지침.md · 02_샷리스트_v0.3.md · README.md · 02_마음이_캐릭터_재시작_노트.md 외 5건"
+          "did": "[fs scan] 05_마음이_캐릭터_수정사항.md · 00_기본_방향성_지침.md · 02_샷리스트_v0.3.md · README.md · 02_마음이_캐릭터_재시작_노트.md 외 5건",
+          "images": [
+            {
+              "publicPath": "/project-images/092__d7705482/01_1-1_empty_lecture_hall.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/01_1-1_empty_lecture_hall.png",
+              "filename": "01_1-1_empty_lecture_hall.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:38:59.528Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/02_1-2_door_opening.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/02_1-2_door_opening.png",
+              "filename": "02_1-2_door_opening.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:38:59.703Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/03_1-3_maeum_enters.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/03_1-3_maeum_enters.png",
+              "filename": "03_1-3_maeum_enters.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:38:59.879Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/04_1-4_maeum_sits.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/04_1-4_maeum_sits.png",
+              "filename": "04_1-4_maeum_sits.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:00.052Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/05_1-5_can_on_desk.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/05_1-5_can_on_desk.png",
+              "filename": "05_1-5_can_on_desk.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:00.222Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/06_1-6_clock_0900.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/06_1-6_clock_0900.png",
+              "filename": "06_1-6_clock_0900.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:02.654Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/07_T_clock_reverse.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/07_T_clock_reverse.png",
+              "filename": "07_T_clock_reverse.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:02.876Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/08_2-1_night_study_desk.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/08_2-1_night_study_desk.png",
+              "filename": "08_2-1_night_study_desk.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:03.071Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/09_2-2_time_loss.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/09_2-2_time_loss.png",
+              "filename": "09_2-2_time_loss.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:03.246Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/10_3-1_can_opening.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/10_3-1_can_opening.png",
+              "filename": "10_3-1_can_opening.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:03.434Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/11_3-2_bed_phone.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/11_3-2_bed_phone.png",
+              "filename": "11_3-2_bed_phone.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:03.638Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__d7705482/12_3-3_clock_0314.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/shotlist_v0.3_fhd/12_3-3_clock_0314.png",
+              "filename": "12_3-3_clock_0314.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-20T12:39:03.806Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            }
+          ]
         }
       ]
     },
@@ -128,7 +321,58 @@
         },
         {
           "projectId": "092",
-          "did": "[fs scan] 04_scene_design_작업프로세스.md"
+          "did": "[fs scan] 04_scene_design_작업프로세스.md",
+          "images": [
+            {
+              "publicPath": "/project-images/092__25a0ca80/01_orange_warning_professor_classroom.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/12_orange_professor_classroom/01_orange_warning_professor_classroom.png",
+              "filename": "01_orange_warning_professor_classroom.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:06:31.746Z"
+            },
+            {
+              "publicPath": "/project-images/092__2a709f38/01_sits_to_listen_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/13_class_fatigue_drink_sequence/01_sits_to_listen_simple_chair.png",
+              "filename": "01_sits_to_listen_simple_chair.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:22:30.295Z"
+            },
+            {
+              "publicPath": "/project-images/092__2a709f38/02_turns_dull_red_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/13_class_fatigue_drink_sequence/02_turns_dull_red_simple_chair.png",
+              "filename": "02_turns_dull_red_simple_chair.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:24:02.841Z"
+            },
+            {
+              "publicPath": "/project-images/092__2a709f38/03_drink_energy_drink_simple_chair.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/13_class_fatigue_drink_sequence/03_drink_energy_drink_simple_chair.png",
+              "filename": "03_drink_energy_drink_simple_chair.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:25:43.613Z"
+            },
+            {
+              "publicPath": "/project-images/092__cce23d5c/01_wide_professor_teaching_maeum_drinks.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/14_professor_teaching_drink_angles/01_wide_professor_teaching_maeum_drinks.png",
+              "filename": "01_wide_professor_teaching_maeum_drinks.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:45:36.737Z"
+            },
+            {
+              "publicPath": "/project-images/092__cce23d5c/02_over_professor_shoulder_maeum_drinks.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/14_professor_teaching_drink_angles/02_over_professor_shoulder_maeum_drinks.png",
+              "filename": "02_over_professor_shoulder_maeum_drinks.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:45:36.906Z"
+            },
+            {
+              "publicPath": "/project-images/092__cce23d5c/03_close_medium_maeum_drinks_professor_teaches.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/14_professor_teaching_drink_angles/03_close_medium_maeum_drinks_professor_teaches.png",
+              "filename": "03_close_medium_maeum_drinks_professor_teaches.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-21T11:45:37.066Z"
+            }
+          ]
         }
       ]
     },
@@ -158,18 +402,54 @@
         },
         {
           "projectId": "092",
-          "did": "[fs scan] 스토리보드_AB_프롬프트전체_비교문서_v0.2.md"
+          "did": "[fs scan] 스토리보드_AB_프롬프트전체_비교문서_v0.2.md",
+          "images": [
+            {
+              "publicPath": "/project-images/092__38475849/01_morning_class_professor_notices.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/4cut_comic_v0.1/01_morning_class_professor_notices.png",
+              "filename": "01_morning_class_professor_notices.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-22T01:24:49.951Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__38475849/02_last_night_study_screen.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/4cut_comic_v0.1/02_last_night_study_screen.png",
+              "filename": "02_last_night_study_screen.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-22T01:24:50.127Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__38475849/03_late_night_phone_caffeine.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/4cut_comic_v0.1/03_late_night_phone_caffeine.png",
+              "filename": "03_late_night_phone_caffeine.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-22T01:24:50.301Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__38475849/04_back_to_class_body_budget.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/4cut_comic_v0.1/04_back_to_class_body_budget.png",
+              "filename": "04_back_to_class_body_budget.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-22T01:24:50.468Z",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            }
+          ]
         }
       ]
     },
     {
       "date": "2026-05-23",
       "weekday": "토",
-      "filesChanged": 0,
+      "filesChanged": 6,
       "topProjectIds": [
+        "063",
         "061",
         "091",
-        "063"
+        "03",
+        "01"
       ],
       "entries": [
         {
@@ -183,14 +463,135 @@
         {
           "projectId": "063",
           "did": "[fs scan] 2026-W21.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] project-map.md · README.md"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] app.jsx · artboard-editorial.jsx · artboard-grid.jsx · artboard-quiet.jsx · design-canvas.jsx 외 2건"
         }
       ]
     },
     {
       "date": "2026-05-24",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 12,
+      "topProjectIds": [
+        "063",
+        "092",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "이미지 갤러리 시스템 — extract-images.mjs (whitelist + README caption) · public 복사 · ImageGallery 컴포넌트 (썸네일 + lightbox) · DailyRow 통합 · W21 77 이미지 / 47 attached"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] README.md · 06_장면제작_연출지침.md",
+          "images": [
+            {
+              "publicPath": "/project-images/092__6985d6b5/09_energy_color_guide_extended_40percent.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/08_maeum_revision_tests/09_energy_color_guide_extended_40percent.png",
+              "filename": "09_energy_color_guide_extended_40percent.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T03:12:35.572Z"
+            },
+            {
+              "publicPath": "/project-images/092__c81b2853/01_maeum_facs_expression_sheet.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/15_facs_expression_sheet/01_maeum_facs_expression_sheet.png",
+              "filename": "01_maeum_facs_expression_sheet.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T03:22:30.759Z"
+            },
+            {
+              "publicPath": "/project-images/092__c81b2853/02_maeum_facs_expression_sheet_energy_percent_v0.2.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/character_dev/15_facs_expression_sheet/02_maeum_facs_expression_sheet_energy_percent_v0.2.png",
+              "filename": "02_maeum_facs_expression_sheet_energy_percent_v0.2.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T03:33:33.812Z"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/01_dark_room_phone.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/01_dark_room_phone.png",
+              "filename": "01_dark_room_phone.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.209Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/02_day_fatigue_cards.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/02_day_fatigue_cards.png",
+              "filename": "02_day_fatigue_cards.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.214Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/03_reward_psychology_phone.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/03_reward_psychology_phone.png",
+              "filename": "03_reward_psychology_phone.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.217Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/04_phone_to_campfire.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/04_phone_to_campfire.png",
+              "filename": "04_phone_to_campfire.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.222Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/05_platform_mechanism.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/05_platform_mechanism.png",
+              "filename": "05_platform_mechanism.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.226Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/06_sleep_delay_time_loss.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/06_sleep_delay_time_loss.png",
+              "filename": "06_sleep_delay_time_loss.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.231Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/07_body_cost_sleep.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/07_body_cost_sleep.png",
+              "filename": "07_body_cost_sleep.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.234Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            },
+            {
+              "publicPath": "/project-images/092__71e552e6/08_awareness_phone_down.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/092_영상과제/04_gpt/05_제작/생성이미지/night_reward_8scenes_v0.1/08_awareness_phone_down.png",
+              "filename": "08_awareness_phone_down.png",
+              "folderContext": "09_몸과마음의과학 / 092_영상과제 / 04_gpt / 05_제작 / 생성이미지",
+              "mtime": "2026-05-24T04:02:40.238Z",
+              "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md`",
+              "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
+            }
+          ]
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        }
+      ]
     }
   ],
   "projects": [
@@ -305,6 +706,20 @@
       "title": "Stop hook 자동 활동 캡처 (C)",
       "description": "워크스페이스 .claude/settings.local.json에 Stop hook 등록 + scripts/auto-capture-activity.sh. 매 turn 종료마다 현재 ISO 주차 계산 → weekly JSON 없으면 extract-week.mjs로 신설 → extract-from-filesystem.mjs로 fs 활동 자동 반영. 30초 timeout, 실패해도 세션 흐름 무영향(/tmp/063_auto_capture.log 로깅). .claude/CLAUDE.md에 \"활동은 자동, 결정만 수기 로그\" 원칙 명문화. 어떤 Claude 세션이든(092, 053, 어떤 프로젝트든) 파일 변경은 자동으로 대시보드에 반영됨.",
       "isMilestone": true
+    },
+    {
+      "date": "2026-05-23",
+      "projectId": "063",
+      "title": "월간 페이지 재구성 — 한 달 요약 hero 2/3 + Top10↔Milestone swap",
+      "description": "한 달 요약을 페이지 상단 2/3 width hero (큰 본문 + Top 3 강조)로 격상. grid 1fr·2fr → 2fr·1fr 로 swap. LEFT(2fr) = ★ Milestone (큰 자리), RIGHT(1fr) aside = Top 10 compact list + 이 달의 주간 + Type 분포. Top 10은 PeriodProjectTile(큰 narrative 카드) → compact row(rank · name · id·files·imp · pct%)로 변경.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-24",
+      "projectId": "063",
+      "title": "이미지 갤러리 시스템 — 썸네일 strip + 풀스크린 lightbox",
+      "description": "extract-images.mjs: whitelist 폴더 키워드(05_제작·시안·logo·character·생성이미지 등) 기반 .png/.jpg/.svg 자동 수집, 같은 폴더 README/HISTORY 첫 문단 → caption, 상위 PROJECT.md → purpose 추출. app/public/project-images/ 폴더별 해시 디렉토리에 복사. ImageGallery client 컴포넌트: 80×80 썸네일 strip + 풀스크린 lightbox (ESC/←/→ 키보드 navi + 메타 패널: 날짜·경로·caption·purpose). DailyRow에 entry.images[] 자동 노출. W21 첫 실행: 77 이미지 수집 → 47 attached.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
@@ -329,7 +744,7 @@
   "labelChanges": [],
   "_labelChangesNote": "위 11건은 ID rename (옛 ID → 새 ID with aliases). 상태는 active 유지.",
   "_oldLabelChanges_replaced": [],
-  "buildAt": "2026-05-23T06:36:20.652Z",
+  "buildAt": "2026-05-24T05:27:10.017Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
   }

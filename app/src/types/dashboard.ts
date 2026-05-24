@@ -56,11 +56,30 @@ export interface DecisionEntry {
   isMilestone?: boolean;
 }
 
+/** Image metadata for gallery display */
+export interface DailyImage {
+  /** /project-images/... web path (relative to /public) */
+  publicPath: string;
+  /** original absolute path on disk */
+  sourcePath: string;
+  /** file name */
+  filename: string;
+  /** folder context (e.g., "092 영상과제 / 05_제작 / 생성이미지 / character_dev") */
+  folderContext: string;
+  /** mtime ISO */
+  mtime: string;
+  /** caption from sibling README/HISTORY first paragraph */
+  caption?: string;
+  /** purpose from PROJECT.md */
+  purpose?: string;
+}
+
 /** One project's work on a single day — extracted from daily logs */
 export interface DailyEntry {
   projectId: string;
   did: string;               // section titles joined, max ~200 chars
   logFilePath?: string;      // absolute path to source log
+  images?: DailyImage[];     // collected image files in same date range
 }
 
 /** Daily activity bucket */

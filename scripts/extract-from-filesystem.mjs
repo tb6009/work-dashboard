@@ -145,6 +145,7 @@ const EXCLUDE_REL = [
   '00_personal/reports/daily',
   '00_personal/reports/weekly',
   '00_personal/reports/monthly',
+  '10_보고살피다/104_맨프레드교수님',
 ];
 const INCLUDE_EXT = /\.(md|tsx?|jsx?|json|html|css|py|sh|mjs|yaml|yml|svg|tex)$/i;
 

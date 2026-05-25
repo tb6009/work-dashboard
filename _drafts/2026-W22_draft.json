@@ -7,17 +7,21 @@
   "status": "current",
   "summary": "TODO — Claude가 한 줄 요약 작성",
   "kpis": {
-    "activeProjects": 0,
-    "sessions": 0,
-    "newProjects": 0,
-    "filesChanged": 0
+    "activeProjects": 5,
+    "sessions": 1,
+    "newProjects": 5,
+    "filesChanged": 31
   },
   "daily": [
     {
       "date": "2026-05-25",
       "weekday": "월",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 31,
+      "topProjectIds": [
+        "09",
+        "04",
+        "00"
+      ]
     },
     {
       "date": "2026-05-26",
@@ -56,14 +60,81 @@
       "topProjectIds": []
     }
   ],
-  "projects": [],
-  "decisions": [],
-  "newProjects": [],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 45,
+      "filesChanged": 13,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "00",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "02",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**브랜치 커밋은 100% main에 머지된 상태였음** (`git cherry` 비어있음, merge-ba",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**미커밋 작업의 본질**: 테스트 인프라(vitest + 27 테스트파일 + @testing-library",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**합치지 않고 폐기한 이유**: main이 그 사이 Work탭/Thesis탭/활동 추적기 등 v0.9.4~",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**브랜치 ref 삭제 + 태그 보존**: 브랜치는 사라져도 커밋은 `archive/stage-9-tip`으",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04",
+    "09",
+    "00",
+    "01",
+    "02"
+  ],
   "labelChanges": [],
-  "buildAt": "2026-05-24T22:16:21.835Z",
+  "buildAt": "2026-05-25T14:30:27.104Z",
   "_meta": {
     "extractedBy": "extract-week.mjs",
-    "extractedAt": "2026-05-24T22:16:21.835Z",
+    "extractedAt": "2026-05-25T14:30:27.104Z",
     "todoFields": [
       "summary",
       "projects[].imp",

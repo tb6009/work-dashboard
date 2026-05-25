@@ -73,9 +73,11 @@
 - [ ] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정 (Vercel 웹 대시보드)
 - [x] **W14~W17 소급 생성** (2026-05-19) — `app/src/data/weekly/` 4개 추가. extract-week.mjs draft + 일일 로그 의미 보강. W14(05 INDEX+03 Once+09 셋업) / W15(09 정량분석+05 선행연구 HTML) / W16(05 축 이동+10 보살피고 캐릭터+11 매거진 2호) / W17(10 3분할+6 에이전트+v1.5 베타+21 CPSF 8 쟁점)
 - [x] **일간 페이지 추가** (2026-05-20) — `/daily` 라우트 + `DailyRow` 컴포넌트. 현재 주의 활동 있는 날만 최신순. 좌측 큰 날짜 + 우측 프로젝트별 작업 내용. `daily[].entries[]` 스키마 신설 + `extract-daily-entries.mjs` 일일 로그 자동 파서 + W14~W20 12일 백필.
-- [ ] Claude cron으로 매주 월요일 09:00 자동 빌드 (`schedule` 스킬)
+- [x] **Vercel Root Directory = `app` 설정** (2026-05-25) — REST API PATCH로 직접 패치 (`vercel project` CLI 미지원). 다음 push부터 자동 배포 정상화.
+- [x] **104_맨프레드교수님 트래킹·등록 상시 제외** (2026-05-25) — `extract-from-filesystem.mjs` · `extract-images.mjs` · `.claude/CLAUDE.md` 3개 파일 패치.
+- [~] Claude cron으로 매주 월요일 09:00 자동 빌드 — 원격 routine 차단(워크스페이스 부재). 옵션 A(로컬 launchd) 권장, 사용자 결정 대기.
+- [-] 재구조화 후속 `path` 필드 — EXPLICIT map과 define이 이미 동기화. 중복 데이터 회피로 스킵.
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화
-- [ ] 재구조화 후속: 11(디자인매거진), 31/32(083/084) 등 폴더 경로 변경분 `projects.json`에 `path` 필드로 명시 검토
 
 ## 3-1. 주간 업데이트 절차 요약
 

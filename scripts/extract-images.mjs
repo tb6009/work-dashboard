@@ -111,7 +111,7 @@ const EXCLUDE_DIR = new Set([
   'dist', 'build', 'out', '.vercel', '_archive', '_archive_20260424',
   '_backups', '_backups_20260424', '_drafts', '.smart-env',
 ]);
-const EXCLUDE_REL = ['00_personal/data', '00_personal/reports', '학생과제파일', 'raw', 'private'];
+const EXCLUDE_REL = ['00_personal/data', '00_personal/reports', '학생과제파일', 'raw', 'private', '10_보고살피다/104_맨프레드교수님'];
 const IMG_EXT = /\.(png|jpe?g|webp|gif|svg)$/i;
 const MAX_IMG_SIZE = 5 * 1024 * 1024; // 5MB
 

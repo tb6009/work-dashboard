@@ -27,8 +27,22 @@ fi
 WEEKLY_JSON="$WORKDIR/app/src/data/weekly/${WEEK_ID}.json"
 
 if [ ! -f "$WEEKLY_JSON" ]; then
-  # 주차 JSON 자동 생성 (extract-week.mjs 호출)
+  # 1) draft 생성 (extract-week.mjs는 _drafts/에만 씀)
   cd "$WORKDIR" && /usr/local/bin/node scripts/extract-week.mjs "$WEEK_ID" >> "$LOG" 2>&1 || true
+  # 2) draft → weekly 발행본 복사 (_meta 제거). 이게 없으면 fs extractor가 exit 1.
+  DRAFT="$WORKDIR/_drafts/${WEEK_ID}_draft.json"
+  if [ -f "$DRAFT" ]; then
+    /usr/bin/python3 -c "
+import json
+with open('$DRAFT') as f:
+    d = json.load(f)
+d.pop('_meta', None)
+with open('$WEEKLY_JSON', 'w') as f:
+    json.dump(d, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+" >> "$LOG" 2>&1 || true
+    echo "$(date -u +%FT%TZ) [auto-publish] ${WEEK_ID}.json stub 발행" >> "$LOG"
+  fi
 fi
 
 # 파일시스템 활동 캡처

@@ -1,0 +1,152 @@
+{
+  "week": "2026-W22",
+  "range": {
+    "from": "2026-05-25",
+    "to": "2026-05-31"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 5,
+    "sessions": 1,
+    "newProjects": 5,
+    "filesChanged": 31
+  },
+  "daily": [
+    {
+      "date": "2026-05-25",
+      "weekday": "월",
+      "filesChanged": 31,
+      "topProjectIds": [
+        "09",
+        "04",
+        "00",
+        "061",
+        "063",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "061",
+          "did": "[fs scan] CHANGELOG.md · stage9-worktree-2026-05-25.md · check-button-gray-compare.html · design-history.html · done-duration-mockup.html 외 13건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md · 2026-W22.json · extract-from-filesystem.mjs · extract-images.mjs"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 01_경쟁도서_재정렬_v0.1.md · 02_학술근거_챕터매핑_v0.1.md · 03_목차_v0.3.md · 05_편집장평가_v0.3.md · 06_독자평가_v0.3.md 외 57건"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-27",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-28",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-29",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-30",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-05-31",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 45,
+      "filesChanged": 13,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "00",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "02",
+      "pct": 14,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**브랜치 커밋은 100% main에 머지된 상태였음** (`git cherry` 비어있음, merge-ba",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**미커밋 작업의 본질**: 테스트 인프라(vitest + 27 테스트파일 + @testing-library",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**합치지 않고 폐기한 이유**: main이 그 사이 Work탭/Thesis탭/활동 추적기 등 v0.9.4~",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-05-25",
+      "projectId": "09",
+      "title": "**브랜치 ref 삭제 + 태그 보존**: 브랜치는 사라져도 커밋은 `archive/stage-9-tip`으",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04",
+    "09",
+    "00",
+    "01",
+    "02"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-05-25T14:59:41.596Z"
+}

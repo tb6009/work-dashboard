@@ -217,11 +217,12 @@ function Hero({
           color: 'var(--gray-700)',
           lineHeight: 'var(--leading-relaxed)',
           maxWidth: 720,
-          marginBottom: 'var(--sp-5)',
+          marginBottom: 'var(--sp-4)',
         }}
       >
         {project.define}
       </p>
+      <ExternalLinkRow projectId={project.id} projectName={project.name} webUrl={project.webUrl} />
       <div
         style={{
           display: 'flex',
@@ -340,6 +341,64 @@ function SectionHead({ title, meta }: { title: string; meta: string }) {
         {title}
       </h2>
       <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>{meta}</div>
+    </div>
+  );
+}
+
+const DASHBOARD_URL = 'https://work-dashboard-app.vercel.app';
+
+function ExternalLinkRow({
+  projectId,
+  projectName,
+  webUrl,
+}: {
+  projectId: string;
+  projectName: string;
+  webUrl?: string;
+}) {
+  const links: { label: string; href: string }[] = [];
+  if (projectId === '061') {
+    links.push({ label: 'DASHBOARD', href: DASHBOARD_URL });
+    if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
+  } else if (webUrl) {
+    links.push({ label: projectName.toUpperCase(), href: webUrl });
+  }
+  if (links.length === 0) return null;
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        gap: 'var(--sp-2)',
+        flexWrap: 'wrap',
+        marginBottom: 'var(--sp-5)',
+      }}
+    >
+      {links.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+            fontSize: 'var(--text-2xs)',
+            fontWeight: 700,
+            letterSpacing: 'var(--tracking-wide)',
+            color: 'var(--black)',
+            background: 'var(--white)',
+            border: '1px solid var(--gray-900)',
+            padding: '6px 10px',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-mono)',
+          }}
+        >
+          {l.label}
+          <span aria-hidden style={{ fontSize: 11, opacity: 0.6 }}>↗</span>
+        </a>
+      ))}
     </div>
   );
 }

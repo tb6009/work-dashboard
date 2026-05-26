@@ -24,6 +24,7 @@ export interface ProjectMeta {
   createdAt?: string;        // ISO date
   status: LabelStatus;
   aliases?: string[];        // 옛 ID (마이그레이션 이력). lookupProject가 fallback으로 검색.
+  webUrl?: string;           // 프로덕션 배포 URL (있는 프로젝트만)
 }
 
 /** Top-level category meta (2026-05-17 재구조화) */

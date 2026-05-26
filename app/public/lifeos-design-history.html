@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life OS — Design History</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #f5f5f5; padding: 40px 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+  .sub { color: #808080; margin-bottom: 40px; font-size: 0.85rem; }
+  .stage { margin-bottom: 40px; padding: 24px; background: #fff; border-radius: 12px; }
+  .stage-label { font-size: 0.65rem; color: #60A5FA; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 6px; }
+  .stage-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+  .stage-desc { font-size: 0.82rem; color: "#808080"; margin-bottom: 12px; line-height: 1.6; color: #808080; }
+  .stage-detail { font-size: 0.78rem; color: #333; line-height: 1.7; margin-bottom: 12px; }
+  .stage-detail li { margin-bottom: 4px; }
+  .stage-link { display: inline-block; padding: 8px 16px; font-size: 0.78rem; color: #60A5FA; border: 1px solid #60A5FA; border-radius: 6px; text-decoration: none; margin-right: 8px; margin-bottom: 8px; }
+  .stage-link:hover { background: rgba(96,165,250,0.1); }
+  .arrow { text-align: center; color: #b3b3b3; font-size: 1.2rem; margin: 8px 0; }
+  .tags { margin-bottom: 12px; }
+  .tag { display: inline-block; font-size: 0.62rem; padding: 2px 8px; border-radius: 10px; margin-right: 4px; margin-bottom: 4px; }
+  .tag.added { background: rgba(96,165,250,0.1); color: #60A5FA; }
+  .tag.changed { background: rgba(251,191,36,0.1); color: #D97706; }
+  .tag.removed { background: rgba(220,38,38,0.1); color: #DC2626; }
+  .tag.tech { background: rgba(0,0,0,0.05); color: #808080; }
+  .screenshot { font-size: 0.7rem; color: #b3b3b3; margin-top: 8px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Life OS Design History</h1>
+<div class="sub">2026-05-02 ~ 05-13 | 디자인 진화 과정 10단계 (Stage 9 = v2.0 KILLED)</div>
+
+<!-- Stage 1 -->
+<div class="stage">
+  <div class="stage-label">Stage 1 — 5/2 오전 | 초기 무드보드</div>
+  <div class="stage-title">다크 배경 + 멀티 컬러</div>
+  <div class="stage-desc">
+    3가지 컬러 팔레트, 4가지 폰트 조합, 캐릭터별 액센트 컬러를 비교하는 초기 무드보드.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>배경</strong>: 다크 (#0f0f0f)</li>
+      <li><strong>팔레트 A</strong>: Teal Productivity (#0D9488 + #EA580C)</li>
+      <li><strong>팔레트 B</strong>: Mono + Blue (#18181B + #2563EB)</li>
+      <li><strong>팔레트 C</strong>: Calm Lavender (#8B5CF6 + #059669)</li>
+      <li><strong>캐릭터 액센트</strong>: 진(Slate) / 모미(Emerald) / 마음(Violet)</li>
+      <li><strong>타이포</strong>: Outfit / Plus Jakarta Sans / Sora / DM Sans + Noto Sans KR</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">컬러 팔레트 3종</span>
+    <span class="tag added">폰트 4종 비교</span>
+    <span class="tag added">캐릭터 액센트</span>
+    <span class="tag added">아키텍처 설계</span>
+    <span class="tag added">DB 스키마</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage1-2-moodboard.html" target="_blank">무드보드 열기</a>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 2 -->
+<div class="stage">
+  <div class="stage-label">Stage 2 — 5/2 오전 | 디자인 전환</div>
+  <div class="stage-title">흰 배경 + 텍스트 중심 + 단일 컬러</div>
+  <div class="stage-desc">
+    "배경 흰색, 색 최소화, 형태 최소화, 시간에 따른 컬러 하나만" 피드백 반영.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>배경</strong>: 순백 (#FFFFFF)</li>
+      <li><strong>텍스트</strong>: 100% Black(#000) 강조 + 80% Gray(#333) 본문</li>
+      <li><strong>형태</strong>: 카드/테두리/그림자 전부 제거 → 여백과 구분선만</li>
+      <li><strong>색</strong>: 유일한 색 하나가 시간에 따라 변함</li>
+      <li><strong>시간 컬러 3옵션</strong>: Blue Cycle / Warm Shift / Ink</li>
+      <li><strong>폰트 확정</strong>: Outfit(영문 제목) + Noto Sans KR(한글 본문)</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag changed">다크 → 흰 배경</span>
+    <span class="tag changed">멀티 컬러 → 단일 컬러</span>
+    <span class="tag changed">3가지 팔레트 → 시간 기반 1컬러</span>
+    <span class="tag added">텍스트 계층 (Black/Gray)</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage1-2-moodboard.html" target="_blank">무드보드 v2 열기</a>
+  <div class="screenshot">* 무드보드 파일은 v2(흰 배경)로 덮어써짐</div>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 3 -->
+<div class="stage">
+  <div class="stage-label">Stage 3 — 5/2 오후 | 인터랙티브 프로토타입</div>
+  <div class="stage-title">날씨 헤더 + 브리핑 화면</div>
+  <div class="stage-desc">
+    실제 브리핑 화면을 인터랙티브 HTML로 구현. 시간대/컬러 전환 가능.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>날씨 헤더</strong>: 하늘 그라디언트 12종 (morning/afternoon/evening/night × blue/warm/ink)</li>
+      <li><strong>기온 표시</strong>: 5.4rem 대형 폰트 + 맑음/최저/최고</li>
+      <li><strong>인사말</strong>: Good Morning/Afternoon/Evening/Night 자동 전환</li>
+      <li><strong>3블록 브리핑</strong>: Yesterday(취소선) / Today / Recommendation(액센트 선)</li>
+      <li><strong>캐릭터 탭</strong>: 진(Butler) / 모미(Trainer) / 마음(Coach)</li>
+      <li><strong>디자인 조정</strong>: 그라디언트 폭, 온도 위치, 영역 높이 등 여러 차례 미세조정</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">하늘 그라디언트 12종</span>
+    <span class="tag added">시간대 전환</span>
+    <span class="tag added">기온 + 날씨</span>
+    <span class="tag added">3블록 브리핑</span>
+    <span class="tag added">캐릭터 탭</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage3-briefing-prototype.html" target="_blank">브리핑 프로토타입 열기</a>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 4 -->
+<div class="stage">
+  <div class="stage-label">Stage 4 — 5/2 저녁 | design1 (Next.js 앱)</div>
+  <div class="stage-title">실제 앱 구현 + DB 연동</div>
+  <div class="stage-desc">
+    프로토타입을 Next.js 앱으로 구현. Supabase DB, AI 대화, Todo, Google Calendar 연동.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>하단 3탭</strong>: 진 / 모미 / 마음</li>
+      <li><strong>홈</strong>: 날씨 헤더 + Daily Insight + Today/Tomorrow/Yesterday + Recommendation + Todo</li>
+      <li><strong>모미 탭</strong>: Health Status 입력 (수면/컨디션/운동) + AI 대화</li>
+      <li><strong>마음 탭</strong>: 감정 선택 + AI 대화</li>
+      <li><strong>설정</strong>: 톱니바퀴 팝업에서 API 키 입력</li>
+      <li><strong>DB</strong>: Supabase — health_logs, journal_entries, chat_messages, todos, schedules</li>
+      <li><strong>배포</strong>: Vercel (life-os-7wj2.vercel.app)</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag tech">Next.js 16</span>
+    <span class="tag tech">Supabase</span>
+    <span class="tag tech">ChatGPT API</span>
+    <span class="tag tech">Vercel</span>
+    <span class="tag added">Todo 리스트</span>
+    <span class="tag added">Health 입력</span>
+    <span class="tag added">AI 대화</span>
+    <span class="tag added">Google Calendar 데이터</span>
+  </div>
+  <div class="screenshot">* design1 태그로 GitHub에 보존</div>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 5 -->
+<div class="stage">
+  <div class="stage-label">Stage 5 — 5/3 오전 | 기록 탭 + 네비게이션 기획</div>
+  <div class="stage-title">Diary 시안 + Nav A vs B + 친구들 합동</div>
+  <div class="stage-desc">
+    날짜별 다이어리 화면 기획. 3가지 네비게이션 옵션 시안 비교.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>Diary 시안</strong>: 날짜 스크롤 피커 + Health/Emotion/Schedule/Conversations 표시</li>
+      <li><strong>기록 있는 날 vs 없는 날</strong>: 두 화면 비교</li>
+      <li><strong>스케줄 3일</strong>: 오늘/내일/모레 일정 동시 표시</li>
+      <li><strong>Nav Option A</strong>: 3탭 (홈/기록/설정) + 홈 내부에 진/모미/마음</li>
+      <li><strong>Nav Option B</strong>: 5탭 (홈/모미/마음/기록/설정) → 각 캐릭터 독립</li>
+      <li><strong>친구들 합동</strong>: 모미+마음 한 대화방, 키워드로 자동 분기</li>
+      <li><strong>최종 선택</strong>: 4탭 (홈/친구들/기록/설정)</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">Diary 시안</span>
+    <span class="tag added">Nav A vs B 비교</span>
+    <span class="tag added">친구들 합동 대화방</span>
+    <span class="tag changed">3탭 → 4탭 결정</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage5-diary-prototype.html" target="_blank">Diary 시안</a>
+  <a class="stage-link" href="process/design_history/stage5-nav-comparison.html" target="_blank">Nav A vs B</a>
+  <a class="stage-link" href="process/design_history/stage5-friends-prototype.html" target="_blank">친구들 시안</a>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 6 -->
+<div class="stage">
+  <div class="stage-label">Stage 6 — 5/3 오후 | design2 (현재)</div>
+  <div class="stage-title">하루 캐릭터 + 퍼포먼스 대시보드</div>
+  <div class="stage-desc">
+    모미+마음 → "하루" 통합 비서. 기록 탭에 Today/Week/Month 서브 탭. 블루 계열 통일.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>하단 4탭</strong>: 홈 / 하루(Assistant) / 기록(Diary) / 설정(Settings)</li>
+      <li><strong>하루 캐릭터</strong>: 진+모미+마음 통합 만능 비서, 모든 주제 대화 가능</li>
+      <li><strong>Daily Insight</strong>: DB에서 건강/감정/스케줄 실시간 조합 (30분 갱신)</li>
+      <li><strong>Recommendation</strong>: 하루 대화 내용 기반 팁 추출 + 체크 기능 (1시간 갱신)</li>
+      <li><strong>기록 Today</strong>: 날짜 스크롤 피커 + Health/Emotion/Schedule + Memo + Daily Review 4질문</li>
+      <li><strong>기록 Week</strong>: 달성률 카드 + 수면 바 차트 + 감정 흐름 + 한줄 요약</li>
+      <li><strong>기록 Month</strong>: 히트맵 캘린더 + 30일 차트(수면/컨디션/달성률) + 감정 분포 + 월간 요약</li>
+      <li><strong>컬러 룰</strong>: 블루(#60A5FA) = 달성/7h+, 그레이(#E6E6E6) = 미달성</li>
+      <li><strong>Daily Review 4질문</strong>: 감사/완료/내일/나에게 한마디</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag changed">친구들 → 하루</span>
+    <span class="tag changed">모미+마음 → 통합 비서</span>
+    <span class="tag added">Week 대시보드</span>
+    <span class="tag added">Month 대시보드</span>
+    <span class="tag added">Recommendation 체크</span>
+    <span class="tag added">Daily Review 4질문</span>
+    <span class="tag added">달성률 DB 저장</span>
+    <span class="tag changed">컬러 통일 (블루+그레이)</span>
+    <span class="tag removed">모미/마음 독립 탭</span>
+    <span class="tag removed">친구들 탭</span>
+  </div>
+  <div class="screenshot">* design2 초기 태그로 GitHub에 보존.</div>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 7 -->
+<div class="stage">
+  <div class="stage-label">Stage 7 — 5/3~4 | design2 확장 (현재)</div>
+  <div class="stage-title">루틴 시스템 + 리포트/회고 + MI 공감 대화</div>
+  <div class="stage-desc">
+    습관 추적, 자동 리포트, 회고 시스템, 하루 대화 스타일 전면 개편.
+    "기록하고 돌아보고 개선하는" 완전한 생산성 사이클 완성.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>루틴 시스템</strong>
+        <ul>
+          <li>홈: Today 아래 Routine 섹션 — 체크 토글, 연속 일수, 🔥(3일+), "잊지 않으셨죠?"</li>
+          <li>하루 대화로 루틴 추가/삭제 ("명상 루틴 추가해줘")</li>
+          <li>기록 Today: 루틴 완료 상태 + 연속 기록 요약</li>
+          <li>기록 Month: 루틴별 달성률 프로그래스 바</li>
+        </ul>
+      </li>
+      <li><strong>주간/월간 리포트 (자동 문장)</strong>
+        <ul>
+          <li>Week: "이번 주는 7일 중 5일을 기록하셨어요. 수면은 평균 5.7시간으로..."</li>
+          <li>Month: "5월은 30일 중 20일을 기록하셨어요. 건강 면에서 평균 수면 6.2시간..."</li>
+          <li>데이터 기반 자동 생성 — 수면, 컨디션, 운동, 감정, 루틴, Recommendation 달성률 종합</li>
+        </ul>
+      </li>
+      <li><strong>회고 시스템 (직접 입력)</strong>
+        <ul>
+          <li>Week: 다음 주 다짐 + 한줄 소감</li>
+          <li>Month: 기억에 남는 순간 + 다음 달 목표 + 나에게 한 마디</li>
+          <li>DB 저장 (weekly_reviews, monthly_reviews)</li>
+        </ul>
+      </li>
+      <li><strong>하루 MI 공감 대화</strong>
+        <ul>
+          <li>동기면담(MI) 4원칙: 경청/반영, 열린 질문, 공감 먼저, 자율성 존중</li>
+          <li>바로 리스트 금지 → "정리해드릴까요?" → 동의 후 제공</li>
+          <li>체크박스: 실행 가능한 팁(3개+)일 때만, 체크된 것만 Rec/Todo 추가</li>
+          <li>마크다운 렌더링 (**볼드**, *이탤릭*, `코드`)</li>
+          <li>모바일 Enter = 줄바꿈 (전송은 버튼만)</li>
+          <li>헤더 상단 고정 (fixed)</li>
+        </ul>
+      </li>
+      <li><strong>Recommendation 개선</strong>
+        <ul>
+          <li>상단: 맥락 요약 ("수면이 부족해요, 수업이 있어요. 이런 부분을 챙겨보세요:")</li>
+          <li>하단: 체크 가능한 실행 항목 + 달성 카운트</li>
+          <li>하루 대화 내용 자동 추출 + 홈 탭 복귀 시 즉시 갱신</li>
+        </ul>
+      </li>
+      <li><strong>기록 Today 개선</strong>
+        <ul>
+          <li>스케줄: 오늘만 표시 (내일/모레 제거 — 홈에서 확인)</li>
+          <li>하루 대화 요약: 주제별 인과관계 서술 ("출판에 대해 이야기함 — 접근성이 핵심")</li>
+          <li>상투어 필터링 ("응", "해줘" 등 제외)</li>
+        </ul>
+      </li>
+      <li><strong>기록 Week 확장</strong>
+        <ul>
+          <li>달성률 카드: Recommendation + Todo 나란히</li>
+          <li>일별 상세: 요일별 수면/컨디션/운동/감정</li>
+          <li>운동 로그 + Recommendation 세부 항목</li>
+        </ul>
+      </li>
+      <li><strong>기록 Month 확장</strong>
+        <ul>
+          <li>캘린더: 요일 헤더(일~토), 월 네비게이션(←→), 폰트 확대</li>
+          <li>차트: 마우스오버/터치 시 데이터 값 표시</li>
+          <li>월간 요약: 건강/감정/루틴/활동 4섹션</li>
+        </ul>
+      </li>
+      <li><strong>Todo 시간 기록</strong>: completed_at 타임스탬프 저장</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">루틴 시스템</span>
+    <span class="tag added">연속 일수 + 🔥</span>
+    <span class="tag added">주간 리포트 (자동)</span>
+    <span class="tag added">월간 리포트 (자동)</span>
+    <span class="tag added">주간 회고 (입력)</span>
+    <span class="tag added">월간 회고 (입력)</span>
+    <span class="tag added">하루 루틴 관리</span>
+    <span class="tag added">Todo 완료 시간</span>
+    <span class="tag added">Rec 맥락 요약</span>
+    <span class="tag added">마크다운 렌더링</span>
+    <span class="tag changed">하루 대화 → MI 공감</span>
+    <span class="tag changed">대화 요약 → 인과관계 서술</span>
+    <span class="tag changed">기록 Today 스케줄 → 오늘만</span>
+    <span class="tag changed">Week → 리포트+회고+상세</span>
+    <span class="tag changed">Month → 리포트+회고+루틴</span>
+    <span class="tag removed">딱딱한 리스트 응답</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage7-prototype.html" target="_blank" style="background:rgba(96,165,250,0.1);border-color:#60A5FA;font-weight:600;">인터랙티브 프로토타입</a>
+  <a class="stage-link" href="process/design_history/stage7-home.html" target="_blank">홈 (raw)</a>
+  <a class="stage-link" href="process/design_history/stage7-haru.html" target="_blank">하루 (raw)</a>
+  <a class="stage-link" href="process/design_history/stage7-diary.html" target="_blank">기록 (raw)</a>
+  <br><br>
+  <a class="stage-link" href="process/design2-ui-architecture.md" target="_blank">UI 아키텍처 문서</a>
+  <a class="stage-link" href="process/haru-conversation-evolution.md" target="_blank">하루 대화 진화 과정</a>
+  <div class="screenshot">
+    * 현재 배포 버전. DB 12개 테이블.<br>
+    * 핵심 사이클: 대화(하루) → 기록(자동) → 리포트(자동) → 회고(직접) → 개선
+  </div>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 8 -->
+<div class="stage">
+  <div class="stage-label">Stage 8 — 5/7 | UX 개선 (적용 완료)</div>
+  <div class="stage-title">대비/폰트/접힘/채팅 최적화 + 차트 범례</div>
+  <div class="stage-desc">
+    UX Audit 기반 P0+P1 개선 적용. 시안 제작 → 승인 → 코드 반영 완료.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>P0 — 텍스트 대비</strong>: #b3b3b3(2.6:1) → #6B7280(4.6:1) 77곳</li>
+      <li><strong>P0 — 최소 폰트</strong>: 0.55~0.65rem → 0.7rem 전체 상향</li>
+      <li><strong>P1 — 홈 접힘</strong>: Tomorrow/Day After/Yesterday → 접힘 가능 섹션 통합</li>
+      <li><strong>P1 — 섹션 간격</strong>: 라벨 margin-top 24px (내부 행간은 축소)</li>
+      <li><strong>P1 — 하루 채팅</strong>: "하루" 이름 제거, 헤더 최소화(pill만), 버블 10px 간격</li>
+      <li><strong>P1 — 차트 범례</strong>: 수면 ● 7h+ ○ 미달, 감정 컬러 비율 범례</li>
+      <li><strong>좌정렬</strong>: 모든 콘텐츠 텍스트 좌정렬 통일</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag changed">텍스트 대비 4.6:1</span>
+    <span class="tag changed">라벨 0.7rem</span>
+    <span class="tag changed">하루 헤더 최소화</span>
+    <span class="tag added">콘텐츠 접힘</span>
+    <span class="tag added">차트 범례</span>
+    <span class="tag changed">섹션 간격 24px</span>
+    <span class="tag removed">"하루" 버블 이름</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage8-proposal.html" target="_blank">홈 Before/After</a>
+  <a class="stage-link" href="process/design_history/stage8-haru-diary.html" target="_blank">하루/기록 시안</a>
+  <a class="stage-link" href="process/design_history/stage8-prototype.html" target="_blank" style="background:rgba(96,165,250,0.1);border-color:#60A5FA;font-weight:600;">최종 프로토타입</a>
+  <a class="stage-link" href="process/ui-review-20260507.md" target="_blank">UX Audit 문서</a>
+  <div class="screenshot">* 2026-05-07 시안 승인 후 코드 반영 완료</div>
+</div>
+
+<div class="arrow">↓</div>
+
+<!-- Stage 9 — v2.0 KILLED -->
+<div class="stage" style="border-left: 4px solid #DC2626;">
+  <div class="stage-label" style="color: #DC2626;">Stage 9 — 5/11~12 | v2.0 시도 → 폐기 (KILLED)</div>
+  <div class="stage-title" style="text-decoration: line-through; color: #808080;">대규모 리팩토링 + 컴포넌트 분리 + React Query</div>
+  <div class="stage-desc">
+    45 commits / 114 files / +14,435 −2,691 규모의 거대 리팩토링 시도.
+    UI 디테일·인터랙션 손실로 사용자 폐기 결정 → v0.8.1로 롤백.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>시도한 것</strong>:
+        <ul>
+          <li>Diary Today (621줄) → 5개 분리 컴포넌트 (DateSelector / ScheduleSection / RoutineSection / HealthInput / MemoSection)</li>
+          <li>Diary Week (441줄) → 6개 컴포넌트 + TimeNav</li>
+          <li>Diary Month (478줄) → 5개 컴포넌트 + CalendarGrid + ReviewModal</li>
+          <li>/haru (467줄) → 64줄 + hooks + components + lib</li>
+          <li>/friends 삭제 (deprecate)</li>
+          <li>React Query 5 + vitest + Testing Library 도입</li>
+          <li>BottomNav 순서: 홈/기록/하루/설정</li>
+        </ul>
+      </li>
+      <li style="color: #DC2626;"><strong>폐기 원인 7가지</strong>:
+        <ul>
+          <li>1. <strong>디테일 누락</strong> — Week/Month 정보 영역 Plan에 명세 빠짐</li>
+          <li>2. <strong>DateSelector 인터랙션 재작성</strong> — scroll handler picker → scrollIntoView (패턴 자체 변경)</li>
+          <li>3. <strong>/haru 작동 불가</strong> — hook 분리 시 인자 순서 변경</li>
+          <li>4. <strong>dev 서버 브랜치 혼동</strong> — worktree 환경 안내 미흡</li>
+          <li>5. <strong>시안 ≠ 인터랙션 검증</strong> — 정적 mockup OK ≠ 동작 OK</li>
+          <li>6. <strong>자동 조정 누적</strong> — 각각 합리적, 합치면 원본과 다름</li>
+          <li>7. <strong>"분리=좋다" 가정</strong> — 작동하는 코드의 refactor는 항상 회귀 위험</li>
+        </ul>
+      </li>
+      <li><strong>핵심 교훈</strong>: "개선해주세요" = 새 기능 추가. refactor 동의는 별도 명시. 기존 UI 위에 layer로 얹기.</li>
+      <li><strong>롤백</strong>: git read-tree --reset으로 v0.8.1 (a6f0774) 안전 복원</li>
+      <li><strong>보존</strong>: stage-9/v0.9-release 브랜치에 전체 코드 보존 (cherry-pick 가능)</li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag removed">Diary 컴포넌트 분리 (폐기)</span>
+    <span class="tag removed">/haru hook 분리 (폐기)</span>
+    <span class="tag removed">React Query 5 (폐기)</span>
+    <span class="tag removed">vitest (폐기)</span>
+    <span class="tag removed">/friends 삭제 (폐기)</span>
+    <span class="tag removed">CalendarGrid 새 디자인 (폐기)</span>
+    <span class="tag removed">회고 색상 도트 (폐기, 재도입 가능)</span>
+    <span class="tag tech">45 commits / 114 files</span>
+  </div>
+  <a class="stage-link" href="2026-05-12_v2.0_postmortem.md" target="_blank" style="color:#DC2626;border-color:#DC2626;">Postmortem 리포트</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/SPEC.md" target="_blank" style="color:#DC2626;border-color:#DC2626;">SPEC.md (10절)</a>
+  <br><br>
+  <div style="font-size:0.7rem;color:#808080;margin-bottom:8px;">▼ 16개 Brainstorming 시안 (킬 전 제작)</div>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/01_scope.html" target="_blank">01 Scope</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/02_ia-friends.html" target="_blank">02 IA Friends</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/03_ia-bottomnav.html" target="_blank">03 BottomNav</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/04_diary-time-nav.html" target="_blank">04 Time Nav</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/05_diary-today-scroll.html" target="_blank">05 Today Scroll</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/06_diary-final.html" target="_blank">06 Diary Final</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/07_diary-final-v2.html" target="_blank">07 Diary v2</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/08_diary-final-v3.html" target="_blank">08 Diary v3</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/09_diary-final-v4.html" target="_blank">09 Diary v4</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/10_diary-final-v5.html" target="_blank">10 Diary v5</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/11_home-priority.html" target="_blank">11 Home Priority</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/12_home-priority-v2.html" target="_blank">12 Home v2</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/13_area4-summary.html" target="_blank">13 Area4 Summary</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/14_area4-deep.html" target="_blank">14 Area4 Deep</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/15_area5-architecture.html" target="_blank">15 Architecture</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/16_changes-impact.html" target="_blank">16 Impact 표</a>
+  <a class="stage-link" href="process/design_history/stage9-v2.0-killed/17_final-design-spec.html" target="_blank" style="background:rgba(220,38,38,0.1);border-color:#DC2626;font-weight:600;">17 Final Spec (최종 시안)</a>
+  <div class="screenshot">
+    * <span style="color:#DC2626;font-weight:600;">KILLED</span> — 2026-05-12 01:30 사용자 폐기 결정.<br>
+    * v0.8.1 (a6f0774, 2026-05-09)로 안전 롤백 완료.<br>
+    * 가치 있는 산출물은 cherry-pick으로 향후 점진 도입 가능.
+  </div>
+</div>
+
+<div class="arrow" style="color:#DC2626;">✕ → rollback → ↓</div>
+
+<!-- Stage 10 — v0.9.1~v0.9.4 -->
+<div class="stage" style="border-left: 4px solid #059669;">
+  <div class="stage-label" style="color: #059669;">Stage 10 — 5/12~13 | v0.9.1 → v0.9.4 점진 복구</div>
+  <div class="stage-title">메모리 시스템 + Calendar 해결 + 메뉴 순서 변경</div>
+  <div class="stage-desc">
+    v2.0 교훈 기반 — 기존 코드 위에 기능을 layer로 얹는 점진 개선.
+    v0.8.1에서 v0.9.4까지 안전하게 진화.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>v0.9.1~v0.9.2 (05-12)</strong>:
+        <ul>
+          <li>Google Calendar OAuth 8시간 디버깅 — Vercel env client_secret 끝 \n 제거</li>
+          <li>Google Calendar KST 이중 변환 수정 — ISO에서 직접 HH:MM 추출</li>
+          <li>OAuth token 만료 시 refresh token 자동 갱신</li>
+          <li>Calendar 무한 호출 방지 — sessionStorage 1회 실행</li>
+          <li>Calendar 중복 저장 방지 — 날짜+제목+시간 3조건 체크</li>
+          <li>루틴 "물 8잔" → "물 3잔"</li>
+          <li>max_tokens 300 → 600</li>
+        </ul>
+      </li>
+      <li><strong>v0.9.3 (05-13)</strong>:
+        <ul>
+          <li><strong>하루 메모리 시스템</strong>: 프로필(교수, 수면 7h 목표, 커피 관리) + 주간 대화 300자 요약 + 오늘 컨텍스트(6테이블 병렬)</li>
+          <li><strong>맞춤 첫 인사</strong>: 시간대 + 스케줄 + 건강 기반 (AI 호출 없이 즉시)</li>
+          <li><strong>홈 스케줄 체크 버튼</strong>: 루틴/Todo처럼 완료 토글</li>
+          <li><strong>Recommendation 삭제(✕)</strong></li>
+          <li><strong>Daily Review 분리</strong>: "완료한 것 / 못한 것" 2개 별도 입력</li>
+          <li><strong>Week 주간 네비</strong>: ← → 이전주/다음주 + "N월 N번째 주" 타이틀</li>
+          <li><strong>차트 기준선</strong>: 수면 7h 점선 + 커피 2잔 점선</li>
+          <li><strong>설정 버전 히스토리</strong>: v0.1~v0.9.2 전체 표시</li>
+          <li>schedules: done boolean 컬럼 추가</li>
+          <li>journal_entries: not_done_today 컬럼 추가</li>
+        </ul>
+      </li>
+      <li><strong>v0.9.4 (05-13)</strong>:
+        <ul>
+          <li><strong>BottomNav 순서 변경</strong>: 홈/하루/기록/설정 → <strong>홈/기록/하루/설정</strong></li>
+          <li>기록(Diary)이 하루(Assistant)보다 더 자주 접근 → 가운데 배치</li>
+          <li>Design History 업데이트 (v2.0 KILLED + v0.9.4 기록)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">하루 메모리 시스템</span>
+    <span class="tag added">맞춤 첫 인사</span>
+    <span class="tag added">홈 스케줄 체크</span>
+    <span class="tag added">Rec 삭제(✕)</span>
+    <span class="tag added">Week 주간 네비(←→)</span>
+    <span class="tag added">차트 기준선(7h/2잔)</span>
+    <span class="tag added">Review 완료/못한것 분리</span>
+    <span class="tag changed">BottomNav: 기록↔하루 순서 교환</span>
+    <span class="tag changed">Calendar OAuth 수정</span>
+    <span class="tag changed">Calendar KST 수정</span>
+    <span class="tag tech">schedules.done</span>
+    <span class="tag tech">journal_entries.not_done_today</span>
+  </div>
+  <a class="stage-link" href="process/design_history/stage10-v094.html" target="_blank" style="background:rgba(5,150,105,0.1);border-color:#059669;font-weight:600;color:#059669;">v0.9.4 Before/After 시안</a>
+  <div class="screenshot">
+    * v2.0 교훈 적용: 기존 코드 수정 최소화, 기능 layer로 추가.<br>
+    * 단일 거대 파일 패턴 유지 — 작동하는 것을 건드리지 않음.<br>
+    * 2026-05-13 현재 운영 중.
+  </div>
+</div>
+
+<div class="arrow" style="color:#0EA5E9;">↓ v0.9.5 → v0.9.6 (홈 3탭 + 흑백) → v0.9.7</div>
+
+<!-- Stage 11 — v0.9.7 -->
+<div class="stage" style="border-left: 4px solid #0EA5E9;">
+  <div class="stage-label" style="color: #0EA5E9;">Stage 11 — 5/25 | v0.9.7 Todo · Done 개편 (소요일 + 7일 필터)</div>
+  <div class="stage-title">Daily 무한 누적 해결 + Done 회고 시그널 강화</div>
+  <div class="stage-desc">
+    "홈 데일리의 완료 todo와 done 페이지의 차이가 모호하고, 완료 항목이 무한 누적된다"는 사용자 피드백에서 출발.
+    역할 분리 + 시작→완료 메타 추가로 두 영역의 가치 명확화.
+  </div>
+  <div class="stage-detail">
+    <ul>
+      <li><strong>문제 진단</strong>:
+        <ul>
+          <li>TodoList 완료 섹션이 전체 완료 todo를 다 보여줘 무한 누적 → 5/25 시점 11+ 항목</li>
+          <li>Done 탭(CompletedThisWeek)은 동일 데이터의 주차별 리포트 — 두 영역이 기능적으로 중복</li>
+          <li>Done에 "언제 시작했나 / 며칠 걸렸나" 정보 부재 → 회고 가치 약함</li>
+        </ul>
+      </li>
+      <li><strong>역할 분리 (v0.9.7)</strong>:
+        <ul>
+          <li><strong>Daily 탭 TodoList</strong> = "최근 7일 액션 가능한 작업창" (오늘 포함 7일 완료만, 토글/삭제 가능)</li>
+          <li><strong>Done 탭 CompletedThisWeek</strong> = "주·월 단위 회고 리포트" (읽기 전용, 통계 + 메타)</li>
+        </ul>
+      </li>
+      <li><strong>소요일 메타 라인</strong>:
+        <ul>
+          <li>모든 완료 항목에 <code>5/22 → 5/24  2일</code> 형태로 시작→완료 + 소요일 표시</li>
+          <li>당일 = <code>5/25 · 당일</code> 조용한 회색 (시각 부담 최소)</li>
+          <li>1~2일 = 회색 배지 / 3~6일 = amber / 7일+ = red 굵게 → 색상으로 "묵힌 정도" 자연 시각화</li>
+          <li>데이터 출처: <code>todos.created_at</code> / <code>completed_at</code> — DB 스키마 변경 0건</li>
+        </ul>
+      </li>
+      <li><strong>소팅 토글</strong>:
+        <ul>
+          <li>날짜순 (기본, 완료일 역순 + 날짜 그룹)</li>
+          <li>기간순 (소요일 내림차순 평면 리스트) → 회고 모드</li>
+        </ul>
+      </li>
+      <li><strong>회고 자동 picking</strong>:
+        <ul>
+          <li>이번 주 7일+ 항목 최대 3건을 통계 카드 아래 빨강 "오래 묵힌 일" 배너로 자동 노출</li>
+          <li>의도: 사용자가 능동적으로 찾지 않아도 회고 글감이 먼저 다가옴</li>
+        </ul>
+      </li>
+      <li><strong>Stage 9 워크트리 정리 (병행)</strong>:
+        <ul>
+          <li>폴더 이동으로 깨진 <code>app-stage9</code> 워크트리 폐기</li>
+          <li><code>archive/stage-9-tip</code> 태그로 d36a576 영구 보존 + 미커밋 새 파일 50+개 tarball 아카이브</li>
+          <li>복구 매뉴얼 <code>docs/archive/stage9-worktree-2026-05-25.md</code></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="tags">
+    <span class="tag added">소요일 메타 (created→completed)</span>
+    <span class="tag added">색상 규칙 (3일 amber / 7일 red)</span>
+    <span class="tag added">소팅 토글 (날짜순 ↔ 기간순)</span>
+    <span class="tag added">회고 자동 picking (7일+ 배너)</span>
+    <span class="tag changed">TodoList 완료: 누적 → 7일 필터</span>
+    <span class="tag changed">역할 분리: Daily=작업 / Done=회고</span>
+    <span class="tag tech">DB 스키마 변경 없음</span>
+    <span class="tag changed">stage-9 워크트리 아카이브</span>
+  </div>
+  <a class="stage-link" href="done-duration-mockup.html" target="_blank" style="background:rgba(14,165,233,0.1);border-color:#0EA5E9;font-weight:600;color:#0EA5E9;">v0.9.7 Before/After 시안 (소요일·소팅·디테일)</a>
+  <a class="stage-link" href="archive/stage9-worktree-2026-05-25.md" target="_blank">Stage 9 워크트리 아카이브 매뉴얼</a>
+  <div class="screenshot">
+    * 사용자 피드백 → 시안 → 코드 반영 → 재피드백("당일 항목도 보이게") → 재수정 → 커밋(064193f, 5917a2f).<br>
+    * 표시 규칙 수정: 처음엔 "당일 = 메타 숨김"이었으나, 데이터가 대부분 당일이라 화면이 비어 보임 → "당일도 표시하되 조용히"로 변경.<br>
+    * 2026-05-25 현재 운영 중.
+  </div>
+</div>
+
+</div>
+</body>
+</html>

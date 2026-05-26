@@ -222,7 +222,11 @@ function Hero({
       >
         {project.define}
       </p>
-      <ExternalLinkRow projectId={project.id} projectName={project.name} webUrl={project.webUrl} />
+      <ExternalLinkRow
+        projectName={project.name}
+        webUrl={project.webUrl}
+        designHistoryUrl={project.designHistoryUrl}
+      />
       <div
         style={{
           display: 'flex',
@@ -345,24 +349,18 @@ function SectionHead({ title, meta }: { title: string; meta: string }) {
   );
 }
 
-const DASHBOARD_URL = 'https://work-dashboard-app.vercel.app';
-
 function ExternalLinkRow({
-  projectId,
   projectName,
   webUrl,
+  designHistoryUrl,
 }: {
-  projectId: string;
   projectName: string;
   webUrl?: string;
+  designHistoryUrl?: string;
 }) {
   const links: { label: string; href: string }[] = [];
-  if (projectId === '061') {
-    links.push({ label: 'DASHBOARD', href: DASHBOARD_URL });
-    if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
-  } else if (webUrl) {
-    links.push({ label: projectName.toUpperCase(), href: webUrl });
-  }
+  if (designHistoryUrl) links.push({ label: 'DESIGN HISTORY', href: designHistoryUrl });
+  if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
   if (links.length === 0) return null;
 
   return (

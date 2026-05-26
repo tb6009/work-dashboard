@@ -54,7 +54,15 @@
       "date": "2026-05-26",
       "weekday": "화",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] PROJECT.md · 2026-W22.json"
+        }
+      ]
     },
     {
       "date": "2026-05-27",
@@ -158,5 +166,5 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-26T00:15:39.048Z"
+  "buildAt": "2026-05-26T00:20:49.119Z"
 }

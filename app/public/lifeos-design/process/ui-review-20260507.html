@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ui-review-20260507</title>
+<style>
+  :root {
+    --warm-50:#faf9f7; --gray-200:#e5e5e5; --gray-400:#a3a3a3;
+    --gray-500:#737373; --gray-700:#404040; --gray-900:#171717; --black:#000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;background:var(--warm-50);color:var(--gray-900);padding:56px 24px 96px;line-height:1.65}
+  .container{max-width:880px;margin:0 auto}
+  h1{font-size:34px;font-weight:300;letter-spacing:-0.02em;margin-bottom:24px}
+  h2{font-size:22px;font-weight:700;margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gray-200)}
+  h3{font-size:15px;font-weight:700;margin:22px 0 10px;color:var(--gray-700)}
+  p{font-size:14.5px;color:var(--gray-700);margin-bottom:10px}
+  ul{margin:6px 0 14px 20px} li{font-size:14px;color:var(--gray-700);margin-bottom:3px}
+  hr{border:0;border-top:1px solid var(--gray-200);margin:28px 0}
+  blockquote{border-left:3px solid var(--gray-400);padding-left:14px;font-size:13.5px;color:var(--gray-500);font-style:italic;margin:10px 0}
+  code{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px}
+  pre{background:var(--gray-900);color:#f5f5f5;padding:14px;overflow-x:auto;margin:10px 0;font-size:12.5px}
+  pre code{background:none;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th,td{border:1px solid var(--gray-200);padding:7px 11px;text-align:left;vertical-align:top}
+  th{background:rgba(0,0,0,0.03);font-weight:700}
+  a{color:var(--gray-900);text-decoration:underline;text-underline-offset:2px}
+  a:hover{color:var(--black)}
+  strong{font-weight:700;color:var(--gray-900)}
+  .nav{font-family:ui-monospace,'SF Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:32px}
+  .nav a{color:var(--gray-500);text-decoration:none} .nav a:hover{color:var(--black)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="nav"><a href="./index.html">← LIFEOS DESIGN HISTORY</a></div>
+<h1>Life OS UI Review — 2026-05-07</h1>
+
+<blockquote>현재 배포 버전 기준 UI 개선 제안 + 근거</blockquote>
+
+<hr>
+
+<h2>종합 평가</h2>
+
+<table><thead><tr><th>카테고리</th><th>점수</th><th>변화</th><th>핵심 이슈</th></tr></thead><tbody>
+<tr><td>접근성</td><td>2/10</td><td>→</td><td>aria-label 0개, 대비 미달 79곳</td></tr>
+<tr><td>터치</td><td>5/10</td><td>→</td><td>체크원 16px, Rec 항목 12px</td></tr>
+<tr><td>시각 품질</td><td>6/10</td><td>↑</td><td>Inter+DM Sans 적용, 감정 컬러 개선</td></tr>
+<tr><td>정보 설계</td><td>7/10</td><td>→</td><td>홈 콘텐츠 과다 (9개 섹션)</td></tr>
+<tr><td>로딩 경험</td><td>3/10</td><td>↓</td><td>"불러오는 중..." 텍스트 11곳</td></tr>
+<tr><td>일관성</td><td>5/10</td><td>→</td><td>인라인 스타일 346개, 토큰 미사용</td></tr>
+<tr><td>데이터 시각화</td><td>5/10</td><td>↑</td><td>감정 컬러 적용, 차트는 여전히 바만</td></tr>
+</tbody></table>
+
+<hr>
+
+<h2>개선 제안 15건</h2>
+
+<h3>1. 홈 콘텐츠 과다 — 정보 우선순위 재설계</h3>
+
+<p><strong>현재 문제</strong>: 홈에 9개 섹션이 한 화면에 나열됨 (날씨 → Insight → Today → Routine → Tomorrow → Day After → Yesterday → Recommendation → Todo). 스크롤이 매우 길고, 핵심 정보를 찾기 어려움.</p>
+
+<p><strong>근거</strong>: Apple HIG <code>content-priority</code> — "Show core content first on mobile; fold or hide secondary content". Material Design에서도 정보 밀도가 높으면 스캔 능력이 떨어진다고 권고.</p>
+
+<p><strong>제안</strong>:</p>
+<pre><code>
+필수 (접힘 없이):
+- 날씨 + Daily Insight
+- Today + Routine
+
+접힘 가능 (탭하면 펼침):
+- Tomorrow / Day After / Yesterday
+- Recommendation
+- Todo
+</code></pre>
+<p>또는 Tomorrow/Day After/Yesterday를 기록 탭으로 이동.</p>
+
+<hr>
+
+<h3>2. "불러오는 중..." → 스켈레톤 UI</h3>
+
+<p><strong>현재 문제</strong>: 11곳에서 "불러오는 중..." 텍스트만 표시. 페이지 로드 시 홈 전체가 "불러오는 중..."으로 채워져서 레이아웃 시프트(CLS) 발생.</p>
+
+<p><strong>근거</strong>: UX Pro Max §3 <code>progressive-loading</code> — "Use skeleton screens / shimmer instead of long blocking spinners for >1s operations". Apple HIG도 콘텐츠 형태를 유지한 플레이스홀더를 권장.</p>
+
+<p><strong>제안</strong>:</p>
+<pre><code>
+Before: "불러오는 중..."
+After:  ░░░░░░░░░░░░  (회색 블록이 콘텐츠 형태로 깜빡임)
+</code></pre>
+<p>스켈레톤은 실제 콘텐츠와 같은 높이/폭으로, <code>animate-pulse</code> 적용.</p>
+
+<hr>
+
+<h3>3. 터치 타겟 미달 — 체크 원/Recommendation 항목</h3>
+
+<p><strong>현재 문제</strong>: 체크 원 16px, Recommendation 세부 항목 12px. Apple HIG 최소 44px 미달.</p>
+
+<p><strong>근거</strong>: UX Pro Max §2 <code>touch-target-size</code> — "Min 44×44pt. Extend hit area beyond visual bounds if needed." 작은 터치 타겟은 오탭률 증가와 사용자 좌절감 유발.</p>
+
+<p><strong>제안</strong>: 시각적 크기는 16px 유지, 행 전체(<code>min-height: 44px</code>)를 터치 영역으로 확장.</p>
+
+<hr>
+
+<h3>4. #b3b3b3 대비 미달 — 79곳</h3>
+
+<p><strong>현재 문제</strong>: 보조 텍스트/라벨에 <code>#b3b3b3</code> 사용 79곳. 흰 배경 대비 <strong>2.6:1</strong> (WCAG AA 기준 4.5:1 미달, 대형 텍스트 기준 3:1도 미달).</p>
+
+<p><strong>근거</strong>: UX Pro Max §1 <code>color-contrast</code> — "Minimum 4.5:1 ratio for normal text". §6 <code>color-accessible-pairs</code> — "Foreground/background pairs must meet 4.5:1 (AA)".</p>
+
+<p><strong>제안</strong>: <code>#b3b3b3</code> → <code>#6B7280</code> (대비 4.6:1) 또는 최소 <code>#808080</code> (대비 4.5:1).</p>
+
+<hr>
+
+<h3>5. aria-label 전무 — 접근성 사각지대</h3>
+
+<p><strong>현재 문제</strong>: aria-label, role 속성이 앱 전체에서 <strong>0개</strong>. 스크린리더 사용자는 앱을 전혀 사용할 수 없음.</p>
+
+<p><strong>근거</strong>: UX Pro Max §1 <code>aria-labels</code> — "aria-label for icon-only buttons". <code>voiceover-sr</code> — "Meaningful accessibilityLabel; logical reading order".</p>
+
+<p><strong>제안</strong>: 최소한의 접근성 — 하단 탭, 체크 버튼, 입력 필드에 aria-label 추가.</p>
+
+<hr>
+
+<h3>6. 인라인 스타일 346개 — 유지보수 위험</h3>
+
+<p><strong>현재 문제</strong>: <code>style={{...}}</code> 인라인 스타일이 346곳. 디자인 토큰이 코드에 분산되어 일괄 변경 불가.</p>
+
+<p><strong>근거</strong>: UX Pro Max §4 <code>consistency</code> — "Use same style across all pages". §6 <code>color-semantic</code> — "Define semantic color tokens, not raw hex in components."</p>
+
+<p><strong>제안</strong>: 단계적으로 Tailwind 클래스 또는 CSS 변수로 전환. 우선 컬러와 간격부터.</p>
+
+<hr>
+
+<h3>7. 하단 탭에 아이콘 없음</h3>
+
+<p><strong>현재 문제</strong>: 하단 탭이 텍스트만으로 구성 (홈/하루/기록/설정). 아이콘 없이 텍스트만 있으면 빠른 스캔이 어려움.</p>
+
+<p><strong>근거</strong>: UX Pro Max §9 <code>nav-label-icon</code> — "Navigation items must have both icon and text label; icon-only nav harms discoverability." Material Design Bottom Navigation 가이드라인.</p>
+
+<p><strong>제안</strong>: 각 탭에 간단한 SVG 아이콘 추가 (텍스트 위에 아이콘 배치).</p>
+<pre><code>
+🏠    💬    📊    ⚙  ← 아이콘 (SVG)
+홈    하루   기록   설정  ← 텍스트
+</code></pre>
+
+<hr>
+
+<h3>8. 하루 헤더 fixed 후 콘텐츠 가림</h3>
+
+<p><strong>현재 문제</strong>: 하루 탭 헤더가 <code>position: fixed</code>인데, 채팅 첫 메시지가 헤더 뒤에 가려질 수 있음. <code>paddingTop: 100px</code>으로 추정값 사용.</p>
+
+<p><strong>근거</strong>: UX Pro Max §5 <code>fixed-element-offset</code> — "Fixed navbar/bottom bar must reserve safe padding for underlying content." §5 <code>scroll-behavior</code> — "Avoid scroll content obscured by sticky headers/footers."</p>
+
+<p><strong>제안</strong>: 헤더 높이를 동적으로 측정하여 정확한 패딩 적용. 또는 <code>sticky</code> + <code>overflow</code> 구조로 전환.</p>
+
+<hr>
+
+<h3>9. 날짜 피커 — 현재 날짜 인지 어려움</h3>
+
+<p><strong>현재 문제</strong>: 기록 탭 날짜 피커에서 "오늘"이 파란 점으로만 표시. 스크롤하면 오늘 위치를 잃기 쉬움.</p>
+
+<p><strong>근거</strong>: UX Pro Max §9 <code>nav-state-active</code> — "Current location must be visually highlighted." 날짜 피커에서 현재 위치 인식은 핵심 UX.</p>
+
+<p><strong>제안</strong>: "Today" 버튼을 더 눈에 띄게 (고정 위치 또는 플로팅 버튼). 오늘 날짜에 "오늘" 텍스트 표시.</p>
+
+<hr>
+
+<h3>10. 빈 데이터 상태 메시지 부족</h3>
+
+<p><strong>현재 문제</strong>: Week/Month 차트에 데이터가 없으면 빈 공간만 표시. 차트 높이 0px로 사라짐.</p>
+
+<p><strong>근거</strong>: UX Pro Max §8 <code>empty-states</code> — "Show helpful message and action when no content." §10 <code>empty-data-state</code> — "Show meaningful empty state, not a blank chart."</p>
+
+<p><strong>제안</strong>:</p>
+<pre><code>
+Before: (빈 공간)
+After:  "아직 데이터가 없어요. 하루에게 오늘 수면을 기록해보세요."
+         [하루 탭으로 이동]
+</code></pre>
+
+<hr>
+
+<h3>11. 차트 범례 없음</h3>
+
+<p><strong>현재 문제</strong>: 수면 바 차트에서 블루=7h+, 그레이=미달을 알 수 없음. 사용자가 컬러 의미를 추측해야 함.</p>
+
+<p><strong>근거</strong>: UX Pro Max §10 <code>legend-visible</code> — "Always show legend; position near the chart." §1 <code>color-not-only</code> — "Don't convey info by color alone."</p>
+
+<p><strong>제안</strong>: 차트 하단에 간단한 범례 추가.</p>
+<pre><code>
+● 7시간 이상  ○ 7시간 미만
+</code></pre>
+
+<hr>
+
+<h3>12. 저장 버튼 위치 불일치</h3>
+
+<p><strong>현재 문제</strong>: 기록 Today에서 "저장" 버튼이 페이지 맨 아래에 있어서, 상단 건강 데이터를 입력한 후 스크롤 내려야 저장 가능. Memo/Daily Review는 저장 버튼이 있지만, Health 입력은 각각 개별 OK 버튼.</p>
+
+<p><strong>근거</strong>: UX Pro Max §8 <code>form-autosave</code> — "Long forms should auto-save drafts to prevent data loss." 긴 폼에서 저장 버튼이 멀면 데이터 유실 위험.</p>
+
+<p><strong>제안</strong>: 건강 데이터도 입력 즉시 자동 저장 (현재 OK 버튼 방식 유지하되, "저장" 버튼은 Memo/Daily Review 전용으로 명확히 분리).</p>
+
+<hr>
+
+<h3>13. Good Morning — 시간대 불일치 가능</h3>
+
+<p><strong>현재 문제</strong>: "Good Morning"이 <code>useEffect</code>에서 한 번만 계산. 오래 열어두면 오후에도 "Good Morning" 표시.</p>
+
+<p><strong>근거</strong>: 시간 기반 UI는 현재 시각과 일치해야 함. 불일치는 신뢰도 저하.</p>
+
+<p><strong>제안</strong>: 1시간마다 시간대 재체크. 또는 탭 포커스 시 재계산.</p>
+
+<hr>
+
+<h3>14. 하단 탭 safe-area 높이 부족</h3>
+
+<p><strong>현재 문제</strong>: <code>paddingBottom: env(safe-area-inset-bottom, 0px)</code> 적용되어 있지만, 아이폰에서 홈 인디케이터와 탭이 너무 가까울 수 있음.</p>
+
+<p><strong>근거</strong>: UX Pro Max §2 <code>safe-area-awareness</code> — "Keep primary touch targets away from gesture bar and screen edges."</p>
+
+<p><strong>제안</strong>: safe-area 외에 추가 8px 패딩 확보.</p>
+
+<hr>
+
+<h3>15. 폰트 크기 0.55~0.6rem — 가독성 위험</h3>
+
+<p><strong>현재 문제</strong>: 51곳에서 0.55~0.65rem 사용 (약 8.8~10.4px). 모바일에서 매우 작음.</p>
+
+<p><strong>근거</strong>: UX Pro Max §5 <code>readable-font-size</code> — "Minimum 16px body text on mobile." §6 라벨은 12px 이상 권장.</p>
+
+<p><strong>제안</strong>: 최소 폰트를 0.7rem(11.2px)으로 상향. 섹션 라벨(SCHEDULE 등) 0.6rem → 0.7rem.</p>
+
+<hr>
+
+<h2>우선순위 정리</h2>
+
+<table><thead><tr><th>등급</th><th>#</th><th>개선</th><th>예상 시간</th></tr></thead><tbody>
+<tr><td><strong>P0</strong></td><td>4</td><td>#b3b3b3 대비 개선</td><td>30분</td></tr>
+<tr><td><strong>P0</strong></td><td>3</td><td>터치 타겟 44px</td><td>30분</td></tr>
+<tr><td><strong>P0</strong></td><td>15</td><td>최소 폰트 0.7rem</td><td>20분</td></tr>
+<tr><td><strong>P1</strong></td><td>2</td><td>스켈레톤 로딩</td><td>1시간</td></tr>
+<tr><td><strong>P1</strong></td><td>1</td><td>홈 콘텐츠 접힘</td><td>1시간</td></tr>
+<tr><td><strong>P1</strong></td><td>7</td><td>하단 탭 아이콘</td><td>30분</td></tr>
+<tr><td><strong>P1</strong></td><td>10</td><td>빈 데이터 메시지</td><td>30분</td></tr>
+<tr><td><strong>P1</strong></td><td>11</td><td>차트 범례</td><td>20분</td></tr>
+<tr><td><strong>P2</strong></td><td>5</td><td>aria-label 추가</td><td>2시간</td></tr>
+<tr><td><strong>P2</strong></td><td>6</td><td>인라인→토큰 전환</td><td>3시간+</td></tr>
+<tr><td><strong>P2</strong></td><td>8</td><td>하루 헤더 높이 동적</td><td>30분</td></tr>
+<tr><td><strong>P2</strong></td><td>9</td><td>날짜 피커 개선</td><td>30분</td></tr>
+<tr><td><strong>P2</strong></td><td>12</td><td>저장 버튼 정리</td><td>20분</td></tr>
+<tr><td><strong>P2</strong></td><td>13</td><td>시간대 재체크</td><td>15분</td></tr>
+<tr><td><strong>P2</strong></td><td>14</td><td>safe-area 패딩</td><td>10분</td></tr>
+</tbody></table>
+
+<hr>
+
+<p>*평가 기준: UI/UX Pro Max Quick Reference §1~§10*</p>
+<p>*평가 방법: 배포 HTML 분석 + 코드 정적 분석*</p>
+<p>*작성일: 2026-05-07*</p>
+
+</div>
+</body>
+</html>

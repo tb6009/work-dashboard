@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage 10 — v0.9.4 Changes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #f5f5f5; padding: 40px 20px; }
+  .container { max-width: 520px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; }
+  .sub { font-size: 0.78rem; color: #808080; margin-bottom: 32px; }
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 0.65rem; color: #059669; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 12px; }
+  .change-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .change-label { font-size: 0.62rem; color: #808080; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 8px; }
+  .change-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .ba-box { padding: 16px; border-radius: 8px; font-size: 0.78rem; line-height: 1.6; }
+  .before { background: #fef2f2; border: 1px solid #fecaca; }
+  .after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .ba-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .ba-label.b { color: #DC2626; }
+  .ba-label.a { color: #059669; }
+
+  /* BottomNav mockup */
+  .nav-mock { display: flex; background: #fff; border: 1px solid #e6e6e6; border-radius: 12px; padding: 8px 0; }
+  .nav-tab { flex: 1; text-align: center; }
+  .nav-name { font-size: 0.82rem; font-weight: 700; }
+  .nav-role { font-size: 0.48rem; color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.05em; }
+  .nav-active .nav-name { color: #000; }
+  .nav-active .nav-role { color: #60A5FA; }
+  .nav-inactive .nav-name { color: #b3b3b3; }
+
+  /* Schedule mockup */
+  .schedule-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 0.84rem; }
+  .check { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #60A5FA; flex-shrink: 0; }
+  .check.done { background: #60A5FA; border: none; }
+  .delete-btn { color: #b3b3b3; font-size: 0.78rem; margin-left: auto; padding: 4px 6px; cursor: pointer; }
+  .delete-btn:hover { color: #DC2626; }
+  .struck { text-decoration: line-through; color: #6B7280; }
+
+  .arrow { text-align: center; color: #059669; font-size: 0.9rem; margin: 8px 0; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Stage 10 — v0.9.4</h1>
+<div class="sub">2026-05-13 | v2.0 교훈 기반 점진 개선</div>
+
+<!-- 1. BottomNav -->
+<div class="section">
+  <div class="section-title">Change 1 — BottomNav 순서</div>
+  <div class="change-card">
+    <div class="change-label">하루↔기록 위치 교환</div>
+    <div class="change-title">기록이 더 자주 접근 → 가운데 배치</div>
+
+    <div class="before-after">
+      <div class="ba-box before">
+        <div class="ba-label b">Before (v0.9.3)</div>
+        <div class="nav-mock">
+          <div class="nav-tab nav-active"><div class="nav-name">홈</div><div class="nav-role">Briefing</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">하루</div><div class="nav-role">Assistant</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">기록</div><div class="nav-role">Diary</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">설정</div><div class="nav-role">Settings</div></div>
+        </div>
+      </div>
+      <div class="ba-box after">
+        <div class="ba-label a">After (v0.9.4)</div>
+        <div class="nav-mock">
+          <div class="nav-tab nav-active"><div class="nav-name">홈</div><div class="nav-role">Briefing</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">기록</div><div class="nav-role">Diary</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">하루</div><div class="nav-role">Assistant</div></div>
+          <div class="nav-tab nav-inactive"><div class="nav-name">설정</div><div class="nav-role">Settings</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Schedule 삭제 -->
+<div class="section">
+  <div class="section-title">Change 2 — TODAY 스케줄 삭제(✕)</div>
+  <div class="change-card">
+    <div class="change-label">중복/잘못된 일정 직접 삭제 가능</div>
+    <div class="change-title">각 스케줄 항목 오른쪽에 ✕ 버튼</div>
+
+    <div class="before-after">
+      <div class="ba-box before">
+        <div class="ba-label b">Before</div>
+        <div style="font-size:0.7rem;color:#808080;margin-bottom:8px;">TODAY</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px;">수요일 — 4건</div>
+        <div class="schedule-item"><span class="check"></span> 05:00 산학협력단 운영회의</div>
+        <div class="schedule-item"><span class="check"></span> 07:00 상담- 규림 나림</div>
+        <div class="schedule-item"><span class="check done"></span> <span class="struck">14:00 산학협력단 운영회의</span></div>
+        <div class="schedule-item"><span class="check done"></span> <span class="struck">16:00 상담- 규림 나림</span></div>
+        <div style="font-size:0.7rem;color:#DC2626;margin-top:8px;">* 중복 항목 삭제 불가</div>
+      </div>
+      <div class="ba-box after">
+        <div class="ba-label a">After</div>
+        <div style="font-size:0.7rem;color:#808080;margin-bottom:8px;">TODAY</div>
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px;">수요일 — 2건</div>
+        <div class="schedule-item"><span class="check"></span> 05:00 산학협력단 운영회의 <span class="delete-btn">✕</span></div>
+        <div class="schedule-item"><span class="check"></span> 07:00 상담- 규림 나림 <span class="delete-btn">✕</span></div>
+        <div style="font-size:0.7rem;color:#059669;margin-top:8px;">* 중복 항목 ✕로 삭제 완료</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;font-size:0.72rem;color:#808080;line-height:1.6;">
+      <strong>동작:</strong> ✕ 클릭 → Supabase에서 해당 schedule 삭제 → 건수 자동 갱신<br>
+      <strong>안전:</strong> 체크(완료) 동작과 삭제 동작 분리. 체크는 원 클릭, 삭제는 ✕만.
+    </div>
+  </div>
+</div>
+
+<!-- 3. Design History -->
+<div class="section">
+  <div class="section-title">Change 3 — Design History 업데이트</div>
+  <div class="change-card">
+    <div class="change-label">문서</div>
+    <div class="change-title">Stage 9 (v2.0 KILLED) + Stage 10 (v0.9.4) 추가</div>
+    <div style="font-size:0.78rem;color:#808080;line-height:1.7;margin-top:8px;">
+      <div>Stage 9: v2.0 폐기 과정 기록 + 시안 19개 복원 + 개별 링크</div>
+      <div>Stage 10: BottomNav 순서 + 스케줄 삭제 + 건수 자동 갱신</div>
+      <div style="margin-top:8px;">Design History: 6단계 → <strong>10단계</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="arrow">v0.9.4 — 2026-05-13 현재 운영 중</div>
+
+</div>
+</body>
+</html>

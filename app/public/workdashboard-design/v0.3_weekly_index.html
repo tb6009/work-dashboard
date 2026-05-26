@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Weekly Archive (v0.3)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  body { background: var(--gray-100); padding: 0; }
+
+  /* ── Top Nav ─────────────────────────────────────────── */
+  .topbar {
+    background: var(--white);
+    border-bottom: var(--border-1);
+    position: sticky; top: 0; z-index: 30;
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: var(--sp-4) var(--sp-8);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo {
+    width: 28px; height: 28px;
+    background: var(--black); color: var(--white);
+    display: grid; place-items: center;
+    font-size: var(--text-xs); font-weight: 700;
+  }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-size: var(--text-sm); font-weight: 700; color: var(--black); }
+  .brand-sub  { font-size: var(--text-2xs); color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 2px; }
+
+  .nav { display: flex; gap: 2px; }
+  .nav a {
+    padding: 6px 14px;
+    font-size: var(--text-sm); font-weight: 500;
+    color: var(--gray-500); text-decoration: none;
+  }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+
+  .build-info { font-size: var(--text-xs); color: var(--gray-400); text-align: right; }
+
+  /* ── Main ────────────────────────────────────────────── */
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-10) var(--sp-8) var(--sp-16); }
+
+  /* ── Page Header ─────────────────────────────────────── */
+  .hero { margin-bottom: var(--sp-12); }
+  .hero-eyebrow {
+    font-size: var(--text-xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--sp-2);
+  }
+  .hero-title {
+    font-size: 50px; font-weight: 300;
+    color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1;
+    margin-bottom: var(--sp-3);
+  }
+  .hero-range {
+    font-size: var(--text-sm); color: var(--gray-500); font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Year Tabs ───────────────────────────────────────── */
+  .year-tabs {
+    display: flex; gap: 0;
+    border: var(--border-1); background: var(--white);
+    margin-bottom: var(--sp-12);
+    width: fit-content;
+  }
+  .year-tab {
+    padding: var(--sp-3) var(--sp-6);
+    font-size: var(--text-sm); font-weight: 600;
+    color: var(--gray-500); text-decoration: none;
+    font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight);
+    border-right: var(--border-1);
+    cursor: pointer; background: var(--white);
+  }
+  .year-tab:last-child { border-right: none; }
+  .year-tab:hover { color: var(--gray-900); background: var(--gray-50); }
+  .year-tab.active {
+    background: var(--black); color: var(--white);
+  }
+  .year-tab.disabled {
+    color: var(--gray-300); background: var(--gray-50);
+    cursor: not-allowed; pointer-events: none;
+  }
+  .year-tab .year-meta {
+    display: block; font-size: 9px; font-weight: 500;
+    color: inherit; opacity: .6; letter-spacing: var(--tracking-wide);
+    text-transform: uppercase; margin-top: 2px;
+  }
+
+  /* ── Month Section ───────────────────────────────────── */
+  .month-section { margin-bottom: var(--sp-10); }
+  .month-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: var(--sp-3);
+    border-bottom: var(--border-2);
+    margin-bottom: var(--sp-5);
+  }
+  .month-title {
+    display: flex; align-items: baseline; gap: var(--sp-3);
+  }
+  .month-num {
+    font-size: var(--text-3xl); font-weight: 300;
+    color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .month-label {
+    font-size: var(--text-sm); font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  }
+  .month-meta {
+    font-size: var(--text-xs); color: var(--gray-400);
+    font-variant-numeric: tabular-nums;
+  }
+  .month-meta strong { color: var(--gray-700); font-weight: 600; }
+
+  .month-section.future .month-num,
+  .month-section.future .month-label { color: var(--gray-300); }
+  .month-section.future .month-head { border-bottom-color: var(--gray-200); }
+
+  /* ── Weeks Grid ──────────────────────────────────────── */
+  .weeks-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-3);
+  }
+  .week-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 0px);
+    text-decoration: none; display: block;
+    transition: border-color .15s;
+    min-height: 132px;
+    position: relative;
+  }
+  .week-card:hover { border-color: var(--gray-700); }
+  .week-card.empty {
+    background: var(--gray-50); border-color: var(--gray-200);
+    cursor: default; pointer-events: none;
+  }
+  .week-card.current {
+    background: var(--black); color: var(--white); border-color: var(--black);
+  }
+
+  .week-id {
+    font-size: var(--text-xs); font-family: var(--font-mono);
+    color: var(--gray-500); margin-bottom: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .week-card.current .week-id { color: var(--gray-300); }
+  .week-card.empty .week-id { color: var(--gray-300); }
+
+  .week-range {
+    font-size: var(--text-xs); color: var(--gray-700); font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: var(--sp-3);
+  }
+  .week-card.current .week-range { color: var(--white); opacity: .85; }
+  .week-card.empty .week-range { color: var(--gray-300); }
+
+  .week-files {
+    font-size: var(--text-3xl); font-weight: 700; color: var(--black);
+    line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight);
+  }
+  .week-card.current .week-files { color: var(--white); }
+  .week-card.empty .week-files { color: var(--gray-300); font-weight: 300; }
+  .week-files .unit {
+    font-size: var(--text-xs); color: var(--gray-400); font-weight: 400; margin-left: 4px;
+    letter-spacing: 0;
+  }
+  .week-card.current .week-files .unit { color: var(--gray-300); }
+
+  .week-current-badge {
+    display: inline-block; font-size: 9px; font-weight: 700;
+    background: var(--white); color: var(--black);
+    padding: 1px 6px;
+    letter-spacing: var(--tracking-wide);
+    position: absolute; top: var(--sp-4); right: var(--sp-4);
+  }
+
+  .week-projects {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    margin-top: var(--sp-3);
+  }
+  .week-proj-chip {
+    font-size: 10px; font-weight: 600;
+    padding: 2px 6px;
+    color: var(--gray-700);
+    background: var(--gray-100);
+    letter-spacing: 0;
+    text-transform: none;
+    border-left: 2px solid var(--type-color, var(--gray-400));
+    line-height: 1.4;
+  }
+  .week-card.current .week-proj-chip {
+    background: rgba(255,255,255,.1); color: var(--white);
+  }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    margin-top: var(--sp-16); padding-top: var(--sp-6);
+    border-top: var(--border-1);
+  }
+  .footer-row {
+    display: flex; justify-content: space-between;
+    font-size: var(--text-xs); color: var(--gray-500);
+  }
+  .footer-row .mono { font-family: var(--font-mono); color: var(--gray-700); }
+  .footer-note { font-size: var(--text-2xs); color: var(--gray-400); margin-top: var(--sp-4); }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">朴</div>
+      <div class="brand-text">
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">CLOUDE_CODE · 27 PROJECTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">현재</a>
+      <a class="active" href="#">주간</a>
+      <a href="#">월간</a>
+      <a href="#">연간</a>
+      <a href="#">프로젝트</a>
+    </nav>
+    <div class="build-info">
+      Build · 2026-05-05 14:00<br>
+      <span style="color:var(--gray-300)">Next · 2026-05-11 09:00 (Mon)</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ───────── Page Header ───────── -->
+  <section class="hero">
+    <div class="hero-eyebrow">WEEKLY ARCHIVE</div>
+    <h1 class="hero-title">모든 주간</h1>
+    <div class="hero-range">2026년 1월 ~ 12월 · 누적 기록</div>
+  </section>
+
+  <!-- ───────── Year Tabs ───────── -->
+  <div class="year-tabs">
+    <a class="year-tab active" href="#">
+      2026
+      <span class="year-meta">CURRENT</span>
+    </a>
+    <a class="year-tab disabled" href="#">
+      2025
+      <span class="year-meta">NO DATA</span>
+    </a>
+    <a class="year-tab disabled" href="#">
+      2024
+      <span class="year-meta">NO DATA</span>
+    </a>
+  </div>
+
+  <!-- ───────── Month-grouped Weeks ───────── -->
+  <div id="months-container"></div>
+
+  <!-- ───────── Footer ───────── -->
+  <footer>
+    <div class="footer-row">
+      <div>
+        <div style="margin-bottom:4px;">Data sources</div>
+        <div class="mono">docs/logs/*.md · PROJECTS.md · file mtime · git log</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="margin-bottom:4px;">Build · 2026-05-05 14:00 KST</div>
+        <div>Next refresh · 2026-05-11 09:00 (Mon)</div>
+      </div>
+    </div>
+    <div class="footer-note">
+      Personal data (00_personal/data, reports/daily~monthly) excluded by allowlist filter.
+      Foundation: design/foundation/tokens.css (062_논문리더 v0.2 derived).
+    </div>
+  </footer>
+
+</main>
+
+<script>
+/* Project type → color mapping (synced with tokens.css) */
+const TYPE_COLOR = {
+  research:   '#c9918e',
+  publishing: '#bfac7e',
+  education:  '#c4a07a',
+  product:    '#8aa8c9',
+  design:     '#a593c2',
+  data:       '#8bb89a',
+  system:     '#94a0ad',
+};
+
+/* ───────── Weekly data: 2026 ─────────
+   files: number | null (null = future/empty)
+   projects: optional array of {label, type}
+   current: true marks the active "current" card
+   ──────────────────────────────────── */
+const months = [
+  {
+    num: '01', label: 'JAN', name: '1월',
+    weeks: [
+      { id:'2026-W01', range:'12-29 ~ 01-04', files:0 },
+      { id:'2026-W02', range:'01-05 ~ 01-11', files:0 },
+      { id:'2026-W03', range:'01-12 ~ 01-18', files:0 },
+      { id:'2026-W04', range:'01-19 ~ 01-25', files:5 },
+    ]
+  },
+  {
+    num: '02', label: 'FEB', name: '2월',
+    weeks: [
+      { id:'2026-W05', range:'01-26 ~ 02-01', files:8 },
+      { id:'2026-W06', range:'02-02 ~ 02-08', files:12 },
+      { id:'2026-W07', range:'02-09 ~ 02-15', files:15 },
+      { id:'2026-W08', range:'02-16 ~ 02-22', files:20 },
+    ]
+  },
+  {
+    num: '03', label: 'MAR', name: '3월',
+    weeks: [
+      { id:'2026-W09',  range:'02-23 ~ 03-01', files:18 },
+      { id:'2026-W10', range:'03-02 ~ 03-08', files:22 },
+      { id:'2026-W11', range:'03-09 ~ 03-15', files:45,
+        projects:[
+          { label:'05 DSAPG', type:'research' },
+          { label:'21 CPSF',  type:'research' },
+        ]},
+      { id:'2026-W12', range:'03-16 ~ 03-22', files:38,
+        projects:[
+          { label:'05 DSAPG', type:'research' },
+        ]},
+      { id:'2026-W13', range:'03-23 ~ 03-29', files:50,
+        projects:[
+          { label:'05 DSAPG', type:'research' },
+          { label:'21 CPSF',  type:'research' },
+        ]},
+    ]
+  },
+  {
+    num: '04', label: 'APR', name: '4월',
+    weeks: [
+      { id:'2026-W14', range:'03-30 ~ 04-05', files:12,
+        projects:[ { label:'03 Data_Once', type:'data' } ]},
+      { id:'2026-W15', range:'04-06 ~ 04-12', files:38,
+        projects:[
+          { label:'05 DSAPG', type:'research' },
+          { label:'21 CPSF',  type:'research' },
+        ]},
+      { id:'2026-W16', range:'04-13 ~ 04-19', files:95,
+        projects:[
+          { label:'51 페르소나', type:'research' },
+          { label:'10 일상다반사', type:'product' },
+        ]},
+      { id:'2026-W17', range:'04-20 ~ 04-26', files:68,
+        projects:[
+          { label:'32 강연', type:'education' },
+          { label:'00 personal', type:'system' },
+        ]},
+    ]
+  },
+  {
+    num: '05', label: 'MAY', name: '5월',
+    weeks: [
+      { id:'2026-W18', range:'04-27 ~ 05-03', files:142, current:true,
+        projects:[
+          { label:'061 LifeOS',  type:'product' },
+          { label:'051 페르소나', type:'research' },
+          { label:'091 출판',    type:'publishing' },
+        ]},
+      { id:'2026-W19', range:'05-04 ~ 05-10', files:null },
+      { id:'2026-W20', range:'05-11 ~ 05-17', files:null },
+      { id:'2026-W21', range:'05-18 ~ 05-24', files:null },
+      { id:'2026-W22', range:'05-25 ~ 05-31', files:null },
+    ]
+  },
+  {
+    num: '06', label: 'JUN', name: '6월', future:true,
+    weeks: [
+      { id:'2026-W23', range:'06-01 ~ 06-07', files:null },
+      { id:'2026-W24', range:'06-08 ~ 06-14', files:null },
+      { id:'2026-W25', range:'06-15 ~ 06-21', files:null },
+      { id:'2026-W26', range:'06-22 ~ 06-28', files:null },
+    ]
+  },
+  {
+    num: '07', label: 'JUL', name: '7월', future:true,
+    weeks: [
+      { id:'2026-W27', range:'06-29 ~ 07-05', files:null },
+      { id:'2026-W28', range:'07-06 ~ 07-12', files:null },
+      { id:'2026-W29', range:'07-13 ~ 07-19', files:null },
+      { id:'2026-W30', range:'07-20 ~ 07-26', files:null },
+    ]
+  },
+  {
+    num: '08', label: 'AUG', name: '8월', future:true,
+    weeks: [
+      { id:'2026-W31', range:'07-27 ~ 08-02', files:null },
+      { id:'2026-W32', range:'08-03 ~ 08-09', files:null },
+      { id:'2026-W33', range:'08-10 ~ 08-16', files:null },
+      { id:'2026-W34', range:'08-17 ~ 08-23', files:null },
+      { id:'2026-W35', range:'08-24 ~ 08-30', files:null },
+    ]
+  },
+  {
+    num: '09', label: 'SEP', name: '9월', future:true,
+    weeks: [
+      { id:'2026-W36', range:'08-31 ~ 09-06', files:null },
+      { id:'2026-W37', range:'09-07 ~ 09-13', files:null },
+      { id:'2026-W38', range:'09-14 ~ 09-20', files:null },
+      { id:'2026-W39', range:'09-21 ~ 09-27', files:null },
+    ]
+  },
+  {
+    num: '10', label: 'OCT', name: '10월', future:true,
+    weeks: [
+      { id:'2026-W40', range:'09-28 ~ 10-04', files:null },
+      { id:'2026-W41', range:'10-05 ~ 10-11', files:null },
+      { id:'2026-W42', range:'10-12 ~ 10-18', files:null },
+      { id:'2026-W43', range:'10-19 ~ 10-25', files:null },
+    ]
+  },
+  {
+    num: '11', label: 'NOV', name: '11월', future:true,
+    weeks: [
+      { id:'2026-W44', range:'10-26 ~ 11-01', files:null },
+      { id:'2026-W45', range:'11-02 ~ 11-08', files:null },
+      { id:'2026-W46', range:'11-09 ~ 11-15', files:null },
+      { id:'2026-W47', range:'11-16 ~ 11-22', files:null },
+    ]
+  },
+  {
+    num: '12', label: 'DEC', name: '12월', future:true,
+    weeks: [
+      { id:'2026-W48', range:'11-23 ~ 11-29', files:null },
+      { id:'2026-W49', range:'11-30 ~ 12-06', files:null },
+      { id:'2026-W50', range:'12-07 ~ 12-13', files:null },
+      { id:'2026-W51', range:'12-14 ~ 12-20', files:null },
+      { id:'2026-W52', range:'12-21 ~ 12-27', files:null },
+    ]
+  },
+];
+
+function weekCardHtml(w) {
+  if (w.current) {
+    const chips = (w.projects || []).map(p =>
+      `<span class="week-proj-chip" style="--type-color:${TYPE_COLOR[p.type]};">${p.label}</span>`
+    ).join('');
+    return `
+      <a class="week-card current" href="#">
+        <div class="week-id">${w.id}</div>
+        <div class="week-range">${w.range}</div>
+        <div class="week-files num">${w.files}<span class="unit">files</span></div>
+        ${chips ? `<div class="week-projects">${chips}</div>` : ''}
+        <span class="week-current-badge">CURRENT</span>
+      </a>
+    `;
+  }
+  if (w.files === null) {
+    return `
+      <div class="week-card empty">
+        <div class="week-id">${w.id}</div>
+        <div class="week-range">${w.range}</div>
+        <div class="week-files num">—</div>
+      </div>
+    `;
+  }
+  const chips = (w.projects || []).map(p =>
+    `<span class="week-proj-chip" style="--type-color:${TYPE_COLOR[p.type]};">${p.label}</span>`
+  ).join('');
+  return `
+    <a class="week-card" href="#">
+      <div class="week-id">${w.id}</div>
+      <div class="week-range">${w.range}</div>
+      <div class="week-files num">${w.files}<span class="unit">files</span></div>
+      ${chips ? `<div class="week-projects">${chips}</div>` : ''}
+    </a>
+  `;
+}
+
+function monthSectionHtml(m) {
+  const totalFiles = m.weeks.reduce((s, w) => s + (w.files || 0), 0);
+  const recordedWeeks = m.weeks.filter(w => w.files !== null).length;
+  const hasData = recordedWeeks > 0;
+  const futureCls = m.future ? ' future' : '';
+  const metaHtml = hasData
+    ? `<div class="month-meta"><strong class="num">${totalFiles}</strong> files · ${recordedWeeks} / ${m.weeks.length} weeks</div>`
+    : `<div class="month-meta">future · ${m.weeks.length} weeks</div>`;
+  return `
+    <section class="month-section${futureCls}">
+      <div class="month-head">
+        <div class="month-title">
+          <span class="month-num">${m.num}</span>
+          <span class="month-label">${m.label} · ${m.name}</span>
+        </div>
+        ${metaHtml}
+      </div>
+      <div class="weeks-grid">
+        ${m.weeks.map(weekCardHtml).join('')}
+      </div>
+    </section>
+  `;
+}
+
+document.getElementById('months-container').innerHTML =
+  months.map(monthSectionHtml).join('');
+</script>
+
+</body>
+</html>

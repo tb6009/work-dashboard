@@ -55,12 +55,17 @@
       "weekday": "화",
       "filesChanged": 0,
       "topProjectIds": [
-        "063"
+        "063",
+        "092"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "[fs scan] PROJECT.md · 2026-W22.json"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 04_사례3_장면수정_이미지정리_v0.1.md"
         }
       ]
     },
@@ -166,5 +171,5 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-26T02:57:40.476Z"
+  "buildAt": "2026-05-26T04:06:22.449Z"
 }

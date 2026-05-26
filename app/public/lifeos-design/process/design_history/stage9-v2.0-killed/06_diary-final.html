@@ -1,0 +1,119 @@
+<h2>다이어리 영역 — 통합 정리 + 회고 작성 UI 결정</h2>
+<p class="subtitle">결정사항 시각화 후, 마지막 디자인 선택 하나만 받겠습니다</p>
+
+<div class="mockup">
+  <div class="mockup-header">Today 탭 — 현행 selector 유지 + 일요일 선택 시 빨강 배경</div>
+  <div class="mockup-body" style="padding:14px">
+    <div style="display:flex;gap:4px;overflow:hidden;align-items:center">
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">금</div><div style="font-weight:600;color:#333">9</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">토</div><div style="font-weight:600;color:#333">10</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:#DC2626;color:#fff"><div style="font-size:0.6rem">일</div><div style="font-weight:700">11</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">월</div><div style="font-weight:600;color:#333">12</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">화</div><div style="font-weight:600;color:#333">13</div></div>
+    </div>
+    <div style="font-size:0.7rem;color:#6B7280;margin-top:8px">변경: <code>TodayTab.tsx:324</code> <code>background: isCentered ? "#000" : "transparent"</code> → 일요일이면 <code>"#DC2626"</code>, 평일이면 <code>"#000"</code></div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Week 탭 — 화살표 시간 네비만 (strip 없음)</div>
+  <div class="mockup-body" style="padding:18px 28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.95rem">
+      <span style="font-size:1.1rem;color:#374151">‹</span>
+      <span style="font-weight:500">2026-W19 · 5/10~5/16</span>
+      <span style="font-size:1.1rem;color:#374151">›</span>
+    </div>
+    <div style="font-size:0.7rem;color:#6B7280;margin-top:10px">기존 회고 영역(주간 리뷰)은 그대로. 시간 네비로 이전 주 회고 수정 가능해짐.</div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Month 탭 — 시간 네비 + 캘린더 일요일에 빨간 회고 아이콘</div>
+  <div class="mockup-body" style="padding:18px 28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.95rem;margin-bottom:14px">
+      <span style="font-size:1.1rem;color:#374151">‹</span>
+      <span style="font-weight:500">2026년 5월</span>
+      <span style="font-size:1.1rem;color:#374151">›</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:0.7rem">
+      <div style="text-align:center;padding:4px;color:#DC2626">일</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">월</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">화</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">수</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">목</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">금</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">토</div>
+
+      <!-- 1주차 -->
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px;position:relative"><div>3</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626" title="회고 필요"></div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>4</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>5</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>6</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>7</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>8</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>9</div></div>
+
+      <!-- 2주차 (지난 일요일 = 회고 완료 체크) -->
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px;position:relative"><div>10</div><div style="position:absolute;bottom:2px;right:2px;font-size:0.55rem;color:#16a34a">✓</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>11</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>12</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>13</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>14</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>15</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>16</div></div>
+
+      <!-- 3주차 (다음 일요일 = 회고 예정) -->
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px;position:relative"><div>17</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626"></div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>18</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>19</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>20</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>21</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>22</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>23</div></div>
+
+      <!-- 4주차 -->
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px;position:relative"><div>24</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626"></div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>25</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>26</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>27</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>28</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>29</div></div>
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px"><div>30</div></div>
+
+      <!-- 5주차 (월말 = 월간회고) -->
+      <div style="aspect-ratio:1;border:1px solid #f3f4f6;padding:4px;position:relative;background:#fef2f2"><div>31</div><div style="position:absolute;bottom:1px;right:2px;font-size:0.5rem;color:#DC2626;font-weight:700">月</div></div>
+    </div>
+    <div style="font-size:0.7rem;color:#6B7280;margin-top:10px;line-height:1.6">
+      <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#DC2626;margin-right:4px"></span> 일요일 = 주간회고 필요<br>
+      <span style="color:#16a34a">✓</span> 회고 완료<br>
+      <span style="color:#DC2626;font-weight:700">月</span> 월말 = 월간회고 (자동 prompt + 한 달 리뷰 상세 작성)
+    </div>
+  </div>
+</div>
+
+<h3>회고 작성 UI 형식 — 마지막 결정</h3>
+<p class="subtitle">주간회고·월간회고 모두 동일한 형식 적용</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>모달 (Bottom sheet, 추천)</h3>
+      <p>캘린더 빨간 아이콘 탭 → 화면 하단에서 슬라이드업 모달로 회고 작성. 컨텍스트(달력) 유지. 모바일 친화. 저장하면 ✓ 체크로 변경.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>별도 페이지</h3>
+      <p>탭 → <code>/diary/review/2026-W19</code> 새 라우트 이동. 풀 화면 작성. 글이 길어질 때 유리. 컨텍스트 끊김.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>같은 탭 안 인라인 펼침</h3>
+      <p>Week 탭의 기존 "주간 리뷰" 영역을 그대로 활용. Month에서 회고 아이콘 탭하면 Week 탭으로 이동 + 해당 주차 회고 영역 자동 포커스.</p>
+    </div>
+  </div>
+</div>

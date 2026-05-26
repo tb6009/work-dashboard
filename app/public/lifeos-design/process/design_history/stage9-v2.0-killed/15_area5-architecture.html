@@ -1,0 +1,140 @@
+<h2>영역 5 — 전체 아키텍처 / 성능 평가</h2>
+<p class="subtitle">미래 수정·보완·성능 최적화에 쓸 수 있도록 코드 전반 구조를 재정리. 판단·근거 함께 제시.</p>
+
+<div class="mockup">
+  <div class="mockup-header">진단 — 파일 크기 (Top 6)</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.78rem;line-height:1.7">
+    <table style="width:100%;border-collapse:collapse;font-size:0.74rem">
+      <tr><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">파일</th><th style="text-align:right;padding:6px;border-bottom:1px solid #e5e7eb">줄</th><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">판단</th></tr>
+      <tr><td style="padding:6px"><code>diary/TodayTab.tsx</code></td><td style="padding:6px;text-align:right;color:#DC2626;font-weight:700">621</td><td style="padding:6px;color:#DC2626">너무 큼 → 분리</td></tr>
+      <tr><td style="padding:6px"><code>diary/MonthTab.tsx</code></td><td style="padding:6px;text-align:right;color:#DC2626;font-weight:700">478</td><td style="padding:6px;color:#DC2626">너무 큼 → 분리</td></tr>
+      <tr><td style="padding:6px"><code>haru/page.tsx</code></td><td style="padding:6px;text-align:right;color:#DC2626;font-weight:700">467</td><td style="padding:6px;color:#DC2626">너무 큼 → 분리 (영역 4)</td></tr>
+      <tr><td style="padding:6px"><code>diary/WeekTab.tsx</code></td><td style="padding:6px;text-align:right;color:#D97706;font-weight:700">441</td><td style="padding:6px;color:#D97706">분리 권장</td></tr>
+      <tr><td style="padding:6px"><code>friends/page.tsx</code></td><td style="padding:6px;text-align:right;color:#9ca3af">349</td><td style="padding:6px;color:#9ca3af">deprecate 예정 (Stage 9)</td></tr>
+      <tr><td style="padding:6px"><code>settings/page.tsx</code></td><td style="padding:6px;text-align:right;color:#16a34a">213</td><td style="padding:6px;color:#16a34a">양호</td></tr>
+    </table>
+    <div style="margin-top:8px;font-size:0.7rem;color:#6B7280;line-height:1.5">
+      <strong>근거:</strong> 200~250줄 이상이면 AI도 사람도 reasoning 비용이 급격히 증가. Anthropic 권장 (composition-patterns 스킬) — "한 단위는 한 책임만, 한 컨텍스트에 담아낼 수 있는 크기".
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">진단 — 5대 구조적 이슈</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.76rem;line-height:1.65">
+    <table style="width:100%;border-collapse:collapse;font-size:0.73rem">
+      <tr><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb;width:14%">우선순위</th><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb;width:24%">이슈</th><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">근거 / 권장</th></tr>
+
+      <tr><td style="padding:6px;color:#DC2626;font-weight:700;vertical-align:top">P0 컴포넌트</td><td style="padding:6px;vertical-align:top">큰 파일 4개 (다이어리 3탭 + haru)</td><td style="padding:6px;color:#374151">현재 1.4k 줄이 4 파일에 집중. 분리 시 ~20 파일에 분산. <strong>권장:</strong> 각 탭을 5~7개 컴포넌트로 분리 (헤더/입력/리스트/차트/저장 등). <code>src/components/diary/</code>, <code>src/components/chat/</code> 신규 폴더.</td></tr>
+
+      <tr><td style="padding:6px;color:#DC2626;font-weight:700;vertical-align:top">P0 캐시</td><td style="padding:6px;vertical-align:top">데이터 캐싱 레이어 없음</td><td style="padding:6px;color:#374151">Today/Week/Month 모두 <code>getHealthLogs</code>, <code>getJournalEntries</code> 등을 직접 호출. 탭 전환마다 같은 데이터 재요청. <strong>권장:</strong> <code>@tanstack/react-query</code> 도입 (~40KB gz). 캐시 + 백그라운드 refetch + 낙관적 업데이트. <code>lib/supabase/queries.ts</code> 에 훅 wrapper.</td></tr>
+
+      <tr><td style="padding:6px;color:#D97706;font-weight:700;vertical-align:top">P1 스타일</td><td style="padding:6px;vertical-align:top">100% inline <code>style={{}}</code></td><td style="padding:6px;color:#374151">Tailwind v4 + PostCSS 설치되어 있으나 클래스 사용 거의 없음. 디자인 토큰(<code>theme/timeColor.ts</code>) 일관성 깨지기 쉬움. <strong>권장:</strong> 새 코드는 Tailwind 우선. 색상·간격은 <code>theme/tokens.ts</code> 의 CSS 변수로 통일. 기존 코드는 영역별로 점진 마이그레이션.</td></tr>
+
+      <tr><td style="padding:6px;color:#D97706;font-weight:700;vertical-align:top">P1 정리</td><td style="padding:6px;vertical-align:top">Dead code ~900줄</td><td style="padding:6px;color:#374151">friends/page.tsx(349) + briefing/CharacterTabs(미확인) + MaeumView + MomiView. briefing 외 import 0회. <strong>권장:</strong> 영역 4와 함께 한 번에 제거.</td></tr>
+
+      <tr><td style="padding:6px;color:#D97706;font-weight:700;vertical-align:top">P1 빌드</td><td style="padding:6px;vertical-align:top">debug API routes 3개 노출</td><td style="padding:6px;color:#374151"><code>/api/debug/headers</code>, <code>/api/debug/oauth</code>, <code>/api/debug/route</code> — 프로덕션에 그대로 배포 시 정보 노출. <strong>권장:</strong> <code>process.env.NODE_ENV === "production"</code> 분기로 401 또는 제거.</td></tr>
+
+      <tr><td style="padding:6px;color:#16a34a;font-weight:700;vertical-align:top">P2 toolchain</td><td style="padding:6px;vertical-align:top">tsconfig target ES2017</td><td style="padding:6px;color:#374151">Node 20 + 모던 브라우저면 ES2022 가능. <code>satisfies</code>, top-level await 등 활용. <strong>권장:</strong> 큰 부담 없음. 다른 작업과 묶어서.</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">권장 디렉토리 구조 (개선 후)</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.72rem;line-height:1.55;font-family:monospace;white-space:pre">
+src/
+├── app/
+│   ├── page.tsx                  (홈 — 7블록 순서 적용)
+│   ├── diary/page.tsx            (서브탭 라우터, ~30줄)
+│   │   ├── TodayTab.tsx          (~120줄, 분리 후)
+│   │   ├── WeekTab.tsx           (~120줄)
+│   │   └── MonthTab.tsx          (~120줄)
+│   ├── haru/page.tsx             (~80줄, 분리 후)
+│   ├── settings/page.tsx         (213줄, 유지)
+│   └── api/
+│       ├── auth/  calendar/  chat/
+│       └── (debug/ → 환경 분기 또는 제거)
+├── components/
+│   ├── ui/                       (공통 프리미티브)
+│   │   ├── Toast.tsx             ★ NEW (자동 저장 피드백)
+│   │   └── ReviewModal.tsx       ★ NEW (Stage 9 회고 작성)
+│   ├── briefing/                 (홈 전용, 정리)
+│   │   ├── (─ CharacterTabs, MaeumView, MomiView 제거)
+│   │   └── ...
+│   ├── diary/                    ★ NEW
+│   │   ├── DateSelector.tsx      (Today selector — 정중앙 정렬 + 일요일 빨강)
+│   │   ├── HealthInput.tsx
+│   │   ├── MemoSection.tsx
+│   │   ├── WeekChart.tsx
+│   │   ├── CalendarGrid.tsx      (Month — 회고 색상 시스템)
+│   │   └── TimeNav.tsx           (‹ 라벨 › 공통)
+│   └── chat/                     ★ NEW
+│       ├── ChatMessage.tsx
+│       └── ChatInput.tsx
+├── hooks/                        ★ NEW
+│   ├── useChatMessages.ts
+│   ├── useAutoSave.ts
+│   ├── useHealthLog.ts
+│   ├── useReviews.ts
+│   └── useToast.ts
+├── lib/
+│   ├── ai/  data/  theme/  types/    (기존)
+│   ├── chat/                     ★ NEW
+│   │   └── keywords.ts
+│   ├── markdown.ts               ★ NEW
+│   └── supabase/
+│       ├── api.ts                (기존)
+│       └── queries.ts            ★ NEW (React Query wrappers)
+└── styles/                       ★ NEW (Tailwind v4 토큰 확장)
+  </div>
+</div>
+
+<h3>영역 5 결정 (구현 단계 작업 항목)</h3>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="split-diary" onclick="toggleSelect(this)">
+    <div class="letter">P0</div>
+    <div class="content">
+      <h3>다이어리 3탭 분리 (P0)</h3>
+      <p>TodayTab 621 / MonthTab 478 / WeekTab 441 → 각 ~120줄로. <code>components/diary/</code> 폴더 신설.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="react-query" onclick="toggleSelect(this)">
+    <div class="letter">P0</div>
+    <div class="content">
+      <h3>React Query 도입 (P0)</h3>
+      <p>탭/페이지 전환 시 같은 데이터 재요청 제거. 낙관적 업데이트로 입력 UX 개선. <code>lib/supabase/queries.ts</code> 에 wrapper.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="tailwind" onclick="toggleSelect(this)">
+    <div class="letter">P1</div>
+    <div class="content">
+      <h3>Tailwind 점진 마이그레이션 (P1)</h3>
+      <p>새 코드(분리되는 컴포넌트)는 Tailwind 우선. 기존 코드는 영역별로 단계 이동. 무리한 일괄 변환 안 함.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="dead-clean" onclick="toggleSelect(this)">
+    <div class="letter">P1</div>
+    <div class="content">
+      <h3>Dead code 정리 (P1)</h3>
+      <p>friends + CharacterTabs + MaeumView + MomiView ~900줄 제거 (영역 4와 함께).</p>
+    </div>
+  </div>
+  <div class="option" data-choice="debug-routes" onclick="toggleSelect(this)">
+    <div class="letter">P1</div>
+    <div class="content">
+      <h3>debug API routes 환경 분기 (P1)</h3>
+      <p>프로덕션 빌드에서 401 또는 제외. 정보 노출 위험 제거.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="ts-target" onclick="toggleSelect(this)">
+    <div class="letter">P2</div>
+    <div class="content">
+      <h3>tsconfig target ES2022 (P2)</h3>
+      <p>모던 문법 활용. 보류 가능.</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:14px">전부 채택 권장. 영역 5 결정 후 통합 spec 문서를 작성하고 writing-plans로 인계합니다.</p>

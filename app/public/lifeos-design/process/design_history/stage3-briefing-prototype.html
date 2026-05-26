@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life OS — Briefing Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f5;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 1200px; width: 100%; }
+
+  .page-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.03em;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .page-sub {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #808080;
+    margin-bottom: 48px;
+  }
+
+  /* ── Time Switcher ── */
+  .time-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .time-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: #b3b3b3;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+  }
+  .time-btn.active { color: #000; }
+  .time-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: #000;
+  }
+
+  /* ── Phones Container ── */
+  .phones {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .phone-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .phone-col-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+
+  /* ── Phone Frame ── */
+  .phone {
+    width: 340px;
+    background: #000;
+    border-radius: 44px;
+    padding: 10px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.15);
+  }
+  .phone-inner {
+    border-radius: 36px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+  }
+
+  /* ── Status bar ── */
+  .status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: 54px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12px;
+  }
+  .dynamic-island {
+    width: 110px;
+    height: 28px;
+    background: #000;
+    border-radius: 20px;
+  }
+
+  /* ── Weather Hero ── */
+  .weather-hero {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.6s ease;
+  }
+
+  .weather-sky {
+    position: absolute;
+    inset: 0;
+    transition: background 0.8s ease;
+  }
+
+  /* Morning skies — wide gradient transitions */
+  .sky-morning-blue {
+    background: linear-gradient(180deg,
+      #87CEEB 0%, #93D1ED 10%, #A8DAF0 20%, #B8E1F3 30%,
+      #C8E8F5 40%, #D4EDF7 50%, #E0F1F9 60%, #EAF5FB 70%,
+      #F2F8FC 80%, #F8FBFE 90%, #FFFFFF 100%);
+  }
+  .sky-morning-warm {
+    background: linear-gradient(180deg,
+      #FBBF24 0%, #FCC63A 10%, #FCCE50 20%, #FDD866 30%,
+      #FDE28A 40%, #FDEBAA 50%, #FEF0C3 60%, #FEF5D8 70%,
+      #FEF9EA 80%, #FFFCF5 90%, #FFFFFF 100%);
+  }
+  .sky-morning-ink {
+    background: linear-gradient(180deg,
+      #D6D3D1 0%, #DAD8D6 10%, #DFDDDB 20%, #E4E2E0 30%,
+      #E9E7E5 40%, #EDECEB 50%, #F1F0EF 60%, #F5F4F3 70%,
+      #F8F8F7 80%, #FBFBFB 90%, #FFFFFF 100%);
+  }
+
+  /* Afternoon skies */
+  .sky-afternoon-blue {
+    background: linear-gradient(180deg,
+      #3B82F6 0%, #4A8DF7 10%, #5A98F8 20%, #6BA4F9 30%,
+      #7DB0FA 40%, #93C5FD 50%, #A9D3FE 60%, #BFDEFE 70%,
+      #D5E9FE 80%, #EAF4FF 90%, #FFFFFF 100%);
+  }
+  .sky-afternoon-warm {
+    background: linear-gradient(180deg,
+      #D97706 0%, #DF8818 10%, #E5992B 20%, #EBAB3E 30%,
+      #F0BC51 40%, #F4CC6A 50%, #F7DA88 60%, #FAE5A6 70%,
+      #FCEFC4 80%, #FEF7E2 90%, #FFFFFF 100%);
+  }
+  .sky-afternoon-ink {
+    background: linear-gradient(180deg,
+      #78716C 0%, #847D78 10%, #908A85 20%, #9C9691 30%,
+      #A8A39E 40%, #B5B0AB 50%, #C2BEB9 60%, #CFCCC8 70%,
+      #DCDAD7 80%, #E9E8E6 90%, #FFFFFF 100%);
+  }
+
+  /* Evening skies */
+  .sky-evening-blue {
+    background: linear-gradient(180deg,
+      #1E3A5F 0%, #1E3F75 8%, #1E458B 16%, #1F4DA1 24%,
+      #2558B8 32%, #3068CC 40%, #4078DC 48%, #5A8DE6 56%,
+      #7AA5EF 64%, #9ABBF5 72%, #BAD1FA 80%, #D8E6FD 90%, #FFFFFF 100%);
+  }
+  .sky-evening-warm {
+    background: linear-gradient(180deg,
+      #78350F 0%, #834012 8%, #8E4B16 16%, #9A571A 24%,
+      #A8641F 32%, #B67325 40%, #C5842E 48%, #D49638 56%,
+      #E0AA48 64%, #EABD60 72%, #F2D080 80%, #F8E4B0 90%, #FFFFFF 100%);
+  }
+  .sky-evening-ink {
+    background: linear-gradient(180deg,
+      #1C1917 0%, #252220 8%, #2F2C29 16%, #393633 24%,
+      #44413D 32%, #504C48 40%, #5D5954 48%, #6B6661 56%,
+      #7A756F 64%, #8A857F 72%, #9C9790 80%, #C0BCB6 90%, #FFFFFF 100%);
+  }
+
+  /* Night skies */
+  .sky-night-blue {
+    background: linear-gradient(180deg,
+      #0c1445 0%, #101A52 8%, #142060 16%, #18286F 24%,
+      #1C3180 32%, #213D94 40%, #274CA8 48%, #2F5EBC 56%,
+      #3A72CF 64%, #4E89DE 72%, #6BA1EA 80%, #96C0F2 90%, #FFFFFF 100%);
+  }
+  .sky-night-warm {
+    background: linear-gradient(180deg,
+      #451a03 0%, #512206 8%, #5E2A09 16%, #6B330C 24%,
+      #783D10 32%, #864815 40%, #95551B 48%, #A56322 56%,
+      #B6742B 64%, #C88636 72%, #DA9A44 80%, #EBB868 90%, #FFFFFF 100%);
+  }
+  .sky-night-ink {
+    background: linear-gradient(180deg,
+      #0a0a0a 0%, #131211 8%, #1C1A18 16%, #252220 24%,
+      #2F2B28 32%, #393532 40%, #44403C 48%, #504C47 56%,
+      #5D5954 64%, #6B6762 72%, #7A7671 80%, #A09B96 90%, #FFFFFF 100%);
+  }
+
+  .weather-info {
+    position: absolute;
+    top: 36%;
+    left: 0;
+    right: 0;
+    padding: 0 28px;
+    z-index: 10;
+  }
+  .weather-temp {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5.4rem;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    transition: color 0.6s;
+  }
+  .weather-detail {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    font-size: 1.17rem;
+    transition: color 0.6s;
+  }
+  .weather-condition {
+    font-weight: 500;
+  }
+  .weather-range {
+    opacity: 0.6;
+  }
+
+  /* text colors for sky contrast */
+  .weather-light .weather-temp,
+  .weather-light .weather-detail { color: #000000; }
+  .weather-dark .weather-temp { color: #FFFFFF; }
+  .weather-dark .weather-detail { color: rgba(255,255,255,0.8); }
+
+  /* ── Screen Content ── */
+  .screen {
+    padding: 0 28px 32px;
+    background: #fff;
+  }
+
+  .greeting {
+    padding: 24px 0 28px;
+  }
+  .g-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #B3B3B3;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .g-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+  .g-by {
+    font-size: 0.78rem;
+    color: #808080;
+    margin-top: 4px;
+  }
+
+  .block { margin-bottom: 24px; }
+  .block-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #B3B3B3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .block-text {
+    font-size: 0.84rem;
+    color: #333;
+    line-height: 1.75;
+  }
+  .done {
+    color: #b3b3b3;
+    text-decoration: line-through;
+  }
+  .pending {
+    color: #000;
+    font-weight: 500;
+  }
+  .sub-text {
+    color: #808080;
+  }
+
+  .recommend {
+    font-size: 0.84rem;
+    color: #333;
+    line-height: 1.65;
+    padding: 0;
+    padding-left: 14px;
+    border-left: 2px solid;
+    transition: border-color 0.6s;
+  }
+
+  .char-tabs {
+    display: flex;
+    margin-top: 28px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 14px;
+  }
+  .c-tab {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .c-tab-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #b3b3b3;
+    display: block;
+    transition: color 0.3s;
+  }
+  .c-tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    display: block;
+    margin-top: 1px;
+    transition: color 0.3s;
+  }
+  .c-tab.active .c-tab-name { color: #000; }
+  .c-tab.active .c-tab-role { transition: color 0.6s; }
+  .c-tab-indicator {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.6s;
+  }
+  .c-tab.active .c-tab-indicator { opacity: 1; }
+
+  /* ── Night mode text adjustments for dark sky weather ── */
+
+  /* ── Bottom nav hint ── */
+  .bottom-hint {
+    padding: 16px 28px 8px;
+    display: flex;
+    justify-content: center;
+  }
+  .home-indicator {
+    width: 120px;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .phones { flex-direction: column; align-items: center; }
+    .phone { width: 100%; max-width: 375px; }
+  }
+
+  /* ── Evening Screen ── */
+  .screen-evening .g-text { font-family: 'Outfit', sans-serif; }
+
+  /* ── Info section ── */
+  .info-section {
+    max-width: 680px;
+    margin: 64px auto 0;
+    text-align: center;
+  }
+  .info-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .info-text {
+    font-size: 0.82rem;
+    color: #808080;
+    line-height: 1.65;
+  }
+
+  /* ── Interactive controls ── */
+  .controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .ctrl-btn {
+    padding: 8px 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: #808080;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ctrl-btn:hover { border-color: #999; color: #333; }
+  .ctrl-btn.active { border-color: #000; color: #000; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-title">Morning Briefing</div>
+  <div class="page-sub">시간대와 컬러 옵션을 바꿔가며 실제 화면을 확인하세요</div>
+
+  <!-- Time Switcher -->
+  <div class="time-switcher">
+    <button class="time-btn active" onclick="setTime('morning')">Morning</button>
+    <button class="time-btn" onclick="setTime('afternoon')">Afternoon</button>
+    <button class="time-btn" onclick="setTime('evening')">Evening</button>
+    <button class="time-btn" onclick="setTime('night')">Night</button>
+  </div>
+
+  <!-- Color Switcher -->
+  <div class="controls">
+    <button class="ctrl-btn active" onclick="setColor('blue')">Blue Cycle</button>
+    <button class="ctrl-btn" onclick="setColor('warm')">Warm Shift</button>
+    <button class="ctrl-btn" onclick="setColor('ink')">Ink</button>
+  </div>
+
+  <div style="height:40px"></div>
+
+  <!-- Phones -->
+  <div class="phones">
+
+    <!-- Main Phone -->
+    <div class="phone-col">
+      <div class="phone">
+        <div class="phone-inner">
+          <div class="status-bar"><div class="dynamic-island"></div></div>
+
+          <div class="weather-hero" id="weatherHero">
+            <div class="weather-sky sky-morning-blue" id="weatherSky"></div>
+            <div class="weather-info weather-light" id="weatherInfo">
+              <div class="weather-temp" id="weatherTemp">18°</div>
+              <div class="weather-detail">
+                <span class="weather-condition" id="weatherCond">맑음</span>
+                <span class="weather-range" id="weatherRange">최저 12° / 최고 22°</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen" id="screenContent">
+            <div class="greeting">
+              <div class="g-date">Thu, May 01</div>
+              <div class="g-text" id="greetingText" style="font-family:'Outfit',sans-serif;">Good Morning</div>
+              <div class="g-by" id="greetingBy">진 집사가 준비한 오늘의 브리핑입니다</div>
+            </div>
+
+            <div class="block">
+              <div class="block-label">Yesterday</div>
+              <div class="block-text">
+                <div class="done">주간 리포트 작성 완료</div>
+                <div class="done">10-일상다반사 v1.5 리뷰</div>
+                <div class="pending">질적연구 데이터 수집 계획</div>
+              </div>
+            </div>
+
+            <div class="block">
+              <div class="block-label" id="todayLabel">Today</div>
+              <div class="block-text" id="todayText">
+                근로자의 날 &mdash; 공식 일정 없음<br>
+                <span class="sub-text">질적연구 과제 집중 권장</span>
+              </div>
+            </div>
+
+            <div class="block">
+              <div class="block-label">Recommendation</div>
+              <div class="recommend" id="recommendBlock" style="border-color:#60A5FA;">
+                일정이 비어있는 오늘, 5/28 과제의 데이터 수집 계획 초안을 작성해보시면 어떨까요.
+              </div>
+            </div>
+
+            <div class="char-tabs">
+              <div class="c-tab active">
+                <div class="c-tab-indicator" id="tabIndicator" style="background:#60A5FA;"></div>
+                <span class="c-tab-name">진</span>
+                <span class="c-tab-role" id="tabRole" style="color:#60A5FA;">Butler</span>
+              </div>
+              <div class="c-tab">
+                <div class="c-tab-indicator"></div>
+                <span class="c-tab-name">모미</span>
+                <span class="c-tab-role">Trainer</span>
+              </div>
+              <div class="c-tab">
+                <div class="c-tab-indicator"></div>
+                <span class="c-tab-name">마음</span>
+                <span class="c-tab-role">Coach</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-hint"><div class="home-indicator"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Info -->
+  <div class="info-section">
+    <div class="info-title">Weather Header</div>
+    <div class="info-text">
+      상단 날씨 영역은 실제 날씨 API와 연동하여 현재 하늘 사진 또는 그라디언트로 표현됩니다.<br>
+      기온, 날씨 상태, 최저/최고 온도가 표시되며 시간대에 따라 하늘 색이 자연스럽게 바뀝니다.<br>
+      사용자가 직접 배경 사진을 업로드하면 그라디언트 대신 사진이 사용됩니다.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const config = {
+    time: 'morning',
+    color: 'blue'
+  };
+
+  const accentColors = {
+    blue:  { morning: '#60A5FA', afternoon: '#3B82F6', evening: '#1D4ED8', night: '#1E3A5F' },
+    warm:  { morning: '#F59E0B', afternoon: '#D97706', evening: '#B45309', night: '#78350F' },
+    ink:   { morning: '#A8A29E', afternoon: '#78716C', evening: '#44403C', night: '#1C1917' }
+  };
+
+  const weatherData = {
+    morning:   { temp: '18°', cond: '맑음', range: '최저 12° / 최고 22°' },
+    afternoon: { temp: '22°', cond: '구름 조금', range: '최저 12° / 최고 22°' },
+    evening:   { temp: '17°', cond: '맑음', range: '최저 12° / 최고 22°' },
+    night:     { temp: '13°', cond: '맑음', range: '최저 12° / 최고 22°' }
+  };
+
+  const greetings = {
+    morning:   'Good Morning',
+    afternoon: 'Good Afternoon',
+    evening:   'Good Evening',
+    night:     'Good Night'
+  };
+
+  const briefingBy = {
+    morning:   '진 집사가 준비한 오늘의 브리핑입니다',
+    afternoon: '진 집사가 준비한 오후 브리핑입니다',
+    evening:   '진 집사가 준비한 저녁 브리핑입니다',
+    night:     '진 집사가 준비한 하루 마감 브리핑입니다'
+  };
+
+  const isDarkSky = {
+    morning: false,
+    afternoon: false,
+    evening: { blue: true, warm: false, ink: true },
+    night: true
+  };
+
+  function getSkyDark(time, color) {
+    const d = isDarkSky[time];
+    if (typeof d === 'boolean') return d;
+    return d[color] || false;
+  }
+
+  function setTime(time) {
+    config.time = time;
+    document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    render();
+  }
+
+  function setColor(color) {
+    config.color = color;
+    document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    render();
+  }
+
+  function render() {
+    const { time, color } = config;
+    const accent = accentColors[color][time];
+    const dark = getSkyDark(time, color);
+
+    // Sky
+    const sky = document.getElementById('weatherSky');
+    sky.className = `weather-sky sky-${time}-${color}`;
+
+    // Weather text
+    const info = document.getElementById('weatherInfo');
+    info.className = `weather-info ${dark ? 'weather-dark' : 'weather-light'}`;
+
+    const w = weatherData[time];
+    document.getElementById('weatherTemp').textContent = w.temp;
+    document.getElementById('weatherCond').textContent = w.cond;
+    document.getElementById('weatherRange').textContent = w.range;
+
+    // Greeting
+    document.getElementById('greetingText').textContent = greetings[time];
+    document.getElementById('greetingBy').textContent = briefingBy[time];
+
+    // Accent color
+    document.getElementById('recommendBlock').style.borderColor = accent;
+    document.getElementById('tabIndicator').style.background = accent;
+    document.getElementById('tabRole').style.color = accent;
+
+    // Today label
+    if (time === 'evening' || time === 'night') {
+      document.getElementById('todayLabel').textContent = 'Wrap-up';
+      document.getElementById('todayText').innerHTML =
+        '오늘 완료 2건, 미완 1건<br><span class="sub-text">내일 아침에 이어서 진행하세요</span>';
+    } else {
+      document.getElementById('todayLabel').textContent = 'Today';
+      document.getElementById('todayText').innerHTML =
+        '근로자의 날 &mdash; 공식 일정 없음<br><span class="sub-text">질적연구 과제 집중 권장</span>';
+    }
+  }
+
+  // Init
+  render();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<h2>영역 4 — 하루(어시스턴트) + 설정 진단</h2>
+<p class="subtitle">큰 사용성 문제는 거의 없습니다. 잔여 정리 항목만 정리 후 통합 spec으로 이동합니다.</p>
+
+<div class="mockup">
+  <div class="mockup-header">/haru — 어시스턴트 채팅</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.78rem;line-height:1.7">
+    <table style="width:100%;border-collapse:collapse">
+      <tr><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">항목</th><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">상태</th></tr>
+      <tr><td style="padding:6px;color:#6B7280">단일 어시스턴트 채팅</td><td style="padding:6px;color:#16a34a">✓ 정상</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">키워드 자동 감지 (운동·수면·컨디션·감정·커피)</td><td style="padding:6px;color:#16a34a">✓ 동작</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">자동 저장 피드백 (저장됐다는 신호)</td><td style="padding:6px;color:#D97706">! 토스트/알림 없음 — 추후 검토</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">마크다운 렌더 (볼드/이탤릭/코드)</td><td style="padding:6px;color:#16a34a">✓ 구현됨</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">/friends 흡수 (Stage 9 IA 결정 반영)</td><td style="padding:6px;color:#374151">→ writing-plans에서 처리</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">/settings — 설정</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.78rem;line-height:1.7">
+    <table style="width:100%;border-collapse:collapse">
+      <tr><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">항목</th><th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">상태</th></tr>
+      <tr><td style="padding:6px;color:#6B7280">OpenAI API Key 입력</td><td style="padding:6px;color:#16a34a">✓ <code>type="password"</code> 마스킹 적용</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">연결 상태 도트(초록/빨강)</td><td style="padding:6px;color:#16a34a">✓ 명확</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">저장 버튼 피드백 ("저장 완료" → 2초)</td><td style="padding:6px;color:#16a34a">✓ 정상</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">Google Calendar 동기화</td><td style="padding:6px;color:#16a34a">✓ 동기화 결과 메시지 노출</td></tr>
+      <tr><td style="padding:6px;color:#6B7280">"친구들(모미/마음) AI 대화에 사용됩니다" 문구</td><td style="padding:6px;color:#DC2626">⚠ friends deprecate에 따라 갱신 필요 → "하루(어시스턴트) 대화에 사용"</td></tr>
+    </table>
+  </div>
+</div>
+
+<h3>영역 4 결정</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>잔여 정리만 적용 후 spec 통합 (추천)</h3>
+      <p>설정 페이지 안내 문구 갱신 + /haru 자동 저장 피드백은 별도 작업으로 분리. 영역 4 종료 → 통합 spec 작성으로 이동.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>/haru 자동 저장 토스트도 함께 추가</h3>
+      <p>"수면 7h 저장됨" 같은 토스트 알림 추가 결정까지 이번 라운드에 포함.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>영역 4 더 깊이 평가</h3>
+      <p>각 페이지의 인터랙션 디테일까지 mockup 비교 — 시간 더 듦.</p>
+    </div>
+  </div>
+</div>

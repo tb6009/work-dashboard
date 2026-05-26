@@ -1,0 +1,94 @@
+<h2>다이어리 — 시간 네비 공통 패턴</h2>
+<p class="subtitle">Today / Week / Month 세 탭이 같은 패턴을 공유하는 게 일관성에 좋습니다. 두 옵션입니다.</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">옵션 A — 단순 화살표 (추천)</div>
+    <div class="mockup-body">
+      <div style="margin-bottom:14px">
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">TODAY</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;background:#fafafa">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600">5월 11일 (일)</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div style="margin-bottom:14px">
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">WEEK</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;background:#fafafa">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600">2026-W19 · 5/10~5/16</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">MONTH</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px;background:#fafafa">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600">2026년 5월</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:0.7rem;color:#6B7280;line-height:1.5">
+        · 좌우 한 번 = 단위(일/주/월)씩 이동<br>
+        · 가장 단순. YAGNI 적합
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">옵션 B — 화살표 + 라벨 탭=피커</div>
+    <div class="mockup-body">
+      <div style="margin-bottom:14px">
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">TODAY</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #60A5FA;border-radius:8px;background:#EFF6FF">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600;border-bottom:1px dashed #60A5FA">📅 5월 11일 (일)</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div style="margin-bottom:14px">
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">WEEK</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #60A5FA;border-radius:8px;background:#EFF6FF">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600;border-bottom:1px dashed #60A5FA">📅 2026-W19 · 5/10~5/16</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.65rem;color:#6B7280;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:4px">MONTH</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid #60A5FA;border-radius:8px;background:#EFF6FF">
+          <span style="font-size:1.1rem">‹</span>
+          <span style="font-size:0.85rem;font-weight:600;border-bottom:1px dashed #60A5FA">📅 2026년 5월</span>
+          <span style="font-size:1.1rem">›</span>
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:0.7rem;color:#6B7280;line-height:1.5">
+        · 화살표 = 한 단위씩<br>
+        · 라벨 탭 = 날짜/주/월 피커 (먼 날짜 점프)<br>
+        · 한 달 전 회고 같은 점프에 유리
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>패턴 선택</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>단순 화살표 (추천)</h3>
+      <p>구현 가장 단순. 일/주/월 단위로 한 번씩 이동. 먼 날짜는 빈도 낮으니 일단 미지원.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>화살표 + 라벨 탭=피커</h3>
+      <p>화살표는 한 단위씩, 라벨 탭하면 피커 모달 열림. 회고 작성 시 먼 과거 점프에 유리.</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:18px">※ Today 탭의 기존 가로 스크롤 selector(61일짜리)는 별도로 다음 화면에서 처리합니다 (유지/제거/축소).</p>

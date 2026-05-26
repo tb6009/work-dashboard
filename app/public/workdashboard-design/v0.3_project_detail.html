@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Project #061 LifeOS (v0.3)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+  body { background: var(--gray-100); padding: 0; }
+
+  /* ── Top Nav (same as v0.2) ──────────────────────────── */
+  .topbar {
+    background: var(--white);
+    border-bottom: var(--border-1);
+    position: sticky; top: 0; z-index: 30;
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: var(--sp-4) var(--sp-8);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo {
+    width: 28px; height: 28px;
+    background: var(--black); color: var(--white);
+    display: grid; place-items: center;
+    font-size: var(--text-xs); font-weight: 700;
+  }
+  .brand-text { line-height: 1.2; }
+  .brand-name { font-size: var(--text-sm); font-weight: 700; color: var(--black); }
+  .brand-sub  { font-size: var(--text-2xs); color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 2px; }
+
+  .nav { display: flex; gap: 2px; }
+  .nav a {
+    padding: 6px 14px;
+    font-size: var(--text-sm); font-weight: 500;
+    color: var(--gray-500); text-decoration: none;
+  }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+
+  .build-info { font-size: var(--text-xs); color: var(--gray-400); text-align: right; }
+
+  /* ── Main ─────────────────────────────────────────────── */
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-10) var(--sp-8) var(--sp-16); }
+
+  /* ── Breadcrumb ──────────────────────────────────────── */
+  .crumbs {
+    display: flex; align-items: center; gap: var(--sp-2);
+    font-size: var(--text-xs); color: var(--gray-500);
+    margin-bottom: var(--sp-6);
+  }
+  .crumbs a { color: var(--gray-500); text-decoration: none; }
+  .crumbs a:hover { color: var(--gray-900); }
+  .crumbs .sep { color: var(--gray-300); }
+  .crumbs .here { color: var(--gray-900); font-weight: 600; }
+
+  /* ── Hero (project) ──────────────────────────────────── */
+  .hero {
+    position: relative;
+    background: var(--white);
+    border: var(--border-1);
+    padding: var(--sp-10) var(--sp-10) var(--sp-8) calc(var(--sp-10) + 4px);
+    margin-bottom: var(--sp-10);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--type-color, var(--color-blue));
+  }
+  .hero-eyebrow {
+    font-size: var(--text-xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--sp-3);
+    font-family: var(--font-mono);
+  }
+  .hero-title {
+    font-size: 50px; font-weight: 300;
+    color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1;
+    margin-bottom: var(--sp-3);
+  }
+  .hero-define {
+    font-size: var(--text-base); color: var(--gray-700);
+    line-height: var(--leading-relaxed);
+    max-width: 720px;
+    margin-bottom: var(--sp-5);
+  }
+  .hero-meta {
+    display: flex; align-items: center; gap: var(--sp-3);
+    flex-wrap: wrap;
+  }
+  .type-chip {
+    display: inline-flex; align-items: center;
+    font-size: var(--text-2xs); font-weight: 700;
+    letter-spacing: var(--tracking-wide); text-transform: uppercase;
+    padding: 4px 10px;
+    color: var(--white);
+    background: var(--type-color, var(--color-blue));
+  }
+  .hero-divider { width: 1px; height: 14px; background: var(--gray-300); }
+  .hero-created {
+    font-size: var(--text-xs); color: var(--gray-500);
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-created strong { color: var(--gray-900); font-weight: 600; }
+
+  /* ── KPI Grid ────────────────────────────────────────── */
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; border: var(--border-1); background: var(--gray-200);
+    margin-bottom: var(--sp-10);
+  }
+  .kpi { background: var(--white); padding: var(--sp-5) var(--sp-6); }
+  .kpi-label {
+    font-size: var(--text-2xs); font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+    margin-bottom: var(--sp-3);
+  }
+  .kpi-value {
+    font-size: var(--text-4xl); font-weight: 700; color: var(--black);
+    line-height: 1; font-variant-numeric: tabular-nums;
+    letter-spacing: var(--tracking-tight);
+  }
+  .kpi-meta {
+    font-size: var(--text-xs); color: var(--gray-500);
+    margin-top: var(--sp-3); font-variant-numeric: tabular-nums;
+  }
+
+  /* ── NEXT box ────────────────────────────────────────── */
+  .next-box {
+    background: var(--black); color: var(--white);
+    padding: var(--sp-8) var(--sp-10);
+    margin-bottom: var(--sp-12);
+    display: grid; grid-template-columns: 120px 1fr;
+    gap: var(--sp-8);
+    align-items: center;
+  }
+  .next-label {
+    font-size: var(--text-2xl); font-weight: 700;
+    letter-spacing: var(--tracking-wider);
+    color: var(--white);
+  }
+  .next-action {
+    font-size: var(--text-xl); font-weight: 400;
+    line-height: var(--leading-tight);
+    color: var(--white);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  /* ── Section ─────────────────────────────────────────── */
+  .section { margin-bottom: var(--sp-12); }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-5);
+  }
+  .section-title {
+    font-size: var(--text-xl); font-weight: 700;
+    color: var(--black); letter-spacing: var(--tracking-tight);
+  }
+  .section-meta { font-size: var(--text-xs); color: var(--gray-400); }
+
+  /* ── Chart card ──────────────────────────────────────── */
+  .chart-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-6);
+  }
+  .chart-card-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-4);
+  }
+  .chart-card-title { font-size: var(--text-base); font-weight: 600; color: var(--gray-900); }
+  .chart-card-sub   { font-size: var(--text-xs); color: var(--gray-400); }
+  .chart-area { width: 100%; height: 260px; }
+
+  /* ── Vertical timeline (decisions) ───────────────────── */
+  .vtimeline {
+    position: relative;
+    padding-left: var(--sp-8);
+  }
+  .vtimeline::before {
+    content: '';
+    position: absolute;
+    left: 5px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: var(--gray-200);
+  }
+  .vt-item {
+    position: relative;
+    padding-bottom: var(--sp-6);
+  }
+  .vt-item:last-child { padding-bottom: 0; }
+  .vt-dot {
+    position: absolute;
+    left: calc(var(--sp-8) * -1 + 0px);
+    top: 6px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--gray-700);
+    box-shadow: 0 0 0 4px var(--gray-100);
+  }
+  .vt-dot.milestone { background: var(--black); width: 13px; height: 13px; top: 5px; }
+  .vt-card {
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-4) var(--sp-5);
+  }
+  .vt-card.milestone { border-color: var(--black); }
+  .vt-row {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: var(--sp-2);
+    gap: var(--sp-4);
+  }
+  .vt-date {
+    font-size: var(--text-xs); color: var(--gray-500);
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .vt-tag {
+    font-size: var(--text-2xs); font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+  }
+  .vt-tag.ms { color: var(--black); }
+  .vt-title {
+    font-size: var(--text-base); font-weight: 700;
+    color: var(--gray-900); letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--sp-2);
+  }
+  .vt-desc {
+    font-size: var(--text-sm); color: var(--gray-500);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* ── Deliverables table ──────────────────────────────── */
+  .deliv-table {
+    width: 100%;
+    border: var(--border-1);
+    background: var(--white);
+    border-collapse: collapse;
+  }
+  .deliv-table thead th {
+    text-align: left;
+    font-size: var(--text-2xs); font-weight: 600;
+    color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: var(--tracking-wide);
+    padding: var(--sp-3) var(--sp-5);
+    border-bottom: var(--border-1);
+    background: var(--gray-50);
+  }
+  .deliv-table tbody td {
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: 1px solid var(--gray-100);
+    font-size: var(--text-sm);
+    color: var(--gray-700);
+    vertical-align: middle;
+  }
+  .deliv-table tbody tr:last-child td { border-bottom: none; }
+  .deliv-table tbody tr:hover { background: var(--gray-50); }
+  .deliv-path {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--gray-900); font-weight: 500;
+  }
+  .deliv-desc { color: var(--gray-700); }
+  .deliv-tag {
+    display: inline-block;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: var(--tracking-wide);
+    padding: 2px 6px;
+    text-transform: uppercase;
+    margin-left: var(--sp-2);
+  }
+  .deliv-tag.new { background: var(--black); color: var(--white); }
+  .deliv-tag.mod { background: var(--gray-200); color: var(--gray-700); }
+  .deliv-date {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .deliv-foot {
+    font-size: var(--text-xs); color: var(--gray-500);
+    margin-top: var(--sp-3); text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .deliv-foot strong { color: var(--gray-900); font-weight: 700; }
+
+  /* ── Related projects ────────────────────────────────── */
+  .related-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
+  .related-card {
+    position: relative;
+    background: var(--white); border: var(--border-1);
+    padding: var(--sp-4) var(--sp-5) var(--sp-4) calc(var(--sp-5) + 4px);
+    text-decoration: none; color: inherit;
+    transition: border-color .12s;
+  }
+  .related-card:hover { border-color: var(--gray-700); }
+  .related-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--type-color, var(--gray-300));
+  }
+  .related-head {
+    display: flex; align-items: center; gap: var(--sp-2);
+    margin-bottom: var(--sp-1);
+  }
+  .related-id {
+    font-size: var(--text-xs); font-family: var(--font-mono);
+    color: var(--gray-400); font-weight: 500;
+  }
+  .related-name {
+    font-size: var(--text-base); font-weight: 700;
+    color: var(--gray-900); letter-spacing: var(--tracking-tight);
+  }
+  .related-rel {
+    font-size: var(--text-xs); color: var(--gray-500);
+    line-height: var(--leading-relaxed);
+    margin-left: 36px;
+  }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    margin-top: var(--sp-16); padding-top: var(--sp-6);
+    border-top: var(--border-1);
+  }
+  .footer-row {
+    display: flex; justify-content: space-between;
+    font-size: var(--text-xs); color: var(--gray-500);
+  }
+  .footer-row .mono { font-family: var(--font-mono); color: var(--gray-700); }
+  .footer-note {
+    font-size: var(--text-2xs); color: var(--gray-400);
+    margin-top: var(--sp-4);
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">朴</div>
+      <div class="brand-text">
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">CLOUDE_CODE · 27 PROJECTS</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">현재</a>
+      <a href="#">주간</a>
+      <a href="#">월간</a>
+      <a href="#">연간</a>
+      <a class="active" href="#">프로젝트</a>
+    </nav>
+    <div class="build-info">
+      Build · 2026-05-05 14:00<br>
+      <span style="color:var(--gray-300)">Next · 2026-05-11 09:00 (Mon)</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Breadcrumb -->
+  <div class="crumbs">
+    <a href="#">프로젝트</a>
+    <span class="sep">/</span>
+    <a href="#">PRODUCT</a>
+    <span class="sep">/</span>
+    <span class="here">#061 LifeOS</span>
+  </div>
+
+  <!-- ───────── Project Hero ───────── -->
+  <section class="hero" style="--type-color: var(--color-blue);">
+    <div class="hero-eyebrow">PROJECT · #061</div>
+    <h1 class="hero-title">LifeOS</h1>
+    <p class="hero-define">개인 라이프 관리 웹앱 (Next.js 16 + Supabase + ChatGPT API)</p>
+    <div class="hero-meta">
+      <span class="type-chip">PRODUCT</span>
+      <span class="chip chip-new">NEW · ACTIVE</span>
+      <span class="hero-divider"></span>
+      <span class="hero-created">CREATED · <strong>2026-05-02</strong> (3일 전)</span>
+    </div>
+  </section>
+
+  <!-- ───────── KPI ───────── -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">총 변경 파일</div>
+      <div class="kpi-value num">50</div>
+      <div class="kpi-meta">tsx · ts · sql · md</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">활동 주차</div>
+      <div class="kpi-value num">1</div>
+      <div class="kpi-meta">W18 (현재)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">결정</div>
+      <div class="kpi-value num">3</div>
+      <div class="kpi-meta">배포 · 캐릭터통합 · API전환</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Contribution</div>
+      <div class="kpi-value num">35<span style="font-size:24px;font-weight:500;color:var(--gray-500);margin-left:2px;">%</span></div>
+      <div class="kpi-meta">이번 주 기준 · W18</div>
+    </div>
+  </div>
+
+  <!-- ───────── NEXT ───────── -->
+  <div class="next-box">
+    <div class="next-label">NEXT</div>
+    <div class="next-action">Recommendation DB 저장 → 주간/월간 퍼포먼스 대시보드</div>
+  </div>
+
+  <!-- ───────── Weekly Contribution Chart ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">주간 Contribution</h2>
+      <div class="section-meta">% of week's total file changes · W14 ~ W18</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <div class="chart-card-title">주간 비중 추이</div>
+        <div class="chart-card-sub">W18 = warm-900 (current)</div>
+      </div>
+      <div id="chart-weekly" class="chart-area"></div>
+    </div>
+  </section>
+
+  <!-- ───────── Decision History (vertical timeline) ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">의사결정 히스토리</h2>
+      <div class="section-meta">4건 · 시간순</div>
+    </div>
+    <div class="vtimeline">
+
+      <article class="vt-item">
+        <span class="vt-dot milestone"></span>
+        <div class="vt-card milestone">
+          <div class="vt-row">
+            <span class="vt-date">2026-05-02 (토)</span>
+            <span class="vt-tag ms">DEPLOY · MILESTONE</span>
+          </div>
+          <h3 class="vt-title">Vercel 배포</h3>
+          <p class="vt-desc">1일 만에 MVP→배포 완료. <span style="font-family:var(--font-mono);color:var(--gray-700);">life-os-7wj2.vercel.app</span></p>
+        </div>
+      </article>
+
+      <article class="vt-item">
+        <span class="vt-dot"></span>
+        <div class="vt-card">
+          <div class="vt-row">
+            <span class="vt-date">2026-05-02 (토)</span>
+            <span class="vt-tag">INFRA</span>
+          </div>
+          <h3 class="vt-title">Claude API → ChatGPT API 전환</h3>
+          <p class="vt-desc">크레딧 문제로 gpt-4o-mini 채택. 비용 안정성과 속도 우선.</p>
+        </div>
+      </article>
+
+      <article class="vt-item">
+        <span class="vt-dot"></span>
+        <div class="vt-card">
+          <div class="vt-row">
+            <span class="vt-date">2026-05-03 (일)</span>
+            <span class="vt-tag">PRODUCT</span>
+          </div>
+          <h3 class="vt-title">하루 캐릭터 통합</h3>
+          <p class="vt-desc">모미 + 마음 → 단일 비서로 통합. 사용자 인지 부담 감소, 페르소나 일관성 강화.</p>
+        </div>
+      </article>
+
+      <article class="vt-item">
+        <span class="vt-dot"></span>
+        <div class="vt-card">
+          <div class="vt-row">
+            <span class="vt-date">2026-05-03 (일)</span>
+            <span class="vt-tag">DATA</span>
+          </div>
+          <h3 class="vt-title">Daily Insight DB 동적화</h3>
+          <p class="vt-desc">하드코딩 제거 → DB 기반 실시간. 매일 자동 갱신되는 추천 인사이트.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ───────── Deliverables ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">산출물 (이번 주)</h2>
+      <div class="section-meta">8 files · 2026-05-03</div>
+    </div>
+    <table class="deliv-table">
+      <thead>
+        <tr>
+          <th style="width:40%;">Path</th>
+          <th>Description</th>
+          <th style="width:120px; text-align:right;">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="deliv-path">src/app/haru/page.tsx</span></td>
+          <td class="deliv-desc">하루 대화방<span class="deliv-tag new">NEW</span></td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+        <tr>
+          <td><span class="deliv-path">src/app/diary/page.tsx</span></td>
+          <td class="deliv-desc">기록 페이지<span class="deliv-tag mod">MAJOR</span></td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+        <tr>
+          <td><span class="deliv-path">src/app/settings/page.tsx</span></td>
+          <td class="deliv-desc">설정 페이지<span class="deliv-tag new">NEW</span></td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+        <tr>
+          <td><span class="deliv-path">src/components/BottomNav.tsx</span></td>
+          <td class="deliv-desc">4탭 네비게이션<span class="deliv-tag new">NEW</span></td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+        <tr>
+          <td><span class="deliv-path">src/components/briefing/DynamicRecommend.tsx</span></td>
+          <td class="deliv-desc">동적 추천 카드<span class="deliv-tag new">NEW</span></td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+        <tr>
+          <td><span class="deliv-path">src/lib/ai/prompts.ts</span></td>
+          <td class="deliv-desc">하루 시스템 프롬프트</td>
+          <td class="deliv-date" style="text-align:right;">2026-05-03</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="deliv-foot">상위 6건 표시 · 이번 주 총 <strong class="num">8</strong> files</div>
+  </section>
+
+  <!-- ───────── Related Projects ───────── -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">관련 프로젝트</h2>
+      <div class="section-meta">데이터·페르소나 공유</div>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="#" style="--type-color: var(--color-blue);">
+        <div class="related-head">
+          <span class="related-id">#062</span>
+          <span class="related-name">논문리더</span>
+        </div>
+        <div class="related-rel">Supabase 인스턴스 공유 · Work 앱 v0.1 데이터모델 호환</div>
+      </a>
+      <a class="related-card" href="#" style="--type-color: var(--color-slate);">
+        <div class="related-head">
+          <span class="related-id">#00</span>
+          <span class="related-name">personal</span>
+        </div>
+        <div class="related-rel">모미 / 마음 페르소나 정의 참조 · 단방향 read-only</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-row">
+      <div>
+        <div style="margin-bottom:4px;">Data sources</div>
+        <div class="mono">docs/logs/*.md · 061_LifeOS/PROJECT.md · git log · file mtime</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="margin-bottom:4px;">Build · 2026-05-05 14:00 KST</div>
+        <div>Next refresh · 2026-05-11 09:00 (Mon)</div>
+      </div>
+    </div>
+    <div class="footer-note">
+      Personal data (00_personal/data, reports/daily~monthly) excluded by allowlist filter.
+      Foundation: design/foundation/tokens.css (062_논문리더 v0.2 derived).
+    </div>
+  </footer>
+
+</main>
+
+<script>
+const PALETTE = {
+  black: '#000000', g900: '#1a1a1a', g700: '#404040',
+  g500: '#737373', g400: '#a3a3a3', g300: '#d4d4d4',
+  g200: '#e5e5e5', g100: '#f5f5f5',
+  warm500: '#8c7765',
+  warm700: '#5c4a3c',
+  warm900: '#2d231b',
+  warm100: '#ede7e0',
+};
+
+/* Weekly contribution — bars only for weeks where project existed.
+   W14~W17 = 0 (project didn't exist), W18 = 35 (current, warm-900). */
+const weeklyChart = echarts.init(document.getElementById('chart-weekly'));
+weeklyChart.setOption({
+  grid: { top: 28, right: 16, bottom: 40, left: 40 },
+  xAxis: {
+    type: 'category',
+    data: ['W14','W15','W16','W17','W18'],
+    axisLine: { lineStyle: { color: PALETTE.g300 } },
+    axisTick: { show: false },
+    axisLabel: {
+      color: PALETTE.g500, fontSize: 11, fontFamily: 'Inter',
+      fontWeight: 500
+    }
+  },
+  yAxis: {
+    type: 'value',
+    max: 50,
+    splitLine: { lineStyle: { color: PALETTE.g100 } },
+    axisLabel: {
+      color: PALETTE.g400, fontSize: 10, fontFamily: 'Inter',
+      formatter: '{value}%'
+    }
+  },
+  tooltip: {
+    trigger: 'axis',
+    backgroundColor: PALETTE.warm900,
+    borderWidth: 0,
+    textStyle: { color: '#fff', fontSize: 12, fontFamily: 'Inter' },
+    formatter: (params) => {
+      const p = params[0];
+      if (p.value === 0) return `${p.name}<br/>프로젝트 시작 전`;
+      return `${p.name}<br/>${p.value}% contribution`;
+    }
+  },
+  series: [{
+    type: 'bar',
+    data: [
+      { value: 0, itemStyle: { color: PALETTE.g200 } },
+      { value: 0, itemStyle: { color: PALETTE.g200 } },
+      { value: 0, itemStyle: { color: PALETTE.g200 } },
+      { value: 0, itemStyle: { color: PALETTE.g200 } },
+      { value: 35, itemStyle: { color: PALETTE.warm900 } }
+    ],
+    barWidth: 44,
+    itemStyle: { borderRadius: [1, 1, 0, 0] },
+    label: {
+      show: true, position: 'top',
+      color: PALETTE.warm700, fontSize: 11, fontWeight: 600, fontFamily: 'Inter',
+      formatter: (p) => p.value > 0 ? p.value + '%' : ''
+    }
+  }]
+});
+
+window.addEventListener('resize', () => { weeklyChart.resize(); });
+</script>
+
+</body>
+</html>

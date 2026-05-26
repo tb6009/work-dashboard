@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>design2-ui-architecture</title>
+<style>
+  :root {
+    --warm-50:#faf9f7; --gray-200:#e5e5e5; --gray-400:#a3a3a3;
+    --gray-500:#737373; --gray-700:#404040; --gray-900:#171717; --black:#000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;background:var(--warm-50);color:var(--gray-900);padding:56px 24px 96px;line-height:1.65}
+  .container{max-width:880px;margin:0 auto}
+  h1{font-size:34px;font-weight:300;letter-spacing:-0.02em;margin-bottom:24px}
+  h2{font-size:22px;font-weight:700;margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gray-200)}
+  h3{font-size:15px;font-weight:700;margin:22px 0 10px;color:var(--gray-700)}
+  p{font-size:14.5px;color:var(--gray-700);margin-bottom:10px}
+  ul{margin:6px 0 14px 20px} li{font-size:14px;color:var(--gray-700);margin-bottom:3px}
+  hr{border:0;border-top:1px solid var(--gray-200);margin:28px 0}
+  blockquote{border-left:3px solid var(--gray-400);padding-left:14px;font-size:13.5px;color:var(--gray-500);font-style:italic;margin:10px 0}
+  code{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px}
+  pre{background:var(--gray-900);color:#f5f5f5;padding:14px;overflow-x:auto;margin:10px 0;font-size:12.5px}
+  pre code{background:none;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th,td{border:1px solid var(--gray-200);padding:7px 11px;text-align:left;vertical-align:top}
+  th{background:rgba(0,0,0,0.03);font-weight:700}
+  a{color:var(--gray-900);text-decoration:underline;text-underline-offset:2px}
+  a:hover{color:var(--black)}
+  strong{font-weight:700;color:var(--gray-900)}
+  .nav{font-family:ui-monospace,'SF Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:32px}
+  .nav a{color:var(--gray-500);text-decoration:none} .nav a:hover{color:var(--black)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="nav"><a href="./index.html">← LIFEOS DESIGN HISTORY</a></div>
+<h1>Life OS design2 — UI 아키텍처 & 디자인 기록</h1>
+
+<blockquote>2026-05-03 ~ 05-04 | design2의 전체 UI 구조, 화면별 구성, 데이터 흐름 기록</blockquote>
+
+<hr>
+
+<h2>1. 전체 네비게이션 구조</h2>
+
+<pre><code>
+┌─────────────────────────────────────────┐
+│                Life OS                   │
+├──────┬──────┬──────┬───────────────────┤
+│  홈  │ 하루 │ 기록 │       설정        │
+│      │      │      │                   │
+│ Home │ Haru │Diary │    Settings       │
+└──────┴──────┴──────┴───────────────────┘
+</code></pre>
+
+<p>하단 4탭 고정. 각 탭은 독립 페이지 (<code>/</code>, <code>/haru</code>, <code>/diary</code>, <code>/settings</code>).</p>
+
+<hr>
+
+<h2>2. 홈 탭 (Briefing)</h2>
+
+<h3>화면 구성 (위에서 아래)</h3>
+
+<pre><code>
+┌─────────────────────────────┐
+│ 18°                        │ ← 날씨 헤더 (하늘 그라디언트)
+│ 맑음  최저12°/최고22°       │
+├─────────────────────────────┤
+│ SAT, MAY 03                │
+│ Good Morning               │ ← 시간대별 자동 변경
+│ 진 집사가 준비한 브리핑입니다 │
+├─────────────────────────────┤
+│ 맑음18° │ 몸 수면5.7h │ 마음 │ ← Daily Insight (30분 갱신)
+│                             │
+│ │ 수면이 부족해요, 오늘      │ ← 맥락 요약 (건강+일정+대화 기반)
+│ │ 아고라 수업이 있어요...    │
+├─────────────────────────────┤
+│ TODAY                       │
+│ 일요일 — 1건               │ ← 폰트 1.26rem 볼드
+│ 08:30-17:30 아고라02        │
+├─────────────────────────────┤
+│ ROUTINE                🔥 2/4│ ← 매일 리셋, 연속 일수 표시
+│ ☑ 아침 스트레칭        3일째 │
+│ ☐ 물 8잔             잊지않음│
+│ ☑ 감사 일기           5일째 │
+│ ☐ 30분 운동          잊지않음│
+├─────────────────────────────┤
+│ TOMORROW                    │
+│ 월요일 — 2건               │
+│ 교무회의, 취업전담 회의      │
+├─────────────────────────────┤
+│ DAY AFTER                   │
+│ 화요일 — 어린이날           │
+├─────────────────────────────┤
+│ YESTERDAY                   │
+│ 아고라01 (취소선)           │
+├─────────────────────────────┤
+│ RECOMMENDATION         3/5  │ ← 1시간 갱신, 홈 탭 복귀 시 즉시
+│                             │
+│ 수면이 부족해요, 오늘 수업이 │ ← 맥락 설명 (하루 대화 기반)
+│ 있어요. 이런 부분을 챙겨보세요│
+│                             │
+│ ☑ 수분 보충                │ ← 체크 가능
+│ ☐ 짧은 스트레칭             │
+│ ☑ 호흡 연습                │
+├─────────────────────────────┤
+│ TODO                        │
+│ [할 일 추가...]       [추가]│
+│ ○ 질적연구 과제              │
+│ ● 수업 마무리 (취소선)       │
+└─────────────────────────────┘
+</code></pre>
+
+<h3>데이터 소스</h3>
+
+<table><thead><tr><th>영역</th><th>소스</th><th>갱신</th></tr></thead><tbody>
+<tr><td>날씨</td><td>mockWeatherByTime (추후 API)</td><td>시간대별</td></tr>
+<tr><td>Daily Insight</td><td>health_logs + journal_entries + schedules</td><td>30분</td></tr>
+<tr><td>Schedule</td><td>schedules (Supabase)</td><td>페이지 로드</td></tr>
+<tr><td>Routine</td><td>routines + routine_logs</td><td>클릭 즉시</td></tr>
+<tr><td>Recommendation</td><td>chat_messages + health + schedules</td><td>1시간 + 탭 복귀</td></tr>
+<tr><td>Todo</td><td>todos (Supabase)</td><td>클릭 즉시</td></tr>
+</tbody></table>
+
+<hr>
+
+<h2>3. 하루 탭 (Assistant)</h2>
+
+<h3>화면 구성</h3>
+
+<pre><code>
+┌─────────────────────────────┐ ← 상단 고정 (fixed)
+│ 하루                        │
+│ 당신의 개인 비서             │
+│ [수면5.7h,컨디션3/5] [기쁨] │ ← 상태 태그
+├─────────────────────────────┤
+│                             │
+│ 하루: 안녕하세요! 오늘       │ ← 마크다운 렌더링 (**볼드**)
+│       몸 상태는 어떠세요?    │
+│                             │
+│            오늘 좀 피곤해 :나│
+│                             │
+│ 하루: 피곤하시구나... 어젯밤 │ ← MI 공감 대화 스타일
+│       잘 주무셨어요?         │
+│                             │
+│ 하루: 이런 방법이 있어요:    │
+│   ☐ 수분 보충               │ ← 체크박스 (액션 감지 시)
+│   ☐ 짧은 스트레칭            │
+│   ☑ 호흡 연습               │
+│   [Rec 추가] [Todo 추가]    │ ← 체크된 것만 저장
+│                             │
+├─────────────────────────────┤
+│ [메시지 입력...]         🔵 │ ← 모바일: Enter=줄바꿈
+└─────────────────────────────┘
+</code></pre>
+
+<h3>하루 기능</h3>
+
+<table><thead><tr><th>기능</th><th>작동 방식</th></tr></thead><tbody>
+<tr><td>건강 기록</td><td>"7시간 잤어" → 자동 DB 저장</td></tr>
+<tr><td>감정 기록</td><td>"막막해" → 자동 DB 저장</td></tr>
+<tr><td>루틴 관리</td><td>"명상 루틴 추가해줘" → routines 테이블</td></tr>
+<tr><td>API 확인</td><td>"API 확인" → 연결 상태 표시</td></tr>
+<tr><td>도움말</td><td>"뭐 할 수 있어?" → 기능 안내</td></tr>
+<tr><td>Rec/Todo</td><td>체크박스 → 선택 항목만 저장</td></tr>
+</tbody></table>
+
+<h3>MI 공감 대화 원칙</h3>
+
+<pre><code>
+❌ 바로 리스트 → ✅ 먼저 공감 대화
+❌ "다음 포인트를 고려하세요" → ✅ "어떤 부분이 고민이세요?"
+❌ 한번에 5개 나열 → ✅ "정리해드릴까요?" 후 동의 시 제공
+</code></pre>
+
+<hr>
+
+<h2>4. 기록 탭 (Diary)</h2>
+
+<h3>서브 탭 구조</h3>
+
+<pre><code>
+[ Today ]  [ Week ]  [ Month ]
+─────────────────────────────
+</code></pre>
+
+<h3>Today</h3>
+
+<pre><code>
+┌─────────────────────────────┐
+│ Diary                 TODAY │
+│         May 2026            │
+│   ← 30 [1] 2  3  4  5 →   │ ← 스크롤 피커 (scroll-snap)
+├─────────────────────────────┤
+│ SCHEDULE                    │
+│ 오늘 5/3 (일요일)           │ ← 오늘만 표시
+│ 08:30-17:30 아고라02        │
+├─────────────────────────────┤
+│ ROUTINE                     │
+│ ☑ 아침 스트레칭     3일째   │
+│ ☐ 물 8잔                   │
+│                             │
+│ 🔥 아침 스트레칭 — 3일째    │ ← 연속 기록 요약
+│    하고 계십니다            │
+│ 물 8잔 — 잊지 않으셨죠?    │
+├─────────────────────────────┤
+│ EMOTION                     │
+│ [기쁨][평온][설렘]...[외로움]│ ← 10종 선택
+├─────────────────────────────┤
+│ HEALTH                      │
+│ 수면 [4]h [36]m       [OK] │
+│ 컨디션 [1][2][3][④][5]     │
+│ 운동 [조깅 30분]     [기록] │
+├─────────────────────────────┤
+│ MEMO                        │
+│ [자유 메모 입력...]         │
+├─────────────────────────────┤
+│ DAILY REVIEW                │
+│ 감사한 것 [_____]          │
+│ 완료/미완 [_____]          │
+│ 내일 하고싶은 것 [_____]    │
+│ 나에게 한마디 [_____]       │
+├─────────────────────────────┤
+│ 하루와의 대화               │
+│ 하루 — 8건의 대화           │
+│ • 출판에 대해 이야기함 —    │ ← 주제별 인과관계 요약
+│   접근성과 실용성이 핵심    │
+│ • 수면에 대해 이야기함 —    │
+│   컨디션 관리법 논의        │
+├─────────────────────────────┤
+│           [저장]            │
+└─────────────────────────────┘
+</code></pre>
+
+<h3>Week</h3>
+
+<pre><code>
+┌─────────────────────────────┐
+│ [72%]        [65%]         │ ← 달성률 카드
+│ Recommendation  Todo        │
+├─────────────────────────────┤
+│ SLEEP                       │
+│ █ █ ▄ █ █ ▂ █             │ ← 7일 바 차트 (블루/그레이)
+│ 일 월 화 수 목 금 토        │
+├─────────────────────────────┤
+│ EMOTION                     │
+│ [평온] [기쁨] [피곤]        │
+├─────────────────────────────┤
+│ 이번 주 요약                │
+│ 평균 수면 6.5h · 컨디션 3.8 │
+├─────────────────────────────┤
+│ DAILY DETAILS               │
+│ ┌ 토 — 수면4.6h 컨디션4/5  │
+│ └ 일 — 수면5.7h 컨디션3/5  │
+├─────────────────────────────┤
+│ WEEKLY REPORT               │ ← 자동 문장 생성
+│ "이번 주는 7일 중 5일을      │
+│  기록하셨어요. 수면은 평균   │
+│  5.7시간으로..."            │
+├─────────────────────────────┤
+│ WEEKLY RETROSPECTIVE        │ ← 직접 입력
+│ 다음 주 다짐 [_____]       │
+│ 한줄 소감   [_____]        │
+│           [회고 저장]       │
+└─────────────────────────────┘
+</code></pre>
+
+<h3>Month</h3>
+
+<pre><code>
+┌─────────────────────────────┐
+│       ← 2026년 5월 →       │
+│ 일 월 화 수 목 금 토        │
+│     1  2  3  4  5  6       │ ← 히트맵 (기록=블루)
+│  7  8  9 10 11 12 13       │
+│ ...                        │
+├─────────────────────────────┤
+│ SLEEP — 31 Days             │
+│ ▁▃█▅▂█▃█...               │ ← 마우스오버 시 데이터 표시
+├─────────────────────────────┤
+│ CONDITION — 31 Days         │
+├─────────────────────────────┤
+│ RECOMMENDATION — 31 Days    │ ← opacity로 달성률 표현
+├─────────────────────────────┤
+│ ROUTINE                     │
+│ 스트레칭  20/30 ████████░░ │ ← 프로그래스 바
+│ 물 8잔   15/30 █████░░░░░ │
+├─────────────────────────────┤
+│ EMOTION                     │
+│ [평온(8)] [피곤(5)] [기쁨(4)]│
+├─────────────────────────────┤
+│ 5월 요약                    │ ← 4섹션 (건강/감정/루틴/활동)
+├─────────────────────────────┤
+│ MONTHLY REPORT              │ ← 자동 문장 생성
+│ "5월은 30일 중 20일을        │
+│  기록하셨어요..."           │
+├─────────────────────────────┤
+│ MONTHLY RETROSPECTIVE       │ ← 직접 입력
+│ 기억에 남는 순간 [_____]    │
+│ 다음 달 목표    [_____]    │
+│ 나에게 한 마디  [_____]    │
+│           [회고 저장]       │
+└─────────────────────────────┘
+</code></pre>
+
+<hr>
+
+<h2>5. 설정 탭 (Settings)</h2>
+
+<pre><code>
+┌─────────────────────────────┐
+│ Settings                    │
+├─────────────────────────────┤
+│ CHATGPT API KEY             │
+│ ● 연결됨                    │
+│ [sk-...               ]    │
+│ [저장]                      │
+├─────────────────────────────┤
+│ ABOUT                       │
+│ Life OS design2             │
+│ 진 · 모미 · 마음 → 하루    │
+└─────────────────────────────┘
+</code></pre>
+
+<hr>
+
+<h2>6. 디자인 시스템</h2>
+
+<h3>컬러</h3>
+
+<table><thead><tr><th>용도</th><th>색상</th><th>코드</th></tr></thead><tbody>
+<tr><td>강조/제목</td><td>Black</td><td>#000000</td></tr>
+<tr><td>본문</td><td>Dark Gray</td><td>#333333</td></tr>
+<tr><td>보조</td><td>Gray</td><td>#808080</td></tr>
+<tr><td>라벨</td><td>Light Gray</td><td>#B3B3B3</td></tr>
+<tr><td>구분선</td><td>Border</td><td>#E6E6E6</td></tr>
+<tr><td>배경</td><td>White</td><td>#FFFFFF</td></tr>
+<tr><td>액센트 (시간 기반)</td><td>Blue</td><td>#60A5FA</td></tr>
+<tr><td>목표 달성</td><td>Blue</td><td>#60A5FA</td></tr>
+<tr><td>목표 미달성</td><td>Light Gray</td><td>#E6E6E6</td></tr>
+</tbody></table>
+
+<h3>타이포그래피</h3>
+
+<table><thead><tr><th>용도</th><th>폰트</th><th>크기</th></tr></thead><tbody>
+<tr><td>영문 제목</td><td>Outfit 700</td><td>1.3~1.7rem</td></tr>
+<tr><td>한글 본문</td><td>Noto Sans KR 400</td><td>0.82~0.84rem</td></tr>
+<tr><td>라벨</td><td>Outfit 500 uppercase</td><td>0.6rem</td></tr>
+<tr><td>날씨 온도</td><td>Outfit 300</td><td>5.4rem</td></tr>
+<tr><td>입력</td><td>system (16px)</td><td>iOS 확대 방지</td></tr>
+</tbody></table>
+
+<h3>인터랙션 원칙</h3>
+
+<ul>
+<li>체크: 원형 토글 (빈 원 → 블루 채움 + 체크마크)</li>
+<li>저장: 버튼 클릭 → "저장 완료" (블루) 2초 표시</li>
+<li>날짜: scroll-snap 피커, 가운데 날짜=검은 배경+흰 텍스트</li>
+<li>차트: 마우스오버/터치 시 데이터 값 표시</li>
+<li>모바일 Enter: 줄바꿈 (전송은 파란 버튼만)</li>
+</ul>
+
+<hr>
+
+<h2>7. 데이터 아키텍처</h2>
+
+<h3>Supabase 테이블 (12개)</h3>
+
+<pre><code>
+health_logs        → 수면, 운동, 컨디션
+journal_entries    → 감정, 메모, Daily Review 4질문, 감사
+chat_messages      → 하루 대화 기록 (날짜별)
+todos              → 할 일 (완료 시간 기록)
+schedules          → 캘린더 일정
+daily_insights     → 일일 인사이트
+recommendation_logs → 추천 달성률
+routines           → 루틴 항목 (추가/삭제)
+routine_logs       → 루틴 일별 완료 기록
+weekly_reviews     → 주간 회고
+monthly_reviews    → 월간 회고
+users              → 사용자 설정
+</code></pre>
+
+<h3>데이터 흐름</h3>
+
+<pre><code>
+사용자 → 하루 대화 → chat_messages + health_logs + journal_entries + routines
+              ↓
+         홈 탭 복귀 → Daily Insight (30분) + Recommendation (1시간) 갱신
+              ↓
+         기록 탭 → 날짜별 열람 + 주간/월간 리포트 자동 생성
+              ↓
+         회고 입력 → weekly_reviews / monthly_reviews 저장
+</code></pre>
+
+<hr>
+
+<p>*작성일: 2026-05-04*</p>
+<p>*프로젝트: Life OS design2*</p>
+<p>*블로그 게시용 원고*</p>
+
+</div>
+</body>
+</html>

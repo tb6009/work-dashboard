@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Life OS — Todo / DONE 소요일 시안 (2026-05-25)</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5; padding: 28px 20px 60px; color: #111;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1500px; margin: 0 auto; }
+  .page-title { font-family: 'Outfit'; font-size: 1.4rem; font-weight: 700; text-align: center; margin-bottom: 6px; }
+  .page-sub { text-align: center; font-size: 0.84rem; color: #6B7280; margin-bottom: 28px; max-width: 760px; margin-left: auto; margin-right: auto; }
+
+  .phones-row { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
+  .phone-wrap { width: 100%; max-width: 380px; }
+  .phone-label { text-align: center; font-family: 'Outfit'; font-size: 0.72rem; color: #111; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; font-weight: 700; }
+  .phone-sub { text-align: center; font-size: 0.74rem; color: #9CA3AF; margin-bottom: 16px; }
+
+  .phone { background: #000; border-radius: 40px; padding: 8px; }
+  .screen { background: #fff; border-radius: 32px; padding: 22px 22px 30px; min-height: 1180px; }
+
+  /* 섹션 라벨 */
+  .label {
+    font-family: 'Outfit'; font-size: 0.7rem; font-weight: 600;
+    color: #111; text-transform: uppercase; letter-spacing: 0.1em;
+    margin-top: 24px; margin-bottom: 8px;
+  }
+  .label-muted { color: #6B7280; font-weight: 500; }
+
+  /* TodoList — 미완료 */
+  .todo-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; min-height: 36px; }
+  .todo-circle { margin-top: 3px; width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid #2563eb; }
+  .todo-circle.filled { background: #2563eb; border-color: #2563eb; display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.6rem; }
+  .todo-text { flex: 1; font-size: 0.86rem; color: #111; line-height: 1.4; }
+  .todo-text.done { color: #9CA3AF; text-decoration: line-through; }
+  .todo-meta { font-size: 0.65rem; color: #9CA3AF; display: block; margin-top: 2px; text-decoration: none; }
+
+  /* TodoList 완료 구분선 */
+  .todo-divider { margin-top: 8px; padding-top: 8px; border-top: 1px solid #e6e6e6; }
+
+  /* DONE 섹션 */
+  .done-header { font-family: 'Outfit'; font-size: 0.72rem; font-weight: 700; color: #111; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 28px; margin-bottom: 10px; }
+  .done-nav { display: grid; grid-template-columns: 24px 1fr 24px; align-items: center; margin-bottom: 4px; }
+  .done-nav button { background: none; border: none; font-size: 1.1rem; color: #111; cursor: pointer; font-weight: 300; }
+  .done-nav .title { text-align: center; font-size: 0.92rem; font-weight: 700; }
+  .done-nav .range { text-align: center; font-size: 0.72rem; color: #9CA3AF; margin-bottom: 16px; }
+
+  /* 통계 3열 */
+  .stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 18px; padding: 4px 0; }
+  .stat-label { font-family: 'Outfit'; font-size: 0.62rem; color: #9CA3AF; margin-bottom: 2px; }
+  .stat-num { font-family: 'Outfit'; font-size: 1.55rem; font-weight: 700; color: #111; line-height: 1.1; }
+  .stat-sub { font-size: 0.62rem; color: #9CA3AF; margin-top: 2px; }
+  .stat-sub b { color: #111; font-weight: 500; }
+
+  /* 소팅 토글 */
+  .sort-chips { display: flex; gap: 6px; margin-bottom: 14px; }
+  .chip {
+    font-family: 'Outfit'; font-size: 0.66rem; font-weight: 500;
+    padding: 4px 10px; border-radius: 12px;
+    background: #f3f4f6; color: #6B7280; cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .chip.active { background: #111; color: #fff; border-color: #111; }
+
+  /* 날짜 그룹 헤더 */
+  .day-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-top: 1px solid #f0f0f0; margin-top: 12px; margin-bottom: 4px; }
+  .day-date { font-size: 0.9rem; font-weight: 600; }
+  .day-dow { color: #9CA3AF; font-weight: 400; font-size: 0.82rem; margin-left: 4px; }
+  .today-pill { display: inline-block; background: #111; color: #fff; font-family: 'Outfit'; font-size: 0.55rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; letter-spacing: 0.08em; margin-top: 3px; }
+  .day-count { font-size: 0.7rem; color: #9CA3AF; padding-top: 3px; }
+
+  /* 완료 항목 row */
+  .done-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; }
+  .done-check { width: 18px; height: 18px; background: rgba(0,0,0,0.5); color: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.7rem; margin-top: 1px; }
+  .done-body { flex: 1; min-width: 0; }
+  .done-text { font-size: 0.84rem; color: #111; line-height: 1.4; }
+  .done-tag { display: inline-block; font-family: 'Outfit'; font-size: 0.62rem; font-weight: 500; padding: 1px 7px; border-radius: 10px; margin: 0 2px; vertical-align: 1px; }
+  .tag-pink { background: #fce7f3; color: #be185d; }
+  .tag-amber { background: #fef3c7; color: #92400e; }
+  .tag-violet { background: #ede9fe; color: #6d28d9; }
+
+  /* 메타 라인 — 시작→완료 + 소요일 */
+  .done-meta {
+    font-family: 'Outfit'; font-size: 0.66rem; color: #9CA3AF;
+    margin-top: 3px; display: flex; align-items: center; gap: 6px;
+  }
+  .meta-arrow { color: #d1d5db; }
+  .meta-duration {
+    font-weight: 500; color: #111;
+    padding: 0 6px; border-radius: 3px;
+    background: #f3f4f6;
+  }
+  .meta-duration.long { background: #fef2f2; color: #b91c1c; font-weight: 600; }
+  .meta-duration.medium { background: #fffbeb; color: #b45309; }
+  .meta-time { font-family: 'Outfit'; font-size: 0.7rem; color: #9CA3AF; flex-shrink: 0; padding-top: 1px; }
+
+  /* annotations */
+  .anno {
+    background: #fff7ed; border-left: 3px solid #fb923c;
+    padding: 10px 12px; margin-top: 12px;
+    font-size: 0.72rem; color: #7c2d12; line-height: 1.5;
+    border-radius: 4px;
+  }
+  .anno-good {
+    background: #ecfdf5; border-left-color: #10b981; color: #064e3b;
+  }
+  .anno b { font-weight: 600; }
+
+  /* 캡션 */
+  h2.section { font-family: 'Outfit'; font-size: 1rem; font-weight: 700; margin: 40px 0 14px; text-align: center; }
+  .legend { display: flex; justify-content: center; gap: 18px; font-size: 0.72rem; color: #6B7280; margin-bottom: 22px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { display: inline-block; padding: 2px 8px; border-radius: 3px; font-family: 'Outfit'; font-size: 0.66rem; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="page-title">Todo · DONE 개편 시안</div>
+  <div class="page-sub">
+    홈 상단 TodoList = 오늘만 / 홈 하단 DONE = 시작→완료 + 소요일 회고 뷰. v0.9.6 기준 2026-05-25.
+  </div>
+
+  <!-- ────── BEFORE / AFTER ────── -->
+  <h2 class="section">A · 현재 (BEFORE) vs 개편 (AFTER)</h2>
+  <div class="legend">
+    <div class="legend-item">소요일 색:</div>
+    <div class="legend-item"><span class="legend-swatch" style="background:#f3f4f6;color:#111;">당일~6일</span> 보통</div>
+    <div class="legend-item"><span class="legend-swatch" style="background:#fffbeb;color:#b45309;">7~13일</span> 주의</div>
+    <div class="legend-item"><span class="legend-swatch" style="background:#fef2f2;color:#b91c1c;">14일+</span> 회고 시그널</div>
+  </div>
+
+  <div class="phones-row">
+
+    <!-- ─── BEFORE ─── -->
+    <div class="phone-wrap">
+      <div class="phone-label">BEFORE</div>
+      <div class="phone-sub">완료가 무한 누적 · 기간 정보 없음</div>
+      <div class="phone"><div class="screen">
+
+        <div class="label">Today's Todo</div>
+
+        <!-- 미완료 -->
+        <div class="todo-row">
+          <span class="todo-circle"></span>
+          <div class="todo-text">학생 데이터 분석 보고서 마무리</div>
+        </div>
+        <div class="todo-row">
+          <span class="todo-circle"></span>
+          <div class="todo-text">Vercel 배포 검토</div>
+        </div>
+
+        <!-- 완료 (누적 11개) -->
+        <div class="todo-divider">
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">060 OAuth 디버깅<span class="todo-meta">14:32 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">월요일 수업 자료 정리<span class="todo-meta">11:08 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">학생 면담 일정 잡기<span class="todo-meta">5/24 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">Once 경쟁사 리스트<span class="todo-meta">5/23 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">코칭 슬라이드 v3<span class="todo-meta">5/22 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">병원 예약<span class="todo-meta">5/21 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">…7개 더<span class="todo-meta">5월 초까지 누적</span></div>
+          </div>
+        </div>
+
+        <div class="done-header">Done</div>
+        <div class="done-nav">
+          <button>‹</button>
+          <div class="title">5월 4번째 주</div>
+          <button style="color:#D1D5DB;">›</button>
+        </div>
+        <div class="done-nav range">5/24 (일) ~ 5/30 (토) · W22</div>
+
+        <div class="stats">
+          <div>
+            <div class="stat-label">이번 주 완료</div>
+            <div class="stat-num">7</div>
+            <div class="stat-sub"><b>+2</b> vs 지난 주</div>
+          </div>
+          <div>
+            <div class="stat-label">5월 누적</div>
+            <div class="stat-num">31</div>
+            <div class="stat-sub">전월 <b>26</b></div>
+          </div>
+          <div>
+            <div class="stat-label">평균 완료/일</div>
+            <div class="stat-num">1.0</div>
+            <div class="stat-sub">월 <b>1.2</b></div>
+          </div>
+        </div>
+
+        <div class="day-header">
+          <div>
+            <div class="day-date">5/25 <span class="day-dow">일</span></div>
+            <span class="today-pill">TODAY</span>
+          </div>
+          <div class="day-count">2건</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body"><div class="done-text">060 OAuth 디버깅</div></div>
+          <div class="meta-time">14:32</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body"><div class="done-text">월요일 수업 자료 정리</div></div>
+          <div class="meta-time">11:08</div>
+        </div>
+
+        <div class="day-header">
+          <div><div class="day-date">5/24 <span class="day-dow">토</span></div></div>
+          <div class="day-count">1건</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body"><div class="done-text">학생 면담 일정 잡기</div></div>
+          <div class="meta-time">17:50</div>
+        </div>
+
+        <div class="anno"><b>문제:</b> 완료가 다 쌓여 스크롤 길어짐. "언제 시작했는지 / 며칠 걸렸는지" 없음 → 회고 신호 없음.</div>
+      </div></div>
+    </div>
+
+    <!-- ─── AFTER ─── -->
+    <div class="phone-wrap">
+      <div class="phone-label">AFTER</div>
+      <div class="phone-sub">오늘만 / 시작→완료 · 소요일 · 회고 시그널</div>
+      <div class="phone"><div class="screen">
+
+        <div class="label">Today's Todo</div>
+
+        <!-- 미완료 -->
+        <div class="todo-row">
+          <span class="todo-circle"></span>
+          <div class="todo-text">학생 데이터 분석 보고서 마무리</div>
+        </div>
+        <div class="todo-row">
+          <span class="todo-circle"></span>
+          <div class="todo-text">Vercel 배포 검토</div>
+        </div>
+
+        <!-- 완료 — 오늘만 (2건) -->
+        <div class="todo-divider">
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">060 OAuth 디버깅<span class="todo-meta">14:32 완료</span></div>
+          </div>
+          <div class="todo-row">
+            <span class="todo-circle filled">✓</span>
+            <div class="todo-text done">월요일 수업 자료 정리<span class="todo-meta">11:08 완료</span></div>
+          </div>
+        </div>
+
+        <div class="done-header">Done</div>
+        <div class="done-nav">
+          <button>‹</button>
+          <div class="title">5월 4번째 주</div>
+          <button style="color:#D1D5DB;">›</button>
+        </div>
+        <div class="done-nav range">5/24 (일) ~ 5/30 (토) · W22</div>
+
+        <!-- 통계 3열 + 평균 소요일 -->
+        <div class="stats">
+          <div>
+            <div class="stat-label">이번 주 완료</div>
+            <div class="stat-num">7</div>
+            <div class="stat-sub"><b>+2</b> vs 지난 주</div>
+          </div>
+          <div>
+            <div class="stat-label">평균 소요</div>
+            <div class="stat-num">2.1<span style="font-size:0.7rem;color:#9CA3AF;font-weight:500;"> 일</span></div>
+            <div class="stat-sub">지난 주 <b>3.4일</b></div>
+          </div>
+          <div>
+            <div class="stat-label">5월 누적</div>
+            <div class="stat-num">31</div>
+            <div class="stat-sub">전월 <b>26</b></div>
+          </div>
+        </div>
+
+        <!-- 소팅 토글 -->
+        <div class="sort-chips">
+          <div class="chip active">날짜순 ▾</div>
+          <div class="chip">기간순 ▾</div>
+        </div>
+
+        <div class="day-header">
+          <div>
+            <div class="day-date">5/25 <span class="day-dow">일</span></div>
+            <span class="today-pill">TODAY</span>
+          </div>
+          <div class="day-count">2건</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">060 OAuth 디버깅</div>
+            <div class="done-meta">
+              5/25 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">당일</span>
+            </div>
+          </div>
+          <div class="meta-time">14:32</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">월요일 수업 자료 정리</div>
+            <div class="done-meta">
+              5/23 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">3일</span>
+            </div>
+          </div>
+          <div class="meta-time">11:08</div>
+        </div>
+
+        <div class="day-header">
+          <div><div class="day-date">5/24 <span class="day-dow">토</span></div></div>
+          <div class="day-count">1건</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">학생 면담 일정 잡기 <span class="done-tag tag-violet">#수업</span></div>
+            <div class="done-meta">
+              5/22 <span class="meta-arrow">→</span> 5/24
+              <span class="meta-duration">2일</span>
+            </div>
+          </div>
+          <div class="meta-time">17:50</div>
+        </div>
+
+        <div class="day-header">
+          <div><div class="day-date">5/23 <span class="day-dow">금</span></div></div>
+          <div class="day-count">1건</div>
+        </div>
+        <div class="done-row">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">Once 경쟁사 리스트 <span class="done-tag tag-pink">#Once</span></div>
+            <div class="done-meta">
+              5/15 <span class="meta-arrow">→</span> 5/23
+              <span class="meta-duration medium">8일</span>
+            </div>
+          </div>
+          <div class="meta-time">22:14</div>
+        </div>
+
+        <div class="anno anno-good"><b>효과:</b> Todo가 5건 → 2건으로 단축. 모든 완료 항목에 "시작→완료 · 소요일" 메타. 8일은 노란색 = 주의 신호.</div>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- ────── 기간순 소팅 시안 ────── -->
+  <h2 class="section">B · 기간순 소팅 (회고 모드)</h2>
+  <div class="phones-row">
+
+    <div class="phone-wrap">
+      <div class="phone-label">SORTED · 기간순</div>
+      <div class="phone-sub">"어떤 일이 가장 오래 묵혔지?" 한눈에</div>
+      <div class="phone"><div class="screen" style="min-height:780px;">
+
+        <div class="done-header">Done</div>
+        <div class="done-nav">
+          <button>‹</button>
+          <div class="title">5월 4번째 주</div>
+          <button style="color:#D1D5DB;">›</button>
+        </div>
+        <div class="done-nav range">5/24 (일) ~ 5/30 (토) · W22</div>
+
+        <div class="sort-chips">
+          <div class="chip">날짜순 ▾</div>
+          <div class="chip active">기간순 ▾</div>
+        </div>
+
+        <!-- 14일 -->
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">졸업 논문 1차 피드백 반영 <span class="done-tag tag-violet">#수업</span></div>
+            <div class="done-meta">
+              5/10 <span class="meta-arrow">→</span> 5/24
+              <span class="meta-duration long">14일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/24</div>
+        </div>
+
+        <!-- 8일 -->
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">Once 경쟁사 리스트 <span class="done-tag tag-pink">#Once</span></div>
+            <div class="done-meta">
+              5/15 <span class="meta-arrow">→</span> 5/23
+              <span class="meta-duration medium">8일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/23</div>
+        </div>
+
+        <!-- 3일 -->
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">월요일 수업 자료 정리</div>
+            <div class="done-meta">
+              5/23 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">3일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/25</div>
+        </div>
+
+        <!-- 2일 -->
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">학생 면담 일정 잡기 <span class="done-tag tag-violet">#수업</span></div>
+            <div class="done-meta">
+              5/22 <span class="meta-arrow">→</span> 5/24
+              <span class="meta-duration">2일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/24</div>
+        </div>
+
+        <!-- 당일 항목들 -->
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">060 OAuth 디버깅</div>
+            <div class="done-meta">
+              5/25 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">당일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/25</div>
+        </div>
+        <div class="done-row" style="border-top:1px solid #f0f0f0; padding-top:12px;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">병원 예약 전화</div>
+            <div class="done-meta">
+              5/21 <span class="meta-arrow">→</span> 5/21
+              <span class="meta-duration">당일</span>
+            </div>
+          </div>
+          <div class="meta-time">5/21</div>
+        </div>
+
+        <div class="anno anno-good"><b>인사이트:</b> 14일·8일짜리 두 건이 위에 떠올라 "긴 작업"의 패턴이 보임. 회고 글감 자연 발생.</div>
+      </div></div>
+    </div>
+
+    <!-- 메타 라인 디테일 확대 -->
+    <div class="phone-wrap" style="max-width:480px;">
+      <div class="phone-label">메타 라인 디테일</div>
+      <div class="phone-sub">소요일 라벨 색상 규칙 (확대)</div>
+      <div style="background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+
+        <div class="done-row" style="padding:12px 0;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">060 OAuth 디버깅</div>
+            <div class="done-meta" style="font-size:0.72rem;">
+              5/25 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">당일</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="done-row" style="padding:12px 0; border-top:1px solid #f0f0f0;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">월요일 수업 자료 정리</div>
+            <div class="done-meta" style="font-size:0.72rem;">
+              5/23 <span class="meta-arrow">→</span> 5/25
+              <span class="meta-duration">3일</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="done-row" style="padding:12px 0; border-top:1px solid #f0f0f0;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">Once 경쟁사 리스트</div>
+            <div class="done-meta" style="font-size:0.72rem;">
+              5/15 <span class="meta-arrow">→</span> 5/23
+              <span class="meta-duration medium">8일</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="done-row" style="padding:12px 0; border-top:1px solid #f0f0f0;">
+          <div class="done-check">✓</div>
+          <div class="done-body">
+            <div class="done-text">졸업 논문 1차 피드백 반영</div>
+            <div class="done-meta" style="font-size:0.72rem;">
+              5/10 <span class="meta-arrow">→</span> 5/24
+              <span class="meta-duration long">14일</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:28px; padding-top:18px; border-top:1px solid #e5e7eb;">
+          <div class="label" style="margin-top:0;">규칙</div>
+          <ul style="font-size:0.78rem; color:#374151; line-height:1.7; padding-left:18px;">
+            <li><b>당일</b> — 같은 날 생성·완료. 회색 배지.</li>
+            <li><b>1~6일</b> — 보통. 회색 배지에 숫자.</li>
+            <li><b>7~13일</b> — 주의(amber). "왜 길어졌지?" 신호.</li>
+            <li><b>14일+</b> — 회고(red). 굵게 + 빨강. 주간 리포트에 자동 picking.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="label" style="margin-top:0;">데이터 출처</div>
+          <div style="font-size:0.78rem; color:#6B7280; line-height:1.6;">
+            DB 스키마 변경 <b>없음</b>. <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:0.74rem;">todos.created_at</code>과 <code style="background:#f3f4f6;padding:1px 5px;border-radius:3px;font-size:0.74rem;">todos.completed_at</code>의 일 차이로 계산.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ────── 결정 필요 항목 ────── -->
+  <h2 class="section">C · 결정해주실 항목</h2>
+  <div style="max-width:760px; margin:0 auto; font-size:0.86rem; line-height:1.7; color:#374151;">
+    <ol style="padding-left:22px;">
+      <li><b>당일 표기</b> — 그대로 "당일" 표시 vs 생략 (대부분 당일이면 노이즈) ?</li>
+      <li><b>임계값</b> — 노란(주의) 7일+, 빨강(회고) 14일+ 가 적절한지 (3일/7일도 가능)</li>
+      <li><b>통계 카드 슬롯</b> — "평균 완료/일" 자리에 "평균 소요일"을 대체할지, 4열로 늘릴지</li>
+      <li><b>소팅 위치</b> — 토글을 통계 아래 칩으로 (시안) vs 네비 옆 작은 아이콘</li>
+      <li><b>회고 자동 picking</b> — 14일+ 항목을 주간 리포트에 자동 인용 (지금은 별도 작업 — 향후 v0.10에서)</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>

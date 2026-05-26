@@ -1,0 +1,51 @@
+<h2>IA 마무리 — BottomNav 탭 순서</h2>
+<p class="subtitle">friends 제거 결정. 마지막으로 4탭 순서를 짚고 다이어리로 넘어갈게요</p>
+
+<div class="mockup">
+  <div class="mockup-header">현재 vs 주인님 발화 순서</div>
+  <div class="mockup-body">
+    <div style="font-weight:600;font-size:0.85rem;margin-bottom:6px;color:#374151">현재 코드 (BottomNav.tsx)</div>
+    <div style="display:flex;gap:6px;margin-bottom:4px">
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;font-weight:600">홈</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;background:#dbeafe;font-weight:600">하루</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;background:#fef3c7;font-weight:600">기록</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;font-weight:600">설정</div>
+    </div>
+    <div style="font-size:0.7rem;color:#6B7280;margin-bottom:18px">→ 대화(하루)가 가운데. 대화 빈도가 높다는 가정.</div>
+
+    <div style="font-weight:600;font-size:0.85rem;margin-bottom:6px;color:#374151">주인님이 1단계에서 언급한 순서</div>
+    <div style="display:flex;gap:6px;margin-bottom:4px">
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;font-weight:600">홈</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;background:#fef3c7;font-weight:600">기록</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;background:#dbeafe;font-weight:600">하루</div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:10px;font-weight:600">설정</div>
+    </div>
+    <div style="font-size:0.7rem;color:#6B7280">→ 일과 흐름: 브리핑 보기 → 기록 → 대화 → 설정. 그 자체로 일관된 모델.</div>
+  </div>
+</div>
+
+<h3>탭 순서를 어떻게 할까요?</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>현재 유지: 홈 / 하루 / 기록 / 설정</h3>
+      <p>대화를 자주 쓴다면 가운데가 손가락 닿기 좋음. 변경 비용 없음.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>주인님 발화대로: 홈 / 기록 / 하루 / 설정 (추천)</h3>
+      <p>일상 흐름(보기→기록→대화→설정)에 맞고, 무심결 발화도 그 순서로 나옴 = 멘탈 모델 일치.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>스킵 (현재 유지)</h3>
+      <p>탭 순서는 본 작업의 핵심이 아님. 그대로 두고 다이어리로 넘어가자.</p>
+    </div>
+  </div>
+</div>

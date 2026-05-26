@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>stage9-worktree-2026-05-25</title>
+<style>
+  :root {
+    --warm-50:#faf9f7; --gray-200:#e5e5e5; --gray-400:#a3a3a3;
+    --gray-500:#737373; --gray-700:#404040; --gray-900:#171717; --black:#000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;background:var(--warm-50);color:var(--gray-900);padding:56px 24px 96px;line-height:1.65}
+  .container{max-width:880px;margin:0 auto}
+  h1{font-size:34px;font-weight:300;letter-spacing:-0.02em;margin-bottom:24px}
+  h2{font-size:22px;font-weight:700;margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gray-200)}
+  h3{font-size:15px;font-weight:700;margin:22px 0 10px;color:var(--gray-700)}
+  p{font-size:14.5px;color:var(--gray-700);margin-bottom:10px}
+  ul{margin:6px 0 14px 20px} li{font-size:14px;color:var(--gray-700);margin-bottom:3px}
+  hr{border:0;border-top:1px solid var(--gray-200);margin:28px 0}
+  blockquote{border-left:3px solid var(--gray-400);padding-left:14px;font-size:13.5px;color:var(--gray-500);font-style:italic;margin:10px 0}
+  code{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px}
+  pre{background:var(--gray-900);color:#f5f5f5;padding:14px;overflow-x:auto;margin:10px 0;font-size:12.5px}
+  pre code{background:none;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th,td{border:1px solid var(--gray-200);padding:7px 11px;text-align:left;vertical-align:top}
+  th{background:rgba(0,0,0,0.03);font-weight:700}
+  a{color:var(--gray-900);text-decoration:underline;text-underline-offset:2px}
+  a:hover{color:var(--black)}
+  strong{font-weight:700;color:var(--gray-900)}
+  .nav{font-family:ui-monospace,'SF Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:32px}
+  .nav a{color:var(--gray-500);text-decoration:none} .nav a:hover{color:var(--black)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="nav"><a href="./index.html">← LIFEOS DESIGN HISTORY</a></div>
+<h1>stage-9 워크트리 아카이브 (2026-05-25)</h1>
+
+<h2>배경</h2>
+
+<p><code>app-stage9/</code> 워크트리(브랜치 <code>stage-9/v0.9-release</code>)가 폴더 이동(<code>061_LifeOS/</code> → <code>06_Personal_Project/061_LifeOS/</code>)으로 git 포인터가 깨진 상태였음.</p>
+
+<p>상태 점검 결과:</p>
+<ul>
+<li><strong>브랜치 커밋</strong>: 모두 main에 머지됨 (<code>git cherry main stage-9/v0.9-release</code> 비어있음, merge-base = stage-9 tip = <code>d36a576</code>)</li>
+<li><strong>워크트리 폴더</strong>: 커밋되지 않은 새 파일 다수 (테스트 인프라 + 컴포넌트 분리 작업 중단된 흔적)</li>
+<li>main은 그 사이 v0.9.4 ~ v0.9.6으로 진전 (Work/Thesis 탭, 활동 추적기 등)</li>
+</ul>
+
+<p>판단: 워크트리 폐기. 단, 복구 가능하도록 아카이브 보존.</p>
+
+<hr>
+
+<h2>보존 자산</h2>
+
+<h3>1. Git 태그</h3>
+<ul>
+<li><code>archive/stage-9-tip</code> → <code>d36a576</code> (stage-9/v0.9-release tip)</li>
+<p>  - 브랜치 ref가 삭제되어도 커밋은 보존됨</p>
+<p>  - <code>git checkout archive/stage-9-tip</code> 또는 <code>git log archive/stage-9-tip</code>으로 접근</p>
+</ul>
+
+<h3>2. 미커밋 파일 tarball</h3>
+<p><code>docs/archive/stage9-uncommitted-2026-05-25.tar.gz</code> (22KB)</p>
+
+<p>포함 파일 (워크트리에만 존재했고 main에 없던 새 파일):</p>
+
+<p><strong>테스트 인프라</strong></p>
+<ul>
+<li><code>vitest.config.mts</code></li>
+<li><code>src/test-setup.ts</code></li>
+<li><code>package.json</code> (devDeps에 vitest, @testing-library/*, jsdom, @vitejs/plugin-react, vite-tsconfig-paths, @tanstack/react-query-devtools 추가됨)</li>
+</ul>
+
+<p><strong>컴포넌트 분리 (chat)</strong></p>
+<ul>
+<li><code>src/components/chat/ChatInput.tsx</code></li>
+<li><code>src/components/chat/ChatMessage.tsx</code></li>
+</ul>
+
+<p><strong>컴포넌트 분리 (diary, 19개)</strong></p>
+<ul>
+<li><code>src/components/diary/CalendarGrid.tsx</code></li>
+<li><code>src/components/diary/DateSelector.tsx</code></li>
+<li><code>src/components/diary/HealthInput.tsx</code></li>
+<li><code>src/components/diary/MemoSection.tsx</code></li>
+<li><code>src/components/diary/MonthAIReport.tsx</code></li>
+<li><code>src/components/diary/MonthHealthCharts.tsx</code></li>
+<li><code>src/components/diary/MonthInsights.tsx</code></li>
+<li><code>src/components/diary/MonthReview.tsx</code></li>
+<li><code>src/components/diary/RoutineSection.tsx</code></li>
+<li><code>src/components/diary/ScheduleSection.tsx</code></li>
+<li><code>src/components/diary/TimeNav.tsx</code></li>
+<li><code>src/components/diary/WeekAIReport.tsx</code></li>
+<li><code>src/components/diary/WeekChart.tsx</code></li>
+<li><code>src/components/diary/WeekDailyList.tsx</code></li>
+<li><code>src/components/diary/WeekEmotionBar.tsx</code></li>
+<li><code>src/components/diary/WeekHealthCharts.tsx</code></li>
+<li><code>src/components/diary/WeekReview.tsx</code></li>
+<li><code>src/components/diary/WeekStatCards.tsx</code></li>
+</ul>
+
+<p><strong>UI 공통</strong></p>
+<ul>
+<li><code>src/components/ui/ReviewModal.tsx</code></li>
+<li><code>src/components/ui/Toast.tsx</code></li>
+</ul>
+
+<p><strong>Hooks</strong></p>
+<ul>
+<li><code>src/hooks/useAutoSave.ts</code></li>
+<li><code>src/hooks/useChatMessages.ts</code></li>
+<li><code>src/hooks/useReviewStatus.ts</code></li>
+<li><code>src/hooks/useToast.tsx</code></li>
+</ul>
+
+<p><strong>Lib</strong></p>
+<ul>
+<li><code>src/lib/chat/keywords.ts</code></li>
+<li><code>src/lib/time/range.ts</code></li>
+<li><code>src/lib/markdown.ts</code></li>
+<li><code>src/lib/react-query.ts</code></li>
+<li><code>src/lib/supabase/queries.ts</code></li>
+</ul>
+
+<p><strong>API 가드</strong></p>
+<ul>
+<li><code>src/app/api/debug/_guard.ts</code> (debug 라우트를 production에서 401 차단)</li>
+</ul>
+
+<p><strong>테스트 파일 (27개)</strong></p>
+<ul>
+<li><code>src/components/__tests__/BottomNav.test.tsx</code></li>
+<li><code>src/components/ui/__tests__/{ReviewModal,Toast}.test.tsx</code></li>
+<li><code>src/components/chat/__tests__/{ChatInput,ChatMessage}.test.tsx</code></li>
+<li><code>src/components/diary/__tests__/*.test.tsx</code> (10개)</li>
+<li><code>src/hooks/__tests__/*.test.tsx</code> (4개)</li>
+<li><code>src/lib/__tests__/{markdown,sanity}.test.ts</code></li>
+<li><code>src/lib/chat/__tests__/keywords.test.ts</code></li>
+<li><code>src/lib/time/__tests__/range.test.ts</code></li>
+<li><code>src/lib/supabase/__tests__/queries.test.tsx</code></li>
+<li><code>src/app/api/debug/__tests__/guard.test.ts</code></li>
+<li><code>src/app/settings/__tests__/page.test.tsx</code></li>
+</ul>
+
+<hr>
+
+<h2>복구 방법</h2>
+
+<h3>케이스 A — 테스트 인프라만 다시 도입하고 싶을 때</h3>
+
+<pre><code>
+cd /Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app
+mkdir -p /tmp/stage9-restore
+tar xzf docs/archive/stage9-uncommitted-2026-05-25.tar.gz -C /tmp/stage9-restore
+# 필요한 파일만 골라 복사
+cp /tmp/stage9-restore/vitest.config.mts ./
+cp /tmp/stage9-restore/src/test-setup.ts src/
+# package.json은 devDeps만 머지 (덮어쓰면 main 변경분 손실)
+</code></pre>
+
+<h3>케이스 B — diary 컴포넌트 분리 작업을 다시 시도할 때</h3>
+
+<p>main의 <code>src/app/diary/*Tab.tsx</code>는 이미 분리된 컴포넌트를 import하지 않는 통합 구조임. stage-9의 분리본을 그대로 가져와도 main의 Work/Thesis 탭 추가분과 호환 안 됨 → <strong>참고용 패턴</strong>으로만 활용 권장.</p>
+
+<h3>케이스 C — 전체 브랜치 상태 그대로 재현</h3>
+
+<pre><code>
+cd /Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app
+git worktree add ../stage9-restore archive/stage-9-tip
+cd ../stage9-restore
+tar xzf ../app/docs/archive/stage9-uncommitted-2026-05-25.tar.gz
+# 이제 stage-9 워크트리 상태 그대로 복원됨
+</code></pre>
+
+<hr>
+
+<h2>폐기 사유 요약</h2>
+
+<ul>
+<li>브랜치 커밋은 main에 100% 머지 완료 — 손실 없음</li>
+<li>미커밋 작업은 main이 다른 방향(Work/Thesis 탭 추가, 통합 구조)으로 진전한 상태에서 그대로 합치기 어려움</li>
+<li>가치 있는 부분(테스트 인프라, _guard.ts 패턴)은 tarball에 보존</li>
+<li>깨진 워크트리를 방치하면 <code>git worktree list</code>에 <code>prunable</code> 잔여물로 남아 헷갈림</li>
+</ul>
+
+</div>
+</body>
+</html>

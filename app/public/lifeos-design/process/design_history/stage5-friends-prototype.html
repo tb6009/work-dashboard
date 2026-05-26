@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Life OS — Friends Tab Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { width: 100%; max-width: 420px; }
+
+  .page-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .page-sub {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #808080;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .phone-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .phone {
+    background: #000;
+    border-radius: 40px;
+    padding: 10px;
+    margin-bottom: 24px;
+  }
+  .screen {
+    background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+  }
+
+  /* Header */
+  .header {
+    padding: 18px 24px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.02em;
+  }
+
+  /* Status bar */
+  .status-bar {
+    padding: 0 24px 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .status-pill {
+    font-size: 0.62rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+  .status-pill.health {
+    color: #059669;
+    background: rgba(5,150,105,0.08);
+  }
+  .status-pill.emotion {
+    color: #8B5CF6;
+    background: rgba(139,92,246,0.08);
+  }
+  .status-pill.empty {
+    color: #b3b3b3;
+    background: #fafafa;
+  }
+
+  .divider { height: 1px; background: #e6e6e6; }
+
+  /* Chat area */
+  .chat-area {
+    flex: 1;
+    padding: 16px 24px;
+    overflow-y: auto;
+  }
+
+  .chat-msg {
+    margin-bottom: 14px;
+    display: flex;
+  }
+  .chat-msg.user { justify-content: flex-end; }
+  .chat-msg.assistant { justify-content: flex-start; }
+
+  .chat-bubble {
+    max-width: 82%;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  .chat-bubble.user {
+    background: #f2f2f2;
+    border-radius: 16px 16px 4px 16px;
+  }
+  .chat-bubble.momi {
+    border: 1px solid #e6e6e6;
+    border-radius: 16px 16px 16px 4px;
+  }
+  .chat-bubble.maeum {
+    border: 1px solid #e6e6e6;
+    border-radius: 16px 16px 16px 4px;
+  }
+
+  .chat-name {
+    font-size: 0.62rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .chat-name.momi { color: #059669; }
+  .chat-name.maeum { color: #8B5CF6; }
+
+  /* Input area */
+  .input-area {
+    padding: 8px 24px 12px;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  .input-box {
+    flex: 1;
+    font-size: 14px;
+    color: #b3b3b3;
+    background: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 10px 14px;
+  }
+  .send-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #60A5FA;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  /* Bottom tabs */
+  .tabs {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    padding: 6px 0 4px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+  .tab-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #b3b3b3;
+    display: block;
+  }
+  .tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.48rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tab.active .tab-name { color: #000; }
+  .tab.active .tab-role { color: #60A5FA; }
+  .tab.active { position: relative; }
+  .tab.active::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #60A5FA;
+  }
+
+  .note {
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  .note-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .note-text {
+    font-size: 0.72rem;
+    color: #808080;
+    line-height: 1.6;
+  }
+  .note-text strong { color: #333; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="page-title">Friends</div>
+<div class="page-sub">모미 + 마음이 한 대화방에서 같이 대화합니다<br>몸 관련은 모미가, 마음 관련은 마음이가 자동 응답</div>
+
+<!-- Screen 1: 친구들 대화방 -->
+<div class="phone-label">친구들 탭 — 대화 화면</div>
+<div class="phone">
+  <div class="screen">
+    <div class="header">
+      <div class="header-title">Friends</div>
+    </div>
+
+    <div class="status-bar">
+      <span class="status-pill health">수면 4.6시간, 컨디션 4/5</span>
+      <span class="status-pill emotion">평온</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="chat-area">
+      <!-- 모미 인사 -->
+      <div class="chat-msg assistant">
+        <div class="chat-bubble momi">
+          <span class="chat-name momi">모미</span>
+          (◉ ◡ ◉) 안녕하세요! 오늘 수면 4시간 36분이네요. 좀 부족하셨겠어요.
+        </div>
+      </div>
+
+      <!-- 마음 인사 -->
+      <div class="chat-msg assistant">
+        <div class="chat-bubble maeum">
+          <span class="chat-name maeum">마음</span>
+          【⊡ ◡ ⊡】 오늘 기분은 어떤가요? 수업 전에 한 마디 남겨봐요.
+        </div>
+      </div>
+
+      <!-- 사용자 -->
+      <div class="chat-msg user">
+        <div class="chat-bubble user">오늘 좀 피곤한데 수업 가야해</div>
+      </div>
+
+      <!-- 모미 응답 (몸 관련) -->
+      <div class="chat-msg assistant">
+        <div class="chat-bubble momi">
+          <span class="chat-name momi">모미</span>
+          (◉ _ ◉) 수면이 부족하니 피곤하시죠. 수업 전에 물 한 잔 마시고, 쉬는 시간에 5분 스트레칭 해보세요.
+        </div>
+      </div>
+
+      <!-- 사용자 -->
+      <div class="chat-msg user">
+        <div class="chat-bubble user">요즘 뭔가 막막한 느낌이야</div>
+      </div>
+
+      <!-- 마음 응답 (감정 관련) -->
+      <div class="chat-msg assistant">
+        <div class="chat-bubble maeum">
+          <span class="chat-name maeum">마음</span>
+          【⊡ _ ⊡】 막막하다는 거, 어떤 부분에서 그런 거예요? 수업? 논문? 아니면 전반적인 거?
+        </div>
+      </div>
+
+      <!-- 사용자 -->
+      <div class="chat-msg user">
+        <div class="chat-bubble user">인라인 1시간 타고 왔어!</div>
+      </div>
+
+      <!-- 모미 응답 -->
+      <div class="chat-msg assistant">
+        <div class="chat-bubble momi">
+          <span class="chat-name momi">모미</span>
+          (◉ ◡ ◉)b 인라인 좋죠! 1시간이면 충분한 유산소예요. 운동 기록했습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-box">메시지를 입력하세요...</div>
+      <div class="send-btn"></div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+      <div class="tab active"><span class="tab-name">친구들</span><span class="tab-role">Friends</span></div>
+      <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+      <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Screen 2: 홈 탭 -->
+<div class="phone-label">홈 탭 — 진 브리핑</div>
+<div class="phone">
+  <div class="screen">
+    <div style="padding:16px 24px 0;">
+      <div style="font-family:'Outfit',sans-serif; font-size:0.6rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:0.1em;">Sat, May 02</div>
+      <div style="font-family:'Outfit',sans-serif; font-size:1.4rem; font-weight:700; color:#000; margin-top:2px;">Good Morning</div>
+      <div style="font-size:0.75rem; color:#808080; margin-top:3px;">진 집사가 준비한 오늘의 브리핑입니다</div>
+    </div>
+
+    <div style="padding:12px 24px;">
+      <div class="status-bar" style="padding:0; margin-bottom:10px;">
+        <span class="status-pill" style="color:#808080; background:#f2f2f2;">맑음 18°</span>
+        <span class="status-pill health">수면 4.6시간, 컨디션 4/5</span>
+        <span class="status-pill emotion">평온</span>
+      </div>
+      <div style="font-size:0.82rem; color:#000; border-left:2px solid #60A5FA; padding-left:12px; line-height:1.6;">
+        수면이 부족합니다. 오늘 아고라01 수업 후 일찍 쉬시길 권합니다.
+      </div>
+
+      <div style="font-family:'Outfit',sans-serif; font-size:0.55rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px; margin-bottom:6px;">Today</div>
+      <div style="font-size:0.82rem; color:#000; font-weight:500;">토요일 — 아고라01</div>
+      <div style="font-size:0.75rem; color:#808080;">08:30-17:30</div>
+
+      <div style="font-family:'Outfit',sans-serif; font-size:0.55rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:0.1em; margin-top:14px; margin-bottom:6px;">Tomorrow</div>
+      <div style="font-size:0.78rem; color:#808080;">일요일 — 아고라02 (08:30-17:30)</div>
+
+      <div style="font-family:'Outfit',sans-serif; font-size:0.55rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:0.1em; margin-top:14px; margin-bottom:6px;">Day After</div>
+      <div style="font-size:0.78rem; color:#808080;">월요일 — 교무회의, 취업진담 화상회의</div>
+
+      <div style="font-family:'Outfit',sans-serif; font-size:0.55rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:0.1em; margin-top:14px; margin-bottom:6px;">Todo</div>
+      <div style="font-size:0.78rem; color:#333;">○ 질적연구 과제 데이터 수집 계획</div>
+      <div style="font-size:0.78rem; color:#b3b3b3;">○ 5/20 건강검진 결과 <span style="background:#f2f2f2; padding:1px 4px; border-radius:3px; font-size:0.55rem;">cal</span></div>
+    </div>
+
+    <div style="flex:1;"></div>
+
+    <div class="tabs">
+      <div class="tab active"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+      <div class="tab"><span class="tab-name">친구들</span><span class="tab-role">Friends</span></div>
+      <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+      <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <div class="note-title">구조 요약</div>
+  <div class="note-text">
+    <strong>하단 4탭</strong>: 홈 / 친구들 / 기록 / 설정<br><br>
+    <strong>홈</strong>: 진 브리핑 — 날씨, Daily Insight, Today/Tomorrow/모레, Todo<br><br>
+    <strong>친구들</strong>: 모미+마음 합동 대화방<br>
+    — 상단에 건강/감정 상태 표시<br>
+    — 하나의 대화창에서 둘 다 대화<br>
+    — 몸 관련 → 모미가 초록색 이름으로 응답<br>
+    — 마음 관련 → 마음이 보라색 이름으로 응답<br>
+    — 운동/수면 언급 → 자동 DB 저장<br><br>
+    <strong>기록</strong>: 날짜별 다이어리 (건강, 감정, 일정, 대화 요약)<br><br>
+    <strong>설정</strong>: API 키, 테마 등
+  </div>
+</div>
+
+</div>
+</body>
+</html>

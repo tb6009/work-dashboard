@@ -1,0 +1,148 @@
+<h2>이 수정들로 뭐가 달라지나? — Before / After</h2>
+<p class="subtitle">주인님이 직접 체감하는 변화 / 개발(저)이 작업할 때 변화 / 시스템 성능 변화, 3축으로 정리</p>
+
+<div class="mockup">
+  <div class="mockup-header">한눈에 — 변화의 종류</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.78rem;line-height:1.6">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div style="padding:12px;border-radius:8px;background:#FEF3C7;border:1px solid #fde68a">
+        <div style="font-weight:700;color:#92400e;margin-bottom:4px">👤 주인님 체감</div>
+        <div style="font-size:0.72rem;color:#374151">화면 전환 속도, 자동 저장 알림, 일관된 디자인. 직접 보이는 변화.</div>
+      </div>
+      <div style="padding:12px;border-radius:8px;background:#DBEAFE;border:1px solid #93c5fd">
+        <div style="font-weight:700;color:#1e3a8a;margin-bottom:4px">🧑‍💻 개발 속도</div>
+        <div style="font-size:0.72rem;color:#374151">앞으로 수정·기능 추가가 얼마나 빠르고 안전한가. 보이지 않지만 매번 작동.</div>
+      </div>
+      <div style="padding:12px;border-radius:8px;background:#D1FAE5;border:1px solid #6ee7b7">
+        <div style="font-weight:700;color:#065f46;margin-bottom:4px">⚙ 시스템 성능</div>
+        <div style="font-size:0.72rem;color:#374151">Supabase 호출 수, 빌드 크기, 보안. 비용·속도에 영향.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">항목별 Before → After</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.74rem;line-height:1.55">
+    <table style="width:100%;border-collapse:collapse">
+      <tr>
+        <th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb;width:22%">변경</th>
+        <th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">Before (지금)</th>
+        <th style="text-align:left;padding:6px;border-bottom:1px solid #e5e7eb">After (적용 후)</th>
+        <th style="text-align:center;padding:6px;border-bottom:1px solid #e5e7eb;width:8%">축</th>
+      </tr>
+
+      <tr style="background:#FEF3C7">
+        <td style="padding:6px"><strong>자동 저장 토스트</strong></td>
+        <td style="padding:6px;color:#6B7280">하루에게 "어제 7시간 잤어"라고 하면 → 화면에 아무 반응 없음. 저장됐는지 확신 안 됨.</td>
+        <td style="padding:6px;color:#15803d">화면 상단에 "수면 7시간 저장됨" 알림이 1.5초 떴다 사라짐. 안심.</td>
+        <td style="padding:6px;text-align:center">👤</td>
+      </tr>
+
+      <tr style="background:#FEF3C7">
+        <td style="padding:6px"><strong>설정 문구 갱신</strong></td>
+        <td style="padding:6px;color:#6B7280">"친구들(모미/마음) AI 대화에 사용됩니다" — 실제 친구 페이지는 없어짐</td>
+        <td style="padding:6px;color:#15803d">"하루(어시스턴트) 대화에 사용됩니다" — 현재 구조와 일치</td>
+        <td style="padding:6px;text-align:center">👤</td>
+      </tr>
+
+      <tr style="background:#D1FAE5">
+        <td style="padding:6px"><strong>React Query 도입</strong></td>
+        <td style="padding:6px;color:#6B7280">다이어리 Today→Week→Month 탭 전환할 때마다 같은 데이터(수면·운동·감정)를 Supabase에서 새로 받아옴. 매번 1~2초 로딩.</td>
+        <td style="padding:6px;color:#15803d">이미 본 데이터는 <strong>즉시 표시</strong>. 새 데이터는 백그라운드로 조용히 갱신. 탭 전환이 거의 즉시. Supabase 호출 횟수 ~50% 감소.</td>
+        <td style="padding:6px;text-align:center">👤⚙</td>
+      </tr>
+
+      <tr style="background:#DBEAFE">
+        <td style="padding:6px"><strong>다이어리 3탭 분리</strong></td>
+        <td style="padding:6px;color:#6B7280">TodayTab 621줄, MonthTab 478줄, WeekTab 441줄. "Today 헤더만 바꿔주세요" 같은 작은 요청에도 긴 파일을 다 읽어야 정확하게 수정 가능.</td>
+        <td style="padding:6px;color:#15803d">각 ~120줄로 7개 작은 컴포넌트. "DateSelector 색만 바꿔주세요"가 해당 파일 50줄만 보면 끝. 버그 위험·작업 시간 ↓.</td>
+        <td style="padding:6px;text-align:center">🧑‍💻</td>
+      </tr>
+
+      <tr style="background:#DBEAFE">
+        <td style="padding:6px"><strong>/haru 6개 분리</strong></td>
+        <td style="padding:6px;color:#6B7280">467줄 한 파일에 메시지/키워드/저장/마크다운/렌더/입력 모두 섞임. "감정 키워드 추가"하려면 전체 파일에서 위치 찾아야.</td>
+        <td style="padding:6px;color:#15803d"><code>lib/chat/keywords.ts</code>만 열어서 한 줄 추가. 다른 코드 영향 0.</td>
+        <td style="padding:6px;text-align:center">🧑‍💻</td>
+      </tr>
+
+      <tr style="background:#D1FAE5">
+        <td style="padding:6px"><strong>Dead code 정리</strong></td>
+        <td style="padding:6px;color:#6B7280">friends + Character/Maeum/Momi View 합 ~900줄이 빌드에 포함. 누가 봐도 헷갈림 ("이 페이지 뭐예요?").</td>
+        <td style="padding:6px;color:#15803d">빌드 가벼워짐. 코드베이스 명확. 미래의 다른 작업자(또는 미래의 저)가 헷갈리지 않음.</td>
+        <td style="padding:6px;text-align:center">🧑‍💻⚙</td>
+      </tr>
+
+      <tr style="background:#FEF3C7">
+        <td style="padding:6px"><strong>Tailwind 마이그레이션</strong></td>
+        <td style="padding:6px;color:#6B7280">모든 색·간격이 <code>style={{...}}</code>로 인라인. 폰트 크기 0.7rem을 0.75rem로 일괄 변경하려면 50곳 찾아 바꿔야.</td>
+        <td style="padding:6px;color:#15803d"><code>text-sm</code>처럼 클래스 이름만 바꾸면 됨. 디자인 토큰(시간대별 색 등) 한 곳에서 관리. <em>※ 점진 마이그레이션이라 화면은 동일.</em></td>
+        <td style="padding:6px;text-align:center">🧑‍💻</td>
+      </tr>
+
+      <tr style="background:#D1FAE5">
+        <td style="padding:6px"><strong>debug API 환경 분기</strong></td>
+        <td style="padding:6px;color:#6B7280"><code>/api/debug/headers</code>, <code>/oauth</code>, <code>/route</code> 가 프로덕션 URL에서도 접근 가능. 누군가 URL 알면 헤더·세션 정보 조회 가능.</td>
+        <td style="padding:6px;color:#15803d">프로덕션에서 401 또는 라우트 자체가 빌드에 미포함. 정보 노출 위험 제거.</td>
+        <td style="padding:6px;text-align:center">⚙</td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">우선순위별 요약</div>
+  <div class="mockup-body" style="padding:14px;font-size:0.78rem;line-height:1.6">
+    <div style="margin-bottom:10px">
+      <strong style="color:#DC2626">반드시 (P0)</strong> — 안 하면 앞으로 작업이 점점 느려짐
+      <ul style="margin:4px 0 0 20px;color:#374151">
+        <li>다이어리 3탭 분리 (개발 속도)</li>
+        <li>React Query (사용자 체감 큼)</li>
+      </ul>
+    </div>
+    <div style="margin-bottom:10px">
+      <strong style="color:#D97706">하면 좋음 (P1)</strong> — 미루면 짐만 늘어남
+      <ul style="margin:4px 0 0 20px;color:#374151">
+        <li>/haru 분리 + 토스트 (체감 + 개발 속도)</li>
+        <li>Dead code 정리 (~900줄 사라짐)</li>
+        <li>debug routes 보안</li>
+        <li>설정 문구 갱신</li>
+        <li>Tailwind 점진 마이그레이션</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="color:#16a34a">미루어도 OK (P2)</strong>
+      <ul style="margin:4px 0 0 20px;color:#374151">
+        <li>tsconfig ES2022 (얻는 게 작음)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h3>이대로 진행할까요?</h3>
+
+<div class="options">
+  <div class="option" data-choice="all" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>P0 + P1 모두 채택 (추천)</h3>
+      <p>위 표의 색칠된 항목 전부 spec에 포함. 통합 spec 작성 후 writing-plans로 인계.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="p0only" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>P0만 — 가장 시급한 둘 (다이어리 분리 + React Query)</h3>
+      <p>나머지(/haru 분리, 토스트, dead code, 등)는 다음 라운드로 미룸.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="select" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>골라서 — 터미널에 알려주실래요?</h3>
+      <p>"1,3,5만" 같이 번호로 선택. 그대로 spec 반영.</p>
+    </div>
+  </div>
+</div>

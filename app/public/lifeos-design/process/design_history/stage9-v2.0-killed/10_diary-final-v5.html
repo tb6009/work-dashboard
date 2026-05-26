@@ -1,0 +1,121 @@
+<h2>다이어리 영역 — 통합 정리 (v5: 회고 상태별 색상 시스템)</h2>
+<p class="subtitle">일별 = 초록 도트 / 주별 = 파란 도트 / 월별 = 셀 전체 초록 채움</p>
+
+<div class="mockup">
+  <div class="mockup-header">Today 탭 — 선택일 정중앙 + 일요일 빨강</div>
+  <div class="mockup-body" style="padding:14px">
+    <div style="display:flex;gap:4px;justify-content:center;align-items:center">
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent;opacity:0.55"><div style="font-size:0.6rem;color:#9ca3af">목</div><div style="font-weight:600;color:#333">8</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent;opacity:0.75"><div style="font-size:0.6rem;color:#9ca3af">금</div><div style="font-weight:600;color:#333">9</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">토</div><div style="font-weight:600;color:#333">10</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:#DC2626;color:#fff;box-shadow:0 2px 8px rgba(220,38,38,0.25)"><div style="font-size:0.6rem">일</div><div style="font-weight:700">11</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent"><div style="font-size:0.6rem;color:#9ca3af">월</div><div style="font-weight:600;color:#333">12</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent;opacity:0.75"><div style="font-size:0.6rem;color:#9ca3af">화</div><div style="font-weight:600;color:#333">13</div></div>
+      <div style="width:48px;text-align:center;padding:8px 0;border-radius:8px;background:transparent;opacity:0.55"><div style="font-size:0.6rem;color:#9ca3af">수</div><div style="font-weight:600;color:#333">14</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Week 탭 — 화살표 시간 네비만</div>
+  <div class="mockup-body" style="padding:18px 28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.95rem">
+      <span style="font-size:1.1rem;color:#374151">‹</span>
+      <span style="font-weight:500">2026-W19 · 5/10~5/16</span>
+      <span style="font-size:1.1rem;color:#374151">›</span>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Month 탭 — 회고 상태별 색상 시스템 (3:2 셀)</div>
+  <div class="mockup-body" style="padding:18px 28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.95rem;margin-bottom:14px">
+      <span style="font-size:1.1rem;color:#374151">‹</span>
+      <span style="font-weight:500">2026년 5월</span>
+      <span style="font-size:1.1rem;color:#374151">›</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-size:0.7rem">
+      <div style="text-align:center;padding:4px;color:#DC2626">일</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">월</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">화</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">수</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">목</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">금</div>
+      <div style="text-align:center;padding:4px;color:#9ca3af">토</div>
+
+      <!-- 1주차 (3-9일) — 일요일 회고 대기 + 평일 일부 완료 -->
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>3</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>4</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>5</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>6</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>7</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>8</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>9</div></div>
+
+      <!-- 2주차 (10-16일) — 주간회고 완료(10일=파랑) -->
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>10</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#2563eb"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>11</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>12</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>13</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>14</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>15</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#16a34a"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>16</div></div>
+
+      <!-- 3주차 (17-23일) — 일요일 대기 -->
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>17</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>18</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>19</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>20</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>21</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>22</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>23</div></div>
+
+      <!-- 4주차 (24-30일) — 일요일 대기 -->
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative"><div>24</div><div style="position:absolute;bottom:2px;right:2px;width:6px;height:6px;border-radius:50%;background:#DC2626"></div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>25</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>26</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>27</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>28</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>29</div></div>
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px"><div>30</div></div>
+
+      <!-- 월말 31일(토) — 월간회고 완료: 셀 전체 초록 -->
+      <div style="aspect-ratio:1.5;border:1px solid #f3f4f6;padding:4px;position:relative;background:#16a34a;color:#fff"><div>31</div><div style="position:absolute;bottom:1px;right:2px;font-size:0.5rem;color:#fff;font-weight:700">月</div></div>
+    </div>
+    <div style="margin-top:14px;padding:10px;background:#fafafa;border-radius:8px;font-size:0.72rem;line-height:1.9">
+      <div style="font-weight:600;margin-bottom:6px;color:#374151">범례</div>
+      <div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#DC2626;margin-right:6px;vertical-align:middle"></span>주간회고 <strong>대기</strong> (일요일)</div>
+      <div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#2563eb;margin-right:6px;vertical-align:middle"></span>주간회고 <strong>완료</strong></div>
+      <div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a34a;margin-right:6px;vertical-align:middle"></span>일별 회고(데일리 리뷰) <strong>완료</strong></div>
+      <div><span style="display:inline-block;width:12px;height:8px;background:#16a34a;margin-right:6px;vertical-align:middle"></span>월간회고 <strong>완료</strong> (셀 전체 초록 채움)</div>
+      <div><span style="color:#DC2626;font-weight:700;margin-right:6px">月</span>월말 = 월간회고 작성일</div>
+    </div>
+  </div>
+</div>
+
+<h3>회고 작성 UI 형식 — 마지막 결정</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>모달 (Bottom sheet, 추천)</h3>
+      <p>캘린더 아이콘 탭 → 하단 슬라이드업. 컨텍스트 유지. 저장 시 도트 색상 또는 셀 채움으로 상태 갱신.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>별도 페이지</h3>
+      <p>탭 → <code>/diary/review/2026-W19</code> 새 라우트.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>같은 탭 안 인라인 펼침</h3>
+      <p>Week 탭 기존 회고 영역 재활용.</p>
+    </div>
+  </div>
+</div>

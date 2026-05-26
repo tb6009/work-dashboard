@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-05-12_v2.0_postmortem</title>
+<style>
+  :root {
+    --warm-50:#faf9f7; --gray-200:#e5e5e5; --gray-400:#a3a3a3;
+    --gray-500:#737373; --gray-700:#404040; --gray-900:#171717; --black:#000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;background:var(--warm-50);color:var(--gray-900);padding:56px 24px 96px;line-height:1.65}
+  .container{max-width:880px;margin:0 auto}
+  h1{font-size:34px;font-weight:300;letter-spacing:-0.02em;margin-bottom:24px}
+  h2{font-size:22px;font-weight:700;margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--gray-200)}
+  h3{font-size:15px;font-weight:700;margin:22px 0 10px;color:var(--gray-700)}
+  p{font-size:14.5px;color:var(--gray-700);margin-bottom:10px}
+  ul{margin:6px 0 14px 20px} li{font-size:14px;color:var(--gray-700);margin-bottom:3px}
+  hr{border:0;border-top:1px solid var(--gray-200);margin:28px 0}
+  blockquote{border-left:3px solid var(--gray-400);padding-left:14px;font-size:13.5px;color:var(--gray-500);font-style:italic;margin:10px 0}
+  code{font-family:ui-monospace,'SF Mono',monospace;font-size:12.5px;background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px}
+  pre{background:var(--gray-900);color:#f5f5f5;padding:14px;overflow-x:auto;margin:10px 0;font-size:12.5px}
+  pre code{background:none;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th,td{border:1px solid var(--gray-200);padding:7px 11px;text-align:left;vertical-align:top}
+  th{background:rgba(0,0,0,0.03);font-weight:700}
+  a{color:var(--gray-900);text-decoration:underline;text-underline-offset:2px}
+  a:hover{color:var(--black)}
+  strong{font-weight:700;color:var(--gray-900)}
+  .nav{font-family:ui-monospace,'SF Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-500);margin-bottom:32px}
+  .nav a{color:var(--gray-500);text-decoration:none} .nav a:hover{color:var(--black)}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="nav"><a href="./index.html">← LIFEOS DESIGN HISTORY</a></div>
+<h1>v2.0 배포 부검 리포트 (Postmortem)</h1>
+
+<ul>
+<li><strong>작성일</strong>: 2026-05-12</li>
+<li><strong>분석 대상</strong>: 2026-05-11 ~ 2026-05-12 새벽 진행된 Stage 9 / v2.0 작업</li>
+<li><strong>결과</strong>: 사용자가 폐기 결정 → v0.8.1 (<code>a6f0774</code>, 2026-05-09)로 main 복원</li>
+<li><strong>규모</strong>: 45 commits / 114 files changed / +14,435 / −2,691</li>
+</ul>
+
+<hr>
+
+<h2>1. 한 줄 요약</h2>
+
+<blockquote><strong>사용자가 원한 것</strong>: 디테일·인터랙션 100% 유지 + 새 기능을 layer로 얹기</blockquote>
+<blockquote><strong>실제 진행된 것</strong>: 큰 파일 분리(refactor) + 새 기능 + 일부 디테일 손실</blockquote>
+<blockquote><strong>결과</strong>: 익숙한 UI 디테일·인터랙션이 미세하게 깨지면서 "작동이 안 된다"는 체감 → 폐기</blockquote>
+
+<hr>
+
+<h2>2. v0.8.1 ↔ v2.0 객관 차이</h2>
+
+<table><thead><tr><th>항목</th><th>v0.8.1 (<code>a6f0774</code>, 2026-05-09)</th><th>v2.0 (<code>fba31fb</code>, 2026-05-12)</th></tr></thead><tbody>
+<tr><td>다이어리 Today</td><td>단일 파일 621줄, swipe picker + 일정 3일치 + 루틴 + 헬스(수면·컨디션·커피·운동) + 감정 + Memo + Daily Review 5칸 + Chat topics</td><td>5개 분리 컴포넌트 (DateSelector / ScheduleSection / RoutineSection / HealthInput / MemoSection). 일부 디테일·인터랙션 차이</td></tr>
+<tr><td>다이어리 Week</td><td>단일 441줄, 풀 통계 + 차트 + AI Report + 회고</td><td>6개 컴포넌트 분리 + TimeNav 추가. 차트·통계 복원됐으나 시각·인터랙션 약간 다름</td></tr>
+<tr><td>다이어리 Month</td><td>단일 478줄, 3개 차트 + 호버/터치 인터랙션 + 통계 + AI Report</td><td>5개 컴포넌트 + CalendarGrid 흰 배경 새 디자인 + 회고 색상 도트 + ReviewModal</td></tr>
+<tr><td>/haru</td><td>단일 467줄, 채팅 + 키워드 자동저장 + Health/Emotion pill</td><td>64줄 + hooks(useChatMessages, useAutoSave) + components(ChatMessage, ChatInput) + lib(keywords, markdown)</td></tr>
+<tr><td>/friends</td><td>모미·마음 분기 채팅 (349줄)</td><td>삭제 (deprecate)</td></tr>
+<tr><td>/settings 문구</td><td>"친구들(모미/마음) AI 대화"</td><td>"하루(어시스턴트) 대화"</td></tr>
+<tr><td>BottomNav 순서</td><td>홈 / 하루 / 기록 / 설정</td><td>홈 / 기록 / 하루 / 설정</td></tr>
+<tr><td>인프라</td><td>React Query 없음, 단순 useState+fetch</td><td>React Query 5 + vitest + Testing Library + 분리 hooks</td></tr>
+<tr><td>스타일</td><td>100% inline <code>style={{}}</code></td><td>inline + 일부 Tailwind 클래스 혼용</td></tr>
+<tr><td>코드베이스</td><td>단일 거대 파일 패턴</td><td>작은 컴포넌트 분리 패턴</td></tr>
+</tbody></table>
+
+<hr>
+
+<h2>3. 사용자가 폐기를 결정한 결정적 문제 7가지</h2>
+
+<h3>3.1. 디테일 누락 (가장 큰 원인)</h3>
+
+<p><strong>증상</strong>: 사용자가 "Week/Month의 정보 부분이 안 만들어진 거야?", "month의 데이터들이 보여주는 3가지 데이터 그래프도 독립적으로 유지" 지적.</p>
+
+<p><strong>원인</strong>: Plan 작성 시 "TodayTab/WeekTab/MonthTab → 각 ~120줄 분리"라는 라인 수 목표만 챙기고, <strong>옮겨야 할 모든 영역을 명세하지 않음</strong>.</p>
+<ul>
+<li>Plan 2 Task 5(WeekTab 슬림화)에는 WeekChart + WeekReview만 명시 → 기존 7~9개 정보 영역 누락</li>
+<li>Plan 2 Task 7(MonthTab 슬림화)에는 캘린더 + MonthReview만 명시 → 기존 5개 통계·차트·AI Report 누락</li>
+</ul>
+
+<p><strong>책임</strong>: Plan 작성자(저). Plan 5(Diary Stats Restore)로 후속 복원했으나 한 라운드 추가 + 디테일 손실 잔재.</p>
+
+<h3>3.2. DateSelector 인터랙션 재작성</h3>
+
+<p><strong>증상</strong>: 사용자가 "지금처럼 날짜 탭이 스크롤되는게 어딨어??? 이런 아님."</p>
+
+<p><strong>원인</strong>: 1203e05 원본 패턴은 <strong>가운데 박스 고정 + 날짜들이 좌우 스와이프로 들어옴</strong> (scroll handler + centeredIndex). 새 DateSelector(Plan 2)는 <strong>scrollIntoView + opacity fade</strong>만으로 시도 — 패턴 자체가 다름.</p>
+
+<p><strong>책임</strong>: SPEC <code>§2.2 Today selector</code> 항목에 "정중앙 정렬 + 양옆 fade"만 적었지 <strong>기존 인터랙션 패턴(scroll handler 기반 picker)을 명시 안 함</strong>. 시안에서는 정적 이미지로 표현 → 인터랙션 차이가 시안 검토로 잡히지 않음.</p>
+
+<h3>3.3. /haru 분리 시 작동 불가</h3>
+
+<p><strong>증상</strong>: "하루도 지금 작동을 안 해요. 또 하루의 입력 창도 위치가 안 맞습니다."</p>
+
+<p><strong>원인 1 (자동 조정 잔재)</strong>: Plan 3 subagent가 <code>useChatMessages</code> hook 만들 때 <code>saveChatMessage</code> 인자 순서를 실제 api 시그니처에 맞춤 + DB <code>message</code> 컬럼 → <code>text</code> 매핑 추가. <strong>합리적 자동 조정</strong>이지만 1203e05 원본의 직접 호출 패턴과 다르게 작동.</p>
+
+<p><strong>원인 2 (입력창 위치)</strong>: 1203e05 입력창은 column flex의 마지막 element + <code>flexShrink: 0</code>. 분리 버전(ChatInput)도 같은 패턴이지만 layout.tsx의 <code>paddingBottom: 70px</code>와 만나면 미세한 차이 발생. iPhone 13 safe-area-inset-bottom 고려가 명시되지 않음.</p>
+
+<p><strong>원인 3 (별개 환경 이슈)</strong>: <code>.env.local</code>에 <code>OPENAI_API_KEY</code> 없음 + Vercel env에도 없음. 사용자가 production에서 작동했던 건 localStorage 키 덕분. <strong>v2.0과 무관한 환경 설정 문제</strong>지만 같은 시기에 발견되어 v2.0이 원인처럼 보임.</p>
+
+<h3>3.4. dev 서버 브랜치 혼동</h3>
+
+<p><strong>증상</strong>: 사용자가 localhost:3001에서 "안 됨"이라 보고 → 디버깅 시간 낭비.</p>
+
+<p><strong>원인</strong>: </p>
+<ul>
+<li><code>app/</code> (main 브랜치) — 1203e05 복원판 + fix들 push</li>
+<li><code>app-stage9/</code> worktree (plan-5 브랜치) — 분리 버전, /haru 작동 안 함</li>
+<li>dev 서버는 app-stage9 worktree에서 시작 (port 3001)</li>
+<li>사용자는 localhost:3001 보고 있었음 → plan-5 브랜치 코드</li>
+</ul>
+
+<p>같은 commit이 떠 있다고 가정하고 진단 → "왜 안 되지?" 한참 헤맴. 환경 격리를 처음부터 명확히 안 알림.</p>
+
+<h3>3.5. 시안 검토만으로 인터랙션 검증 불가</h3>
+
+<p><strong>증상</strong>: 시안 <code>17_final-design-spec.html</code>은 OK 받음 → 코드 구현 후 작동 차이 발견.</p>
+
+<p><strong>원인</strong>: 시안은 정적 mockup. 가운데 박스 고정 vs scrollIntoView는 그림으로는 같아 보임 — 실제 만져봐야 차이 인지. <strong>시안 OK = 디자인 OK이지 인터랙션 OK가 아님</strong>.</p>
+
+<h3>3.6. Plan 대비 자동 조정 = 미세한 동작 차이</h3>
+
+<p><strong>증상</strong>: subagent 보고에 "Plan 대비 자동 조정 5건" — 합리적으로 보이는 보고서지만 그 자동 조정들이 사용자 체감 차이를 만듦.</p>
+
+<p><strong>예시</strong>:</p>
+<ul>
+<li><code>getYearWeek</code> 공식 — plan 안에서 자기모순 → 테스트 기준으로 수정 (잘한 일)</li>
+<li><code>vitest.config.ts → .mts</code> — ESM 호환 (필요한 일)</li>
+<li><code>useChatMessages</code> race condition fix — 작동에 필요 (그러나 1203e05엔 없던 race가 분리로 인해 생긴 것)</li>
+<li><code>vi.stubEnv</code> 사용 — Node v22 호환 (테스트 인프라)</li>
+</ul>
+
+<p>자동 조정 자체는 합리적이지만, <strong>누적되면 "원본과 미세하게 다른 동작"이 됨</strong>. 각 조정은 plan 명시 허용 범위 안이라 사용자 검토 게이트를 통과.</p>
+
+<h3>3.7. 분리 = 좋다는 가정의 함정</h3>
+
+<p><strong>증상</strong>: SPEC 영역 5(아키텍처)에서 "큰 파일 4개 분리"를 P0(반드시)로 분류. 사용자는 "P0+P1 모두 채택"으로 동의.</p>
+
+<p><strong>원인</strong>: 사용자가 "분리해도 사용성·인터랙션 100% 동일"이라고 믿고 OK. Claude도 그렇게 약속함. 그러나 실제로는:</p>
+<ul>
+<li>분리하면서 부모-자식 props 인터페이스를 설계 → 일부 미세 상태가 사라짐</li>
+<li>인라인 핸들러를 추출하면서 컨텍스트(예: parent state) 의존성이 props로 변환 → 의도 약간 변경</li>
+<li>단일 책임 원칙은 좋은 패턴이지만 <strong>이미 작동하는 코드에 적용할 때 항상 회귀 위험</strong></li>
+</ul>
+
+<p><strong>SPEC §6 "기존 사용자 데이터 무손상"</strong> 보장은 했지만 <strong>"사용자 체감 동작 무손상"</strong> 보장은 명시하지 않음.</p>
+
+<hr>
+
+<h2>4. 사용자 의도 vs Claude 해석 — 핵심 미스매치</h2>
+
+<h3>사용자가 한 명시 표현 (시간순)</h3>
+
+<ul>
+<li>brainstorming 1단계: "사용성 전반을 개선할 수 있는 UI에 대한 평가를 부탁해"</li>
+<li>4영역 결정: "메뉴 구조 / 다이어리 시간 네비 / 홈 우선순위 / 페이지 깊이"</li>
+<li>아키텍처 평가 시: "판단은 니가 해주세요. 근거를 찾아서"</li>
+<li>결정 시: "P0, P1을 진행해주세요"</li>
+<li>검증 단계: "Week/Month 정보 부분 안 만들어진 거야?" / "데이터 그래프도 독립적으로 유지"</li>
+<li>/haru 작동 안 함 시: "이전 버전의 위치와 디자인을 복원해주세요, 기능도 점검해서 작동하게 해주세요"</li>
+<li>최종: "이 전 버전의 세부 내용을 다시 복원해주시고, 특히 today 인터페이스는 그대로 유지 해주세요. 지금 인터랙션이 이 전 버전이랑 너무 달라요. 인터랙션 방식을 그대로 만들어주시고, 디자인도 그대로 유지 해주세요"</li>
+</ul>
+
+<h3>Claude의 해석 변화 (잘못된 부분)</h3>
+
+<ul>
+<li>1~4단계: 사용자 동의를 "분리도 OK"로 해석. 사실 사용자는 <strong>새 기능 OK</strong>의 의미였을 가능성 큼.</li>
+<li>분리 작업을 "유지보수성 개선 + 사용성 그대로"로 약속. 그러나 실현 시 미세 차이 발생.</li>
+<li>사용자가 "P0+P1 진행"이라 한 것을 "모든 아키텍처 분리 동의"로 받아들임 — 사용자는 "Before/After 임팩트 표"의 사용자 체감 변화(👤 컬럼)만 보고 OK 했을 가능성.</li>
+</ul>
+
+<h3>사용자 진의 (사후 추정)</h3>
+
+<ul>
+<li>✓ 새 기능 추가 (회고 색상 시스템, 시간 네비, BottomNav 순서 등) — OK</li>
+<li>✓ 안 보이는 dead code 정리 (/friends 삭제 등) — OK</li>
+<li>✗ <strong>익숙한 UI 디테일·인터랙션 손상은 절대 안 됨</strong> — 명시 못 했지만 가장 중요한 요구</li>
+<li>✗ 보이지 않는 파일 분리·refactor — 가치 인지 못 함 + 부작용으로 인해 결과적으로 손해</li>
+</ul>
+
+<hr>
+
+<h2>5. 진행 흐름의 단계별 문제</h2>
+
+<table><thead><tr><th>단계</th><th>시각</th><th>결정</th><th>사후 평가</th></tr></thead><tbody>
+<tr><td>Brainstorming 16 mockup</td><td>16:00 ~ 17:00</td><td>시각 자료로 합의</td><td>✓ 좋음 — 사용자 검토 게이트 잘 작동</td></tr>
+<tr><td>SPEC.md 작성</td><td>17:00 ~ 17:30</td><td>10절 분량, 영역별 결정</td><td>! 코드 분리 범위가 너무 광범위. 사용자가 모든 디테일까지 검토 못 했음</td></tr>
+<tr><td>Plan 1~4 작성</td><td>17:30 ~ 19:00</td><td>4 plan, 150 step</td><td>! Plan 2의 WeekTab/MonthTab Task에 옮겨야 할 영역 명세 누락</td></tr>
+<tr><td>4 plan subagent 위임</td><td>19:00 ~ 21:30</td><td>git worktree 격리 + plan별 검증</td><td>! Vercel preview URL로 검증했지만 사용자가 인터랙션 디테일까지 만져보기엔 시간 부족</td></tr>
+<tr><td>main 머지</td><td>21:36</td><td>일괄 merge</td><td>✗ 합쳐서 한 번에 머지하기 전에 사용자가 충분히 사용했어야 함</td></tr>
+<tr><td>사용자가 dev 서버에서 작동 확인</td><td>22:00 ~ 23:00</td><td>"Week/Month 누락, /haru 작동 안 함" 발견</td><td>✗ 머지 후 발견 — 검증 게이트가 부족</td></tr>
+<tr><td>부분 fix 시도 (Plan 5 + hot-fix)</td><td>23:00 ~ 새벽 1:00</td><td>차트 복원 + DateSelector 재작성 + /haru 부분 fix</td><td>✗ 누적 수정으로 사용자 인내심 소진. 작은 fix가 또 다른 차이를 만듦</td></tr>
+<tr><td>v0.8.1로 완전 롤백</td><td>새벽 1:30</td><td>안전 commit으로 복원</td><td>✓ 안전 — destructive force push 없이 단일 commit으로 처리</td></tr>
+</tbody></table>
+
+<hr>
+
+<h2>6. 정리 / 향후 방지책</h2>
+
+<h3>6.1. 사용자 의도 해석 시</h3>
+
+<ul>
+<li><strong>"개선해 주세요"는 새 기능 추가의 의미. refactor 동의는 별도 명시 받기.</strong></li>
+<li>"사용성 100% 유지 + 새 기능 layer 추가" 형태가 가장 안전.</li>
+<li>분리(refactor)는 사용자가 명시 요청할 때만 진행.</li>
+</ul>
+
+<h3>6.2. Plan 작성 시</h3>
+
+<ul>
+<li>큰 파일 분리할 때는 <strong>옮겨야 할 모든 영역을 명시적 inventory</strong>로 정리. "~120줄" 같은 라인 수 목표는 부차적.</li>
+<li>인터랙션 패턴(scroll handler, hover/touch state, keyboard 처리 등)은 시각 mockup으로는 검증 안 됨. <strong>별도 인터랙션 명세</strong> 필요.</li>
+</ul>
+
+<h3>6.3. 검증 게이트</h3>
+
+<ul>
+<li>Vercel preview URL ≠ 충분한 검증. 특히 인터랙션 디테일.</li>
+<li>main 머지 전에 <strong>dev 서버에서 사용자가 충분히 만져본 다음</strong>에만 머지.</li>
+<li>큰 변경은 단일 머지보다 <strong>점진 머지</strong> (작은 PR 여러 개) 권장 — 회귀 발견 즉시 차단 가능.</li>
+</ul>
+
+<h3>6.4. 환경 격리 안내</h3>
+
+<ul>
+<li>worktree 사용 시 <strong>각 환경(dev 서버 포트 등)이 어떤 브랜치 코드를 보는지</strong> 매 turn마다 명시.</li>
+<li>사용자에게 "지금 보고 계신 게 어느 브랜치 코드인지" 확인을 도와야.</li>
+</ul>
+
+<h3>6.5. 롤백 안전망</h3>
+
+<ul>
+<li>첫날부터 "사용자 만족 못 하면 즉시 1203e05로 복원 가능" 명시했어야.</li>
+<li>force push는 안전 가드로 차단됨 → <code>git read-tree --reset</code> + 단일 commit 패턴이 가장 안전한 롤백 방식.</li>
+</ul>
+
+<h3>6.6. 환경 설정 별개 이슈 분리</h3>
+
+<ul>
+<li><code>.env.local</code> / Vercel env에 <code>OPENAI_API_KEY</code> 부재는 1203e05부터 있던 환경 문제 — 작업 시작 시 점검했어야.</li>
+<li>작업 도중 발견된 별개 이슈는 별도 항목으로 분리해 사용자에게 보고. 작업 결과로 오해 안 받게.</li>
+</ul>
+
+<hr>
+
+<h2>7. 보존 가치 있는 산출물 (선택 활용)</h2>
+
+<p>v2.0 작업 중 만든 자료 중 일부는 가치 있음. main에서는 삭제됐지만 GitHub remote의 <code>stage-9/*</code> 브랜치들에 보존됨:</p>
+
+<ul>
+<li><code>stage-9/v0.9-release</code> 브랜치 — v2.0 완성 코드 전부</li>
+<li>16개 brainstorming mockup HTML (<code>docs/brainstorming/2026-05-11_ux-improvement/</code>)</li>
+<li>SPEC.md (10절 영역별 결정사항)</li>
+<li>4 Plan + Plan 5 + README (writing-plans 산출)</li>
+<li>회고 색상 시스템 아이디어 (Month 캘린더 도트, ReviewModal, 월말 자동 trigger)</li>
+<li>vitest + Testing Library 인프라</li>
+</ul>
+
+<p><strong>필요 시 cherry-pick으로 v0.8.1 위에 부분 적용 가능.</strong> 예: 회고 색상 시스템만 단독으로 도입.</p>
+
+<hr>
+
+<h2>8. OpenAI API Key 별도 이슈 (v2.0과 무관)</h2>
+
+<p>작업 중 발견됐지만 v2.0과 무관한 환경 설정 문제. 정리:</p>
+
+<pre><code>
+# .env.local 현재 상태
+ANTHROPIC_API_KEY=...
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_SECRET=...
+NEXTAUTH_SECRET=...
+NEXTAUTH_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+NEXT_PUBLIC_SUPABASE_URL=...
+# OPENAI_API_KEY=...  ← 빠짐
+</code></pre>
+
+<p><code>/haru</code>는 <code>localStorage("openai_api_key")</code> 또는 <code>process.env.OPENAI_API_KEY</code> 필요. <strong>현재 둘 다 없으면 작동 안 함.</strong> 1203e05 / v0.8.1 시점에도 동일한 상태였음.</p>
+
+<p><strong>조치 권장</strong>:</p>
+<ul>
+<li>로컬 dev: <code>/settings</code>에서 사용자 key 입력 또는 <code>.env.local</code>에 추가</li>
+<li>production: Vercel 대시보드 → Settings → Environment Variables → <code>OPENAI_API_KEY</code> 추가</li>
+</ul>
+
+<hr>
+
+<h2>9. 결론</h2>
+
+<p>v2.0이 폐기된 가장 큰 이유는 <strong>사용자 의도 해석 미스매치 + 분리 작업의 미세 부작용</strong>입니다. 새 기능 자체(회고 색상 시스템, 시간 네비 등)는 가치 있었지만, 그걸 위해 동반된 거대 refactor가 익숙한 UI 디테일을 미세하게 깨뜨렸고, 사용자 입장에서는 "안 된다"는 종합 체감으로 누적됐습니다.</p>
+
+<p>기술적으로는 모든 작업이 plan에 따라 진행됐고 테스트도 통과했지만, <strong>사용자 검증이 최종 판단</strong>이며 그 판단이 부정적일 때 즉시 롤백할 수 있는 안전망이 가장 중요합니다.</p>
+
+<p>v0.8.1로 안전하게 복원된 현재가 적절한 결정입니다. 향후 새 작업 시 본 리포트의 6절 방지책을 적용하겠습니다.</p>
+
+</div>
+</body>
+</html>

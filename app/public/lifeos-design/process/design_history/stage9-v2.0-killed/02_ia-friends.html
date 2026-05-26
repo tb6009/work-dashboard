@@ -1,0 +1,64 @@
+<h2>IA 영역 — <code>/friends</code> 처리 결정</h2>
+<p class="subtitle">코드를 살펴보니 <code>/friends</code> 와 <code>/haru</code> 가 거의 같은 컨셉입니다. 어떻게 정리할까요?</p>
+
+<div class="mockup">
+  <div class="mockup-header">중복 진단</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:12px">
+      <div style="flex:1;border:1px solid #e5e7eb;border-radius:8px;padding:12px">
+        <div style="font-weight:700;margin-bottom:6px">/haru <span style="font-size:0.7rem;color:#6B7280">(BottomNav 노출)</span></div>
+        <ul style="font-size:0.78rem;color:#374151;margin:0;padding-left:18px;line-height:1.6">
+          <li>채팅 인터페이스</li>
+          <li>운동·수면·커피·컨디션 키워드 감지</li>
+          <li>감정 키워드 감지 → 일기 저장</li>
+          <li><strong>단일 어시스턴트</strong></li>
+        </ul>
+      </div>
+      <div style="flex:1;border:1px solid #e5e7eb;border-radius:8px;padding:12px;background:#FEF3C7">
+        <div style="font-weight:700;margin-bottom:6px">/friends <span style="font-size:0.7rem;color:#DC2626">(진입로 없음)</span></div>
+        <ul style="font-size:0.78rem;color:#374151;margin:0;padding-left:18px;line-height:1.6">
+          <li>채팅 인터페이스 (동일)</li>
+          <li>운동·수면·감정 키워드 감지 (동일)</li>
+          <li>일기 저장 (동일)</li>
+          <li><strong>모미·마음 캐릭터 분기</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:0.72rem;color:#6B7280">
+      ※ <code>personal/</code> 비서 시스템에는 진(집사)·모미(PT)·마음(코치) 3캐릭터 구조가 있음. <code>/haru</code> 가 "진" 단일일 가능성이 큼.
+    </div>
+  </div>
+</div>
+
+<h3>처리 옵션</h3>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>haru로 통합 + 캐릭터 분기 흡수 (추천)</h3>
+      <p><code>/friends</code>의 모미·마음 분기 로직을 <code>/haru</code>로 옮기고, <code>/friends</code> 라우트는 제거. 한 채팅 입구에서 메시지 내용에 따라 진/모미/마음 셋이 응답.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>friends 제거 (deprecate)</h3>
+      <p>캐릭터 분기 자체가 더 이상 필요 없다고 보면 <code>/friends</code> 페이지·코드 전체 삭제. <code>/haru</code> 단일 컨셉 유지.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>역할 분리 (chat=haru / 관계기록=friends)</h3>
+      <p><code>/friends</code>를 <strong>대화 페이지에서 → 관계·인맥 기록 페이지로</strong> 재정의. BottomNav 안에는 안 넣고 기록 안 서브 진입로로.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="d" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>판단 보류</h3>
+      <p>지금 결정 못 함. 다음 영역(다이어리)부터 먼저 보고 돌아오겠음.</p>
+    </div>
+  </div>
+</div>

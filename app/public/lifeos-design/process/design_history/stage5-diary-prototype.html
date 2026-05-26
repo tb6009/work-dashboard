@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Life OS — Diary Prototype v2</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { width: 100%; max-width: 900px; }
+  .page-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .page-sub {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #808080;
+    margin-bottom: 32px;
+  }
+
+  .phones-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .phone-wrap { width: 100%; max-width: 390px; }
+  .phone-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .phone {
+    background: #000;
+    border-radius: 40px;
+    padding: 10px;
+  }
+  .screen {
+    background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header {
+    padding: 20px 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .header-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.02em;
+  }
+  .header-today {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    color: #60A5FA;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Month nav */
+  .month-nav {
+    padding: 12px 28px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .month-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #808080;
+  }
+  .month-arrows { display: flex; gap: 16px; }
+  .month-arrow {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  /* Calendar strip */
+  .cal-strip {
+    padding: 4px 20px 16px;
+    display: flex;
+    gap: 2px;
+  }
+  .cal-day {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .cal-day.active { background: #000; }
+  .cal-day.active .cal-weekday,
+  .cal-day.active .cal-date { color: #fff; }
+  .cal-weekday {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.5rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+  .cal-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+  }
+  .cal-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #60A5FA;
+    margin: 3px auto 0;
+  }
+  .cal-day.active .cal-dot { background: #fff; }
+
+  /* Divider */
+  .divider { height: 1px; background: #e6e6e6; margin: 0 28px; }
+
+  /* Content */
+  .content { padding: 0 28px 24px; flex: 1; overflow-y: auto; }
+
+  .section { margin-top: 20px; }
+  .section-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  /* Health */
+  .health-row { display: flex; gap: 8px; }
+  .health-item {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .health-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+  }
+  .health-sub {
+    font-size: 0.62rem;
+    color: #b3b3b3;
+    margin-top: 2px;
+  }
+
+  /* Emotion */
+  .emotion-word {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 500;
+  }
+
+  /* Schedule — 3일 표시 */
+  .sched-group { margin-bottom: 14px; }
+  .sched-day-label {
+    font-size: 0.68rem;
+    color: #808080;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .sched-day-label.today { color: #000; font-weight: 700; }
+  .sched-item {
+    font-size: 0.82rem;
+    color: #333;
+    padding: 4px 0;
+    line-height: 1.5;
+  }
+  .sched-time {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    color: #b3b3b3;
+    margin-right: 6px;
+  }
+  .sched-none {
+    font-size: 0.78rem;
+    color: #b3b3b3;
+  }
+
+  /* Chat */
+  .chat-row { margin-bottom: 10px; }
+  .chat-char {
+    font-size: 0.68rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .chat-char.momi { color: #059669; }
+  .chat-char.maeum { color: #8B5CF6; }
+  .chat-preview {
+    font-size: 0.78rem;
+    color: #808080;
+    line-height: 1.5;
+  }
+  .chat-count {
+    font-size: 0.62rem;
+    color: #b3b3b3;
+    margin-top: 2px;
+  }
+
+  /* Empty */
+  .empty {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.82rem;
+    color: #b3b3b3;
+  }
+
+  /* Bottom tabs */
+  .bottom-tabs {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    padding: 8px 0 4px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+  .tab-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #b3b3b3;
+    display: block;
+  }
+  .tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.5rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tab.active .tab-name { color: #000; }
+  .tab.active .tab-role { color: #60A5FA; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="page-title">Diary</div>
+<div class="page-sub">날짜를 선택하면 그날의 기록을 한눈에 봅니다</div>
+
+<div class="phones-row">
+
+<!-- 기록이 있는 날 -->
+<div class="phone-wrap">
+  <div class="phone-label">기록이 있는 날 (5/2 토)</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="header">
+        <div class="header-title">Diary</div>
+        <div class="header-today">Today</div>
+      </div>
+
+      <div class="month-nav">
+        <button class="month-arrow">&larr;</button>
+        <div class="month-label">May 2026</div>
+        <button class="month-arrow">&rarr;</button>
+      </div>
+
+      <div class="cal-strip">
+        <div class="cal-day">
+          <div class="cal-weekday">Thu</div>
+          <div class="cal-date">30</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Fri</div>
+          <div class="cal-date" style="color:#60A5FA; font-weight:700;">1</div>
+          <div class="cal-dot"></div>
+        </div>
+        <div class="cal-day active">
+          <div class="cal-weekday">Sat</div>
+          <div class="cal-date">2</div>
+          <div class="cal-dot"></div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Sun</div>
+          <div class="cal-date">3</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Mon</div>
+          <div class="cal-date">4</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Tue</div>
+          <div class="cal-date">5</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Wed</div>
+          <div class="cal-date">6</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="content">
+        <!-- Health -->
+        <div class="section">
+          <div class="section-label">Health</div>
+          <div class="health-row">
+            <div class="health-item">
+              <div class="health-value">4h 36m</div>
+              <div class="health-sub">수면</div>
+            </div>
+            <div class="health-item">
+              <div class="health-value">4/5</div>
+              <div class="health-sub">컨디션</div>
+            </div>
+            <div class="health-item">
+              <div class="health-value">인라인</div>
+              <div class="health-sub">운동</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emotion -->
+        <div class="section">
+          <div class="section-label">Emotion</div>
+          <div class="emotion-word">평온</div>
+        </div>
+
+        <!-- Schedule 3일 -->
+        <div class="section">
+          <div class="section-label">Schedule</div>
+
+          <div class="sched-group">
+            <div class="sched-day-label today">오늘 5/2 (토)</div>
+            <div class="sched-item"><span class="sched-time">08:30-17:30</span>아고라01</div>
+            <div class="sched-item"><span class="sched-time">18:00-19:00</span>인라인</div>
+          </div>
+
+          <div class="sched-group">
+            <div class="sched-day-label">내일 5/3 (일)</div>
+            <div class="sched-item"><span class="sched-time">08:30-17:30</span>아고라02</div>
+          </div>
+
+          <div class="sched-group">
+            <div class="sched-day-label">모레 5/4 (월)</div>
+            <div class="sched-item">교무회의</div>
+            <div class="sched-item">취업진담 화상회의</div>
+          </div>
+        </div>
+
+        <!-- Conversations -->
+        <div class="section">
+          <div class="section-label">Conversations</div>
+          <div class="chat-row">
+            <div class="chat-char momi">모미</div>
+            <div class="chat-preview">"4시간 36분 잤어요" → 수면 부족 주의</div>
+            <div class="chat-count">5건</div>
+          </div>
+          <div class="chat-row">
+            <div class="chat-char maeum">마음</div>
+            <div class="chat-preview">"수업 들으면서 Life OS 만드는 중" → 성취감</div>
+            <div class="chat-count">3건</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-tabs">
+        <div class="tab"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab active"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 기록이 없는 날 -->
+<div class="phone-wrap">
+  <div class="phone-label">기록이 없는 날 (4/30 목)</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="header">
+        <div class="header-title">Diary</div>
+        <div class="header-today">Today</div>
+      </div>
+
+      <div class="month-nav">
+        <button class="month-arrow">&larr;</button>
+        <div class="month-label">April 2026</div>
+        <button class="month-arrow">&rarr;</button>
+      </div>
+
+      <div class="cal-strip">
+        <div class="cal-day">
+          <div class="cal-weekday">Mon</div>
+          <div class="cal-date">27</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Tue</div>
+          <div class="cal-date">28</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Wed</div>
+          <div class="cal-date" style="color:#60A5FA; font-weight:700;">29</div>
+          <div class="cal-dot"></div>
+        </div>
+        <div class="cal-day active">
+          <div class="cal-weekday">Thu</div>
+          <div class="cal-date">30</div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Fri</div>
+          <div class="cal-date" style="color:#60A5FA; font-weight:700;">1</div>
+          <div class="cal-dot"></div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Sat</div>
+          <div class="cal-date" style="color:#60A5FA; font-weight:700;">2</div>
+          <div class="cal-dot"></div>
+        </div>
+        <div class="cal-day">
+          <div class="cal-weekday">Sun</div>
+          <div class="cal-date">3</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="content">
+        <div class="empty">이 날의 기록이 없습니다</div>
+
+        <!-- Schedule 3일 -->
+        <div class="section">
+          <div class="section-label">Schedule</div>
+
+          <div class="sched-group">
+            <div class="sched-day-label today">4/30 (목)</div>
+            <div class="sched-none">일정 없음</div>
+          </div>
+
+          <div class="sched-group">
+            <div class="sched-day-label">5/1 (금)</div>
+            <div class="sched-item">노동절</div>
+          </div>
+
+          <div class="sched-group">
+            <div class="sched-day-label">5/2 (토)</div>
+            <div class="sched-item"><span class="sched-time">08:30-17:30</span>아고라01</div>
+            <div class="sched-item"><span class="sched-time">18:00-19:00</span>인라인</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-tabs">
+        <div class="tab"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab active"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

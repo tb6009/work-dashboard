@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Life OS — Navigation A vs B</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #808080;
+    margin-bottom: 40px;
+  }
+
+  .comparison {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .option {
+    width: 100%;
+    max-width: 420px;
+  }
+  .option-header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .option-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4px;
+  }
+  .option-tag {
+    font-size: 0.7rem;
+    color: #60A5FA;
+    font-weight: 500;
+  }
+  .option-desc {
+    font-size: 0.75rem;
+    color: #808080;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .phone {
+    background: #000;
+    border-radius: 36px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  .screen {
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  /* Shared styles */
+  .s-header {
+    padding: 16px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .s-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+  }
+  .s-badge {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    color: #60A5FA;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .s-content { padding: 12px 24px 8px; }
+
+  .s-section-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 500;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    margin-top: 12px;
+  }
+
+  .s-text {
+    font-size: 0.78rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  .s-text-muted {
+    font-size: 0.72rem;
+    color: #808080;
+    line-height: 1.5;
+  }
+  .s-text-faint {
+    font-size: 0.68rem;
+    color: #b3b3b3;
+  }
+
+  .s-insight {
+    font-size: 0.78rem;
+    color: #000;
+    border-left: 2px solid #60A5FA;
+    padding-left: 12px;
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+
+  .s-health-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .s-health-pill {
+    font-size: 0.62rem;
+    color: #808080;
+    background: #f2f2f2;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+
+  .s-divider { height: 1px; background: #e6e6e6; margin: 8px 0; }
+
+  .s-chat-bubble {
+    font-size: 0.72rem;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px 12px 12px 4px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .s-chat-name {
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .s-chat-name.momi { color: #059669; }
+  .s-chat-name.maeum { color: #8B5CF6; }
+
+  .s-input-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .s-input {
+    flex: 1;
+    font-size: 0.72rem;
+    color: #b3b3b3;
+    background: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 8px 10px;
+  }
+  .s-send {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #60A5FA;
+    border: none;
+  }
+
+  /* Bottom tabs */
+  .tabs {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    padding: 6px 0 4px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+  .tab-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #b3b3b3;
+    display: block;
+  }
+  .tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.45rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tab.active .tab-name { color: #000; }
+  .tab.active .tab-role { color: #60A5FA; }
+  .tab.active { position: relative; }
+  .tab.active::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #60A5FA;
+  }
+
+  /* Inner tabs (for Option A) */
+  .inner-tabs {
+    display: flex;
+    gap: 0;
+    padding: 0 24px;
+    margin-top: 8px;
+  }
+  .inner-tab {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #b3b3b3;
+    position: relative;
+  }
+  .inner-tab.active { color: #000; }
+  .inner-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 30%;
+    height: 2px;
+    background: #60A5FA;
+  }
+  .inner-tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.42rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    display: block;
+  }
+  .inner-tab.active .inner-tab-role { color: #60A5FA; }
+
+  /* Annotation */
+  .annotation {
+    margin-top: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  .ann-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .ann-item {
+    font-size: 0.72rem;
+    color: #808080;
+    line-height: 1.6;
+    padding: 2px 0;
+  }
+  .ann-item strong { color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Navigation — A vs B</h1>
+<div class="subtitle">하단 탭 구조를 비교합니다. 어느 쪽이 더 편한지 확인해주세요.</div>
+
+<div class="comparison">
+
+<!-- ═══ Option A ═══ -->
+<div class="option">
+  <div class="option-header">
+    <div class="option-label">Option A</div>
+    <div class="option-tag">추천</div>
+    <div class="option-desc">하단 3탭 (홈 / 기록 / 설정)<br>모미·마음은 홈 안의 내부 탭</div>
+  </div>
+
+  <!-- A: 홈 화면 (진 탭 활성) -->
+  <div style="font-size:0.6rem; color:#b3b3b3; text-align:center; margin-bottom:6px; font-family:'Outfit',sans-serif; text-transform:uppercase; letter-spacing:0.1em;">홈 — 진 탭</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="s-header">
+        <div class="s-title">Good Morning</div>
+        <div class="s-badge">⚙</div>
+      </div>
+      <div style="padding:4px 24px 0;">
+        <div class="s-text-faint">Sat, May 02</div>
+      </div>
+
+      <div class="s-content">
+        <div class="s-health-row">
+          <span class="s-health-pill">맑음 18°</span>
+          <span class="s-health-pill">몸 수면 4.6시간</span>
+          <span class="s-health-pill">마음 평온</span>
+        </div>
+        <div class="s-insight">오늘 아고라01 수업이 종일입니다.</div>
+
+        <!-- Inner tabs: 진 | 모미 | 마음 -->
+        <div class="inner-tabs">
+          <div class="inner-tab active">진<span class="inner-tab-role">Butler</span></div>
+          <div class="inner-tab">모미<span class="inner-tab-role">Trainer</span></div>
+          <div class="inner-tab">마음<span class="inner-tab-role">Coach</span></div>
+        </div>
+
+        <div class="s-section-label">Today</div>
+        <div class="s-text">토요일 — 아고라01</div>
+        <div class="s-text-muted">08:30-17:30</div>
+
+        <div class="s-section-label">Tomorrow</div>
+        <div class="s-text-muted">일요일 — 아고라02</div>
+
+        <div class="s-section-label">Todo</div>
+        <div class="s-text" style="font-size:0.72rem;">○ 질적연구 과제 데이터 수집 계획</div>
+        <div class="s-text-faint" style="font-size:0.72rem;">○ 5/20 건강검진 결과 <span style="background:#f2f2f2; padding:1px 4px; border-radius:3px; font-size:0.55rem;">cal</span></div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- A: 홈 화면 (모미 탭 활성) -->
+  <div style="font-size:0.6rem; color:#b3b3b3; text-align:center; margin-bottom:6px; margin-top:16px; font-family:'Outfit',sans-serif; text-transform:uppercase; letter-spacing:0.1em;">홈 — 모미 탭</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="s-header">
+        <div class="s-title">Good Morning</div>
+        <div class="s-badge">⚙</div>
+      </div>
+      <div style="padding:4px 24px 0;">
+        <div class="s-text-faint">Sat, May 02</div>
+      </div>
+
+      <div class="s-content">
+        <div class="s-health-row">
+          <span class="s-health-pill">맑음 18°</span>
+          <span class="s-health-pill">몸 수면 4.6시간</span>
+          <span class="s-health-pill">마음 평온</span>
+        </div>
+        <div class="s-insight">오늘 아고라01 수업이 종일입니다.</div>
+
+        <div class="inner-tabs">
+          <div class="inner-tab">진<span class="inner-tab-role">Butler</span></div>
+          <div class="inner-tab active">모미<span class="inner-tab-role">Trainer</span></div>
+          <div class="inner-tab">마음<span class="inner-tab-role">Coach</span></div>
+        </div>
+
+        <div class="s-section-label">Health Status</div>
+        <div class="s-health-row">
+          <span class="s-health-pill">수면 4h 36m</span>
+          <span class="s-health-pill">컨디션 4/5</span>
+        </div>
+
+        <div class="s-chat-bubble" style="margin-top:10px;">
+          <div class="s-chat-name momi">모미</div>
+          (◉ ◡ ◉) 안녕하세요, 오늘 몸 상태는 어떠세요?
+        </div>
+
+        <div class="s-input-row">
+          <div class="s-input">모미에게 메시지...</div>
+          <div class="s-send"></div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name">설정</span><span class="tab-role">Settings</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotation">
+    <div class="ann-title">Option A 특징</div>
+    <div class="ann-item"><strong>하단 3탭</strong>: 홈 / 기록 / 설정 — 심플</div>
+    <div class="ann-item"><strong>모미·마음</strong>: 홈 화면 내부 탭에서 전환 — 바로 접근</div>
+    <div class="ann-item"><strong>Daily Insight</strong>: 어떤 내부 탭이든 항상 상단에 표시</div>
+    <div class="ann-item"><strong>장점</strong>: 탭 수 적음, 한 화면에서 브리핑+대화 모두 가능</div>
+    <div class="ann-item"><strong>단점</strong>: 내부 탭 + 외부 탭 두 레벨 — 살짝 복잡할 수 있음</div>
+  </div>
+</div>
+
+<!-- ═══ Option B ═══ -->
+<div class="option">
+  <div class="option-header">
+    <div class="option-label">Option B</div>
+    <div class="option-tag"></div>
+    <div class="option-desc">하단 5탭 (홈 / 모미 / 마음 / 기록 / 설정)<br>각 캐릭터가 독립 탭</div>
+  </div>
+
+  <!-- B: 홈 화면 -->
+  <div style="font-size:0.6rem; color:#b3b3b3; text-align:center; margin-bottom:6px; font-family:'Outfit',sans-serif; text-transform:uppercase; letter-spacing:0.1em;">홈 탭</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="s-header">
+        <div class="s-title">Good Morning</div>
+        <div class="s-badge">⚙</div>
+      </div>
+      <div style="padding:4px 24px 0;">
+        <div class="s-text-faint">Sat, May 02</div>
+      </div>
+
+      <div class="s-content">
+        <div class="s-health-row">
+          <span class="s-health-pill">맑음 18°</span>
+          <span class="s-health-pill">몸 수면 4.6시간</span>
+          <span class="s-health-pill">마음 평온</span>
+        </div>
+        <div class="s-insight">오늘 아고라01 수업이 종일입니다.</div>
+
+        <div class="s-section-label">Today</div>
+        <div class="s-text">토요일 — 아고라01</div>
+        <div class="s-text-muted">08:30-17:30</div>
+
+        <div class="s-section-label">Tomorrow</div>
+        <div class="s-text-muted">일요일 — 아고라02</div>
+
+        <div class="s-section-label">Recommendation</div>
+        <div class="s-insight">오늘 수업에 집중하시고 저녁에 충분히 쉬세요.</div>
+
+        <div class="s-section-label">Todo</div>
+        <div class="s-text" style="font-size:0.72rem;">○ 질적연구 과제 데이터 수집 계획</div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab"><span class="tab-name">모미</span><span class="tab-role">Trainer</span></div>
+        <div class="tab"><span class="tab-name">마음</span><span class="tab-role">Coach</span></div>
+        <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name" style="font-size:0.7rem;">설정</span><span class="tab-role">Set</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B: 모미 탭 -->
+  <div style="font-size:0.6rem; color:#b3b3b3; text-align:center; margin-bottom:6px; margin-top:16px; font-family:'Outfit',sans-serif; text-transform:uppercase; letter-spacing:0.1em;">모미 탭</div>
+  <div class="phone">
+    <div class="screen">
+      <div class="s-header">
+        <div class="s-title" style="color: #059669;">모미</div>
+        <div class="s-text-faint">Personal Trainer</div>
+      </div>
+
+      <div class="s-content">
+        <div class="s-section-label">Health Status</div>
+        <div class="s-health-row">
+          <span class="s-health-pill">수면 4h 36m</span>
+          <span class="s-health-pill">컨디션 4/5</span>
+          <span class="s-health-pill">인라인</span>
+        </div>
+
+        <div style="margin-top: 12px;">
+          <div class="s-chat-bubble">
+            <div class="s-chat-name momi">모미</div>
+            (◉ ◡ ◉) 안녕하세요, 오늘 몸 상태는 어떠세요?
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; margin-bottom:6px;">
+            <div style="font-size:0.72rem; color:#333; padding:8px 12px; background:#f2f2f2; border-radius:12px 12px 4px 12px; max-width:80%;">
+              오늘 인라인 1시간 탔어
+            </div>
+          </div>
+
+          <div class="s-chat-bubble">
+            <div class="s-chat-name momi">모미</div>
+            (◉ ◡ ◉)b 인라인 좋죠! 1시간이면 충분한 유산소예요.
+          </div>
+        </div>
+
+        <div class="s-input-row">
+          <div class="s-input">모미에게 메시지...</div>
+          <div class="s-send"></div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab"><span class="tab-name">홈</span><span class="tab-role">Briefing</span></div>
+        <div class="tab active"><span class="tab-name">모미</span><span class="tab-role">Trainer</span></div>
+        <div class="tab"><span class="tab-name">마음</span><span class="tab-role">Coach</span></div>
+        <div class="tab"><span class="tab-name">기록</span><span class="tab-role">Diary</span></div>
+        <div class="tab"><span class="tab-name" style="font-size:0.7rem;">설정</span><span class="tab-role">Set</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotation">
+    <div class="ann-title">Option B 특징</div>
+    <div class="ann-item"><strong>하단 5탭</strong>: 홈 / 모미 / 마음 / 기록 / 설정</div>
+    <div class="ann-item"><strong>모미·마음</strong>: 각각 독립 페이지 — 전체 화면 사용</div>
+    <div class="ann-item"><strong>홈</strong>: 진 브리핑만 (일정, Todo, Recommendation)</div>
+    <div class="ann-item"><strong>장점</strong>: 각 캐릭터가 넓은 화면, 구조 명확</div>
+    <div class="ann-item"><strong>단점</strong>: 탭 5개로 좁음 (특히 아이폰), 설정 텍스트 잘릴 수 있음</div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

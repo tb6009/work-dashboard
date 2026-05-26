@@ -1,0 +1,83 @@
+<h2>홈 영역 — 8블록 우선순위 재배치</h2>
+<p class="subtitle">현재 순서를 진단하고, 액션 흐름에 맞춘 재배치 3안을 제시합니다</p>
+
+<div class="mockup">
+  <div class="mockup-header">현재 순서 (src/app/page.tsx)</div>
+  <div class="mockup-body" style="padding:14px">
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:0.78rem">
+      <div style="padding:8px 10px;background:#EFF6FF;border-radius:6px"><strong>1. WeatherHero</strong> <span style="color:#6B7280;font-size:0.7rem">— 시각 헤더 (날씨)</span></div>
+      <div style="padding:8px 10px;background:#fafafa;border-radius:6px"><strong>2. Greeting</strong> <span style="color:#6B7280;font-size:0.7rem">— 인사 + 날짜</span></div>
+      <div style="padding:8px 10px;background:#fafafa;border-radius:6px"><strong>3. DailyInsight</strong> <span style="color:#6B7280;font-size:0.7rem">— 날씨 기반 인사이트</span></div>
+      <div style="padding:8px 10px;background:#fef3c7;border-radius:6px"><strong>4. TodayBlock</strong> <span style="color:#6B7280;font-size:0.7rem">— 오늘 일정 ⚡ 액션</span></div>
+      <div style="padding:8px 10px;background:#fef3c7;border-radius:6px"><strong>5. RoutineList</strong> <span style="color:#6B7280;font-size:0.7rem">— 루틴 ⚡ 액션</span></div>
+      <div style="padding:8px 10px;background:#fafafa;border-radius:6px"><strong>6. CollapsibleUpcoming</strong> <span style="color:#6B7280;font-size:0.7rem">— 내일/모레/어제 (접힘)</span></div>
+      <div style="padding:8px 10px;background:#fafafa;border-radius:6px"><strong>7. DynamicRecommend</strong> <span style="color:#6B7280;font-size:0.7rem">— 동적 제안</span></div>
+      <div style="padding:8px 10px;background:#fef3c7;border-radius:6px"><strong>8. TodoList</strong> <span style="color:#6B7280;font-size:0.7rem">— 할 일 ⚡ 액션 (최하단)</span></div>
+    </div>
+    <div style="margin-top:12px;font-size:0.72rem;color:#6B7280;line-height:1.6">
+      <strong style="color:#DC2626">진단:</strong> 액션 3개(4·5·8)가 분산. TodoList는 최하단이라 스크롤 부담. DailyInsight·DynamicRecommend 역할 중첩 가능성.
+    </div>
+  </div>
+</div>
+
+<h3>재배치 옵션 3안</h3>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:14px;background:#fff">
+      <div style="font-size:0.75rem;font-weight:700;margin-bottom:6px;color:#60A5FA">A. 액션 우선</div>
+      <div style="display:flex;flex-direction:column;gap:3px;font-size:0.7rem">
+        <div style="padding:4px 8px;background:#EFF6FF;border-radius:4px">1. WeatherHero + Greeting (압축)</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>2. TodayBlock</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>3. TodoList</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>4. RoutineList</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">5. DynamicRecommend (인사이트 통합)</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">6. Upcoming (접힘)</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>액션 우선 (추천)</h3>
+      <p>스크롤 위쪽에 액션(오늘/할일/루틴) 모음. DailyInsight를 DynamicRecommend로 흡수해 8→6블록.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:14px;background:#fff">
+      <div style="font-size:0.75rem;font-weight:700;margin-bottom:6px;color:#60A5FA">B. 시간 흐름</div>
+      <div style="display:flex;flex-direction:column;gap:3px;font-size:0.7rem">
+        <div style="padding:4px 8px;background:#EFF6FF;border-radius:4px">1. WeatherHero + Greeting</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">2. DailyInsight (오늘의 한 줄)</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>3. TodayBlock</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>4. RoutineList</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px"><strong>5. TodoList</strong> ⚡</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">6. DynamicRecommend</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">7. Upcoming (접힘)</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>시간 흐름</h3>
+      <p>"보기 → 한 줄 인사이트 → 액션 → 제안 → 미래" 자연스러운 흐름. 8→7블록 (DailyInsight·DynamicRecommend 역할 분리 유지).</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:14px;background:#fff">
+      <div style="font-size:0.75rem;font-weight:700;margin-bottom:6px;color:#60A5FA">C. 그룹 헤더</div>
+      <div style="display:flex;flex-direction:column;gap:3px;font-size:0.7rem">
+        <div style="padding:4px 8px;background:#EFF6FF;border-radius:4px">1. WeatherHero + Greeting</div>
+        <div style="padding:3px 8px;font-size:0.6rem;color:#9ca3af;letter-spacing:0.06em">— 오늘 ACTION —</div>
+        <div style="padding:4px 8px;background:#fef3c7;border-radius:4px">TodayBlock / RoutineList / TodoList</div>
+        <div style="padding:3px 8px;font-size:0.6rem;color:#9ca3af;letter-spacing:0.06em">— 인사이트 INSIGHT —</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">DailyInsight + DynamicRecommend</div>
+        <div style="padding:3px 8px;font-size:0.6rem;color:#9ca3af;letter-spacing:0.06em">— 일정 SCHEDULE —</div>
+        <div style="padding:4px 8px;background:#fafafa;border-radius:4px">Upcoming (접힘)</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>그룹 헤더 추가</h3>
+      <p>현 블록 유지하되 의미 단위 그룹 헤더(ACTION/INSIGHT/SCHEDULE)로 묶음. 블록 수 변화 없이 정보 위계만 강화.</p>
+    </div>
+  </div>
+
+</div>

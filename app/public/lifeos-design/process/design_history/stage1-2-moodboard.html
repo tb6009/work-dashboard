@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life OS — Design Moodboard v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black: #000000;
+    --gray80: #333333;
+    --gray50: #808080;
+    --gray30: #b3b3b3;
+    --gray10: #e6e6e6;
+    --gray05: #f2f2f2;
+    --white: #ffffff;
+  }
+
+  body {
+    background: var(--white);
+    color: var(--gray80);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 80px 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 960px; margin: 0 auto; }
+
+  /* ── Typography ── */
+  h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    color: var(--gray50);
+    margin-top: 12px;
+    margin-bottom: 120px;
+  }
+
+  .section-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .section-desc {
+    font-size: 0.88rem;
+    color: var(--gray50);
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .spacer { height: 120px; }
+  .divider { height: 1px; background: var(--gray10); margin: 0; }
+
+  /* ── Principle ── */
+  .principle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 640px) { .principle-grid { grid-template-columns: 1fr; } }
+
+  .principle {
+    padding: 32px 0;
+    border-top: 1px solid var(--gray10);
+  }
+  .principle:nth-child(odd) { padding-right: 40px; }
+  .principle:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--gray10); }
+  @media (max-width: 640px) {
+    .principle:nth-child(odd) { padding-right: 0; }
+    .principle:nth-child(even) { padding-left: 0; border-left: none; }
+  }
+
+  .principle-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+  .principle-text {
+    font-size: 0.82rem;
+    color: var(--gray50);
+    line-height: 1.6;
+  }
+
+  /* ── Color System ── */
+  .color-rule {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+    margin-bottom: 64px;
+  }
+  @media (max-width: 640px) { .color-rule { grid-template-columns: 1fr; gap: 16px; } }
+
+  .color-rule-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding-top: 4px;
+  }
+
+  .text-demo {
+    margin-bottom: 40px;
+  }
+  .text-demo-black {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+  .text-demo-gray {
+    font-size: 0.95rem;
+    color: var(--gray80);
+    line-height: 1.7;
+  }
+  .text-demo-muted {
+    font-size: 0.82rem;
+    color: var(--gray50);
+    margin-top: 4px;
+  }
+  .text-demo-faint {
+    font-size: 0.75rem;
+    color: var(--gray30);
+    margin-top: 4px;
+  }
+
+  /* ── Time Color ── */
+  .time-color-strip {
+    display: flex;
+    align-items: stretch;
+    height: 80px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .time-color-strip > div {
+    flex: 1;
+    position: relative;
+    transition: flex 0.3s ease;
+  }
+  .time-color-strip > div:hover { flex: 2; }
+  .time-color-strip > div::after {
+    content: attr(data-time);
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.7);
+    white-space: nowrap;
+  }
+  .time-note {
+    font-size: 0.78rem;
+    color: var(--gray50);
+    margin-bottom: 48px;
+  }
+
+  /* ── Time color options ── */
+  .time-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 640px) { .time-options { grid-template-columns: 1fr; gap: 32px; } }
+
+  .time-option {}
+  .time-option-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  .time-option-strip {
+    height: 48px;
+    display: flex;
+    margin-bottom: 16px;
+  }
+  .time-option-strip > div { flex: 1; }
+  .time-option-desc {
+    font-size: 0.78rem;
+    color: var(--gray50);
+    line-height: 1.5;
+  }
+
+  /* ── Typography Options ── */
+  .typo-option {
+    padding: 48px 0;
+    border-top: 1px solid var(--gray10);
+  }
+  .typo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+  .typo-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .typo-tag {
+    font-size: 0.7rem;
+    color: var(--gray30);
+  }
+  .typo-heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .typo-subheading {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gray50);
+    margin-bottom: 16px;
+  }
+  .typo-body-kr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gray80);
+    line-height: 1.75;
+    max-width: 480px;
+  }
+  .typo-caption-kr {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    color: var(--gray50);
+    margin-top: 8px;
+  }
+
+  /* ── Phone Mockup ── */
+  .phones-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .phone-wrap {}
+  .phone-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .phone {
+    width: 320px;
+    background: #000;
+    border-radius: 36px;
+    padding: 10px;
+  }
+  .phone-inner {
+    border-radius: 28px;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .phone-status {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+  }
+  .dynamic-island {
+    width: 100px;
+    height: 22px;
+    background: #000;
+    border-radius: 16px;
+  }
+
+  .screen {
+    min-height: 620px;
+    padding: 8px 24px 32px;
+    background: var(--white);
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+  }
+
+  .s-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .s-greeting {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+  .s-by {
+    font-size: 0.75rem;
+    color: var(--gray50);
+    margin-top: 4px;
+    margin-bottom: 32px;
+  }
+
+  .s-block { margin-bottom: 28px; }
+  .s-block-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .s-block-text {
+    font-size: 0.82rem;
+    color: var(--gray80);
+    line-height: 1.7;
+  }
+  .s-done {
+    color: var(--gray30);
+    text-decoration: line-through;
+  }
+  .s-pending {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .s-recommend {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding: 12px 0;
+    border-left: 2px solid;
+    padding-left: 14px;
+    color: var(--gray80);
+  }
+
+  .s-tabs {
+    display: flex;
+    gap: 0;
+    margin-top: 32px;
+    border-top: 1px solid var(--gray10);
+    padding-top: 16px;
+  }
+  .s-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.75rem;
+    color: var(--gray30);
+    cursor: pointer;
+    position: relative;
+  }
+  .s-tab.active {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .s-tab.active::after {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 2px;
+  }
+  .s-tab-name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1px;
+  }
+  .s-tab-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── Architecture ── */
+  .arch-text {
+    margin-bottom: 64px;
+  }
+  .arch-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    padding: 20px 0;
+    border-top: 1px solid var(--gray10);
+  }
+  @media (max-width: 640px) { .arch-row { grid-template-columns: 1fr; gap: 4px; } }
+
+  .arch-key {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--black);
+  }
+  .arch-val {
+    font-size: 0.82rem;
+    color: var(--gray80);
+  }
+  .arch-val span {
+    color: var(--gray50);
+    font-size: 0.78rem;
+  }
+
+  /* ── DB Schema ── */
+  .schema-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-bottom: 48px;
+  }
+  .schema-table th {
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: var(--gray30);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray10);
+  }
+  .schema-table td {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--gray05);
+    vertical-align: top;
+  }
+  .schema-table td:first-child {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: var(--black);
+    width: 160px;
+  }
+  .schema-table td:nth-child(2) {
+    color: var(--gray50);
+    font-family: monospace;
+    font-size: 0.75rem;
+  }
+  .schema-table td:last-child {
+    color: var(--gray50);
+  }
+
+  /* ── Token Code ── */
+  .token-block {
+    font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.72rem;
+    line-height: 2;
+    color: var(--gray80);
+    padding: 32px;
+    background: var(--gray05);
+    overflow-x: auto;
+    margin-bottom: 48px;
+  }
+  .token-block .cm { color: var(--gray30); }
+  .token-block .k { color: var(--black); font-weight: 500; }
+  .token-block .s { color: #7c3aed; }
+  .token-block .v { color: var(--gray80); }
+
+  /* ── Footer ── */
+  .footer {
+    padding-top: 120px;
+    font-size: 0.75rem;
+    color: var(--gray30);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ═══════════════════════ Header ═══════════════════════ -->
+<h1>Life OS</h1>
+<p class="subtitle">개인 라이프 관리 앱</p>
+
+
+<!-- ═══════════════════════ 01 Design Principles ═══════════════════════ -->
+<div class="section-label">01</div>
+<div class="section-heading">Design Principles</div>
+<div class="section-desc">형태를 최소화하고 텍스트와 여백으로 구성합니다. 색은 시간의 흐름을 나타내는 데에만 사용합니다.</div>
+
+<div class="principle-grid">
+  <div class="principle">
+    <div class="principle-title">White Ground</div>
+    <div class="principle-text">배경은 순백. 콘텐츠가 스스로 위계를 만듭니다.</div>
+  </div>
+  <div class="principle">
+    <div class="principle-title">Text Only</div>
+    <div class="principle-text">100% Black으로 강조, 80% Gray로 본문. 장식 없이 글자만으로 구분합니다.</div>
+  </div>
+  <div class="principle">
+    <div class="principle-title">No Shape</div>
+    <div class="principle-text">카드, 테두리, 그림자 없이 여백과 구분선으로 구조를 잡습니다.</div>
+  </div>
+  <div class="principle">
+    <div class="principle-title">One Color</div>
+    <div class="principle-text">하나의 색이 시간에 따라 천천히 변합니다. 그 외에 색은 쓰지 않습니다.</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ 02 Text Hierarchy ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">02</div>
+<div class="section-heading">Text Hierarchy</div>
+<div class="section-desc">두 가지 농도만 사용합니다. 강조할 때는 Black, 읽을 때는 Gray.</div>
+
+<div class="text-demo">
+  <div class="text-demo-black">Good Morning</div>
+  <div class="text-demo-gray">진 집사가 준비한 오늘의 브리핑입니다. 어제 완료하지 못한 일정이 2건 있습니다.</div>
+  <div class="text-demo-muted">수면 7시간 / 컨디션 4 / 일정 3건</div>
+  <div class="text-demo-faint">THU, MAY 01 / 08:42 AM</div>
+</div>
+
+<div class="color-rule">
+  <div class="color-rule-label">Hierarchy</div>
+  <div>
+    <div style="display:flex; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="width:48px; height:48px; background:#000000; margin-bottom:8px;"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:0.7rem; color:var(--black); font-weight:600;">#000000</div>
+        <div style="font-size:0.7rem; color:var(--gray50);">제목, 강조, 숫자</div>
+      </div>
+      <div>
+        <div style="width:48px; height:48px; background:#333333; margin-bottom:8px;"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:0.7rem; color:var(--black); font-weight:600;">#333333</div>
+        <div style="font-size:0.7rem; color:var(--gray50);">본문, 설명</div>
+      </div>
+      <div>
+        <div style="width:48px; height:48px; background:#808080; margin-bottom:8px;"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:0.7rem; color:var(--black); font-weight:600;">#808080</div>
+        <div style="font-size:0.7rem; color:var(--gray50);">보조, 캡션</div>
+      </div>
+      <div>
+        <div style="width:48px; height:48px; background:#B3B3B3; margin-bottom:8px;"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:0.7rem; color:var(--black); font-weight:600;">#B3B3B3</div>
+        <div style="font-size:0.7rem; color:var(--gray50);">라벨, 시간</div>
+      </div>
+      <div>
+        <div style="width:48px; height:48px; background:#E6E6E6; margin-bottom:8px;"></div>
+        <div style="font-family:'Outfit',sans-serif; font-size:0.7rem; color:var(--black); font-weight:600;">#E6E6E6</div>
+        <div style="font-size:0.7rem; color:var(--gray50);">구분선</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ 03 Time Color ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">03</div>
+<div class="section-heading">Time Color</div>
+<div class="section-desc">유일한 색. 시간대에 따라 하나의 색이 천천히 변합니다. 구분선, 액센트, 추천 블록에만 사용됩니다.</div>
+
+<div class="time-options">
+  <div class="time-option">
+    <div class="time-option-label">Option A / Blue Cycle</div>
+    <div class="time-option-strip">
+      <div style="background:#93C5FD;" data-time="AM"></div>
+      <div style="background:#60A5FA;"></div>
+      <div style="background:#3B82F6;"></div>
+      <div style="background:#2563EB;"></div>
+      <div style="background:#1D4ED8;"></div>
+      <div style="background:#1E3A5F;" data-time="PM"></div>
+    </div>
+    <div class="time-option-desc">아침엔 옅은 하늘색, 밤으로 갈수록 깊어집니다. 가장 보편적이고 차분한 선택.</div>
+  </div>
+
+  <div class="time-option">
+    <div class="time-option-label">Option B / Warm Shift</div>
+    <div class="time-option-strip">
+      <div style="background:#FCD34D;"></div>
+      <div style="background:#F59E0B;"></div>
+      <div style="background:#D97706;"></div>
+      <div style="background:#B45309;"></div>
+      <div style="background:#92400E;"></div>
+      <div style="background:#78350F;"></div>
+    </div>
+    <div class="time-option-desc">아침 햇살에서 시작해 따뜻한 호박색으로. 자연광의 흐름을 따릅니다.</div>
+  </div>
+
+  <div class="time-option">
+    <div class="time-option-label">Option C / Ink</div>
+    <div class="time-option-strip">
+      <div style="background:#A8A29E;"></div>
+      <div style="background:#78716C;"></div>
+      <div style="background:#57534E;"></div>
+      <div style="background:#44403C;"></div>
+      <div style="background:#292524;"></div>
+      <div style="background:#1C1917;"></div>
+    </div>
+    <div class="time-option-desc">색 자체를 쓰지 않습니다. 먹의 농도처럼 시간에 따라 진해지기만 합니다.</div>
+  </div>
+</div>
+
+<div class="time-note">하루 중 현재 시각의 색만 UI에 나타납니다. 한 화면에 여러 색이 동시에 보이지 않습니다.</div>
+
+
+<!-- ═══════════════════════ 04 Typography ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">04</div>
+<div class="section-heading">Typography</div>
+<div class="section-desc">영문 제목 + 한글 본문. 본문은 Noto Sans KR 고정, 제목 서체만 선택합니다.</div>
+
+<div class="typo-option">
+  <div class="typo-meta">
+    <div class="typo-name">A / Outfit + Noto Sans KR</div>
+    <div class="typo-tag">Recommended</div>
+  </div>
+  <div class="typo-heading" style="font-family:'Outfit',sans-serif;">Good Morning</div>
+  <div class="typo-subheading" style="font-family:'Outfit',sans-serif;">Today's Briefing</div>
+  <div class="typo-body-kr">오늘 하루도 차분하게 시작해볼까요. 어제 완료하지 못한 일정이 2건 있습니다. 근로자의 날로 공식 일정은 없으니, 질적연구 과제에 집중하시는 것을 권해 드립니다.</div>
+  <div class="typo-caption-kr">수면 7시간 / 컨디션 4 / 일정 3건</div>
+</div>
+
+<div class="typo-option">
+  <div class="typo-meta">
+    <div class="typo-name">B / Plus Jakarta Sans + Noto Sans KR</div>
+    <div class="typo-tag"></div>
+  </div>
+  <div class="typo-heading" style="font-family:'Plus Jakarta Sans',sans-serif;">Good Morning</div>
+  <div class="typo-subheading" style="font-family:'Plus Jakarta Sans',sans-serif;">Today's Briefing</div>
+  <div class="typo-body-kr">오늘 하루도 차분하게 시작해볼까요. 어제 완료하지 못한 일정이 2건 있습니다. 근로자의 날로 공식 일정은 없으니, 질적연구 과제에 집중하시는 것을 권해 드립니다.</div>
+  <div class="typo-caption-kr">수면 7시간 / 컨디션 4 / 일정 3건</div>
+</div>
+
+<div class="typo-option">
+  <div class="typo-meta">
+    <div class="typo-name">C / Sora + Noto Sans KR</div>
+    <div class="typo-tag"></div>
+  </div>
+  <div class="typo-heading" style="font-family:'Sora',sans-serif;">Good Morning</div>
+  <div class="typo-subheading" style="font-family:'Sora',sans-serif;">Today's Briefing</div>
+  <div class="typo-body-kr">오늘 하루도 차분하게 시작해볼까요. 어제 완료하지 못한 일정이 2건 있습니다. 근로자의 날로 공식 일정은 없으니, 질적연구 과제에 집중하시는 것을 권해 드립니다.</div>
+  <div class="typo-caption-kr">수면 7시간 / 컨디션 4 / 일정 3건</div>
+</div>
+
+<div class="typo-option" style="border-bottom: 1px solid var(--gray10);">
+  <div class="typo-meta">
+    <div class="typo-name">D / DM Sans + Noto Sans KR</div>
+    <div class="typo-tag"></div>
+  </div>
+  <div class="typo-heading" style="font-family:'DM Sans',sans-serif;">Good Morning</div>
+  <div class="typo-subheading" style="font-family:'DM Sans',sans-serif;">Today's Briefing</div>
+  <div class="typo-body-kr">오늘 하루도 차분하게 시작해볼까요. 어제 완료하지 못한 일정이 2건 있습니다. 근로자의 날로 공식 일정은 없으니, 질적연구 과제에 집중하시는 것을 권해 드립니다.</div>
+  <div class="typo-caption-kr">수면 7시간 / 컨디션 4 / 일정 3건</div>
+</div>
+
+
+<!-- ═══════════════════════ 05 Screen Mockup ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">05</div>
+<div class="section-heading">Morning Briefing</div>
+<div class="section-desc">세 가지 시간 컬러 옵션으로 본 동일한 브리핑 화면. 아침 8시 기준.</div>
+
+<div class="phones-row">
+
+  <!-- Phone A: Blue -->
+  <div class="phone-wrap">
+    <div class="phone-label">Blue / 08:00 AM</div>
+    <div class="phone">
+      <div class="phone-inner">
+        <div class="phone-status"><div class="dynamic-island"></div></div>
+        <div class="screen">
+          <div class="s-date">Thu, May 01</div>
+          <div class="s-greeting" style="font-family:'Outfit',sans-serif;">Good Morning</div>
+          <div class="s-by">진 집사가 준비한 오늘의 브리핑입니다</div>
+
+          <div class="s-block">
+            <div class="s-block-label">Yesterday</div>
+            <div class="s-block-text">
+              <div class="s-done">주간 리포트 작성 완료</div>
+              <div class="s-done">10-일상다반사 v1.5 리뷰</div>
+              <div class="s-pending">질적연구 데이터 수집 계획</div>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Today</div>
+            <div class="s-block-text">
+              근로자의 날 &mdash; 공식 일정 없음<br>
+              <span style="color:var(--gray50);">질적연구 과제 집중 권장</span>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Recommendation</div>
+            <div class="s-recommend" style="border-color:#60A5FA;">
+              일정이 비어있는 오늘, 5/28 과제의 데이터 수집 계획 초안을 작성해보시면 어떨까요.
+            </div>
+          </div>
+
+          <div class="s-tabs">
+            <div class="s-tab active">
+              <span class="s-tab-name">진</span>
+              <span class="s-tab-role" style="color:#60A5FA;">Butler</span>
+              <div style="position:absolute; top:-17px; left:50%; transform:translateX(-50%); width:24px; height:2px; background:#60A5FA;"></div>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">모미</span>
+              <span class="s-tab-role">Trainer</span>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">마음</span>
+              <span class="s-tab-role">Coach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone B: Warm -->
+  <div class="phone-wrap">
+    <div class="phone-label">Warm / 08:00 AM</div>
+    <div class="phone">
+      <div class="phone-inner">
+        <div class="phone-status"><div class="dynamic-island"></div></div>
+        <div class="screen">
+          <div class="s-date">Thu, May 01</div>
+          <div class="s-greeting" style="font-family:'Outfit',sans-serif;">Good Morning</div>
+          <div class="s-by">진 집사가 준비한 오늘의 브리핑입니다</div>
+
+          <div class="s-block">
+            <div class="s-block-label">Yesterday</div>
+            <div class="s-block-text">
+              <div class="s-done">주간 리포트 작성 완료</div>
+              <div class="s-done">10-일상다반사 v1.5 리뷰</div>
+              <div class="s-pending">질적연구 데이터 수집 계획</div>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Today</div>
+            <div class="s-block-text">
+              근로자의 날 &mdash; 공식 일정 없음<br>
+              <span style="color:var(--gray50);">질적연구 과제 집중 권장</span>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Recommendation</div>
+            <div class="s-recommend" style="border-color:#F59E0B;">
+              일정이 비어있는 오늘, 5/28 과제의 데이터 수집 계획 초안을 작성해보시면 어떨까요.
+            </div>
+          </div>
+
+          <div class="s-tabs">
+            <div class="s-tab active">
+              <span class="s-tab-name">진</span>
+              <span class="s-tab-role" style="color:#D97706;">Butler</span>
+              <div style="position:absolute; top:-17px; left:50%; transform:translateX(-50%); width:24px; height:2px; background:#D97706;"></div>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">모미</span>
+              <span class="s-tab-role">Trainer</span>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">마음</span>
+              <span class="s-tab-role">Coach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone C: Ink -->
+  <div class="phone-wrap">
+    <div class="phone-label">Ink / 08:00 AM</div>
+    <div class="phone">
+      <div class="phone-inner">
+        <div class="phone-status"><div class="dynamic-island"></div></div>
+        <div class="screen">
+          <div class="s-date">Thu, May 01</div>
+          <div class="s-greeting" style="font-family:'Outfit',sans-serif;">Good Morning</div>
+          <div class="s-by">진 집사가 준비한 오늘의 브리핑입니다</div>
+
+          <div class="s-block">
+            <div class="s-block-label">Yesterday</div>
+            <div class="s-block-text">
+              <div class="s-done">주간 리포트 작성 완료</div>
+              <div class="s-done">10-일상다반사 v1.5 리뷰</div>
+              <div class="s-pending">질적연구 데이터 수집 계획</div>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Today</div>
+            <div class="s-block-text">
+              근로자의 날 &mdash; 공식 일정 없음<br>
+              <span style="color:var(--gray50);">질적연구 과제 집중 권장</span>
+            </div>
+          </div>
+
+          <div class="s-block">
+            <div class="s-block-label">Recommendation</div>
+            <div class="s-recommend" style="border-color:#A8A29E;">
+              일정이 비어있는 오늘, 5/28 과제의 데이터 수집 계획 초안을 작성해보시면 어떨까요.
+            </div>
+          </div>
+
+          <div class="s-tabs">
+            <div class="s-tab active">
+              <span class="s-tab-name">진</span>
+              <span class="s-tab-role" style="color:#78716C;">Butler</span>
+              <div style="position:absolute; top:-17px; left:50%; transform:translateX(-50%); width:24px; height:2px; background:#78716C;"></div>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">모미</span>
+              <span class="s-tab-role">Trainer</span>
+            </div>
+            <div class="s-tab">
+              <span class="s-tab-name">마음</span>
+              <span class="s-tab-role">Coach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════ 06 Architecture ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">06</div>
+<div class="section-heading">Architecture</div>
+<div class="section-desc">웹과 모바일이 동일한 DB와 테마 토큰을 공유합니다.</div>
+
+<div class="arch-text">
+  <div class="arch-row">
+    <div class="arch-key">Frontend</div>
+    <div class="arch-val">Next.js (Web) + Expo (Mobile) <span>/ Turborepo monorepo</span></div>
+  </div>
+  <div class="arch-row">
+    <div class="arch-key">Shared</div>
+    <div class="arch-val">packages/types, packages/theme, packages/api <span>/ 타입, 테마 토큰, API 클라이언트 공유</span></div>
+  </div>
+  <div class="arch-row">
+    <div class="arch-key">Backend</div>
+    <div class="arch-val">Supabase <span>/ PostgreSQL + Auth + Realtime + Storage</span></div>
+  </div>
+  <div class="arch-row">
+    <div class="arch-key">Storage</div>
+    <div class="arch-val">Supabase Storage <span>/ 배경 이미지 업로드, 이미지 최적화</span></div>
+  </div>
+  <div class="arch-row">
+    <div class="arch-key">AI</div>
+    <div class="arch-val">Claude API <span>/ 캐릭터별 시스템 프롬프트, Edge Function 스트리밍</span></div>
+  </div>
+  <div class="arch-row" style="border-bottom: 1px solid var(--gray10);">
+    <div class="arch-key">Theme</div>
+    <div class="arch-val">Design Tokens <span>/ 런타임 교체 가능, CSS Variables + RN StyleSheet</span></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════ 07 DB Schema ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">07</div>
+<div class="section-heading">Database</div>
+
+<table class="schema-table">
+  <thead>
+    <tr><th>Table</th><th>Columns</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>users</td>
+      <td>id, name, theme, time_color, bg_image_url</td>
+      <td>인증 + 개인 설정</td>
+    </tr>
+    <tr>
+      <td>daily_briefings</td>
+      <td>date, yesterday, today, recommendation</td>
+      <td>진의 3블록 브리핑</td>
+    </tr>
+    <tr>
+      <td>health_logs</td>
+      <td>date, sleep_hours, sleep_quality, exercise, condition</td>
+      <td>모미의 1줄 트래커</td>
+    </tr>
+    <tr>
+      <td>journal_entries</td>
+      <td>date, sentences, emotion, coach_note</td>
+      <td>마음의 3문장 일지</td>
+    </tr>
+    <tr>
+      <td>finance_logs</td>
+      <td>month, category, budget, actual</td>
+      <td>월간 예산/지출</td>
+    </tr>
+    <tr>
+      <td>schedules</td>
+      <td>date, time, title, completed</td>
+      <td>일정 + 완료 체크</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- ═══════════════════════ 08 Token Structure ═══════════════════════ -->
+<div class="spacer"></div>
+<div class="section-label">08</div>
+<div class="section-heading">Theme Token</div>
+<div class="section-desc">가변 구조. 색 옵션과 시간대만 바꾸면 전체 앱이 바뀝니다.</div>
+
+<div class="token-block">
+<span class="cm">// packages/theme/tokens.ts</span><br><br>
+<span class="k">export const</span> text = {<br>
+&nbsp;&nbsp;primary: <span class="s">"#000000"</span>,&nbsp;&nbsp;&nbsp;<span class="cm">// 100% black — 제목, 강조</span><br>
+&nbsp;&nbsp;body: <span class="s">"#333333"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// 80% gray — 본문</span><br>
+&nbsp;&nbsp;muted: <span class="s">"#808080"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// 50% — 보조</span><br>
+&nbsp;&nbsp;faint: <span class="s">"#B3B3B3"</span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">// 30% — 라벨</span><br>
+}<br><br>
+<span class="k">export const</span> surface = {<br>
+&nbsp;&nbsp;background: <span class="s">"#FFFFFF"</span>,<br>
+&nbsp;&nbsp;divider: <span class="s">"#E6E6E6"</span>,<br>
+}<br><br>
+<span class="cm">// 시간에 따라 보간되는 단일 색</span><br>
+<span class="k">export const</span> timeColor = {<br>
+&nbsp;&nbsp;blue: [<span class="s">"#93C5FD"</span>, <span class="s">"#60A5FA"</span>, <span class="s">"#3B82F6"</span>, <span class="s">"#2563EB"</span>, <span class="s">"#1D4ED8"</span>, <span class="s">"#1E3A5F"</span>],<br>
+&nbsp;&nbsp;warm: [<span class="s">"#FCD34D"</span>, <span class="s">"#F59E0B"</span>, <span class="s">"#D97706"</span>, <span class="s">"#B45309"</span>, <span class="s">"#92400E"</span>, <span class="s">"#78350F"</span>],<br>
+&nbsp;&nbsp;ink:&nbsp; [<span class="s">"#A8A29E"</span>, <span class="s">"#78716C"</span>, <span class="s">"#57534E"</span>, <span class="s">"#44403C"</span>, <span class="s">"#292524"</span>, <span class="s">"#1C1917"</span>],<br>
+}<br><br>
+<span class="cm">// 현재 시각 → 색 보간</span><br>
+<span class="k">function</span> getCurrentColor(palette, hour) {<br>
+&nbsp;&nbsp;<span class="k">const</span> index = Math.floor((hour / 24) * palette.length)<br>
+&nbsp;&nbsp;<span class="k">return</span> palette[Math.min(index, palette.length - 1)]<br>
+}
+</div>
+
+
+<!-- ═══════════════════════ Footer ═══════════════════════ -->
+<div class="footer">
+  Life OS Design Moodboard v2 — 2026-05-01<br>
+  Time Color (A/B/C) + Typography (A/B/C/D) 선택 후 시작합니다.
+</div>
+
+</div>
+</body>
+</html>

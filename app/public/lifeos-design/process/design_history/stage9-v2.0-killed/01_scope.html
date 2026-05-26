@@ -1,0 +1,59 @@
+<h2>061_LifeOS/app — 현재 IA를 이렇게 파악했어요</h2>
+<p class="subtitle">먼저 평가/개선 범위를 정한 뒤, 한 단계씩 진행합니다</p>
+
+<div class="mockup">
+  <div class="mockup-header">현재 정보 구조 (IA)</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:8px;margin-bottom:12px">
+      <div class="placeholder" style="flex:1;text-align:center;padding:16px;background:#EFF6FF">
+        <div style="font-weight:700">홈</div>
+        <div style="font-size:0.7rem;color:#6B7280">Briefing</div>
+        <div style="font-size:0.65rem;margin-top:8px;color:#374151">7개 블록<br>(Weather, Greeting,<br>Insight, Today,<br>Routine, Recommend,<br>Todo)</div>
+      </div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:16px">
+        <div style="font-weight:700">하루</div>
+        <div style="font-size:0.7rem;color:#6B7280">Assistant</div>
+      </div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:16px;background:#FEF3C7">
+        <div style="font-weight:700">기록</div>
+        <div style="font-size:0.7rem;color:#6B7280">Diary</div>
+        <div style="font-size:0.65rem;margin-top:8px;color:#374151">서브탭:<br>Today / Week / Month<br><br><span style="color:#DC2626">⚠ Week에<br>이전주/다음주<br>네비 없음</span></div>
+      </div>
+      <div class="placeholder" style="flex:1;text-align:center;padding:16px">
+        <div style="font-weight:700">설정</div>
+        <div style="font-size:0.7rem;color:#6B7280">Settings</div>
+      </div>
+    </div>
+
+    <div style="border-top:1px dashed #d1d5db;padding-top:10px;font-size:0.75rem;color:#6B7280">
+      <strong style="color:#DC2626">⚠ 미연결 라우트:</strong> <code>/friends</code> 페이지는 존재하지만 BottomNav에 없음 — 진입 경로 불명
+    </div>
+  </div>
+</div>
+
+<h3>평가/개선 범위를 어디까지로 할까요?</h3>
+<p class="subtitle">YAGNI 원칙상 먼저 좁게 시작하고, 끝나면 다음 범위로 넘어가는 걸 추천드려요</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>핀포인트 (추천)</h3>
+      <p>주인님이 언급한 2건만: <strong>홈 7개 블록 우선순위 정리</strong> + <strong>다이어리 주차 네비</strong>. 빠르게 끝남.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>IA 전반</h3>
+      <p>위 2건 + BottomNav 4탭 정합성 + <code>/friends</code> 진입로 + 각 페이지 입구 구조까지. 메뉴구조 전체 정리.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>풀세트</h3>
+      <p>위 + 다이어리 Today/Week/Month 각 탭의 입력·편집 흐름까지 사용성 평가. 가장 넓음 — 1주 단위 작업.</p>
+    </div>
+  </div>
+</div>

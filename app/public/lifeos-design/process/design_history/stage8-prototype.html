@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life OS — Stage 8 Prototype (수정 후)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #f0f0f0; display: flex; justify-content: center; padding: 24px; -webkit-font-smoothing: antialiased; }
+  .page { text-align: left; }
+  .title { font-family: 'Inter'; font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; text-align: center; }
+  .sub { font-size: 0.72rem; color: #808080; margin-bottom: 20px; text-align: center; }
+
+  .phone { width: 375px; background: #000; border-radius: 44px; padding: 10px; margin: 0 auto; text-align: left; }
+  .screen { background: #fff; border-radius: 36px; overflow: hidden; height: 780px; display: flex; flex-direction: column; position: relative; }
+  .tab-content { flex: 1; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; }
+  .tab-content::-webkit-scrollbar { display: none; }
+  .tab-panel { display: none !important; }
+  .tab-panel.active { display: block !important; }
+  .tab-panel.active#tab-haru { display: flex !important; }
+
+  /* Bottom nav — 현재 그대로 유지 */
+  .bottom-nav { border-top: 1px solid #e6e6e6; display: flex; padding: 6px 0 10px; flex-shrink: 0; }
+  .nav-btn { flex: 1; text-align: center !important; background: none; border: none; cursor: pointer; position: relative; padding: 4px 0; }
+  .nav-btn .n-name { display: block; font-size: 0.82rem; font-weight: 700; color: #b3b3b3; }
+  .nav-btn .n-role { font-family: 'Inter'; display: block; font-size: 0.48rem; color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.05em; }
+  .nav-btn.active .n-name { color: #000; }
+  .nav-btn.active .n-role { color: #60A5FA; }
+  .nav-btn.active::before { content: ''; position: absolute; top: -7px; left: 50%; transform: translateX(-50%); width: 20px; height: 2px; background: #60A5FA; }
+
+  .heading { font-family: 'Inter'; }
+  /* 개선: #6B7280 라벨, 0.7rem */
+  .label { font-family: 'Inter'; font-size: 0.7rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; margin-top: 24px; }
+  .skeleton { background: #f2f2f2; border-radius: 6px; animation: pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.5;} }
+
+  /* 개선: 44px 체크 행 */
+  .check-row { display: flex; align-items: center; gap: 10px; min-height: 36px; cursor: pointer; padding: 0 4px; }
+  .check-circle { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .check-empty { border: 2px solid #60A5FA; }
+  .check-done { background: #60A5FA; }
+  .check-text { font-size: 0.84rem; color: #333; flex: 1; }
+  .check-text.done { color: #6B7280; text-decoration: line-through; }
+  .check-sub { font-size: 0.65rem; color: #60A5FA; flex-shrink: 0; }
+  .check-sub-muted { font-size: 0.65rem; color: #6B7280; flex-shrink: 0; }
+
+  .pill { font-size: 0.65rem; padding: 2px 8px; border-radius: 12px; display: inline-block; margin-right: 4px; margin-bottom: 2px; }
+  .collapse-header { display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 4px 0; margin-top: 24px; }
+  .collapse-arrow { font-size: 0.7rem; color: #6B7280; }
+  .collapse-body { overflow: hidden; }
+  .collapse-body.closed { max-height: 0; }
+  .collapse-body.open { max-height: 500px; }
+
+  .legend { display: flex; gap: 10px; margin-top: 4px; }
+  .legend-item { display: flex; align-items: center; gap: 3px; font-size: 0.62rem; color: #6B7280; }
+  .legend-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  .empty-state { text-align: left; padding: 12px 12px; }
+  .empty-text { font-size: 0.82rem; color: #6B7280; margin-bottom: 6px; }
+  .empty-action { font-size: 0.75rem; color: #60A5FA; font-weight: 500; }
+
+  /* Home */
+  .weather { height: 240px; position: relative; overflow: hidden; background: linear-gradient(180deg, #87CEEB 0%, #B8E1F3 30%, #D4EDF7 50%, #EAF5FB 70%, #F8FBFE 90%, #fff 100%); }
+  .weather-info { position: absolute; top: 30%; left: 0; right: 0; padding: 0 28px; }
+  .weather-brand { font-family: 'Inter'; font-size: 0.65rem; font-weight: 500; color: #000; opacity: 0.35; letter-spacing: 0.08em; margin-bottom: 2px; }
+  .weather-temp { font-family: 'Inter'; font-size: 4.5rem; font-weight: 300; color: #000; line-height: 1; }
+  .weather-detail { font-size: 1rem; color: #000; margin-top: 4px; }
+  .section { padding: 0 28px; }
+  .greeting { padding: 10px 28px 0; }
+  .g-date { font-family: 'Inter'; font-size: 0.65rem; color: #6B7280; text-transform: uppercase; letter-spacing: 0.1em; }
+  .g-title { font-family: 'Inter'; font-size: 1.5rem; font-weight: 700; color: #000; margin-top: 2px; }
+  .g-sub { font-size: 0.75rem; color: #6B7280; margin-top: 2px; }
+  .insight-text { font-size: 0.85rem; color: #000; line-height: 1.45; padding-left: 14px; border-left: 2px solid #60A5FA; }
+  .today-title { font-size: 1.15rem; font-weight: 600; color: #000; }
+  .sched-item { font-size: 0.82rem; color: #333; padding: 2px 0; }
+  .sched-time { font-family: 'Inter'; font-size: 0.72rem; color: #6B7280; margin-right: 4px; }
+  .rec-context { font-size: 0.78rem; color: #6B7280; line-height: 1.4; margin-bottom: 4px; }
+
+  /* Haru */
+  .haru-header { padding: 3px 28px 3px; background: #fff; border-bottom: 1px solid #e6e6e6; }
+  .haru-title { font-family: 'Inter'; font-size: 1.2rem; font-weight: 700; }
+  .haru-sub { font-size: 0.7rem; color: #6B7280; margin-top: 1px; }
+  .msg { margin-bottom: 10px; display: flex; padding: 0 28px; }
+  .msg.user { justify-content: flex-end; }
+  .bubble { max-width: 80%; padding: 6px 10px; font-size: 0.8rem; color: #333; line-height: 1.35; border-radius: 14px; white-space: pre-wrap; }
+  .bubble.user { background: #f2f2f2; border-radius: 16px 16px 4px 16px; }
+  .bubble.assistant { border: 1px solid #e6e6e6; border-radius: 16px 16px 16px 4px; }
+  .bubble-name { font-size: 0.6rem; font-weight: 600; color: #60A5FA; display: block; margin-bottom: 2px; }
+  .chat-input { padding: 4px 28px 6px; border-top: 1px solid #e6e6e6; display: flex; gap: 6px; align-items: flex-end; }
+  .chat-input input { flex: 1; font-size: 14px; padding: 10px 12px; border: 1px solid #e6e6e6; border-radius: 12px; background: #f8f8f8; outline: none; font-family: inherit; }
+  .send-btn { width: 36px; height: 36px; border-radius: 50%; background: #60A5FA; border: none; flex-shrink: 0; }
+
+  /* Diary */
+  .diary-header { padding: 10px 28px 0; display: flex; justify-content: space-between; align-items: baseline; }
+  .diary-tabs { display: flex; padding: 6px 28px 0; border-bottom: 1px solid #e6e6e6; }
+  .dtab { flex: 1; text-align: center !important; padding: 6px 0; font-family: 'Inter'; font-size: 0.72rem; font-weight: 400; color: #b3b3b3; cursor: pointer; position: relative; text-transform: uppercase; letter-spacing: 0.06em; background: none; border: none; }
+  .dtab.active { font-weight: 600; color: #000; }
+  .dtab.active::after { content: ''; position: absolute; bottom: -1px; left: 20%; right: 20%; height: 2px; background: #60A5FA; }
+  .diary-content { padding: 0 28px 12px; }
+  .emo-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .emo-btn { font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; cursor: pointer; background: #fff; border-width: 2px; border-style: solid; }
+  .review-label { font-size: 0.72rem; color: #6B7280; margin-bottom: 2px; }
+  .review-input { width: 100%; font-size: 14px; padding: 6px 10px; border: 1px solid #e6e6e6; border-radius: 6px; background: #f8f8f8; outline: none; margin-bottom: 5px; font-family: inherit; }
+  .save-btn { width: 100%; padding: 10px; font-size: 0.85rem; font-weight: 600; color: #fff; background: #000; border: none; border-radius: 10px; cursor: pointer; margin-top: 8px; }
+
+  /* Chart */
+  .mini-chart { display: flex; align-items: flex-end; gap: 2px; height: 50px; }
+  .mini-bar { flex: 1; border-radius: 2px 2px 0 0; }
+  .color-strip { display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 1px; }
+
+  /* Routine summary */
+  .routine-summary { padding: 6px 10px; background: #fafafa; border-radius: 8px; font-size: 0.72rem; color: #333; line-height: 1.4; margin-top: 4px; }
+
+  /* Settings */
+  .settings-section { padding: 12px 28px; }
+
+  /* Date picker */
+  .date-picker-wrap { position: relative; margin: 8px 0 4px; }
+  .date-picker-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0 calc(50% - 26px); }
+  .date-picker-track::-webkit-scrollbar { display: none; }
+  .date-item { flex-shrink: 0; width: 52px; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 0; cursor: pointer; }
+  .date-day { font-family: 'Inter'; font-size: 0.6rem; color: #6B7280; }
+  .date-num { font-family: 'Inter'; font-size: 1rem; font-weight: 600; color: #333; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+  .date-item.active .date-num { background: #000; color: #fff; }
+  .date-item.active .date-day { color: #000; font-weight: 600; }
+  .date-item.today .date-num { position: relative; }
+  .date-item.today .date-num::after { content: ''; position: absolute; bottom: 2px; width: 4px; height: 4px; border-radius: 50%; background: #60A5FA; }
+  .today-btn { font-family: 'Inter'; font-size: 0.6rem; font-weight: 600; color: #60A5FA; background: none; border: none; cursor: pointer; padding: 2px 8px; }
+
+  /* Annotation badge */
+  .badge { display: inline-block; font-size: 0.5rem; padding: 1px 6px; border-radius: 8px; margin-left: 4px; vertical-align: middle; }
+  .badge-p0 { background: #DBEAFE; color: #2563EB; }
+  .badge-p1 { background: #FEF3C7; color: #D97706; }
+</style>
+</head>
+<body>
+<div class="page">
+<div class="title">Stage 8 — 수정 후 프로토타입</div>
+<div class="sub">P0+P1 개선 적용 | 하단 메뉴 유지 | 탭 클릭으로 전환</div>
+
+<div class="phone">
+<div class="screen">
+<div class="tab-content">
+
+<!-- ═══ HOME ═══ -->
+<div class="tab-panel active" id="tab-home">
+  <div class="weather">
+    <div class="weather-info">
+      <div class="weather-brand">진's LifeOS</div>
+      <div class="weather-temp">18°</div>
+      <div class="weather-detail"><strong>맑음</strong> <span style="opacity:0.6">최저 12° / 최고 22°</span></div>
+    </div>
+  </div>
+
+  <div class="greeting">
+    <div class="g-date">Wed, May 07</div>
+    <div class="g-title">Good Morning</div>
+    <div class="g-sub">진 집사가 준비한 오늘의 브리핑입니다</div>
+  </div>
+
+  <div class="section" style="padding-top:8px;">
+    <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px;">
+      <span class="pill" style="color:#6B7280;background:#f2f2f2;">맑음 18°</span>
+      <span class="pill" style="color:#60A5FA;background:rgba(96,165,250,0.08);">몸 수면 6.1시간, 컨디션 3/5</span>
+      <span class="pill" style="color:#8B5CF6;background:rgba(139,92,246,0.08);">마음 피곤</span>
+    </div>
+    <div class="insight-text">좀 지치셨군요. 잠깐이라도 쉬어가세요. 오늘 일정이 없어서 여유로운 하루입니다.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Today</div>
+    <div class="today-title">수요일 — 일정 없음</div>
+
+    <div class="label">Routine <span style="float:right;color:#60A5FA;">🔥 2/4</span></div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-done"><svg width="10" height="8" viewBox="0 0 8 6" fill="none"><path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <span class="check-text done">아침 스트레칭 10분</span>
+      <span class="check-sub">4일째</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-empty"></span>
+      <span class="check-text">물 8잔 마시기</span>
+      <span class="check-sub-muted">잊지 않으셨죠?</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-done"><svg width="10" height="8" viewBox="0 0 8 6" fill="none"><path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <span class="check-text done">감사 일기 쓰기</span>
+      <span class="check-sub">6일째</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-empty"></span>
+      <span class="check-text">30분 이상 운동</span>
+      <span class="check-sub-muted">잊지 않으셨죠?</span>
+    </div>
+
+    <!-- P1: 접힘 -->
+    <div class="collapse-header" onclick="var b=this.nextElementSibling;b.classList.toggle('closed');b.classList.toggle('open');this.querySelector('.collapse-arrow').textContent=b.classList.contains('open')?'▲':'▼'">
+      <div class="label" style="margin:0;">Tomorrow / Upcoming</div>
+      <span class="collapse-arrow">▼</span>
+    </div>
+    <div class="collapse-body closed">
+      <div style="font-size:0.82rem;color:#6B7280;padding:4px 0;">목요일 — 일정 없음</div>
+      <div style="font-size:0.82rem;color:#6B7280;padding:4px 0;">금요일 — 일정 없음</div>
+      <div style="font-size:0.82rem;color:#6B7280;padding:4px 0;">어제 — 어린이날</div>
+    </div>
+
+    <div class="label">Recommendation <span style="float:right;font-size:0.65rem;color:#6B7280;">2/4</span></div>
+    <div class="rec-context">좀 지치셨군요. 오늘은 여유로우니 이런 것들을 챙겨보세요:</div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-done"><svg width="10" height="8" viewBox="0 0 8 6" fill="none"><path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <span class="check-text done">수분 보충</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-empty"></span>
+      <span class="check-text">10분 산책</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-done"><svg width="10" height="8" viewBox="0 0 8 6" fill="none"><path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <span class="check-text done">호흡 연습</span>
+    </div>
+    <div class="check-row" onclick="this.querySelector('.check-circle').classList.toggle('check-done');this.querySelector('.check-circle').classList.toggle('check-empty');this.querySelector('.check-text').classList.toggle('done')">
+      <span class="check-circle check-empty"></span>
+      <span class="check-text">저녁에 일찍 자기</span>
+    </div>
+
+    <div class="label">Todo</div>
+    <div style="display:flex;gap:6px;margin-bottom:4px;">
+      <input type="text" placeholder="할 일 추가..." style="flex:1;font-size:14px;padding:10px 12px;border:1px solid #e6e6e6;border-radius:8px;background:#f8f8f8;outline:none;font-family:inherit;">
+      <button style="font-size:0.72rem;font-weight:600;color:#60A5FA;border:1px solid #60A5FA;background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer;">추가</button>
+    </div>
+    <div class="check-row">
+      <span class="check-circle check-empty" style="border-color:#60A5FA;"></span>
+      <span class="check-text">질적연구 과제 데이터 수집 계획</span>
+    </div>
+    <div style="height:12px;"></div>
+  </div>
+</div>
+
+<!-- ═══ HARU ═══ -->
+<div class="tab-panel" id="tab-haru" style="display:none;flex-direction:column;height:100%;">
+  <div style="display:flex;gap:6px;padding:3px 28px;border-bottom:1px solid #e6e6e6;flex-shrink:0;">
+    <span class="pill" style="color:#059669;background:rgba(5,150,105,0.08);margin:0;">수면 6.1h, 컨디션 3/5</span>
+    <span class="pill" style="color:#8B5CF6;background:rgba(139,92,246,0.08);margin:0;">피곤</span>
+  </div>
+
+  <div style="flex:1;overflow-y:auto;padding:4px 0;">
+    <div class="msg assistant"><div class="bubble assistant">좋은 아침이에요! 오늘 일정을 알려드릴게요.
+오늘은 일정이 없어서 여유로운 하루예요. 컨디션은 어떠세요?</div></div>
+    <div class="msg user"><div class="bubble user">오늘 좀 피곤해</div></div>
+    <div class="msg assistant"><div class="bubble assistant">피곤하시구나... 어젯밤 잘 주무셨어요?
+수면 기록을 보니 6.1시간이네요. 좀 부족하셨겠어요.</div></div>
+    <div class="msg user"><div class="bubble user">응 좀 늦게 잤어</div></div>
+    <div class="msg assistant"><div class="bubble assistant">일정이 없는 오늘, 좀 쉬어가면 어떨까요? 컨디션 관리법을 정리해드릴까요?</div></div>
+  </div>
+
+  <div class="chat-input" style="flex-shrink:0;">
+    <input type="text" placeholder="하루에게 메시지...">
+    <div class="send-btn"></div>
+  </div>
+</div>
+
+<!-- ═══ DIARY ═══ -->
+<div class="tab-panel" id="tab-diary">
+  <div class="diary-header">
+    <div class="heading" style="font-size:1.2rem;font-weight:700;">Diary</div>
+  </div>
+  <div class="diary-tabs">
+    <button class="dtab active" onclick="switchDiary('today',this)">Today</button>
+    <button class="dtab" onclick="switchDiary('week',this)">Week</button>
+    <button class="dtab" onclick="switchDiary('month',this)">Month</button>
+  </div>
+
+  <!-- Today -->
+  <div id="diary-today">
+    <!-- Date Scroll Picker -->
+    <div class="date-picker-wrap">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0 28px 4px;">
+        <div style="font-family:'Inter';font-size:0.7rem;font-weight:600;color:#333;">2026년 5월</div>
+        <button class="today-btn" onclick="scrollToToday()">오늘</button>
+      </div>
+      <div class="date-picker-track" id="dateTrack">
+        <div class="date-item" onclick="selectDate(this,3)"><span class="date-day">토</span><span class="date-num">3</span></div>
+        <div class="date-item" onclick="selectDate(this,4)"><span class="date-day">일</span><span class="date-num">4</span></div>
+        <div class="date-item" onclick="selectDate(this,5)"><span class="date-day">월</span><span class="date-num">5</span></div>
+        <div class="date-item" onclick="selectDate(this,6)"><span class="date-day">화</span><span class="date-num">6</span></div>
+        <div class="date-item active today" onclick="selectDate(this,7)"><span class="date-day">수</span><span class="date-num">7</span></div>
+        <div class="date-item" onclick="selectDate(this,8)"><span class="date-day">목</span><span class="date-num">8</span></div>
+        <div class="date-item" onclick="selectDate(this,9)"><span class="date-day">금</span><span class="date-num">9</span></div>
+        <div class="date-item" onclick="selectDate(this,10)"><span class="date-day">토</span><span class="date-num">10</span></div>
+        <div class="date-item" onclick="selectDate(this,11)"><span class="date-day">일</span><span class="date-num">11</span></div>
+      </div>
+    </div>
+
+    <div class="diary-content">
+      <div class="label">Schedule</div>
+      <div style="font-size:1rem;font-weight:700;margin-bottom:2px;">오늘 5/7 (수요일)</div>
+      <div style="font-size:0.82rem;color:#6B7280;">일정 없음</div>
+
+      <div class="label">Routine</div>
+      <div class="check-row">
+        <span class="check-circle check-done"><svg width="10" height="8" viewBox="0 0 8 6" fill="none"><path d="M1 3L3 5L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="check-text done" style="font-size:0.78rem;">아침 스트레칭 10분</span>
+        <span class="check-sub">4일째</span>
+      </div>
+      <div class="check-row">
+        <span class="check-circle check-empty" style="border-color:#E6E6E6;"></span>
+        <span class="check-text" style="font-size:0.78rem;">물 8잔 마시기</span>
+      </div>
+      <div class="routine-summary">
+        🔥 <strong>아침 스트레칭</strong> — 4일째 하고 계십니다<br>
+        🔥 <strong>감사 일기</strong> — 6일째 하고 계십니다<br>
+        <span style="color:#6B7280;">물 8잔 마시기 — 잊지 않으셨죠?</span>
+      </div>
+
+      <div class="label">Emotion</div>
+      <div class="emo-row">
+        <span class="emo-btn" style="color:#FBBF24;border-color:#FBBF24;">기쁨</span>
+        <span class="emo-btn" style="color:#60A5FA;border-color:#60A5FA;">평온</span>
+        <span class="emo-btn" style="color:#F472B6;border-color:#F472B6;">설렘</span>
+        <span class="emo-btn" style="color:#34D399;border-color:#34D399;">감사</span>
+        <span class="emo-btn" style="color:#94A3B8;border-color:#94A3B8;">무기력</span>
+        <span class="emo-btn" style="color:#A78BFA;border-color:#A78BFA;">불안</span>
+        <span class="emo-btn" style="color:#CBD5E1;border-color:#CBD5E1;">피곤</span>
+      </div>
+
+      <div class="label">Health</div>
+      <div class="review-label">수면</div>
+      <div style="display:flex;gap:4px;align-items:center;margin-bottom:5px;">
+        <input style="width:42px;font-size:14px;text-align:center;padding:6px;border:1px solid #e6e6e6;border-radius:6px;background:#f8f8f8;" value="6">
+        <span style="font-size:0.72rem;color:#6B7280;">h</span>
+        <input style="width:42px;font-size:14px;text-align:center;padding:6px;border:1px solid #e6e6e6;border-radius:6px;background:#f8f8f8;" value="6">
+        <span style="font-size:0.72rem;color:#6B7280;">m</span>
+        <button style="font-size:0.7rem;color:#fff;background:#60A5FA;border:none;border-radius:6px;padding:6px 12px;margin-left:auto;min-height:34px;">수정</button>
+      </div>
+      <div class="review-label">컨디션</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">1</button>
+        <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">2</button>
+        <button style="width:44px;height:44px;border-radius:8px;border:2px solid #60A5FA;background:rgba(96,165,250,0.08);color:#60A5FA;font-size:0.85rem;font-weight:600;">3</button>
+        <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">4</button>
+        <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">5</button>
+      </div>
+
+      <div class="label">Memo</div>
+      <textarea class="review-input" rows="2" placeholder="오늘의 메모..." style="resize:none;"></textarea>
+
+      <div class="label">Daily Review</div>
+      <div class="review-label">오늘 감사한 것 한 가지는?</div>
+      <input class="review-input" placeholder="감사한 것...">
+      <div class="review-label">오늘 완료한 것 / 못한 것은?</div>
+      <input class="review-input" placeholder="완료/미완료...">
+      <div class="review-label">내일 꼭 하고 싶은 한 가지는?</div>
+      <input class="review-input" placeholder="내일 하고 싶은 것...">
+      <div class="review-label">오늘의 나에게 한 마디?</div>
+      <input class="review-input" placeholder="나에게 한 마디...">
+
+      <div class="label">하루와의 대화</div>
+      <div style="font-size:0.65rem;color:#60A5FA;font-weight:600;margin-bottom:4px;">하루 — 3건의 대화</div>
+      <div style="font-size:0.72rem;color:#333;padding:2px 0 2px 8px;line-height:1.4;">• 수면에 대해 이야기함 — 6.1시간 부족, 컨디션 관리법 논의</div>
+
+      <button class="save-btn">저장</button>
+      <div style="height:10px;"></div>
+    </div>
+  </div>
+
+  <!-- Week -->
+  <div id="diary-week" style="display:none;">
+    <div class="diary-content">
+      <div style="display:flex;gap:8px;margin-top:10px;margin-bottom:10px;">
+        <div style="flex:1;padding:12px;background:#fafafa;border-radius:10px;text-align:center;">
+          <div class="heading" style="font-size:1.4rem;font-weight:700;color:#60A5FA;">72%</div>
+          <div style="font-size:0.62rem;color:#6B7280;">Recommendation</div>
+        </div>
+        <div style="flex:1;padding:12px;background:#fafafa;border-radius:10px;text-align:center;">
+          <div class="heading" style="font-size:1.4rem;font-weight:700;color:#60A5FA;">65%</div>
+          <div style="font-size:0.62rem;color:#6B7280;">Todo</div>
+        </div>
+      </div>
+
+      <div class="label">Sleep</div>
+      <div style="position:relative;">
+        <div style="position:absolute;top:15px;left:0;right:0;border-top:1.5px dashed #d1d5db;"></div>
+        <div style="position:absolute;top:8px;right:0;font-size:0.55rem;color:#6B7280;">7h</div>
+        <div class="mini-chart" style="position:relative;z-index:1;">
+          <div class="mini-bar" style="height:57%;background:#E6E6E6;"></div>
+          <div class="mini-bar" style="height:75%;background:#60A5FA;"></div>
+          <div class="mini-bar" style="height:46%;background:#E6E6E6;"></div>
+          <div class="mini-bar" style="height:70%;background:#60A5FA;"></div>
+          <div class="mini-bar" style="height:55%;background:#E6E6E6;"></div>
+          <div class="mini-bar" style="height:80%;background:#60A5FA;"></div>
+          <div class="mini-bar" style="height:61%;background:#E6E6E6;"></div>
+        </div>
+      </div>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>7h+</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#E6E6E6;"></span>미달</span>
+      </div>
+
+      <div class="label">Emotion</div>
+      <div class="color-strip">
+        <div style="flex:3;background:#60A5FA;"></div>
+        <div style="flex:2;background:#FBBF24;"></div>
+        <div style="flex:2;background:#CBD5E1;"></div>
+      </div>
+      <div class="legend" style="margin-top:6px;">
+        <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>평온 43%</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FBBF24;"></span>기쁨 29%</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#CBD5E1;"></span>피곤 28%</span>
+      </div>
+
+      <div class="label">Weekly Report</div>
+      <div style="padding:12px;background:#fafafa;border-radius:8px;font-size:0.78rem;color:#333;line-height:1.45;">
+        이번 주는 7일 중 5일을 기록하셨어요. 수면은 평균 6.4시간으로 7시간 이상 주무신 날이 3일이었어요. 감정적으로는 '평온'을 가장 많이 느끼셨어요.
+      </div>
+
+      <div class="label">Weekly Retrospective</div>
+      <div class="review-label">다음 주 다짐</div>
+      <input class="review-input" placeholder="다음 주에는...">
+      <div class="review-label">한줄 소감</div>
+      <input class="review-input" placeholder="이번 주를 한 마디로...">
+      <button class="save-btn">회고 저장</button>
+      <div style="height:10px;"></div>
+    </div>
+  </div>
+
+  <!-- Month -->
+  <div id="diary-month" style="display:none;">
+    <div class="diary-content">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;margin-bottom:6px;">
+        <span style="color:#6B7280;cursor:pointer;">←</span>
+        <div class="heading" style="font-size:0.8rem;font-weight:600;">2026년 5월</div>
+        <span style="color:#6B7280;cursor:pointer;">→</span>
+      </div>
+
+      <div class="label">Emotion Flow — 31 Days</div>
+      <div class="color-strip" style="height:14px;border-radius:7px;">
+        <div style="flex:1;background:#FBBF24;"></div>
+        <div style="flex:1;background:#60A5FA;"></div>
+        <div style="flex:1;background:#FBBF24;"></div>
+        <div style="flex:1;background:#CBD5E1;"></div>
+        <div style="flex:1;background:#60A5FA;"></div>
+        <div style="flex:1;background:#34D399;"></div>
+        <div style="flex:1;background:#CBD5E1;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+      </div>
+      <div class="legend" style="margin-top:6px;">
+        <span class="legend-item"><span class="legend-dot" style="background:#FBBF24;"></span>기쁨</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>평온</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#CBD5E1;"></span>피곤</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#34D399;"></span>감사</span>
+      </div>
+
+      <div class="label">Monthly Report</div>
+      <div style="padding:12px;background:#fafafa;border-radius:8px;font-size:0.78rem;color:#333;line-height:1.45;">
+        5월은 7일 중 5일을 기록하셨어요. 평균 수면 6.2시간, 7시간 이상 주무신 날이 3일이었어요. 루틴에서는 감사 일기가 86%로 가장 잘 지키셨고, 물 8잔은 29%로 가장 아쉬웠습니다.
+      </div>
+
+      <div class="label">Monthly Retrospective</div>
+      <div class="review-label">가장 기억에 남는 순간</div>
+      <input class="review-input" placeholder="이번 달 가장 인상 깊었던...">
+      <div class="review-label">다음 달 목표</div>
+      <input class="review-input" placeholder="다음 달에는...">
+      <div class="review-label">나에게 한 마디</div>
+      <input class="review-input" placeholder="이번 달의 나에게...">
+      <button class="save-btn">회고 저장</button>
+      <div style="height:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SETTINGS ═══ -->
+<div class="tab-panel" id="tab-settings">
+  <div class="settings-section">
+    <div class="heading" style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">Settings</div>
+    <div class="label">ChatGPT API Key</div>
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:#059669;"></div>
+      <span style="font-size:0.72rem;color:#059669;">연결됨</span>
+    </div>
+    <input type="password" value="sk-xxxxxxx" style="width:100%;font-size:14px;padding:10px 12px;border:1px solid #e6e6e6;border-radius:8px;background:#f8f8f8;outline:none;font-family:monospace;margin-bottom:8px;">
+    <button class="save-btn" style="margin-top:0;">저장</button>
+    <div style="border-top:1px solid #e6e6e6;margin-top:12px;padding-top:10px;">
+      <div class="label">About</div>
+      <div style="font-size:0.72rem;color:#6B7280;line-height:1.6;">Life OS design2 — Stage 8<br>진 · 모미 · 마음 → 하루</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Bottom nav — 현재 그대로 유지 -->
+<div class="bottom-nav">
+  <button class="nav-btn active" onclick="switchTab('home',this)"><span class="n-name">홈</span><span class="n-role">Briefing</span></button>
+  <button class="nav-btn" onclick="switchTab('haru',this)"><span class="n-name">하루</span><span class="n-role">Assistant</span></button>
+  <button class="nav-btn" onclick="switchTab('diary',this)"><span class="n-name">기록</span><span class="n-role">Diary</span></button>
+  <button class="nav-btn" onclick="switchTab('settings',this)"><span class="n-name">설정</span><span class="n-role">Settings</span></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  var panel = document.getElementById('tab-' + id);
+  panel.classList.add('active');
+  panel.style.display = id === 'haru' ? 'flex' : 'block';
+  // 하루 탭일 때 tab-content 스크롤 끄기 (입력창 하단 고정)
+  var tc = document.querySelector('.tab-content');
+  tc.style.overflowY = id === 'haru' ? 'hidden' : 'auto';
+  btn.classList.add('active');
+}
+function switchDiary(sub, btn) {
+  document.querySelectorAll('.dtab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('diary-today').style.display = sub === 'today' ? 'block' : 'none';
+  document.getElementById('diary-week').style.display = sub === 'week' ? 'block' : 'none';
+  document.getElementById('diary-month').style.display = sub === 'month' ? 'block' : 'none';
+}
+function selectDate(el, day) {
+  document.querySelectorAll('.date-item').forEach(d => d.classList.remove('active'));
+  el.classList.add('active');
+}
+function scrollToToday() {
+  var todayEl = document.querySelector('.date-item.today');
+  if (todayEl) {
+    document.querySelectorAll('.date-item').forEach(d => d.classList.remove('active'));
+    todayEl.classList.add('active');
+    todayEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }
+}
+// 초기 로드 시 오늘 날짜로 스크롤
+document.addEventListener('DOMContentLoaded', function() {
+  var todayEl = document.querySelector('.date-item.today');
+  if (todayEl) todayEl.scrollIntoView({ inline: 'center', block: 'nearest' });
+});
+</script>
+</body>
+</html>

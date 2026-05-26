@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박진현 Work Dashboard — Project #063 (v0.5 · compact)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./foundation/tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font); background: var(--gray-100); color: var(--gray-900); -webkit-font-smoothing: antialiased; line-height: 1.4; }
+
+  .topbar { background: var(--white); border-bottom: 1px solid var(--gray-300); position: sticky; top: 0; z-index: 30; }
+  .topbar-inner { max-width: 1280px; margin: 0 auto; padding: var(--sp-3) var(--sp-8); display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: var(--sp-3); }
+  .brand-logo { width: 24px; height: 24px; background: var(--black); color: var(--white); display: grid; place-items: center; font-size: 11px; font-weight: 700; }
+  .brand-name { font-size: 13px; font-weight: 700; color: var(--black); }
+  .brand-sub { font-size: 10px; color: var(--gray-400); letter-spacing: var(--tracking-wide); margin-top: 1px; }
+  .nav { display: flex; gap: 0; }
+  .nav a { padding: 5px 12px; font-size: 12px; font-weight: 500; color: var(--gray-500); text-decoration: none; }
+  .nav a:hover { color: var(--gray-900); background: var(--gray-100); }
+  .nav a.active { background: var(--black); color: var(--white); font-weight: 600; }
+  .build-info { font-size: 10px; color: var(--gray-400); text-align: right; font-family: var(--font-mono); line-height: 1.4; }
+
+  main { max-width: 1280px; margin: 0 auto; padding: var(--sp-6) var(--sp-8) var(--sp-12); }
+
+  /* ── Crumbs ────────────────────────────────────────── */
+  .crumbs { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gray-500); margin-bottom: var(--sp-4); }
+  .crumbs a { color: var(--gray-500); text-decoration: none; }
+  .crumbs a:hover { color: var(--gray-900); }
+  .crumbs .sep { color: var(--gray-300); }
+  .crumbs .here { color: var(--gray-900); font-weight: 600; }
+
+  /* ── Hero (compact, project) ───────────────────────── */
+  .hero {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    padding: 14px 18px 14px 22px;
+    margin-bottom: var(--sp-5);
+  }
+  .hero::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--type-color, var(--type-product)); }
+  .hero-eyebrow { font-size: 10px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wider); margin-bottom: 4px; font-family: var(--font-mono); }
+  .hero-title { font-size: 32px; font-weight: 300; color: var(--black); letter-spacing: var(--tracking-tight); line-height: 1.1; margin: 0 0 4px 0; }
+  .hero-define { font-size: 12px; color: var(--gray-700); line-height: 1.5; max-width: 760px; margin-bottom: 10px; }
+  .hero-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .type-chip { display: inline-flex; align-items: center; font-size: 9px; font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; padding: 2px 6px; color: var(--white); background: var(--type-color, var(--type-product)); }
+  .chip { display: inline-flex; align-items: center; font-size: 9px; font-weight: 700; padding: 2px 6px; letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+  .chip-new { background: var(--color-green); color: var(--white); }
+  .chip-active { background: var(--gray-200); color: var(--gray-700); }
+  .meta-sep { width: 1px; height: 12px; background: var(--gray-300); }
+  .hero-meta-text { font-size: 10px; color: var(--gray-500); font-variant-numeric: tabular-nums; }
+  .hero-meta-text strong { color: var(--gray-900); font-weight: 600; }
+
+  /* ── KPI Strip (compact) ──────────────────────────── */
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--gray-300); background: var(--gray-200); margin-bottom: var(--sp-6); }
+  .kpi { background: var(--white); padding: 10px 14px; }
+  .kpi-label { font-size: 9px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: 4px; }
+  .kpi-value { font-size: 26px; font-weight: 700; color: var(--black); line-height: 1; letter-spacing: var(--tracking-tight); font-variant-numeric: tabular-nums; }
+  .kpi-value .unit { font-size: 11px; font-weight: 500; color: var(--gray-400); margin-left: 2px; letter-spacing: 0; }
+  .kpi-meta { font-size: 10px; color: var(--gray-500); margin-top: 4px; font-variant-numeric: tabular-nums; }
+
+  /* ── 3-column WORK PANEL ──────────────────────────── */
+  .work-panel { background: var(--white); border: 1px solid var(--gray-300); margin-bottom: var(--sp-6); }
+  .work-head { padding: 10px 14px; border-bottom: 1px solid var(--gray-200); background: var(--gray-50); display: flex; justify-content: space-between; align-items: baseline; }
+  .work-head-title { font-size: 11px; font-weight: 700; color: var(--gray-700); text-transform: uppercase; letter-spacing: var(--tracking-wider); }
+  .work-head-meta { font-size: 10px; color: var(--gray-400); }
+
+  .work-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; background: var(--gray-200); }
+  .col { background: var(--white); padding: 14px; }
+
+  .col-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--gray-200); }
+  .col-num { font-size: 10px; font-family: var(--font-mono); color: var(--gray-400); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .col-title { font-size: 12px; font-weight: 700; color: var(--gray-900); letter-spacing: var(--tracking-tight); }
+  .col-sub { font-size: 9px; color: var(--gray-400); margin-left: auto; text-transform: uppercase; letter-spacing: var(--tracking-wide); font-family: var(--font-mono); }
+
+  /* Col 1 — 현재 상황 */
+  .summary-text { font-size: 12px; color: var(--gray-900); font-weight: 500; line-height: 1.5; margin-bottom: 8px; }
+  .phase-pill { display: inline-block; font-size: 10px; font-weight: 600; background: var(--gray-100); color: var(--gray-700); padding: 2px 6px; margin-bottom: 10px; }
+  .logs-label { font-size: 9px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: 4px; }
+  .log-item { padding: 6px 0; border-top: 1px solid var(--gray-100); }
+  .log-item:first-of-type { border-top: none; }
+  .log-date { font-size: 9px; font-family: var(--font-mono); color: var(--gray-400); font-variant-numeric: tabular-nums; }
+  .log-title { font-size: 11px; font-weight: 600; color: var(--gray-900); line-height: 1.3; margin-top: 1px; }
+  .log-excerpt { font-size: 10px; color: var(--gray-600); line-height: 1.4; margin-top: 2px; }
+  .blockers { margin-top: 10px; padding: 6px 8px; background: var(--warm-100); border-left: 2px solid var(--warm-500); }
+  .blockers-label { font-size: 9px; font-weight: 700; color: var(--warm-700); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-bottom: 3px; }
+  .blockers ul { margin: 0; padding-left: 14px; }
+  .blockers li { font-size: 10px; color: var(--gray-700); line-height: 1.4; }
+
+  /* Col 2 — 결과물 */
+  .deliv-item { padding: 6px 0; border-top: 1px solid var(--gray-100); }
+  .deliv-item:first-of-type { border-top: none; }
+  .deliv-row1 { display: flex; align-items: baseline; gap: 6px; }
+  .deliv-icon { font-size: 8px; font-family: var(--font-mono); font-weight: 700; padding: 1px 4px; background: var(--gray-100); color: var(--gray-700); letter-spacing: var(--tracking-wide); }
+  .deliv-title { font-size: 11px; font-weight: 600; color: var(--gray-900); flex: 1; min-width: 0; line-height: 1.3; }
+  .deliv-date { font-size: 9px; font-family: var(--font-mono); color: var(--gray-400); font-variant-numeric: tabular-nums; }
+  .deliv-summary { font-size: 10px; color: var(--gray-600); line-height: 1.4; margin-top: 2px; }
+  .deliv-path { font-size: 9px; font-family: var(--font-mono); color: var(--gray-400); margin-top: 3px; line-height: 1.3; word-break: break-all; }
+
+  /* Col 3 — 다음 작업 */
+  .task-item { padding: 6px 0; border-top: 1px solid var(--gray-100); }
+  .task-item:first-of-type { border-top: none; }
+  .task-row1 { display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px; }
+  .task-prio { font-size: 8px; font-weight: 700; padding: 1px 4px; letter-spacing: var(--tracking-wide); }
+  .task-prio.high { background: var(--color-red); color: var(--white); }
+  .task-prio.mid { background: var(--gray-200); color: var(--gray-700); }
+  .task-prio.low { background: var(--gray-100); color: var(--gray-500); }
+  .task-title { font-size: 11px; font-weight: 600; color: var(--gray-900); flex: 1; line-height: 1.3; }
+  .task-est { font-size: 9px; font-family: var(--font-mono); color: var(--gray-400); font-variant-numeric: tabular-nums; }
+  .task-desc { font-size: 10px; color: var(--gray-600); line-height: 1.4; margin-top: 2px; }
+
+  /* ── Weekly Contribution Chart ────────────────────── */
+  .chart-panel { background: var(--white); border: 1px solid var(--gray-300); padding: 14px; margin-bottom: var(--sp-6); }
+  .chart-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+  .chart-title { font-size: 13px; font-weight: 700; color: var(--gray-900); }
+  .chart-sub { font-size: 10px; color: var(--gray-400); }
+  .chart-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end; height: 100px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar { width: 100%; background: var(--warm-500); position: relative; }
+  .bar.current { background: var(--warm-900); }
+  .bar.zero { background: var(--gray-200); height: 2px; }
+  .bar-val { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); font-size: 10px; font-weight: 600; color: var(--gray-700); padding-bottom: 2px; font-variant-numeric: tabular-nums; }
+  .bar.current .bar-val { color: var(--warm-900); font-weight: 700; }
+  .chart-row-bottom { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 6px; }
+  .chart-cell-bottom { text-align: center; font-size: 10px; color: var(--gray-500); font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  /* spec note */
+  .note { background: var(--warm-100); border-left: 3px solid var(--warm-500); padding: 8px 12px; margin-bottom: var(--sp-4); font-size: 11px; color: var(--gray-700); line-height: 1.5; }
+  .note strong { color: var(--gray-900); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">P</div>
+      <div>
+        <div class="brand-name">박진현 Work Dashboard</div>
+        <div class="brand-sub">063 · PROJECT DETAIL</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#">CURRENT</a>
+      <a href="#">WEEKLY</a>
+      <a href="#">MONTHLY</a>
+      <a href="#">YEARLY</a>
+      <a href="#" class="active">PROJECTS</a>
+    </nav>
+    <div class="build-info">v0.5 · compact<br>2026-05-08</div>
+  </div>
+</div>
+
+<main>
+
+  <div class="note">
+    <strong>v0.5 Project Detail</strong> — 3컬럼 WORK PANEL (현재 상황 · 결과물 · 다음 작업) 컴팩트 톤. 데모 = #063 workDashboard.
+  </div>
+
+  <div class="crumbs">
+    <a href="#">DASHBOARD</a>
+    <span class="sep">/</span>
+    <a href="#">PROJECTS</a>
+    <span class="sep">/</span>
+    <span class="here">#063 workDashboard <span style="color:var(--gray-400);font-weight:500;">(PRODUCT)</span></span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="--type-color: var(--type-product);">
+    <div class="hero-eyebrow">PROJECT · #063</div>
+    <h1 class="hero-title">workDashboard</h1>
+    <p class="hero-define">
+      cloude_Code 27 프로젝트의 작업 활동을 시각화하는 외부 공개 대시보드.
+      운영가이드 §9의 마크다운 리포트와 공존, Next.js 16 + ECharts 기반.
+    </p>
+    <div class="hero-meta">
+      <span class="type-chip">PRODUCT</span>
+      <span class="chip chip-new">NEW · ACTIVE</span>
+      <span class="meta-sep"></span>
+      <span class="hero-meta-text">CREATED · <strong>2026-05-05</strong> (3일 전)</span>
+      <span class="meta-sep"></span>
+      <span class="hero-meta-text">PHASE · <strong>2 완료, 3 진입</strong></span>
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <section class="kpis">
+    <div class="kpi">
+      <div class="kpi-label">총 변경 파일</div>
+      <div class="kpi-value">12</div>
+      <div class="kpi-meta">이번 주 (W19)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">결과물</div>
+      <div class="kpi-value">6</div>
+      <div class="kpi-meta">클릭 → VS Code</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">다음 작업</div>
+      <div class="kpi-value">5</div>
+      <div class="kpi-meta">우선순위순</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Contribution</div>
+      <div class="kpi-value">38<span class="unit">%</span></div>
+      <div class="kpi-meta">W19 기준</div>
+    </div>
+  </section>
+
+  <!-- 3-COL WORK PANEL -->
+  <section class="work-panel">
+    <div class="work-head">
+      <div class="work-head-title">WORK PANEL</div>
+      <div class="work-head-meta">현재 상황 · 결과물 · 다음 작업</div>
+    </div>
+    <div class="work-cols">
+
+      <!-- Col 1 — 현재 상황 -->
+      <div class="col">
+        <div class="col-head">
+          <span class="col-num">01</span>
+          <span class="col-title">현재 상황</span>
+          <span class="col-sub">LOGS · 단계</span>
+        </div>
+        <p class="summary-text">
+          Phase 2 — Next.js 16 앱 5라우트 모두 200 OK + ECharts 7종 차트 + Foundation 통합 완료.
+          v0.5 컴팩트 디자인 시안 작업 중.
+        </p>
+        <span class="phase-pill">Phase 2 완료 → Phase 3 자동화 진입</span>
+
+        <div class="logs-label">RECENT LOGS</div>
+
+        <div class="log-item">
+          <div class="log-date">2026-05-08</div>
+          <div class="log-title">Weekly 5-col 레이아웃 + 컴팩트 디자인 v0.5</div>
+          <div class="log-excerpt">월별 4컬럼 (5주차 발생 시 5컬럼) + 최신순 정렬 + 1월 자동 생략. 행간·padding 압축.</div>
+        </div>
+        <div class="log-item">
+          <div class="log-date">2026-05-05</div>
+          <div class="log-title">Phase 2 Next.js 앱 구축 완료</div>
+          <div class="log-excerpt">5개 라우트(/, weekly, monthly, yearly, projects) 200 OK. ECharts 7종 차트 통합.</div>
+        </div>
+      </div>
+
+      <!-- Col 2 — 작업 결과물 -->
+      <div class="col">
+        <div class="col-head">
+          <span class="col-num">02</span>
+          <span class="col-title">작업 결과물</span>
+          <span class="col-sub">DELIVERABLES</span>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">TS</span>
+            <span class="deliv-title">lib/data.ts (8개 신규 로더)</span>
+            <span class="deliv-date">05-08</span>
+          </div>
+          <div class="deliv-summary">loadAllWeeks · loadMonth · loadYear · listAvailableYears + 동적 집계 fallback.</div>
+          <div class="deliv-path">app/src/lib/data.ts</div>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">TS</span>
+            <span class="deliv-title">lib/calendar.ts (ISO 주차 + 5-주 감지)</span>
+            <span class="deliv-date">05-08</span>
+          </div>
+          <div class="deliv-summary">ISO 8601 + Thursday rule. getWeeksOfMonth, is5WeekMonth 등.</div>
+          <div class="deliv-path">app/src/lib/calendar.ts</div>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">TSX</span>
+            <span class="deliv-title">WeekColumn + ProjectTile 컴포넌트</span>
+            <span class="deliv-date">05-08</span>
+          </div>
+          <div class="deliv-summary">4가지 상태 카드 (current·past·empty·future) + 좌측 3px 컬러 스트립.</div>
+          <div class="deliv-path">app/src/components/weekly/</div>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">HTML</span>
+            <span class="deliv-title">v0.5 컴팩트 시안 3종</span>
+            <span class="deliv-date">05-08</span>
+          </div>
+          <div class="deliv-summary">Weekly 5-col + Home + Project Detail. 행간·padding 컴팩트.</div>
+          <div class="deliv-path">design/v0.5_*_compact_시안.html</div>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">MD</span>
+            <span class="deliv-title">주간업데이트 가이드 + 슬래시 커맨드</span>
+            <span class="deliv-date">05-06</span>
+          </div>
+          <div class="deliv-summary">Tier 1 (extract-week.mjs) + Tier 2 (Claude refine) + Tier 3 (배포).</div>
+          <div class="deliv-path">docs/주간업데이트_가이드.md</div>
+        </div>
+
+        <div class="deliv-item">
+          <div class="deliv-row1">
+            <span class="deliv-icon">MJS</span>
+            <span class="deliv-title">extract-week.mjs (Tier 1 추출 스크립트)</span>
+            <span class="deliv-date">05-06</span>
+          </div>
+          <div class="deliv-summary">로그 파싱 → 기계적 데이터 추출 → _drafts JSON.</div>
+          <div class="deliv-path">scripts/extract-week.mjs</div>
+        </div>
+      </div>
+
+      <!-- Col 3 — 다음 작업 -->
+      <div class="col">
+        <div class="col-head">
+          <span class="col-num">03</span>
+          <span class="col-title">다음 작업</span>
+          <span class="col-sub">NEXT TASKS</span>
+        </div>
+
+        <div class="task-item">
+          <div class="task-row1">
+            <span class="task-prio high">HIGH</span>
+            <span class="task-title">v0.5 디자인 검토 → 사용자 수정 반영</span>
+            <span class="task-est">~1d</span>
+          </div>
+          <div class="task-desc">3개 시안 (Weekly·Home·Project Detail) 수정 사항 적용 후 React 컴포넌트 동기화.</div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-row1">
+            <span class="task-prio high">HIGH</span>
+            <span class="task-title">Unit 3 — 홈 페이지 리팩토링</span>
+            <span class="task-est">15~20m</span>
+          </div>
+          <div class="task-desc">RECENT_WEEKS 하드코딩 제거 + loadAllWeeks 사용. v0.5 톤 적용.</div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-row1">
+            <span class="task-prio mid">MID</span>
+            <span class="task-title">Unit 4 — Monthly 페이지 동적화</span>
+            <span class="task-est">25~30m</span>
+          </div>
+          <div class="task-desc">loadMonth(monthId) 사용. 2026-02~05만 활성. 차트 컴포넌트는 그대로.</div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-row1">
+            <span class="task-prio mid">MID</span>
+            <span class="task-title">Unit 5 — Yearly 페이지 동적화</span>
+            <span class="task-est">20~25m</span>
+          </div>
+          <div class="task-desc">loadYear + listAvailableYears. 2026 단독 + 2027 future placeholder.</div>
+        </div>
+
+        <div class="task-item">
+          <div class="task-row1">
+            <span class="task-prio low">LOW</span>
+            <span class="task-title">Unit 6 — 보조 인프라 (집계 스크립트)</span>
+            <span class="task-est">30m</span>
+          </div>
+          <div class="task-desc">aggregate-month.mjs + aggregate-year.mjs. Phase 3 cron 자동화 준비.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WEEKLY CONTRIBUTION -->
+  <section class="chart-panel">
+    <div class="chart-head">
+      <div class="chart-title">주간 Contribution</div>
+      <div class="chart-sub">% of week's total · W15 ~ W19</div>
+    </div>
+    <div class="chart-grid">
+      <div class="bar-col"><div class="bar zero"></div></div>
+      <div class="bar-col"><div class="bar zero"></div></div>
+      <div class="bar-col"><div class="bar zero"></div></div>
+      <div class="bar-col"><div class="bar" style="height:8%"><span class="bar-val">2%</span></div></div>
+      <div class="bar-col"><div class="bar current" style="height:95%"><span class="bar-val">38%</span></div></div>
+    </div>
+    <div class="chart-row-bottom">
+      <div class="chart-cell-bottom">W15<br><span style="color:var(--gray-300);">no data</span></div>
+      <div class="chart-cell-bottom">W16<br><span style="color:var(--gray-300);">no data</span></div>
+      <div class="chart-cell-bottom">W17<br><span style="color:var(--gray-300);">no data</span></div>
+      <div class="chart-cell-bottom">W18<br>2%</div>
+      <div class="chart-cell-bottom" style="color: var(--warm-900); font-weight: 700;">W19<br>38%</div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life OS — Stage 8 하루/기록 개선 시안</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #f0f0f0; padding: 20px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 960px; margin: 0 auto; }
+  .title { font-family: 'Inter'; font-size: 1.4rem; font-weight: 700; text-align: center; margin-bottom: 4px; }
+  .sub { text-align: center; font-size: 0.75rem; color: #808080; margin-bottom: 32px; }
+  .section-title { font-family: 'Inter'; font-size: 1rem; font-weight: 700; text-align: center; margin: 40px 0 16px; }
+
+  .compare { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+  .compare-label { text-align: center; font-family: 'Inter'; font-size: 0.6rem; color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+
+  .phone { width: 340px; background: #000; border-radius: 40px; padding: 8px; }
+  .screen { background: #fff; border-radius: 34px; overflow: hidden; height: 680px; display: flex; flex-direction: column; }
+  .screen-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; }
+  .screen-scroll::-webkit-scrollbar { display: none; }
+
+  .skeleton { background: #f2f2f2; border-radius: 6px; animation: pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+  .heading { font-family: 'Inter'; }
+  .label-old { font-family: 'Inter'; font-size: 0.6rem; font-weight: 500; color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; margin-top: 18px; }
+  .label-new { font-family: 'Inter'; font-size: 0.7rem; font-weight: 500; color: #6B7280; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; margin-top: 18px; }
+
+  /* Chat */
+  .chat-header { padding: 16px 24px 0; }
+  .chat-header-fixed { padding: 16px 24px 0; background: #fff; border-bottom: 1px solid #e6e6e6; padding-bottom: 10px; }
+  .chat-title { font-family: 'Inter'; font-size: 1.2rem; font-weight: 700; }
+  .chat-sub { font-size: 0.7rem; color: #6B7280; margin-top: 1px; }
+  .status-row { padding: 6px 24px 8px; display: flex; gap: 4px; flex-wrap: wrap; }
+  .pill { font-size: 0.62rem; padding: 3px 8px; border-radius: 12px; }
+
+  .msg { margin-bottom: 10px; display: flex; padding: 0 24px; }
+  .msg.user { justify-content: flex-end; }
+  .bubble { max-width: 80%; padding: 8px 12px; font-size: 0.82rem; color: #333; line-height: 1.55; border-radius: 14px; }
+  .bubble.user { background: #f2f2f2; border-radius: 14px 14px 4px 14px; }
+  .bubble.assistant { border: 1px solid #e6e6e6; border-radius: 14px 14px 14px 4px; }
+  .bubble-name { font-size: 0.6rem; font-weight: 600; color: #60A5FA; display: block; margin-bottom: 2px; }
+
+  .chat-input { padding: 8px 24px 12px; border-top: 1px solid #e6e6e6; display: flex; gap: 6px; align-items: flex-end; }
+  .chat-input input { flex: 1; font-size: 14px; padding: 10px 12px; border: 1px solid #e6e6e6; border-radius: 10px; background: #f8f8f8; outline: none; }
+  .send-btn { width: 36px; height: 36px; border-radius: 50%; background: #60A5FA; border: none; flex-shrink: 0; }
+
+  /* Diary */
+  .diary-header { padding: 16px 24px 0; display: flex; justify-content: space-between; }
+  .diary-tabs { display: flex; padding: 10px 24px 0; border-bottom: 1px solid #e6e6e6; }
+  .diary-tab { flex: 1; text-align: center; padding: 6px 0; font-family: 'Inter'; font-size: 0.7rem; color: #b3b3b3; cursor: pointer; position: relative; text-transform: uppercase; background: none; border: none; }
+  .diary-tab.active { font-weight: 600; color: #000; }
+  .diary-tab.active::after { content: ''; position: absolute; bottom: -1px; left: 20%; right: 20%; height: 2px; background: #60A5FA; }
+
+  .diary-content { padding: 0 24px; }
+
+  /* Emotion buttons */
+  .emo-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .emo-old { font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; cursor: pointer; }
+  .emo-new { font-size: 0.75rem; padding: 5px 12px; border-radius: 20px; cursor: pointer; background: #fff; border-width: 2px; border-style: solid; }
+
+  /* Check row */
+  .check-row { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 4px; }
+  .check-circle { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .check-empty { border: 2px solid #60A5FA; }
+  .check-done { background: #60A5FA; }
+
+  .empty-state { text-align: center; padding: 20px 12px; }
+  .empty-text { font-size: 0.82rem; color: #6B7280; margin-bottom: 6px; }
+  .empty-action { font-size: 0.75rem; color: #60A5FA; font-weight: 500; }
+
+  /* Chart */
+  .mini-chart { display: flex; align-items: flex-end; gap: 2px; height: 40px; }
+  .mini-bar { flex: 1; border-radius: 2px 2px 0 0; }
+  .legend { display: flex; gap: 10px; margin-top: 6px; }
+  .legend-item { display: flex; align-items: center; gap: 3px; font-size: 0.62rem; color: #6B7280; }
+  .legend-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* Color strip */
+  .color-strip { display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 1px; }
+
+  .review-input { width: 100%; font-size: 14px; padding: 8px 10px; border: 1px solid #e6e6e6; border-radius: 6px; background: #f8f8f8; outline: none; margin-bottom: 8px; font-family: inherit; }
+  .save-btn { width: 100%; padding: 10px; font-size: 0.82rem; font-weight: 600; color: #fff; background: #000; border: none; border-radius: 8px; cursor: pointer; }
+
+  .anno { margin-top: 32px; padding: 20px; background: #fff; border-radius: 12px; }
+  .anno-title { font-family: 'Inter'; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; }
+  .anno-item { font-size: 0.72rem; color: #333; line-height: 1.6; margin-bottom: 4px; padding-left: 12px; border-left: 2px solid #60A5FA; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="title">Stage 8 — 하루 / 기록 개선 시안</div>
+<div class="sub">Before (현재) vs After (개선안)</div>
+
+<!-- ═══ 하루 탭 ═══ -->
+<div class="section-title">하루 탭</div>
+
+<div class="compare">
+  <!-- Before -->
+  <div>
+    <div class="compare-label">Before</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll">
+          <div class="chat-header">
+            <div class="chat-title">하루</div>
+            <div style="font-size:0.68rem;color:#808080;margin-top:1px;">당신의 개인 비서</div>
+          </div>
+          <div class="status-row">
+            <span class="pill" style="color:#b3b3b3;background:#fafafa;">건강 기록 없음</span>
+            <span class="pill" style="color:#b3b3b3;background:#fafafa;">감정 기록 없음</span>
+          </div>
+          <div style="height:1px;background:#e6e6e6;"></div>
+          <div style="padding:12px 0;">
+            <div class="msg assistant">
+              <div class="bubble assistant">
+                <span class="bubble-name">하루</span>
+                안녕하세요! 저는 하루예요.<br><br>건강, 기분, 일정 — 뭐든 편하게 말씀해주세요.
+              </div>
+            </div>
+            <div class="msg user"><div class="bubble user">오늘 좀 피곤해</div></div>
+            <div class="msg assistant">
+              <div class="bubble assistant">
+                <span class="bubble-name">하루</span>
+                피곤하시구나... 어젯밤 잘 주무셨어요?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="하루에게 메시지...">
+          <div class="send-btn"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- After -->
+  <div>
+    <div class="compare-label">After</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll">
+          <!-- 개선: 헤더 배경+구분선 명확 -->
+          <div class="chat-header-fixed">
+            <div class="chat-title">하루</div>
+            <div class="chat-sub">당신의 개인 비서</div>
+            <div style="display:flex;gap:4px;margin-top:6px;">
+              <span class="pill" style="color:#059669;background:rgba(5,150,105,0.08);">수면 6.1h, 컨디션 3/5</span>
+              <span class="pill" style="color:#8B5CF6;background:rgba(139,92,246,0.08);">피곤</span>
+            </div>
+          </div>
+
+          <div style="padding:16px 0;">
+            <!-- 개선: 오늘 스케줄 브리핑 포함 -->
+            <div class="msg assistant">
+              <div class="bubble assistant">
+                <span class="bubble-name">하루</span>
+                좋은 아침이에요! 오늘 일정을 알려드릴게요.<br><br>오늘은 일정이 없어서 여유로운 하루예요. 컨디션은 어떠세요?
+              </div>
+            </div>
+            <div class="msg user"><div class="bubble user">오늘 좀 피곤해</div></div>
+            <div class="msg assistant">
+              <div class="bubble assistant">
+                <span class="bubble-name">하루</span>
+                피곤하시구나... 어젯밤 잘 주무셨어요?<br><br>수면 기록을 보니 6.1시간이네요. 좀 부족하셨겠어요.
+              </div>
+            </div>
+            <div class="msg user"><div class="bubble user">응 좀 늦게 잤어</div></div>
+            <div class="msg assistant">
+              <div class="bubble assistant">
+                <span class="bubble-name">하루</span>
+                일정이 없는 오늘, 좀 쉬어가면 어떨까요? 컨디션 관리법을 정리해드릴까요?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="하루에게 메시지...">
+          <div class="send-btn"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 기록 Today ═══ -->
+<div class="section-title">기록 — Today</div>
+
+<div class="compare">
+  <div>
+    <div class="compare-label">Before</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll">
+          <div class="diary-header">
+            <div class="heading" style="font-size:1.2rem;font-weight:700;">Diary</div>
+          </div>
+          <div class="diary-tabs">
+            <button class="diary-tab active">Today</button>
+            <button class="diary-tab">Week</button>
+            <button class="diary-tab">Month</button>
+          </div>
+
+          <div class="diary-content">
+            <div class="label-old">EMOTION</div>
+            <!-- 구버전: 컬러 배경 -->
+            <div class="emo-row">
+              <span class="emo-old" style="color:#FBBF24;background:#FBBF2412;border:1px solid #FBBF2440;">기쁨</span>
+              <span class="emo-old" style="color:#60A5FA;background:#60A5FA12;border:1px solid #60A5FA40;">평온</span>
+              <span class="emo-old" style="color:#F472B6;background:#F472B612;border:1px solid #F472B640;">설렘</span>
+              <span class="emo-old" style="color:#94A3B8;background:#94A3B812;border:1px solid #94A3B840;">무기력</span>
+              <span class="emo-old" style="color:#A78BFA;background:#A78BFA12;border:1px solid #A78BFA40;">불안</span>
+              <span class="emo-old" style="color:#CBD5E1;background:#CBD5E112;border:1px solid #CBD5E140;">피곤</span>
+            </div>
+
+            <div class="label-old">HEALTH</div>
+            <div style="font-size:0.68rem;color:#b3b3b3;margin-bottom:4px;">수면</div>
+            <div style="display:flex;gap:4px;align-items:center;margin-bottom:10px;">
+              <input style="width:38px;font-size:14px;text-align:center;padding:4px;border:1px solid #e6e6e6;border-radius:4px;background:#f8f8f8;">
+              <span style="font-size:0.68rem;color:#b3b3b3;">h</span>
+              <input style="width:38px;font-size:14px;text-align:center;padding:4px;border:1px solid #e6e6e6;border-radius:4px;background:#f8f8f8;">
+              <span style="font-size:0.68rem;color:#b3b3b3;">m</span>
+              <button style="font-size:0.65rem;color:#fff;background:#60A5FA;border:none;border-radius:4px;padding:4px 10px;margin-left:auto;">OK</button>
+            </div>
+            <div style="font-size:0.68rem;color:#b3b3b3;margin-bottom:4px;">컨디션</div>
+            <div style="display:flex;gap:4px;margin-bottom:10px;">
+              <button style="width:30px;height:30px;border-radius:6px;border:1px solid #e6e6e6;background:#f8f8f8;color:#808080;font-size:0.78rem;">1</button>
+              <button style="width:30px;height:30px;border-radius:6px;border:1px solid #e6e6e6;background:#f8f8f8;color:#808080;font-size:0.78rem;">2</button>
+              <button style="width:30px;height:30px;border-radius:6px;border:2px solid #60A5FA;background:rgba(96,165,250,0.08);color:#60A5FA;font-size:0.78rem;">3</button>
+              <button style="width:30px;height:30px;border-radius:6px;border:1px solid #e6e6e6;background:#f8f8f8;color:#808080;font-size:0.78rem;">4</button>
+              <button style="width:30px;height:30px;border-radius:6px;border:1px solid #e6e6e6;background:#f8f8f8;color:#808080;font-size:0.78rem;">5</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="compare-label">After</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll">
+          <div class="diary-header">
+            <div class="heading" style="font-size:1.2rem;font-weight:700;">Diary</div>
+          </div>
+          <div class="diary-tabs">
+            <button class="diary-tab active">Today</button>
+            <button class="diary-tab">Week</button>
+            <button class="diary-tab">Month</button>
+          </div>
+
+          <div class="diary-content">
+            <!-- 개선: 라벨 0.7rem, #6B7280 -->
+            <div class="label-new">EMOTION</div>
+            <!-- 개선: 흰 배경 + 2pt 아웃라인 + 8px 간격 -->
+            <div class="emo-row">
+              <span class="emo-new" style="color:#FBBF24;border-color:#FBBF24;">기쁨</span>
+              <span class="emo-new" style="color:#60A5FA;border-color:#60A5FA;">평온</span>
+              <span class="emo-new" style="color:#F472B6;border-color:#F472B6;">설렘</span>
+              <span class="emo-new" style="color:#94A3B8;border-color:#94A3B8;">무기력</span>
+              <span class="emo-new" style="color:#A78BFA;border-color:#A78BFA;">불안</span>
+              <span class="emo-new" style="color:#CBD5E1;border-color:#CBD5E1;">피곤</span>
+            </div>
+
+            <div class="label-new">HEALTH</div>
+            <!-- 개선: 라벨 #6B7280, 컨디션 44px -->
+            <div style="font-size:0.72rem;color:#6B7280;margin-bottom:4px;">수면</div>
+            <div style="display:flex;gap:4px;align-items:center;margin-bottom:10px;">
+              <input style="width:42px;font-size:14px;text-align:center;padding:6px;border:1px solid #e6e6e6;border-radius:6px;background:#f8f8f8;">
+              <span style="font-size:0.72rem;color:#6B7280;">h</span>
+              <input style="width:42px;font-size:14px;text-align:center;padding:6px;border:1px solid #e6e6e6;border-radius:6px;background:#f8f8f8;">
+              <span style="font-size:0.72rem;color:#6B7280;">m</span>
+              <button style="font-size:0.7rem;color:#fff;background:#60A5FA;border:none;border-radius:6px;padding:6px 12px;margin-left:auto;min-height:34px;">OK</button>
+            </div>
+            <div style="font-size:0.72rem;color:#6B7280;margin-bottom:4px;">컨디션</div>
+            <!-- 개선: 44px 터치 타겟 -->
+            <div style="display:flex;gap:6px;margin-bottom:10px;">
+              <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">1</button>
+              <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">2</button>
+              <button style="width:44px;height:44px;border-radius:8px;border:2px solid #60A5FA;background:rgba(96,165,250,0.08);color:#60A5FA;font-size:0.85rem;font-weight:600;">3</button>
+              <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">4</button>
+              <button style="width:44px;height:44px;border-radius:8px;border:1px solid #e6e6e6;background:#f8f8f8;color:#6B7280;font-size:0.85rem;font-weight:600;">5</button>
+            </div>
+
+            <!-- 개선: 빈 상태 메시지 -->
+            <div class="label-new">하루와의 대화</div>
+            <div class="empty-state">
+              <div class="empty-text">아직 오늘 대화가 없어요</div>
+              <div class="empty-action">하루에게 오늘 하루를 이야기해보세요 →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 기록 Week ═══ -->
+<div class="section-title">기록 — Week (차트 개선)</div>
+
+<div class="compare">
+  <div>
+    <div class="compare-label">Before (범례 없음)</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll" style="padding:20px 24px;">
+          <div class="label-old">SLEEP</div>
+          <div class="mini-chart">
+            <div class="mini-bar" style="height:57%;background:#E6E6E6;"></div>
+            <div class="mini-bar" style="height:75%;background:#60A5FA;"></div>
+            <div class="mini-bar" style="height:46%;background:#E6E6E6;"></div>
+            <div class="mini-bar" style="height:70%;background:#60A5FA;"></div>
+            <div class="mini-bar" style="height:0%;"></div>
+            <div class="mini-bar" style="height:0%;"></div>
+            <div class="mini-bar" style="height:0%;"></div>
+          </div>
+
+          <div class="label-old">EMOTION</div>
+          <div style="display:flex;gap:4px;flex-wrap:wrap;">
+            <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">평온</span>
+            <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">기쁨</span>
+            <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">피곤</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="compare-label">After (범례 + 컬러 비율바 + 목표선)</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-scroll" style="padding:20px 24px;">
+          <div class="label-new">SLEEP</div>
+          <!-- 목표선 -->
+          <div style="position:relative;">
+            <div style="position:absolute;top:12px;left:0;right:0;border-top:1.5px dashed #d1d5db;"></div>
+            <div style="position:absolute;top:5px;right:0;font-size:0.55rem;color:#6B7280;">7h</div>
+            <div class="mini-chart" style="position:relative;z-index:1;">
+              <div class="mini-bar" style="height:57%;background:#E6E6E6;"></div>
+              <div class="mini-bar" style="height:75%;background:#60A5FA;"></div>
+              <div class="mini-bar" style="height:46%;background:#E6E6E6;"></div>
+              <div class="mini-bar" style="height:70%;background:#60A5FA;"></div>
+              <div class="mini-bar" style="height:4px;background:#f0f0f0;border-radius:2px;"></div>
+              <div class="mini-bar" style="height:4px;background:#f0f0f0;border-radius:2px;"></div>
+              <div class="mini-bar" style="height:4px;background:#f0f0f0;border-radius:2px;"></div>
+            </div>
+          </div>
+          <div class="legend">
+            <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>7h+</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#E6E6E6;"></span>미달</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#f0f0f0;"></span>없음</span>
+          </div>
+
+          <div class="label-new">EMOTION</div>
+          <!-- 컬러 비율 바 -->
+          <div class="color-strip">
+            <div style="flex:3;background:#60A5FA;"></div>
+            <div style="flex:2;background:#FBBF24;"></div>
+            <div style="flex:2;background:#CBD5E1;"></div>
+          </div>
+          <div class="legend" style="margin-top:6px;">
+            <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>평온 43%</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#FBBF24;"></span>기쁨 29%</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#CBD5E1;"></span>피곤 28%</span>
+          </div>
+
+          <div class="label-new">WEEKLY REPORT</div>
+          <div style="padding:12px;background:#fafafa;border-radius:8px;font-size:0.8rem;color:#333;line-height:1.7;">
+            이번 주는 7일 중 4일을 기록하셨어요. 수면은 평균 6.1시간으로 7시간 이상 주무신 날이 2일이었어요. 감정적으로는 '평온'을 가장 많이 느끼셨어요.
+          </div>
+
+          <div class="label-new">WEEKLY RETROSPECTIVE</div>
+          <div style="font-size:0.72rem;color:#6B7280;margin-bottom:4px;">다음 주 다짐</div>
+          <input class="review-input" placeholder="다음 주에는...">
+          <div style="font-size:0.72rem;color:#6B7280;margin-bottom:4px;">한줄 소감</div>
+          <input class="review-input" placeholder="이번 주를 한 마디로...">
+          <button class="save-btn">회고 저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 기록 Month ═══ -->
+<div class="section-title">기록 — Month (감정 스트립)</div>
+
+<div class="compare">
+  <div>
+    <div class="compare-label">Before (태그 나열)</div>
+    <div style="background:#fff;border-radius:12px;padding:20px;width:320px;">
+      <div class="label-old">EMOTION</div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">
+        <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">기쁨 (3)</span>
+        <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">평온 (2)</span>
+        <span style="font-size:0.75rem;color:#333;background:#f2f2f2;padding:4px 10px;border-radius:20px;">피곤 (2)</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="compare-label">After (30일 컬러 스트립)</div>
+    <div style="background:#fff;border-radius:12px;padding:20px;width:320px;">
+      <div class="label-new">EMOTION FLOW — 31 Days</div>
+      <div class="color-strip" style="height:14px;border-radius:7px;">
+        <div style="flex:1;background:#FBBF24;"></div>
+        <div style="flex:1;background:#60A5FA;"></div>
+        <div style="flex:1;background:#FBBF24;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+        <div style="flex:1;background:#CBD5E1;"></div>
+        <div style="flex:1;background:#60A5FA;"></div>
+        <div style="flex:1;background:#FBBF24;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+        <div style="flex:1;background:#f0f0f0;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:0.5rem;color:#6B7280;margin-top:4px;">
+        <span>1일</span><span>15일</span><span>31일</span>
+      </div>
+      <div class="legend" style="margin-top:8px;">
+        <span class="legend-item"><span class="legend-dot" style="background:#FBBF24;"></span>기쁨 (3)</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#60A5FA;"></span>평온 (2)</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#CBD5E1;"></span>피곤 (2)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Annotations -->
+<div class="anno">
+  <div class="anno-title">페이지별 개선 요약</div>
+  <div class="anno-item"><strong>하루 탭</strong> — 헤더 구분선 명확화, 오늘 스케줄 브리핑 포함, 건강 데이터 참조 대화</div>
+  <div class="anno-item"><strong>기록 Today</strong> — 라벨 #6B7280(0.7rem), 감정 버튼 흰배경+2pt, 컨디션 44px, 빈 상태 메시지</div>
+  <div class="anno-item"><strong>기록 Week</strong> — 차트 목표선(7h)+범례, 감정 컬러 비율 바, 리포트/회고 유지</div>
+  <div class="anno-item"><strong>기록 Month</strong> — 감정 태그→30일 컬러 스트립+범례</div>
+  <div class="anno-item"><strong>공통</strong> — #b3b3b3→#6B7280, 0.6rem→0.7rem, 터치 44px, 스켈레톤 로딩</div>
+</div>
+
+<div style="text-align:center;font-size:0.6rem;color:#b3b3b3;padding:32px 0;">
+  Life OS Stage 8 — 하루/기록 시안 — 2026-05-07
+</div>
+
+</div>
+</body>
+</html>

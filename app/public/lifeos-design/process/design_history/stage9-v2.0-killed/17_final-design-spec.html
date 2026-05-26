@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Stage 9 / v0.9 — 최종 시안 (모든 영역 복원)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Inter", sans-serif;
+    background: #f5f6f8;
+    color: #1f2937;
+    padding: 40px 24px 60px;
+    line-height: 1.5;
+  }
+  h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+  .subtitle { color: #6b7280; font-size: 0.85rem; margin-bottom: 32px; }
+  .pages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 28px; max-width: 1600px; margin: 0 auto; }
+  .page-card { background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); padding: 20px; }
+  .page-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  .page-route { font-family: monospace; font-size: 0.7rem; color: #6b7280; margin-bottom: 14px; }
+  .phone {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 360px;
+  }
+  .phone-status {
+    background: #fafafa;
+    padding: 6px 18px;
+    font-size: 0.65rem;
+    color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .phone-body { padding: 0; min-height: 600px; position: relative; }
+  .label { font-size: 0.65rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.08em; margin: 14px 22px 4px; font-weight: 600; }
+  .row { margin: 0 22px 8px; font-size: 0.82rem; color: #1f2937; }
+  .mini { font-size: 0.72rem; color: #6b7280; }
+  .new-badge {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .restored-badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a8a;
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  /* bottom nav */
+  .bottom-nav {
+    display: flex;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+    padding: 8px 0;
+    margin-top: 16px;
+  }
+  .bottom-nav button {
+    flex: 1;
+    border: none;
+    background: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  .bottom-nav .nm { display: block; font-size: 0.82rem; font-weight: 700; color: #b3b3b3; }
+  .bottom-nav .rl { display: block; font-size: 0.5rem; color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+  .bottom-nav .active .nm { color: #000; }
+  .bottom-nav .active .rl { color: #60A5FA; }
+  /* Today selector */
+  .today-selector {
+    display: flex;
+    gap: 4px;
+    overflow: hidden;
+    padding: 12px 8px 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .ts-cell {
+    width: 48px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+  .ts-cell .ts-day { font-size: 0.6rem; color: #9ca3af; }
+  .ts-cell .ts-num { font-weight: 600; }
+  .ts-cell.sel { background: #DC2626; color: #fff; }
+  .ts-cell.sel .ts-day { color: rgba(255,255,255,0.85); }
+  /* time nav */
+  .time-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 22px;
+    font-size: 0.92rem;
+  }
+  .time-nav .arrow { font-size: 1.05rem; color: #4b5563; cursor: pointer; }
+  /* chart */
+  .chart-row { display: flex; gap: 4px; padding: 4px 22px; align-items: flex-end; height: 60px; }
+  .chart-bar {
+    flex: 1;
+    background: linear-gradient(180deg, #60A5FA, #93c5fd);
+    border-radius: 3px 3px 0 0;
+    position: relative;
+  }
+  .chart-bar.low { background: linear-gradient(180deg, #fda4af, #fecdd3); }
+  .chart-row-labels { display: flex; gap: 4px; padding: 0 22px 6px; }
+  .chart-row-labels span { flex: 1; text-align: center; font-size: 0.6rem; color: #9ca3af; }
+  /* stat card */
+  .stat-row { display: flex; gap: 8px; padding: 0 22px; margin-top: 14px; }
+  .stat-card {
+    flex: 1;
+    background: #f8fafc;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 1.4rem; font-weight: 700; color: #60A5FA; line-height: 1; }
+  .stat-card .lbl { font-size: 0.6rem; color: #6b7280; margin-top: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+  /* calendar */
+  .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; padding: 4px 22px; font-size: 0.7rem; }
+  .calendar .h { text-align: center; padding: 4px 0; color: #9ca3af; }
+  .calendar .h.sun { color: #DC2626; }
+  .calendar .c {
+    aspect-ratio: 1.5;
+    border: 1px solid #f3f4f6;
+    padding: 3px 4px;
+    position: relative;
+    font-size: 0.7rem;
+  }
+  .calendar .c .dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .calendar .c.month-done { background: #16a34a; color: #fff; font-weight: 700; }
+  .calendar .c.month-pending { background: #fef2f2; color: #DC2626; font-weight: 700; }
+  /* ai report */
+  .ai-card {
+    margin: 14px 22px 6px;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, #fafafa, #f3f4f6);
+    border-left: 3px solid #60A5FA;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+  .ai-card .ai-tag {
+    font-size: 0.58rem;
+    color: #60A5FA;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  /* chat */
+  .chat-msg {
+    margin: 6px 22px;
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    max-width: 78%;
+  }
+  .chat-msg.u { background: #000; color: #fff; margin-left: auto; }
+  .chat-msg.a { background: #f3f4f6; color: #1f2937; }
+  .chat-input {
+    margin: 14px 22px 6px;
+    display: flex;
+    gap: 8px;
+  }
+  .chat-input input { flex: 1; padding: 8px 14px; background: #fafafa; border: 1px solid #e5e7eb; border-radius: 999px; font-size: 0.78rem; }
+  .chat-input button { padding: 8px 16px; background: #000; color: #fff; border: none; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+  /* toast */
+  .toast {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+  /* emotion chip */
+  .em-row { display: flex; gap: 6px; padding: 6px 22px; flex-wrap: wrap; }
+  .em-chip {
+    padding: 3px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    color: #6b7280;
+  }
+  .em-chip.sel { border-color: #fb923c; color: #fb923c; font-weight: 600; }
+  /* legend */
+  .legend {
+    display: flex;
+    gap: 12px;
+    padding: 6px 22px;
+    font-size: 0.65rem;
+    color: #6b7280;
+    flex-wrap: wrap;
+  }
+  .legend .key { display: flex; align-items: center; gap: 4px; }
+  .legend .dot-mini { width: 8px; height: 8px; border-radius: 50%; }
+  /* routine */
+  .routine-item {
+    margin: 4px 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .routine-check {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.5px solid #d1d5db;
+  }
+  .routine-check.done { background: #60A5FA; border-color: #60A5FA; }
+  .routine-text { flex: 1; font-size: 0.78rem; }
+  .routine-text.done { color: #9ca3af; text-decoration: line-through; }
+  .routine-streak { font-size: 0.62rem; color: #60A5FA; font-weight: 600; }
+  /* settings */
+  .settings-section { padding: 16px 22px; border-bottom: 1px solid #f3f4f6; }
+  .settings-label { font-size: 0.65rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; font-weight: 600; }
+  .settings-help { font-size: 0.7rem; color: #9ca3af; margin-bottom: 8px; }
+  .settings-input {
+    width: 100%;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    margin-bottom: 8px;
+  }
+  .settings-btn {
+    width: 100%;
+    padding: 9px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.78rem;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #059669;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  /* notes box */
+  .notes {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.55;
+    color: #78350f;
+  }
+  .notes strong { color: #92400e; }
+  .legend-page {
+    max-width: 1100px;
+    margin: 0 auto 28px;
+    padding: 14px 18px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 0.78rem;
+  }
+  .legend-page .row-keys { display: flex; gap: 18px; margin-top: 6px; flex-wrap: wrap; }
+  .legend-page .row-keys .key-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:1600px;margin:0 auto 28px">
+  <div style="display:inline-block;background:#DC2626;color:#fff;padding:4px 14px;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;margin-bottom:10px">v2.0 청사진 · Stage 10</div>
+  <h1>Life OS — v2.0 최종 시안 (UI 발전 완성형)</h1>
+  <div class="subtitle">v0.x 시리즈 → v2.0 메이저 버전 점프. 6 페이지 통합 시안 + Week/Month 누락 영역 복원 명세. 사용자 검토 후 Plan 5로 코드 반영.</div>
+</div>
+
+<div class="legend-page">
+  <strong>범례</strong>
+  <div class="row-keys">
+    <span class="key-chip"><span class="new-badge">NEW</span> Stage 9에서 신설된 영역</span>
+    <span class="key-chip"><span class="restored-badge">RESTORE</span> Plan에서 누락 → 본 시안에서 복원해야 할 영역</span>
+    <span class="key-chip">표시 없음 = 기존 유지</span>
+  </div>
+</div>
+
+<div class="pages-grid">
+
+<!-- ============================================ -->
+<!-- 1. 홈 -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">1. 홈 — 7블록 순서 변경</div>
+  <div class="page-route">/ (Briefing)</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body">
+      <!-- WeatherHero + Greeting 압축 -->
+      <div style="background: linear-gradient(180deg, #87CEEB 0%, #D4EDF7 80%, #fff 100%); padding: 28px 22px 12px;">
+        <div style="font-size: 0.65rem; color: #fff; text-transform: uppercase; letter-spacing: 0.1em;">SUN, MAY 11</div>
+        <div style="font-size: 1.6rem; color: #fff; font-weight: 700; margin-top: 4px;">맑음, 22°</div>
+        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.92); margin-top: 6px;">진현님, 좋은 아침이에요</div>
+      </div>
+      <div class="label">Daily Insight</div>
+      <div class="ai-card" style="margin-top: 4px;">
+        <div class="ai-tag">오늘의 인사이트</div>
+        오늘은 햇살이 좋네요. 야외 산책 30분 추천드려요.
+      </div>
+      <div class="label">Today <span class="new-badge">순서 변경</span></div>
+      <div class="row mini">• 10:00 운동 약속</div>
+      <div class="row mini">• 14:00 미팅</div>
+      <div class="row mini">• 19:00 저녁 약속</div>
+      <div class="label" style="color: #60A5FA;">📝 Todo <span class="new-badge">순서 swap</span></div>
+      <div class="row mini">○ 보고서 작성</div>
+      <div class="row mini">○ 책 30 페이지 읽기</div>
+      <div class="label" style="color: #60A5FA;">🔁 Routine <span class="new-badge">순서 swap</span></div>
+      <div class="routine-item"><span class="routine-check done"></span><span class="routine-text done">아침 명상 10분</span><span class="routine-streak">12일</span></div>
+      <div class="routine-item"><span class="routine-check"></span><span class="routine-text">운동 30분</span><span class="routine-streak">5일</span></div>
+      <div class="label">Recommend</div>
+      <div class="row mini">오늘 컨디션 좋으니 어려운 작업 먼저 끝내세요.</div>
+      <div class="label">Upcoming ▼ (접힘)</div>
+      <div class="row mini" style="color: #9ca3af;">내일/모레 일정 보기</div>
+      <div class="bottom-nav">
+        <button class="active"><span class="nm">홈</span><span class="rl">Briefing</span></button>
+        <button><span class="nm">기록</span><span class="rl">Diary</span></button>
+        <button><span class="nm">하루</span><span class="rl">Assistant</span></button>
+        <button><span class="nm">설정</span><span class="rl">Settings</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>이미 적용됨 ✓</strong> — 코드 OK. WeatherHero+Greeting 시각 통합, TodoList ↔ RoutineList swap, DynamicRecommend가 Upcoming 위로.<br>
+    BottomNav 순서도 <strong>홈/기록/하루/설정</strong>으로 변경 완료.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 2. 다이어리 Today -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">2. 다이어리 Today — selector 정중앙 + 일요일 빨강</div>
+  <div class="page-route">/diary (Today 탭)</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body">
+      <div style="padding: 18px 22px 0;"><div style="font-weight: 700; font-size: 1.05rem;">Diary</div></div>
+      <div style="display: flex; gap: 0; padding: 12px 22px 0; border-bottom: 1px solid #e5e7eb;">
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; font-weight: 600; border-bottom: 2px solid #60A5FA;">TODAY</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">WEEK</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">MONTH</div>
+      </div>
+      <div class="today-selector">
+        <div class="ts-cell" style="opacity:.55"><div class="ts-day">목</div><div class="ts-num">8</div></div>
+        <div class="ts-cell" style="opacity:.75"><div class="ts-day">금</div><div class="ts-num">9</div></div>
+        <div class="ts-cell"><div class="ts-day">토</div><div class="ts-num">10</div></div>
+        <div class="ts-cell sel"><div class="ts-day">일</div><div class="ts-num">11</div></div>
+        <div class="ts-cell"><div class="ts-day">월</div><div class="ts-num">12</div></div>
+        <div class="ts-cell" style="opacity:.75"><div class="ts-day">화</div><div class="ts-num">13</div></div>
+        <div class="ts-cell" style="opacity:.55"><div class="ts-day">수</div><div class="ts-num">14</div></div>
+      </div>
+      <div class="label">SCHEDULE</div>
+      <div class="row mini">• 10:00 운동 · 14:00 미팅 · 19:00 저녁</div>
+      <div class="label">ROUTINE</div>
+      <div class="routine-item"><span class="routine-check done"></span><span class="routine-text done">아침 명상</span><span class="routine-streak">12일</span></div>
+      <div class="routine-item"><span class="routine-check"></span><span class="routine-text">운동 30분</span><span class="routine-streak">5일</span></div>
+      <div class="label">HEALTH</div>
+      <div style="padding: 4px 22px; display:flex; gap:8px; align-items:center; font-size: 0.78rem;">
+        <input style="width:44px; text-align:center; padding:4px; border:1px solid #e5e7eb; border-radius:6px; background:#fafafa;" value="7" readonly>
+        <span>시</span>
+        <input style="width:44px; text-align:center; padding:4px; border:1px solid #e5e7eb; border-radius:6px; background:#fafafa;" value="30" readonly>
+        <span>분</span>
+        <span style="font-size:0.7rem;color:#6b7280;margin-left:auto">수면</span>
+      </div>
+      <div class="label">EMOTION</div>
+      <div class="em-row">
+        <span class="em-chip sel">기쁨</span>
+        <span class="em-chip">감사</span>
+        <span class="em-chip">평온</span>
+        <span class="em-chip">불안</span>
+      </div>
+      <div class="label">MEMO</div>
+      <div style="padding: 4px 22px;"><textarea style="width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:6px;background:#fafafa;font-size:0.74rem;height:50px" readonly>오늘은 새 프로젝트 시작...</textarea></div>
+      <div style="padding: 8px 22px;"><button class="settings-btn">저장</button></div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>이미 적용됨 ✓</strong> — DateSelector 정중앙·일요일 빨강·양옆 fade, 일정·루틴 영역 복원, HealthInput, MemoSection, 저장 토스트 모두 동작.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 3. 다이어리 Week (전체 복원) -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">3. 다이어리 Week — <span class="restored-badge">7영역 복원</span></div>
+  <div class="page-route">/diary (Week 탭)</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body">
+      <div style="padding: 18px 22px 0;"><div style="font-weight: 700; font-size: 1.05rem;">Diary</div></div>
+      <div style="display: flex; padding: 12px 22px 0; border-bottom: 1px solid #e5e7eb;">
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">TODAY</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; font-weight: 600; border-bottom: 2px solid #60A5FA;">WEEK</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">MONTH</div>
+      </div>
+      <div class="time-nav"><span class="arrow">‹</span><span>2026-W19 · 5/10~5/16</span><span class="arrow">›</span></div>
+
+      <!-- Recommendation% + Todo% -->
+      <div class="stat-row">
+        <div class="stat-card"><div class="num">78%</div><div class="lbl">Recommendation <span class="restored-badge">R</span></div></div>
+        <div class="stat-card"><div class="num">62%</div><div class="lbl">Todo <span class="restored-badge">R</span></div></div>
+      </div>
+
+      <!-- Sleep chart -->
+      <div class="label">Sleep <span class="restored-badge">R</span></div>
+      <div class="chart-row">
+        <div class="chart-bar" style="height:80%"></div>
+        <div class="chart-bar" style="height:60%"></div>
+        <div class="chart-bar low" style="height:35%"></div>
+        <div class="chart-bar" style="height:75%"></div>
+        <div class="chart-bar" style="height:85%"></div>
+        <div class="chart-bar" style="height:90%"></div>
+        <div class="chart-bar" style="height:70%"></div>
+      </div>
+      <div class="chart-row-labels"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+      <div class="mini" style="padding: 4px 22px;">평균 7.2h · 7h+ 5일 / 미달 2일</div>
+
+      <!-- Coffee chart -->
+      <div class="label">Coffee <span class="restored-badge">R</span></div>
+      <div class="chart-row">
+        <div class="chart-bar" style="height:30%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:50%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:50%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:70%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:30%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:50%;background:#a78bfa"></div>
+        <div class="chart-bar" style="height:30%;background:#a78bfa"></div>
+      </div>
+      <div class="mini" style="padding: 4px 22px;">평균 2.1잔</div>
+
+      <!-- Emotion -->
+      <div class="label">Emotion <span class="restored-badge">R</span></div>
+      <div style="display: flex; padding: 4px 22px; gap: 4px; height: 20px;">
+        <div style="flex:3; background:#fb923c; border-radius:3px"></div>
+        <div style="flex:2; background:#34d399; border-radius:3px"></div>
+        <div style="flex:1; background:#a78bfa; border-radius:3px"></div>
+        <div style="flex:1; background:#94a3b8; border-radius:3px"></div>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="dot-mini" style="background:#fb923c"></span>기쁨 3</span>
+        <span class="key"><span class="dot-mini" style="background:#34d399"></span>평온 2</span>
+        <span class="key"><span class="dot-mini" style="background:#a78bfa"></span>감사 1</span>
+        <span class="key"><span class="dot-mini" style="background:#94a3b8"></span>피곤 1</span>
+      </div>
+
+      <!-- Daily Details -->
+      <div class="label">Daily Details <span class="restored-badge">R</span></div>
+      <div class="row mini">일 5/10 — 수면 7h · 컨디션 4/5 · 기쁨</div>
+      <div class="row mini">월 5/11 — 수면 7.5h · 컨디션 5/5 · 기쁨</div>
+      <div class="row mini">화 5/12 — 수면 6h · 컨디션 3/5 · 피곤</div>
+      <div class="row mini" style="color:#9ca3af">목·금·토 …</div>
+
+      <!-- Exercise -->
+      <div class="label">Exercise Log <span class="restored-badge">R</span></div>
+      <div class="row mini">• 조깅 30분 (월)</div>
+      <div class="row mini">• 헬스 1시간 (목)</div>
+      <div class="mini" style="padding: 4px 22px; color:#6b7280">총 2회</div>
+
+      <!-- Recommendation Details -->
+      <div class="label">Recommendation Details <span class="restored-badge">R</span></div>
+      <div class="row mini">✓ 오늘 산책 (월)</div>
+      <div class="row mini">✓ 책 1챕터 (수)</div>
+      <div class="row mini" style="color:#9ca3af">○ 명상 (금) — 미완</div>
+
+      <!-- Todo summary -->
+      <div class="label">Todo <span class="restored-badge">R</span></div>
+      <div class="row mini">✓ 보고서 작성 · ✓ 미팅 준비</div>
+      <div class="row mini" style="color:#9ca3af">○ 책 30 페이지</div>
+      <div class="mini" style="padding: 4px 22px; color:#6b7280">완료 8 / 13 · 62%</div>
+
+      <!-- AI Weekly Report -->
+      <div class="ai-card">
+        <div class="ai-tag">AI Weekly Report <span class="restored-badge">R</span></div>
+        이번 주는 컨디션 변동이 컸어요. 화요일 수면 부족 후 피곤 감정이 따라왔습니다. 운동 빈도는 적정 수준이고 다음 주에는 수면 일관성에 신경 쓰는 걸 추천드려요.
+      </div>
+
+      <!-- Weekly Retrospective -->
+      <div class="label">Weekly Retrospective <span class="new-badge">개선됨</span></div>
+      <div style="padding: 4px 22px;"><input class="settings-input" placeholder="한 줄 회고" value="새 프로젝트 시작이 의미있었음"></div>
+      <div style="padding: 4px 22px;"><textarea class="settings-input" style="height:50px" placeholder="다음 주에는…">월요일 수면 일찍 자기</textarea></div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>복원 필요 ←</strong> 현재 코드에는 <code>WeekChart</code>(수면+감정 도트만), <code>WeekReview</code>만 있음. 위 7개 영역 새로 추가 필요:<br>
+    Recommendation%/Todo% 카드, Sleep 차트, Coffee 차트, Emotion 분포, Daily Details, Exercise Log, Recommendation Details, Todo summary, AI Weekly Report.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 4. 다이어리 Month (전체 복원) -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">4. 다이어리 Month — 캘린더(NEW) + <span class="restored-badge">5영역 복원</span></div>
+  <div class="page-route">/diary (Month 탭)</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body">
+      <div style="padding: 18px 22px 0;"><div style="font-weight: 700; font-size: 1.05rem;">Diary</div></div>
+      <div style="display: flex; padding: 12px 22px 0; border-bottom: 1px solid #e5e7eb;">
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">TODAY</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; color: #6b7280;">WEEK</div>
+        <div style="flex: 1; text-align: center; padding: 8px 0; font-size: 0.7rem; font-weight: 600; border-bottom: 2px solid #60A5FA;">MONTH</div>
+      </div>
+      <div class="time-nav"><span class="arrow">‹</span><span>2026년 5월</span><span class="arrow">›</span></div>
+
+      <!-- Calendar -->
+      <div class="calendar">
+        <div class="h sun">일</div><div class="h">월</div><div class="h">화</div><div class="h">수</div><div class="h">목</div><div class="h">금</div><div class="h">토</div>
+        <div class="c"><div>3</div><div class="dot" style="background:#DC2626"></div></div>
+        <div class="c"><div>4</div><div class="dot" style="background:#16a34a"></div></div>
+        <div class="c"><div>5</div><div class="dot" style="background:#16a34a"></div></div>
+        <div class="c"><div>6</div></div>
+        <div class="c"><div>7</div><div class="dot" style="background:#16a34a"></div></div>
+        <div class="c"><div>8</div></div>
+        <div class="c"><div>9</div></div>
+        <div class="c"><div>10</div><div class="dot" style="background:#2563eb"></div></div>
+        <div class="c"><div>11</div><div class="dot" style="background:#16a34a"></div></div>
+        <div class="c"><div>12</div></div>
+        <div class="c"><div>13</div><div class="dot" style="background:#16a34a"></div></div>
+        <div class="c"><div>14</div></div>
+        <div class="c"><div>15</div></div>
+        <div class="c"><div>16</div></div>
+        <div class="c"><div>17</div><div class="dot" style="background:#DC2626"></div></div>
+        <div class="c"><div>18</div></div><div class="c"><div>19</div></div><div class="c"><div>20</div></div><div class="c"><div>21</div></div><div class="c"><div>22</div></div><div class="c"><div>23</div></div>
+        <div class="c"><div>24</div><div class="dot" style="background:#DC2626"></div></div>
+        <div class="c"><div>25</div></div><div class="c"><div>26</div></div><div class="c"><div>27</div></div><div class="c"><div>28</div></div><div class="c"><div>29</div></div><div class="c"><div>30</div></div>
+        <div class="c month-pending" style="grid-column: 7;"><div>31</div><div style="position:absolute;bottom:1px;right:3px;font-size:0.55rem;font-weight:700;color:#DC2626">月</div></div>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="dot-mini" style="background:#DC2626"></span>주간회고 대기</span>
+        <span class="key"><span class="dot-mini" style="background:#2563eb"></span>주간 완료</span>
+        <span class="key"><span class="dot-mini" style="background:#16a34a"></span>일별 완료</span>
+        <span class="key"><span style="display:inline-block;width:12px;height:8px;background:#16a34a"></span>월별 완료</span>
+      </div>
+
+      <!-- 일별 차트 -->
+      <div class="label">Sleep / Coffee / Condition <span class="restored-badge">R</span></div>
+      <div class="chart-row" style="height:40px">
+        <div class="chart-bar" style="height:80%"></div>
+        <div class="chart-bar" style="height:70%"></div>
+        <div class="chart-bar low" style="height:30%"></div>
+        <div class="chart-bar" style="height:75%"></div>
+        <div class="chart-bar" style="height:85%"></div>
+        <div class="chart-bar" style="height:65%"></div>
+        <div class="chart-bar" style="height:90%"></div>
+      </div>
+      <div class="mini" style="padding: 4px 22px;">평균 수면 7.1h · 평균 컨디션 3.8/5 · 평균 커피 1.8잔</div>
+
+      <!-- Top Emotion -->
+      <div class="label">Top Emotion <span class="restored-badge">R</span></div>
+      <div style="padding: 4px 22px; font-size: 0.85rem;">🟠 <strong>기쁨</strong> 9일 · 평온 6일 · 피곤 4일</div>
+
+      <!-- Exercise + Routine -->
+      <div class="label">Exercise + Routine <span class="restored-badge">R</span></div>
+      <div class="row mini">운동 12회 (조깅 5, 헬스 4, 산책 3)</div>
+      <div class="row mini">루틴 — 아침 명상 22/31일 · 운동 12/31일</div>
+
+      <!-- AI Monthly Report -->
+      <div class="ai-card">
+        <div class="ai-tag">AI Monthly Report <span class="restored-badge">R</span></div>
+        5월은 새 프로젝트 시작으로 활기찬 달이었어요. 수면 패턴은 안정적이나 화·수요일 컨디션이 자주 떨어지는 경향이 보입니다. 6월에는 주중 회복 루틴을 한 가지 추가하는 것을 권해드려요.
+      </div>
+
+      <!-- Memorable + Next Goal + Note to Self -->
+      <div class="label">Memorable / Next Goal / Note <span class="new-badge">개선됨</span></div>
+      <div style="padding: 4px 22px;"><textarea class="settings-input" style="height:40px" placeholder="이번 달 기억에 남는">새 프로젝트 시작</textarea></div>
+      <div style="padding: 4px 22px;"><textarea class="settings-input" style="height:40px" placeholder="다음 달 목표">매일 30분 운동</textarea></div>
+      <div style="padding: 4px 22px;"><input class="settings-input" placeholder="자신에게" value="잘하고 있어"></div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>복원 필요 ←</strong> 캘린더(회고 색상 시스템 + 3:2 셀)는 <span class="new-badge">NEW</span> 적용 완료.<br>
+    그 외 일별 차트, Top Emotion, Exercise+Routine 통계, AI Monthly Report는 현재 코드에 없음. 위 mockup대로 추가 필요.<br>
+    Bottom sheet 모달(주간회고/월간회고)도 <span class="new-badge">NEW</span> 적용 완료 — 캘린더 셀 클릭 시 슬라이드업.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 5. 하루 (채팅) -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">5. 하루 — 채팅 + 자동저장 토스트</div>
+  <div class="page-route">/haru</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body" style="display:flex; flex-direction: column;">
+      <div class="toast">수면 7시간 저장됨 <span class="new-badge">NEW</span></div>
+      <div style="padding: 16px 22px; border-bottom: 1px solid #f3f4f6;">
+        <div style="font-weight:700;font-size:1rem;">하루</div>
+        <div style="font-size:0.7rem; color: #6b7280;">개인 어시스턴트</div>
+      </div>
+      <div style="flex: 1; padding: 8px 0; overflow-y: auto;">
+        <div class="chat-msg u">어제 7시간 잤어요</div>
+        <div class="chat-msg a">잘 주무셨네요! 컨디션이 어떠세요?</div>
+        <div class="chat-msg u">컨디션 4 정도</div>
+        <div class="chat-msg a">좋은 수치예요. 오늘 가벼운 운동 추천드려요.</div>
+      </div>
+      <div class="chat-input">
+        <input value="컨디션 4 정도" readonly>
+        <button>보내기</button>
+      </div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>이미 적용됨 ✓</strong> — 6개 책임 분리 완료 (keywords, markdown, useChatMessages, useAutoSave, ChatMessage, ChatInput). 자동저장 토스트 정상.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 6. 설정 -->
+<!-- ============================================ -->
+<div class="page-card">
+  <div class="page-title">6. 설정 — 안내 문구 갱신</div>
+  <div class="page-route">/settings</div>
+  <div class="phone">
+    <div class="phone-status"><span>9:41</span><span>● ●●</span></div>
+    <div class="phone-body">
+      <div style="padding: 20px 22px;"><div style="font-weight: 700; font-size: 1.05rem;">Settings</div></div>
+      <div class="settings-section">
+        <div class="settings-label">ChatGPT API Key</div>
+        <div class="settings-help"><strong style="color:#1e3a8a">하루(어시스턴트) 대화에 사용됩니다</strong> <span class="new-badge">갱신</span></div>
+        <div style="margin-bottom: 8px;"><span class="status-dot"></span><span style="font-size:0.7rem; color:#059669; font-weight:500;">연결됨</span></div>
+        <input class="settings-input" type="password" value="••••••••••••••••" readonly>
+        <button class="settings-btn">저장</button>
+      </div>
+      <div class="settings-section">
+        <div class="settings-label">Google Calendar</div>
+        <div style="margin-bottom: 8px;"><span class="status-dot"></span><span style="font-size:0.7rem; color:#059669; font-weight:500;">tb6009@gmail.com 연결됨</span></div>
+        <button class="settings-btn">지금 동기화</button>
+      </div>
+      <div class="settings-section">
+        <div class="settings-label">Version</div>
+        <div class="mini" style="margin:0;">v0.9.0 · build 28c1147 · 2026-05-11</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">
+    <strong>이미 적용됨 ✓</strong> — "친구들(모미/마음)" → "하루(어시스턴트) 대화에 사용됩니다". 버전 표시는 기존 그대로 유지.
+  </div>
+</div>
+
+</div>
+
+<!-- 종합 안내 -->
+<div style="max-width: 1100px; margin: 40px auto 0; padding: 22px 24px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); font-size: 0.85rem; line-height: 1.7;">
+  <h2 style="font-size: 1.05rem; margin-bottom: 12px;">📌 본 시안 대로 진행 시 작업 범위</h2>
+
+  <p><strong>이미 적용된 페이지 (5/6)</strong> — 코드 OK, 추가 작업 없음:</p>
+  <ul style="margin: 6px 0 14px 22px; color: #374151;">
+    <li>1. 홈 (7블록 순서)</li>
+    <li>2. 다이어리 Today (selector 정중앙·일요일 빨강·일정·루틴 복원)</li>
+    <li>5. 하루 (6개 분리·자동저장 토스트)</li>
+    <li>6. 설정 (문구 갱신)</li>
+    <li>+ BottomNav 순서, /friends deprecate, 아키텍처 분리 등 인프라</li>
+  </ul>
+
+  <p><strong>추가 복원이 필요한 페이지 (2/6)</strong> — Plan 5로 진행 필요:</p>
+  <ul style="margin: 6px 0 14px 22px; color: #374151;">
+    <li>3. <strong>다이어리 Week</strong> — Recommendation%/Todo% 카드, Sleep 차트, Coffee 차트, Emotion 분포, Daily Details, Exercise Log, Recommendation Details, Todo summary, AI Weekly Report</li>
+    <li>4. <strong>다이어리 Month</strong> — 일별 sleep/coffee/condition 차트, Top Emotion, Exercise+Routine 통계, AI Monthly Report</li>
+  </ul>
+
+  <p style="color: #92400e;"><strong>예상 작업량:</strong> Plan 5 (Diary Stats Restore) ~30~45분. Subagent 1회 위임 → preview 검증 → release 브랜치에 합침 → PR 갱신.</p>
+
+  <p style="margin-top: 12px;"><strong>본 시안 OK 시 진행 순서</strong>:</p>
+  <ol style="margin: 6px 0 0 22px; color: #374151;">
+    <li>Plan 5 작성 (Week/Month 복원 task 분해)</li>
+    <li>같은 worktree(<code>app-stage9</code>) <code>stage-9/plan-5-diary-stats</code> 브랜치에서 subagent 위임</li>
+    <li>push → Vercel preview URL → 사용자 검증</li>
+    <li>OK → release 브랜치로 합치기</li>
+    <li>main PR 생성 (이미 만들어진 PR이 있다면 갱신)</li>
+  </ol>
+</div>
+
+</body>
+</html>

@@ -75,6 +75,7 @@
 - [x] **일간 페이지 추가** (2026-05-20) — `/daily` 라우트 + `DailyRow` 컴포넌트. 현재 주의 활동 있는 날만 최신순. 좌측 큰 날짜 + 우측 프로젝트별 작업 내용. `daily[].entries[]` 스키마 신설 + `extract-daily-entries.mjs` 일일 로그 자동 파서 + W14~W20 12일 백필.
 - [x] **Vercel Root Directory = `app` 설정** (2026-05-25) — REST API PATCH로 직접 패치 (`vercel project` CLI 미지원). 다음 push부터 자동 배포 정상화.
 - [x] **104_맨프레드교수님 트래킹·등록 상시 제외** (2026-05-25) — `extract-from-filesystem.mjs` · `extract-images.mjs` · `.claude/CLAUDE.md` 3개 파일 패치.
+- [x] **auto-capture hook mid-week 발행본 누락 버그 수정** (2026-05-25) — `auto-capture-activity.sh` 패치: draft → weekly 자동 복사. W22 stub 즉시 발행 + 5/25 entries 3건(061·063·091) 정상 노출. 향후 어느 주든 첫날부터 hook 정상 작동.
 - [~] Claude cron으로 매주 월요일 09:00 자동 빌드 — 원격 routine 차단(워크스페이스 부재). 옵션 A(로컬 launchd) 권장, 사용자 결정 대기.
 - [-] 재구조화 후속 `path` 필드 — EXPLICIT map과 define이 이미 동기화. 중복 데이터 회피로 스킵.
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화

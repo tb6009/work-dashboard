@@ -28,7 +28,7 @@
 
   { "id": "061", "categoryId": "06",        "name": "LifeOS",            "type": "product",    "define": "개인 라이프 관리 웹앱 (Next.js+Supabase)",         "status": "active", "createdAt": "2026-05-02", "webUrl": "https://life-os-7wj2.vercel.app", "designHistoryUrl": "/lifeos-design-history.html" },
   { "id": "062", "categoryId": "06",        "name": "논문리더",           "type": "product",    "define": "Obsidian+Supabase 공유 Work 앱 v0.1",            "status": "new",    "createdAt": "2026-05-05" },
-  { "id": "063", "categoryId": "06",        "name": "workDashboard",     "type": "product",    "define": "작업 활동 주/월/연 누적 시각화 대시보드",            "status": "active", "createdAt": "2026-05-05", "webUrl": "https://work-dashboard-app.vercel.app" },
+  { "id": "063", "categoryId": "06",        "name": "workDashboard",     "type": "product",    "define": "작업 활동 주/월/연 누적 시각화 대시보드",            "status": "active", "createdAt": "2026-05-05", "webUrl": "https://work-dashboard-app.vercel.app", "designHistoryUrl": "/workdashboard-design-history.html" },
   { "id": "064", "categoryId": "06",        "name": "프로젝트매뉴얼",     "type": "education",  "define": "061·062·063 패턴 → AI 입문자 학생용 인스트럭션",   "status": "new",    "createdAt": "2026-05-08" },
   { "id": "065", "categoryId": "06",        "name": "인터뷰",             "type": "data",       "define": "인터뷰 자료 수집·전사·분석·산출물 작업장",          "status": "new",    "createdAt": "2026-05-08" },
   { "id": "066", "categoryId": "06",        "name": "소규모조직_AI",      "type": "product",    "define": "project01(Vite+TS) · project02 · project03(파이썬 + 전략·플레이북) — 06_Personal_Project/066_소규모조직_AI/", "status": "active", "createdAt": "2026-05-22" },

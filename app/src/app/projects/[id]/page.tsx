@@ -359,7 +359,7 @@ function ExternalLinkRow({
   designHistoryUrl?: string;
 }) {
   const links: { label: string; href: string }[] = [];
-  if (designHistoryUrl) links.push({ label: 'DESIGN HISTORY', href: designHistoryUrl });
+  if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });
   if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
   if (links.length === 0) return null;
 

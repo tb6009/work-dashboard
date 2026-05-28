@@ -25,6 +25,10 @@
   { "id": "054", "categoryId": "05",        "name": "연구논문02 (CPSF)",  "type": "research",   "define": "박사 프로포절: AI×CPSF, SAI 중심 프레임 — 05_phD_Research/연구논문02/", "status": "active", "aliases": ["21"] },
   { "id": "055", "categoryId": "05",        "name": "연구방법론",         "type": "research",   "define": "PPS 등 방법론 자료 — 05_phD_Research/연구방법론/", "status": "active", "createdAt": "2026-05-22" },
   { "id": "056", "categoryId": "05",        "name": "연구논문03_persona", "type": "research",   "define": "CHI2024 GPT Personas 논문 분석 — 05_phD_Research/연구논문 03_persona/", "status": "new",    "createdAt": "2026-05-22" },
+  { "id": "057", "categoryId": "05",        "name": "질적연구세미나",     "type": "research",   "define": "박사논문 연구제안서 v4 + 6대 방법론 지식맵 corpus — 05_phD_Research/질적연구세미나/", "status": "active", "createdAt": "2026-05-28" },
+  { "id": "058", "categoryId": "05",        "name": "질적연구ResearchBot","type": "research",   "define": "박사논문 질적연구 봇 팀(5역할) 운영·작업 허브 — 05_phD_Research/054_질적연구ResearchBot/", "status": "active", "createdAt": "2026-05-28" },
+  { "id": "059", "categoryId": "05",        "name": "질적연구_Gemini",    "type": "research",   "define": "질적연구 봇 작업공간 (superseded → 058) — 05_phD_Research/질적연구_Gemini/", "status": "archived", "createdAt": "2026-05-28" },
+  { "id": "060", "categoryId": "05",        "name": "assisst 아카이브",   "type": "research",   "define": "2023~2026 박사과정 논문 1,029편 카탈로그 — 05_phD_Research/assisst/", "status": "active", "createdAt": "2026-05-28" },
 
   { "id": "061", "categoryId": "06",        "name": "LifeOS",            "type": "product",    "define": "개인 라이프 관리 웹앱 (Next.js+Supabase)",         "status": "active", "createdAt": "2026-05-02", "webUrl": "https://life-os-7wj2.vercel.app", "designHistoryUrl": "/lifeos-design/" },
   { "id": "062", "categoryId": "06",        "name": "논문리더",           "type": "product",    "define": "Obsidian+Supabase 공유 Work 앱 v0.1",            "status": "new",    "createdAt": "2026-05-05" },

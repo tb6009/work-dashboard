@@ -25,7 +25,9 @@
         "063",
         "091",
         "054",
-        "092"
+        "092",
+        "057",
+        "059"
       ],
       "entries": [
         {
@@ -47,6 +49,14 @@
         {
           "projectId": "092",
           "did": "[fs scan] 02_이미지제작_언어표현_수업설계_v0.1.md · 03_이미지제작_언어표현_대표사례목록_v0.1.md"
+        },
+        {
+          "projectId": "057",
+          "did": "[fs scan] 00_지식맵_INDEX.md · 01_사례연구_설계논리_Yin.md · 02_질적연구_인식론지형.md · 03_분석방법_의사결정.md · 04_질적논문_형식구조.md 외 5건"
+        },
+        {
+          "projectId": "059",
+          "did": "[fs scan] CLAUDE.md"
         }
       ]
     },
@@ -56,7 +66,8 @@
       "filesChanged": 0,
       "topProjectIds": [
         "063",
-        "092"
+        "092",
+        "057"
       ],
       "entries": [
         {
@@ -66,6 +77,10 @@
         {
           "projectId": "092",
           "did": "[fs scan] 04_사례3_장면수정_이미지정리_v0.1.md"
+        },
+        {
+          "projectId": "057",
+          "did": "[fs scan] 00_SESSION_SUMMARY.md · 07_연구프로포설_v4_서술형_v0.10.md · 07_연구프로포설_v4_서술형_v0.11.md · 07_연구프로포설_v4_서술형_v0.4.md · 07_연구프로포설_v4_서술형_v0.5.md 외 10건"
         }
       ]
     },
@@ -75,7 +90,10 @@
       "filesChanged": 0,
       "topProjectIds": [
         "063",
-        "092"
+        "092",
+        "058",
+        "057",
+        "059"
       ],
       "entries": [
         {
@@ -85,6 +103,18 @@
         {
           "projectId": "092",
           "did": "[fs scan] 07_논문기반_28p_PPT_초안구성안_이미지포함_v0.1.md"
+        },
+        {
+          "projectId": "058",
+          "did": "[fs scan] CLAUDE.md · AGENTS_ROSTER.md · PROJECT.md · 01_RQ범위결정_a안_정리.md"
+        },
+        {
+          "projectId": "057",
+          "did": "[fs scan] 07_연구프로포설_v4_서술형_v0.12.md · 07_연구프로포설_v4_서술형_v0.13.md · 08_인용_명세서.md · 15_KIDP_디자인산업통계_인덱스.md"
+        },
+        {
+          "projectId": "059",
+          "did": "[fs scan] PROJECT.md"
         }
       ]
     },
@@ -93,7 +123,9 @@
       "weekday": "목",
       "filesChanged": 3,
       "topProjectIds": [
-        "063"
+        "063",
+        "057",
+        "092"
       ],
       "entries": [
         {
@@ -103,6 +135,14 @@
         {
           "projectId": "063",
           "did": "PROJECT.md §2 최종 업데이트 + §3 액션 항목 추가 (404 수정 기록). 5/28 작업 로그(docs/logs/20260528_log.md) 신규 생성 — 원인·대안 비교(A/B/C)·결정사항 정리."
+        },
+        {
+          "projectId": "057",
+          "did": "[fs scan] 07_연구프로포설_v4_서술형_v0.14.md · 연구프로포설_v4_통합본.md"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] README.md · 11_실제사용_프롬프트원문_검증본_v0.1.md · 02_제출패키지_구성기획_v0.1.md · 03_PT용_스토리보드_프롬프트설계서_v0.1.md · 06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md 외 15건"
         }
       ]
     },
@@ -196,5 +236,5 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-28T14:39:58.497Z"
+  "buildAt": "2026-05-28T22:40:05.757Z"
 }

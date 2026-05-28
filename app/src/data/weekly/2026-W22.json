@@ -73,13 +73,38 @@
       "date": "2026-05-27",
       "weekday": "수",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "063",
+        "092"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W22.json"
+        },
+        {
+          "projectId": "092",
+          "did": "[fs scan] 07_논문기반_28p_PPT_초안구성안_이미지포함_v0.1.md"
+        }
+      ]
     },
     {
       "date": "2026-05-28",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 3,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "lifeos-design · workdashboard-design 시안 링크 404 수정 — 두 index.html head에 <base href> 추가. Next.js trailingSlash=false 308 리다이렉트로 상대 href가 루트 기준으로 풀려 발생. lifeos 37 sublink + workdashboard 13 sublink 전수 curl 검증 200 OK."
+        },
+        {
+          "projectId": "063",
+          "did": "PROJECT.md §2 최종 업데이트 + §3 액션 항목 추가 (404 수정 기록). 5/28 작업 로그(docs/logs/20260528_log.md) 신규 생성 — 원인·대안 비교(A/B/C)·결정사항 정리."
+        }
+      ]
     },
     {
       "date": "2026-05-29",
@@ -171,5 +196,5 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-26T04:06:22.449Z"
+  "buildAt": "2026-05-28T14:39:58.497Z"
 }

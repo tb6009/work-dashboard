@@ -2,7 +2,7 @@
 
 > 한 줄 정의: cloude_Code 27 프로젝트의 주간·월간·연간 작업 활동을 시각화하는 외부 공개 대시보드
 > 상태: 🟢 active
-> 최종 업데이트: 2026-05-20 (일간 페이지 추가 — /daily · daily[].entries[] 스키마 + 자동 추출 + W14~W20 백필)
+> 최종 업데이트: 2026-05-28 (시안 페이지 404 수정 — lifeos-design · workdashboard-design index.html에 `<base href>` 추가)
 
 ---
 
@@ -76,6 +76,7 @@
 - [x] **Vercel Root Directory = `app` 설정** (2026-05-25) — REST API PATCH로 직접 패치 (`vercel project` CLI 미지원). 다음 push부터 자동 배포 정상화.
 - [x] **104_맨프레드교수님 트래킹·등록 상시 제외** (2026-05-25) — `extract-from-filesystem.mjs` · `extract-images.mjs` · `.claude/CLAUDE.md` 3개 파일 패치.
 - [x] **auto-capture hook mid-week 발행본 누락 버그 수정** (2026-05-25) — `auto-capture-activity.sh` 패치: draft → weekly 자동 복사. W22 stub 즉시 발행 + 5/25 entries 3건(061·063·091) 정상 노출. 향후 어느 주든 첫날부터 hook 정상 작동.
+- [x] **lifeos-design / workdashboard-design 시안 링크 404 수정** (2026-05-28) — `/lifeos-design` · `/workdashboard-design` 에서 시안 클릭 시 404. 원인: Next.js `trailingSlash=false` 308 리다이렉트 → 브라우저가 상대 href를 루트 기준으로 풀어 `/process/...`로 이동. 두 `index.html` head에 `<base href="/lifeos-design/">` · `<base href="/workdashboard-design/">` 추가로 해결. lifeos 37 sublink + workdashboard 13 sublink 전수 검증 200 OK. 커밋 `1813eab` · `b06da58`.
 - [~] Claude cron으로 매주 월요일 09:00 자동 빌드 — 원격 routine 차단(워크스페이스 부재). 옵션 A(로컬 launchd) 권장, 사용자 결정 대기.
 - [-] 재구조화 후속 `path` 필드 — EXPLICIT map과 define이 이미 동기화. 중복 데이터 회피로 스킵.
 - [ ] Phase 4 — Monthly·Yearly 집계 자동화

@@ -7,16 +7,16 @@
   "status": "current",
   "summary": "TODO — Claude가 한 줄 요약 작성",
   "kpis": {
-    "activeProjects": 5,
+    "activeProjects": 8,
     "sessions": 1,
     "newProjects": 5,
-    "filesChanged": 31
+    "filesChanged": 164
   },
   "daily": [
     {
       "date": "2026-05-25",
       "weekday": "월",
-      "filesChanged": 31,
+      "filesChanged": 97,
       "topProjectIds": [
         "09",
         "04",
@@ -63,7 +63,7 @@
     {
       "date": "2026-05-26",
       "weekday": "화",
-      "filesChanged": 0,
+      "filesChanged": 28,
       "topProjectIds": [
         "063",
         "092",
@@ -87,7 +87,7 @@
     {
       "date": "2026-05-27",
       "weekday": "수",
-      "filesChanged": 0,
+      "filesChanged": 10,
       "topProjectIds": [
         "063",
         "092",
@@ -121,7 +121,7 @@
     {
       "date": "2026-05-28",
       "weekday": "목",
-      "filesChanged": 3,
+      "filesChanged": 26,
       "topProjectIds": [
         "063",
         "057",
@@ -149,8 +149,21 @@
     {
       "date": "2026-05-29",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 3,
+      "topProjectIds": [
+        "057",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "057",
+          "did": "[fs scan] 17_본문인용_통합명세서_v0.14.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W22.json"
+        }
+      ]
     },
     {
       "date": "2026-05-30",
@@ -236,5 +249,5 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-28T22:40:05.757Z"
+  "buildAt": "2026-05-29T01:48:45.852Z"
 }

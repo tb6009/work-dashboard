@@ -243,7 +243,25 @@ for (const day of w.daily) {
   }
 }
 
+// ─── filesChanged 재계산 (일별 강도 + 주간 KPI)
+const byDay = new Map(); // 'YYYY-MM-DD' → file count
+for (const [key, files] of byDayProject) {
+  const [d] = key.split('::');
+  byDay.set(d, (byDay.get(d) ?? 0) + files.length);
+}
+let weekTotal = 0;
+const activeIds = new Set();
+for (const day of w.daily) {
+  day.filesChanged = byDay.get(day.date) ?? 0;
+  weekTotal += day.filesChanged;
+  if (day.entries) for (const e of day.entries) activeIds.add(e.projectId);
+}
+w.kpis = w.kpis ?? {};
+w.kpis.filesChanged = weekTotal;
+w.kpis.activeProjects = activeIds.size;
+
 console.log(`✏️  추가된 entries: ${updated}건 (로그 기반 entries는 보존)`);
+console.log(`📈 filesChanged 재계산: 주간 ${weekTotal}건, active ${activeIds.size} 프로젝트`);
 
 if (DRY) {
   console.log('🔍 DRY-RUN — 변경 없음');

@@ -1,5 +1,7 @@
 import PageShell from '@/components/layout/PageShell';
 import DailyListClient from '@/components/period/DailyListClient';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateWeek } from '@/lib/tokens';
 import { loadWeek, getCurrentWeekId, listWeekIds } from '@/lib/data';
 import {
   parseWeekId,
@@ -105,6 +107,7 @@ export default async function DailyPage({ searchParams }: PageProps) {
             {week.summary}
           </p>
         ) : null}
+        {week ? <TokenSummary tokens={aggregateWeek(week)} scopeLabel={`${selectedWeekId} 주간`} /> : null}
       </section>
 
       {/* 주차 네비게이션 */}

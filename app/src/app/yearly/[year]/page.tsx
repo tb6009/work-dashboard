@@ -3,9 +3,12 @@ import PageShell from '@/components/layout/PageShell';
 import {
   loadYear,
   listAvailableYears,
+  loadAllWeeks,
   getProject,
 } from '@/lib/data';
 import { TYPE_COLOR } from '@/lib/projectTypes';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateWeeks } from '@/lib/tokens';
 
 export const dynamic = 'force-dynamic';
 
@@ -42,6 +45,9 @@ export default async function YearlyPage({ params }: PageProps) {
 
   const yearly = await loadYear(year);
   const availableYears = await listAvailableYears();
+  const allWeeks = await loadAllWeeks();
+  const yearWeeks = allWeeks.filter((w) => w.week.startsWith(`${year}-W`));
+  const yearTokens = aggregateWeeks(yearWeeks);
   const currentYear = String(new Date().getFullYear());
   const isCurrentYear = year === currentYear;
 
@@ -132,6 +138,7 @@ export default async function YearlyPage({ params }: PageProps) {
           {/* Year tabs */}
           <YearTabs years={availableYears} active={year} currentYear={currentYear} />
         </div>
+        <TokenSummary tokens={yearTokens} scopeLabel={`${year} 연간`} />
       </section>
 
       {/* KPI */}

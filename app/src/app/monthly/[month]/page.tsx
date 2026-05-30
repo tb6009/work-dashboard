@@ -19,7 +19,9 @@ import {
   getCurrentMonthId,
 } from '@/lib/calendar';
 import { TYPE_COLOR } from '@/lib/projectTypes';
-import type { ProjectType } from '@/types/dashboard';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateWeeks } from '@/lib/tokens';
+import type { ProjectType, WeeklySnapshot } from '@/types/dashboard';
 
 export const dynamic = 'force-dynamic';
 
@@ -260,6 +262,10 @@ function MonthDetail({
           {weekIds.length} weeks · {weeks.filter((w) => w !== null).length} weeks 데이터 있음 · {totalFilesChanged} files
           {weekIds.length === 5 ? ' · 5-WEEK' : ''}
         </div>
+        <TokenSummary
+          tokens={aggregateWeeks(weeks.filter((w): w is WeeklySnapshot => w !== null))}
+          scopeLabel={`${month} 월간`}
+        />
       </section>
 
       {/* KPI */}

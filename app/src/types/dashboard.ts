@@ -76,12 +76,42 @@ export interface DailyImage {
   purpose?: string;
 }
 
+export interface TokenTotals {
+  in: number;
+  out: number;
+  cache_read: number;
+  cache_write: number;
+  messages?: number;
+}
+
+export interface TokenUsageByModel {
+  in: number;
+  out: number;
+  cache_read: number;
+  cache_write: number;
+  messages: number;
+  costUSD: number;
+}
+
+export interface TokenUsage {
+  byModel: Record<string, TokenUsageByModel>;
+  total: TokenTotals;
+  costUSD: number;
+}
+
+export interface WeeklyTokenSummary {
+  total: TokenTotals;
+  costUSD: number;
+  costKRW: number;
+}
+
 /** One project's work on a single day — extracted from daily logs */
 export interface DailyEntry {
   projectId: string;
   did: string;               // section titles joined, max ~200 chars
   logFilePath?: string;      // absolute path to source log
   images?: DailyImage[];     // collected image files in same date range
+  tokens?: TokenUsage;       // Claude Code token usage for (date, project)
 }
 
 /** Daily activity bucket */
@@ -112,6 +142,8 @@ export interface WeeklySnapshot {
   decisions: DecisionEntry[];
   newProjects: string[];     // ids
   labelChanges?: Array<{ projectId: string; from: LabelStatus | null; to: LabelStatus }>;
+
+  tokens?: WeeklyTokenSummary;
 
   buildAt: string;           // ISO timestamp
 }

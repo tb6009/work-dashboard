@@ -18,6 +18,8 @@ import {
   getCurrentWeekId as calCurrentWeekId,
 } from '@/lib/calendar';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateWeek } from '@/lib/tokens';
 import type { ProjectContribution, ProjectType } from '@/types/dashboard';
 
 export const dynamic = 'force-dynamic';
@@ -94,6 +96,7 @@ export default async function Home() {
 
   const fmtRange = `${week.range.from} (월) ─ ${week.range.to} (일)`;
   const isCurrentWeek = week.week === todayWeekId;
+  const weekTokens = aggregateWeek(week);
 
   return (
     <PageShell active="current">
@@ -166,6 +169,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        <TokenSummary tokens={weekTokens} scopeLabel="이번 주" />
 
         {/* KPI grid */}
         <div

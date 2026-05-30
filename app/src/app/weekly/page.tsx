@@ -3,6 +3,8 @@ import PeriodTabs from '@/components/period/PeriodTabs';
 import WeekStrip from '@/components/period/WeekStrip';
 import PeriodProjectTile from '@/components/period/PeriodProjectTile';
 import DailyActivityBar from '@/components/charts/DailyActivityBar';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateWeek } from '@/lib/tokens';
 import {
   loadWeek,
   getCurrentWeekId,
@@ -143,6 +145,7 @@ function WeekDetail({ week, isCurrentWeek }: WeekDetailProps) {
             {week.summary}
           </p>
         ) : null}
+        <TokenSummary tokens={aggregateWeek(week)} scopeLabel={week.week} />
       </section>
 
       {/* KPI */}

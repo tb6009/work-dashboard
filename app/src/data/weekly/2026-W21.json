@@ -25,11 +25,51 @@
       "entries": [
         {
           "projectId": "061",
-          "did": "[fs scan] ThesisTab.tsx · page.tsx · api.ts"
+          "did": "[fs scan] ThesisTab.tsx · page.tsx · api.ts",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 475,
+                "out": 75093,
+                "cache_read": 6907296,
+                "cache_write": 271085,
+                "messages": 102,
+                "costUSD": 21.0829
+              }
+            },
+            "total": {
+              "in": 475,
+              "out": 75093,
+              "cache_read": 6907296,
+              "cache_write": 271085,
+              "messages": 102
+            },
+            "costUSD": 21.0829
+          }
         },
         {
           "projectId": "062",
-          "did": "[fs scan] CLAUDE.md · PROJECT.md"
+          "did": "[fs scan] CLAUDE.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 61,
+                "out": 37533,
+                "cache_read": 7688660,
+                "cache_write": 82468,
+                "messages": 41,
+                "costUSD": 15.8952
+              }
+            },
+            "total": {
+              "in": 61,
+              "out": 37533,
+              "cache_read": 7688660,
+              "cache_write": 82468,
+              "messages": 41
+            },
+            "costUSD": 15.8952
+          }
         },
         {
           "projectId": "092",
@@ -137,7 +177,27 @@
         {
           "projectId": "063",
           "did": "컨텍스트 확인 · Tier 1 자동 추출 (extract-week.mjs × 4회) · Tier 2 의미 보강 (일일 로그 6편 정독 후 수기 작성) · 주차별 핵심",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260519_log.md"
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260519_log.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 120,
+                "out": 148947,
+                "cache_read": 5726998,
+                "cache_write": 337822,
+                "messages": 55,
+                "costUSD": 26.0975
+              }
+            },
+            "total": {
+              "in": 120,
+              "out": 148947,
+              "cache_read": 5726998,
+              "cache_write": 337822,
+              "messages": 55
+            },
+            "costUSD": 26.0975
+          }
         },
         {
           "projectId": "037",
@@ -177,7 +237,27 @@
         {
           "projectId": "063",
           "did": "일간 페이지 (/daily) 신설 · ProjectComments 일간 통합 · 의사결정 타임라인 C-형식 (그룹화)",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260520_log.md"
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260520_log.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 257,
+                "out": 197133,
+                "cache_read": 29712615,
+                "cache_write": 1222486,
+                "messages": 132,
+                "costUSD": 82.2794
+              }
+            },
+            "total": {
+              "in": 257,
+              "out": 197133,
+              "cache_read": 29712615,
+              "cache_write": 1222486,
+              "messages": 132
+            },
+            "costUSD": 82.2794
+          }
         },
         {
           "projectId": "03",
@@ -397,7 +477,27 @@
         {
           "projectId": "063",
           "did": "Git 정리 및 푸시 · Vercel CLI 직접 배포 · 배포 상태 확인",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260521_log.md"
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260521_log.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 54,
+                "out": 44379,
+                "cache_read": 0,
+                "cache_write": 2575278,
+                "messages": 9,
+                "costUSD": 51.6157
+              }
+            },
+            "total": {
+              "in": 54,
+              "out": 44379,
+              "cache_read": 0,
+              "cache_write": 2575278,
+              "messages": 9
+            },
+            "costUSD": 51.6157
+          }
         },
         {
           "projectId": "03",
@@ -409,7 +509,27 @@
         },
         {
           "projectId": "066",
-          "did": "[fs scan] README.md · SESSION_RESUME.md · refresh-prices.ts · index.html · package-lock.json 외 40건"
+          "did": "[fs scan] README.md · SESSION_RESUME.md · refresh-prices.ts · index.html · package-lock.json 외 40건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 240,
+                "out": 447897,
+                "cache_read": 26394198,
+                "cache_write": 1238128,
+                "messages": 165,
+                "costUSD": 96.4021
+              }
+            },
+            "total": {
+              "in": 240,
+              "out": 447897,
+              "cache_read": 26394198,
+              "cache_write": 1238128,
+              "messages": 165
+            },
+            "costUSD": 96.4021
+          }
         },
         {
           "projectId": "092",
@@ -566,17 +686,59 @@
         "063",
         "053",
         "062",
-        "092"
+        "092",
+        "066",
+        "060"
       ],
       "entries": [
         {
           "projectId": "063",
           "did": "워크스페이스 전체 스캔 · 깨진 링크 핫픽스 (즉시 가능한 3건 + α) · W21 weekly JSON 업데이트",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260522_log.md"
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260522_log.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 387,
+                "out": 331336,
+                "cache_read": 69685252,
+                "cache_write": 3824136,
+                "messages": 197,
+                "costUSD": 201.0864
+              }
+            },
+            "total": {
+              "in": 387,
+              "out": 331336,
+              "cache_read": 69685252,
+              "cache_write": 3824136,
+              "messages": 197
+            },
+            "costUSD": 201.0864
+          }
         },
         {
           "projectId": "053",
-          "did": "[fs scan] run_master_bot.py · server.py"
+          "did": "[fs scan] run_master_bot.py · server.py",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 15712,
+                "out": 180631,
+                "cache_read": 14323675,
+                "cache_write": 266803,
+                "messages": 81,
+                "costUSD": 40.2711
+              }
+            },
+            "total": {
+              "in": 15712,
+              "out": 180631,
+              "cache_read": 14323675,
+              "cache_write": 266803,
+              "messages": 81
+            },
+            "costUSD": 40.2711
+          }
         },
         {
           "projectId": "062",
@@ -619,6 +781,54 @@
               "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
             }
           ]
+        },
+        {
+          "projectId": "066",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 7,
+                "out": 4392,
+                "cache_read": 1205943,
+                "cache_write": 242975,
+                "messages": 7,
+                "costUSD": 6.6942
+              }
+            },
+            "total": {
+              "in": 7,
+              "out": 4392,
+              "cache_read": 1205943,
+              "cache_write": 242975,
+              "messages": 7
+            },
+            "costUSD": 6.6942
+          }
+        },
+        {
+          "projectId": "060",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 53258,
+                "out": 112974,
+                "cache_read": 7848205,
+                "cache_write": 224752,
+                "messages": 98,
+                "costUSD": 25.2583
+              }
+            },
+            "total": {
+              "in": 53258,
+              "out": 112974,
+              "cache_read": 7848205,
+              "cache_write": 224752,
+              "messages": 98
+            },
+            "costUSD": 25.2583
+          }
         }
       ]
     },
@@ -637,7 +847,27 @@
       "entries": [
         {
           "projectId": "061",
-          "did": "[fs scan] activity-tracker-input-flow.html · activity-tracker-mockup.html · routine-end-workflow.html · tags.ts"
+          "did": "[fs scan] activity-tracker-input-flow.html · activity-tracker-mockup.html · routine-end-workflow.html · tags.ts",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 340,
+                "out": 162911,
+                "cache_read": 22324424,
+                "cache_write": 657140,
+                "messages": 135,
+                "costUSD": 58.0314
+              }
+            },
+            "total": {
+              "in": 340,
+              "out": 162911,
+              "cache_read": 22324424,
+              "cache_write": 657140,
+              "messages": 135
+            },
+            "costUSD": 58.0314
+          }
         },
         {
           "projectId": "091",
@@ -645,7 +875,27 @@
         },
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W21.json"
+          "did": "[fs scan] 2026-W21.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 458,
+                "out": 90662,
+                "cache_read": 8545685,
+                "cache_write": 1045786,
+                "messages": 49,
+                "costUSD": 39.2335
+              }
+            },
+            "total": {
+              "in": 458,
+              "out": 90662,
+              "cache_read": 8545685,
+              "cache_write": 1045786,
+              "messages": 49
+            },
+            "costUSD": 39.2335
+          }
         },
         {
           "projectId": "03",
@@ -669,7 +919,8 @@
         "063",
         "092",
         "091",
-        "061"
+        "061",
+        "09"
       ],
       "entries": [
         {
@@ -760,7 +1011,27 @@
               "folderContext": "06_Personal_Project / 063_workDashboard / app / public / project-images",
               "mtime": "2026-05-24T05:52:38.534Z"
             }
-          ]
+          ],
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 276,
+                "out": 200620,
+                "cache_read": 68539961,
+                "cache_write": 1125954,
+                "messages": 136,
+                "costUSD": 138.9722
+              }
+            },
+            "total": {
+              "in": 276,
+              "out": 200620,
+              "cache_read": 68539961,
+              "cache_write": 1125954,
+              "messages": 136
+            },
+            "costUSD": 138.9722
+          }
         },
         {
           "projectId": "092",
@@ -868,7 +1139,27 @@
               "caption": "생성일: 2026-05-24 기준 프롬프트: `../../../03_프롬프트/09_밤의보상심리_8장면_자동생성_프롬프트팩_v0.1.md` 기준 하네스: `../../../03_프롬프트/06_이미지생성_하네스_캐릭터레퍼런스_v0.1.md`, `../../../03_프롬프트/08_마음이_에너지표정_상황차트_v0.1.md` 업데이트 내역: Scene 6(자야 하",
               "purpose": "시작일: 2026-05-17 상태: active 이전 작업 출처: `../PROJECT.md`, `../03_claude/02_대본/`, `../03_claude/04_썸네일_시각자료/`"
             }
-          ]
+          ],
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 18,
+                "out": 30993,
+                "cache_read": 266127,
+                "cache_write": 154143,
+                "messages": 9,
+                "costUSD": 5.6141
+              }
+            },
+            "total": {
+              "in": 18,
+              "out": 30993,
+              "cache_read": 266127,
+              "cache_write": 154143,
+              "messages": 9
+            },
+            "costUSD": 5.6141
+          }
         },
         {
           "projectId": "091",
@@ -876,7 +1167,51 @@
         },
         {
           "projectId": "061",
-          "did": "[fs scan] WorkTab.tsx · RoutineList.tsx · TodoList.tsx"
+          "did": "[fs scan] WorkTab.tsx · RoutineList.tsx · TodoList.tsx",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 116,
+                "out": 38889,
+                "cache_read": 10629239,
+                "cache_write": 831673,
+                "messages": 36,
+                "costUSD": 34.4561
+              }
+            },
+            "total": {
+              "in": 116,
+              "out": 38889,
+              "cache_read": 10629239,
+              "cache_write": 831673,
+              "messages": 36
+            },
+            "costUSD": 34.4561
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 27869,
+                "out": 193744,
+                "cache_read": 7084661,
+                "cache_write": 389337,
+                "messages": 71,
+                "costUSD": 32.8759
+              }
+            },
+            "total": {
+              "in": 27869,
+              "out": 193744,
+              "cache_read": 7084661,
+              "cache_write": 389337,
+              "messages": 71
+            },
+            "costUSD": 32.8759
+          }
         }
       ]
     }
@@ -1034,5 +1369,15 @@
   "buildAt": "2026-05-24T22:16:25.677Z",
   "_meta": {
     "note": "2026-05-21 — W21 진행 중 (월 휴무, 화·수·목 활동). 화·수: /daily 신설 + 백필 + C-형식. 목: commit/push + Vercel CLI 배포."
+  },
+  "tokens": {
+    "total": {
+      "in": 99648,
+      "out": 2298134,
+      "cache_read": 286882939,
+      "cache_write": 14489966
+    },
+    "costUSD": 875.866,
+    "costKRW": 1287523
   }
 }

@@ -419,5 +419,15 @@
       "to": "new"
     }
   ],
-  "buildAt": "2026-05-24T22:16:25.671Z"
+  "buildAt": "2026-05-24T22:16:25.671Z",
+  "tokens": {
+    "total": {
+      "in": 0,
+      "out": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
 }

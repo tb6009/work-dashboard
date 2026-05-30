@@ -3,9 +3,11 @@ import { notFound } from 'next/navigation';
 import PageShell from '@/components/layout/PageShell';
 import WeeklyContributionBar from '@/components/charts/WeeklyContributionBar';
 import ProjectWorkPanel from '@/components/ProjectWorkPanel';
-import { getProject, loadWeek, loadProjectWork, loadProjectDailyActivity, getCurrentWeekId } from '@/lib/data';
+import { getProject, loadWeek, loadProjectWork, loadProjectDailyActivity, loadAllWeeks, getCurrentWeekId } from '@/lib/data';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
 import ProjectActivityFeed from '@/components/period/ProjectActivityFeed';
+import TokenSummary from '@/components/TokenSummary';
+import { aggregateProject } from '@/lib/tokens';
 
 function buildWeekly(currentPct: number) {
   return [
@@ -48,11 +50,16 @@ export default async function ProjectPage({
   const filesChanged = contribution?.filesChanged ?? 0;
   const activities = await loadProjectDailyActivity(id);
   const totalImages = activities.reduce((s, a) => s + (a.images?.length ?? 0), 0);
+  const allWeeks = await loadAllWeeks();
+  const projectTokens = aggregateProject(allWeeks, id);
 
   return (
     <PageShell active="projects">
       <Crumbs id={id} typeLabel={typeLabel} name={project.name} />
       <Hero project={project} typeColor={typeColor} typeLabel={typeLabel} />
+      <div style={{ marginBottom: 'var(--sp-6)' }}>
+        <TokenSummary tokens={projectTokens} scopeLabel={`${project.name} 누적`} />
+      </div>
 
       {work ? (
         <>

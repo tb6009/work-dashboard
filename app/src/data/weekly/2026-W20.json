@@ -445,7 +445,8 @@
         "01",
         "063",
         "092",
-        "103"
+        "103",
+        "02"
       ],
       "entries": [
         {
@@ -562,6 +563,54 @@
               "mtime": "2026-05-17T01:03:40.082Z"
             }
           ]
+        },
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 31,
+                "out": 26832,
+                "cache_read": 1450584,
+                "cache_write": 47735,
+                "messages": 11,
+                "costUSD": 5.0838
+              }
+            },
+            "total": {
+              "in": 31,
+              "out": 26832,
+              "cache_read": 1450584,
+              "cache_write": 47735,
+              "messages": 11
+            },
+            "costUSD": 5.0838
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 29,
+                "out": 17016,
+                "cache_read": 4872265,
+                "cache_write": 26428,
+                "messages": 29,
+                "costUSD": 9.0806
+              }
+            },
+            "total": {
+              "in": 29,
+              "out": 17016,
+              "cache_read": 4872265,
+              "cache_write": 26428,
+              "messages": 29
+            },
+            "costUSD": 9.0806
+          }
         }
       ]
     }
@@ -768,5 +817,15 @@
   "buildAt": "2026-05-24T22:16:25.675Z",
   "_meta": {
     "note": "2026-05-17 워크스페이스 대규모 재구조화로 063_workDashboard 위치 변경. extract-week.mjs WORKSPACE 경로 수정 완료. 일부 프로젝트의 폴더 위치는 바뀌었으나 historical ID는 유지(예: 11→디자인매거진 폴더, 31/32→083/084 폴더 등). 04·07 paused 항목은 폴더 삭제됨."
+  },
+  "tokens": {
+    "total": {
+      "in": 60,
+      "out": 43848,
+      "cache_read": 6322849,
+      "cache_write": 74163
+    },
+    "costUSD": 14.1643,
+    "costKRW": 20822
   }
 }

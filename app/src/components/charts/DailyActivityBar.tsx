@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 import { TYPE_COLOR, WARM_GRAY, GREY } from '@/lib/projectTypes';
+import { aggregateDay, formatNumber } from '@/lib/tokens';
 import type { DailyActivity, ProjectType } from '@/types/dashboard';
 
 interface Props {
@@ -84,5 +85,44 @@ export default function DailyActivityBar({ daily, projectTypeMap, height = 260 }
     };
   }, [daily, projectTypeMap]);
 
-  return <div ref={ref} style={{ width: '100%', height }} />;
+  const dailyTokens = daily.map(d => aggregateDay(d));
+  const hasTokens = dailyTokens.some(t => t.costUSD > 0);
+
+  return (
+    <div>
+      <div ref={ref} style={{ width: '100%', height }} />
+      {hasTokens && (
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `36px repeat(${daily.length}, 1fr) 16px`,
+            marginTop: 2,
+            fontFamily: 'Inter, sans-serif',
+          }}
+        >
+          <div />
+          {dailyTokens.map((t, i) => (
+            <div
+              key={daily[i].date}
+              style={{ textAlign: 'center', padding: '2px 0' }}
+            >
+              {t.costUSD > 0 ? (
+                <>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: WARM_GRAY[700], lineHeight: '14px' }}>
+                    ${t.costUSD.toFixed(0)}
+                  </div>
+                  <div style={{ fontSize: 9, color: GREY[400], lineHeight: '13px' }}>
+                    {formatNumber(t.messages)}m
+                  </div>
+                </>
+              ) : (
+                <div style={{ fontSize: 9, color: GREY[300], lineHeight: '14px' }}>—</div>
+              )}
+            </div>
+          ))}
+          <div />
+        </div>
+      )}
+    </div>
+  );
 }

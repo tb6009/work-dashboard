@@ -49,5 +49,6 @@
 
   { "id": "101", "categoryId": "10",        "name": "일상다반사",          "type": "product",    "define": "\"마음\" 챗봇 + 자료 자동수집 — 10_보고살피다/101_일상다반사/", "status": "active", "aliases": ["10"] },
   { "id": "102", "categoryId": "10",        "name": "GPT/Codex 실험",     "type": "product",    "define": "보살피고 GPT 환경 v1.5 실험·평가 — 10_보고살피다/102_GPT_실험/", "status": "new",    "createdAt": "2026-05-22" },
-  { "id": "103", "categoryId": "10",        "name": "Gemini 실험",        "type": "product",    "define": "보살피고 Gemini 시각 평가 + Gemini 최적화 제안 — 10_보고살피다/103_Gemini_실험/", "status": "new",    "createdAt": "2026-05-22" }
+  { "id": "103", "categoryId": "10",        "name": "Gemini 실험",        "type": "product",    "define": "보살피고 Gemini 시각 평가 + Gemini 최적화 제안 — 10_보고살피다/103_Gemini_실험/", "status": "new",    "createdAt": "2026-05-22" },
+  { "id": "104", "categoryId": "10",        "name": "AI챗봇스터디",        "type": "research",   "define": "전문가 페르소나 AI 챗봇 설계·평가 연구 — 4버전 비교 평가 (188응답, 가설 14/15 합격)", "status": "active", "createdAt": "2026-05-29" }
 ]

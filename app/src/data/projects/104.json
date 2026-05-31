@@ -1,0 +1,184 @@
+{
+  "id": "104",
+  "currentSituation": {
+    "summary": "전문가 페르소나 AI 챗봇 4버전(v0.3·v0.4·v0.5·v0.5.1) 설계 + 체계적 평가 완료(2026-05-30). 188개 응답 수집, 가설 15개 중 14개 합격(93%). 최적 버전: 대화품질은 v0.4(풍부형), 안정성·성격충실도는 v0.5.1(권위형). 다음 단계: 실제 사용자 파일럿 테스트 10명.",
+    "phase": "Phase 4 완료(평가·보고서) → 파일럿 테스트 준비",
+    "recentLogs": [
+      {
+        "date": "2026-05-30",
+        "title": "4페르소나 전체 평가 완료 — PPS·BFI·LIWC·일관성 4종 측정",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260530_log.md",
+        "excerpt": "Phase 0~4 전 단계 완료. 188개 응답, 가설 14/15 합격. results/final_report_public.md 생성."
+      },
+      {
+        "date": "2026-05-29",
+        "title": "평가 봇 인프라 구축 — 테스트 계획서 v1.2 + 3개 system prompt + 6개 Python 스크립트",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260529_log.md",
+        "excerpt": "수집=Sonnet 4.6, 추론·평가=Opus 4.7 아키텍처. 자극물 7시나리오 + 일관성 8쌍 + BFI-44."
+      },
+      {
+        "date": "2026-05-25",
+        "title": "system prompt v0.5.1 확정 — 격식·캐주얼 7:3, 강의 디폴트",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260525_log.md",
+        "excerpt": "5개 패치 적용: A 디폴트 7:3 / B 자기풍자 절제 / C 자기호명 절제 / D 예시 4:1 / E 일화 조건부."
+      },
+      {
+        "date": "2026-05-23",
+        "title": "페르소나 정의서 v0.4 + 미디어 발췌집 v5 완성",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260523_log.md",
+        "excerpt": "영상·팟캐스트·구술사·인터뷰 직접 인용 ~110개 추출·검증. 다중 검증 9개 시그너처 식별."
+      }
+    ]
+  },
+  "studyOverview": {
+    "subject": "리더십·조직심리 분야 세계적 전문가(L 교수)의 사고방식·말투를 재현한 AI 챗봇",
+    "objective": "동일 인물을 대상으로 스타일이 다른 4가지 system prompt 버전을 설계하고, 어느 버전이 가장 효과적으로 페르소나를 재현하는지 체계적으로 비교·검증",
+    "versions": [
+      { "id": "v0.3", "label": "격식형", "description": "짧고 간결. 핵심만 딱 끊어 전달. 금언식 표현 선호." },
+      { "id": "v0.4", "label": "풍부형", "description": "자기 경험·일화 풍부. 되묻기로 대화를 이어감. 자기호명 스타일." },
+      { "id": "v0.5", "label": "균형형", "description": "격식과 친근함 5:5 혼합. 중간값 기준점." },
+      { "id": "v0.5.1", "label": "권위형", "description": "강의 스타일 기본. 학문적 어휘 최다. 체계적 설명." }
+    ],
+    "corpus": "INSEAD 41편 + LinkedIn 25편 + SSRN 21편 + 미디어 발췌(유튜브 23편, 팟캐스트 12편, 텍스트 보조 6편)"
+  },
+  "evaluationResults": {
+    "summary": "총 188개 응답 수집. 가설 15개 중 14개 합격(93%). 유일한 예외: 권위형이 예상보다 길었음(전문어휘 설명 경향).",
+    "measurements": [
+      {
+        "name": "PPS (대화품질)",
+        "description": "8차원 LLM-as-judge 채점 (5점 만점): 간결성·재치·심리적 깊이·공감·자기공개·금언·되묻기·목소리일관성",
+        "topScore": { "version": "v0.4 풍부형", "score": 3.32 },
+        "notes": "v0.4가 재치·자기공개·되묻기에서 두드러짐. 간결성·목소리일관성은 4개 버전 모두 5.00 만점."
+      },
+      {
+        "name": "일관성",
+        "description": "동일 주제를 다르게 표현한 8쌍 질문에서 핵심 키워드 유지율 + 표현방식 안정성 측정",
+        "topScore": { "version": "v0.5.1 권위형", "score": "핵심키워드 0.619" },
+        "notes": "권위형이 무슨 말을 해야 하는지 가장 정확히 알고 있음. 격식형은 짧기 때문에 표현 변화 최소."
+      },
+      {
+        "name": "LIWC (말투분석)",
+        "description": "간결비율·자기호명·전문용어·금언·되묻기 5개 언어 지표 분석",
+        "keyFindings": [
+          "간결비율: v0.3 51.7% (최고) — 핵심만 말함",
+          "자기호명: v0.4 0.28% (최고) — \"저는...\" 스타일",
+          "전문용어: v0.5.1 0.74% (최고) — 학문적 어휘 최다",
+          "되묻기: v0.4 0.67% (최고) — 대화를 가장 잘 이어감"
+        ],
+        "notes": "각 버전이 설계 의도대로 정확하게 작동함을 언어 지표로 확인."
+      },
+      {
+        "name": "BFI-44 (성격일관성)",
+        "description": "Big Five 성격 모델로 AI 성격 프로파일을 측정하고 전문가 추정 프로파일과 비교",
+        "targetProfile": { "개방성": 4.5, "성실성": 4.0, "외향성": 2.5, "친화성": 4.0, "신경증": 2.0 },
+        "versionProfiles": [
+          { "version": "v0.3", "rmse": 0.165, "rank": 2 },
+          { "version": "v0.4", "rmse": 0.192, "rank": 3 },
+          { "version": "v0.5", "rmse": 0.209, "rank": 4 },
+          { "version": "v0.5.1", "rmse": 0.152, "rank": 1 }
+        ],
+        "notes": "4개 버전 모두 개방성 높음(4.5↑), 신경증 낮음(2.0↓) — 같은 캐릭터임을 수치로 확인. v0.5.1이 실제 프로파일과 가장 근접."
+      },
+      {
+        "name": "안전검증",
+        "description": "위기 시나리오에서 안전 프로토콜(자살예방상담전화 109 안내) 준수 여부",
+        "result": "4개 버전 모두 100% 통과",
+        "notes": "반복 질문에서도 안전번호 유지. 어떤 버전을 선택해도 안전 조건 충족."
+      }
+    ],
+    "hypothesisMatrix": {
+      "total": 15,
+      "passed": 14,
+      "passRate": "93%",
+      "exception": {
+        "hypothesis": "권위형(v0.5.1)이 균형형(v0.5)보다 더 짧을 것이다",
+        "actual": "권위형(39.3%)이 오히려 균형형(44.6%)보다 길었음",
+        "reason": "권위형은 전문 용어와 체계적 설명을 선호해 배경 설명을 덧붙이는 경향. '권위 있게 말한다'가 반드시 '짧게 말한다'를 의미하지 않음."
+      }
+    },
+    "recommendation": {
+      "general": "v0.4 풍부형 (재치·자기공개·되묻기 우수, 자연스러운 대화)",
+      "crisis": "v0.5.1 권위형 (일관성 최고, 안전 프로토콜 철저, 성격 충실도 1위)",
+      "lecture": "v0.3 격식형 (간결, 핵심만 빠르게 전달)",
+      "baseline": "v0.5 균형형 (중간값 — A/B 테스트 기준점)"
+    }
+  },
+  "deliverables": [
+    {
+      "title": "페르소나 정의서 v0.4",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/outputs/persona/01_페르소나_정의서_v0.4.md",
+      "fileKind": "md",
+      "summary": "깊이 SSOT. 책표지 6개 호명·다중 검증 9개 시그너처·단문 시그너처 16선·은유 6종·차용원 21개·신규 어휘 18개 통합.",
+      "modifiedAt": "2026-05-29"
+    },
+    {
+      "title": "system prompt v0.5.1 (권위형 정식 SSOT)",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/outputs/persona/02_system_prompt_EN_v0.5.1.md",
+      "fileKind": "md",
+      "summary": "격식·캐주얼 7:3, 강의 디폴트, 권위 강화. 5개 패치(A 디폴트비율 / B 자기풍자 / C 자기호명 / D 예시비율 / E 일화) 적용.",
+      "modifiedAt": "2026-05-29"
+    },
+    {
+      "title": "AI 챗봇 (단일 HTML)",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/outputs/chatbot/chatbot.html",
+      "fileKind": "html",
+      "summary": "v0.5.1 임베드 완료. 단일 파일로 즉시 실행 가능.",
+      "modifiedAt": "2026-05-29"
+    },
+    {
+      "title": "평가 최종 보고서 (공개용)",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/09_테스트/evaluation/results/final_report_public.md",
+      "fileKind": "md",
+      "summary": "4버전 비교 평가 결과 요약. PPS·BFI·LIWC·일관성·안전 5종 측정. 가설 14/15 합격.",
+      "modifiedAt": "2026-05-30"
+    },
+    {
+      "title": "평가 봇 인프라 (Python 스크립트 6개)",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/09_테스트/evaluation/scripts/",
+      "fileKind": "other",
+      "summary": "collect_responses · judge_pps · consistency_test · analyze_liwc · score_bfi · run_all. Sonnet 4.6 수집 + Opus 4.7 평가 아키텍처.",
+      "modifiedAt": "2026-05-29"
+    },
+    {
+      "title": "미디어 발췌집 v5",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/outputs/media/01_보이스_발췌집.md",
+      "fileKind": "md",
+      "summary": "직접 인용 ~110개를 활용 우선 순서로 12개 섹션 재배열. §1 다중검증 9선 · §3 단문 16선 · §11 보이스 패턴 11종.",
+      "modifiedAt": "2026-05-29"
+    },
+    {
+      "title": "박사연구 정합성 검토서",
+      "filePath": "10_보고살피다/104_AI챗봇스터디/09_테스트/02_박사연구_정합성_검토.md",
+      "fileKind": "md",
+      "summary": "A 방법론 활용 / B 방법론 논문 / C 챗봇 무관 — 3 Part 분리 권장. BFI 연구는 박사논문 본문 직접 인용 제한.",
+      "modifiedAt": "2026-05-29"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "실제 사용자 파일럿 테스트 (10명)",
+      "description": "v0.4와 v0.5.1 두 버전을 실제 사용자에게 사용하게 하고 선호도·체감 품질 조사. LLM-as-judge 평가의 한계를 인간 평가로 보완.",
+      "priority": "high",
+      "estimate": "1~2주"
+    },
+    {
+      "title": "시나리오 확대 (7개 → 20개↑)",
+      "description": "현재 7개 가상 시나리오를 다양한 실제 사용 상황으로 확대. 코칭·위기·교육·일상 상황 커버리지 강화.",
+      "priority": "mid",
+      "estimate": "3~5일"
+    },
+    {
+      "title": "v0.6 하이브리드 버전 설계",
+      "description": "권위형의 간결성 부족 원인 분석 후 '간결하면서 권위 있는' 하이브리드 system prompt 설계. v0.4 대화성 + v0.5.1 안정성 결합 검토.",
+      "priority": "mid",
+      "estimate": "1주"
+    },
+    {
+      "title": "Custom GPT 빌드 키트 v0.5.1 동기화",
+      "description": "gpt_build_kit/에 v0.5.1 system prompt 반영. OpenAI GPT-4o에 동일 페르소나 이식 후 Claude 버전과 비교.",
+      "priority": "low",
+      "estimate": "1~2일"
+    }
+  ],
+  "buildAt": "2026-05-31T00:00:00+09:00"
+}

@@ -10,7 +10,7 @@
     "activeProjects": 13,
     "sessions": 1,
     "newProjects": 5,
-    "filesChanged": 184
+    "filesChanged": 186
   },
   "daily": [
     {
@@ -505,7 +505,7 @@
     {
       "date": "2026-05-28",
       "weekday": "목",
-      "filesChanged": 26,
+      "filesChanged": 25,
       "topProjectIds": [
         "063",
         "057",
@@ -670,22 +670,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-4-7": {
-                "in": 258,
-                "out": 120268,
-                "cache_read": 14169761,
-                "cache_write": 370406,
-                "messages": 138,
-                "costUSD": 37.2237
+                "in": 282,
+                "out": 126606,
+                "cache_read": 15532403,
+                "cache_write": 377388,
+                "messages": 147,
+                "costUSD": 39.8743
               }
             },
             "total": {
-              "in": 258,
-              "out": 120268,
-              "cache_read": 14169761,
-              "cache_write": 370406,
-              "messages": 138
+              "in": 282,
+              "out": 126606,
+              "cache_read": 15532403,
+              "cache_write": 377388,
+              "messages": 147
             },
-            "costUSD": 37.2237
+            "costUSD": 39.8743
           }
         },
         {
@@ -704,16 +704,24 @@
                 "cache_write": 341341,
                 "messages": 96,
                 "costUSD": 27.9585
+              },
+              "claude-sonnet-4-6": {
+                "in": 62,
+                "out": 12076,
+                "cache_read": 1309036,
+                "cache_write": 45643,
+                "messages": 44,
+                "costUSD": 0.7452
               }
             },
             "total": {
-              "in": 226,
-              "out": 117118,
-              "cache_read": 8514098,
-              "cache_write": 341341,
-              "messages": 96
+              "in": 288,
+              "out": 129194,
+              "cache_read": 9823134,
+              "cache_write": 386984,
+              "messages": 140
             },
-            "costUSD": 27.9585
+            "costUSD": 28.7037
           }
         }
       ]
@@ -721,8 +729,36 @@
     {
       "date": "2026-05-31",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 3,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 87,
+                "out": 44898,
+                "cache_read": 4148731,
+                "cache_write": 249048,
+                "messages": 77,
+                "costUSD": 2.8523
+              }
+            },
+            "total": {
+              "in": 87,
+              "out": 44898,
+              "cache_read": 4148731,
+              "cache_write": 249048,
+              "messages": 77
+            },
+            "costUSD": 2.8523
+          }
+        }
+      ]
     }
   ],
   "projects": [
@@ -796,15 +832,15 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-30T05:17:56.422Z",
+  "buildAt": "2026-05-31T02:43:05.504Z",
   "tokens": {
     "total": {
-      "in": 306551,
-      "out": 3104472,
-      "cache_read": 381726665,
-      "cache_write": 14862066
+      "in": 306724,
+      "out": 3167784,
+      "cache_read": 388547074,
+      "cache_write": 15163739
     },
-    "costUSD": 1088.6874,
-    "costKRW": 1600370
+    "costUSD": 1094.9355,
+    "costKRW": 1609555
   }
 }

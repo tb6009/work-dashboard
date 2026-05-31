@@ -10,7 +10,7 @@
     "activeProjects": 13,
     "sessions": 1,
     "newProjects": 5,
-    "filesChanged": 186
+    "filesChanged": 191
   },
   "daily": [
     {
@@ -657,7 +657,7 @@
     {
       "date": "2026-05-30",
       "weekday": "토",
-      "filesChanged": 24,
+      "filesChanged": 21,
       "topProjectIds": [
         "063",
         "039",
@@ -729,9 +729,11 @@
     {
       "date": "2026-05-31",
       "weekday": "일",
-      "filesChanged": 3,
+      "filesChanged": 11,
       "topProjectIds": [
-        "063"
+        "063",
+        "039",
+        "057"
       ],
       "entries": [
         {
@@ -740,23 +742,31 @@
           "tokens": {
             "byModel": {
               "claude-sonnet-4-6": {
-                "in": 87,
-                "out": 44898,
-                "cache_read": 4148731,
-                "cache_write": 249048,
-                "messages": 77,
-                "costUSD": 2.8523
+                "in": 289,
+                "out": 170202,
+                "cache_read": 19912939,
+                "cache_write": 663763,
+                "messages": 205,
+                "costUSD": 11.0169
               }
             },
             "total": {
-              "in": 87,
-              "out": 44898,
-              "cache_read": 4148731,
-              "cache_write": 249048,
-              "messages": 77
+              "in": 289,
+              "out": 170202,
+              "cache_read": 19912939,
+              "cache_write": 663763,
+              "messages": 205
             },
-            "costUSD": 2.8523
+            "costUSD": 11.0169
           }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 03_2-2_6월18일_네트워킹데이_기획안_v0.1.md"
+        },
+        {
+          "projectId": "057",
+          "did": "[fs scan] 00_수업자료_인덱스.md"
         }
       ]
     }
@@ -832,15 +842,15 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-31T02:43:05.504Z",
+  "buildAt": "2026-05-31T07:21:23.957Z",
   "tokens": {
     "total": {
-      "in": 306724,
-      "out": 3167784,
-      "cache_read": 388547074,
-      "cache_write": 15163739
+      "in": 306926,
+      "out": 3293088,
+      "cache_read": 404311282,
+      "cache_write": 15578454
     },
-    "costUSD": 1094.9355,
-    "costKRW": 1609555
+    "costUSD": 1103.1001,
+    "costKRW": 1621557
   }
 }

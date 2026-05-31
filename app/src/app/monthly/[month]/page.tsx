@@ -710,20 +710,27 @@ function RetroSection({ retro }: { retro: MonthlyRetro }) {
           {/* 주차별 흐름 */}
           <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
             <div style={LABEL}>주차별 흐름</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-4)' }}>
               {retro.weeklyFlow.map(w => {
                 const barPct = Math.round((w.files / maxFiles) * 100);
                 return (
-                  <div key={w.week} style={{ display: 'grid', gridTemplateColumns: '60px 100px 1fr', gap: 'var(--sp-2)', alignItems: 'center' }}>
-                    <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{w.week}</div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                      <div style={{ height: 12, width: `${barPct}%`, maxWidth: 80, background: 'var(--gray-700)', minWidth: 4 }} />
-                      <div style={{ fontSize: 10, color: 'var(--gray-600)', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{w.files}f</div>
+                  <div key={w.week} style={{ borderLeft: '2px solid var(--gray-300)', paddingLeft: 'var(--sp-3)' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '48px 80px 1fr', gap: 'var(--sp-2)', alignItems: 'center', marginBottom: 4 }}>
+                      <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{w.week}</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <div style={{ height: 10, width: `${barPct}%`, maxWidth: 60, background: 'var(--gray-700)', minWidth: 4 }} />
+                        <div style={{ fontSize: 9, color: 'var(--gray-500)', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{w.files}f</div>
+                      </div>
+                      <div style={{ fontSize: 11, color: 'var(--gray-800)' }}>
+                        <span style={{ fontWeight: 700, marginRight: 4 }}>[{w.label}]</span>
+                        {w.headline}
+                      </div>
                     </div>
-                    <div style={{ fontSize: 11, color: 'var(--gray-700)' }}>
-                      <span style={{ fontWeight: 600, marginRight: 4 }}>[{w.label}]</span>
-                      {w.headline}
-                    </div>
+                    {w.narrative && (
+                      <div style={{ fontSize: 11, color: 'var(--gray-600)', lineHeight: 1.65, paddingLeft: 130 }}>
+                        {w.narrative}
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -733,15 +740,22 @@ function RetroSection({ retro }: { retro: MonthlyRetro }) {
           {/* 영역별 분포 */}
           <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
             <div style={LABEL}>영역별 분포</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-4)' }}>
               {retro.areaBreakdown.map(a => (
-                <div key={a.area} style={{ display: 'grid', gridTemplateColumns: '80px 40px 120px 1fr', gap: 'var(--sp-2)', alignItems: 'center' }}>
-                  <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--gray-800)' }}>{a.area}</div>
-                  <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{a.pct}%</div>
-                  <div style={{ height: 8, background: 'var(--gray-300)' }}>
-                    <div style={{ height: '100%', width: `${a.pct}%`, background: 'var(--gray-700)' }} />
+                <div key={a.area} style={{ borderLeft: '2px solid var(--gray-300)', paddingLeft: 'var(--sp-3)' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '80px 36px 100px 1fr', gap: 'var(--sp-2)', alignItems: 'center', marginBottom: a.narrative ? 4 : 0 }}>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--gray-800)' }}>{a.area}</div>
+                    <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{a.pct}%</div>
+                    <div style={{ height: 8, background: 'var(--gray-300)' }}>
+                      <div style={{ height: '100%', width: `${a.pct}%`, background: 'var(--gray-700)' }} />
+                    </div>
+                    <div style={{ fontSize: 10, color: 'var(--gray-500)' }}>{a.highlight}</div>
                   </div>
-                  <div style={{ fontSize: 10, color: 'var(--gray-600)' }}>{a.highlight}</div>
+                  {a.narrative && (
+                    <div style={{ fontSize: 11, color: 'var(--gray-600)', lineHeight: 1.65, paddingLeft: 218 }}>
+                      {a.narrative}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

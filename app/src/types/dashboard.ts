@@ -167,6 +167,7 @@ export interface MonthlyRetro {
     files: number;
     label: string;
     headline: string;
+    narrative?: string;
   }>;
   areaBreakdown: Array<{
     area: string;
@@ -175,6 +176,7 @@ export interface MonthlyRetro {
     pct: number;
     topProjects: string[];
     highlight: string;
+    narrative?: string;
   }>;
   keyMilestones: Array<{
     date: string;

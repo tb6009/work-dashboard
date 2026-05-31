@@ -1,0 +1,175 @@
+{
+  "month": "2026-05",
+  "weeks": ["2026-W18", "2026-W19", "2026-W20", "2026-W21", "2026-W22"],
+  "aggregated": {
+    "totalFiles": 830,
+    "avgActive": 13,
+    "newProjectsCount": 24,
+    "milestonesCount": 20,
+    "typeBreakdown": {
+      "product":    343,
+      "publishing":  93,
+      "research":    55,
+      "design":      51,
+      "system":      38,
+      "data":        13,
+      "education":   10
+    }
+  },
+  "topProjects": ["063", "061", "091", "03", "101"],
+  "milestones": [
+    { "date": "2026-05-02", "projectId": "061", "title": "LifeOS 1일 만에 배포",                                           "description": "30시간 안에 Next.js 앱 Vercel 배포 완료",                                        "isMilestone": true },
+    { "date": "2026-05-06", "projectId": "063", "title": "063 대시보드 Next.js 앱 초기 구축",                              "description": "6개 라우트 + ECharts 차트 + 데이터 레이어 완비",                               "isMilestone": true },
+    { "date": "2026-05-08", "projectId": "063", "title": "workDashboard Vercel 배포",                                     "description": "work-dashboard-app.vercel.app 공개",                                          "isMilestone": true },
+    { "date": "2026-05-11", "projectId": "061", "title": "LifeOS v2.0 폐기 결정",                                         "description": "전면 재설계 포기 후 v0.9.x 점진 복구 전환 — postmortem 작성",                  "isMilestone": true },
+    { "date": "2026-05-11", "projectId": "091", "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",                  "description": "출판 방향성 핵심 메시지 확정",                                                "isMilestone": true },
+    { "date": "2026-05-11", "projectId": "091", "title": "출판기획안 v2.1 표준양식 제출",                                  "description": "8개 버전 진화 끝에 최종 제출",                                               "isMilestone": true },
+    { "date": "2026-05-14", "projectId": "03",  "title": "새론솔루션 UX 진단 + 시안 3종 완성",                             "description": "광주 남구 스마트 하수악취 대시보드 UX",                                       "isMilestone": true },
+    { "date": "2026-05-16", "projectId": "101", "title": "보살피고 v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서",         "description": "위험·라이선스 도구 7개 사용 중단 정책(§10) 포함",                              "isMilestone": true },
+    { "date": "2026-05-17", "projectId": "01",  "title": "워크스페이스 27+ 폴더 → 10대 카테고리 재구조화",                 "description": "번호-카테고리 체계 완성 + 19GB tar.gz 백업",                                  "isMilestone": true },
+    { "date": "2026-05-20", "projectId": "063", "title": "일간 페이지 신설 — /daily + entries[] 스키마",                   "description": "일별 활동 로그 페이지 + 자동 파서",                                           "isMilestone": true },
+    { "date": "2026-05-22", "projectId": "063", "title": "Stop hook 자동 활동 캡처 시스템 구축",                           "description": "이후 매 세션 활동이 대시보드에 자동 기록",                                    "isMilestone": true },
+    { "date": "2026-05-22", "projectId": "063", "title": "파일시스템 mtime 스캔 extractor 신설",                           "description": "수동 추출 없이 활동 자동 감지",                                              "isMilestone": true },
+    { "date": "2026-05-24", "projectId": "063", "title": "이미지 갤러리 시스템 — 썸네일 strip + lightbox",                  "description": "산출물 이미지 자동 수집·표시",                                               "isMilestone": true },
+    { "date": "2026-05-25", "projectId": "09",  "title": "LifeOS 테스트 인프라 브랜치 폐기·정리",                           "description": "archive/stage-9-tip 태그 보존 후 브랜치 삭제",                               "isMilestone": true },
+    { "date": "2026-05-30", "projectId": "104", "title": "AI챗봇 4버전 체계적 평가 완료",                                   "description": "188응답 · 가설 14/15 합격 · 최적 버전 확정 (PPS·BFI·LIWC·일관성)",           "isMilestone": true }
+  ],
+  "retro": {
+    "headline": "830 files · 29 active days · 5주 내내 무언가를 만들었다",
+    "stats": {
+      "filesChanged": 830,
+      "activeDays": 29,
+      "totalDays": 31,
+      "decisions": 49,
+      "newProjectsRegistered": 24,
+      "peakDay": { "date": "2026-05-25", "weekday": "월", "files": 93 },
+      "peakWeek": { "week": "2026-W20", "files": 272, "period": "05-11~17" },
+      "costUSD": 1986.3,
+      "messages": 3141
+    },
+    "weeklyFlow": [
+      {
+        "week": "W18",
+        "period": "04-27~05-03",
+        "files": 142,
+        "label": "출발",
+        "headline": "LifeOS 1일 배포 · 4개 핵심 프로젝트 동시 시동"
+      },
+      {
+        "week": "W19",
+        "period": "05-04~05-10",
+        "files": 123,
+        "label": "구축",
+        "headline": "workDashboard Next.js 전체 구축 + Vercel 첫 배포"
+      },
+      {
+        "week": "W20",
+        "period": "05-11~05-17",
+        "files": 272,
+        "label": "위기→극복",
+        "headline": "v2.0 폐기 postmortem · 출판기획안 제출 · 워크스페이스 대개편"
+      },
+      {
+        "week": "W21",
+        "period": "05-18~05-24",
+        "files": 106,
+        "label": "자동화",
+        "headline": "Stop hook · 이미지 갤러리 · 24개 프로젝트 일괄 등록"
+      },
+      {
+        "week": "W22",
+        "period": "05-25~05-31",
+        "files": 187,
+        "label": "전문성",
+        "headline": "AI챗봇 4버전 평가 188응답 · 박사 연구 인프라 확장"
+      }
+    ],
+    "areaBreakdown": [
+      {
+        "area": "Product",
+        "type": "product",
+        "files": 343,
+        "pct": 57,
+        "topProjects": ["063 workDashboard (155f)", "061 LifeOS (130f)", "101 일상다반사 (44f)"],
+        "highlight": "대시보드 자동화 완성 + LifeOS v2.0 폐기·복구 postmortem + 보살피고 v1.5β"
+      },
+      {
+        "area": "Publishing",
+        "type": "publishing",
+        "files": 93,
+        "pct": 15,
+        "topProjects": ["091 몸과마음의과학 출판 (55f)", "092 영상과제 (25f)"],
+        "highlight": "출판기획안 v2.1 최종 제출 · 저자 정체성 확정 · 4컷만화 대본 v0.1"
+      },
+      {
+        "area": "Research",
+        "type": "research",
+        "files": 55,
+        "pct": 9,
+        "topProjects": ["052 페르소나 연구 (28f)", "053 ResearchMasterBot (15f)"],
+        "highlight": "AI챗봇 4버전 설계 + 체계적 평가 (PPS·BFI·LIWC) 완료"
+      },
+      {
+        "area": "Design",
+        "type": "design",
+        "files": 51,
+        "pct": 8,
+        "topProjects": ["03 디자인실무 (45f)"],
+        "highlight": "새론솔루션 UX 시안 3종 · 관리비책 캐릭터 5인 · 기초디자인 분석"
+      },
+      {
+        "area": "System",
+        "type": "system",
+        "files": 38,
+        "pct": 6,
+        "topProjects": ["01 관리 마스터 (34f)"],
+        "highlight": "27+ 폴더 → 10 카테고리 재구조화 · Stop hook 자동 캡처 인프라"
+      }
+    ],
+    "keyMilestones": [
+      {
+        "date": "05-02",
+        "projectId": "061",
+        "title": "LifeOS 1일 만에 Vercel 배포",
+        "impact": "설계~배포를 30시간 안에. 빠른 실행의 기준점."
+      },
+      {
+        "date": "05-11~12",
+        "projectId": "061",
+        "title": "LifeOS v2.0 폐기 + Postmortem 작성",
+        "impact": "실패를 문서화하고 v0.9.4로 점진 복구. 실패도 자산."
+      },
+      {
+        "date": "05-11",
+        "projectId": "091",
+        "title": "출판기획안 v2.1 표준양식 최종 제출",
+        "impact": "8개 버전 진화 끝에 제출. '행동 변화를 연구하는 디자이너' 정체성 확정."
+      },
+      {
+        "date": "05-17",
+        "projectId": "01",
+        "title": "워크스페이스 10대 카테고리 재구조화",
+        "impact": "27+ 무질서한 폴더에서 번호 체계 기반 10 카테고리로. 이후 모든 작업의 기반."
+      },
+      {
+        "date": "05-22",
+        "projectId": "063",
+        "title": "Stop hook 자동 활동 캡처 시스템",
+        "impact": "이후 어떤 세션이든 파일 변경이 대시보드에 자동 등록."
+      },
+      {
+        "date": "05-30",
+        "projectId": "104",
+        "title": "AI챗봇 4버전 체계적 평가 완료",
+        "impact": "188응답 · 15가설 중 14 합격. LLM-as-judge 방법론 첫 실전 적용."
+      }
+    ],
+    "userComment": {
+      "overall": "",
+      "wentWell": ["", ""],
+      "couldImprove": [""],
+      "nextMonth": [""]
+    }
+  },
+  "buildAt": "2026-05-31T00:00:00+09:00"
+}

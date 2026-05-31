@@ -21,7 +21,7 @@ import {
 import { TYPE_COLOR } from '@/lib/projectTypes';
 import TokenSummary from '@/components/TokenSummary';
 import { aggregateWeeks } from '@/lib/tokens';
-import type { ProjectType, WeeklySnapshot } from '@/types/dashboard';
+import type { ProjectType, WeeklySnapshot, MonthlyRetro } from '@/types/dashboard';
 
 export const dynamic = 'force-dynamic';
 
@@ -326,6 +326,9 @@ function MonthDetail({
           </div>
         </div>
       </section>
+
+      {/* 월간 회고 */}
+      {monthly.retro && <RetroSection retro={monthly.retro} />}
 
       {/* swap: 2fr (Milestone) + 1fr (sidebar: Top 10 · 주간 · Type) */}
       <section
@@ -659,5 +662,166 @@ function NoData({ month }: { month: string }) {
         <strong>{month}</strong> 데이터 없음. 좌우 화살표로 다른 월 탐색.
       </div>
     </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RetroSection — 월간 회고 (정량 + 사용자 코멘트)
+   ───────────────────────────────────────────────────────────── */
+
+function RetroSection({ retro }: { retro: MonthlyRetro }) {
+  const LABEL: React.CSSProperties = { fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 700, color: 'var(--gray-500)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-wide)', marginBottom: 'var(--sp-3)' };
+  const maxFiles = Math.max(...retro.weeklyFlow.map(w => w.files));
+  const hasComment = retro.userComment.overall || retro.userComment.wentWell.some(Boolean);
+
+  return (
+    <section style={{ marginBottom: 'var(--sp-6)' }}>
+      {/* section header */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sp-3)', marginBottom: 'var(--sp-3)' }}>
+        <div style={{ fontSize: 10, fontWeight: 700, color: 'var(--gray-500)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-wide)', fontFamily: 'var(--font-mono)' }}>
+          월간 회고
+        </div>
+        <div style={{ fontSize: 12, color: 'var(--gray-600)' }}>{retro.headline}</div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 'var(--sp-4)', alignItems: 'flex-start' }}>
+
+        {/* LEFT — 정량 분석 */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-4)' }}>
+
+          {/* 핵심 수치 */}
+          <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
+            <div style={LABEL}>정량 분석</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--sp-3)' }}>
+              {[
+                { label: '활동일', value: `${retro.stats.activeDays} / ${retro.stats.totalDays}일` },
+                { label: '의사결정', value: `${retro.stats.decisions}건` },
+                { label: 'Peak 주', value: `${retro.stats.peakWeek.week} · ${retro.stats.peakWeek.files}f` },
+                { label: 'AI 비용', value: `$${retro.stats.costUSD.toLocaleString()}` },
+              ].map(({ label, value }) => (
+                <div key={label} style={{ padding: 'var(--sp-3)', background: 'var(--white)', border: 'var(--border-1)' }}>
+                  <div style={{ fontSize: 9, color: 'var(--gray-400)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', marginBottom: 2 }}>{label}</div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--gray-900)', fontVariantNumeric: 'tabular-nums' }}>{value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 주차별 흐름 */}
+          <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
+            <div style={LABEL}>주차별 흐름</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {retro.weeklyFlow.map(w => {
+                const barPct = Math.round((w.files / maxFiles) * 100);
+                return (
+                  <div key={w.week} style={{ display: 'grid', gridTemplateColumns: '60px 100px 1fr', gap: 'var(--sp-2)', alignItems: 'center' }}>
+                    <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{w.week}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                      <div style={{ height: 12, width: `${barPct}%`, maxWidth: 80, background: 'var(--gray-700)', minWidth: 4 }} />
+                      <div style={{ fontSize: 10, color: 'var(--gray-600)', fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>{w.files}f</div>
+                    </div>
+                    <div style={{ fontSize: 11, color: 'var(--gray-700)' }}>
+                      <span style={{ fontWeight: 600, marginRight: 4 }}>[{w.label}]</span>
+                      {w.headline}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 영역별 분포 */}
+          <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
+            <div style={LABEL}>영역별 분포</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {retro.areaBreakdown.map(a => (
+                <div key={a.area} style={{ display: 'grid', gridTemplateColumns: '80px 40px 120px 1fr', gap: 'var(--sp-2)', alignItems: 'center' }}>
+                  <div style={{ fontSize: 10, fontWeight: 600, color: 'var(--gray-800)' }}>{a.area}</div>
+                  <div style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--gray-500)' }}>{a.pct}%</div>
+                  <div style={{ height: 8, background: 'var(--gray-300)' }}>
+                    <div style={{ height: '100%', width: `${a.pct}%`, background: 'var(--gray-700)' }} />
+                  </div>
+                  <div style={{ fontSize: 10, color: 'var(--gray-600)' }}>{a.highlight}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 핵심 마일스톤 */}
+          <div style={{ background: 'var(--gray-100)', border: 'var(--border-1)', padding: 'var(--sp-4)' }}>
+            <div style={LABEL}>핵심 마일스톤 ({retro.keyMilestones.length}건)</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {retro.keyMilestones.map((m, i) => (
+                <div key={i} style={{ display: 'grid', gridTemplateColumns: '52px 1fr', gap: 'var(--sp-2)', padding: 'var(--sp-2) 0', borderBottom: i < retro.keyMilestones.length - 1 ? '1px solid var(--gray-200)' : 'none' }}>
+                  <div style={{ fontSize: 9, fontFamily: 'var(--font-mono)', color: 'var(--gray-400)', paddingTop: 2 }}>{m.date}</div>
+                  <div>
+                    <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--gray-900)', marginBottom: 1 }}>{m.title}</div>
+                    {m.impact && <div style={{ fontSize: 10, color: 'var(--gray-500)', lineHeight: 1.4 }}>{m.impact}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT — 사용자 코멘트 */}
+        <div style={{ background: 'var(--white)', border: 'var(--border-1)', padding: 'var(--sp-5)', display: 'flex', flexDirection: 'column', gap: 'var(--sp-5)' }}>
+          <div style={LABEL as React.CSSProperties}>내 회고</div>
+
+          {!hasComment ? (
+            <div style={{ fontSize: 11, color: 'var(--gray-400)', lineHeight: 1.6 }}>
+              <code style={{ fontFamily: 'var(--font-mono)', fontSize: 10 }}>data/monthly/2026-05.json</code>의
+              <br /><code style={{ fontFamily: 'var(--font-mono)', fontSize: 10 }}>retro.userComment</code> 필드를
+              <br />직접 채워주세요.
+              <br /><br />
+              • <strong>overall</strong> — 한 달 총평<br />
+              • <strong>wentWell</strong> — 잘 된 것<br />
+              • <strong>couldImprove</strong> — 아쉬운 것<br />
+              • <strong>nextMonth</strong> — 다음 달 이어갈 것
+            </div>
+          ) : (
+            <>
+              {retro.userComment.overall && (
+                <div>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: 'var(--gray-400)', textTransform: 'uppercase', fontFamily: 'var(--font-mono)', marginBottom: 'var(--sp-1)' }}>총평</div>
+                  <div style={{ fontSize: 13, color: 'var(--gray-800)', lineHeight: 1.7 }}>{retro.userComment.overall}</div>
+                </div>
+              )}
+              {retro.userComment.wentWell.some(Boolean) && (
+                <div>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: 'var(--gray-400)', textTransform: 'uppercase', fontFamily: 'var(--font-mono)', marginBottom: 'var(--sp-1)' }}>잘 된 것</div>
+                  {retro.userComment.wentWell.filter(Boolean).map((s, i) => (
+                    <div key={i} style={{ fontSize: 12, color: 'var(--gray-700)', lineHeight: 1.6, paddingLeft: 12, position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0 }}>·</span>{s}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {retro.userComment.couldImprove.some(Boolean) && (
+                <div>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: 'var(--gray-400)', textTransform: 'uppercase', fontFamily: 'var(--font-mono)', marginBottom: 'var(--sp-1)' }}>아쉬운 것</div>
+                  {retro.userComment.couldImprove.filter(Boolean).map((s, i) => (
+                    <div key={i} style={{ fontSize: 12, color: 'var(--gray-700)', lineHeight: 1.6, paddingLeft: 12, position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0 }}>·</span>{s}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {retro.userComment.nextMonth.some(Boolean) && (
+                <div>
+                  <div style={{ fontSize: 9, fontWeight: 700, color: 'var(--gray-400)', textTransform: 'uppercase', fontFamily: 'var(--font-mono)', marginBottom: 'var(--sp-1)' }}>다음 달</div>
+                  {retro.userComment.nextMonth.filter(Boolean).map((s, i) => (
+                    <div key={i} style={{ fontSize: 12, color: 'var(--gray-700)', lineHeight: 1.6, paddingLeft: 12, position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0 }}>·</span>{s}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+
+      </div>
+    </section>
   );
 }

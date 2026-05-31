@@ -148,6 +148,48 @@ export interface WeeklySnapshot {
   buildAt: string;           // ISO timestamp
 }
 
+export interface MonthlyRetro {
+  headline: string;
+  stats: {
+    filesChanged: number;
+    activeDays: number;
+    totalDays: number;
+    decisions: number;
+    newProjectsRegistered: number;
+    peakDay: { date: string; weekday: string; files: number };
+    peakWeek: { week: string; files: number; period: string };
+    costUSD: number;
+    messages: number;
+  };
+  weeklyFlow: Array<{
+    week: string;
+    period: string;
+    files: number;
+    label: string;
+    headline: string;
+  }>;
+  areaBreakdown: Array<{
+    area: string;
+    type: string;
+    files: number;
+    pct: number;
+    topProjects: string[];
+    highlight: string;
+  }>;
+  keyMilestones: Array<{
+    date: string;
+    projectId: string;
+    title: string;
+    impact?: string;
+  }>;
+  userComment: {
+    overall: string;
+    wentWell: string[];
+    couldImprove: string[];
+    nextMonth: string[];
+  };
+}
+
 /** Monthly aggregate — references weeks, no duplication */
 export interface MonthlySnapshot {
   month: string;             // '2026-05'
@@ -161,6 +203,7 @@ export interface MonthlySnapshot {
   };
   topProjects: string[];     // ids
   milestones: DecisionEntry[];
+  retro?: MonthlyRetro;
   buildAt: string;
 }
 

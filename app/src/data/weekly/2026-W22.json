@@ -10,7 +10,7 @@
     "activeProjects": 13,
     "sessions": 1,
     "newProjects": 5,
-    "filesChanged": 191
+    "filesChanged": 194
   },
   "daily": [
     {
@@ -729,11 +729,12 @@
     {
       "date": "2026-05-31",
       "weekday": "일",
-      "filesChanged": 11,
+      "filesChanged": 14,
       "topProjectIds": [
         "063",
         "039",
-        "057"
+        "057",
+        "054"
       ],
       "entries": [
         {
@@ -742,31 +743,55 @@
           "tokens": {
             "byModel": {
               "claude-sonnet-4-6": {
-                "in": 289,
-                "out": 170202,
-                "cache_read": 19912939,
-                "cache_write": 663763,
-                "messages": 205,
-                "costUSD": 11.0169
+                "in": 303,
+                "out": 172338,
+                "cache_read": 20201588,
+                "cache_write": 713777,
+                "messages": 215,
+                "costUSD": 11.3231
               }
             },
             "total": {
-              "in": 289,
-              "out": 170202,
-              "cache_read": 19912939,
-              "cache_write": 663763,
-              "messages": 205
+              "in": 303,
+              "out": 172338,
+              "cache_read": 20201588,
+              "cache_write": 713777,
+              "messages": 215
             },
-            "costUSD": 11.0169
+            "costUSD": 11.3231
           }
         },
         {
           "projectId": "039",
-          "did": "[fs scan] 03_2-2_6월18일_네트워킹데이_기획안_v0.1.md"
+          "did": "[fs scan] 03_2-2_6월18일_네트워킹데이_기획안_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 9,
+                "out": 26985,
+                "cache_read": 2949082,
+                "cache_write": 26971,
+                "messages": 9,
+                "costUSD": 6.9533
+              }
+            },
+            "total": {
+              "in": 9,
+              "out": 26985,
+              "cache_read": 2949082,
+              "cache_write": 26971,
+              "messages": 9
+            },
+            "costUSD": 6.9533
+          }
         },
         {
           "projectId": "057",
           "did": "[fs scan] 00_수업자료_인덱스.md"
+        },
+        {
+          "projectId": "054",
+          "did": "[fs scan] Baptiste_7대유형_분석_T1.md"
         }
       ]
     }
@@ -842,15 +867,15 @@
     "02"
   ],
   "labelChanges": [],
-  "buildAt": "2026-05-31T07:21:23.957Z",
+  "buildAt": "2026-05-31T13:29:36.589Z",
   "tokens": {
     "total": {
-      "in": 306926,
-      "out": 3293088,
-      "cache_read": 404311282,
-      "cache_write": 15578454
+      "in": 306949,
+      "out": 3322209,
+      "cache_read": 407549013,
+      "cache_write": 15655439
     },
-    "costUSD": 1103.1001,
-    "costKRW": 1621557
+    "costUSD": 1110.3596,
+    "costKRW": 1632229
   }
 }

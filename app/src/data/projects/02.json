@@ -1,9 +1,15 @@
 {
   "id": "02",
   "currentSituation": {
-    "summary": "계원예대 2026 연구계획 — 방향성 초안 + 데이터발굴 실행계획 + 연구계획서 + 연구제안서 4문서 완성. 종합분석보고서 v07 진행 중, v08 작성 단계.",
-    "phase": "Active — 4문서 완성, 종합보고서 v08 + 최종 제출 단계",
+    "summary": "계원예대 2026 연구계획 — 4문서 완성. 질문 유형별 댓글러 반응 분석 완성(06-04): 11개 유형 분류, 월별·유형별 분포 완전 정리. 종합분석보고서 v08 작성 단계.",
+    "phase": "Active — 질문유형 분석 완성, 종합보고서 v08 작성 단계",
     "recentLogs": [
+      {
+        "date": "2026-06-04",
+        "title": "질문 유형별 댓글러 반응 분석 완성 — 11개 유형·월별 분포",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/03_도구/Kaywon_scraping/reports/question_response_analysis.md",
+        "excerpt": "합격가능성(481)·면접(448)·학과선택(288) 등 11개 유형 분류. 월별·유형별 분포 + 댓글러 유형 반응량 완성."
+      },
       {
         "date": "2026-04-24",
         "title": "관리 마스터 구축 — 22_Data_Kaywon PROJECT.md/CLAUDE.md 정비",
@@ -76,5 +82,5 @@
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-05-06T00:00:00+09:00"
+  "buildAt": "2026-06-05T10:00:00+09:00"
 }

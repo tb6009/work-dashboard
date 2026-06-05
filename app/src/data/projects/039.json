@@ -1,19 +1,40 @@
 {
   "id": "039",
   "currentSituation": {
-    "summary": "AI 산학협력 시각화 (PT/접촉시트/근거자료) — 03_school_project/RISE/",
-    "phase": "시각화 계획 + 근거자료 단계",
-    "recentLogs": [],
+    "summary": "RISE 2-2 산학협력 3종 행사 시리즈 실행 단계 — 제2회 기업 네트워킹데이·CEO AI 워크숍·디자인 터칭데이 행사계획서 v0.1 완성 (06-01)",
+    "phase": "실행 준비 — 행사계획서 완성, 기획안 v1.0 작업 중",
+    "recentLogs": [
+      {
+        "date": "2026-06-01",
+        "title": "RISE 3종 행사 계획서 v0.1 완성 — 네트워킹데이·AI 워크숍·터칭데이",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/05_실행계획서/05_2-2_6월18일_네트워킹데이_행사계획서_v0.1.md",
+        "excerpt": "2026년 6월 18일 개최 예정 제2회 기업 네트워킹데이·CEO 대상 AI 워크숍·디자인 터칭데이 행사계획서 v0.1 작성."
+      }
+    ],
     "blockers": []
   },
-  "deliverables": [],
+  "deliverables": [
+    {
+      "title": "RISE 3종 행사 계획서 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/05_실행계획서/05_2-2_6월18일_네트워킹데이_행사계획서_v0.1.md",
+      "fileKind": "md",
+      "summary": "제2회 기업 네트워킹데이·CEO AI 워크숍·디자인 터칭데이 행사계획서 v0.1",
+      "modifiedAt": "2026-06-01"
+    }
+  ],
   "nextTasks": [
+    {
+      "title": "기획안 v1.0 완성 + 예산계획서 v0.2 정합",
+      "description": "행사계획서 v0.1 기반 기획안 v1.0 작성 + 예산계획서와 정합성 확인.",
+      "priority": "high",
+      "estimate": "1주"
+    },
     {
       "title": "RISE PT 시각화 확장계획 진행",
       "description": "04_시각화계획/ 산출물 정리",
-      "priority": "high",
+      "priority": "mid",
       "estimate": "1주"
     }
   ],
-  "buildAt": "2026-05-24T00:00:00+09:00"
+  "buildAt": "2026-06-05T10:00:00+09:00"
 }

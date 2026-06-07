@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "RISE 행사계획서 v0.1 · CPSF 역량명제 확정 · Kaywon 질문유형 분석 · Nabaksa 브랜드전략 4축 병행",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 9,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 76
+    "filesChanged": 153
   },
   "daily": [
     {
@@ -187,7 +187,7 @@
     {
       "date": "2026-06-05",
       "weekday": "금",
-      "filesChanged": 22,
+      "filesChanged": 20,
       "topProjectIds": [
         "063",
         "03",
@@ -196,7 +196,27 @@
       "entries": [
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W23.json"
+          "did": "[fs scan] 2026-W23.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 39,
+                "out": 11400,
+                "cache_read": 1765641,
+                "cache_write": 224906,
+                "messages": 25,
+                "costUSD": 1.5442
+              }
+            },
+            "total": {
+              "in": 39,
+              "out": 11400,
+              "cache_read": 1765641,
+              "cache_write": 224906,
+              "messages": 25
+            },
+            "costUSD": 1.5442
+          }
         },
         {
           "projectId": "03",
@@ -208,22 +228,22 @@
           "tokens": {
             "byModel": {
               "claude-sonnet-4-6": {
-                "in": 49,
-                "out": 28194,
-                "cache_read": 1119392,
-                "cache_write": 98620,
-                "messages": 39,
-                "costUSD": 1.1287
+                "in": 70,
+                "out": 35304,
+                "cache_read": 1590521,
+                "cache_write": 147689,
+                "messages": 48,
+                "costUSD": 1.5608
               }
             },
             "total": {
-              "in": 49,
-              "out": 28194,
-              "cache_read": 1119392,
-              "cache_write": 98620,
-              "messages": 39
+              "in": 70,
+              "out": 35304,
+              "cache_read": 1590521,
+              "cache_write": 147689,
+              "messages": 48
             },
-            "costUSD": 1.1287
+            "costUSD": 1.5608
           }
         }
       ]
@@ -231,14 +251,78 @@
     {
       "date": "2026-06-06",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 53,
+      "topProjectIds": [
+        "061",
+        "02",
+        "062",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-4-5": {
+                "in": 180,
+                "out": 5321,
+                "cache_read": 803964,
+                "cache_write": 381046,
+                "messages": 32,
+                "costUSD": 0.5835
+              },
+              "claude-sonnet-4-6": {
+                "in": 171,
+                "out": 120501,
+                "cache_read": 11553983,
+                "cache_write": 793878,
+                "messages": 119,
+                "costUSD": 8.2513
+              }
+            },
+            "total": {
+              "in": 351,
+              "out": 125822,
+              "cache_read": 12357947,
+              "cache_write": 1174924,
+              "messages": 151
+            },
+            "costUSD": 8.8348
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 05_유형화_분석_계획_A+B.md · 소득분위_0_10_연도별_당해이탈률_분석.md · 소득분위_연도별추이_및_학과별상세분석.md · 소득분위_통계정합성_검정보고서.md · 소득분위별_성적_입학점수_분포분석.md 외 31건"
+        },
+        {
+          "projectId": "062",
+          "did": "[fs scan] background.js · popup.html · popup.js · supabase.js"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        }
+      ]
     },
     {
       "date": "2026-06-07",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 26,
+      "topProjectIds": [
+        "02",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 계원예대_신입생_종합분석보고서.md · 고교유형별_학업성적_및_소득배경_상호작용_분석.md · 일반고_비율과_이탈률_통계분석보고서.md · 건축디자인과_세부분석보고서.md · 게임미디어과_세부분석보고서.md 외 20건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        }
+      ]
     }
   ],
   "projects": [
@@ -318,15 +402,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-05T02:16:28.710Z",
+  "buildAt": "2026-06-07T01:30:30.195Z",
   "tokens": {
     "total": {
-      "in": 55723,
-      "out": 146725,
-      "cache_read": 17575629,
-      "cache_write": 547294
+      "in": 56134,
+      "out": 291057,
+      "cache_read": 32170346,
+      "cache_write": 1996193
     },
-    "costUSD": 8.0725,
-    "costKRW": 11867
+    "costUSD": 18.8836,
+    "costKRW": 27759
   }
 }

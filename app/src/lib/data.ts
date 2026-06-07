@@ -160,7 +160,7 @@ export async function getCurrentWeekId(): Promise<string> {
 }
 
 /** 직전 호환용. lib/data.ts를 import하는 페이지가 이 상수에 의존하는 경우 보존. */
-export const CURRENT_WEEK_ID = '2026-W23';
+export const CURRENT_WEEK_ID = '2026-W24';
 
 /* ─────────────────────────────────────────────────────────────
    4. Monthly — 파일 우선 → 동적 집계 fallback

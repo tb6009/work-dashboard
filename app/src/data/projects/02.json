@@ -1,9 +1,15 @@
 {
   "id": "02",
   "currentSituation": {
-    "summary": "계원예대 2026 연구계획 — 4문서 완성. 질문 유형별 댓글러 반응 분석 완성(06-04): 11개 유형 분류, 월별·유형별 분포 완전 정리. 종합분석보고서 v08 작성 단계.",
-    "phase": "Active — 질문유형 분석 완성, 종합보고서 v08 작성 단계",
+    "summary": "계원예대 신입생(2022~2026) 6,089명 중도탈락 분석 완료 단계. 05_gemini 트랙: 익명화 통합 데이터셋 구축 → 랜덤포레스트 예측 모델(AUC 0.880) + 5관점 K-means 군집분석 → 학과별 자동 보고서 22종 생성. 04_산출물 트랙: 종합분석보고서·소득분위 분석·고교유형별 분석 등 보고서 12종 + PPTX 완성. 종합분석보고서 v08 마무리 단계.",
+    "phase": "Active — ML 모델링·군집분석 완성, 종합보고서 v08 최종화 단계",
     "recentLogs": [
+      {
+        "date": "2026-06-07",
+        "title": "05_gemini ML 분석 완성 — 제적 예측 모델 + 학과별 보고서 22종",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/05_gemini/output/dropout_prediction_report.md",
+        "excerpt": "랜덤포레스트 Accuracy 91.3% / AUC 0.880. 변수 중요도: GPA 변화 추이(18.2%), 학기평점(18.1%), 고교내신(14.5%). 5관점 K-means 군집 프로필 완성."
+      },
       {
         "date": "2026-06-04",
         "title": "질문 유형별 댓글러 반응 분석 완성 — 11개 유형·월별 분포",
@@ -12,7 +18,7 @@
       },
       {
         "date": "2026-04-24",
-        "title": "관리 마스터 구축 — 22_Data_Kaywon PROJECT.md/CLAUDE.md 정비",
+        "title": "관리 마스터 구축 — 02_Data_Kaywon PROJECT.md/CLAUDE.md 정비",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",
         "excerpt": "01~04 4문서 + 2024 데이터·종합보고서 v07 정리. 일관성점검 스킬 명문화."
       }
@@ -20,67 +26,81 @@
   },
   "deliverables": [
     {
-      "title": "PROJECT.md (연구계획 정의)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/PROJECT.md",
-      "fileKind": "md",
-      "summary": "계원예대 2026 연구 방향·실행계획·제안서 4문서 정의.",
-      "modifiedAt": "2026-04-24"
+      "title": "익명화 통합 데이터셋 (6,089명 × 62변수)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/05_gemini/anonymized_integrated_data.csv",
+      "fileKind": "csv",
+      "summary": "2022~2026 입학생 전수. PII 완전 파기. 입시·성적·출결·소득분위·학생지원·휴학/제적 통합.",
+      "modifiedAt": "2026-06-06"
     },
     {
-      "title": "01 프로젝트 방향성 초안",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/01_프로젝트_방향성_초안.md",
+      "title": "제적 예측 모델 보고서 (랜덤포레스트 AUC 0.880)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/05_gemini/output/dropout_prediction_report.md",
       "fileKind": "md",
-      "summary": "2026 연구 방향 초안 — 2024 데이터 분석 기반 신규 방향 도출.",
-      "modifiedAt": "2026-04-24"
+      "summary": "로지스틱 회귀 vs 랜덤포레스트 비교. 변수 중요도 상위 3: GPA 변화 추이·학기평점·고교내신. 임계값 운영 가이드 포함.",
+      "modifiedAt": "2026-06-06"
     },
     {
-      "title": "02 데이터발굴 실행계획",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/02_데이터발굴_실행계획.md",
+      "title": "5관점 K-means 군집 분석 보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/05_gemini/output/cluster_profiles_report_5views.md",
       "fileKind": "md",
-      "summary": "데이터 수집 실행 계획 — 02_Kaywon_scraping 도구와 연계.",
-      "modifiedAt": "2026-04-24"
+      "summary": "입학배경·학업성취·학사행동·정서적응·종합 5가지 관점 군집 프로필. 검정고시 코호트 별도 분석.",
+      "modifiedAt": "2026-06-06"
     },
     {
-      "title": "03 2026 연구계획서",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/03_2026_연구계획서.md",
+      "title": "계원예대 신입생 종합분석보고서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/04_산출물/계원예대_신입생_종합분석보고서.md",
       "fileKind": "md",
-      "summary": "2026년 연구 계획서 — 학술 문서 형식.",
-      "modifiedAt": "2026-04-24"
+      "summary": "6,089명 코호트 중도탈락 요인 실증분석. 소득분위 U자형 패턴·골든타임 1학년 1학기·지역 역설 등 핵심 발견.",
+      "modifiedAt": "2026-06-07"
     },
     {
-      "title": "04 2026 연구제안서",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/04_2026_연구제안서.md",
+      "title": "학과별 세부 분석 보고서 (22종)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/04_산출물/학과별_분석/",
       "fileKind": "md",
-      "summary": "2026년 연구 제안서 — 최종 제출 버전 직전.",
-      "modifiedAt": "2026-04-24"
+      "summary": "전 학과 소득분위·제적률·성적 세부 분석. Python generate_department_reports.py로 자동 생성.",
+      "modifiedAt": "2026-06-07"
     },
     {
-      "title": "종합 분석 보고서 v07 (진행 중)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/22_Data_Kaywon/Data_Kaywon_종합분석보고서_진행중07.pdf",
+      "title": "Data_Kaywon Phase2 분석 보고서 (PPTX)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/04_산출물/Data_Kaywon_Phase2_분석보고서.pptx",
+      "fileKind": "pptx",
+      "summary": "시각화 기반 Phase2 분석 보고서. 발표용.",
+      "modifiedAt": "2026-06-06"
+    },
+    {
+      "title": "2026 연구제안서",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/04_산출물/2026_연구제안서.docx",
+      "fileKind": "docx",
+      "summary": "2026년 연구 제안서 최종본.",
+      "modifiedAt": "2026-06-04"
+    },
+    {
+      "title": "종합 분석 보고서 v07 (PDF)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Data_Kaywon/04_산출물/Data_Kaywon_종합분석보고서_진행중07.pdf",
       "fileKind": "pdf",
-      "summary": "2024 데이터 종합 분석 보고서 v07 — v08 작성 직전 상태.",
-      "modifiedAt": "2026-04-24"
+      "summary": "구 버전 — v08 작성 중.",
+      "modifiedAt": "2026-03-15"
     }
   ],
   "nextTasks": [
     {
-      "title": "종합분석보고서 v08 작성 완료",
-      "description": "v07 진행 중 → v08 완결. 4문서와 정합성 점검 (/일관성점검 스킬 활용).",
+      "title": "종합분석보고서 v08 최종 완성",
+      "description": "04_산출물 보고서들과 05_gemini ML 결과를 통합한 v08 완결. /일관성점검 스킬로 정합성 점검.",
       "priority": "high",
       "estimate": "2~3일"
     },
     {
-      "title": "2026 연구제안서 최종 제출 버전 확정",
-      "description": "04 제안서 → 최종 제출본. 학교 양식 준수 + 일정 확정.",
+      "title": "제적 예측 모델 정책 함의 정리",
+      "description": "랜덤포레스트 결과 → 학사지원팀 활용 가이드. 임계값 0.3(조기경보) / 0.5(고위험군) 운영 시나리오.",
       "priority": "high",
       "estimate": "1일"
     },
     {
-      "title": "07_AIDX 재직자 교육 결과 연계",
-      "description": "AID 사업 결과를 연구 사례로 통합 가능 여부 검토.",
+      "title": "2026 연구제안서 최종 제출 버전 확정",
+      "description": "학교 양식 준수 + 일정 확정. ML 분석 결과 반영.",
       "priority": "mid",
-      "estimate": "반나절"
+      "estimate": "1일"
     }
   ],
-  "buildAt": "2026-06-05T10:00:00+09:00"
+  "buildAt": "2026-06-07T11:30:00+09:00"
 }

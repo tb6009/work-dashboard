@@ -4,7 +4,7 @@
   { "id": "011", "categoryId": "01",        "name": "001_블로그",         "type": "publishing", "define": "27개 프로젝트 통합 블로그 작업장 — 01_admin/001_블로그/", "status": "active",  "createdAt": "2026-05-17" },
   { "id": "012", "categoryId": "01",        "name": "AI_Design_skill",   "type": "design",     "define": "Supanova 디자인 스킬 (랜딩페이지 엔진) — 01_admin/AI_Design_skill/", "status": "active",  "aliases": ["06"] },
 
-  { "id": "02",  "categoryId": "02",        "name": "Data_Kaywon",       "type": "data",       "define": "계원예대 2026 연구계획 수립 — 02_Data_Kaywon/", "status": "active", "aliases": ["22"] },
+  { "id": "02",  "categoryId": "02",        "name": "Data_Kaywon",       "type": "data",       "define": "계원예대 신입생 중도탈락 분석 (ML 예측 + 군집분석) — 02_Data_Kaywon/", "status": "active", "aliases": ["22"] },
 
   { "id": "03",  "categoryId": "03",        "name": "디자인실무프로젝트(umbrella)", "type": "design", "define": "학교 프로젝트 묶음 — Data_Jstrata · Data_Once · Data_Study · MNServe · 관리비책 · 새론솔루션 · 기초디자인 · 코첼라", "status": "active" },
   { "id": "031", "categoryId": "03",        "name": "Data_Jstrata",      "type": "design",     "define": "J스트라타 레스베라트롤 브랜드 디자인 — 03_school_project/Data_Jstrata/", "status": "active", "createdAt": "2026-05-17" },

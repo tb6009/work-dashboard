@@ -5,43 +5,198 @@
     "to": "2026-06-14"
   },
   "status": "current",
-  "summary": "W24 시작 — 주간 활동 업데이트 예정",
+  "summary": "036 새론솔루션 디자인 파운데이션 3종 · 039 RISE 네트워킹데이 초대장 공지 v0.1 · 061 LifeOS AI 대규모 세션(112회·$5.45)",
   "kpis": {
-    "activeProjects": 0,
-    "sessions": 0,
+    "activeProjects": 8,
+    "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 0
+    "filesChanged": 23
   },
   "daily": [
     {
       "date": "2026-06-08",
       "weekday": "월",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 2,
+      "topProjectIds": [
+        "063",
+        "083"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        },
+        {
+          "projectId": "083",
+          "did": "[fs scan] 퀴즈_전체.md"
+        }
+      ]
     },
     {
       "date": "2026-06-09",
       "weekday": "화",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        }
+      ]
     },
     {
       "date": "2026-06-10",
       "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 4,
+      "topProjectIds": [
+        "063",
+        "039"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 15_2-2_네트워킹데이_초대장_공지_v0.1.md"
+        }
+      ]
     },
     {
       "date": "2026-06-11",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 6,
+      "topProjectIds": [
+        "063",
+        "036",
+        "054"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        },
+        {
+          "projectId": "036",
+          "did": "[fs scan] 01_Design_Tokens.md · 02_Component_Foundation.md · 03_Design_Foundation_File_Plan.md"
+        },
+        {
+          "projectId": "054",
+          "did": "[fs scan] 06_omx_wiki_선행연구_링크.md"
+        }
+      ]
     },
     {
       "date": "2026-06-12",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 11,
+      "topProjectIds": [
+        "057",
+        "063",
+        "061",
+        "053"
+      ],
+      "entries": [
+        {
+          "projectId": "057",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-fable-5": {
+                "in": 4,
+                "out": 6054,
+                "cache_read": 158170,
+                "cache_write": 1560,
+                "messages": 2,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 6054,
+              "cache_read": 158170,
+              "cache_write": 1560,
+              "messages": 2
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 62,
+                "out": 69115,
+                "cache_read": 2425400,
+                "cache_write": 152382,
+                "messages": 54,
+                "costUSD": 2.336
+              }
+            },
+            "total": {
+              "in": 62,
+              "out": 69115,
+              "cache_read": 2425400,
+              "cache_write": 152382,
+              "messages": 54
+            },
+            "costUSD": 2.336
+          }
+        },
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 175,
+                "out": 145007,
+                "cache_read": 9621569,
+                "cache_write": 246194,
+                "messages": 123,
+                "costUSD": 5.9853
+              }
+            },
+            "total": {
+              "in": 175,
+              "out": 145007,
+              "cache_read": 9621569,
+              "cache_write": 246194,
+              "messages": 123
+            },
+            "costUSD": 5.9853
+          }
+        },
+        {
+          "projectId": "053",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-fable-5": {
+                "in": 14,
+                "out": 22195,
+                "cache_read": 1340386,
+                "cache_write": 12461,
+                "messages": 7,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 22195,
+              "cache_read": 1340386,
+              "cache_write": 12461,
+              "messages": 7
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-06-13",
@@ -56,9 +211,84 @@
       "topProjectIds": []
     }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "id": "061",
+      "pct": 40,
+      "filesChanged": 0,
+      "imp": 4,
+      "did": "LifeOS AI 대규모 세션 (06-12)",
+      "nextAction": "v0.9.9 이후 기능 계획"
+    },
+    {
+      "id": "036",
+      "pct": 20,
+      "filesChanged": 3,
+      "imp": 3,
+      "did": "새론솔루션 디자인 파운데이션 3종 — Design Tokens · Component Foundation · Foundation File Plan (06-11)",
+      "nextAction": "Figma Variant A 완성"
+    },
+    {
+      "id": "039",
+      "pct": 15,
+      "filesChanged": 1,
+      "imp": 3,
+      "did": "RISE 네트워킹데이 초대장·공지 v0.1 작성 (06-10)",
+      "nextAction": "초대장 v1.0 완성 + 예산 정합"
+    },
+    {
+      "id": "054",
+      "pct": 10,
+      "filesChanged": 1,
+      "imp": 3,
+      "did": "CPSF OMX 위키 선행연구 링크 정리 (06-11)",
+      "nextAction": "역량 명제 논증 완결"
+    },
+    {
+      "id": "053",
+      "pct": 5,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "ResearchMasterBot AI 세션 7회 (06-12)",
+      "nextAction": "봇 개선 사항 반영"
+    },
+    {
+      "id": "057",
+      "pct": 5,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "질적연구세미나 AI 세션 2회 (06-12)",
+      "nextAction": "세미나 자료 정리"
+    },
+    {
+      "id": "083",
+      "pct": 3,
+      "filesChanged": 1,
+      "imp": 2,
+      "did": "촬영용 스크립트 — 퀴즈 전체 문서 작성 (06-08)",
+      "nextAction": "촬영 준비"
+    },
+    {
+      "id": "063",
+      "pct": 2,
+      "filesChanged": 8,
+      "imp": 2,
+      "did": "workDashboard W24 업데이트 + Phase 4 자동화 스크립트 착수",
+      "nextAction": "generate-month.mjs 완성 + 2026-06 monthly 생성"
+    }
+  ],
   "decisions": [],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-07T02:10:00.000Z"
+  "buildAt": "2026-06-12T11:57:43.977Z",
+  "tokens": {
+    "total": {
+      "in": 255,
+      "out": 242371,
+      "cache_read": 13545525,
+      "cache_write": 412597
+    },
+    "costUSD": 8.3213,
+    "costKRW": 12232
+  }
 }

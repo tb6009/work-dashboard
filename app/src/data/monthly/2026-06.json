@@ -1,0 +1,169 @@
+{
+  "month": "2026-06",
+  "weeks": [
+    "2026-W23",
+    "2026-W24",
+    "2026-W25",
+    "2026-W26"
+  ],
+  "aggregated": {
+    "totalFiles": 178,
+    "avgActive": 9,
+    "newProjectsCount": 0,
+    "milestonesCount": 0,
+    "typeBreakdown": {
+      "product": 11,
+      "publishing": 0,
+      "research": 2,
+      "design": 29,
+      "system": 8,
+      "data": 57,
+      "education": 1
+    }
+  },
+  "topProjects": [
+    "02",
+    "03",
+    "063",
+    "01",
+    "036"
+  ],
+  "milestones": [],
+  "retro": {
+    "headline": "2026년 6월 회고",
+    "stats": {
+      "filesChanged": 178,
+      "activeDays": 10,
+      "totalDays": 14,
+      "decisions": 1,
+      "newProjectsRegistered": 0,
+      "peakDay": {
+        "date": "2026-06-06",
+        "weekday": "토",
+        "files": 53
+      },
+      "peakWeek": {
+        "week": "2026-W23",
+        "files": 158,
+        "period": "06-01 ~ 06-07"
+      },
+      "costUSD": 26.81,
+      "messages": 593
+    },
+    "weeklyFlow": [
+      {
+        "week": "2026-W23",
+        "period": "06-01 ~ 06-07",
+        "files": 158,
+        "label": "054",
+        "headline": "RISE 행사계획서 v0.1 · CPSF 역량명제 확정 · Kaywon 질문유형 분석 · Nabaksa 브랜드전략 4축 병행",
+        "narrative": ""
+      },
+      {
+        "week": "2026-W24",
+        "period": "06-08 ~ 06-14",
+        "files": 20,
+        "label": "061",
+        "headline": "036 새론솔루션 디자인 파운데이션 3종 · 039 RISE 네트워킹데이 초대장 공지 v0.1 · 061 LifeOS AI 대규모 세션(112회·$5.45)",
+        "narrative": ""
+      },
+      {
+        "week": "2026-W25",
+        "period": "06-15 ~ 06-21",
+        "files": 0,
+        "label": "",
+        "headline": "",
+        "narrative": ""
+      },
+      {
+        "week": "2026-W26",
+        "period": "06-22 ~ 06-28",
+        "files": 0,
+        "label": "",
+        "headline": "",
+        "narrative": ""
+      }
+    ],
+    "areaBreakdown": [
+      {
+        "area": "data",
+        "type": "data",
+        "files": 57,
+        "pct": 53,
+        "topProjects": [
+          "02"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "design",
+        "type": "design",
+        "files": 29,
+        "pct": 27,
+        "topProjects": [
+          "03",
+          "036",
+          "039"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "product",
+        "type": "product",
+        "files": 11,
+        "pct": 10,
+        "topProjects": [
+          "063",
+          "061"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "system",
+        "type": "system",
+        "files": 8,
+        "pct": 7,
+        "topProjects": [
+          "01"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "research",
+        "type": "research",
+        "files": 2,
+        "pct": 2,
+        "topProjects": [
+          "054",
+          "056",
+          "053"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "education",
+        "type": "education",
+        "files": 1,
+        "pct": 1,
+        "topProjects": [
+          "083"
+        ],
+        "highlight": "",
+        "narrative": ""
+      }
+    ],
+    "keyMilestones": [],
+    "userComment": {
+      "overall": "",
+      "wentWell": [],
+      "couldImprove": [],
+      "nextMonth": []
+    }
+  },
+  "buildAt": "2026-06-12T11:55:53.398Z"
+}

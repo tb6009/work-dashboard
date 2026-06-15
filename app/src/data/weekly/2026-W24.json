@@ -4,13 +4,13 @@
     "from": "2026-06-08",
     "to": "2026-06-14"
   },
-  "status": "current",
+  "status": "done",
   "summary": "036 새론솔루션 디자인 파운데이션 3종 · 039 RISE 네트워킹데이 초대장 공지 v0.1 · 061 LifeOS AI 대규모 세션(112회·$5.45)",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 10,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 23
+    "filesChanged": 92
   },
   "daily": [
     {
@@ -92,12 +92,13 @@
     {
       "date": "2026-06-12",
       "weekday": "금",
-      "filesChanged": 11,
+      "filesChanged": 13,
       "topProjectIds": [
         "057",
         "063",
         "061",
-        "053"
+        "053",
+        "034"
       ],
       "entries": [
         {
@@ -130,22 +131,22 @@
           "tokens": {
             "byModel": {
               "claude-sonnet-4-6": {
-                "in": 62,
-                "out": 69115,
-                "cache_read": 2425400,
-                "cache_write": 152382,
-                "messages": 54,
-                "costUSD": 2.336
+                "in": 94,
+                "out": 75509,
+                "cache_read": 4322131,
+                "cache_write": 176170,
+                "messages": 78,
+                "costUSD": 3.0902
               }
             },
             "total": {
-              "in": 62,
-              "out": 69115,
-              "cache_read": 2425400,
-              "cache_write": 152382,
-              "messages": 54
+              "in": 94,
+              "out": 75509,
+              "cache_read": 4322131,
+              "cache_write": 176170,
+              "messages": 78
             },
-            "costUSD": 2.336
+            "costUSD": 3.0902
           }
         },
         {
@@ -195,20 +196,123 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "034",
+          "did": "[fs scan] run_kochella.py"
         }
       ]
     },
     {
       "date": "2026-06-13",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 30,
+      "topProjectIds": [
+        "034",
+        "063",
+        "060"
+      ],
+      "entries": [
+        {
+          "projectId": "034",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 20,
+                "out": 54591,
+                "cache_read": 1039281,
+                "cache_write": 50820,
+                "messages": 12,
+                "costUSD": 1.3213
+              },
+              "claude-fable-5": {
+                "in": 580,
+                "out": 75882,
+                "cache_read": 1946631,
+                "cache_write": 764927,
+                "messages": 32,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 600,
+              "out": 130473,
+              "cache_read": 2985912,
+              "cache_write": 815747,
+              "messages": 44
+            },
+            "costUSD": 1.3213
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        },
+        {
+          "projectId": "060",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-fable-5": {
+                "in": 399,
+                "out": 4131,
+                "cache_read": 698547,
+                "cache_write": 10245,
+                "messages": 6,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 399,
+              "out": 4131,
+              "cache_read": 698547,
+              "cache_write": 10245,
+              "messages": 6
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-06-14",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 37,
+      "topProjectIds": [
+        "034",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "034",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 12,
+                "out": 24009,
+                "cache_read": 1679916,
+                "cache_write": 31621,
+                "messages": 12,
+                "costUSD": 0.9827
+              }
+            },
+            "total": {
+              "in": 12,
+              "out": 24009,
+              "cache_read": 1679916,
+              "cache_write": 31621,
+              "messages": 12
+            },
+            "costUSD": 0.9827
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W24.json"
+        }
+      ]
     }
   ],
   "projects": [
@@ -280,15 +384,15 @@
   "decisions": [],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-12T11:57:43.977Z",
+  "buildAt": "2026-06-14T07:32:42.327Z",
   "tokens": {
     "total": {
-      "in": 255,
-      "out": 242371,
-      "cache_read": 13545525,
-      "cache_write": 412597
+      "in": 1298,
+      "out": 407378,
+      "cache_read": 20806631,
+      "cache_write": 1293998
     },
-    "costUSD": 8.3213,
-    "costKRW": 12232
+    "costUSD": 11.3795,
+    "costKRW": 16728
   }
 }

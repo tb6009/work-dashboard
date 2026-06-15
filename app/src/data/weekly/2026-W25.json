@@ -1,0 +1,144 @@
+{
+  "week": "2026-W25",
+  "range": {
+    "from": "2026-06-15",
+    "to": "2026-06-21"
+  },
+  "status": "current",
+  "summary": "063 workDashboard W25 세팅 · 034 MNServe 접시팬 경쟁상품 캡처보드 자동화",
+  "kpis": {
+    "activeProjects": 2,
+    "sessions": 1,
+    "newProjects": 0,
+    "filesChanged": 26
+  },
+  "daily": [
+    {
+      "date": "2026-06-15",
+      "weekday": "월",
+      "filesChanged": 26,
+      "topProjectIds": [
+        "063",
+        "034"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W25.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 51,
+                "out": 65009,
+                "cache_read": 2094367,
+                "cache_write": 174069,
+                "messages": 47,
+                "costUSD": 2.2564
+              }
+            },
+            "total": {
+              "in": 51,
+              "out": 65009,
+              "cache_read": 2094367,
+              "cache_write": 174069,
+              "messages": 47
+            },
+            "costUSD": 2.2564
+          }
+        },
+        {
+          "projectId": "034",
+          "did": "[fs scan] make_capture_boards.py",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 10,
+                "out": 14270,
+                "cache_read": 737231,
+                "cache_write": 26611,
+                "messages": 10,
+                "costUSD": 0.535
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 14270,
+              "cache_read": 737231,
+              "cache_write": 26611,
+              "messages": 10
+            },
+            "costUSD": 0.535
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-17",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-18",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-19",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-20",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-21",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "063",
+      "pct": 60,
+      "filesChanged": 21,
+      "imp": 2,
+      "did": "workDashboard W25 세팅 + CURRENT_WEEK_ID 전환 (06-15)",
+      "nextAction": "Phase 4 Monthly·Yearly 자동화 완성"
+    },
+    {
+      "id": "034",
+      "pct": 40,
+      "filesChanged": 1,
+      "imp": 2,
+      "did": "접시팬 경쟁상품 Top10 캡처보드 자동화 스크립트 작성 (06-15)",
+      "nextAction": "경쟁상품 캡처보드 완성 + 분석 보고서"
+    }
+  ],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-06-15T05:40:22.159Z",
+  "tokens": {
+    "total": {
+      "in": 61,
+      "out": 79279,
+      "cache_read": 2831598,
+      "cache_write": 200680
+    },
+    "costUSD": 2.7914,
+    "costKRW": 4103
+  }
+}

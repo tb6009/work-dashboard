@@ -5,6 +5,12 @@
     "phase": "Active — 보고서 배포 완료, 미완 콘텐츠 보강 단계",
     "recentLogs": [
       {
+        "date": "2026-06-15",
+        "title": "접시팬 경쟁상품 Top10 캡처보드 자동화 (make_capture_boards.py)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
+        "excerpt": "04_접시팬_마케팅/08_GPT/09_경쟁상품_리서치 — Tramontina·T-fal 등 Top10 이미지 캡처보드 자동 생성 스크립트."
+      },
+      {
         "date": "2026-04-24",
         "title": "관리 마스터 구축 — 08_MNServe 3 서브 통합 정리",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260424_관리마스터_구축.md",

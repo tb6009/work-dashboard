@@ -1,0 +1,75 @@
+{
+  "week": "2026-W25",
+  "range": {
+    "from": "2026-06-15",
+    "to": "2026-06-21"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 0,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 0
+  },
+  "daily": [
+    {
+      "date": "2026-06-15",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-16",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-17",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-18",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-19",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-20",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-21",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-06-14T22:07:41.199Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-06-14T22:07:41.199Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

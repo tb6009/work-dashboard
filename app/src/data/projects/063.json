@@ -1,20 +1,20 @@
 {
   "id": "063",
   "currentSituation": {
-    "summary": "Phase 2 — Next.js 16 앱 5라우트 모두 200 OK + ECharts 7종 차트 + Foundation 통합 완료. v0.4 미세조정 + 지난 4주 소급 데이터 + 빌드 자동화 + Phase 3 cron 단계.",
-    "phase": "Phase 2 — Next.js 앱 구축 완료, Phase 3 자동화 진입 직전",
+    "summary": "Phase 3 완료 — Vercel 배포 + GitHub 자동 배포 + auto-capture hook + W14~W25 11주 데이터 누적. Phase 4 Monthly·Yearly 자동화 진입.",
+    "phase": "Phase 4 — Monthly·Yearly 집계 자동화",
     "recentLogs": [
+      {
+        "date": "2026-06-15",
+        "title": "W25 주간업데이트 세팅 + CURRENT_WEEK_ID W24→W25 전환",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
+        "excerpt": "W24 status→done, W25 projects[] 채우기, data.ts CURRENT_WEEK_ID 전환. 11주 데이터 누적."
+      },
       {
         "date": "2026-05-05",
         "title": "Phase 2 Next.js 16 앱 구축 완료 — 5라우트 + 차트 7종",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260505_log.md",
         "excerpt": "/, /weekly, /monthly/[m], /yearly/[y], /projects/[id] 모두 200 OK. PageShell·Topbar·Footer 공통 컴포넌트."
-      },
-      {
-        "date": "2026-05-02",
-        "title": "v0.3 드릴다운 4페이지 병렬 제작 + Foundation 정의",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260502_log.md",
-        "excerpt": "design/foundation/tokens.css + 4 HTML 시안. 062_논문리더 v0.2 그레이스케일 토큰 추출."
       }
     ]
   },

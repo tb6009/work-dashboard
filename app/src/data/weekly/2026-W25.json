@@ -5,69 +5,59 @@
     "to": "2026-06-21"
   },
   "status": "current",
-  "summary": "063 workDashboard W25 세팅 · 034 MNServe 접시팬 경쟁상품 캡처보드 자동화",
+  "summary": "RISE 네트워킹데이 강의자료 + 관리비책 쇼케이스 PPT v0.2 · 접시팬 PPT 기획·실행계획서 v1.0 · 박사논문 척도 종합정리 v0.1",
   "kpis": {
-    "activeProjects": 2,
-    "sessions": 1,
+    "activeProjects": 6,
+    "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 26
+    "filesChanged": 136
   },
   "daily": [
     {
       "date": "2026-06-15",
       "weekday": "월",
-      "filesChanged": 26,
+      "filesChanged": 86,
       "topProjectIds": [
-        "063",
-        "034"
+        "052",
+        "039",
+        "034",
+        "063"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W25.json",
-          "tokens": {
-            "byModel": {
-              "claude-sonnet-4-6": {
-                "in": 51,
-                "out": 65009,
-                "cache_read": 2094367,
-                "cache_write": 174069,
-                "messages": 47,
-                "costUSD": 2.2564
-              }
-            },
-            "total": {
-              "in": 51,
-              "out": 65009,
-              "cache_read": 2094367,
-              "cache_write": 174069,
-              "messages": 47
-            },
-            "costUSD": 2.2564
-          }
+          "projectId": "052",
+          "did": "DC 후행 실증 논문 4편 척도 원문 전수 추출·한글 번역 → 00_척도_종합정리_v0.1.md"
+        },
+        {
+          "projectId": "039",
+          "did": "스톤프레임워크 PT v0.1/v0.2 + 슬라이드내용 v0.1/v0.2 작성"
         },
         {
           "projectId": "034",
-          "did": "[fs scan] make_capture_boards.py",
+          "did": "접시팬 PPT기획안·실행계획서 v1.0 + 페르소나연구 발표 PPT v2 + 09 PPT슬라이드내용"
+        },
+        {
+          "projectId": "063",
+          "did": "W25 weekly stub + CURRENT_WEEK_ID 전환",
           "tokens": {
             "byModel": {
               "claude-sonnet-4-6": {
-                "in": 10,
-                "out": 14270,
-                "cache_read": 737231,
-                "cache_write": 26611,
-                "messages": 10,
-                "costUSD": 0.535
+                "in": 68,
+                "out": 70627,
+                "cache_read": 3048969,
+                "cache_write": 189003,
+                "messages": 60,
+                "costUSD": 2.6831
               }
             },
             "total": {
-              "in": 10,
-              "out": 14270,
-              "cache_read": 737231,
-              "cache_write": 26611,
-              "messages": 10
+              "in": 68,
+              "out": 70627,
+              "cache_read": 3048969,
+              "cache_write": 189003,
+              "messages": 60
             },
-            "costUSD": 0.535
+            "costUSD": 2.6831
           }
         }
       ]
@@ -75,20 +65,179 @@
     {
       "date": "2026-06-16",
       "weekday": "화",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 7,
+      "topProjectIds": [
+        "034",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "034",
+          "did": "PD01_master_product_concept + food_cube_steak references + HANDLE_PERSPECTIVE_HARNESS 외 다수"
+        },
+        {
+          "projectId": "063",
+          "did": "auto-capture 정기 갱신"
+        }
+      ]
     },
     {
       "date": "2026-06-17",
       "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 38,
+      "topProjectIds": [
+        "034",
+        "032",
+        "039",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "034",
+          "did": "투시도법_검증리포트_v15 (접시팬 이미지 검증)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 52,
+                "out": 58145,
+                "cache_read": 3563862,
+                "cache_write": 58948,
+                "messages": 34,
+                "costUSD": 2.1625
+              }
+            },
+            "total": {
+              "in": 52,
+              "out": 58145,
+              "cache_read": 3563862,
+              "cache_write": 58948,
+              "messages": 34
+            },
+            "costUSD": 2.1625
+          }
+        },
+        {
+          "projectId": "032",
+          "did": "Once AI디자인리서치 쇼케이스 v0.1 HTML + 다이어그램시안 v0.1 + PPT 기획안 v0.1",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 6024,
+                "out": 289016,
+                "cache_read": 16695156,
+                "cache_write": 400656,
+                "messages": 107,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 6024,
+              "out": 289016,
+              "cache_read": 16695156,
+              "cache_write": 400656,
+              "messages": 107
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "AI 생산성 역설 논문 정독·정리 시작 (01_AI_생산성_역설_정리_v0.1.md)"
+        },
+        {
+          "projectId": "063",
+          "did": "weekly 갱신"
+        }
+      ]
     },
     {
       "date": "2026-06-18",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 5,
+      "topProjectIds": [
+        "035",
+        "039",
+        "063",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "035",
+          "did": "관리비책 AI 캐릭터 쇼케이스 — 내용안·다이어그램·PPT 기획안·PPT v0.1/v0.2·임지훈 시안심화 (Once 디자인 언어 승계)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 2970,
+                "out": 216799,
+                "cache_read": 15535622,
+                "cache_write": 769755,
+                "messages": 104,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 2970,
+              "out": 216799,
+              "cache_read": 15535622,
+              "cache_write": 769755,
+              "messages": 104
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "RISE 네트워킹데이 강의자료 — 베인 핵심 스토리라인 + payoff 4조건 다이어그램 v0.1/v0.2 + 두숫자 축 설명 + 전체덱 v0.1/v0.2 + 파라독스 pptx",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 30798,
+                "out": 74309,
+                "cache_read": 7665518,
+                "cache_write": 158986,
+                "messages": 47,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 30798,
+              "out": 74309,
+              "cache_read": 7665518,
+              "cache_write": 158986,
+              "messages": 47
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "W25 자동 추출 + 이번주 데이터 보강"
+        },
+        {
+          "projectId": "01",
+          "did": "관리 마스터 — 세션 운영",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 384,
+                "out": 72257,
+                "cache_read": 2394479,
+                "cache_write": 74503,
+                "messages": 9,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 384,
+              "out": 72257,
+              "cache_read": 2394479,
+              "cache_write": 74503,
+              "messages": 9
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-06-19",
@@ -111,34 +260,151 @@
   ],
   "projects": [
     {
-      "id": "063",
-      "pct": 60,
-      "filesChanged": 21,
-      "imp": 2,
-      "did": "workDashboard W25 세팅 + CURRENT_WEEK_ID 전환 (06-15)",
-      "nextAction": "Phase 4 Monthly·Yearly 자동화 완성"
+      "id": "039",
+      "pct": 28,
+      "filesChanged": 18,
+      "imp": 4,
+      "did": "RISE 네트워킹데이 강의자료 — 베인 4조건 스토리라인 + Once 비주얼 시스템 적용 다이어그램 + 파라독스 pptx (06-15 스톤프레임워크 PT 포함)",
+      "nextAction": "막1·2 슬라이드 초안화 + 4조건 ①② 실제 사례 삽입"
+    },
+    {
+      "id": "035",
+      "pct": 22,
+      "filesChanged": 7,
+      "imp": 4,
+      "did": "관리비책 AI 캐릭터 쇼케이스 — 내용안·PPT 기획안·발표 v0.1/v0.2 (16→18슬라이드, 이미지 24장 임베드), 임지훈 시안심화. Once 디자인 언어 승계.",
+      "nextAction": "PPT 검토 후 다이어그램 정밀 이식·발표 노트 추가"
     },
     {
       "id": "034",
-      "pct": 40,
-      "filesChanged": 1,
+      "pct": 20,
+      "filesChanged": 27,
+      "imp": 3,
+      "did": "접시팬 마케팅 — PPT 기획안·실행계획서·슬라이드내용 v1.0 + Codex 이미지 생성 하네스 + 투시도법 검증리포트 v15. PD01 master concept 갱신.",
+      "nextAction": "07_이미지제작/codex/ CONTEXT.md + prompt_library.json + generate.py 작성, PPT 실물(.pptx) 생성"
+    },
+    {
+      "id": "052",
+      "pct": 12,
+      "filesChanged": 3,
+      "imp": 4,
+      "did": "박사논문 — DC 후행 실증 4편 척도 원문 전수 추출·한글 번역 → 00_척도_종합정리_v0.1.md (Kump 14문항 + Mikalef&Gupta 56문항 + Wahab&Radmehr 24문항 + Ameen 모델)",
+      "nextAction": "업무경계 확장 척도 초안(Mayer 2025 C4) + 03_핵심변수_연구모델 v0.2"
+    },
+    {
+      "id": "032",
+      "pct": 10,
+      "filesChanged": 3,
+      "imp": 3,
+      "did": "Data_Once 쇼케이스 v0.1 — HTML + 다이어그램시안 + PPT 기획안 (관리비책 쇼케이스의 디자인 원본)",
+      "nextAction": "쇼케이스 PPT 본편 작업 / 관리비책과 디자인 정합"
+    },
+    {
+      "id": "063",
+      "pct": 8,
+      "filesChanged": 5,
       "imp": 2,
-      "did": "접시팬 경쟁상품 Top10 캡처보드 자동화 스크립트 작성 (06-15)",
-      "nextAction": "경쟁상품 캡처보드 완성 + 분석 보고서"
+      "did": "W25 stub + CURRENT_WEEK_ID 전환 + auto-capture 갱신 + 오늘까지 데이터 통합 반영",
+      "nextAction": "Phase 4 Monthly·Yearly 자동화 완성"
     }
   ],
-  "decisions": [],
+  "decisions": [
+    {
+      "date": "2026-06-15",
+      "projectId": "052",
+      "title": "Situated AI 척도 선례 없음 — 본 연구의 기여 공간 확정",
+      "description": "Kemp (2024, AMR) 이후 실증 척도화 논문 전무. 따라서 박사논문의 척도 개발이 학술적 공백을 메우는 위치임을 확정.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "052",
+      "title": "이론 계보 확정 — DC(Teece 2007) → AI Capability(Mikalef&Gupta 2021) → 개인 AI 역량 척도(본 연구)",
+      "description": "조직 → 개인 수준 전환의 이론적 정당성을 제공하는 계보 확립. 척도 개발의 정당성 근거.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "052",
+      "title": "개인화 우선 번안 방향 — Mikalef&Gupta Human Skills(TS·BS 14문항) 기반",
+      "description": "조직 → 개인 수준 전환에 가장 적합. Kump의 Seizing 차원이 Situated AI(Grounding/Bounding/Recasting)와 §5에서 매핑됨."
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "052",
+      "title": "Ameen et al. (2024) Online Appendix A 미수급 — 명기",
+      "description": "다운로드 PDF에 미포함. 원문 항목은 저자 이메일 요청 또는 기관 DB 접근 필요. 문서에 한계 명기."
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "035",
+      "title": "메시지 = 프로세스 (결과물이 아니라 \"어떻게 만들었나\")",
+      "description": "관리비책 쇼케이스의 핵심 메시지는 5인 공통 7단계 파이프라인(스케치분석 → 스타일가이드 → 상황매트릭스 → 프롬프트 → 비교 → 확장 → 보정). 학생들이 AI를 어떻게 활용했는지의 제작 과정을 보여줌.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "035",
+      "title": "5인만 쇼케이스 — 김채린 제외",
+      "description": "김채린은 references+가이드+프롬프트까지 기획만 완료(생성 output 0개)라 사용자 결정으로 제외."
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "035",
+      "title": "시각 프로젝트 → 실제 이미지 임베드 (Once와 차별)",
+      "description": "Once는 그래프/캡처였지만, 관리비책은 생성 캐릭터 자체가 \"와우\"라 대표 output PNG를 PPT에 직접 임베드 (8~12슬라이드 5인 갤러리, 총 이미지 24장)."
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "035",
+      "title": "디자인 언어 = Once 승계 (아이보리/필름레드/명조)",
+      "description": "사용자 요청대로 Once의 타입/그래픽/다이어그램 스타일 그대로 — 아이보리 #F5EEE6 + 필름레드 #C8382F + Nanum Myeongjo/Cormorant/Pretendard."
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "035",
+      "title": "PPT v0.2 — 임지훈 1장 → 3장 확장",
+      "description": "임지훈의 \"세 캐릭터 한 세계관\" + \"AI 보정 루프(시트초기 → original_look → 눈썹/얼굴보정 3단)\" 통합. 16→18슬라이드. S15 보정루프를 팀 공통 패턴으로 리프레이밍.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "039",
+      "title": "베인 보고서가 강의 척추, 논문 2편은 보조",
+      "description": "강의 척추 = 베인 \"진짜 payoff 4조건\"(①프로세스 재설계 ②전체 라이프사이클 ③시간 재배치 ④데이터·거버넌스). Aouad·Lykouris·Zhong + Lande 논문은 막3 ①②의 'why 깊이'만 부여.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "039",
+      "title": "세 자료 = 층위 다름 (개인 → 전문직 → 조직·산업)",
+      "description": "Aouad 논문(개인) → Lande(전문직 개인) → 베인(조직·산업). 같은 역설이 스케일업되는 서사로 강의 구성."
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "039",
+      "title": "Once 비주얼 시스템 전면 적용 (무지개색 폐기)",
+      "description": "크림 #F5EEE6 / 다크 #2D2A26 / 시그니처레드 #C8382F / 토프 #B8AD9E. NanumMyeongjo(제목) + Cormorant Garamond(숫자) + Pretendard(본문). 16:9 슬라이드 캔버스 + slide2 카드대비·slide8 인사이트바 모티프 승계.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "039",
+      "title": "베인 사례는 의도적으로 2개만",
+      "description": "\"Where's the payoff?\"(후크) + Netflix shifting-left(재설계 예). 나머지 데이터는 배경용. 청중 인지부하 관리."
+    }
+  ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-15T05:40:22.159Z",
+  "buildAt": "2026-06-18T11:00:00.000Z",
   "tokens": {
     "total": {
-      "in": 61,
-      "out": 79279,
-      "cache_read": 2831598,
-      "cache_write": 200680
+      "in": 85343,
+      "out": 809197,
+      "cache_read": 50668109,
+      "cache_write": 1846890
     },
-    "costUSD": 2.7914,
-    "costKRW": 4103
+    "costUSD": 6.0739,
+    "costKRW": 8929
   }
 }

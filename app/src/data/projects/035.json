@@ -1,19 +1,68 @@
 {
   "id": "035",
   "currentSituation": {
-    "summary": "관리비책 컨설팅 (7인) — 03_school_project/관리비책/",
-    "phase": "활성 사용 중",
-    "recentLogs": [],
+    "summary": "관리비책 AI 캐릭터 쇼케이스 PPT v0.2 완성 (18슬라이드, 캐릭터 이미지 24장 임베드) — Once 디자인 언어 승계, 5인 공통 7단계 파이프라인 메시지화",
+    "phase": "쇼케이스 v0.2 검토 대기",
+    "recentLogs": [
+      {
+        "date": "2026-06-18",
+        "title": "AI 캐릭터 제작 쇼케이스 PPT v0.1 → v0.2 (임지훈 1→3장 확장)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260618_log.md",
+        "excerpt": "메시지 = 프로세스. 5인 공통 7단계 파이프라인 + 임지훈 세계관·보정루프 통합. Once 디자인 언어 승계."
+      }
+    ],
     "blockers": []
   },
-  "deliverables": [],
+  "deliverables": [
+    {
+      "title": "관리비책 AI 캐릭터 쇼케이스 발표 v0.2 (PPT)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/쇼케이스/04_관리비책_AI캐릭터제작_발표_v0.2.pptx",
+      "fileKind": "pptx",
+      "summary": "18슬라이드, 캐릭터 이미지 24장 임베드. 임지훈 세계관 3장 확장 + S15 팀 공통 보정루프.",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "쇼케이스 내용안 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/쇼케이스/01_관리비책_AI캐릭터제작_쇼케이스_내용_v0.1.md",
+      "fileKind": "md",
+      "summary": "후크·개요·7단계 파이프라인·5인 쇼케이스·성과숫자·기업포인트·검증노트",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "다이어그램 시안 v0.1 (5종)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/쇼케이스/02_다이어그램시안_v0.1.html",
+      "fileKind": "html",
+      "summary": "Once 토큰 동일 5종 다이어그램",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "PPT 기획안 v0.1 (16슬라이드 → v0.2에서 18)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/쇼케이스/03_PPT기획안_v0.1.md",
+      "fileKind": "md",
+      "summary": "3막 스토리보드. v0.2에서 임지훈 확장 반영.",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "임지훈 시안심화 — 내용·프로세스 해설 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/관리비책/쇼케이스/05_임지훈_시안심화_내용프로세스해설_v0.1.md",
+      "fileKind": "md",
+      "summary": "13 output + 3 스케치 전수 직접 열람 후 시안별 내용·프로세스 주석. 세 캐릭터 한 세계관 + AI 보정 루프 3단.",
+      "modifiedAt": "2026-06-18"
+    }
+  ],
   "nextTasks": [
     {
-      "title": "PROJECT.md 정리 + 다음 액션 1줄",
-      "description": "프로젝트 정의 + 현재 상태 + 다음 액션을 PROJECT.md에 1차 정리.",
+      "title": "사용자 PPT 검토 → 수정 반영 (v0.2)",
+      "description": "PowerPoint/Keynote 실 환경에서 슬라이드 시각 확인. 다이어그램 도식 정밀 이식 필요 여부 판단.",
+      "priority": "high",
+      "estimate": "1일"
+    },
+    {
+      "title": "발표 노트 추가",
+      "description": "슬라이드별 구두 설명 노트 작성.",
       "priority": "mid",
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-05-22T00:00:00+09:00"
+  "buildAt": "2026-06-18T11:00:00+09:00"
 }

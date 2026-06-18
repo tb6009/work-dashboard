@@ -1,9 +1,21 @@
 {
   "id": "039",
   "currentSituation": {
-    "summary": "RISE 2-2 산학협력 3종 행사 시리즈 실행 단계 — 제2회 기업 네트워킹데이·CEO AI 워크숍·디자인 터칭데이 행사계획서 v0.1 완성 (06-01)",
-    "phase": "실행 준비 — 행사계획서 완성, 기획안 v1.0 작업 중",
+    "summary": "네트워킹데이 강의자료 — 베인 'payoff 4조건' 핵심축 + 논문 2편 (Aouad·Lykouris·Zhong, Lande) 보조. Once 비주얼 시스템 적용 다이어그램 + 전체덱 v0.2 + 파라독스 pptx (06-18)",
+    "phase": "강의자료 v0.2 + 스톤프레임워크 PT v0.2 — 막1·2 슬라이드 초안화 단계",
     "recentLogs": [
+      {
+        "date": "2026-06-18",
+        "title": "네트워킹데이 강의 — AI 생산성 역설 강의자료 + Once 비주얼 적용",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260618_log.md",
+        "excerpt": "베인을 강의 척추로, 논문 2편은 막3 보조. payoff 4조건 다이어그램 + 두숫자 축 설명 + 전체덱 v0.1/v0.2 + AI_생산성_파라독스 pptx. 무지개색 폐기, 크림/필름레드/명조 시스템 적용."
+      },
+      {
+        "date": "2026-06-15",
+        "title": "스톤프레임워크 PT — 클레임스파인 v0.1/v0.2 + 슬라이드내용 v0.1/v0.2",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
+        "excerpt": "스톤프레임워크 PT 자료 정비. 슬라이드내용 v0.2까지."
+      },
       {
         "date": "2026-06-01",
         "title": "RISE 3종 행사 계획서 v0.1 완성 — 네트워킹데이·AI 워크숍·터칭데이",
@@ -15,6 +27,48 @@
   },
   "deliverables": [
     {
+      "title": "AI 생산성 파라독스 강의 PPT v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/AI_생산성_파라독스_v0.1.pptx",
+      "fileKind": "pptx",
+      "summary": "강의 전체덱 PPT v0.1 (베인 4조건 + 두숫자 축 + Once 비주얼 시스템)",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "전체덱 v0.2 (HTML)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/08_전체덱_v0.2.html",
+      "fileKind": "html",
+      "summary": "강의 전체 흐름 HTML 덱 — Once 비주얼 시스템 적용",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "AI 생산성 역설 논문 정리 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/01_AI_생산성_역설_정리_v0.1.md",
+      "fileKind": "md",
+      "summary": "Aouad·Lykouris·Zhong + Lande 논문 정독 정리. 구조적 역설 / 행동적 역설 이원화 + 강의 서사 + 토론질문.",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "베인 핵심 스토리라인 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/02_베인_핵심_스토리라인_v0.1.md",
+      "fileKind": "md",
+      "summary": "30~45분 4막 강의 스토리라인. 베인 'payoff 4조건' 척추.",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "payoff 4조건 다이어그램 v0.2 (Once 비주얼)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/03_payoff_4조건_다이어그램_v0.2.html",
+      "fileKind": "html",
+      "summary": "프로세스 재설계·전체 라이프사이클·시간 재배치·데이터 거버넌스 4단 다이어그램",
+      "modifiedAt": "2026-06-18"
+    },
+    {
+      "title": "스톤프레임워크 PT — 클레임스파인 v0.2",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/02_프로세스/01_스톤프레임워크PT_클레임스파인_v0.2.md",
+      "fileKind": "md",
+      "summary": "스톤프레임워크 PT 클레임스파인 정비 v0.2",
+      "modifiedAt": "2026-06-15"
+    },
+    {
       "title": "RISE 3종 행사 계획서 v0.1",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/05_실행계획서/05_2-2_6월18일_네트워킹데이_행사계획서_v0.1.md",
       "fileKind": "md",
@@ -24,17 +78,29 @@
   ],
   "nextTasks": [
     {
+      "title": "막1·2 실제 슬라이드 초안화 + 4조건 ①② 사례 삽입",
+      "description": "사용자 개인·스쿨 프로젝트 실제 사례를 ①프로세스 재설계 ②전체 라이프사이클에 삽입.",
+      "priority": "high",
+      "estimate": "2일"
+    },
+    {
+      "title": "Netflix shifting-left before/after 흐름도 슬라이드 (선택)",
+      "description": "베인 사례 강조. 1장 추가.",
+      "priority": "mid",
+      "estimate": "반나절"
+    },
+    {
+      "title": "사용자 '일하는 방식' 변화 분석 (다음 턴 요청)",
+      "description": "프로젝트 전체에서 몇 달 전 대비 변화 분석 자료.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
       "title": "기획안 v1.0 완성 + 예산계획서 v0.2 정합",
       "description": "행사계획서 v0.1 기반 기획안 v1.0 작성 + 예산계획서와 정합성 확인.",
       "priority": "high",
       "estimate": "1주"
-    },
-    {
-      "title": "RISE PT 시각화 확장계획 진행",
-      "description": "04_시각화계획/ 산출물 정리",
-      "priority": "mid",
-      "estimate": "1주"
     }
   ],
-  "buildAt": "2026-06-05T10:00:00+09:00"
+  "buildAt": "2026-06-18T11:00:00+09:00"
 }

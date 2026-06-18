@@ -8,15 +8,15 @@
   "summary": "TODO — Claude가 한 줄 요약 작성",
   "kpis": {
     "activeProjects": 0,
-    "sessions": 0,
+    "sessions": 2,
     "newProjects": 0,
-    "filesChanged": 0
+    "filesChanged": 23
   },
   "daily": [
     {
       "date": "2026-06-15",
       "weekday": "월",
-      "filesChanged": 0,
+      "filesChanged": 12,
       "topProjectIds": []
     },
     {
@@ -34,7 +34,7 @@
     {
       "date": "2026-06-18",
       "weekday": "목",
-      "filesChanged": 0,
+      "filesChanged": 11,
       "topProjectIds": []
     },
     {
@@ -57,13 +57,68 @@
     }
   ],
   "projects": [],
-  "decisions": [],
+  "decisions": [
+    {
+      "date": "2026-06-15",
+      "projectId": "",
+      "title": "**Situated AI 척도 선례 없음 확인** (이전 세션): Kemp (2024, AMR) 이후 실증 ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "",
+      "title": "**이론 계보 확정**: DC(Teece 2007) → AI Capability(Mikalef & Gupta",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "",
+      "title": "**개인화 우선 번안 방향**: Mikalef & Gupta의 Human Skills 차원(TS·BS 14문",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-15",
+      "projectId": "",
+      "title": "**Ameen et al. (2024) 한계**: Online Appendix A가 다운로드 PDF에 미포함",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "",
+      "title": "**메시지 = 프로세스** : 결과물이 아니라 \"학생들이 AI를 어떻게 활용해 캐릭터를 설계했나\"의 제작 과",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "",
+      "title": "**5인만 쇼케이스** : 김채린은 references+가이드+프롬프트까지 기획만 완료(생성 output 0",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "",
+      "title": "**시각 프로젝트 → 실제 이미지 임베드** : Once는 그래프/캡처였지만, 관리비책은 생성 캐릭터 자체가",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "",
+      "title": "**디자인 언어 승계** : 사용자 요청대로 Once의 타입/그래픽/다이어그램 스타일 그대로 — 아이보리 #",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-06-18",
+      "projectId": "",
+      "title": "**검증** : 학생 서술은 각 프로세스보고서 근거, 생성 수(60개=이지윤26/임지훈13/전미숙9/남서윤8",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-14T22:07:41.199Z",
+  "buildAt": "2026-06-18T01:50:16.419Z",
   "_meta": {
     "extractedBy": "extract-week.mjs",
-    "extractedAt": "2026-06-14T22:07:41.199Z",
+    "extractedAt": "2026-06-18T01:50:16.419Z",
     "todoFields": [
       "summary",
       "projects[].imp",

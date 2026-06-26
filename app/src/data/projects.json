@@ -37,6 +37,7 @@
   { "id": "065", "categoryId": "06",        "name": "인터뷰",             "type": "data",       "define": "인터뷰 자료 수집·전사·분석·산출물 작업장",          "status": "new",    "createdAt": "2026-05-08" },
   { "id": "066", "categoryId": "06",        "name": "소규모조직_AI",      "type": "product",    "define": "project01(Vite+TS) · project02 · project03(파이썬 + 전략·플레이북) — 06_Personal_Project/066_소규모조직_AI/", "status": "active", "createdAt": "2026-05-22" },
   { "id": "067", "categoryId": "06",        "name": "디자인매거진(자인)", "type": "design",     "define": "\"자인\" 디자인 수업 도우미 — 06_Personal_Project/디자인매거진/", "status": "active", "aliases": ["11"] },
+  { "id": "068", "categoryId": "06",        "name": "executiveCochingForum", "type": "education", "define": "Father Hunger 발표 확장 (경쟁의 과학적 척추 · 4-dyad 매트릭스 · 인용 검증) — 06_Personal_Project/068_exacutiveCochingForum/", "status": "new", "createdAt": "2026-06-24" },
 
   { "id": "081", "categoryId": "08",        "name": "Anchornode",        "type": "design",     "define": "Anchor Node 브랜드 + gameaify/spica 3-track — 08_project/081_Anchornode/", "status": "new", "createdAt": "2026-05-11" },
   { "id": "082", "categoryId": "08",        "name": "ICCS",              "type": "research",   "define": "ICCS 프로젝트 (셋업 전) — 08_project/082_ICCS/", "status": "new",    "createdAt": "2026-05-22" },

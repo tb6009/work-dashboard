@@ -5,12 +5,12 @@
     "to": "2026-06-28"
   },
   "status": "current",
-  "summary": "접시팬 주방 이미지 투시 보정 프로세스 회고 + 포트폴리오 HTML 공개 (/portfolio/kitchen-perspective/) — 주방02~18 18단계 측정·하네싱·렌즈 기준 도입 기록",
+  "summary": "068 Father Hunger 발표 확장 (단일축→4-dyad 매트릭스 · 인용 6건 정정) + 03 기초디자인 평가 통합본(01~09) · 자기평가 학번 검증 + 034 접시팬 주방 투시 회고/포트폴리오 공개 + 05 박사 RBV·Job-crafting·AI Capability·PLS-SEM 이론 아카이브",
   "kpis": {
-    "activeProjects": 4,
-    "sessions": 0,
-    "newProjects": 0,
-    "filesChanged": 33
+    "activeProjects": 7,
+    "sessions": 4,
+    "newProjects": 1,
+    "filesChanged": 75
   },
   "daily": [
     {
@@ -55,10 +55,11 @@
     {
       "date": "2026-06-23",
       "weekday": "화",
-      "filesChanged": 0,
+      "filesChanged": 4,
       "topProjectIds": [
         "063",
-        "03"
+        "03",
+        "068"
       ],
       "entries": [
         {
@@ -88,16 +89,25 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "068",
+          "did": "Father Hunger 심화 1차 — 아버지-아들 경쟁역동(Kets de Vries 6메커니즘) · Herzog 1980 마왕증후군 개념 기원 · 父-女 6칸 대조 · Peng 2024 성별교차 원문 검증 정리"
+        },
+        {
+          "projectId": "03",
+          "did": "기초디자인 평가 데이터 통합 — A·B반 중간/기말 동료평가 4시트를 받는사람별로 집계, 명부 기준 통합본 07 완성. 이름 끝 공백 정규화, 자기평가 분리, 명부 difflib 1글자 오타 정정 6건. (01~07 시트)"
         }
       ]
     },
     {
       "date": "2026-06-24",
       "weekday": "수",
-      "filesChanged": 2,
+      "filesChanged": 14,
       "topProjectIds": [
         "03",
-        "063"
+        "063",
+        "068"
       ],
       "entries": [
         {
@@ -127,17 +137,26 @@
         {
           "projectId": "063",
           "did": "[fs scan] 2026-W26.json"
+        },
+        {
+          "projectId": "068",
+          "did": "Father Hunger 발표 2차 확장 — 단일축(父-子) → 4-dyad 매트릭스(父子/父女/母자/母녀). 인용 6건 정정(Liu→Peng 제1저자 오기, pone.0243283 구성개념 오인용, Li 2017 옥시토신 방향 반대 등). SDT 척추 도입 + 확장 8장 덱·표 슬라이드·강의 모듈 4개 대본 작성. (11~24 + make_*.py 2종)"
+        },
+        {
+          "projectId": "03",
+          "did": "기초디자인 평가 정밀 검증 — 자기평가 학번-이름 누수 발견. 오기입 10건/패턴A 식별, 소수 자기평가 13명 항목별 최댓값 정리, 식별 불가 2명 사용자 판단 대기. (08·09 + 검증)"
         }
       ]
     },
     {
       "date": "2026-06-25",
       "weekday": "목",
-      "filesChanged": 10,
+      "filesChanged": 11,
       "topProjectIds": [
         "03",
         "063",
-        "083"
+        "083",
+        "034"
       ],
       "entries": [
         {
@@ -146,7 +165,7 @@
         },
         {
           "projectId": "03",
-          "did": "[fs scan] CLAUDE.md · 01_워크플로우_화면분석.md · 02_견적서_v0.1.md · PROJECT.md · 주방17_50mm_카메라투시하네스.md",
+          "did": "기람테크 TCI 신규 산학 — 워크플로우 화면분석 + UI 디자인 견적서 v0.1→v0.4 4단계 협상안 (PDF·DOCX 산출). 접시팬 주방17 50mm 카메라 투시 하네스 정리.",
           "tokens": {
             "byModel": {
               "claude-opus-4-8": {
@@ -173,8 +192,12 @@
           "did": "[fs scan] 2026-W26.json"
         },
         {
+          "projectId": "051",
+          "did": "박사 이론 아카이브 확장 — RBV 개념정리 v0.1 + Paper2 프로포절 워크북 v0.1 + 이론 INDEX. 4대 이론 영역 논문 PDF 수집: AI Capability(7편), Job-crafting(3편 + 종속변수 리서치노트), RBV·micro-foundation·양손잡이·PLS-SEM 핵심서."
+        },
+        {
           "projectId": "083",
-          "did": "[fs scan] 주차별_학습목표.md",
+          "did": "K-MOOC 'AI 시대 비즈니스 디자인' — 자율참여 제출서식 + 주차별 학습목표 확정.",
           "tokens": {
             "byModel": {
               "claude-opus-4-8": {
@@ -201,7 +224,7 @@
     {
       "date": "2026-06-26",
       "weekday": "금",
-      "filesChanged": 2,
+      "filesChanged": 4,
       "topProjectIds": [
         "063",
         "034"
@@ -232,8 +255,22 @@
   ],
   "projects": [
     {
+      "id": "068",
+      "pct": 30,
+      "filesChanged": 17,
+      "imp": 5,
+      "did": "Father Hunger 발표 확장 — 단일축(父-子) → 4-dyad 매트릭스(父子/父女/母자/母녀). 인용 6건 정정(Liu→Peng 제1저자 오기, pone.0243283 구성개념 오인용 등) + SDT 척추 도입 + 확장 8장 덱 + 父-女 4장 arc + 강의 모듈 4개 대본.",
+      "nextAction": "母-女·母-子 dyad 원전 직접확보 → ⚠️→✅ 승급, Herzog 1980·Sağkal 2018·Finley&Schwartz 2007 원문 확보, 母 dyad 발표 수위 결정",
+      "deliverables": [
+        "11~24 심화/확장 마크다운 14편",
+        "아버지가 됐다고 말해준다면2_확장_v0.1.pptx",
+        "표_같은결핍_다른발현.pptx",
+        "12_인용_명세서.md (정정 6건 추적표)"
+      ]
+    },
+    {
       "id": "034",
-      "pct": 50,
+      "pct": 18,
       "filesChanged": 3,
       "imp": 4,
       "did": "접시팬 주방 이미지 투시 보정 프로세스 회고 + 포트폴리오 HTML 공개. 18단계 보정 흐름(주방02→18), 5단계 작업 순서(카메라→아일랜드→인덕션→팬→배경), 사용자 디렉션 히스토리 정리.",
@@ -244,15 +281,50 @@
       ]
     },
     {
+      "id": "03",
+      "pct": 18,
+      "filesChanged": 13,
+      "imp": 4,
+      "did": "기초디자인 평가 통합본(01~09) — A·B반 동료/자기 평가 4시트 → 명부 기준 통합. 이름 끝 공백 정규화 · 자기평가 학번-이름 누수 패턴A 10건 식별 · 소수 평균 13명 항목별 최댓값 정리. 기람테크 신규 산학 견적서 v0.1→v0.4.",
+      "nextAction": "셀 단위 변경 목록을 07_3.xlsx에 전달 (자동 덮어쓰기 금지), 식별 불가 2명(김혜린·김태은) 사용자 판단 반영",
+      "deliverables": [
+        "기초디자인 평가/01~09 (명세표·통합본·자기평가 검증)",
+        "기람테크 견적서 v0.1~v0.4 (PDF·DOCX)"
+      ]
+    },
+    {
+      "id": "051",
+      "pct": 18,
+      "filesChanged": 24,
+      "imp": 3,
+      "did": "박사 이론 아카이브 확장 — RBV 개념정리 v0.1 + Paper2 프로포절 워크북 v0.1. AI Capability(7편) · Job-crafting(3편) · RBV(2편) · micro-foundation(2편) · 양손잡이(1편) · PLS-SEM 핵심서 PDF 수집 + 종속변수 리서치노트 v0.1. omx_wiki 연구위키 6편 신설 (Situated AI·SAI grounding·Mikalef-Gupta·PLS-SEM default·thesis one-liner·ambidexterity measurement).",
+      "deliverables": [
+        "00_연구가이드/04_RBV개념정리_v0.1.md",
+        "00_연구가이드/05_Paper2_프로포절_워크북_v0.1.md",
+        "00_연구가이드/이론/_INDEX.md",
+        "이론/{AI Capability·Job-crafting·RBV·micro-foundation·양손잡이·PLS-SEM}/*.pdf",
+        "11_omx_wiki/021_연구위키/phd-{t01·c01·s01·m01·r01·n01}.md"
+      ]
+    },
+    {
       "id": "063",
-      "pct": 25,
+      "pct": 12,
       "filesChanged": 20,
       "imp": 3,
-      "did": "포트폴리오 HTML + 참고 이미지 18종을 app/public/portfolio/kitchen-perspective/로 게시. W26 summary·milestone 반영.",
+      "did": "접시팬 포트폴리오 HTML + 참고 이미지 18종을 app/public/portfolio/kitchen-perspective/로 게시. extract-from-filesystem.mjs에 068 EXPLICIT 매핑 추가. W26 summary·milestone·daily entries 보강.",
       "deliverables": [
         "app/public/portfolio/kitchen-perspective/index.html",
-        "app/public/portfolio/kitchen-perspective/주방02~18.png 외 18종"
+        "app/public/portfolio/kitchen-perspective/주방02~18.png 외 18종",
+        "scripts/extract-from-filesystem.mjs (068 매핑)",
+        "projects.json (068 신설)"
       ]
+    },
+    {
+      "id": "083",
+      "pct": 4,
+      "filesChanged": 2,
+      "imp": 2,
+      "did": "K-MOOC 'AI 시대 비즈니스 디자인' 자율참여 제출서식 + 주차별 학습목표 확정."
     }
   ],
   "decisions": [
@@ -266,14 +338,63 @@
     {
       "date": "2026-06-25",
       "projectId": "034",
-      "title": "투시 보정 회고 작성 — 5단계 작업 순서 정립",
+      "title": "투시 보정 회고 — 5단계 작업 순서 정립",
       "description": "카메라/렌즈/심도 → 아일랜드 평면 → 인덕션 매립 → 팬 배치 → 배경 정렬 순서로 프로세스 재정의. 35mm 광각감 → 50mm 표준 렌즈감 전환.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-06-24",
+      "projectId": "068",
+      "title": "Father Hunger 발표 단일축 → 4-dyad 매트릭스 확장",
+      "description": "심화(세로)+좌우확장(가로)을 부모×자녀 2×2 매트릭스 한 동작으로 통합. 발달심리+가족기업 두 렌즈 병행 선택. 확장은 새 pptx로만(기존 13장 덱 보존).",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-24",
+      "projectId": "068",
+      "title": "경쟁의 과학적 척추 = 자기결정이론(SDT) 채택",
+      "description": "정신분석 '여섯 얼굴' 아래 검증 가능한 기제로 Peng(2024) BPNS 보상모델 채택. '경쟁=야망 아니라 보상.' 단, SDT 매개는 half-longitudinal(인과 아닌 연관), '유일한 척추' 아닌 '검증된 한 기제'로 정직하게 표기.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-06-24",
+      "projectId": "068",
+      "title": "인용 오류 6건 정정 — 품질 게이트",
+      "description": "Liu et al.(2025) → Peng et al.(2024) 제1저자 오기, r=0.26 Pearson → 총효과 0.26, pone.0243283 = Khampirat(2020) 아버지 학력 연구(구성개념 오인용), 옥시토신 Li 2017 방향 반대, Finley&Schwartz 75% 원문 검증 통과. 12_인용_명세서.md에 행 단위 추적표.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-24",
+      "projectId": "03",
+      "title": "기초디자인 자기평가 — '학번 본인 = 자기평가' 가설 폐기",
+      "description": "이름일치 자기평가 탐지가 오염됨. 패턴A(평가자가 양쪽 칸에 대상자 이름 적어 타인 평가가 152건 중 10건 혼입) + 패턴B(학번 본인이지만 받는사람 칸이 본인 + 코멘트가 타 작품 3인칭). 결론: 학번 본인 + 코멘트 1인칭일 때만 진짜 자기평가. 07_3.xlsx에 셀 단위 변경 목록으로 전달(자동 덮어쓰기 금지 — 사용자 수식 컬럼 보존).",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-06-23",
+      "projectId": "03",
+      "title": "기초디자인 평가 통합본 07 완성 — 이름 정정·자기평가 분리·검증",
+      "description": "이름 끝 공백 정규화로 5~9명 부풀림 제거, 자기평가는 평균에서 제외(별도 시트 보존), 평가표 받는사람 이름의 1글자 오타를 명부 difflib로 6건 정정(동점·애매·성변경은 사용자 확정). 04 점수표 독립 재계산 → 완전 일치(오차 0.000).",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-06-25",
+      "projectId": "051",
+      "title": "박사 Paper2 프로포절 워크북 v0.1 + RBV 개념정리 시작",
+      "description": "4대 이론 영역(AI Capability · Job-crafting · RBV·micro-foundation · 양손잡이) 핵심 논문 수집 + _INDEX.md 정리. Paper2 프로포절 워크북 v0.1 골격.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-06-24",
+      "projectId": "068",
+      "title": "성별 본질화 가드레일 도입",
+      "description": "Endendijk(2016) 메타분석 d=0.08로 양육 성차 작음 → 4-dyad는 '법칙 아니라 임상 전형'. '딸은 다르게 발현'은 Peng으로 단정 금지. 발표 카피 전반에 반영.",
       "isMilestone": false
     }
   ],
-  "newProjects": [],
+  "newProjects": ["068"],
   "labelChanges": [],
-  "buildAt": "2026-06-25T06:19:29.293Z",
+  "buildAt": "2026-06-26T03:43:35.477Z",
   "tokens": {
     "total": {
       "in": 231571,

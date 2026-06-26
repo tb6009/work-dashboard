@@ -37,7 +37,7 @@
                 "cache_read": 3944661,
                 "cache_write": 98061,
                 "messages": 44,
-                "costUSD": 0
+                "costUSD": 11.2999
               }
             },
             "total": {
@@ -47,7 +47,7 @@
               "cache_write": 98061,
               "messages": 44
             },
-            "costUSD": 0
+            "costUSD": 11.2999
           }
         }
       ]
@@ -77,7 +77,7 @@
                 "cache_read": 5986664,
                 "cache_write": 162328,
                 "messages": 37,
-                "costUSD": 0
+                "costUSD": 20.2763
               }
             },
             "total": {
@@ -87,7 +87,7 @@
               "cache_write": 162328,
               "messages": 37
             },
-            "costUSD": 0
+            "costUSD": 20.2763
           }
         },
         {
@@ -107,7 +107,8 @@
       "topProjectIds": [
         "03",
         "063",
-        "068"
+        "068",
+        "034"
       ],
       "entries": [
         {
@@ -121,7 +122,7 @@
                 "cache_read": 1257680,
                 "cache_write": 4710,
                 "messages": 5,
-                "costUSD": 0
+                "costUSD": 2.6786
               }
             },
             "total": {
@@ -131,7 +132,7 @@
               "cache_write": 4710,
               "messages": 5
             },
-            "costUSD": 0
+            "costUSD": 2.6786
           }
         },
         {
@@ -145,6 +146,96 @@
         {
           "projectId": "03",
           "did": "기초디자인 평가 정밀 검증 — 자기평가 학번-이름 누수 발견. 오기입 10건/패턴A 식별, 소수 자기평가 13명 항목별 최댓값 정리, 식별 불가 2명 사용자 판단 대기. (08·09 + 검증)"
+        },
+        {
+          "projectId": "034",
+          "did": "[이미지 41장] 원본",
+          "images": [
+            {
+              "publicPath": "/project-images/034__246307ce/주방01.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방01.png",
+              "filename": "주방01.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:19:34.364Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방02.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방02.png",
+              "filename": "주방02.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:19:34.791Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방04.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방04.png",
+              "filename": "주방04.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:46:16.019Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방10.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방10.png",
+              "filename": "주방10.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T11:39:55.502Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방11.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방11.png",
+              "filename": "주방11.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T11:39:56.080Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_세로구도_투시하네스_v2.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_세로구도_투시하네스_v2.png",
+              "filename": "주방02_세로구도_투시하네스_v2.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:27:37.769Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_창문만투시보정_음식원본유지_v4.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_창문만투시보정_음식원본유지_v4.png",
+              "filename": "주방02_창문만투시보정_음식원본유지_v4.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:34:00.016Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_창문만투시보정_음식원본유지_v5.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_창문만투시보정_음식원본유지_v5.png",
+              "filename": "주방02_창문만투시보정_음식원본유지_v5.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:35:11.610Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_창문투시보정_음식유지_v3.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_창문투시보정_음식유지_v3.png",
+              "filename": "주방02_창문투시보정_음식유지_v3.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:32:52.679Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_투시라인_분석_overlay.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_투시라인_분석_overlay.png",
+              "filename": "주방02_투시라인_분석_overlay.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:35:55.578Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_투시라인_소실점분석_clean.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_투시라인_소실점분석_clean.png",
+              "filename": "주방02_투시라인_소실점분석_clean.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:37:12.870Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방02_투시보정_재구성_v1.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방02_투시보정_재구성_v1.png",
+              "filename": "주방02_투시보정_재구성_v1.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-24T08:24:17.649Z"
+            }
+          ]
         }
       ]
     },
@@ -161,7 +252,58 @@
       "entries": [
         {
           "projectId": "034",
-          "did": "접시팬 주방 이미지 투시 보정 회고 작성 — 주방02~18 18단계 측정·하네싱·렌즈 기준 도입 (주방이미지_투시보정_프로세스_회고.md · 주방이미지_투시보정_포트폴리오.html)"
+          "did": "접시팬 주방 이미지 투시 보정 회고 작성 — 주방02~18 18단계 측정·하네싱·렌즈 기준 도입 (주방이미지_투시보정_프로세스_회고.md · 주방이미지_투시보정_포트폴리오.html)",
+          "images": [
+            {
+              "publicPath": "/project-images/034__549a0774/주방16_국부왜곡_50mm보정_v4.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방16_국부왜곡_50mm보정_v4.png",
+              "filename": "주방16_국부왜곡_50mm보정_v4.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:24:45.271Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방16_국부왜곡_렌즈감_재검토_overlay.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방16_국부왜곡_렌즈감_재검토_overlay.png",
+              "filename": "주방16_국부왜곡_렌즈감_재검토_overlay.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:11:21.040Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방16_인덕션투시_검수_overlay.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방16_인덕션투시_검수_overlay.png",
+              "filename": "주방16_인덕션투시_검수_overlay.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:06:33.761Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방17_50mm카메라기준_재구성_v5.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방17_50mm카메라기준_재구성_v5.png",
+              "filename": "주방17_50mm카메라기준_재구성_v5.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:44:04.999Z"
+            },
+            {
+              "publicPath": "/project-images/034__549a0774/주방18_평가용_투시검수_overlay.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/수정시안/주방18_평가용_투시검수_overlay.png",
+              "filename": "주방18_평가용_투시검수_overlay.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:55:29.024Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방17.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방17.png",
+              "filename": "주방17.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:24:45.273Z"
+            },
+            {
+              "publicPath": "/project-images/034__246307ce/주방18.png",
+              "sourcePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/03_산학프로젝트/접시팬_마케팅/08_GPT/원본/주방 이미지/주방18.png",
+              "filename": "주방18.png",
+              "folderContext": "03_school_project / 03_산학프로젝트 / 접시팬_마케팅 / 08_GPT / 원본",
+              "mtime": "2026-06-25T00:44:05.002Z"
+            }
+          ]
         },
         {
           "projectId": "03",
@@ -174,7 +316,7 @@
                 "cache_read": 140460,
                 "cache_write": 34956,
                 "messages": 4,
-                "costUSD": 0
+                "costUSD": 0.9414
               }
             },
             "total": {
@@ -184,7 +326,7 @@
               "cache_write": 34956,
               "messages": 4
             },
-            "costUSD": 0
+            "costUSD": 0.9414
           }
         },
         {
@@ -206,7 +348,7 @@
                 "cache_read": 3383529,
                 "cache_write": 702363,
                 "messages": 66,
-                "costUSD": 0
+                "costUSD": 27.0877
               }
             },
             "total": {
@@ -216,7 +358,7 @@
               "cache_write": 702363,
               "messages": 66
             },
-            "costUSD": 0
+            "costUSD": 27.0877
           }
         }
       ]
@@ -232,7 +374,27 @@
       "entries": [
         {
           "projectId": "063",
-          "did": "접시팬 주방이미지 투시보정 포트폴리오 HTML + 이미지 18종 dashboard public 공개 (/portfolio/kitchen-perspective/) — W26 이번주 업데이트 반영"
+          "did": "접시팬 주방이미지 투시보정 포트폴리오 HTML + 이미지 18종 dashboard public 공개 (/portfolio/kitchen-perspective/) — W26 이번주 업데이트 반영",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 228,
+                "out": 78964,
+                "cache_read": 21897888,
+                "cache_write": 559973,
+                "messages": 143,
+                "costUSD": 49.272
+              }
+            },
+            "total": {
+              "in": 228,
+              "out": 78964,
+              "cache_read": 21897888,
+              "cache_write": 559973,
+              "messages": 143
+            },
+            "costUSD": 49.272
+          }
         },
         {
           "projectId": "034",
@@ -392,17 +554,19 @@
       "isMilestone": false
     }
   ],
-  "newProjects": ["068"],
+  "newProjects": [
+    "068"
+  ],
   "labelChanges": [],
-  "buildAt": "2026-06-26T03:43:35.477Z",
+  "buildAt": "2026-06-26T06:18:19.822Z",
   "tokens": {
     "total": {
-      "in": 231571,
-      "out": 239272,
-      "cache_read": 14712994,
-      "cache_write": 1002418
+      "in": 231799,
+      "out": 318236,
+      "cache_read": 36610882,
+      "cache_write": 1562391
     },
-    "costUSD": 0,
-    "costKRW": 0
+    "costUSD": 111.5558,
+    "costKRW": 163987
   }
 }

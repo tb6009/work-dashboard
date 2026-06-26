@@ -66,6 +66,7 @@ const EXPLICIT = {
   '02_Data_Kaywon': '02',
   '03_school_project/Data_Jstrata': '031', '03_school_project/Data_Once': '032',
   '03_school_project/Data_Study': '033', '03_school_project/MNServe': '034',
+  '03_school_project/03_산학프로젝트/접시팬_마케팅': '034',
   '03_school_project/관리비책': '035', '03_school_project/새론솔루션': '036',
   '03_school_project/기초디자인': '037', '03_school_project/코첼라': '038',
   '03_school_project/RISE': '039',
@@ -99,6 +100,7 @@ const IMG_WHITELIST_KEYWORDS = [
   'image_generation', 'design', 'reference', '레퍼런스', '캐릭터',
   '04_레퍼런스', '03_프롬프트', '01_logo', 'illustration', '01_design',
   '02_brand_campaign', 'posters', 'outputs', '_design',
+  '주방 이미지', '08_GPT/원본', '수정시안', '접시팬',
 ];
 function isWhitelistImage(absPath) {
   const rel = relative(WORKSPACE, absPath).normalize('NFC');

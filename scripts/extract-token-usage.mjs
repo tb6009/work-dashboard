@@ -33,11 +33,17 @@ if (!weekId || !/^\d{4}-W\d{2}$/.test(weekId)) {
 // ─── 모델별 단가 (USD per 1M tokens) ─────────────────────────
 // Anthropic 공식 가격 (2026-05 기준).
 const PRICING = {
+  'claude-opus-4-9':    { in: 15.00, out: 75.00, cache_read: 1.50,  cache_write_5m: 18.75 },
+  'claude-opus-4-8':    { in: 15.00, out: 75.00, cache_read: 1.50,  cache_write_5m: 18.75 },
   'claude-opus-4-7':    { in: 15.00, out: 75.00, cache_read: 1.50,  cache_write_5m: 18.75 },
   'claude-opus-4-6':    { in: 15.00, out: 75.00, cache_read: 1.50,  cache_write_5m: 18.75 },
+  'claude-sonnet-4-8':  { in:  3.00, out: 15.00, cache_read: 0.30,  cache_write_5m:  3.75 },
+  'claude-sonnet-4-7':  { in:  3.00, out: 15.00, cache_read: 0.30,  cache_write_5m:  3.75 },
   'claude-sonnet-4-6':  { in:  3.00, out: 15.00, cache_read: 0.30,  cache_write_5m:  3.75 },
   'claude-sonnet-4-5':  { in:  3.00, out: 15.00, cache_read: 0.30,  cache_write_5m:  3.75 },
   'claude-haiku-4-5':   { in:  1.00, out:  5.00, cache_read: 0.10,  cache_write_5m:  1.25 },
+  // OpenAI Codex (gpt-5-codex) — 별도 트래커 필요 (extract-codex-usage.mjs 미구현)
+  'gpt-5-codex':        { in:  1.25, out: 10.00, cache_read: 0.125, cache_write_5m:  0    },
 };
 
 // `claude-opus-4-7-20260101` → `claude-opus-4-7`

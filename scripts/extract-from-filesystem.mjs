@@ -81,6 +81,7 @@ const EXPLICIT = {
   '03_school_project/Data_Once': '032',
   '03_school_project/Data_Study': '033',
   '03_school_project/MNServe': '034',
+  '03_school_project/03_산학프로젝트/접시팬_마케팅': '034',
   '03_school_project/관리비책': '035',
   '03_school_project/새론솔루션': '036',
   '03_school_project/기초디자인': '037',

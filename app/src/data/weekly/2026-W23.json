@@ -10,7 +10,7 @@
     "activeProjects": 9,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 153
+    "filesChanged": 158
   },
   "daily": [
     {
@@ -187,7 +187,7 @@
     {
       "date": "2026-06-05",
       "weekday": "금",
-      "filesChanged": 20,
+      "filesChanged": 18,
       "topProjectIds": [
         "063",
         "03",
@@ -308,7 +308,7 @@
     {
       "date": "2026-06-07",
       "weekday": "일",
-      "filesChanged": 26,
+      "filesChanged": 33,
       "topProjectIds": [
         "02",
         "063"
@@ -320,7 +320,35 @@
         },
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W23.json"
+          "did": "[fs scan] 2026-W23.json",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-4-5": {
+                "in": 67,
+                "out": 4429,
+                "cache_read": 318109,
+                "cache_write": 57143,
+                "messages": 18,
+                "costUSD": 0.1255
+              },
+              "claude-sonnet-4-6": {
+                "in": 92,
+                "out": 41035,
+                "cache_read": 3181245,
+                "cache_write": 130081,
+                "messages": 72,
+                "costUSD": 2.058
+              }
+            },
+            "total": {
+              "in": 159,
+              "out": 45464,
+              "cache_read": 3499354,
+              "cache_write": 187224,
+              "messages": 90
+            },
+            "costUSD": 2.1834
+          }
         }
       ]
     }
@@ -402,15 +430,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-06-07T01:30:30.195Z",
+  "buildAt": "2026-06-07T13:49:12.352Z",
   "tokens": {
     "total": {
-      "in": 56134,
-      "out": 291057,
-      "cache_read": 32170346,
-      "cache_write": 1996193
+      "in": 56293,
+      "out": 336521,
+      "cache_read": 35669700,
+      "cache_write": 2183417
     },
-    "costUSD": 18.8836,
-    "costKRW": 27759
+    "costUSD": 21.067,
+    "costKRW": 30968
   }
 }

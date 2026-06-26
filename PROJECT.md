@@ -70,7 +70,7 @@
 - [x] **Vercel 배포 + URL 확보** (2026-05-08) — `https://work-dashboard-app.vercel.app`
 - [x] **W20 일요일 업데이트** (2026-05-17) — 05-16 v1.6 자료 리서치 13편 + 05-17 워크스페이스 재구조화 반영
 - [x] **폴더 재구조화 대응** (2026-05-17) — `extract-week.mjs` WORKSPACE 두 단계 위로 수정 + `projects.json`에 `01`(관리 마스터) 추가
-- [ ] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정 (Vercel 웹 대시보드)
+- [x] **Vercel GitHub 자동 배포 수정** — Root Directory = `app` 설정. 아래 5/25 항목에서 REST API PATCH로 완료.
 - [x] **W14~W17 소급 생성** (2026-05-19) — `app/src/data/weekly/` 4개 추가. extract-week.mjs draft + 일일 로그 의미 보강. W14(05 INDEX+03 Once+09 셋업) / W15(09 정량분석+05 선행연구 HTML) / W16(05 축 이동+10 보살피고 캐릭터+11 매거진 2호) / W17(10 3분할+6 에이전트+v1.5 베타+21 CPSF 8 쟁점)
 - [x] **일간 페이지 추가** (2026-05-20) — `/daily` 라우트 + `DailyRow` 컴포넌트. 현재 주의 활동 있는 날만 최신순. 좌측 큰 날짜 + 우측 프로젝트별 작업 내용. `daily[].entries[]` 스키마 신설 + `extract-daily-entries.mjs` 일일 로그 자동 파서 + W14~W20 12일 백필.
 - [x] **Vercel Root Directory = `app` 설정** (2026-05-25) — REST API PATCH로 직접 패치 (`vercel project` CLI 미지원). 다음 push부터 자동 배포 정상화.
@@ -80,7 +80,11 @@
 - [x] **05_phD_Research 하위 4개 프로젝트 신설** (2026-05-28) — `질적연구세미나`·`054_질적연구ResearchBot`·`질적연구_Gemini`·`assisst` 4개 폴더가 EXPLICIT 매핑 누락으로 활동 손실. `projects.json`에 057/058/059/060 신설 + `extract-from-filesystem.mjs` EXPLICIT 맵에 4개 prefix 추가. W22 재추출 결과 143개 파일 발견, 057(질적연구세미나) 25건·058(ResearchBot 허브) 4건·059(Gemini superseded) 2건 자동 캡처. `054_질적연구ResearchBot` 폴더명 `054`와 기존 `054 연구논문02 (CPSF)` ID 충돌은 폴더명 유지하고 ID만 058로 분리.
 - [~] Claude cron으로 매주 월요일 09:00 자동 빌드 — 원격 routine 차단(워크스페이스 부재). 옵션 A(로컬 launchd) 권장, 사용자 결정 대기.
 - [-] 재구조화 후속 `path` 필드 — EXPLICIT map과 define이 이미 동기화. 중복 데이터 회피로 스킵.
-- [ ] Phase 4 — Monthly·Yearly 집계 자동화
+- [∞] **운영 모드** Phase 4 — 월간·연간 회고 집계
+  · 주간 정형: §3-1 사이클로 별도 운영 중
+  · 월간/연간 회고: 본인 트리거 시 즉시 집계 가능해야 함 (정기 스케줄 아님)
+  · 비정기 업데이트: 본인 요청 시 부분 갱신 (특정 주차 백필·데이터 보정 등)
+  · 개입 트리거: 회고/업데이트 시 집계 누락·이상하면 그때 보강
 
 ## 3-1. 주간 업데이트 절차 요약
 

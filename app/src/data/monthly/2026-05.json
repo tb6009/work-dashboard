@@ -1,177 +1,370 @@
 {
   "month": "2026-05",
-  "weeks": ["2026-W18", "2026-W19", "2026-W20", "2026-W21", "2026-W22"],
+  "weeks": [
+    "2026-W19",
+    "2026-W20",
+    "2026-W21",
+    "2026-W22"
+  ],
   "aggregated": {
-    "totalFiles": 830,
-    "avgActive": 13,
-    "newProjectsCount": 24,
-    "milestonesCount": 20,
+    "totalFiles": 695,
+    "avgActive": 12,
+    "newProjectsCount": 21,
+    "milestonesCount": 19,
     "typeBreakdown": {
-      "product":    343,
-      "publishing":  93,
-      "research":    55,
-      "design":      51,
-      "system":      38,
-      "data":        13,
-      "education":   10
+      "product": 285,
+      "publishing": 68,
+      "research": 22,
+      "design": 50,
+      "system": 38,
+      "data": 12,
+      "education": 4
     }
   },
-  "topProjects": ["063", "061", "091", "03", "101"],
+  "topProjects": [
+    "063",
+    "061",
+    "03",
+    "101",
+    "01"
+  ],
   "milestones": [
-    { "date": "2026-05-02", "projectId": "061", "title": "LifeOS 1일 만에 배포",                                           "description": "30시간 안에 Next.js 앱 Vercel 배포 완료",                                        "isMilestone": true },
-    { "date": "2026-05-06", "projectId": "063", "title": "063 대시보드 Next.js 앱 초기 구축",                              "description": "6개 라우트 + ECharts 차트 + 데이터 레이어 완비",                               "isMilestone": true },
-    { "date": "2026-05-08", "projectId": "063", "title": "workDashboard Vercel 배포",                                     "description": "work-dashboard-app.vercel.app 공개",                                          "isMilestone": true },
-    { "date": "2026-05-11", "projectId": "061", "title": "LifeOS v2.0 폐기 결정",                                         "description": "전면 재설계 포기 후 v0.9.x 점진 복구 전환 — postmortem 작성",                  "isMilestone": true },
-    { "date": "2026-05-11", "projectId": "091", "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",                  "description": "출판 방향성 핵심 메시지 확정",                                                "isMilestone": true },
-    { "date": "2026-05-11", "projectId": "091", "title": "출판기획안 v2.1 표준양식 제출",                                  "description": "8개 버전 진화 끝에 최종 제출",                                               "isMilestone": true },
-    { "date": "2026-05-14", "projectId": "03",  "title": "새론솔루션 UX 진단 + 시안 3종 완성",                             "description": "광주 남구 스마트 하수악취 대시보드 UX",                                       "isMilestone": true },
-    { "date": "2026-05-16", "projectId": "101", "title": "보살피고 v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서",         "description": "위험·라이선스 도구 7개 사용 중단 정책(§10) 포함",                              "isMilestone": true },
-    { "date": "2026-05-17", "projectId": "01",  "title": "워크스페이스 27+ 폴더 → 10대 카테고리 재구조화",                 "description": "번호-카테고리 체계 완성 + 19GB tar.gz 백업",                                  "isMilestone": true },
-    { "date": "2026-05-20", "projectId": "063", "title": "일간 페이지 신설 — /daily + entries[] 스키마",                   "description": "일별 활동 로그 페이지 + 자동 파서",                                           "isMilestone": true },
-    { "date": "2026-05-22", "projectId": "063", "title": "Stop hook 자동 활동 캡처 시스템 구축",                           "description": "이후 매 세션 활동이 대시보드에 자동 기록",                                    "isMilestone": true },
-    { "date": "2026-05-22", "projectId": "063", "title": "파일시스템 mtime 스캔 extractor 신설",                           "description": "수동 추출 없이 활동 자동 감지",                                              "isMilestone": true },
-    { "date": "2026-05-24", "projectId": "063", "title": "이미지 갤러리 시스템 — 썸네일 strip + lightbox",                  "description": "산출물 이미지 자동 수집·표시",                                               "isMilestone": true },
-    { "date": "2026-05-25", "projectId": "09",  "title": "LifeOS 테스트 인프라 브랜치 폐기·정리",                           "description": "archive/stage-9-tip 태그 보존 후 브랜치 삭제",                               "isMilestone": true },
-    { "date": "2026-05-30", "projectId": "104", "title": "AI챗봇 4버전 체계적 평가 완료",                                   "description": "188응답 · 가설 14/15 합격 · 최적 버전 확정 (PPS·BFI·LIWC·일관성)",           "isMilestone": true }
+    {
+      "date": "2026-05-06",
+      "projectId": "063",
+      "title": "063 대시보드 Next.js 앱 초기 구축",
+      "description": "Next.js 16 + React 19 + Tailwind v4. 5개 라우트 + 인증(NextAuth) + ECharts 7종.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-08",
+      "projectId": "063",
+      "title": "Vercel 배포 완료",
+      "description": "work-dashboard-app.vercel.app 프로덕션 URL 확보. GitHub repo 연결.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "061",
+      "title": "LifeOS v2.0 폐기 결정",
+      "description": "45 commits/114 files의 대규모 리팩토링 시도. UI 디테일·인터랙션 손실로 '작동이 안 된다' 체감 → v0.8.1로 롤백.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "091",
+      "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",
+      "description": "디자이너(직업) x 행동 변화(연구 주제) x 과학(기준점) 세 층위 분리. 인터페이스 비유 폐기.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-11",
+      "projectId": "091",
+      "title": "출판기획안 v2.1 표준양식 제출",
+      "description": "8개 버전 진화 후 아고라 출판 수업 9칸 표 형식 최종본. 600명 데이터 마케팅 근거화.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-14",
+      "projectId": "03",
+      "title": "새론솔루션 UX 진단 + 시안 3종 완성",
+      "description": "하수악취 대시보드 6측면 진단. Light/Dark OLED/Map-First 3종 HTML 목업.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-16",
+      "projectId": "101",
+      "title": "v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서",
+      "description": "00_운영원칙(출처 tier·메타데이터·공개가능성·양면구조·도구 제외) + INDEX + 5개 트랙 보고서 13편. 갭 분석(805편 인용), 캐릭터별 자료 시각화, C-SSRS 외부 확보, 한국 갱년기·UPF 보강, 디자인교육 사용자 의견 요청, 자문 패키지 §10 반영, SNS 동향 30채널.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-16",
+      "projectId": "101",
+      "title": "위험·라이선스 도구 7개 사용 중단 정책 (§10)",
+      "description": "임상 위험: C-SSRS·PC-PTSD-5·EAT-26 / 라이선스 회색지대: PSS·PSQI·Chalder·IPAQ. 챗봇을 평가자→동반자·연결자로 재정의. 자연어 키워드 감지 + 전문가 라우팅 표준 응답 4종.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-17",
+      "projectId": "01",
+      "title": "워크스페이스 27+ 폴더 → 10대 카테고리 재구조화",
+      "description": "왜 했나: 너무 많은 폴더가 한 깊이에 쌓이면서 번호·성격이 섞여 새 프로젝트 위치 결정 비용 누적, 관리 불가 상태. 어떻게 했나: 분류 기준은 '성격(목적·도메인) 단일성' — 같은 종류의 일을 같은 번호 아래로. 27 폴더 mv + 8 신규 상위(01_admin/02_Data_Kaywon/03_school_project/04_aSSIST/05_phD_Research/06_Personal_Project/08_project/09_몸과마음의과학/10_보고살피다) + 6 빈 폴더 삭제. 19GB tar.gz 사전 백업으로 안전망 확보 후 묶음 mv 5분 내 완료.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-20",
+      "projectId": "063",
+      "title": "일간 페이지 신설 — /daily + entries[] 스키마",
+      "description": "DailyActivity에 entries[] 추가, extract-daily-entries.mjs로 일일 로그의 ### 제목만 (산출물 본문 노출 금지 규칙 준수) 자동 추출, W14~W20 12일분 백필. 좌측 큰 날짜 + 우측 프로젝트별 작업 + ProjectComments 날짜별 묶음.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-20",
+      "projectId": "063",
+      "title": "의사결정 타임라인 C-형식 (그룹화 + 시간순 유지)",
+      "description": "가로 타임라인의 L→R = 과거→최신 멘탈모델 보존을 위해 단순 reverse 대신 채택. 상단 MILESTONE 행 (검정 헤더 칩 + 짙은 라인 + 큰 dot + 검정 테두리) + 하단 일반 결정사항 행 (회색 헤더 + 옅은 라인 + 작은 dot). 각 행 내 시간순 유지.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-21",
+      "projectId": "063",
+      "title": "Vercel CLI 우회 배포 + GitHub 자동 배포 이슈 잔존",
+      "description": "27 파일 단일 commit + origin push. GitHub → Vercel 자동 배포가 Root Directory 미설정으로 실패 → vercel deploy --prod로 우회. 47초 빌드 후 production READY. / 와 /daily HTTP 200 확인. Root Directory 설정은 사용자가 웹 대시보드에서 직접 작업해야 자동 배포 복구됨.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "프로젝트 인덱스 정합성 핫픽스 — 081·102·103 메타 추가 + 00 상세 신설",
+      "description": "워크스페이스 전체 스캔 결과 누락 13개·위치 불일치 7개 발견. 즉시 깨진 링크만 우선 해결: (1) 081 Anchornode — W20 활동 기록 있으나 메타 없어 '(unknown project)'로 표시되던 것 정상화 (2) 102 GPT/Codex 실험·103 Gemini 실험 추가 — 보살피고 멀티 모델 트랙 가시화 (3) 00 personal 상세 JSON 신설 — /projects/00 404 해결 (4) stray 061_v2.0_timeline.md → docs/로 이동. 본격 재구조화(33개 신규 ID + aliases 마이그레이션)는 별도 결정 후 진행.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "옵션 B 채택 — aliases + 일괄 마이그레이션 (옛 ID 11개 → 카테고리 prefix 신규 ID)",
+      "description": "중장기 누적 부채 회피 위해 (B) 채택. ProjectMeta에 aliases?: string[] 추가, lookupProject가 alias도 검색. migrate-project-ids.mjs 스크립트로 11 detail JSON rename + 7 weekly JSON 81 참조 일괄 치환 (백업: _backups/migration_20260522.tar.gz). 매핑: 05→051(DSAPG), 06→012(AI_Design), 08→034(MNServe), 10→101(일상다반사), 11→067(디자인매거진), 12→033(Data_Study), 21→054(CPSF), 22→02(Data_Kaywon), 31→083(촬영용), 32→084(강연시리즈), 51→052(페르소나). 신규 13개 메타+stub JSON 추가 (011·031·032·035·036·037·038·04·053·055·056·066·082·092). projects.json 26 → 38개. 옛 04/07(antigravity/AIDX, 폴더 삭제됨)은 메타 삭제.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "병렬 세션 활동 백필 — 092 영상과제·053 ResearchMasterBot",
+      "description": "대시보드 데이터 흐름 진단 결과 docs/logs/*.md가 단일 Claude 세션에서만 작성되어 병렬 작업이 누락됨을 발견. 092(5/18~5/21 25파일)·053(5/20~5/22 15파일) 활동을 파일시스템 mtime 기반으로 수동 백필. extract-from-filesystem.mjs(B) + 세션 종료 자동 로그 hook(C) 후속 작업으로 자동화 예정.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "파일시스템 mtime 스캔 extractor 신설 (B)",
+      "description": "scripts/extract-from-filesystem.mjs — 워크스페이스 카테고리 폴더(01~10) mtime 스캔 후 경로에서 프로젝트 ID 추론. 산출물 본문 노출 금지 규칙 준수(파일명만 추출, 최대 5개). 로그 기반 entries는 보존하고 fs 기반은 보강만. EXPLICIT 매핑 38건 + 카테고리 umbrella fallback. dry-run 지원. W21 첫 실행으로 8건 추가 발견(061·062·037·03·066) — 특히 066 소규모조직_AI 45 파일(project01 풀스택)이 그동안 보이지 않다가 등장.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-22",
+      "projectId": "063",
+      "title": "Stop hook 자동 활동 캡처 (C)",
+      "description": "워크스페이스 .claude/settings.local.json에 Stop hook 등록 + scripts/auto-capture-activity.sh. 매 turn 종료마다 현재 ISO 주차 계산 → weekly JSON 없으면 extract-week.mjs로 신설 → extract-from-filesystem.mjs로 fs 활동 자동 반영. 30초 timeout, 실패해도 세션 흐름 무영향(/tmp/063_auto_capture.log 로깅). .claude/CLAUDE.md에 \"활동은 자동, 결정만 수기 로그\" 원칙 명문화. 어떤 Claude 세션이든(092, 053, 어떤 프로젝트든) 파일 변경은 자동으로 대시보드에 반영됨.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-23",
+      "projectId": "063",
+      "title": "월간 페이지 재구성 — 한 달 요약 hero 2/3 + Top10↔Milestone swap",
+      "description": "한 달 요약을 페이지 상단 2/3 width hero (큰 본문 + Top 3 강조)로 격상. grid 1fr·2fr → 2fr·1fr 로 swap. LEFT(2fr) = ★ Milestone (큰 자리), RIGHT(1fr) aside = Top 10 compact list + 이 달의 주간 + Type 분포. Top 10은 PeriodProjectTile(큰 narrative 카드) → compact row(rank · name · id·files·imp · pct%)로 변경.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-05-24",
+      "projectId": "063",
+      "title": "이미지 갤러리 시스템 — 썸네일 strip + 풀스크린 lightbox",
+      "description": "extract-images.mjs: whitelist 폴더 키워드(05_제작·시안·logo·character·생성이미지 등) 기반 .png/.jpg/.svg 자동 수집, 같은 폴더 README/HISTORY 첫 문단 → caption, 상위 PROJECT.md → purpose 추출. app/public/project-images/ 폴더별 해시 디렉토리에 복사. ImageGallery client 컴포넌트: 80×80 썸네일 strip + 풀스크린 lightbox (ESC/←/→ 키보드 navi + 메타 패널: 날짜·경로·caption·purpose). DailyRow에 entry.images[] 자동 노출. W21 첫 실행: 77 이미지 수집 → 47 attached.",
+      "isMilestone": true
+    }
   ],
   "retro": {
-    "headline": "830 files · 29 active days · 5주 내내 무언가를 만들었다",
+    "headline": "2026년 5월 회고",
     "stats": {
-      "filesChanged": 830,
-      "activeDays": 29,
-      "totalDays": 31,
-      "decisions": 49,
-      "newProjectsRegistered": 24,
-      "peakDay": { "date": "2026-05-25", "weekday": "월", "files": 93 },
-      "peakWeek": { "week": "2026-W20", "files": 272, "period": "05-11~17" },
-      "costUSD": 1986.3,
-      "messages": 3141
+      "filesChanged": 695,
+      "activeDays": 26,
+      "totalDays": 28,
+      "decisions": 44,
+      "newProjectsRegistered": 21,
+      "peakDay": {
+        "date": "2026-05-25",
+        "weekday": "월",
+        "files": 93
+      },
+      "peakWeek": {
+        "week": "2026-W20",
+        "files": 272,
+        "period": "05-11 ~ 05-17"
+      },
+      "costUSD": 2000.39,
+      "messages": 0
     },
     "weeklyFlow": [
       {
-        "week": "W18",
-        "period": "04-27~05-03",
-        "files": 142,
-        "label": "출발",
-        "headline": "LifeOS 1일 배포 · 4개 핵심 프로젝트 동시 시동",
-        "narrative": "4월 마지막 주에서 5월로 넘어오는 시점. LifeOS를 단 30시간 만에 설계에서 Vercel 배포까지 완료했다. 같은 주에 강연시리즈·논문리더·workDashboard까지 4개 핵심 프로젝트가 동시에 시동을 걸었다. 에너지가 가장 높았던 주."
-      },
-      {
-        "week": "W19",
-        "period": "05-04~05-10",
+        "week": "2026-W19",
+        "period": "05-04 ~ 05-10",
         "files": 123,
-        "label": "구축",
-        "headline": "workDashboard Next.js 전체 구축 + Vercel 첫 배포",
-        "narrative": "workDashboard에 집중한 한 주. Next.js 앱 전체를 처음부터 구축하고 Vercel 첫 배포까지 완료했다. 6개 라우트·ECharts 차트·데이터 레이어를 6일 만에 완성했다. 디자인 시스템 원칙도 동시에 정립."
+        "label": "063",
+        "headline": "063 대시보드 v0.5~v0.6 리디자인 · Vercel 배포 · 061 LifeOS 지속 개선",
+        "narrative": ""
       },
       {
-        "week": "W20",
-        "period": "05-11~05-17",
+        "week": "2026-W20",
+        "period": "05-11 ~ 05-17",
         "files": 272,
-        "label": "위기→극복",
-        "headline": "v2.0 폐기 postmortem · 출판기획안 제출 · 워크스페이스 대개편",
-        "narrative": "이달 가장 많은 파일이 바뀐 주. LifeOS v2.0을 전면 폐기하고 Postmortem을 작성했다. 실패를 기록으로 남기는 것이 자산이라는 결정. 같은 주에 출판기획안 v2.1을 최종 제출하고, 워크스페이스 27개 폴더를 10대 카테고리로 대규모 재구조화했다. 하루 55개 파일이 바뀌는 날도 있었다."
+        "label": "061",
+        "headline": "061 v2.0 폐기→v0.9.4 · 새론솔루션 UX+시안3종 · 관리비책 캐릭터5인 · 091 출판기획 v2.1 · 마음 403 해결 · 10 v1.6 자료 리서치 13편 · 워크스페이스 27→10 재구조화",
+        "narrative": ""
       },
       {
-        "week": "W21",
-        "period": "05-18~05-24",
+        "week": "2026-W21",
+        "period": "05-18 ~ 05-24",
         "files": 106,
-        "label": "자동화",
-        "headline": "Stop hook · 이미지 갤러리 · 24개 프로젝트 일괄 등록",
-        "narrative": "수치(106f)보다 훨씬 많은 일이 있었던 주. 영상과제(092)에서는 4컷만화 대본부터 프롬프트 5종·샷리스트 v0.3·스토리보드 AB 비교문서·연출지침까지 영상 제작 전체 파이프라인이 이 주에 완성됐다. 출판기획안(091)은 v2.1 제출 이후에도 멈추지 않아 현재진단·업그레이드전략·v3.0 GPT 초안 등 7건 이상이 토요일 하루에 쏟아졌다. 동시에 Stop hook 자동 캡처 인프라가 완성되면서, 이후 어떤 세션의 작업이든 대시보드에 자동 기록되는 구조가 갖춰졌다."
+        "label": "063",
+        "headline": "063 W14~W17 백필 · /daily 신설 · 의사결정 C-형식 · 프로젝트 ID 마이그레이션 (26→38) · 활동 자동 캡처 (Stop hook + fs extractor) · 월간 페이지 재구성 · 이미지 갤러리 시스템 (썸네일 + lightbox)",
+        "narrative": ""
       },
       {
-        "week": "W22",
-        "period": "05-25~05-31",
-        "files": 187,
-        "label": "전문성",
-        "headline": "AI챗봇 4버전 평가 188응답 · 박사 연구 인프라 확장",
-        "narrative": "5월 마지막 주. AI챗봇 4버전 평가를 완료했다 — 188개 응답을 생성하고 15개 가설 중 14개를 검증. LLM-as-judge 방법론을 처음으로 논문 수준으로 적용한 주. 박사연구 관련 4개 신규 프로젝트도 등록했다."
+        "week": "2026-W22",
+        "period": "05-25 ~ 05-31",
+        "files": 194,
+        "label": "09",
+        "headline": "TODO — Claude가 한 줄 요약 작성",
+        "narrative": ""
       }
     ],
     "areaBreakdown": [
       {
-        "area": "Product",
+        "area": "product",
         "type": "product",
-        "files": 343,
-        "pct": 57,
-        "topProjects": ["063 workDashboard (155f)", "061 LifeOS (130f)", "101 일상다반사 (44f)"],
-        "highlight": "대시보드 자동화 완성 + LifeOS v2.0 폐기·복구 postmortem + 보살피고 v1.5β",
-        "narrative": "이달 작업의 절반 이상이 제품 개발에 집중됐다. workDashboard(155f)는 빈 폴더에서 Vercel 배포·자동화까지 한 달에 완성됐고, LifeOS(130f)는 배포 → v2.0 전면 재설계 → 폐기 → v0.9.4 안정 복구라는 극적인 궤적을 그렸다. 일상다반사(보살피고) v1.5β 4-캐릭터 빌드도 완료."
+        "files": 285,
+        "pct": 59,
+        "topProjects": [
+          "063",
+          "061",
+          "101"
+        ],
+        "highlight": "",
+        "narrative": ""
       },
       {
-        "area": "Publishing",
+        "area": "publishing",
         "type": "publishing",
-        "files": 93,
-        "pct": 15,
-        "topProjects": ["091 몸과마음의과학 출판 (55f)", "092 영상과제 (25f)"],
-        "highlight": "출판기획안 v2.1 최종 제출 · 저자 정체성 확정 · 4컷만화 대본 v0.1",
-        "narrative": "출판기획안은 v1.1에서 시작해 v2.1 표준양식 제출로 일단락됐지만, 제출 이후에도 멈추지 않았다. W21에 현재진단·업그레이드전략·v3.0 GPT 초안까지 추가 개선이 이어졌고, '행동 변화를 연구하는 디자이너'라는 저자 정체성도 이 과정에서 확정됐다. 영상과제(092)에서는 4컷만화 대본·프롬프트 5종·샷리스트·스토리보드·연출지침까지 영상 제작 전체 파이프라인이 이 달에 완성됐다."
+        "files": 68,
+        "pct": 14,
+        "topProjects": [
+          "091",
+          "092",
+          "09"
+        ],
+        "highlight": "",
+        "narrative": ""
       },
       {
-        "area": "Research",
-        "type": "research",
-        "files": 55,
-        "pct": 9,
-        "topProjects": ["052 페르소나 연구 (28f)", "053 ResearchMasterBot (15f)"],
-        "highlight": "AI챗봇 4버전 설계 + 체계적 평가 (PPS·BFI·LIWC) 완료",
-        "narrative": "AI챗봇 설계·평가가 이달 연구의 중심이었다. 동일 인물에 대해 4가지 스타일의 system prompt를 설계하고, PPS·BFI-44·LIWC·일관성 4종으로 188개 응답을 평가했다. 가설 15개 중 14개 합격(93%). ResearchMasterBot 셋업도 완료."
-      },
-      {
-        "area": "Design",
+        "area": "design",
         "type": "design",
-        "files": 51,
-        "pct": 8,
-        "topProjects": ["03 디자인실무 (45f)"],
-        "highlight": "새론솔루션 UX 시안 3종 · 관리비책 캐릭터 5인 · 기초디자인 분석",
-        "narrative": "학교 프로젝트 중심. 새론솔루션 UX 진단 + 시안 3종 완성, 관리비책 캐릭터 5인 이미지 제작. 외부 클라이언트에게 바로 제출 가능한 산출물로 마무리됐다."
+        "files": 50,
+        "pct": 10,
+        "topProjects": [
+          "03",
+          "081"
+        ],
+        "highlight": "",
+        "narrative": ""
       },
       {
-        "area": "System",
+        "area": "system",
         "type": "system",
         "files": 38,
-        "pct": 6,
-        "topProjects": ["01 관리 마스터 (34f)"],
-        "highlight": "27+ 폴더 → 10 카테고리 재구조화 · Stop hook 자동 캡처 인프라",
-        "narrative": "겉으로 드러나지 않지만 이달 모든 작업의 토대. 27개 폴더 → 10 카테고리 재구조화와 Stop hook 자동 캡처가 핵심. 이 두 가지가 없었다면 이 대시보드 자체가 존재할 수 없었다."
+        "pct": 8,
+        "topProjects": [
+          "01",
+          "00"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "research",
+        "type": "research",
+        "files": 22,
+        "pct": 5,
+        "topProjects": [
+          "053",
+          "051"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "data",
+        "type": "data",
+        "files": 12,
+        "pct": 3,
+        "topProjects": [
+          "065",
+          "02"
+        ],
+        "highlight": "",
+        "narrative": ""
+      },
+      {
+        "area": "education",
+        "type": "education",
+        "files": 4,
+        "pct": 1,
+        "topProjects": [
+          "04"
+        ],
+        "highlight": "",
+        "narrative": ""
       }
     ],
     "keyMilestones": [
       {
-        "date": "05-02",
-        "projectId": "061",
-        "title": "LifeOS 1일 만에 Vercel 배포",
-        "impact": "설계~배포를 30시간 안에. 빠른 실행의 기준점."
-      },
-      {
-        "date": "05-11~12",
-        "projectId": "061",
-        "title": "LifeOS v2.0 폐기 + Postmortem 작성",
-        "impact": "실패를 문서화하고 v0.9.4로 점진 복구. 실패도 자산."
-      },
-      {
-        "date": "05-11",
-        "projectId": "091",
-        "title": "출판기획안 v2.1 표준양식 최종 제출",
-        "impact": "8개 버전 진화 끝에 제출. '행동 변화를 연구하는 디자이너' 정체성 확정."
-      },
-      {
-        "date": "05-17",
-        "projectId": "01",
-        "title": "워크스페이스 10대 카테고리 재구조화",
-        "impact": "27+ 무질서한 폴더에서 번호 체계 기반 10 카테고리로. 이후 모든 작업의 기반."
-      },
-      {
-        "date": "05-22",
+        "date": "2026-05-06",
         "projectId": "063",
-        "title": "Stop hook 자동 활동 캡처 시스템",
-        "impact": "이후 어떤 세션이든 파일 변경이 대시보드에 자동 등록."
+        "title": "063 대시보드 Next.js 앱 초기 구축",
+        "impact": ""
       },
       {
-        "date": "05-30",
-        "projectId": "104",
-        "title": "AI챗봇 4버전 체계적 평가 완료",
-        "impact": "188응답 · 15가설 중 14 합격. LLM-as-judge 방법론 첫 실전 적용."
+        "date": "2026-05-08",
+        "projectId": "063",
+        "title": "Vercel 배포 완료",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-11",
+        "projectId": "061",
+        "title": "LifeOS v2.0 폐기 결정",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-11",
+        "projectId": "091",
+        "title": "저자 정체성 = '행동 변화를 연구하는 디자이너'",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-11",
+        "projectId": "091",
+        "title": "출판기획안 v2.1 표준양식 제출",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-14",
+        "projectId": "03",
+        "title": "새론솔루션 UX 진단 + 시안 3종 완성",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-16",
+        "projectId": "101",
+        "title": "v1.6 자료 리서치 운영체계 + 5트랙 13편 보고서",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-16",
+        "projectId": "101",
+        "title": "위험·라이선스 도구 7개 사용 중단 정책 (§10)",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-17",
+        "projectId": "01",
+        "title": "워크스페이스 27+ 폴더 → 10대 카테고리 재구조화",
+        "impact": ""
+      },
+      {
+        "date": "2026-05-20",
+        "projectId": "063",
+        "title": "일간 페이지 신설 — /daily + entries[] 스키마",
+        "impact": ""
       }
     ],
     "userComment": {
@@ -191,5 +384,5 @@
       ]
     }
   },
-  "buildAt": "2026-05-31T00:00:00+09:00"
+  "buildAt": "2026-06-12T11:32:27.716Z"
 }

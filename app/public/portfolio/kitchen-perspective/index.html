@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/portfolio/kitchen-perspective/">
+  <title>주방 이미지 투시 보정 프로세스</title>
+  <style>
+    :root {
+      --bg: #f5f2ed;
+      --paper: #fffdf9;
+      --ink: #24211d;
+      --muted: #756d62;
+      --line: #ded6ca;
+      --wood: #8a613a;
+      --steel: #6f7880;
+      --blue: #1f67c2;
+      --teal: #138f8c;
+      --orange: #c36a14;
+      --magenta: #9a2778;
+      --green: #2b7f49;
+      --shadow: 0 16px 44px rgba(43, 34, 24, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.62;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--wood);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 920px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 860px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .meta div {
+      min-height: 76px;
+      background: rgba(255, 253, 249, .72);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .meta strong {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(245, 242, 237, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0;
+    }
+
+    .nav-inner a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 32px 0 12px;
+      font-size: 21px;
+      letter-spacing: 0;
+    }
+
+    .section-intro {
+      max-width: 840px;
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    figure {
+      margin: 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(43, 34, 24, .06);
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      background: #e7ded2;
+    }
+
+    figure.portrait img {
+      aspect-ratio: 4 / 5;
+    }
+
+    figcaption {
+      padding: 12px 14px 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    figcaption strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    figcaption span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 22px;
+      margin-top: 22px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .step-label {
+      color: var(--wood);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .step-content h3 { margin-top: 0; }
+
+    .callout {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--wood);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 22px 0;
+      box-shadow: 0 8px 24px rgba(43, 34, 24, .05);
+    }
+
+    .callout p { margin: 0; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 0;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+
+    .blue { background: var(--blue); }
+    .teal { background: var(--teal); }
+    .orange { background: var(--orange); }
+    .magenta { background: var(--magenta); }
+    .green { background: var(--green); }
+
+    .score {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .score div {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .score b {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0 0;
+    }
+
+    li { margin: 6px 0; }
+
+    .final {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .final img {
+      width: 100%;
+      display: block;
+    }
+
+    .final-text {
+      padding: 22px;
+    }
+
+    footer {
+      padding: 36px 0 60px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .meta,
+      .grid,
+      .grid.three,
+      .score,
+      .legend {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      header { padding-top: 34px; }
+      section { padding: 38px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page">
+    <div class="eyebrow">Kochstar Cookware Image Direction</div>
+    <h1>주방 이미지 투시 보정 프로세스</h1>
+    <p class="lead">제품 상세페이지에 사용할 주방 이미지를 만들기 위해, 사용자의 디렉션을 기준으로 투시선 측정, 공간 구조 재설계, 렌즈감 보정, 하네싱 기준 수립을 반복한 제작 히스토리입니다.</p>
+    <div class="meta">
+      <div><span>기간</span><strong>2026.06.24-25</strong></div>
+      <div><span>최종 후보</span><strong>주방18.png</strong></div>
+      <div><span>핵심 기준</span><strong>50mm DSLR / 제품 선명도</strong></div>
+      <div><span>검수 방식</span><strong>투시선 오버레이 + 재측정</strong></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#overview">개요</a>
+      <a href="#phase-a">창문/싱크대</a>
+      <a href="#phase-b">조리 장면</a>
+      <a href="#phase-c">팬 4개 이미지</a>
+      <a href="#direction">사용자 지시</a>
+      <a href="#evaluation">평가</a>
+      <a href="#assets">산출물</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section id="overview">
+      <h2>작업 개요</h2>
+      <p class="section-intro">초기 이미지는 분위기와 제품 배치는 좋았지만, 전경의 팬/인덕션과 후경의 싱크대/창/벽이 서로 다른 카메라 체계 안에 있는 것처럼 보였습니다. 작업은 “이미지 생성”보다 “투시 검수와 구조 보정”에 가까운 방향으로 진행되었습니다.</p>
+      <div class="legend">
+        <div><span class="dot blue"></span>인덕션 / 전경 평면</div>
+        <div><span class="dot teal"></span>아일랜드 상판</div>
+        <div><span class="dot orange"></span>후경 싱크대 / 바닥</div>
+        <div><span class="dot magenta"></span>냉장고 / 수직 구조</div>
+        <div><span class="dot green"></span>목표 보정 방향</div>
+      </div>
+      <div class="callout">
+        <p><strong>핵심 전환:</strong> 배경을 예쁘게 만드는 문제에서, 카메라-평면-오브젝트 순서로 장면을 다시 세우는 문제로 이동했습니다.</p>
+      </div>
+    </section>
+
+    <section id="phase-a">
+      <h2>A. 창문과 싱크대 투시 보정</h2>
+      <p class="section-intro">초기 요청은 `주방02`의 분위기를 사용하되, 창문과 싱크대 쪽 투시가 맞지 않는 문제를 확인하는 것이었습니다. 분석용 라인 이미지와 실제 사용본을 분리해 관리했습니다.</p>
+      <div class="grid three">
+        <figure class="portrait">
+          <a href="주방02.png"><img src="주방02.png" alt="주방02 원본"></a>
+          <figcaption><strong>주방02 원본</strong><span>분위기는 좋지만 창문, 싱크대, 전경 팬 사이의 투시가 완전히 맞지 않았다.</span></figcaption>
+        </figure>
+        <figure class="portrait">
+          <a href="주방02_투시라인_소실점분석_clean.png"><img src="주방02_투시라인_소실점분석_clean.png" alt="주방02 투시선 분석"></a>
+          <figcaption><strong>투시선 분석</strong><span>창문/싱크대/인덕션 기준선을 분리해 소실점 충돌을 확인했다.</span></figcaption>
+        </figure>
+        <figure class="portrait">
+          <a href="주방03.png"><img src="주방03.png" alt="주방03 보정본"></a>
+          <figcaption><strong>주방03 보정본</strong><span>라인 없는 실제 사용 후보. 창문 영역을 좁혀 보정했다.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="phase-b">
+      <h2>B. 조리 장면의 공간 구조 보정</h2>
+      <p class="section-intro">`주방04`에서는 사람이 설 수 없을 만큼 아일랜드와 뒤 싱크대가 붙어 보이는 문제가 핵심이었습니다. 사용자의 지시에 따라 먼저 측정하고, 이후 배경을 뒤로 물리고 빌트인 냉장고 구조까지 검토했습니다.</p>
+      <div class="process">
+        <div class="step-label">Step B-1</div>
+        <div class="step-content">
+          <h3>공간 문제 측정</h3>
+          <div class="grid">
+            <figure class="portrait">
+              <a href="주방04.png"><img src="주방04.png" alt="주방04 원본"></a>
+              <figcaption><strong>주방04 원본</strong><span>전경 조리 장면은 좋지만 후경 공간이 너무 좁게 붙어 있었다.</span></figcaption>
+            </figure>
+            <figure class="portrait">
+              <a href="주방04_투시공간_상태측정_overlay.png"><img src="주방04_투시공간_상태측정_overlay.png" alt="주방04 투시공간 상태측정"></a>
+              <figcaption><strong>공간 측정 오버레이</strong><span>가스레인지, 뒤 싱크대, 창문, 사람 위치를 분리해 통로 부족을 확인했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="step-label">Step B-2</div>
+        <div class="step-content">
+          <h3>공간 확보와 구조 수정</h3>
+          <div class="grid">
+            <figure class="portrait">
+              <a href="주방05.png"><img src="주방05.png" alt="주방05 공간 보정본"></a>
+              <figcaption><strong>주방05</strong><span>후경을 뒤로 물려 통로감을 확보한 후보.</span></figcaption>
+            </figure>
+            <figure class="portrait">
+              <a href="주방09.png"><img src="주방09.png" alt="주방09 냉장고 구조 수정본"></a>
+              <figcaption><strong>주방09</strong><span>싱크대 상판이 냉장고 문을 가리지 않도록 키큰장 구조를 분리했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="phase-c">
+      <h2>C. 팬 4개 인덕션 이미지의 투시 보정</h2>
+      <p class="section-intro">가장 긴 반복이 있었던 단계입니다. 처음에는 배경이 문제라고 보았지만, 사용자의 지적을 거치며 핵심이 “아일랜드 상판 안에 매립된 인덕션 삽입판의 방향과 렌즈감”으로 좁혀졌습니다.</p>
+      <div class="process">
+        <div class="step-label">Step C-1</div>
+        <div class="step-content">
+          <h3>원본과 초기 문제 측정</h3>
+          <div class="grid">
+            <figure>
+              <a href="주방11.png"><img src="주방11.png" alt="주방11 원본"></a>
+              <figcaption><strong>주방11 원본</strong><span>팬 4개 구성은 좋지만, 배경과 전경 인덕션이 지나치게 붙어 보였다.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방11_투시상태측정_overlay.png"><img src="주방11_투시상태측정_overlay.png" alt="주방11 투시 상태 측정"></a>
+              <figcaption><strong>초기 투시 상태 측정</strong><span>인덕션과 후경 조리대가 서로 다른 소실점 체계를 가짐을 확인했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="step-label">Step C-2</div>
+        <div class="step-content">
+          <h3>공간 분리 시도와 실패 판정</h3>
+          <div class="grid">
+            <figure>
+              <a href="주방12.png"><img src="주방12.png" alt="주방12 공간 분리 시안"></a>
+              <figcaption><strong>주방12</strong><span>공간은 생겼지만, 투시 체계가 하나로 묶이지 않았다.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방12_투시재측정_overlay.png"><img src="주방12_투시재측정_overlay.png" alt="주방12 투시 재측정"></a>
+              <figcaption><strong>주방12 재측정</strong><span>인덕션, 배경, 바닥, 냉장고가 서로 다른 기준을 가진다는 점을 확인했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="step-label">Step C-3</div>
+        <div class="step-content">
+          <h3>인덕션 삽입판 문제로 재정의</h3>
+          <div class="grid">
+            <figure>
+              <a href="주방13.png"><img src="주방13.png" alt="주방13 배경 재구성본"></a>
+              <figcaption><strong>주방13</strong><span>배경은 개선됐지만, 인덕션이 아일랜드 안에서 따로 회전한 듯 보였다.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방13_아일랜드_인덕션_투시비교_overlay.png"><img src="주방13_아일랜드_인덕션_투시비교_overlay.png" alt="주방13 아일랜드 인덕션 투시 비교"></a>
+              <figcaption><strong>아일랜드 vs 인덕션 비교</strong><span>아일랜드 상판과 인덕션 삽입판의 방향이 다르다는 핵심 문제를 확인했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="step-label">Step C-4</div>
+        <div class="step-content">
+          <h3>국부 왜곡과 렌즈감 검토</h3>
+          <div class="grid three">
+            <figure>
+              <a href="주방15.png"><img src="주방15.png" alt="주방15 인덕션 투시 강보정"></a>
+              <figcaption><strong>주방15</strong><span>강보정 후보. 변화는 생겼지만 오른쪽 edge와 하단 왼쪽이 남았다.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방15_인덕션투시_재측정_overlay.png"><img src="주방15_인덕션투시_재측정_overlay.png" alt="주방15 투시 재측정"></a>
+              <figcaption><strong>주방15 재측정</strong><span>오른쪽 edge가 여전히 거의 수직에 가까운 문제를 확인했다.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방16_국부왜곡_렌즈감_재검토_overlay.png"><img src="주방16_국부왜곡_렌즈감_재검토_overlay.png" alt="주방16 국부 왜곡 렌즈감 검토"></a>
+              <figcaption><strong>렌즈감 검토</strong><span>35mm 광각식 벌어짐과 국부 왜곡을 보라색/초록색 기준선으로 분리했다.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="process">
+        <div class="step-label">Step C-5</div>
+        <div class="step-content">
+          <h3>50mm 카메라 기준으로 재구성</h3>
+          <div class="final">
+            <a href="주방18.png"><img src="주방18.png" alt="주방18 현재 최종 후보"></a>
+            <div class="final-text">
+              <h3>주방18 현재 최종 후보</h3>
+              <p>카메라/렌즈/심도 기준을 먼저 잡고, 그 위에 아일랜드, 인덕션, 팬 4개를 다시 배치한 후보입니다. 배경은 약하게 밀고 제품을 선명하게 유지해 50mm DSLR 제품컷에 가까운 방향으로 정리했습니다.</p>
+            </div>
+          </div>
+          <div class="grid" style="margin-top:18px;">
+            <figure>
+              <a href="주방18_평가용_투시검수_overlay.png"><img src="주방18_평가용_투시검수_overlay.png" alt="주방18 평가용 투시 검수"></a>
+              <figcaption><strong>주방18 평가용 오버레이</strong><span>최종 후보의 남은 리스크를 확인한 검수 이미지.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="주방17_50mm_카메라투시하네스.md"><img src="주방18.png" alt="50mm 카메라 하네스 결과 참조"></a>
+              <figcaption><strong>50mm 카메라 하네스</strong><span>카메라 기준 → 아일랜드 → 인덕션 → 팬 순서로 재정의한 제작 기준.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="direction">
+      <h2>사용자 지시가 만든 프로세스</h2>
+      <p class="section-intro">이번 작업의 핵심은 사용자의 지시가 점점 더 구체화되면서 제작 기준 자체가 고도화됐다는 점입니다. 단순 수정 요청이 아니라, 실패 판정과 다음 하네스 기준이 함께 제시되었습니다.</p>
+      <div class="score">
+        <div><b>1</b><strong>문제 제기</strong><p>투시도법, 공간 깊이, 원본성 문제를 먼저 발견했다.</p></div>
+        <div><b>2</b><strong>측정 요구</strong><p>수정 전에 선을 긋고 소실점과 평면을 확인하게 했다.</p></div>
+        <div><b>3</b><strong>범위 지정</strong><p>창문만, 배경만, 인덕션만, 오른쪽 절반만처럼 수정 범위를 좁혔다.</p></div>
+        <div><b>4</b><strong>실패 판정</strong><p>변화가 작거나 구조가 틀리면 명확히 다시 측정하게 했다.</p></div>
+        <div><b>5</b><strong>렌즈 기준 도입</strong><p>35mm 광각감에서 50mm DSLR 기준으로 프로세스를 전환했다.</p></div>
+        <div><b>6</b><strong>최종 평가</strong><p>결과물을 다시 점검하고 포트폴리오 히스토리로 기록하게 했다.</p></div>
+      </div>
+      <div class="callout">
+        <p>최종 프로세스는 “예쁜 이미지 만들기”가 아니라 “카메라 기준을 세우고, 그 위에 구조와 제품을 배치하는 이미지 디렉션”으로 정리되었습니다.</p>
+      </div>
+    </section>
+
+    <section id="evaluation">
+      <h2>현재 결과 평가</h2>
+      <p class="section-intro">현재 최종 후보는 `주방18.png`입니다. 상세페이지 후보로는 사용 가능권에 가까워졌지만, 엄밀한 제품 합성 기준으로는 일부 미세 보정 여지가 남아 있습니다.</p>
+      <div class="score">
+        <div><b>4/5</b><strong>카메라/렌즈감</strong><p>광각감이 줄고 50mm 제품컷에 가까워졌다.</p></div>
+        <div><b>4/5</b><strong>아일랜드 안정감</strong><p>오른쪽 기울어짐이 줄고 상판이 안정적으로 보인다.</p></div>
+        <div><b>3.5/5</b><strong>인덕션 매립 투시</strong><p>좋아졌지만 오른쪽 edge는 미세한 리스크가 남는다.</p></div>
+        <div><b>3.5/5</b><strong>팬 접지/타원</strong><p>대체로 자연스럽지만 오른쪽 앞 팬 타원이 조금 다르다.</p></div>
+        <div><b>4.5/5</b><strong>심도/집중도</strong><p>배경이 제품보다 부드럽게 밀려 시선이 안정적이다.</p></div>
+        <div><b>78점</b><strong>종합</strong><p>포트폴리오 기록과 후보 이미지로 의미 있는 수준.</p></div>
+      </div>
+    </section>
+
+    <section id="assets">
+      <h2>주요 산출물</h2>
+      <p class="section-intro">실제 사용 후보와 검수용 오버레이, 하네스 문서를 분리해 저장했습니다.</p>
+      <ul>
+        <li><a href="주방03.png">주방03.png</a>: 주방02 기반 창문/배경 보정본</li>
+        <li><a href="주방05.png">주방05.png</a>: 주방04 기반 공간 보정본</li>
+        <li><a href="주방09.png">주방09.png</a>: 냉장고와 싱크대 구조 간섭 수정본</li>
+        <li><a href="주방18.png">주방18.png</a>: 현재 최종 후보</li>
+        <li><a href="주방11_투시하네스_설정.md">주방11_투시하네스_설정.md</a>: 주방11 투시 하네스</li>
+        <li><a href="주방17_50mm_카메라투시하네스.md">주방17_50mm_카메라투시하네스.md</a>: 50mm 카메라 기준 하네스</li>
+        <li><a href="주방이미지_투시보정_프로세스_회고.md">주방이미지_투시보정_프로세스_회고.md</a>: 상세 회고 문서</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page">
+    접시팬 마케팅 이미지 제작 기록. 생성 이미지의 구조적 오류를 측정하고, 사용자 디렉션을 통해 제품 상세페이지용 후보 이미지로 개선한 과정.
+  </footer>
+</body>
+</html>

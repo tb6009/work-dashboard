@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<base href="/portfolio/kochstar-image-history/">
+<title>콕스타 접시팬 마케팅 이미지 — 작업 히스토리</title>
+<style>
+  :root {
+    --bg: #f5f2ed;
+    --paper: #fffdf9;
+    --ink: #24211d;
+    --muted: #756d62;
+    --line: #ded6ca;
+    --accent: #8a613a;
+    --shadow: 0 12px 32px rgba(43,34,24,.10);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.65;
+  }
+  .page { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 28px; margin-bottom: 28px; }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+  h1 { margin: 0; font-size: clamp(28px, 4.2vw, 44px); line-height: 1.18; }
+  .meta { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 22px; }
+  .meta div { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+  .meta span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 3px; }
+  .meta strong { font-size: 15px; }
+  nav { position: sticky; top: 0; z-index: 5; background: rgba(245,242,237,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); margin: -8px 0 32px; }
+  .nav-inner { width: min(1180px, calc(100% - 32px)); margin: 0 auto; display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; }
+  .nav-inner a { flex: 0 0 auto; text-decoration: none; border: 1px solid var(--line); background: var(--paper); border-radius: 8px; padding: 6px 10px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+  section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  h2 { margin: 0 0 14px; font-size: 26px; }
+  h3 { margin: 26px 0 10px; font-size: 18px; }
+  h4 { margin: 18px 0 8px; font-size: 15px; color: var(--accent); }
+  p { font-size: 14.5px; color: var(--ink); margin: 6px 0 10px; }
+  ul { padding-left: 18px; margin: 6px 0 14px; }
+  li { font-size: 14px; margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13.5px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { background: #efe9dc; font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  code { background: #efe9dc; padding: 1px 5px; border-radius: 3px; font-size: 12.5px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin: 12px 0 4px; }
+  .grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  figure { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 6px 16px rgba(43,34,24,.05); }
+  figure img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #e7ded2; }
+  figcaption { padding: 9px 12px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+  .hero { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); margin: 18px 0; }
+  .hero img { width: 100%; display: block; }
+  .hero-caption { padding: 12px 16px; color: var(--muted); font-size: 13px; }
+  .pill { display: inline-block; border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 3px 10px; font-size: 11.5px; color: var(--muted); margin-right: 4px; }
+  @media (max-width: 860px) {
+    .meta, .grid, .grid.three { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="nav-inner">
+  <a href="#overview">개요</a>
+  <a href="#structure">폴더 구조</a>
+  <a href="#phase0">Phase 0 기반</a>
+  <a href="#phase1">시안 v1~v3</a>
+  <a href="#phase2">확장·최종</a>
+  <a href="#tracks">병행 트랙</a>
+  <a href="#kitchen">주방 트랙</a>
+  <a href="#timeline">타임라인</a>
+  <a href="#status">현재 상태</a>
+</div></nav>
+
+<div class="page">
+
+<header>
+  <div class="eyebrow">Kochstar Pan Marketing · Image Production History</div>
+  <h1>콕스타 접시팬 마케팅 이미지<br><span style="color:var(--muted);font-weight:400">작업 히스토리 · 2026-06-26</span></h1>
+  <div class="meta">
+    <div><span>작업 위치</span><strong>08_GPT/</strong></div>
+    <div><span>전체 이미지</span><strong>443 장</strong></div>
+    <div><span>가이드 문서</span><strong>00~16 (16편)</strong></div>
+    <div><span>시안 단계</span><strong>v1·v2·v3·확장·최종</strong></div>
+  </div>
+</header>
+
+<section id="overview">
+  <h2>0. 한눈에 보기</h2>
+  <p>콕스타 스마트스토어 259장 원본 감사 → 9개 스타일 코드(S01~S08+G01) 정립 → 시안 v1→v2→v3→확장→최종 5단계 진화 → 별도 트랙으로 주방 배경 이미지 18단계 투시 보정 완료.</p>
+  <div class="hero">
+    <img src="원본/주방 이미지/주방18.png" alt="주방18 최종 후보">
+    <div class="hero-caption">대표 이미지 — 주방 투시 보정 최종 후보 <code>주방18.png</code> (50mm 렌즈감)</div>
+  </div>
+  <table>
+    <tr><th>항목</th><th class="num">수치</th></tr>
+    <tr><td>전체 이미지 (PNG/JPG)</td><td class="num">443 장</td></tr>
+    <tr><td>원본 레퍼런스 풀</td><td class="num">183 장 (9개 서브폴더)</td></tr>
+    <tr><td>학습데이터셋</td><td class="num">124 장 (dark/light/food + product identity)</td></tr>
+    <tr><td>경쟁상품 검색 캡처</td><td class="num">41 장</td></tr>
+    <tr><td>image2_production 5유형</td><td class="num">40 장 (S02·S03·S06·S07·G01 · v1~v8)</td></tr>
+    <tr><td>시안 단계 산출물</td><td class="num">24 장 (v1·v2·v3·확장·최종)</td></tr>
+    <tr><td>주방 이미지 보정 시리즈</td><td class="num">36 장 (원본 18 + 수정시안 18)</td></tr>
+    <tr><td>참고자료 contact sheet</td><td class="num">11 장</td></tr>
+    <tr><td>skills 패키지 (승인·레퍼런스)</td><td class="num">17 장</td></tr>
+    <tr><td>가이드·하네스 문서 (00~16)</td><td class="num">16 편</td></tr>
+  </table>
+</section>
+
+<section id="structure">
+  <h2>0-1. 폴더 구조 + 이미지 분포 (443장)</h2>
+  <p>스캔 명령: <code>find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) | wc -l</code></p>
+
+  <pre style="background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px 20px;overflow-x:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7;color:var(--ink)">
+08_GPT/ ··································· <strong>443 장</strong>
+├── 원본/ ································· <strong>183 장</strong>  (레퍼런스 데이터 풀)
+│   ├── 주방 이미지/ ························  48
+│   ├── 00.독일산냄비 백화점입점 사진/ ··········  34
+│   ├── 엠앤에스코리아_AI연출컷_원본/ ··········  28
+│   ├── 원하는스타일_블랙/ ····················  23
+│   ├── 베스트상품/ ··························  19
+│   ├── 원하는 스타일/ ·······················  14
+│   ├── 음식사진/ ····························   8
+│   ├── 독일이미지/ ···························   7
+│   └── 3중구조/ ·····························   2
+│
+├── 학습데이터_접시팬_v1/ ················· <strong>124 장</strong>  (파인튜닝/평가 데이터셋)
+│   ├── 01_style_references/ ················  43  (dark 23 · light 14 · food_cube_steak 6)
+│   ├── 07_image_harness/ ···················  33
+│   ├── 04_splits/ ··························  20  (product/style 훈련·검증)
+│   ├── 02_product_identity/ ················  11
+│   ├── 06_review_excluded/ ·················  10
+│   └── 00_preview/ ··························   5
+│
+├── 09_경쟁상품_리서치/ ·················· <strong> 41 장</strong>  (검색 캡처 — 외부 사이트)
+├── image2_production/ ··················· <strong> 40 장</strong>  (5유형 v1~v8)
+│   ├── S02_material/ ·······················   8
+│   ├── S06_action/ ·························   8  (최다 라운드)
+│   ├── S07_premium/ ························   7
+│   ├── S03_comparison/ ······················   7
+│   ├── G01_infographic/ ····················   5
+│   └── references/ ·························   5
+│
+├── skills/ ······························· <strong> 17 장</strong>  (kochstar-cookware-image-director 패키지)
+├── 16_참고자료_장면최적화/ ··············· <strong> 11 장</strong>  (외부 PDF contact sheets)
+├── 15_리서치최적화_최종시안/ ············· <strong>  7 장</strong>  (현재 확정 안)
+├── 11_신규시안_v1/ ······················· <strong>  6 장</strong>  (카드형 — 폐기)
+├── 14_확장시안_테스트/ ··················· <strong>  5 장</strong>
+├── 13_신규시안_v3/ ······················· <strong>  4 장</strong>
+├── 12_신규시안_v2/ ······················· <strong>  4 장</strong>  (광고 아트 전환)
+└── 10_제품정보_극대화_이미지구성/ ········· <strong>  1 장</strong>  (와이어프레임)
+  </pre>
+
+  <h3>분포 요약</h3>
+  <table>
+    <tr><th>그룹</th><th class="num">장수</th><th class="num">%</th><th>성격</th></tr>
+    <tr><td>레퍼런스 풀 (원본)</td><td class="num">183</td><td class="num">41.3%</td><td>실물·기존 AI 컷·배경 주방</td></tr>
+    <tr><td>학습 데이터셋</td><td class="num">124</td><td class="num">28.0%</td><td>style/product 레퍼런스 + 훈련/검증 split</td></tr>
+    <tr><td>리서치 자료 (외부)</td><td class="num">52</td><td class="num">11.7%</td><td>09 경쟁상품 41 + 16 참고자료 11</td></tr>
+    <tr><td>생산 산출물 (image2)</td><td class="num">40</td><td class="num">9.0%</td><td>S02·S03·S06·S07·G01 5유형</td></tr>
+    <tr><td>시안 5단계 (v1·v2·v3·확장·최종)</td><td class="num">26</td><td class="num">5.9%</td><td>광고 아트 진화 라운드</td></tr>
+    <tr><td>스킬 패키지 (skills)</td><td class="num">17</td><td class="num">3.8%</td><td>승인 예시 + 제품 레퍼런스</td></tr>
+    <tr><td>기획 도구 (와이어프레임)</td><td class="num">1</td><td class="num">0.2%</td><td>P01~P08 흐름</td></tr>
+    <tr><th>합계</th><th class="num">443</th><th class="num">100%</th><th></th></tr>
+  </table>
+</section>
+
+<section id="phase0">
+  <h2>1. Phase 0 — 기반 확정</h2>
+
+  <h3>1-1. 가이드·하네스·스타일 체계 (00~08)</h3>
+  <table>
+    <tr><th>문서</th><th>핵심</th></tr>
+    <tr><td><code>00_시작하기</code></td><td>문서 읽는 순서 + 현재 상태(원본 라이브러리·가이드 v0.1·하네스 완성)</td></tr>
+    <tr><td><code>01_원본이미지_데이터감사</code></td><td>콕스타 스마트스토어 259장(JPG 233·PNG 24) 분석. A등급 10·B등급 정의. <strong>레퍼런스 기반 생성</strong>이 파인튜닝보다 적합</td></tr>
+    <tr><td><code>02_콕스타_프로덕트이미지_가이드_v0.1</code></td><td>브랜드 철학 + 색상 #F5F2EC · 좌측 자연광 · 50~70mm · 제품 65~75% · 필수 6세트(마스터·구성·소재·조리·서빙·캠페인)</td></tr>
+    <tr><td><code>03_이미지제작_하네스_가이드</code></td><td>상태 머신(draft→blocked→ready→generated→reviewed→approved/rejected) + 레퍼런스 역할 분리(identity/style/support)</td></tr>
+    <tr><td><code>04_세부작업_로드맵</code></td><td>4 Phase 흐름. P1 제품 동일성 · P2 사용 장면 · P3 채널 규격 · P4 고도화</td></tr>
+    <tr><td><code>05_전형적_이미지스타일_유형</code></td><td>9개 스타일 코드 정립 (S01~S08 + G01). 필수(S01·S02·S05·S06)·선택(S03·S04·S07·S08) 구분</td></tr>
+    <tr><td><code>06_유형별_실제이미지_카탈로그</code></td><td>콕스타 원본에서 9개 유형 구체 사례 추출</td></tr>
+    <tr><td><code>07_유형별_배경_컨텍스트_하네스</code></td><td>각 유형의 배경·소품·인물·음식 구성 지침</td></tr>
+    <tr><td><code>08_세트상품_5유형_장면구성_프롬프트</code></td><td>S02·S03·S06·S07·G01 5종 마스터 프롬프트 + 세트 동일성 불변조건</td></tr>
+  </table>
+
+  <h3>1-2. 원본 폴더 (181장)</h3>
+  <table>
+    <tr><th>서브폴더</th><th class="num">장수</th><th>역할</th></tr>
+    <tr><td>백화점입점사진</td><td class="num">34</td><td>실물 제품 입점 사진 (가장 신뢰도 높은 identity)</td></tr>
+    <tr><td>엠앤에스코리아_AI연출컷_원본</td><td class="num">28</td><td>기존 AI 생성본 (재사용·재해석)</td></tr>
+    <tr><td>원하는스타일_블랙</td><td class="num">23</td><td>다크 톤 스타일 레퍼런스</td></tr>
+    <tr><td>베스트상품</td><td class="num">19</td><td>베스트셀러 상품 컷</td></tr>
+    <tr><td>원하는 스타일</td><td class="num">14</td><td>라이트 톤 스타일 레퍼런스</td></tr>
+    <tr><td>음식사진</td><td class="num">8</td><td>음식 스타일링</td></tr>
+    <tr><td>독일이미지</td><td class="num">7</td><td>브랜드 정체성(독일계)</td></tr>
+    <tr><td>3중구조</td><td class="num">2</td><td>소재 단면 다이어그램</td></tr>
+    <tr><td>주방 이미지</td><td class="num">48</td><td>배경 주방 레퍼런스 (별도 트랙 — 6장 참조)</td></tr>
+    <tr><th>합계</th><th class="num">183</th><th></th></tr>
+  </table>
+  <figure>
+    <img src="원본/베스트상품/01_콕스타 리안 인덕션 용 세라믹 후라이팬 20cm 계란말이팬.jpg" alt="콕스타 베스트상품 01">
+    <figcaption>원본 베스트상품 샘플 — 콕스타 리안 인덕션 세라믹 후라이팬 20cm</figcaption>
+  </figure>
+</section>
+
+<section id="phase1">
+  <h2>2. Phase 1 — 시안 v1 → v2 → v3</h2>
+
+  <h3>2-1. <code>11_신규시안_v1</code> (5장) — 카드형 정보 레이아웃 실험</h3>
+  <p>첫 시안 라운드. 정보를 카드 단위로 분할한 레이아웃 시도. 검수 결과 카드형이 제품 임팩트를 약화시킴을 확인 → 폐기.</p>
+  <div class="grid three">
+    <figure><img src="11_신규시안_v1/outputs/P01_패키지_히어로.jpg" alt=""><figcaption>P01 패키지 히어로</figcaption></figure>
+    <figure><img src="11_신규시안_v1/outputs/P02_전체구성_전개.jpg" alt=""><figcaption>P02 전체구성 전개</figcaption></figure>
+    <figure><img src="11_신규시안_v1/outputs/P04_중첩수납_구조.jpg" alt=""><figcaption>P04 중첩수납 구조</figcaption></figure>
+  </div>
+
+  <h3>2-2. <code>12_신규시안_v2</code> (4장) — 광고 아트디렉션 전환</h3>
+  <p>프리미엄 히어로 · 깊이 에디토리얼 · 중첩 디테일 3축으로 재설계. 제품 중심 강화 + 정보는 별도 그래픽 레이어로 분리.</p>
+  <div class="grid three">
+    <figure><img src="12_신규시안_v2/outputs/V2_01_프리미엄_히어로.jpg" alt=""><figcaption>V2_01 프리미엄 히어로</figcaption></figure>
+    <figure><img src="12_신규시안_v2/outputs/V2_02_깊이_에디토리얼.jpg" alt=""><figcaption>V2_02 깊이 에디토리얼</figcaption></figure>
+    <figure><img src="12_신규시안_v2/outputs/V2_03_중첩_디테일.jpg" alt=""><figcaption>V2_03 중첩 디테일</figcaption></figure>
+  </div>
+
+  <h3>2-3. <code>13_신규시안_v3</code> (4장) — v2 기반 추가 고도화</h3>
+  <p>v2 광고 아트 방향 유지, 세부 디테일·색감·조명 미세 조정.</p>
+  <div class="grid three">
+    <figure><img src="13_신규시안_v3/outputs/V3_01_세트_히어로.jpg" alt=""><figcaption>V3_01 세트 히어로</figcaption></figure>
+    <figure><img src="13_신규시안_v3/outputs/V3_02_깊이비교.jpg" alt=""><figcaption>V3_02 깊이비교</figcaption></figure>
+    <figure><img src="13_신규시안_v3/outputs/V3_03_중첩구조.jpg" alt=""><figcaption>V3_03 중첩구조</figcaption></figure>
+  </div>
+</section>
+
+<section id="phase2">
+  <h2>3. Phase 2 — 확장·최적화</h2>
+
+  <h3>3-1. <code>14_확장시안_테스트</code> (5장)</h3>
+  <p>실험적 변형 라운드. v2/v3 방향을 더 멀리 밀어붙인 안.</p>
+  <div class="grid three">
+    <figure><img src="14_확장시안_테스트/outputs/T05_소재디테일.jpg" alt=""><figcaption>T05 소재디테일</figcaption></figure>
+    <figure><img src="14_확장시안_테스트/outputs/T06_조리행동.jpg" alt=""><figcaption>T06 조리행동</figcaption></figure>
+    <figure><img src="14_확장시안_테스트/outputs/T08_검증사양_템플릿.jpg" alt=""><figcaption>T08 검증사양 템플릿</figcaption></figure>
+  </div>
+
+  <h3>3-2. <code>15_리서치최적화_최종시안</code> (6장) — 현재 확정 안</h3>
+  <p>경쟁사 분석 결론을 반영해 제품 동일성 강화 + 배경 별도 생성 워크플로 정착.</p>
+  <div class="grid three">
+    <figure><img src="15_리서치최적화_최종시안/outputs/F01_최적화_히어로.jpg" alt=""><figcaption>F01 최적화 히어로</figcaption></figure>
+    <figure><img src="15_리서치최적화_최종시안/outputs/F02_최적화_깊이비교.jpg" alt=""><figcaption>F02 최적화 깊이비교</figcaption></figure>
+    <figure><img src="15_리서치최적화_최종시안/outputs/F03_최적화_중첩구조.jpg" alt=""><figcaption>F03 최적화 중첩구조</figcaption></figure>
+    <figure><img src="15_리서치최적화_최종시안/outputs/F04_최적화_소재디테일.jpg" alt=""><figcaption>F04 최적화 소재디테일</figcaption></figure>
+    <figure><img src="15_리서치최적화_최종시안/outputs/F05_최적화_조리행동.jpg" alt=""><figcaption>F05 최적화 조리행동</figcaption></figure>
+  </div>
+</section>
+
+<section id="tracks">
+  <h2>4. 병행 트랙 — 리서치·하네스·참고자료</h2>
+
+  <h3>4-1. <code>09_경쟁상품_리서치</code> (41장 검색 캡처)</h3>
+  <p>Top 10 분석: Tramontina · T-fal · Meyer · Magma · IKEA · Joseph Joseph · STAUB · By the Table · 360 Cookware · KINGHoff.</p>
+  <p><strong>결론</strong>: 세트 제품 필수 6유형 — 전개컷 · 크기 비교(탑뷰) · 수납 적층 · 소재 매크로 · 프리미엄 표현 · 사용 장면. 콕스타 가장 가까운 레퍼런스 = <strong>360 Cookware</strong>(짧은 양수 손잡이, 중첩형) + <strong>STAUB</strong>(적층 세트).</p>
+  <p style="color:var(--muted);font-size:13px"><em>※ 검색 캡처 이미지는 원본 사이트 권리상 본 히스토리에 비공개. 폴더에서 직접 열람.</em></p>
+
+  <h3>4-2. <code>10_제품정보_극대화_이미지구성</code></h3>
+  <p><strong>가설</strong>: 한 장에 한 가지 구매 질문 해결. <strong>실험</strong>: P01~P08 8장 흐름 (무엇을 사는가→들어있는가→크기→수납→소재→조리→수납맥락→사양). 원칙 A-E + 정보 효율 검수표(80점 이상 채택). <strong>결론</strong>: P02(전개) · P03(비교) 정확도가 이후 형상 일관성 결정.</p>
+  <figure>
+    <img src="10_제품정보_극대화_이미지구성/상세페이지_8장_와이어프레임.jpg" alt="">
+    <figcaption>P01~P08 상세페이지 8장 흐름 와이어프레임</figcaption>
+  </figure>
+
+  <h3>4-3. <code>16_참고자료_장면최적화</code> (11장 contact sheet)</h3>
+  <p>외부 PDF 10편 + 이미지 17장 분석을 재사용 가능 형식으로 변환. 5유형 위계: <strong>제품 동일성 &gt; 구매 질문 &gt; 물리적 개연성 &gt; 정보 가독성 &gt; 감정 스타일</strong>.</p>
+  <p style="color:var(--muted);font-size:13px"><em>※ 외부 참고 자료의 contact sheet는 원저작권상 본 히스토리에 비공개. 폴더에서 직접 열람.</em></p>
+
+  <h3>4-4. <code>harness/</code></h3>
+  <p>config · assets · jobs · prompts · reviews · runs · scripts/harness.py. <code>PD01_master_product_concept.json</code> 정의됨. <strong>실물 제품 레퍼런스 부재 → <code>concept_only: true</code>, <code>status: blocked</code> 유지</strong>.</p>
+
+  <h3>4-5. <code>image2_production/</code> — 5유형(S02·S03·S06·S07·G01) 40장</h3>
+  <p>원본 5장 기준으로 5유형 제작. 후편집 규칙: 생성 이미지에 한글/로고/인증 금지. v1~v8 재생성 기록 (S06은 v8까지 가장 많은 라운드).</p>
+
+  <h4>S02 소재 (material) — v4 → v5</h4>
+  <div class="grid">
+    <figure><img src="image2_production/S02_material/v4/S02_v4.jpg" alt=""><figcaption>S02 소재 v4</figcaption></figure>
+    <figure><img src="image2_production/S02_material/v5/S02_v5.jpg" alt=""><figcaption>S02 소재 v5 (최신)</figcaption></figure>
+  </div>
+
+  <h4>S03 비교 (comparison) — v5</h4>
+  <figure><img src="image2_production/S03_comparison/v5/S03_v5.jpg" alt=""><figcaption>S03 비교 v5 (최신)</figcaption></figure>
+
+  <h4>S06 조리 (action) — v1 → v5 → v8 (가장 많은 라운드)</h4>
+  <div class="grid three">
+    <figure><img src="image2_production/S06_action/v1/S06_v1.png" alt=""><figcaption>S06 v1</figcaption></figure>
+    <figure><img src="image2_production/S06_action/v5/S06_v5.png" alt=""><figcaption>S06 v5</figcaption></figure>
+    <figure><img src="image2_production/S06_action/v8/S06_v8.png" alt=""><figcaption>S06 v8 (최신)</figcaption></figure>
+  </div>
+
+  <h4>S07 프리미엄 (premium) — v5</h4>
+  <figure><img src="image2_production/S07_premium/v5/S07_v5.jpg" alt=""><figcaption>S07 프리미엄 v5 (최신)</figcaption></figure>
+
+  <h4>G01 인포그래픽 — v5</h4>
+  <figure><img src="image2_production/G01_infographic/v5/G01_v5.jpg" alt=""><figcaption>G01 인포그래픽 v5 (최신)</figcaption></figure>
+
+  <h4>레퍼런스 (references) — 원본 5장</h4>
+  <div class="grid three">
+    <figure><img src="image2_production/references/1.jpeg" alt=""><figcaption>ref 1</figcaption></figure>
+    <figure><img src="image2_production/references/2.jpeg" alt=""><figcaption>ref 2</figcaption></figure>
+    <figure><img src="image2_production/references/3.jpeg" alt=""><figcaption>ref 3</figcaption></figure>
+  </div>
+
+  <h3>4-6. <code>학습데이터_접시팬_v1/</code> — 124장 데이터셋</h3>
+  <p>00_preview(5) · 01_style_references(dark 23·light 14·food_cube_steak 6) · 02_product_identity(11) · 04_splits(훈련/검증) · 05_prompts(2편) · 06_review_excluded(20장 제외 사유) · 07_image_harness. 향후 파인튜닝/평가 데이터셋 후보.</p>
+
+  <h4>데이터셋 프리뷰 (00_preview)</h4>
+  <div class="grid three">
+    <figure><img src="학습데이터_접시팬_v1/00_preview/dataset_product_train.jpg" alt=""><figcaption>product_train (제품 학습셋)</figcaption></figure>
+    <figure><img src="학습데이터_접시팬_v1/00_preview/dataset_style_train_light.jpg" alt=""><figcaption>style_train_light (라이트 톤)</figcaption></figure>
+    <figure><img src="학습데이터_접시팬_v1/00_preview/dataset_style_train_dark.jpg" alt=""><figcaption>style_train_dark (다크 톤)</figcaption></figure>
+  </div>
+
+  <h4>제외 사유 샘플 (06_review_excluded)</h4>
+  <figure><img src="학습데이터_접시팬_v1/06_review_excluded/dark_022_text_heavy.jpg" alt=""><figcaption>dark_022 — 텍스트 과다로 제외 (20건 중 1)</figcaption></figure>
+
+  <h3>4-7. <code>skills/kochstar-cookware-image-director/</code> — 승인 예시 + 제품 레퍼런스</h3>
+  <p>스킬 패키징 (ZIP 50MB) — 승인 예시 3장 + 제품 레퍼런스 7장 포함.</p>
+  <div class="grid three">
+    <figure><img src="skills/kochstar-cookware-image-director/assets/approved-examples/light-identity-hero.png" alt=""><figcaption>승인 예시 — light identity hero</figcaption></figure>
+    <figure><img src="skills/kochstar-cookware-image-director/assets/approved-examples/dark-identity-hero.png" alt=""><figcaption>승인 예시 — dark identity hero</figcaption></figure>
+    <figure><img src="skills/kochstar-cookware-image-director/assets/approved-examples/wok-stir-fry.png" alt=""><figcaption>승인 예시 — wok 볶음 액션</figcaption></figure>
+  </div>
+</section>
+
+<section id="kitchen">
+  <h2>5. 별도 트랙 — 주방 배경 이미지 투시 보정</h2>
+  <p>2026-06-24 ~ 06-26. <code>원본/주방 이미지/</code>에서 진행된 18단계 보정 시리즈.</p>
+
+  <h3>5-1. 진행 흐름</h3>
+  <table>
+    <tr><th>단계</th><th>핵심</th></tr>
+    <tr><td>주방02 → 03</td><td>창문 보정 (창틀·조리대 휨 감소)</td></tr>
+    <tr><td>주방04 → 05 → 09</td><td>가스레인지 공간 보정 (후경 후퇴 + 빌트인 냉장고 + 키큰장 구조화)</td></tr>
+    <tr><td>주방11 → 12 → 13</td><td>인덕션 배경 재구성 (인덕션·아일랜드·배경 평면 분리 하네싱)</td></tr>
+    <tr><td>주방14 → 15 → 16</td><td>인덕션 국부 왜곡 보정 (오른쪽 edge·하단 왼쪽 회전)</td></tr>
+    <tr><td>주방17 → 18</td><td>50mm 렌즈 기준 재구성 (35mm 광각감 → 50mm 표준)</td></tr>
+  </table>
+
+  <h4>A. 창문/싱크대 — 주방02 → 03</h4>
+  <div class="grid three">
+    <figure><img src="원본/주방 이미지/주방02.png" alt=""><figcaption>주방02 원본</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방02_투시라인_소실점분석_clean.png" alt=""><figcaption>주방02 투시라인 분석</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방03.png" alt=""><figcaption>주방03 창문 보정본</figcaption></figure>
+  </div>
+
+  <h4>B. 가스레인지 공간 — 주방04 → 05 → 09</h4>
+  <div class="grid">
+    <figure><img src="원본/주방 이미지/주방04.png" alt=""><figcaption>주방04 원본</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방04_투시공간_상태측정_overlay.png" alt=""><figcaption>주방04 공간 측정 오버레이</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방05.png" alt=""><figcaption>주방05 공간 보정본</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방09.png" alt=""><figcaption>주방09 냉장고 구조 수정본</figcaption></figure>
+  </div>
+
+  <h4>C. 인덕션 4팬 — 주방11 → 12 → 13 → 15 → 16 → 18</h4>
+  <div class="grid">
+    <figure><img src="원본/주방 이미지/주방11.png" alt=""><figcaption>주방11 원본</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방11_투시상태측정_overlay.png" alt=""><figcaption>주방11 투시 상태 측정</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방12.png" alt=""><figcaption>주방12 공간 분리 시안</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방12_투시재측정_overlay.png" alt=""><figcaption>주방12 투시 재측정 (소실점 불일치 확인)</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방13.png" alt=""><figcaption>주방13 배경 재구성 (하네스 적용)</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방13_아일랜드_인덕션_투시비교_overlay.png" alt=""><figcaption>주방13 아일랜드·인덕션 투시 비교</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방15.png" alt=""><figcaption>주방15 인덕션 투시 강보정</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방15_인덕션투시_재측정_overlay.png" alt=""><figcaption>주방15 인덕션 투시 재측정</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방16_국부왜곡_렌즈감_재검토_overlay.png" alt=""><figcaption>주방16 국부왜곡·렌즈감 재검토</figcaption></figure>
+    <figure><img src="원본/주방 이미지/주방18.png" alt=""><figcaption>주방18 최종 후보 (50mm 렌즈)</figcaption></figure>
+    <figure><img src="원본/주방 이미지/수정시안/주방18_평가용_투시검수_overlay.png" alt=""><figcaption>주방18 평가용 투시 검수</figcaption></figure>
+  </div>
+
+  <h3>5-2. 핵심 의사결정 5건</h3>
+  <ul>
+    <li><strong>세로 구도 + 팬/음식 원본 보존 + 투시 하네스 적용</strong> — 사용자 디렉션 3원칙 확정</li>
+    <li><strong>분석용/사용용 산출물 분리</strong> — 라인 오버레이는 검수용, 라인 없는 후보본은 사용용</li>
+    <li><strong>배경 문제 → 인덕션 삽입판 자체 문제로 재정의</strong> — 아일랜드 상판 안의 인덕션 회전값이 핵심</li>
+    <li><strong>5단계 작업 순서 정립</strong> — 카메라/렌즈/심도 → 아일랜드 평면 → 인덕션 매립 → 팬 배치 → 배경 정렬</li>
+    <li><strong>35mm 광각감 → 50mm DSLR Canon 기준</strong> — 코너 벌어짐 해소 + 제품 압축감 확보</li>
+  </ul>
+
+  <h3>5-3. 산출물</h3>
+  <ul>
+    <li>회고: <code>원본/주방 이미지/수정시안/주방이미지_투시보정_프로세스_회고.md</code></li>
+    <li>포트폴리오 HTML: <code>원본/주방 이미지/수정시안/주방이미지_투시보정_포트폴리오.html</code></li>
+    <li>외부 공개: <a href="https://work-dashboard-app.vercel.app/portfolio/kitchen-perspective/" target="_blank" rel="noopener">work-dashboard-app.vercel.app/portfolio/kitchen-perspective/</a></li>
+    <li>하네스 메모: <code>주방11_투시하네스_설정.md</code> · <code>주방17_50mm_카메라투시하네스.md</code> · <code>투시하네스_검수메모.md</code></li>
+  </ul>
+</section>
+
+<section id="timeline">
+  <h2>6. 타임라인</h2>
+  <table>
+    <tr><th>시점</th><th>사건</th></tr>
+    <tr><td>2020-12</td><td>가장 오래된 원본 파일 (독일 백화점 사진)</td></tr>
+    <tr><td>~2026-06-02</td><td>원본 라이브러리 정리 (엠앤에스 AI연출컷 등)</td></tr>
+    <tr><td>2026-06-15</td><td>session_logs 첫 기록 — 웍팬 소고기·채소 볶음 생성, 제품 규격 확인(24/26/28cm 프라이팬, 26cm 궁중팬), 스킬 ZIP 50MB 패키징</td></tr>
+    <tr><td>2026-06-15</td><td>시안 라운드들 mtime 집중 (11~15)</td></tr>
+    <tr><td>2026-06-24</td><td>주방 이미지 투시 보정 시리즈 시작 (주방04 첫 보정)</td></tr>
+    <tr><td>2026-06-25</td><td>회고 작성 — 18단계 보정 흐름 + 5단계 작업 순서 정립</td></tr>
+    <tr><td>2026-06-26</td><td>포트폴리오 HTML 작성 + 063 workDashboard public 공개</td></tr>
+  </table>
+</section>
+
+<section id="status">
+  <h2>7. 현재 상태</h2>
+
+  <h3>완료</h3>
+  <ul>
+    <li>Phase 0 — 원본 감사 · 가이드 v0.1 · 하네스 · 스타일 코드 9종 · 5유형 프롬프트</li>
+    <li>시안 v1 → v2 → v3 → 확장 → 최종 5단계</li>
+    <li>경쟁사 분석 + 정보 극대화 가설 + 참고자료 형식화</li>
+    <li>주방 배경 이미지 18단계 투시 보정 + 회고 + 포트폴리오 공개</li>
+  </ul>
+
+  <h3>진행 중 / 차단됨</h3>
+  <ul>
+    <li><code>harness/PD01</code> — 실물 제품 레퍼런스 부재로 <code>status: blocked</code> (concept only)</li>
+    <li><code>image2_production</code> — 5유형 v4·v5 재생성 진행 중</li>
+  </ul>
+
+  <h3>다음 작업</h3>
+  <ul>
+    <li><strong>실물 제품 누끼 확보</strong> — harness PD01 unblock → Phase 1 본격 진입</li>
+    <li><strong>주방18 → 최종 누끼 합성본</strong> — 인덕션 오른쪽 edge 미세 보정 + 실제 제품 누끼 적용</li>
+    <li><strong>15_리서치최적화_최종시안 → 채널 규격 분기</strong> — KV(키비주얼) / AD(광고) / RV(리뷰) 별 컷 생성</li>
+    <li><strong>session_logs 정기화</strong> — 라운드별 1편씩 작성 (현재 1편만 존재)</li>
+  </ul>
+</section>
+
+<footer style="padding:28px 0 0;color:var(--muted);font-size:13px;text-align:center">
+  콕스타 접시팬 마케팅 이미지 작업 히스토리 · 2026-06-26 · 같은 폴더의 <code>HISTORY.md</code> · 외부 포트폴리오 <code>/portfolio/kitchen-perspective/</code>
+</footer>
+
+</div>
+</body>
+</html>

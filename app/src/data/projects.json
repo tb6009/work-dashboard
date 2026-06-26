@@ -6,11 +6,11 @@
 
   { "id": "02",  "categoryId": "02",        "name": "Data_Kaywon",       "type": "data",       "define": "계원예대 신입생 중도탈락 분석 (ML 예측 + 군집분석) — 02_Data_Kaywon/", "status": "active", "aliases": ["22"] },
 
-  { "id": "03",  "categoryId": "03",        "name": "디자인실무프로젝트(umbrella)", "type": "design", "define": "학교 프로젝트 묶음 — Data_Jstrata · Data_Once · Data_Study · MNServe · 관리비책 · 새론솔루션 · 기초디자인 · 코첼라", "status": "active", "designHistoryUrl": "/portfolio/kitchen-perspective/" },
+  { "id": "03",  "categoryId": "03",        "name": "디자인실무프로젝트(umbrella)", "type": "design", "define": "학교 프로젝트 묶음 — Data_Jstrata · Data_Once · Data_Study · MNServe · 관리비책 · 새론솔루션 · 기초디자인 · 코첼라", "status": "active", "designHistoryUrl": "/portfolio/kochstar-image-history/" },
   { "id": "031", "categoryId": "03",        "name": "Data_Jstrata",      "type": "design",     "define": "J스트라타 레스베라트롤 브랜드 디자인 — 03_school_project/Data_Jstrata/", "status": "active", "createdAt": "2026-05-17" },
   { "id": "032", "categoryId": "03",        "name": "Data_Once",         "type": "data",       "define": "Oncefilm 마케팅 리서치·페르소나 — 03_school_project/Data_Once/", "status": "active", "createdAt": "2026-05-17" },
   { "id": "033", "categoryId": "03",        "name": "Data_Study",        "type": "education",  "define": "데이터 시각화·도표차트 강의 — 03_school_project/Data_Study/", "status": "active", "aliases": ["12"] },
-  { "id": "034", "categoryId": "03",        "name": "MNServe",           "type": "data",       "define": "M&Serve 산학협력 AI 페르소나 리서치 + 접시팬 마케팅 이미지 — 03_school_project/MNServe/ · 03_school_project/03_산학프로젝트/접시팬_마케팅/", "status": "active", "aliases": ["08"], "designHistoryUrl": "/portfolio/kitchen-perspective/" },
+  { "id": "034", "categoryId": "03",        "name": "MNServe",           "type": "data",       "define": "M&Serve 산학협력 AI 페르소나 리서치 + 접시팬 마케팅 이미지 — 03_school_project/MNServe/ · 03_school_project/03_산학프로젝트/접시팬_마케팅/", "status": "active", "aliases": ["08"], "designHistoryUrl": "/portfolio/kochstar-image-history/" },
   { "id": "035", "categoryId": "03",        "name": "관리비책",           "type": "design",     "define": "관리비책 컨설팅 (7인) — 03_school_project/관리비책/", "status": "active", "createdAt": "2026-05-14" },
   { "id": "036", "categoryId": "03",        "name": "새론솔루션",         "type": "design",     "define": "광주 남구 스마트 하수악취 대시보드 UX — 03_school_project/새론솔루션/", "status": "active", "createdAt": "2026-05-14" },
   { "id": "037", "categoryId": "03",        "name": "기초디자인",         "type": "design",     "define": "happy design language 분석 — 03_school_project/기초디자인/", "status": "new",    "createdAt": "2026-05-22" },

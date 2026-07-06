@@ -1,19 +1,41 @@
 {
   "id": "055",
   "currentSituation": {
-    "summary": "PPS 등 방법론 자료 — 05_phD_Research/연구방법론/",
-    "phase": "활성 사용 중",
-    "recentLogs": [],
+    "summary": "박사 방법론 자료 확장 중. W27(7/4): Mom 2009 개인 양손잡이 14문항(탐색7+활용7) 원문 직접 추출(Quartz) + 디자이너 번안 적합도 문항별 판정. 탐색↔접근확장 JC 15문항 원문 대조로 겹침 노드 규명(Mom E1/E3/E6 ↔ Tims S3/C18/C19). 각 변수의 '이론 친정' 분리 원칙 확립(양손잡이·AI자원=RBV, JC=OB).",
+    "phase": "Active — 문항 수준 변별타당도 규명 · 이론 배치 재정렬",
+    "recentLogs": [
+      {
+        "date": "2026-07-04",
+        "title": "Mom 2009 14문항 원문 추출 + 탐색↔접근확장JC 변별 대조 + 이론 친정 지도",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260704_log.md",
+        "excerpt": "포인트 1: 각 변수의 '이론 친정'이 다르다(양손잡이=RBV, JC=OB) — 리소스 통합 시도의 오귀인 해소. 포인트 2: 양손잡이 탐색 ↔ JC 확장 겹침 원문 대조로 확인 → v0.6 매개-종속 변별 붕괴 위험."
+      }
+    ],
     "blockers": []
   },
-  "deliverables": [],
-  "nextTasks": [
+  "deliverables": [
     {
-      "title": "PROJECT.md 정리 + 다음 액션 1줄",
-      "description": "프로젝트 정의 + 현재 상태 + 다음 액션을 PROJECT.md에 1차 정리.",
-      "priority": "mid",
-      "estimate": "반나절"
+      "title": "Mom 개인양손잡이 문항차원 추출 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/이론/양손잡이이론/02_Mom개인양손잡이_문항차원_추출_v0.1.md",
+      "fileKind": "md",
+      "summary": "Mom 2009 Table 1 원문 14문항 직접 추출 + 디자이너 번안 적합도 문항별 판정.",
+      "modifiedAt": "2026-07-04"
+    },
+    {
+      "title": "탐색 vs 접근확장JC 변별대조 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/이론/이론 연결/01_탐색_vs_접근확장JC_변별대조_v0.1.md",
+      "fileKind": "md",
+      "summary": "Mom 탐색 ↔ Tims 접근확장 15문항 원문 대조. 겹침 노드·설계 함의.",
+      "modifiedAt": "2026-07-04"
     }
   ],
-  "buildAt": "2026-05-22T00:00:00+09:00"
+  "nextTasks": [
+    {
+      "title": "모델 D 조절 조작화 확정",
+      "description": "'활용만' vs 밸런스 전체 중 결정 · 상호작용항(JC확장×활용) 설계 · 가설 정식화.",
+      "priority": "high",
+      "estimate": "2일"
+    }
+  ],
+  "buildAt": "2026-07-06T05:00:00+09:00"
 }

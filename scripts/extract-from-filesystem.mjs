@@ -106,6 +106,7 @@ const EXPLICIT = {
   '06_Personal_Project/066_소규모조직_AI': '066',
   '06_Personal_Project/디자인매거진': '067',
   '06_Personal_Project/068_exacutiveCochingForum': '068',
+  '06_Personal_Project/0691_WCIF': '0691',
   '08_project/081_Anchornode': '081',
   '08_project/082_ICCS': '082',
   '08_project/083_촬영용스크립트': '083',

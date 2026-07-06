@@ -1,0 +1,352 @@
+{
+  "week": "2026-W27",
+  "range": {
+    "from": "2026-06-29",
+    "to": "2026-07-05"
+  },
+  "status": "done",
+  "summary": "0691 WCIF 발표 스프린트(신규): 패널 대본(자기소개·지정질문·통합대본·교차질문)·워크스페이스 퍼포먼스 인포그래픽 7종 병렬 제작 + 02 Data_Kaywon 소득·입시전형 종합분석 10건 + 055·053 박사 모델D(활용=조절) 도달",
+  "kpis": {
+    "activeProjects": 6,
+    "sessions": 5,
+    "newProjects": 1,
+    "filesChanged": 35
+  },
+  "daily": [
+    {
+      "date": "2026-06-29",
+      "weekday": "월",
+      "filesChanged": 12,
+      "topProjectIds": [
+        "02",
+        "061"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 21_고교_입시전형별_행동및학업패턴_보고서.md · 34_소득_국민연금_지역소득_대비_학생소득분위_상관분석보고서.md · 35_소득_제적률_휴학률_소득분위_상관관계_종합분석보고서.md · 36_소득_분위별_상위10대_유입지자체_보고서.md · 38_소득_학적행동별_상위_유입지자체_보고서.md 외 4건"
+        },
+        {
+          "projectId": "061",
+          "did": "[fs scan] TodayTab.tsx · api.ts · emotions.ts",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 36,
+                "out": 7363,
+                "cache_read": 1684653,
+                "cache_write": 10522,
+                "messages": 21,
+                "costUSD": 3.277
+              }
+            },
+            "total": {
+              "in": 36,
+              "out": 7363,
+              "cache_read": 1684653,
+              "cache_write": 10522,
+              "messages": 21
+            },
+            "costUSD": 3.277
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "weekday": "화",
+      "filesChanged": 9,
+      "topProjectIds": [
+        "02",
+        "063",
+        "0691"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 15_종합_입시전형_정원_최적화_설계안.md · 15_종합_입시전형_정원_최적화_설계안.md · 20260629_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 402,
+                "out": 12024,
+                "cache_read": 1018151,
+                "cache_write": 20168,
+                "messages": 18,
+                "costUSD": 2.8132
+              }
+            },
+            "total": {
+              "in": 402,
+              "out": 12024,
+              "cache_read": 1018151,
+              "cache_write": 20168,
+              "messages": 18
+            },
+            "costUSD": 2.8132
+          }
+        },
+        {
+          "projectId": "0691",
+          "did": "[fs scan] CLAUDE.md · 세션3_진행표.md · 01_발표개요_v0.1.md · 02_자기소개_재료.md · 03_자기소개_v0.1.md 외 1건"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "weekday": "수",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "063",
+        "03",
+        "01",
+        "0691"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 192,
+                "out": 8182,
+                "cache_read": 700466,
+                "cache_write": 65471,
+                "messages": 15,
+                "costUSD": 2.8948
+              },
+              "claude-opus-4-8": {
+                "in": 14,
+                "out": 3496,
+                "cache_read": 362928,
+                "cache_write": 5351,
+                "messages": 7,
+                "costUSD": 0.9071
+              }
+            },
+            "total": {
+              "in": 206,
+              "out": 11678,
+              "cache_read": 1063394,
+              "cache_write": 70822,
+              "messages": 22
+            },
+            "costUSD": 3.8019
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 6,
+                "out": 15135,
+                "cache_read": 225639,
+                "cache_write": 1509,
+                "messages": 3,
+                "costUSD": 1.502
+              }
+            },
+            "total": {
+              "in": 6,
+              "out": 15135,
+              "cache_read": 225639,
+              "cache_write": 1509,
+              "messages": 3
+            },
+            "costUSD": 1.502
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 1976,
+                "out": 65446,
+                "cache_read": 4006761,
+                "cache_write": 95050,
+                "messages": 32,
+                "costUSD": 12.7304
+              }
+            },
+            "total": {
+              "in": 1976,
+              "out": 65446,
+              "cache_read": 4006761,
+              "cache_write": 95050,
+              "messages": 32
+            },
+            "costUSD": 12.7304
+          }
+        },
+        {
+          "projectId": "0691",
+          "did": "[fs scan] 04_자기소개_문장형_v0.2.md · 05_지정질문_재료.md · 06_지정질문_문장형_v0.1.md · 07_발표대본_박진현 발표대본.md · 08_교차질문_v0.1.md 외 6건"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "weekday": "목",
+      "filesChanged": 1,
+      "topProjectIds": [
+        "063",
+        "0691"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json"
+        },
+        {
+          "projectId": "0691",
+          "did": "[fs scan] 07_통합포스터.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "weekday": "일",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W27.json"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "0691",
+      "pct": 50,
+      "filesChanged": 18,
+      "imp": 5,
+      "nextAction": "07 통합포스터 네트워크 엣지 사용자 검토 · PDF/PNG 내보내기 · 대시보드 링크 업로드"
+    },
+    {
+      "id": "02",
+      "pct": 34,
+      "filesChanged": 12,
+      "imp": 3,
+      "nextAction": "입시전형 정원 최적화 설계안 v1 확정"
+    },
+    {
+      "id": "055",
+      "pct": 5,
+      "filesChanged": 4,
+      "imp": 4,
+      "nextAction": "모델 D 조절 조작화(활용만 vs 밸런스) 확정 · 가설 정식화"
+    },
+    {
+      "id": "053",
+      "pct": 5,
+      "filesChanged": 4,
+      "imp": 4,
+      "nextAction": "Li&Chen 선행 보강 · Paper 2(주효과 N≥100) vs Paper 3(조절 N≥150) 배치"
+    },
+    {
+      "id": "061",
+      "pct": 3,
+      "filesChanged": 3,
+      "imp": 2,
+      "nextAction": "TodayTab · api · emotions 반영 후속 검증"
+    },
+    {
+      "id": "063",
+      "pct": 3,
+      "filesChanged": 3,
+      "imp": 2,
+      "nextAction": "W27 마감 · PROJECT.md 갱신 · CURRENT_WEEK_ID → W28"
+    }
+  ],
+  "decisions": [
+    {
+      "projectId": "0691",
+      "date": "2026-07-01",
+      "title": "WCIF 발표 관통 축 확정",
+      "description": "자기소개(변화에 능동적으로 대응하는 법) ↔ 지정질문(변하지 않는 것) 을 동전 양면으로 묶고 '다리 문장'으로 연결. 콕스타 에피소드는 지정질문 증거로 배치.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "0691",
+      "date": "2026-07-02",
+      "title": "작업량 지표 = 파일 mtime 실측",
+      "description": "git 커밋(2건)·063 대시보드(구멍 다수) 신뢰 불가 → mtime으로 3~6월 4,530건 집계. 스타일=01_admin/foundation2 웜 모노톤 채택.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "053",
+      "date": "2026-07-04",
+      "title": "모델 D 조절모형 도달",
+      "description": "AI자원→JC확장→성과, 활용(exploitation)을 조절변수로. 상호작용항(JC확장×활용)=개인 양손잡이 조작화. v0.6 변별타당도 붕괴 해결책.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "055",
+      "date": "2026-07-04",
+      "title": "각 변수의 '이론 친정' 분리 원칙 확립",
+      "description": "양손잡이·AI자원=RBV(전략경영), JC·지각평가=OB(직업심리). 모든 걸 리소스로 묶으려던 오귀인 해소. Mom 2009 14문항 원문 대조 완료.",
+      "isMilestone": false
+    }
+  ],
+  "newProjects": ["0691"],
+  "labelChanges": [
+    {
+      "projectId": "0691",
+      "from": "unregistered",
+      "to": "active",
+      "date": "2026-07-01"
+    }
+  ],
+  "buildAt": "2026-07-06T04:52:27.344Z",
+  "tokens": {
+    "total": {
+      "in": 2626,
+      "out": 111646,
+      "cache_read": 7998598,
+      "cache_write": 198071
+    },
+    "costUSD": 24.1246,
+    "costKRW": 35463
+  }
+}

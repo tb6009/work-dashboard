@@ -1,19 +1,40 @@
 {
   "id": "053",
   "currentSituation": {
-    "summary": "Experimental paper proposal + SME Silicon Sampling 연구 — 05_phD_Research/053_ResearchMasterBot/",
-    "phase": "활성 사용 중",
-    "recentLogs": [],
+    "summary": "준봇(055 명명 이후 리서치 마스터 트랙). W27(7/4): 박사 모델 이론 정합성 세션 → 모델 A/B/C 검토 → 모델 D(조절모형) 발상 도달. AI자원→JC확장→성과, 활용(exploitation)을 조절변수로 하는 상호작용항(JC확장×활용)=개인 양손잡이 조작화. v0.6 매개-종속 변별 붕괴 해결책.",
+    "phase": "Active — 모델 D 조절모형 정교화 · 박사본체 v0.7 후보",
+    "recentLogs": [
+      {
+        "date": "2026-07-04",
+        "title": "모델 D(조절모형) 발상 도달 — JC확장×활용 상호작용항",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260704_log.md",
+        "excerpt": "'JC 회피=exploitation' 등치는 기각(valence 반대). exploitation은 JC 대응물 없음 → 양손잡이 직접 측정으로. Li&Chen(JC→결과, 조절=맥락적 양손잡이) 구조 템플릿."
+      }
+    ],
     "blockers": []
   },
-  "deliverables": [],
-  "nextTasks": [
+  "deliverables": [
     {
-      "title": "PROJECT.md 정리 + 다음 액션 1줄",
-      "description": "프로젝트 정의 + 현재 상태 + 다음 액션을 PROJECT.md에 1차 정리.",
-      "priority": "mid",
-      "estimate": "반나절"
+      "title": "중요노트 변수의 이론친정과 JC매개가능성 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/06_중요노트_변수의_이론친정과_JC매개가능성_v0.1.md",
+      "fileKind": "md",
+      "summary": "이론 친정 지도 + 모델 A/B/C/D + 모델 D 조절모형(§6.5).",
+      "modifiedAt": "2026-07-04"
     }
   ],
-  "buildAt": "2026-05-22T00:00:00+09:00"
+  "nextTasks": [
+    {
+      "title": "Li&Chen 선행 보강 · Paper 배치 결정",
+      "description": "Li&Chen은 맥락적 양손잡이라 개인 조절로 재쓰기 위한 선행 확보. Paper 2(주효과 N≥100) vs Paper 3(조절 N≥150) 배치.",
+      "priority": "high",
+      "estimate": "2~3일"
+    },
+    {
+      "title": "모델 A/B/D 최종 택1 → 박사본체 v0.7 갱신",
+      "description": "조절 조작화 확정 후 박사본체 확정.",
+      "priority": "high",
+      "estimate": "1주"
+    }
+  ],
+  "buildAt": "2026-07-06T05:00:00+09:00"
 }

@@ -1,0 +1,70 @@
+{
+  "id": "0691",
+  "currentSituation": {
+    "summary": "WCIF 2026 세계문화산업포럼(7회, 7/2~3 대구) Future Stage 세션3 'Tech for Creators' 3인 패널 중 1인. 발표는 슬라이드가 아닌 패널 토크(자기소개 5' · 지정질문 3' · TMI · 교차질문). W27(6/30~7/2): 프로젝트 표준 셋업 + 자기소개·지정질문 문장형 초안 완성 + 워크스페이스 퍼포먼스 인포그래픽 7종 병렬 제작.",
+    "phase": "Active — 통합 대본 v0.1 + 인포그래픽 7종 시안. 07 통합포스터 사용자 검토 대기.",
+    "recentLogs": [
+      {
+        "date": "2026-07-02",
+        "title": "워크스페이스 퍼포먼스 인포그래픽 7종 병렬 제작",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260702_log.md",
+        "excerpt": "월별/카테고리맵/트리맵/스트림그래프/마리메코/패킹버블/통합포스터. 작업량=파일 mtime 실측 4,530건(3~6월). 스타일=foundation2 웜 모노톤. 07 통합포스터=지식 네트워크(23노드)+마리메코 웜톤 리본."
+      },
+      {
+        "date": "2026-07-01",
+        "title": "패널 대본 v0.1 완성 · 관통 축 확정",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260701_log.md",
+        "excerpt": "자기소개(변화 대응)↔지정질문(변하지 않는 것) 동전 양면. 자기소개 구조·지정질문 척추 확정. 스승·기본기·기호학은 지정질문으로 이동. 콕스타 에피소드는 지정질문 증거."
+      }
+    ],
+    "blockers": [
+      "07 통합포스터 네트워크 엣지(주제 연결) 사용자 검토 필요",
+      "TMI 토크 소재 미정",
+      "교차질문(이보영·아곤) 최종 선택 미정"
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "PROJECT.md · CLAUDE.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0691_WCIF/PROJECT.md",
+      "fileKind": "md",
+      "summary": "프로젝트 정체 · 세션3 진행표 · 작업 규약.",
+      "modifiedAt": "2026-07-01"
+    },
+    {
+      "title": "자기소개 문장형 v0.2 · 지정질문 문장형 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0691_WCIF/01_발표자료/",
+      "fileKind": "md",
+      "summary": "자기소개(v0.2)·지정질문(v0.1/v0.3)·통합 대본 v0.1·교차질문 v0.1.",
+      "modifiedAt": "2026-07-01"
+    },
+    {
+      "title": "워크스페이스 퍼포먼스 인포그래픽 7종",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0691_WCIF/발표장표/",
+      "fileKind": "html",
+      "summary": "01 월별+카테고리 · 02 카테고리맵 · 03 트리맵 · 04 스트림그래프 · 05 마리메코 · 06 패킹버블 · 07 통합포스터(지식네트워크+마리메코 리본, 1280×1810).",
+      "modifiedAt": "2026-07-02"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "07 통합포스터 확정 · PDF/PNG 내보내기",
+      "description": "네트워크 엣지 사용자 검토 → 확정안 내보내기.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "인포그래픽 웹 묶음 → 063 대시보드 링크 업로드",
+      "description": "7종 시안 묶음 또는 선택안 1개를 workDashboard 제목 아래 URL 링크로 노출.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "07 통합 대본 시간 순서 재배치 + 교차질문 슬롯 삽입",
+      "description": "진행표 시간 축에 맞춰 재편.",
+      "priority": "mid",
+      "estimate": "1일"
+    }
+  ],
+  "buildAt": "2026-07-06T05:00:00+09:00"
+}

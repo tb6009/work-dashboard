@@ -1,0 +1,74 @@
+{
+  "week": "2026-W28",
+  "range": {
+    "from": "2026-07-06",
+    "to": "2026-07-12"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 0,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 0
+  },
+  "daily": [
+    {
+      "date": "2026-07-06",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-07",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-08",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-09",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-10",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-11",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-12",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-07-05T15:05:45.173Z",
+  "tokens": {
+    "total": {
+      "in": 0,
+      "out": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

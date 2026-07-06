@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "068 Father Hunger 발표 확장 (단일축→4-dyad 매트릭스 · 인용 6건 정정) + 03 기초디자인 평가 통합본(01~09) · 자기평가 학번 검증 + 034 접시팬 주방 투시 회고/포트폴리오 공개 + 05 박사 RBV·Job-crafting·AI Capability·PLS-SEM 이론 아카이브",
   "kpis": {
-    "activeProjects": 7,
+    "activeProjects": 8,
     "sessions": 4,
     "newProjects": 1,
-    "filesChanged": 75
+    "filesChanged": 114
   },
   "daily": [
     {
@@ -247,7 +247,8 @@
         "03",
         "063",
         "083",
-        "034"
+        "034",
+        "051"
       ],
       "entries": [
         {
@@ -366,10 +367,12 @@
     {
       "date": "2026-06-26",
       "weekday": "금",
-      "filesChanged": 4,
+      "filesChanged": 42,
       "topProjectIds": [
         "063",
-        "034"
+        "034",
+        "02",
+        "03"
       ],
       "entries": [
         {
@@ -377,42 +380,152 @@
           "did": "접시팬 주방이미지 투시보정 포트폴리오 HTML + 이미지 18종 dashboard public 공개 (/portfolio/kitchen-perspective/) — W26 이번주 업데이트 반영",
           "tokens": {
             "byModel": {
+              "claude-haiku-4-5": {
+                "in": 222,
+                "out": 8032,
+                "cache_read": 975164,
+                "cache_write": 343221,
+                "messages": 34,
+                "costUSD": 0.5669
+              },
               "claude-opus-4-7": {
-                "in": 228,
-                "out": 78964,
-                "cache_read": 21897888,
-                "cache_write": 559973,
-                "messages": 143,
-                "costUSD": 49.272
+                "in": 301,
+                "out": 102993,
+                "cache_read": 31621169,
+                "cache_write": 611018,
+                "messages": 181,
+                "costUSD": 66.6173
               }
             },
             "total": {
-              "in": 228,
-              "out": 78964,
-              "cache_read": 21897888,
-              "cache_write": 559973,
-              "messages": 143
+              "in": 523,
+              "out": 111025,
+              "cache_read": 32596333,
+              "cache_write": 954239,
+              "messages": 215
             },
-            "costUSD": 49.272
+            "costUSD": 67.1843
           }
         },
         {
           "projectId": "034",
           "did": "주방 투시 보정 회고 포트폴리오 외부 공개본 연결"
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 일반고_비율과_이탈률_통계분석보고서.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 191,
+                "out": 85359,
+                "cache_read": 23765736,
+                "cache_write": 85857,
+                "messages": 86,
+                "costUSD": 43.6632
+              },
+              "claude-opus-4-8": {
+                "in": 71906,
+                "out": 101823,
+                "cache_read": 6275623,
+                "cache_write": 272657,
+                "messages": 85,
+                "costUSD": 23.2411
+              }
+            },
+            "total": {
+              "in": 72097,
+              "out": 187182,
+              "cache_read": 30041359,
+              "cache_write": 358514,
+              "messages": 171
+            },
+            "costUSD": 66.9043
+          }
         }
       ]
     },
     {
       "date": "2026-06-27",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 3,
+      "topProjectIds": [
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 151762,
+                "out": 81526,
+                "cache_read": 4134433,
+                "cache_write": 1233665,
+                "messages": 41,
+                "costUSD": 37.7237
+              }
+            },
+            "total": {
+              "in": 151762,
+              "out": 81526,
+              "cache_read": 4134433,
+              "cache_write": 1233665,
+              "messages": 41
+            },
+            "costUSD": 37.7237
+          }
+        }
+      ]
     },
     {
       "date": "2026-06-28",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 40,
+      "topProjectIds": [
+        "03",
+        "063",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_세소스_공통핵심_요약.md · README.md · 06_비주얼레퍼런스_컨셉아키타입_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 3546,
+                "out": 122137,
+                "cache_read": 13717673,
+                "cache_write": 1592661,
+                "messages": 50,
+                "costUSD": 59.6524
+              }
+            },
+            "total": {
+              "in": 3546,
+              "out": 122137,
+              "cache_read": 13717673,
+              "cache_write": 1592661,
+              "messages": 50
+            },
+            "costUSD": 59.6524
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W26.json"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md · 김유진_raw.json · 김현정_raw.json · 박진현_raw.json 외 6건"
+        }
+      ]
     }
   ],
   "projects": [
@@ -558,15 +671,15 @@
     "068"
   ],
   "labelChanges": [],
-  "buildAt": "2026-06-26T06:18:19.822Z",
+  "buildAt": "2026-06-28T08:21:58.071Z",
   "tokens": {
     "total": {
-      "in": 231799,
-      "out": 318236,
-      "cache_read": 36610882,
-      "cache_write": 1562391
+      "in": 459499,
+      "out": 741142,
+      "cache_read": 95202792,
+      "cache_write": 5141497
     },
-    "costUSD": 111.5558,
-    "costKRW": 163987
+    "costUSD": 293.7484,
+    "costKRW": 431810
   }
 }

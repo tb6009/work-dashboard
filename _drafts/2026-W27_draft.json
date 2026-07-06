@@ -1,0 +1,159 @@
+{
+  "week": "2026-W27",
+  "range": {
+    "from": "2026-06-29",
+    "to": "2026-07-05"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 9,
+    "sessions": 4,
+    "newProjects": 7,
+    "filesChanged": 38
+  },
+  "daily": [
+    {
+      "date": "2026-06-29",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-30",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-01",
+      "weekday": "수",
+      "filesChanged": 12,
+      "topProjectIds": [
+        "01",
+        "0691"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "weekday": "목",
+      "filesChanged": 7,
+      "topProjectIds": [
+        "02",
+        "063",
+        "01"
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-04",
+      "weekday": "토",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "055",
+        "053"
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "weekday": "일",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "09"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 30,
+      "filesChanged": 12,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 20,
+      "filesChanged": 8,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "0691",
+      "pct": 15,
+      "filesChanged": 6,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "055",
+      "pct": 10,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "053",
+      "pct": 10,
+      "filesChanged": 4,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "02",
+      "pct": 5,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "063",
+      "pct": 5,
+      "filesChanged": 2,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "03",
+      "pct": 3,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 3,
+      "filesChanged": 1,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [],
+  "newProjects": [
+    "01",
+    "0691",
+    "02",
+    "09",
+    "04",
+    "055",
+    "053"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-07-06T04:52:27.384Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-07-06T04:52:27.384Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

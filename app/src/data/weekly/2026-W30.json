@@ -1,0 +1,173 @@
+{
+  "week": "2026-W30",
+  "range": {
+    "from": "2026-07-20",
+    "to": "2026-07-26"
+  },
+  "status": "current",
+  "summary": "02 계원예대 최종 실증 종합 보고서 마감 — 통계 정합성 본문 교정(다중검정 보정 후 유의성 소멸 반영)·Word(.docx) 변환·06_최종보고서 폴더 신설 이관·04_산출물 60여 파일 6대 분류 정돈·README 인덱스 · 0500 10편 연구논문 정리·조데레샤 인터뷰 전사",
+  "kpis": {
+    "activeProjects": 8,
+    "sessions": 2,
+    "newProjects": 0,
+    "filesChanged": 625
+  },
+  "daily": [
+    {
+      "date": "2026-07-20",
+      "weekday": "월",
+      "filesChanged": 616,
+      "topProjectIds": [
+        "02",
+        "03",
+        "081",
+        "084",
+        "091",
+        "101"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] CLAUDE.md · 01_최종보고서.md · 검정고시_학생_군집분석_보고서.md · 검정고시_학생_소득분위_분포분석.md · 계원예대_신입생_종합분석보고서.md 외 14건"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 01_브랜드비주얼_3시안.md · _generate.py · philosophy_A_warm_lab.md · philosophy_B_vintners_note.md 외 583건"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md · CLAUDE.md · PROJECT.md · PROJECT.md"
+        },
+        {
+          "projectId": "084",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 04_연재_제안서_v0.1.md"
+        },
+        {
+          "projectId": "101",
+          "did": "[fs scan] 03_대화기록.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-22",
+      "weekday": "수",
+      "filesChanged": 3,
+      "topProjectIds": [
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 10편 연구논문 정리.md · 조데레샤교수님_인터뷰_전사.json · 조데레샤교수님_인터뷰_회의록.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "weekday": "목",
+      "filesChanged": 6,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] PROJECT.md · next-env.d.ts · 2026-W28.json · 2026-W29.json · 2026-W30.json 외 1건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 130,
+                "out": 100721,
+                "cache_read": 7378443,
+                "cache_write": 179909,
+                "messages": 71,
+                "costUSD": 21.997
+              }
+            },
+            "total": {
+              "in": 130,
+              "out": 100721,
+              "cache_read": 7378443,
+              "cache_write": 179909,
+              "messages": 71
+            },
+            "costUSD": 21.997
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-25",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-26",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "02",
+      "pct": 70,
+      "filesChanged": 19,
+      "imp": 5,
+      "nextAction": "다변량 로지스틱 회귀 설계 · 포트폴리오 상호작용 검증용 학내 추가 데이터 확보"
+    },
+    {
+      "id": "0500",
+      "pct": 20,
+      "filesChanged": 3,
+      "imp": 2,
+      "nextAction": "조데레샤 인터뷰 회의록 후속 정리 · 10편 논문 아카이브 인용 연계"
+    },
+    {
+      "id": "03",
+      "pct": 10,
+      "filesChanged": 20,
+      "imp": 1,
+      "nextAction": "브랜드 비주얼 3시안 방향 정리 (파일시스템 캡처)"
+    }
+  ],
+  "decisions": [
+    {
+      "projectId": "02",
+      "date": "2026-07-20",
+      "title": "종합 보고서 통계적 엄밀성 본문 관철 = 최종본 확정",
+      "description": "7/17 독립 검증 결과(다중검정 보정 후 유의성 소멸, Cramér’s V≈0.05, 연도별 비재현)를 종합 보고서 본문(4.3·5.2·8.2·9.1절)에 모순 없이 반영. ‘계층 고착화 입증’ 등 자의적 인과 진술을 통계 한계에 맞게 완화. pandoc으로 배포용 .docx 빌드, 06_최종보고서 폴더 신설 이관.",
+      "isMilestone": true
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-07-23T12:27:18.715Z",
+  "tokens": {
+    "total": {
+      "in": 130,
+      "out": 100721,
+      "cache_read": 7378443,
+      "cache_write": 179909
+    },
+    "costUSD": 21.997,
+    "costKRW": 32336
+  }
+}

@@ -233,6 +233,7 @@ function Hero({
         projectName={project.name}
         webUrl={project.webUrl}
         designHistoryUrl={project.designHistoryUrl}
+        appUrl={project.appUrl}
       />
       <div
         style={{
@@ -360,12 +361,15 @@ function ExternalLinkRow({
   projectName,
   webUrl,
   designHistoryUrl,
+  appUrl,
 }: {
   projectName: string;
   webUrl?: string;
   designHistoryUrl?: string;
+  appUrl?: string;
 }) {
-  const links: { label: string; href: string }[] = [];
+  const links: { label: string; href: string; emphasis?: boolean }[] = [];
+  if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });
   if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
   if (links.length === 0) return null;
@@ -392,8 +396,8 @@ function ExternalLinkRow({
             fontSize: 'var(--text-2xs)',
             fontWeight: 700,
             letterSpacing: 'var(--tracking-wide)',
-            color: 'var(--black)',
-            background: 'var(--white)',
+            color: l.emphasis ? 'var(--white)' : 'var(--black)',
+            background: l.emphasis ? 'var(--black)' : 'var(--white)',
             border: '1px solid var(--gray-900)',
             padding: '6px 10px',
             textDecoration: 'none',

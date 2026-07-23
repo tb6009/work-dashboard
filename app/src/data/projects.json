@@ -48,7 +48,7 @@
   { "id": "082", "categoryId": "08",        "name": "ICCS",              "type": "research",   "define": "ICCS 프로젝트 (셋업 전) — 08_project/082_ICCS/", "status": "new",    "createdAt": "2026-05-22" },
   { "id": "083", "categoryId": "08",        "name": "촬영용 스크립트",     "type": "education",  "define": "K-MOOC AI 시대의 비즈니스 디자인 대본 — 08_project/083_촬영용스크립트/", "status": "active", "aliases": ["31"] },
   { "id": "084", "categoryId": "08",        "name": "강연시리즈",         "type": "education",  "define": "외부 강연·세미나 회차별 콘텐츠 트랙 — 08_project/084_강연시리즈/", "status": "active", "aliases": ["32"], "createdAt": "2026-04-29" },
-  { "id": "085", "categoryId": "08",        "name": "에듀피스",           "type": "product",    "define": "회복적 갈등해결 이중 모드 챗봇 (당사자 상담소 + 진행자 지원) — 08_project/085_에듀피스/", "status": "active", "createdAt": "2026-06-30" },
+  { "id": "085", "categoryId": "08",        "name": "에듀피스",           "type": "product",    "define": "회복적 갈등해결 이중 모드 챗봇 (당사자 상담소 + 진행자 지원) — 08_project/085_에듀피스/", "status": "active", "createdAt": "2026-06-30", "appUrl": "/portfolio/edupeace-chatbot/" },
 
   { "id": "09",  "categoryId": "09",        "name": "몸과마음의과학(umbrella)", "type": "publishing", "define": "강의·연구·출판 통합 — research/ · class/ · 091_출판기획 · 092_영상과제", "status": "active" },
   { "id": "091", "categoryId": "09",        "name": "몸과마음의과학 출판", "type": "publishing", "define": "09 자료 기반 단행본·전자책 출판 기획", "status": "active" },

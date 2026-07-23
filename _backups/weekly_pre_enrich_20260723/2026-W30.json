@@ -1,0 +1,115 @@
+{
+  "week": "2026-W30",
+  "range": {
+    "from": "2026-07-20",
+    "to": "2026-07-26"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 7,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 619
+  },
+  "daily": [
+    {
+      "date": "2026-07-20",
+      "weekday": "월",
+      "filesChanged": 616,
+      "topProjectIds": [
+        "02",
+        "03",
+        "081",
+        "084",
+        "091",
+        "101"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] CLAUDE.md · 01_최종보고서.md · 검정고시_학생_군집분석_보고서.md · 검정고시_학생_소득분위_분포분석.md · 계원예대_신입생_종합분석보고서.md 외 14건"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 01_브랜드비주얼_3시안.md · _generate.py · philosophy_A_warm_lab.md · philosophy_B_vintners_note.md 외 583건"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md · CLAUDE.md · PROJECT.md · PROJECT.md"
+        },
+        {
+          "projectId": "084",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 04_연재_제안서_v0.1.md"
+        },
+        {
+          "projectId": "101",
+          "did": "[fs scan] 03_대화기록.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-22",
+      "weekday": "수",
+      "filesChanged": 3,
+      "topProjectIds": [
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 10편 연구논문 정리.md · 조데레샤교수님_인터뷰_전사.json · 조데레샤교수님_인터뷰_회의록.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-24",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-25",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-26",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-07-23T02:17:39.832Z",
+  "tokens": {
+    "total": {
+      "in": 0,
+      "out": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

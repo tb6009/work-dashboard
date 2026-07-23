@@ -26,6 +26,7 @@ export interface ProjectMeta {
   aliases?: string[];        // 옛 ID (마이그레이션 이력). lookupProject가 fallback으로 검색.
   webUrl?: string;           // 프로덕션 배포 URL (있는 프로젝트만)
   designHistoryUrl?: string; // 디자인 히스토리 페이지 (외부 URL 또는 내부 정적 경로)
+  appUrl?: string;           // 실행 가능한 앱/데모 페이지 (내부 정적 경로 또는 외부 URL). 상세 페이지에 "실행" 버튼으로 노출.
 }
 
 /** Top-level category meta (2026-05-17 재구조화) */

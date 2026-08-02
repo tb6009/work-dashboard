@@ -1,0 +1,756 @@
+{
+  "week": "2026-W31",
+  "range": {
+    "from": "2026-07-27",
+    "to": "2026-08-02"
+  },
+  "status": "current",
+  "summary": "02 계원예대 모집구조 통계연구(17대6·GPT+Claude 통합·시나리오 S0~S4) · 088 인사이드프로파일러 쇼츠 자동화 파이프라인 신설·01번편 5개 완성 · 03 RISE 코너스톤보고서 대규모(전사·PDF추출·검토서 10건·Once 세트 13건·MNS 발표덱 3종) · .claude/skills/cinematic-prompt 신규 스킬(240p PDF 정독) · 01 settings.local 권한 정리(광범위 허용 38·금지 12)",
+  "kpis": {
+    "activeProjects": 13,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 250
+  },
+  "daily": [
+    {
+      "date": "2026-07-27",
+      "weekday": "월",
+      "filesChanged": 64,
+      "topProjectIds": [
+        "091",
+        "063",
+        "01",
+        "02",
+        "081",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "091",
+          "did": "[fs scan] 08_2주차_초고_v0.11.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 18026,
+                "out": 104014,
+                "cache_read": 36910963,
+                "cache_write": 1587477,
+                "messages": 74,
+                "costUSD": 93.2031
+              }
+            },
+            "total": {
+              "in": 18026,
+              "out": 104014,
+              "cache_read": 36910963,
+              "cache_write": 1587477,
+              "messages": 74
+            },
+            "costUSD": 93.2031
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] 04_실행_로그.md · AI_TOOL_MATRIX.md · CHATGPT_custom_instructions.md"
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 35_소득_제적률_휴학률_소득분위_상관관계_종합분석보고서.md · README.md · 20260727_log.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 32,
+                "out": 20888,
+                "cache_read": 1424960,
+                "cache_write": 47066,
+                "messages": 19,
+                "costUSD": 4.587
+              }
+            },
+            "total": {
+              "in": 32,
+              "out": 20888,
+              "cache_read": 1424960,
+              "cache_write": 47066,
+              "messages": 19
+            },
+            "costUSD": 4.587
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] 04_Game_Art_and_Ant_Styles.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] md2pdf.py",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 10,
+                "out": 3511,
+                "cache_read": 3304504,
+                "cache_write": 4653,
+                "messages": 5,
+                "costUSD": 5.3075
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 3511,
+              "cache_read": 3304504,
+              "cache_write": 4653,
+              "messages": 5
+            },
+            "costUSD": 5.3075
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "weekday": "화",
+      "filesChanged": 7,
+      "topProjectIds": [
+        "02",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 4266,
+                "out": 357973,
+                "cache_read": 27553859,
+                "cache_write": 481285,
+                "messages": 159,
+                "costUSD": 77.2668
+              }
+            },
+            "total": {
+              "in": 4266,
+              "out": 357973,
+              "cache_read": 27553859,
+              "cache_write": 481285,
+              "messages": 159
+            },
+            "costUSD": 77.2668
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "weekday": "수",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "063",
+        "02",
+        "01",
+        "092",
+        "061"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 3,
+                "out": 1806,
+                "cache_read": 167652,
+                "cache_write": 8874,
+                "messages": 3,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 3,
+              "out": 1806,
+              "cache_read": 167652,
+              "cache_write": 8874,
+              "messages": 3
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 191,
+                "out": 164281,
+                "cache_read": 12327897,
+                "cache_write": 256804,
+                "messages": 100,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 191,
+              "out": 164281,
+              "cache_read": 12327897,
+              "cache_write": 256804,
+              "messages": 100
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] README.md"
+        },
+        {
+          "projectId": "092",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 185,
+                "out": 184630,
+                "cache_read": 15000077,
+                "cache_write": 5305677,
+                "messages": 136,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 185,
+              "out": 184630,
+              "cache_read": 15000077,
+              "cache_write": 5305677,
+              "messages": 136
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 3092,
+                "cache_read": 117684,
+                "cache_write": 2818,
+                "messages": 2,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 3092,
+              "cache_read": 117684,
+              "cache_write": 2818,
+              "messages": 2
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "weekday": "목",
+      "filesChanged": 6,
+      "topProjectIds": [
+        "03",
+        "063",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 57,
+                "out": 29820,
+                "cache_read": 2020753,
+                "cache_write": 119486,
+                "messages": 29,
+                "costUSD": 7.5088
+              }
+            },
+            "total": {
+              "in": 57,
+              "out": 29820,
+              "cache_read": 2020753,
+              "cache_write": 119486,
+              "messages": 29
+            },
+            "costUSD": 7.5088
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 1주차｜AI가 일을 덜어준다는데, 왜 우리는 더 힘들어졌을까.md · 2주차｜평생 함께 산 내 몸을 나는 얼마나 알고 있을까.md · 3주차｜감정은 없애야 할 문제가 아니라 몸과 마음이 보내는 정보다.md · 4주차｜의지로 버티지 말고, 몸이 따라올 수 있게 바꿔라.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "weekday": "금",
+      "filesChanged": 26,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "038",
+        "034",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 17_2-2_코너스톤컨설팅_사별방문결과보고서_양식_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 12343,
+                "out": 830958,
+                "cache_read": 133564545,
+                "cache_write": 34449337,
+                "messages": 973,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 12343,
+              "out": 830958,
+              "cache_read": 133564545,
+              "cache_write": 34449337,
+              "messages": 973
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json"
+        },
+        {
+          "projectId": "038",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 11,
+                "out": 21951,
+                "cache_read": 853506,
+                "cache_write": 49998,
+                "messages": 7,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 11,
+              "out": 21951,
+              "cache_read": 853506,
+              "cache_write": 49998,
+              "messages": 7
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "034",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 6,
+                "out": 13346,
+                "cache_read": 423165,
+                "cache_write": 9752,
+                "messages": 3,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 6,
+              "out": 13346,
+              "cache_read": 423165,
+              "cache_write": 9752,
+              "messages": 3
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] 05_강의_전달_초안.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "weekday": "토",
+      "filesChanged": 111,
+      "topProjectIds": [
+        "03",
+        "063",
+        "039",
+        "02",
+        "01",
+        "081",
+        "032"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1154,
+                "out": 1322373,
+                "cache_read": 232568525,
+                "cache_write": 3589984,
+                "messages": 613,
+                "costUSD": 0
+              },
+              "claude-sonnet-5": {
+                "in": 40,
+                "out": 9839,
+                "cache_read": 1224664,
+                "cache_write": 189071,
+                "messages": 20,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 1194,
+              "out": 1332212,
+              "cache_read": 233793189,
+              "cache_write": 3779055,
+              "messages": 633
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 14_수정작업_목록_v0.1.md"
+        },
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 5,
+                "out": 3174,
+                "cache_read": 844465,
+                "cache_write": 3741,
+                "messages": 3,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 5,
+              "out": 3174,
+              "cache_read": 844465,
+              "cache_write": 3741,
+              "messages": 3
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] gstack_설치_관리.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 28,
+                "out": 22263,
+                "cache_read": 9725932,
+                "cache_write": 103328,
+                "messages": 15,
+                "costUSD": 0
+              },
+              "claude-opus-4-8": {
+                "in": 13,
+                "out": 10388,
+                "cache_read": 698756,
+                "cache_write": 10003,
+                "messages": 8,
+                "costUSD": 2.015
+              }
+            },
+            "total": {
+              "in": 41,
+              "out": 32651,
+              "cache_read": 10424688,
+              "cache_write": 113331,
+              "messages": 23
+            },
+            "costUSD": 2.015
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · CLAUDE.md · PROGRESS.md · PROJECT.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 19,
+                "out": 11491,
+                "cache_read": 869416,
+                "cache_write": 24471,
+                "messages": 10,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 19,
+              "out": 11491,
+              "cache_read": 869416,
+              "cache_write": 24471,
+              "messages": 10
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "032",
+          "did": "[fs scan] 00_어느_파일을_쓰나.md · 01_Once_AI디자인리서치_쇼케이스_v0.4.html · 02_다이어그램시안_v0.2.html · 03_PPT기획안_v0.2.md · build_pptx_v0.2.py"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "weekday": "일",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "03",
+        "034",
+        "081",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 467,
+                "out": 379443,
+                "cache_read": 125588140,
+                "cache_write": 1888763,
+                "messages": 254,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 467,
+              "out": 379443,
+              "cache_read": 125588140,
+              "cache_write": 1888763,
+              "messages": 254
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "034",
+          "did": "[fs scan] 상세페이지_카피_v1_대표님용.md"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] IA_Principles.md · UI_Design_principles.md · 05_페르소나_시나리오별_페이지구성_v0.1.md · 01_NNg_평가기준_v0.1.md · 02_평가계획서_v0.1.md 외 2건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 9,
+                "out": 17344,
+                "cache_read": 4291566,
+                "cache_write": 18450,
+                "messages": 5,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 9,
+              "out": 17344,
+              "cache_read": 4291566,
+              "cache_write": 18450,
+              "messages": 5
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W31.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 34,
+                "out": 11341,
+                "cache_read": 2696738,
+                "cache_write": 60498,
+                "messages": 34,
+                "costUSD": 6.0305
+              }
+            },
+            "total": {
+              "in": 34,
+              "out": 11341,
+              "cache_read": 2696738,
+              "cache_write": 60498,
+              "messages": 34
+            },
+            "costUSD": 6.0305
+          }
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "039",
+      "pct": 30,
+      "filesChanged": 60,
+      "imp": 5,
+      "nextAction": "MNS 발표덱 3종 최종 리뷰 · Once 세트 감수 후 인쇄 · 나머지 3사(한국주택정보·KPS·한번더) 보고서 완성"
+    },
+    {
+      "id": "02",
+      "pct": 20,
+      "filesChanged": 30,
+      "imp": 5,
+      "nextAction": "충원차수별 통보·등록·포기 정의 입학담당자 확인 · 전공 1·2·3순위·비희망 수용성 조사 설계 · 교과목 단위 학과 유사도 분석"
+    },
+    {
+      "id": "092",
+      "pct": 15,
+      "filesChanged": 15,
+      "imp": 4,
+      "nextAction": "cinematic-prompt 스킬로 Scene 2~5 프롬프트 뽑고 Scene 1(수작업) 대비 품질 비교 · 캐릭터 레퍼런스 이미지 확정"
+    },
+    {
+      "id": "034",
+      "pct": 15,
+      "filesChanged": 20,
+      "imp": 4,
+      "nextAction": "MNS 3종 발표덱 리허설 · 접시팬 포지셔닝 B덱 발표자 노트 정리"
+    },
+    {
+      "id": "01",
+      "pct": 10,
+      "filesChanged": 10,
+      "imp": 3,
+      "nextAction": ".claude/settings.local.json 백업 정리 · acceptEdits 모드 사용 가이드 문서화"
+    },
+    {
+      "id": "081",
+      "pct": 5,
+      "filesChanged": 15,
+      "imp": 3,
+      "nextAction": "081 IA·UI 원칙 v0.1 검토 · 페르소나·시나리오별 페이지 구성 v0.2로 확장"
+    },
+    {
+      "id": "063",
+      "pct": 5,
+      "filesChanged": 7,
+      "imp": 2,
+      "nextAction": "W31 마감·CURRENT_WEEK_ID 승격 완료. 다음 주 월요일 정기 사이클 재개"
+    }
+  ],
+  "decisions": [
+    {
+      "projectId": "02",
+      "date": "2026-07-28",
+      "title": "계원예대 모집구조 17대6 예측·GPT+Claude 통합",
+      "description": "현행 17개·학제분리 9개·부분광역 12개 모집구조를 정원 994명 기준 설계, 2년제·3년제 분리 절대 제약 유지. Beta-Binomial·Negative Binomial·Gamma-Poisson 모형 구현. 최근 3년 100% 충원으로 미달 분류모형은 배제하고 관측 충원·충원부담 예측·지원수요 스트레스 시뮬레이션 3층 분리 보고. Claude 브랜드유지율·타전공 수용률을 GPT 정원 모형에 결합해 미래디자인학부는 광역모집 성공 유보 결론.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "092",
+      "date": "2026-07-29",
+      "title": ".claude/skills/cinematic-prompt 신규 스킬 (엔진/프리셋 분리)",
+      "description": "박수진 강사 강의자료 PDF 10개 240p 전체 정독(PyMuPDF 렌더 후 이미지 정독) 후 시네마틱 프롬프트 엔진 제작. 6블록 공식(S→A→E→M→S→P), --cw 다이얼, 툴별 용어 인식도 표, 감정을 지시하지 말고 연출하라 등 정독에서만 나온 결정 포함. 엔진(SKILL.md+5개 references)과 룩앤필 프리셋(omx_아침_파스텔)을 분리해 091·0811에도 재사용 가능.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "039",
+      "date": "2026-07-31",
+      "title": "코너스톤 보고서 자료 검토 단계 대규모 착수",
+      "description": "회의 녹음 2건(강동훈 대표 2h, KPS 파주 11m) whisper.cpp large-v3-turbo 전사 완료. 캡스톤 결과물 PDF 15건 1,053p 3단 파이프라인(PyMuPDF→pdfplumber→tesseract OCR) 텍스트 추출, 11건 한글 깨짐 복구. 검토 보고서 10건 서브에이전트 병렬 작성. PPT는 전체 점검 후 일괄 작성(사용자 지시).",
+      "isMilestone": false
+    },
+    {
+      "projectId": "039",
+      "date": "2026-08-01",
+      "title": "Once 최종보고서 세트 13건 + 재현 스크립트 구축·수치 정정 3건",
+      "description": "MNS 라이브러리 수준을 이식(모델·판정규칙·판독매뉴얼·카탈로그 4종). 재집계로 (1) other 614건 정체 규명—분류 정규식이 전부 영어라 비영어권 웨딩 통째 누락, 웨딩 비중 68.2%→72.7%; (2) 환율 오류 건수 5건 $3,565→4건 $3,340; (3) 총매출 $54,921→$55,145로 정정. 학생팀 소속은 계원예대로 확정, 수업 운영 기록은 요구 범위에서 제외.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "034",
+      "date": "2026-08-02",
+      "title": "MNS 발표덱 3종 분리 · 공통 모듈 우선 · 검증 내장",
+      "description": "리서치(A·B) vs 하네싱(C) 분리로 3파일 구성(A 21p·B 17p·C 19p). 셋 이상부터 중복 문제라 판단해 `덱공통.py`에 디자인 토큰·슬라이드 템플릿 6종 모아 세 스크립트가 import. 렌더러 부재로 육안 확인 불가 → `audit()` 함수로 캔버스 밖·텍스트 넘침 자동 검사(한글 폭 보정), 초기 4건 잡아 고쳐 최종 0건. 수치 도판 6장(손잡이 축 오차·소실점 등)은 새로 그림.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "01",
+      "date": "2026-08-02",
+      "title": "settings.local.json 권한 광범위 허용 38 + 금지 12 정비",
+      "description": "일회성 명령 100건 넘게 쌓여 매번 승인 버튼 눌러야 하는 문제 해결. 읽기·탐색·실행·파일정리·git 읽기·워크스페이스 내부 Read/Write/Edit 광범위 허용 38건 추가. 워크스페이스 CLAUDE.md §4를 규칙으로 강제하는 금지 12건 신설(original/·원본/ 쓰기 차단, .env·credentials 읽기 차단, rm·git push·git reset --hard는 매번 확인). 기존 87건 보존하고 백업.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "063",
+      "date": "2026-08-02",
+      "title": "CURRENT_WEEK_ID W30 → W31 승격 + W31 의미 보강",
+      "description": "auto-capture hook이 W31 daily 활동은 캡처했으나 summary·projects·decisions 미채움. 일일 로그 6일치(7/28~8/2) 기반으로 완전 보강. W28~W30 3주 일괄 마감 이후 첫 정상 사이클 마감.",
+      "isMilestone": false
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-08-02T02:59:18.609Z",
+  "tokens": {
+    "total": {
+      "in": 36903,
+      "out": 3523926,
+      "cache_read": 612177767,
+      "cache_write": 48211536
+    },
+    "costUSD": 195.9188,
+    "costKRW": 288001
+  }
+}

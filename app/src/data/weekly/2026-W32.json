@@ -1,0 +1,424 @@
+{
+  "week": "2026-W32",
+  "range": {
+    "from": "2026-08-03",
+    "to": "2026-08-09"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 6,
+    "sessions": 1,
+    "newProjects": 2,
+    "filesChanged": 448
+  },
+  "daily": [
+    {
+      "date": "2026-08-03",
+      "weekday": "월",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "03",
+        "01",
+        "11",
+        "081",
+        "091",
+        "09",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 642,
+                "out": 836731,
+                "cache_read": 135431863,
+                "cache_write": 9840092,
+                "messages": 341,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 642,
+              "out": 836731,
+              "cache_read": 135431863,
+              "cache_write": 9840092,
+              "messages": 341
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 47,
+                "out": 48699,
+                "cache_read": 2679057,
+                "cache_write": 181085,
+                "messages": 25,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 47,
+              "out": 48699,
+              "cache_read": 2679057,
+              "cache_write": 181085,
+              "messages": 25
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 21,
+                "out": 7347,
+                "cache_read": 855132,
+                "cache_write": 96111,
+                "messages": 12,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 21,
+              "out": 7347,
+              "cache_read": 855132,
+              "cache_write": 96111,
+              "messages": 12
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "weekday": "화",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "081",
+        "063",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 35,
+                "out": 18292,
+                "cache_read": 10274124,
+                "cache_write": 1914102,
+                "messages": 19,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 35,
+              "out": 18292,
+              "cache_read": 10274124,
+              "cache_write": 1914102,
+              "messages": 19
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] Reconfiguring competitive advantage_인용_명세서_v3.0.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "weekday": "수",
+      "filesChanged": 366,
+      "topProjectIds": [
+        "081",
+        "063",
+        "039"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 68879,
+                "out": 953213,
+                "cache_read": 130679917,
+                "cache_write": 5753209,
+                "messages": 643,
+                "costUSD": 0
+              },
+              "claude-fable-5": {
+                "in": 116,
+                "out": 45825,
+                "cache_read": 7568288,
+                "cache_write": 352641,
+                "messages": 63,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 68995,
+              "out": 999038,
+              "cache_read": 138248205,
+              "cache_write": 6105850,
+              "messages": 706
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 07_이미지하네싱_전체프로세스_통합_v0.5.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "weekday": "목",
+      "filesChanged": 12,
+      "topProjectIds": [
+        "081",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[fs scan] GF_UI 회의  내용 정리 060804.md · 내용정리에 대한 피드백 060804.md · 09_상세해설_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1519,
+                "out": 471108,
+                "cache_read": 84205289,
+                "cache_write": 1399219,
+                "messages": 298,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 1519,
+              "out": 471108,
+              "cache_read": 84205289,
+              "cache_write": 1399219,
+              "messages": 298
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "weekday": "금",
+      "filesChanged": 60,
+      "topProjectIds": [
+        "063",
+        "09",
+        "0500",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] CLAUDE.md · 00_index.md · PROJECT.md · 주의잔여물.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 63,
+                "out": 86169,
+                "cache_read": 9172603,
+                "cache_write": 137719,
+                "messages": 33,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 63,
+              "out": 86169,
+              "cache_read": 9172603,
+              "cache_write": 137719,
+              "messages": 33
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 04_Ambidexterity_firm_vs_individual.md · 05_AI_Capabilities_firm_vs_individual.md"
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 28,
+                "out": 28126,
+                "cache_read": 3586113,
+                "cache_write": 586773,
+                "messages": 14,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 28,
+              "out": 28126,
+              "cache_read": 3586113,
+              "cache_write": 586773,
+              "messages": 14
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 3051,
+                "cache_read": 777623,
+                "cache_write": 5787,
+                "messages": 2,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 3051,
+              "cache_read": 777623,
+              "cache_write": 5787,
+              "messages": 2
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "03",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "11",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "Skill 식별자는 명명 규칙에 맞춰 `paper-to-excel`, UI 표시 이름은 `논문 엑셀화`로 분",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "자동 매칭 결과는 `검증 완료`로 승격하지 않고 `자동대조`, `부분 검증`, `미검증`, `정렬 검토 필요",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "원본 PDF 수정, 무승인 외부 API 호출, 기존 결과물 덮어쓰기를 금지하는 안전 규칙을 Skill에 포함",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "특정 논문 경로와 섹션명을 제거하고 JSON 규격을 경계로 추출·판단·출력을 분리함.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "공식 Skill 검증기는 로컬 PyYAML 부재로 실행되지 않았으며, 새 의존성 설치는 승인 없이 진행하지 ",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "03",
+    "11"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-08-07T23:35:03.189Z",
+  "tokens": {
+    "total": {
+      "in": 71354,
+      "out": 2498561,
+      "cache_read": 385230009,
+      "cache_write": 20266738
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

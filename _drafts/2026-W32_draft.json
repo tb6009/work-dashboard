@@ -1,0 +1,135 @@
+{
+  "week": "2026-W32",
+  "range": {
+    "from": "2026-08-03",
+    "to": "2026-08-09"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 3,
+    "sessions": 1,
+    "newProjects": 2,
+    "filesChanged": 8
+  },
+  "daily": [
+    {
+      "date": "2026-08-03",
+      "weekday": "월",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "03",
+        "01",
+        "11"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-05",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-06",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-07",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-08",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-09",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "03",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "01",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "11",
+      "pct": 33,
+      "filesChanged": 3,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "Skill 식별자는 명명 규칙에 맞춰 `paper-to-excel`, UI 표시 이름은 `논문 엑셀화`로 분",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "자동 매칭 결과는 `검증 완료`로 승격하지 않고 `자동대조`, `부분 검증`, `미검증`, `정렬 검토 필요",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "원본 PDF 수정, 무승인 외부 API 호출, 기존 결과물 덮어쓰기를 금지하는 안전 규칙을 Skill에 포함",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "특정 논문 경로와 섹션명을 제거하고 JSON 규격을 경계로 추출·판단·출력을 분리함.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-03",
+      "projectId": "03",
+      "title": "공식 Skill 검증기는 로컬 PyYAML 부재로 실행되지 않았으며, 새 의존성 설치는 승인 없이 진행하지 ",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "03",
+    "11"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-08-02T22:06:55.455Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-08-02T22:06:55.455Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

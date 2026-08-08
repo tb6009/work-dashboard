@@ -5,7 +5,7 @@
     "to": "2026-08-09"
   },
   "status": "current",
-  "summary": "Hermes Agent 운영 시작(8/7) — Slack·Telegram 통합 게이트웨이, 로컬 워크스페이스 실행 도구, 지속 메모리와 프로젝트·일정 보조 역할 확립 · 박사연구 이론 위키 4개 계보축 원문 검증 · Anchornode/GF_UI 설계 체계화 · W32 Claude 사용량의 Anthropic 공식 API 환산비용 $389.24(약 57.2만원) 복구",
+  "summary": "Hermes Agent 운영 시작(8/7) — Slack·Telegram 통합 게이트웨이, 로컬 워크스페이스 실행 도구, 지속 메모리와 프로젝트·일정 보조 역할 확립 · 박사연구 이론 위키 4개 계보축 원문 검증 · Anchornode/GF_UI 설계 체계화 · W32 Claude 사용량의 Anthropic 공식 API 환산비용 $389.24(오늘 환율 기준 약 54.8만원) 복구",
   "kpis": {
     "activeProjects": 6,
     "sessions": 1,
@@ -415,7 +415,7 @@
       "date": "2026-08-08",
       "projectId": "063",
       "title": "W32 토큰 비용 계산을 Anthropic 공식 API 단가로 복구",
-      "description": "가격표에 없던 Claude Opus 5와 Fable 5 때문에 비용이 0달러로 기록되던 원인을 수정했다. W32 Claude 사용량의 API 환산 추정치는 $389.24(환율 1,470원 기준 약 572,179원)이다. 이는 실제 구독 청구액이 아니라 API 단가 기준 추정치이며, 8월 7일부터 시작한 Hermes/OpenAI Codex 사용량은 현재 Claude transcript 추출기의 집계 범위에 포함되지 않는다."
+      "description": "가격표에 없던 Claude Opus 5와 Fable 5 때문에 비용이 0달러로 기록되던 원인을 수정했다. W32 Claude 사용량의 API 환산 추정치는 $389.24이며, 2026-08-08 KST 기준 Google Finance USD/KRW 현물환율 1,407.89원을 적용한 원화 환산액은 약 548,003원이다. 이는 실제 구독 청구액이 아니라 API 단가 기준 추정치이며, 8월 7일부터 시작한 Hermes/OpenAI Codex 사용량은 현재 Claude transcript 추출기의 집계 범위에 포함되지 않는다."
     }
   ],
   "newProjects": [
@@ -432,6 +432,6 @@
       "cache_write": 20266738
     },
     "costUSD": 389.2373,
-    "costKRW": 572179
+    "costKRW": 548003
   }
 }

@@ -48,6 +48,10 @@ const PRICING = {
   'gpt-5-codex':         { in:  1.25, out: 10.00, cache_read: 0.125, cache_write_5m:  0    },
 };
 
+// Google Finance USD/KRW 현물환율 (2026-08-07 23:58 UTC, 2026-08-08 KST 기준).
+// https://www.google.com/finance/quote/USD-KRW
+const USD_KRW = 1407.89;
+
 // `claude-opus-4-7-20260101` → `claude-opus-4-7`
 function normalizeModel(model) {
   if (!model || model === '<synthetic>') return null;
@@ -305,12 +309,12 @@ weekly.tokens = {
     cache_write: totalCacheW,
   },
   costUSD: +totalCost.toFixed(4),
-  costKRW: Math.round(totalCost * 1470),
+  costKRW: Math.round(totalCost * USD_KRW),
 };
 
 console.log(`✏️  업데이트 entry: ${touchedEntries} / 신규 entry: ${newEntries}`);
 console.log(`💰 주 합계: in ${totalIn.toLocaleString()} / out ${totalOut.toLocaleString()} / cache_read ${totalCacheR.toLocaleString()} / cache_write ${totalCacheW.toLocaleString()}`);
-console.log(`   비용: $${totalCost.toFixed(2)} (≈ ₩${Math.round(totalCost * 1470).toLocaleString()})`);
+console.log(`   비용: $${totalCost.toFixed(2)} (≈ ₩${Math.round(totalCost * USD_KRW).toLocaleString()}, USD/KRW ${USD_KRW})`);
 
 if (DRY) {
   console.log('🔍 DRY-RUN — 파일 미수정');

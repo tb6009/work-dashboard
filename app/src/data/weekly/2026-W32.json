@@ -5,7 +5,7 @@
     "to": "2026-08-09"
   },
   "status": "current",
-  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "summary": "Hermes Agent 운영 시작(8/7) — Slack·Telegram 통합 게이트웨이, 로컬 워크스페이스 실행 도구, 지속 메모리와 프로젝트·일정 보조 역할 확립 · 박사연구 이론 위키 4개 계보축 원문 검증 · Anchornode/GF_UI 설계 체계화 · W32 Claude 사용량의 Anthropic 공식 API 환산비용 $389.24(약 57.2만원) 복구",
   "kpis": {
     "activeProjects": 6,
     "sessions": 1,
@@ -38,7 +38,7 @@
                 "cache_read": 135431863,
                 "cache_write": 9840092,
                 "messages": 341,
-                "costUSD": 0
+                "costUSD": 150.138
               }
             },
             "total": {
@@ -48,7 +48,7 @@
               "cache_write": 9840092,
               "messages": 341
             },
-            "costUSD": 0
+            "costUSD": 150.138
           }
         },
         {
@@ -62,7 +62,7 @@
                 "cache_read": 2679057,
                 "cache_write": 181085,
                 "messages": 25,
-                "costUSD": 0
+                "costUSD": 3.689
               }
             },
             "total": {
@@ -72,7 +72,7 @@
               "cache_write": 181085,
               "messages": 25
             },
-            "costUSD": 0
+            "costUSD": 3.689
           }
         },
         {
@@ -86,7 +86,7 @@
                 "cache_read": 855132,
                 "cache_write": 96111,
                 "messages": 12,
-                "costUSD": 0
+                "costUSD": 1.212
               }
             },
             "total": {
@@ -96,7 +96,7 @@
               "cache_write": 96111,
               "messages": 12
             },
-            "costUSD": 0
+            "costUSD": 1.212
           }
         },
         {
@@ -126,7 +126,7 @@
                 "cache_read": 10274124,
                 "cache_write": 1914102,
                 "messages": 19,
-                "costUSD": 0
+                "costUSD": 17.5577
               }
             },
             "total": {
@@ -136,7 +136,7 @@
               "cache_write": 1914102,
               "messages": 19
             },
-            "costUSD": 0
+            "costUSD": 17.5577
           }
         },
         {
@@ -170,7 +170,7 @@
                 "cache_read": 130679917,
                 "cache_write": 5753209,
                 "messages": 643,
-                "costUSD": 0
+                "costUSD": 125.4722
               },
               "claude-fable-5": {
                 "in": 116,
@@ -178,7 +178,7 @@
                 "cache_read": 7568288,
                 "cache_write": 352641,
                 "messages": 63,
-                "costUSD": 0
+                "costUSD": 14.2687
               }
             },
             "total": {
@@ -188,7 +188,7 @@
               "cache_write": 6105850,
               "messages": 706
             },
-            "costUSD": 0
+            "costUSD": 139.7409
           }
         },
         {
@@ -221,7 +221,7 @@
                 "cache_read": 84205289,
                 "cache_write": 1399219,
                 "messages": 298,
-                "costUSD": 0
+                "costUSD": 62.6331
               }
             },
             "total": {
@@ -231,7 +231,7 @@
               "cache_write": 1399219,
               "messages": 298
             },
-            "costUSD": 0
+            "costUSD": 62.6331
           }
         },
         {
@@ -253,7 +253,7 @@
       "entries": [
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W32.json"
+          "did": "Hermes Agent 운영 시작 — Slack·Telegram에서 동일한 개인 업무 어시스턴트로 연결하고 launchd 자동 실행을 검증. 로컬 워크스페이스 탐색·분석, 파일·코드·Git·배포 실행, 지속 메모리, 프로젝트 목표·사이드트랙 점검, 이메일 기반 일정 후보와 개인 캘린더 관리 보조 역할을 핵심으로 정의"
         },
         {
           "projectId": "09",
@@ -266,7 +266,7 @@
                 "cache_read": 9172603,
                 "cache_write": 137719,
                 "messages": 33,
-                "costUSD": 0
+                "costUSD": 7.6016
               }
             },
             "total": {
@@ -276,7 +276,7 @@
               "cache_write": 137719,
               "messages": 33
             },
-            "costUSD": 0
+            "costUSD": 7.6016
           }
         },
         {
@@ -294,7 +294,7 @@
                 "cache_read": 3586113,
                 "cache_write": 586773,
                 "messages": 14,
-                "costUSD": 0
+                "costUSD": 6.1637
               }
             },
             "total": {
@@ -304,7 +304,7 @@
               "cache_write": 586773,
               "messages": 14
             },
-            "costUSD": 0
+            "costUSD": 6.1637
           }
         }
       ]
@@ -328,7 +328,7 @@
                 "cache_read": 777623,
                 "cache_write": 5787,
                 "messages": 2,
-                "costUSD": 0
+                "costUSD": 0.5013
               }
             },
             "total": {
@@ -338,7 +338,7 @@
               "cache_write": 5787,
               "messages": 2
             },
-            "costUSD": 0
+            "costUSD": 0.5013
           }
         }
       ]
@@ -403,6 +403,19 @@
       "projectId": "03",
       "title": "공식 Skill 검증기는 로컬 PyYAML 부재로 실행되지 않았으며, 새 의존성 설치는 승인 없이 진행하지 ",
       "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-07",
+      "projectId": "063",
+      "title": "Hermes Agent를 상시 개인 업무 어시스턴트로 운영 시작",
+      "description": "Slack과 Telegram을 하나의 로컬 에이전트 게이트웨이로 연결했다. Hermes는 워크스페이스 문맥을 읽고 파일·코드·Git·배포 같은 도구 작업을 직접 수행하며, 지속 메모리와 세션 연속성을 바탕으로 프로젝트 목표·다음 행동·사이드트랙을 점검하고 이메일 일정 후보와 개인 캘린더 관리를 보조하는 역할을 맡는다. launchd로 로그인 시 자동 시작하고 장애 시 재시작하도록 구성했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-08",
+      "projectId": "063",
+      "title": "W32 토큰 비용 계산을 Anthropic 공식 API 단가로 복구",
+      "description": "가격표에 없던 Claude Opus 5와 Fable 5 때문에 비용이 0달러로 기록되던 원인을 수정했다. W32 Claude 사용량의 API 환산 추정치는 $389.24(환율 1,470원 기준 약 572,179원)이다. 이는 실제 구독 청구액이 아니라 API 단가 기준 추정치이며, 8월 7일부터 시작한 Hermes/OpenAI Codex 사용량은 현재 Claude transcript 추출기의 집계 범위에 포함되지 않는다."
     }
   ],
   "newProjects": [
@@ -418,7 +431,7 @@
       "cache_read": 385230009,
       "cache_write": 20266738
     },
-    "costUSD": 0,
-    "costKRW": 0
+    "costUSD": 389.2373,
+    "costKRW": 572179
   }
 }

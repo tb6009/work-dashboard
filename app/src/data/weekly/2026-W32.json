@@ -4,13 +4,13 @@
     "from": "2026-08-03",
     "to": "2026-08-09"
   },
-  "status": "current",
-  "summary": "Hermes Agent 운영 시작(8/7) — Slack·Telegram 통합 게이트웨이, 로컬 워크스페이스 실행 도구, 지속 메모리와 프로젝트·일정 보조 역할 확립 · 박사연구 이론 위키 4개 계보축 원문 검증 · Anchornode/GF_UI 설계 체계화 · W32 Claude 사용량의 Anthropic 공식 API 환산비용 $389.24(오늘 환율 기준 약 54.8만원) 복구",
+  "status": "published",
+  "summary": "Hermes Agent 상시 운영을 시작하고 Slack·Telegram·로컬 워크스페이스를 하나의 실행 흐름으로 연결 · 0694 SYNC 프레임워크 A5 인포그래픽과 계원 이미지 스타일 라이브러리 v0.1 제작 · Anchornode GF_UI와 박사연구·몸과마음의과학 자료를 병행 · W32 Claude API 환산비용 $428.03(당일 환율 기준 약 60.3만원)",
   "kpis": {
-    "activeProjects": 6,
-    "sessions": 1,
-    "newProjects": 2,
-    "filesChanged": 448
+    "activeProjects": 10,
+    "sessions": 7,
+    "newProjects": 1,
+    "filesChanged": 596
   },
   "daily": [
     {
@@ -243,18 +243,13 @@
     {
       "date": "2026-08-07",
       "weekday": "금",
-      "filesChanged": 60,
+      "filesChanged": 58,
       "topProjectIds": [
-        "063",
         "09",
         "0500",
         "091"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "Hermes Agent 운영 시작 — Slack·Telegram에서 동일한 개인 업무 어시스턴트로 연결하고 launchd 자동 실행을 검증. 로컬 워크스페이스 탐색·분석, 파일·코드·Git·배포 실행, 지속 메모리, 프로젝트 목표·사이드트랙 점검, 이메일 기반 일정 후보와 개인 캘린더 관리 보조 역할을 핵심으로 정의"
-        },
         {
           "projectId": "09",
           "did": "[fs scan] CLAUDE.md · 00_index.md · PROJECT.md · 주의잔여물.md",
@@ -312,9 +307,14 @@
     {
       "date": "2026-08-08",
       "weekday": "토",
-      "filesChanged": 0,
+      "filesChanged": 76,
       "topProjectIds": [
-        "09"
+        "09",
+        "039",
+        "063",
+        "082",
+        "03",
+        "0500"
       ],
       "entries": [
         {
@@ -340,37 +340,203 @@
             },
             "costUSD": 0.5013
           }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_기업별_5장_보고서_구성안_v0.1.md · 01_MNS_Once_연구방법론_추출맵_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] next-env.d.ts · 2026-W32.json · data.ts · extract-token-usage.mjs"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] planner.md · SKILL.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 151,
+                "out": 82410,
+                "cache_read": 8227607,
+                "cache_write": 380907,
+                "messages": 79,
+                "costUSD": 8.5555
+              }
+            },
+            "total": {
+              "in": 151,
+              "out": 82410,
+              "cache_read": 8227607,
+              "cache_write": 380907,
+              "messages": 79
+            },
+            "costUSD": 8.5555
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 8,
+                "out": 5776,
+                "cache_read": 703036,
+                "cache_write": 15588,
+                "messages": 4,
+                "costUSD": 0.5934
+              }
+            },
+            "total": {
+              "in": 8,
+              "out": 5776,
+              "cache_read": 703036,
+              "cache_write": 15588,
+              "messages": 4
+            },
+            "costUSD": 0.5934
+          }
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] _원문_소재_대장.md"
         }
       ]
     },
     {
       "date": "2026-08-09",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 74,
+      "topProjectIds": [
+        "0694",
+        "02",
+        "063",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "0694",
+          "did": "SYNC 프레임워크를 생성 이미지층+HTML/CSS 정보층으로 분리해 A5 가로형 인포그래픽 v2.4로 완성. 생성 원본·초기 통합본·상세 최종본과 전체 프롬프트·수정 이력·파일 해시를 제작 프로세스 기록으로 영속 보관"
+        },
+        {
+          "projectId": "063",
+          "did": "Hermes Agent 운영 시작 — Slack·Telegram에서 동일한 개인 업무 어시스턴트로 연결하고 launchd 자동 실행을 검증. 로컬 워크스페이스 탐색·분석, 파일·코드·Git·배포 실행, 지속 메모리, 프로젝트 목표·사이드트랙 점검, 이메일 기반 일정 후보와 개인 캘린더 관리 보조 역할을 핵심으로 정의"
+        },
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 257,
+                "out": 423197,
+                "cache_read": 30879551,
+                "cache_write": 578870,
+                "messages": 142,
+                "costUSD": 29.6389
+              }
+            },
+            "total": {
+              "in": 257,
+              "out": 423197,
+              "cache_read": 30879551,
+              "cache_write": 578870,
+              "messages": 142
+            },
+            "costUSD": 29.6389
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W32.json"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] 2026-08-09_디지털환경-스트레스-몸의신호_브레인덤프.md · 2026-08-09_생활밀도-시간구조-회복_브레인덤프.md · index.md · PROJECT.md"
+        }
+      ]
     }
   ],
   "projects": [
     {
+      "id": "081",
+      "pct": 30,
+      "filesChanged": 3,
+      "imp": 5,
+      "nextAction": "GF_UI 상세 해설과 회의 피드백을 반영해 브랜드·인터페이스 의사결정을 확정",
+      "did": "GF_UI 회의 내용과 피드백을 정리하고 상세 해설 문서를 작성. 주중 가장 큰 AI 작업 세션으로 Anchornode 설계를 집중 전개"
+    },
+    {
+      "id": "063",
+      "pct": 20,
+      "filesChanged": 5,
+      "imp": 5,
+      "nextAction": "Hermes/OpenAI Codex 사용량도 포함하는 통합 토큰 집계 경로 설계",
+      "did": "Hermes Agent를 Slack·Telegram 기반 상시 업무 어시스턴트로 가동하고 launchd 자동 실행을 검증. W32 토큰 가격표·환율 오류를 수정하고 대시보드를 재배포"
+    },
+    {
+      "id": "0694",
+      "pct": 15,
+      "filesChanged": 10,
+      "imp": 5,
+      "nextAction": "계원 공식 CI와 사용권이 확인된 고해상도 작품·수업·Making 원본 반영",
+      "did": "SYNC 4단계 운영 루프를 A5 인포그래픽으로 제작하고 이미지 생성 프롬프트·층 분리·수정 이력·무결성 정보를 케이스 스터디로 기록"
+    },
+    {
+      "id": "09",
+      "pct": 10,
+      "filesChanged": 8,
+      "imp": 4,
+      "nextAction": "생활밀도·디지털환경 브레인덤프를 몸과마음의과학 연구 질문과 자료 구조에 연결",
+      "did": "주의잔여물과 몸의 신호를 잇는 자료를 정리하고 디지털환경–스트레스–몸의신호, 생활밀도–시간구조–회복 브레인덤프를 축적"
+    },
+    {
+      "id": "0500",
+      "pct": 8,
+      "filesChanged": 4,
+      "imp": 4,
+      "nextAction": "조직·개인 수준의 양손잡이성과 AI 역량 근거를 원문·인용 명세서와 재대조",
+      "did": "경쟁우위 인용 명세서를 갱신하고 Ambidexterity와 AI Capabilities의 firm–individual 수준 차이를 분리 정리"
+    },
+    {
+      "id": "039",
+      "pct": 5,
+      "filesChanged": 3,
+      "imp": 3,
+      "nextAction": "기업별 5장 보고서와 연구방법론 추출맵을 실제 산출물에 적용해 검증",
+      "did": "이미지 하네싱 전체 프로세스, 기업별 5장 보고서 구성안, MNS·Once 연구방법론 추출맵을 정리"
+    },
+    {
+      "id": "091",
+      "pct": 4,
+      "filesChanged": 0,
+      "imp": 3,
+      "nextAction": "AI 세션의 출판기획 결과를 파일과 작업 로그로 명시화",
+      "did": "출판기획 관련 AI 세션을 진행했으나 파일 변경은 자동 캡처되지 않음"
+    },
+    {
+      "id": "02",
+      "pct": 3,
+      "filesChanged": 0,
+      "imp": 4,
+      "nextAction": "계원 데이터 분석 세션의 판단과 산출물을 로그에 명시하고 후속 파일로 연결",
+      "did": "계원 데이터 관련 대규모 AI 분석 세션을 진행했으나 파일 변경은 자동 캡처되지 않음"
+    },
+    {
+      "id": "082",
+      "pct": 3,
+      "filesChanged": 2,
+      "imp": 2,
+      "nextAction": "planner와 Skill 정의를 실제 ICCS 프로젝트 요구에 맞춰 검증",
+      "did": "planner.md와 SKILL.md를 작성·수정해 프로젝트 계획 도구의 기반을 정리"
+    },
+    {
       "id": "03",
-      "pct": 33,
-      "filesChanged": 3,
-      "imp": 0,
-      "nextAction": "TODO"
-    },
-    {
-      "id": "01",
-      "pct": 33,
-      "filesChanged": 3,
-      "imp": 0,
-      "nextAction": "TODO"
-    },
-    {
-      "id": "11",
-      "pct": 33,
-      "filesChanged": 3,
-      "imp": 0,
-      "nextAction": "TODO"
+      "pct": 2,
+      "filesChanged": 0,
+      "imp": 2,
+      "nextAction": "paper-to-excel Skill을 실제 논문 샘플에 적용하고 검증 상태 표기를 확인",
+      "did": "paper-to-excel Skill의 명명·검증 상태·원본 보호·추출 경계 규칙을 설계"
     }
   ],
   "decisions": [
@@ -378,34 +544,34 @@
       "date": "2026-08-03",
       "projectId": "03",
       "title": "Skill 식별자는 명명 규칙에 맞춰 `paper-to-excel`, UI 표시 이름은 `논문 엑셀화`로 분",
-      "description": "TODO — Claude가 채움"
+      "description": "기계가 사용하는 Skill ID와 사람이 읽는 UI 이름을 분리해 자동화 호환성과 한국어 가독성을 동시에 유지하기로 했다."
     },
     {
       "date": "2026-08-03",
       "projectId": "03",
       "title": "자동 매칭 결과는 `검증 완료`로 승격하지 않고 `자동대조`, `부분 검증`, `미검증`, `정렬 검토 필요",
-      "description": "TODO — Claude가 채움"
+      "description": "자동 매칭은 검증 완료가 아니므로 근거 수준을 자동대조·부분 검증·미검증·정렬 검토 필요로 구분해 과신을 방지하기로 했다."
     },
     {
       "date": "2026-08-03",
       "projectId": "03",
       "title": "원본 PDF 수정, 무승인 외부 API 호출, 기존 결과물 덮어쓰기를 금지하는 안전 규칙을 Skill에 포함",
-      "description": "TODO — Claude가 채움"
+      "description": "재현성과 원본 안전을 위해 원본 PDF 수정, 승인 없는 외부 API 호출, 기존 결과물 덮어쓰기를 금지 규칙으로 명시했다."
     },
     {
       "date": "2026-08-03",
       "projectId": "03",
       "title": "특정 논문 경로와 섹션명을 제거하고 JSON 규격을 경계로 추출·판단·출력을 분리함.",
-      "description": "TODO — Claude가 채움"
+      "description": "특정 논문에 종속되지 않도록 경로·섹션명을 제거하고 JSON 스키마를 계약으로 삼아 추출·판단·출력 단계를 분리했다."
     },
     {
       "date": "2026-08-03",
       "projectId": "03",
       "title": "공식 Skill 검증기는 로컬 PyYAML 부재로 실행되지 않았으며, 새 의존성 설치는 승인 없이 진행하지 ",
-      "description": "TODO — Claude가 채움"
+      "description": "공식 검증기는 PyYAML 부재로 실행하지 못했다. 환경을 임의 변경하지 않고 새 의존성 설치는 사용자 승인 뒤 진행하기로 했다."
     },
     {
-      "date": "2026-08-07",
+      "date": "2026-08-09",
       "projectId": "063",
       "title": "Hermes Agent를 상시 개인 업무 어시스턴트로 운영 시작",
       "description": "Slack과 Telegram을 하나의 로컬 에이전트 게이트웨이로 연결했다. Hermes는 워크스페이스 문맥을 읽고 파일·코드·Git·배포 같은 도구 작업을 직접 수행하며, 지속 메모리와 세션 연속성을 바탕으로 프로젝트 목표·다음 행동·사이드트랙을 점검하고 이메일 일정 후보와 개인 캘린더 관리를 보조하는 역할을 맡는다. launchd로 로그인 시 자동 시작하고 장애 시 재시작하도록 구성했다.",
@@ -415,23 +581,29 @@
       "date": "2026-08-08",
       "projectId": "063",
       "title": "W32 토큰 비용 계산을 Anthropic 공식 API 단가로 복구",
-      "description": "가격표에 없던 Claude Opus 5와 Fable 5 때문에 비용이 0달러로 기록되던 원인을 수정했다. W32 Claude 사용량의 API 환산 추정치는 $389.24이며, 2026-08-08 KST 기준 Google Finance USD/KRW 현물환율 1,407.89원을 적용한 원화 환산액은 약 548,003원이다. 이는 실제 구독 청구액이 아니라 API 단가 기준 추정치이며, 8월 7일부터 시작한 Hermes/OpenAI Codex 사용량은 현재 Claude transcript 추출기의 집계 범위에 포함되지 않는다."
+      "description": "가격표에 없던 Claude Opus 5와 Fable 5 때문에 비용이 0달러로 기록되던 원인을 수정했다. 8월 9일까지 반영한 W32 Claude 사용량의 API 환산 추정치는 $428.03이며, 2026-08-08 KST 기준 Google Finance USD/KRW 현물환율 1,407.89원을 적용한 원화 환산액은 약 602,612원이다. 실제 구독 청구액이 아닌 API 단가 기준 추정치이며 Hermes/OpenAI Codex 사용량은 현재 집계에서 제외된다."
+    },
+    {
+      "date": "2026-08-09",
+      "projectId": "0694",
+      "title": "SYNC 프레임워크 비주얼 시스템 v0.1 확립",
+      "description": "생성 모델에는 글자 없는 이미지층만 맡기고 한글·수치·단계 도식은 HTML/CSS로 정확하게 조판하는 방식을 확정했다. 생성 원본–초기 통합본–상세 최종본을 모두 보존하고, 작품·과정·환경을 진입점으로 삼는 이미지 스타일 라이브러리로 확장한다.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
-    "03",
-    "11"
+    "0694"
   ],
   "labelChanges": [],
-  "buildAt": "2026-08-07T23:35:03.189Z",
+  "buildAt": "2026-08-10T01:49:59.000Z",
   "tokens": {
     "total": {
-      "in": 71354,
-      "out": 2498561,
-      "cache_read": 385230009,
-      "cache_write": 20266738
+      "in": 71770,
+      "out": 3009944,
+      "cache_read": 425040203,
+      "cache_write": 21242103
     },
-    "costUSD": 389.2373,
-    "costKRW": 548003
+    "costUSD": 428.0251,
+    "costKRW": 602612
   }
 }

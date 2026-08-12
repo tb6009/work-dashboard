@@ -1,9 +1,15 @@
 {
   "id": "0694",
   "currentSituation": {
-    "summary": "SYNC 프레임워크를 실제 2027학년도 수시 2차 입시홍보 제작에 적용해 공통 가이드 9p, 실수방지 8p, PLAY 5.5 마스터 9p와 A/B/C 탐색안을 만들고, 근거–렌더–독립평가–하드게이트까지 작업 과정 포트폴리오로 공개했다.",
-    "phase": "W33 주중 파일럿 실증 · 26페이지 캐러셀 및 과정 포트폴리오 완료 · 공식 감수·권리·CTA 확인 대기",
+    "summary": "SYNC 프레임워크의 2027학년도 수시 2차 파일럿과 포트폴리오를 공개하고, 이미지 출처를 OpenAI gpt-image-2 생성 1개와 Gemini 작업 트랙의 HTML/CSS 렌더 보드 7개로 분리 감사했다.",
+    "phase": "W33 주중 파일럿 실증 · 이미지 출처 감사 완료 · ChatGPT 웹앱 생성물 없음 · 공식 감수·권리·CTA 확인 대기",
     "recentLogs": [
+      {
+        "date": "2026-08-12",
+        "title": "OpenAI·Gemini 이미지 출처 분리 감사",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/docs/logs/20260812_log.md",
+        "excerpt": "포트폴리오 누락 여부를 재조사해 Codex image_gen에서 OpenAI gpt-image-2로 생성한 원본 1개를 확인했다. ChatGPT 웹앱 생성물은 확인되지 않았으며 Gemini 작업 트랙의 7개 보드는 HTML/CSS 렌더 산출물로 구분했다."
+      },
       {
         "date": "2026-08-11",
         "title": "SYNC 입시홍보 캐러셀 파일럿 및 자동화 실증",
@@ -29,8 +35,15 @@
       "title": "SYNC 주중 작업과정 이미지 포트폴리오",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/sync-process-portfolio/index.html",
       "fileKind": "html",
-      "summary": "8월 11일 파일럿의 대표 과정 이미지 7개, 필터, 원본 확대, 워크플로·평가·하드게이트를 담은 공개형 HTML 기록.",
+      "summary": "대표 과정 이미지 8개를 OpenAI 생성 1개와 Gemini 작업 트랙 7개로 구분하고, 출처 필터·원본 확대·워크플로·하드게이트를 담은 공개형 HTML 기록.",
       "modifiedAt": "2026-08-12"
+    },
+    {
+      "title": "OpenAI gpt-image-2 SYNC 파이프라인 이미지층",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/outputs/kaywon_sync_a5/이미지/sync_pipeline_background_v1.png",
+      "fileKind": "image",
+      "summary": "Codex built-in image_gen에서 OpenAI gpt-image-2로 생성한 메탈 공정·빈 카드·블루 레일 이미지. ChatGPT 웹앱 생성물은 아님.",
+      "modifiedAt": "2026-08-09"
     },
     {
       "title": "2027 수시 2차 공통 가이드 9페이지",
@@ -57,7 +70,7 @@
       "title": "SYNC 비주얼 포트폴리오 HTML",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/sync-portfolio/index.html",
       "fileKind": "html",
-      "summary": "7개 비주얼 산출물, 카테고리 필터, 원본 비율 라이트박스, SYNC 제작 프로세스와 전체 프롬프트를 포함한 외부 공개형 갤러리.",
+      "summary": "OpenAI gpt-image-2 이미지층과 HTML/CSS 조판 결과, 스타일 라이브러리를 모델·호출 경로까지 구분한 공개형 갤러리.",
       "modifiedAt": "2026-08-10"
     },
     {
@@ -102,5 +115,5 @@
       "estimate": "주제 확정 후 2~3일"
     }
   ],
-  "buildAt": "2026-08-12T10:20:00+09:00"
+  "buildAt": "2026-08-12T12:15:00+09:00"
 }

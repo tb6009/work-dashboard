@@ -1,0 +1,3012 @@
+{
+  "generatedAt": "2026-08-12T12:30:00+09:00",
+  "scope": "0694 제작 과정에서 생성된 출력 이미지. 외부 연구 레퍼런스·원시 공식 사진·분석 차트 제외. 동일 SHA-256 파일은 한 카드로 통합하고 모든 경로를 sourcePaths에 기록.",
+  "orderingBasis": [
+    "2026-08-09 제작 로그 순서",
+    "2026-08-10 로그의 스타일 라이브러리→PLAY 5.5 파일럿→입시 캐러셀 확장 순서",
+    "2026-08-11 Gemini 트랙은 파일 생성시각과 파일명 단계 결합",
+    "Preview/Highres는 출력 단계로 구분"
+  ],
+  "counts": {
+    "sourceFiles": 207,
+    "uniqueImages": 174,
+    "duplicatePaths": 33,
+    "openai": 1,
+    "htmlCss": 102,
+    "geminiWorkspace": 63,
+    "nanobanana": 8
+  },
+  "items": [
+    {
+      "stage": "01 · OpenAI image → SYNC composite",
+      "title": "OpenAI 이미지층 — SYNC pipeline background",
+      "tool": "openai",
+      "variant": "생성 원본",
+      "width": 1489,
+      "height": 1056,
+      "bytes": 1276220,
+      "sha256": "4ffeccf72d0fdca67d3295ff73c33d157ae98b04867b72eb99041afc8c3302e5",
+      "sourcePaths": [
+        "outputs/kaywon_sync_a5/이미지/sync_pipeline_background_v1.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-09T17:11:16",
+      "sequence": 1,
+      "asset": "process-all/001_4ffeccf72d.png"
+    },
+    {
+      "stage": "01 · OpenAI image → SYNC composite",
+      "title": "SYNC 초기 조판 통합본",
+      "tool": "html",
+      "variant": "HTML/CSS 합성",
+      "width": 1748,
+      "height": 1240,
+      "bytes": 1453585,
+      "sha256": "2211238420a9fb885a002e8a05c96b6434af122b15d7618a1678eb92dd734884",
+      "sourcePaths": [
+        "outputs/kaywon_sync_a5/sync_framework_a5_landscape.png",
+        "outputs/kaywon_sync_a5/sync_framework_a5_landscape_flattened.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-09T17:14:31",
+      "sequence": 2,
+      "asset": "process-all/002_2211238420.png"
+    },
+    {
+      "stage": "01 · OpenAI image → SYNC composite",
+      "title": "SYNC 상세형 v2.4",
+      "tool": "html",
+      "variant": "HTML/CSS 합성",
+      "width": 1748,
+      "height": 1240,
+      "bytes": 1457907,
+      "sha256": "3630381e46ab9bd6f72392b59b8a2ef10677d80a424578e4354d985e98a9ab78",
+      "sourcePaths": [
+        "outputs/kaywon_sync_a5/sync_framework_a5_landscape_detailed_v2.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-09T19:31:58",
+      "sequence": 3,
+      "asset": "process-all/003_3630381e46.png"
+    },
+    {
+      "stage": "02 · Style library",
+      "title": "이미지 스타일 8종 라이브러리 보드",
+      "tool": "html",
+      "variant": "레이아웃 보드",
+      "width": 1800,
+      "height": 5680,
+      "bytes": 2044867,
+      "sha256": "4dc53fe01f4046e8c70ddc6abfdf28109c0554f757a0ea1f95c7871ee2aa43ff",
+      "sourcePaths": [
+        "prototypes/kaywon_style_library_v01/renders/00_layout_library_board.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T09:57:43",
+      "sequence": 4,
+      "asset": "process-all/004_4dc53fe01f.png"
+    },
+    {
+      "stage": "02 · Style library",
+      "title": "WORK HERO — Animation",
+      "tool": "html",
+      "variant": "1080 테스트 렌더",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 749513,
+      "sha256": "238de6bc472203ba802141aab5798e2ecbbf5bc36a81a0a37a62920e99ca87c0",
+      "sourcePaths": [
+        "prototypes/kaywon_style_library_v01/renders/01_work_hero_animation.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T09:57:43",
+      "sequence": 5,
+      "asset": "process-all/005_238de6bc47.png"
+    },
+    {
+      "stage": "02 · Style library",
+      "title": "STUDIO EVIDENCE — XR",
+      "tool": "html",
+      "variant": "1080 테스트 렌더",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 355793,
+      "sha256": "12485160d0fe11722047b1ae5f9bcfae82ae905e6af4f5eaec67f1d1356b2c8f",
+      "sourcePaths": [
+        "prototypes/kaywon_style_library_v01/renders/02_studio_evidence_xr.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T09:57:43",
+      "sequence": 6,
+      "asset": "process-all/006_12485160d0.png"
+    },
+    {
+      "stage": "02 · Style library",
+      "title": "PROCESS PROOF — Space",
+      "tool": "html",
+      "variant": "1080 테스트 렌더",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 763264,
+      "sha256": "1fcdfc941300df947d4d5e057449ea1c22d7121d972f667c075fc8688ef2c4df",
+      "sourcePaths": [
+        "prototypes/kaywon_style_library_v01/renders/03_process_proof_space.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T09:57:44",
+      "sequence": 7,
+      "asset": "process-all/007_1fcdfc9413.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 871996,
+      "sha256": "a9882078a52269756698c777ac8be2945f4686d400e029e4b35454b89d50569d",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 8,
+      "asset": "process-all/008_a9882078a5.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 277181,
+      "sha256": "bc1bf645b3f64c623ede3d70696ef23f284f3e78b375709bc0aa230590d0e194",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 9,
+      "asset": "process-all/009_bc1bf645b3.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 465463,
+      "sha256": "6e8c811e4e892477cc794e7afd8309d22b924ffd166157a6ba08e7a828cd1e75",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 10,
+      "asset": "process-all/010_6e8c811e4e.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 130709,
+      "sha256": "9d78c4a71bf4bbbab6b2cedfb5463ccfaa18058af5f8aba4ea6e2dbadc7b147d",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 11,
+      "asset": "process-all/011_9d78c4a71b.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 118462,
+      "sha256": "c0e625eb8993b83a863585b58044c6fc560de47cf9e98970c1696be77feb97e0",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 12,
+      "asset": "process-all/012_c0e625eb89.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 114542,
+      "sha256": "8fd5bca84aac68655d406d1e2322413dbb5c0f124bf6a82ca1ecee068bf453a5",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 13,
+      "asset": "process-all/013_8fd5bca84a.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 390806,
+      "sha256": "cfd200eb760b609021a312930407ed9dd78fed754cb7fb3855c9ee84e78795af",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/animation_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:43",
+      "sequence": 14,
+      "asset": "process-all/014_cfd200eb76.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 4146,
+      "bytes": 2523541,
+      "sha256": "8fce6ee7f70e1917e0032de7a1398c8a2bf2e02635b4c39fe712b01b68c4d936",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_animation.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:44",
+      "sequence": 15,
+      "asset": "process-all/015_8fce6ee7f7.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 01페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 2632810,
+      "sha256": "ebf27b4d48e62499be7576e789680190c3e7cf8305b16c1127f678bb4cb49e90",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:47",
+      "sequence": 16,
+      "asset": "process-all/016_ebf27b4d48.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 02페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 703603,
+      "sha256": "ae3a8020d62c35dffc5e02e6a173e9839dd74151ac3af93976563b9fcd5b94a3",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:47",
+      "sequence": 17,
+      "asset": "process-all/017_ae3a8020d6.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 03페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1185186,
+      "sha256": "8fbf9b2cc1a3a10ebcb9f417640404e2c2a555bb04b3dfe75967014385bb4bf0",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:48",
+      "sequence": 18,
+      "asset": "process-all/018_8fbf9b2cc1.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 04페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 260654,
+      "sha256": "9b944bf6199974092843fec636b1c95c48719a5834211cca379d3bfc0fa47969",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:48",
+      "sequence": 19,
+      "asset": "process-all/019_9b944bf619.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 05페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 233873,
+      "sha256": "09a5f02b3e8eafc6c6ac0aff3d849ecdc307942ebcde91a8c5255cbd524c6549",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:48",
+      "sequence": 20,
+      "asset": "process-all/020_09a5f02b3e.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 06페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 237030,
+      "sha256": "469b37e4ca1045a9f3f5ad1edde3c273f44665c27778a2bde281a9236fd9a9ae",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:48",
+      "sequence": 21,
+      "asset": "process-all/021_469b37e4ca.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 07페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1020817,
+      "sha256": "f8706e64fb7d5d19592f398a39d849bd16ee2c65c4f5090b0a57bb0d9856c8c4",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/animation_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:48",
+      "sequence": 22,
+      "asset": "process-all/022_f8706e64fb.png"
+    },
+    {
+      "stage": "03.1 · PLAY 5.5 애니메이션 파일럿",
+      "title": "PLAY 5.5 애니메이션 파일럿 — 전체 보드 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 6672,
+      "height": 8292,
+      "bytes": 6762398,
+      "sha256": "6b3594ac973b07cb4bc4841b51a0519d6c89293c725ee6172b6f91cd64e455f9",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/board_animation.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T15:10:50",
+      "sequence": 23,
+      "asset": "process-all/023_6b3594ac97.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 514615,
+      "sha256": "6a614007d422592a936f21007a8bee75560b35c34fe91cd303a3a0855b8782a9",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 24,
+      "asset": "process-all/024_6a614007d4.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 106052,
+      "sha256": "b0f264e7b38d10004ae6faafa213058107b6817939efffeb6b2c9ef7cdf2929c",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 25,
+      "asset": "process-all/025_b0f264e7b3.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 88721,
+      "sha256": "c367c6377b000b9e3dc150b43d300e6de3871ba18440db8046a83025984ff180",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 26,
+      "asset": "process-all/026_c367c6377b.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 124164,
+      "sha256": "381379ba9766476fa2f74b8998aa63f710eef2916cc255db8ae5456228eac6bc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 27,
+      "asset": "process-all/027_381379ba97.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 404523,
+      "sha256": "177a22aad6875fddcfc9c3262de2fc8cf19e9c44bd701e8535c9e4e61723a719",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 28,
+      "asset": "process-all/028_177a22aad6.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 109138,
+      "sha256": "b0684af4f6c509480c1ab127b3f2248d0118121c5a200f1a2af7d51da7cc6346",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 29,
+      "asset": "process-all/029_b0684af4f6.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 107771,
+      "sha256": "a828731a2d38dcdd9e651b0347130fda678625b1f6f5d5cd624dd8973a9de8b5",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 30,
+      "asset": "process-all/030_a828731a2d.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 08페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 95829,
+      "sha256": "e82a1cfb0c48e4320ef4842ececbe6a1fc7b789d9556ed271fce05c5deac843e",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 31,
+      "asset": "process-all/031_e82a1cfb0c.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 09페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 511204,
+      "sha256": "ff2d74154684a82b86557c047dedb2f772647c7253d063280530943507a071fd",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/admission_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:19",
+      "sequence": 32,
+      "asset": "process-all/032_ff2d741546.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 4146,
+      "bytes": 2123523,
+      "sha256": "f64aa14abb52e8c21062f892595b832cabc920bdf206c2387d02df24047ca92d",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_admission.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:20",
+      "sequence": 33,
+      "asset": "process-all/033_f64aa14abb.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 01페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1441030,
+      "sha256": "66d3d6c32ba49496b58215ead80750afea317a72f86dad1797e7f0cd149a472d",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:22",
+      "sequence": 34,
+      "asset": "process-all/034_66d3d6c32b.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 02페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 219736,
+      "sha256": "4214ab9752742f48b8803f1ab14231736576ca03206935d745e296dbe485deba",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:22",
+      "sequence": 35,
+      "asset": "process-all/035_4214ab9752.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 03페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 182252,
+      "sha256": "24aacaa4bbf1fd0e4d92a81f7a0bb23455cf399559806ad0028381e86fe20876",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:22",
+      "sequence": 36,
+      "asset": "process-all/036_24aacaa4bb.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 04페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 247183,
+      "sha256": "35eb12c25fb57522b4553450d6663f979c1b3ac4149cbb3692b1f519e8fb2ff1",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 37,
+      "asset": "process-all/037_35eb12c25f.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 05페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1107683,
+      "sha256": "10a617c09e469b574eb589802105f4628fbdd6150f69bd395620d8a7efb4a1fc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 38,
+      "asset": "process-all/038_10a617c09e.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 06페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 217086,
+      "sha256": "ef7991bc44e9ac820c63b1de0134f3b4511f57b14377a0258baf0dc623a55db7",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 39,
+      "asset": "process-all/039_ef7991bc44.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 07페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 218927,
+      "sha256": "ddb9306b1ae88daad0fa7e5d09ccffa60f907a6d681a93fbdd998ee5a40d6035",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 40,
+      "asset": "process-all/040_ddb9306b1a.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 08페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 199082,
+      "sha256": "9ed7025d582ed37f91c21a73f1c2949c68b85d6b3a862395396c7e1472606d66",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 41,
+      "asset": "process-all/041_9ed7025d58.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 09페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1489330,
+      "sha256": "5745d939491dedc3b211adf9cf42cb3111137a4e9e209771962e54cab822e76c",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/admission_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:23",
+      "sequence": 42,
+      "asset": "process-all/042_5745d93949.png"
+    },
+    {
+      "stage": "03.2 · 2027 수시 2차 입시 가이드",
+      "title": "2027 수시 2차 입시 가이드 — 전체 보드 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 6672,
+      "height": 8292,
+      "bytes": 5512687,
+      "sha256": "5d6df7efb41cf192d976a34e13689980ffaf06fd91f90db77d6e48e09f96c281",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/board_admission.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:25",
+      "sequence": 43,
+      "asset": "process-all/043_5d6df7efb4.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 253284,
+      "sha256": "32f6c9a0344d72826974a65fd87fbe257f534c1f4aaee3843ba2a450fb58d1d8",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 44,
+      "asset": "process-all/044_32f6c9a034.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 98513,
+      "sha256": "70e97e93b469acd848fa4ea89ddfe40eea025d45a9c8114812c0ccebe3267d17",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 45,
+      "asset": "process-all/045_70e97e93b4.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 109051,
+      "sha256": "62ecd992e40f9b4aaa9385229f8e2828ff9398810527d9adb7e5dd6bcdfe532b",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 46,
+      "asset": "process-all/046_62ecd992e4.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 102125,
+      "sha256": "7326985c49fb329a1d468f8acbfb5c87182b4813ec480db286cdc96a52988726",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 47,
+      "asset": "process-all/047_7326985c49.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 98822,
+      "sha256": "f61514cd18e75a94cfda272c6221ac545f7214ff51abdf6b7f75ba99a6c1c583",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 48,
+      "asset": "process-all/048_f61514cd18.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 120349,
+      "sha256": "ab6a0e475db93d2d35d68a0a03932b69d69eb5165ce0ee6509c4dbd99c7dabcb",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 49,
+      "asset": "process-all/049_ab6a0e475d.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 98274,
+      "sha256": "d1a345d5878b9f30033aa696f150fd1aaaafda7b67198038023a738111be5cdc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 50,
+      "asset": "process-all/050_d1a345d587.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 08페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 484858,
+      "sha256": "560896e089e6832f15a84e50df930b78d26afce48fd52588f538de723f0c5c3e",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 51,
+      "asset": "process-all/051_560896e089.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 09페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 104041,
+      "sha256": "606ce0ae3f1b9437eb14e6ca5fa9fcd3a091b7473ba4a27b3aa6a3024ca6f3fe",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/mistake_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:12",
+      "sequence": 52,
+      "asset": "process-all/052_606ce0ae3f.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 4146,
+      "bytes": 1473210,
+      "sha256": "68ed6e7095cef3d1e1c28b7bbf11453d27cf743d25fea82a01c4cee2f41a9c14",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_mistakes.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:13",
+      "sequence": 53,
+      "asset": "process-all/053_68ed6e7095.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 01페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 720638,
+      "sha256": "1ca0b7f12442417a60cc4cc207ee702b617f0e6292c4a62e471af9be9d037981",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:15",
+      "sequence": 54,
+      "asset": "process-all/054_1ca0b7f124.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 02페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 197374,
+      "sha256": "ef642446a92fc5004aaa7cfe1c85b0126bc944c974c99670e8e365adbb0b63f1",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:15",
+      "sequence": 55,
+      "asset": "process-all/055_ef642446a9.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 03페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 218578,
+      "sha256": "3e86833ead16edbdcd704b970631016c8f8e9ebe8fd806d8e65588d25754349b",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:15",
+      "sequence": 56,
+      "asset": "process-all/056_3e86833ead.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 04페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 211489,
+      "sha256": "2b3760b301f20b124dd4055d706a02e30c3fa46263b0cafe099ba96fb71a0a9f",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:15",
+      "sequence": 57,
+      "asset": "process-all/057_2b3760b301.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 05페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 199032,
+      "sha256": "24a39af87ab7a2502997e0d6ebfdc08566aa7dd46a26a83d263f369d9f781a47",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:16",
+      "sequence": 58,
+      "asset": "process-all/058_24a39af87a.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 06페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 238227,
+      "sha256": "d988328ad67da4ff2347cb555c8315386ce99c60169b5688e7a2c1b5906a037b",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:16",
+      "sequence": 59,
+      "asset": "process-all/059_d988328ad6.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 07페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 193557,
+      "sha256": "d3cf21fe1c5c3fe863446e1b6d7f76087c29a449cafab53614778a1708a3054b",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:16",
+      "sequence": 60,
+      "asset": "process-all/060_d3cf21fe1c.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 08페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 1397290,
+      "sha256": "a6e0dfcab536eacabd56b94185254487af1ec48bf375ee0986f51012f044ddd2",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:16",
+      "sequence": 61,
+      "asset": "process-all/061_a6e0dfcab5.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 09페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 214495,
+      "sha256": "3d200b9545ccfa1961c145e0a9c331d40e568d0232aac0be11eb301477218da5",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/mistake_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:16",
+      "sequence": 62,
+      "asset": "process-all/062_3d200b9545.png"
+    },
+    {
+      "stage": "03.3 · 원서접수 실수 방지",
+      "title": "원서접수 실수 방지 — 전체 보드 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 6672,
+      "height": 8292,
+      "bytes": 3625093,
+      "sha256": "f4ed38f98258b2fa23e4dcf9ba96e8c409b2739918b016d6dc70451bcb728924",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/board_mistakes.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T23:05:17",
+      "sequence": 63,
+      "asset": "process-all/063_f4ed38f982.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 333442,
+      "sha256": "c8dce7371d5dc2956fa17b0ad036dc5983b187b8ca0e51a585e48ff27f2f3fad",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 64,
+      "asset": "process-all/064_c8dce7371d.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 121456,
+      "sha256": "c1ddda522c8dac94c18bd1f36f81e28470d0eba28cbbefce62e6a03feac37d25",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 65,
+      "asset": "process-all/065_c1ddda522c.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 86521,
+      "sha256": "014ce476c3fe8de4d9651f3ba2c6a3080a66762f121d7d9117e3aa43503e90f8",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 66,
+      "asset": "process-all/066_014ce476c3.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 116163,
+      "sha256": "5024ad4ec0709e2914f4d3927d108e8649c2deb0c00d9fc07f25476d00821a3d",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 67,
+      "asset": "process-all/067_5024ad4ec0.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 135296,
+      "sha256": "3e4cf5e264a1be38b2aade985ed4bb098fe16070541bc562e2c7fd75802a2c5b",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 68,
+      "asset": "process-all/068_3e4cf5e264.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 112186,
+      "sha256": "6e98ae3fda75bc05f11e188e4b3a9eb0ec83ac67ca05186d90fa906817a8ee33",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 69,
+      "asset": "process-all/069_6e98ae3fda.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 102921,
+      "sha256": "51bfd66267e0888688f03e77c28b560535a98459b156b0b0f4605d5dc3636ef2",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 70,
+      "asset": "process-all/070_51bfd66267.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 08페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 119545,
+      "sha256": "488d78c3fe318ca9c431efe7123f06021586c5aa59a99a40667e677eefbdc1c1",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 71,
+      "asset": "process-all/071_488d78c3fe.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 09페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 103074,
+      "sha256": "be99ba3f3de1044863d955f1c356f059b8c8e3c913af63f03a19d7410e969585",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:53",
+      "sequence": 72,
+      "asset": "process-all/072_be99ba3f3d.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 10페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 86560,
+      "sha256": "fb2143f193a59983bf5cece75054128290bd422f4d2470cb589c5ca7af549f69",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_10.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:54",
+      "sequence": 73,
+      "asset": "process-all/073_fb2143f193.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 11페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 304132,
+      "sha256": "1c71cb0f94a3274ebebdae14daa72117bd50e942d244f9d6c1794e53fc5daea6",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/portfolio_11.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:54",
+      "sequence": 74,
+      "asset": "process-all/074_1c71cb0f94.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 5544,
+      "bytes": 1635543,
+      "sha256": "2e86c75d05e9103abf7c1fe1a0e26a2541a7f575fdc7445de15d8ee509dd4ebc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_portfolio.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:54",
+      "sequence": 75,
+      "asset": "process-all/075_2e86c75d05.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 01페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 928692,
+      "sha256": "ae3444348faba3be6b771833cbee3157dc3eef9629135fb12baaed6bca5f9448",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:55",
+      "sequence": 76,
+      "asset": "process-all/076_ae3444348f.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 02페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 243409,
+      "sha256": "12a6168a8af829fb01fb64d97afa2740ee06147aa2f31ce086a845703fcb2441",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 77,
+      "asset": "process-all/077_12a6168a8a.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 03페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 173919,
+      "sha256": "88c1f9db57c8b0493ee7656a0952b4e5de8efec348d21cd4e5bb7d52acc62643",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 78,
+      "asset": "process-all/078_88c1f9db57.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 04페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 232596,
+      "sha256": "73870c83d9c08564779a27e56bbbb954ae8d7af9d15874d2505584c1015a6aa7",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 79,
+      "asset": "process-all/079_73870c83d9.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 05페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 263040,
+      "sha256": "57fc0af6680671b2839cbdb5c20871ebb6d91ef98ced8d9382198bd55b26731f",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 80,
+      "asset": "process-all/080_57fc0af668.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 06페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 223113,
+      "sha256": "ee4e168d47e472ed3539913bb34c5985ebe379c51523f802e1b2bd2c45f2253c",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 81,
+      "asset": "process-all/081_ee4e168d47.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 07페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 207338,
+      "sha256": "2ce25a277f0e5939a8c58813fbf42da37dd65fa779f286b52dbac6f53724613f",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 82,
+      "asset": "process-all/082_2ce25a277f.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 08페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 236266,
+      "sha256": "aa9d3672eea3356c5915ee3fd8bf008b09be195ea3aa77ce326050b97c5358eb",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_08.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 83,
+      "asset": "process-all/083_aa9d3672ee.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 09페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 204972,
+      "sha256": "48974f55c92f97c7b9c60c0deea535a7c54d8e151c53c0be65c59f9c50ab3aab",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_09.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 84,
+      "asset": "process-all/084_48974f55c9.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 10페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 176015,
+      "sha256": "e6e2096d43a2ed82b77ae18274e3e16710bb4bbd43b569b07e0af7fba30b5546",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_10.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:56",
+      "sequence": 85,
+      "asset": "process-all/085_e6e2096d43.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 11페이지 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 2160,
+      "height": 2700,
+      "bytes": 849552,
+      "sha256": "45732043f7654a3004d14ce892791731969624a7467f21baeacf291d363cfa11",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/portfolio_11.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:57",
+      "sequence": 86,
+      "asset": "process-all/086_45732043f7.png"
+    },
+    {
+      "stage": "03.4 · 포트폴리오 vs 면접",
+      "title": "포트폴리오 vs 면접 — 전체 보드 · highres",
+      "tool": "html",
+      "variant": "highres",
+      "width": 6672,
+      "height": 11088,
+      "bytes": 3062103,
+      "sha256": "5cdbe4c8296578922e88e0370d8e7281b8573d0c83f8578055b2ce3eb4cd3e67",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders_hires/board_portfolio.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T07:35:58",
+      "sequence": 87,
+      "asset": "process-all/087_5cdbe4c829.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 190199,
+      "sha256": "5d51050817cc80fd0c46cabec8981136ea6d77fccbceec8633829cd667e8cfae",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 88,
+      "asset": "process-all/088_5d51050817.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 128900,
+      "sha256": "c62e1691ee0d84c0ca4218633fa86d0090fde465f796fde6161f38ed45cb926e",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 89,
+      "asset": "process-all/089_c62e1691ee.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 430356,
+      "sha256": "29e0625ab4749cea1d53d8463e093432471e3ef285ee700c370d0afd1c3fb2e7",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:34",
+      "sequence": 90,
+      "asset": "process-all/090_29e0625ab4.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 115366,
+      "sha256": "d45dd1aa7289fe6d63a0b1401209f00811b21153e793866b2e7295411fe5571e",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:34",
+      "sequence": 91,
+      "asset": "process-all/091_d45dd1aa72.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77214,
+      "sha256": "a550038ce915373393eefbfe9d1f39dc4bc95504a399ca1af33a0a3317768f84",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:34",
+      "sequence": 92,
+      "asset": "process-all/092_a550038ce9.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 703084,
+      "sha256": "73999f49c7cba5e95a5385c34509b1e7ae70567b67f7f8ea93c2951b031c7595",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:34",
+      "sequence": 93,
+      "asset": "process-all/093_73999f49c7.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 90490,
+      "sha256": "d217fe31617dab7ced89bb177d0ce7840368255965819c7bf4da78697cfef5fc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/space_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:34",
+      "sequence": 94,
+      "asset": "process-all/094_d217fe3161.png"
+    },
+    {
+      "stage": "03.5 · 공간연출 탐색",
+      "title": "공간연출 탐색 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 4146,
+      "bytes": 1827376,
+      "sha256": "1e733d3edb9801414ee07ec7a3ace427e7434b4149d805f8360998b9aec3654f",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_space.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:35",
+      "sequence": 95,
+      "asset": "process-all/095_1e733d3edb.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 01페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 991902,
+      "sha256": "4db73cdb7ed44f4ddb4719d462d5583874799c3d59677b546fdc0691a85eef23",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_01.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 96,
+      "asset": "process-all/096_4db73cdb7e.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 02페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 115353,
+      "sha256": "be54ca8bb523172692853cde5626cf2630225479789018a78a0e7a68f6a414f2",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_02.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 97,
+      "asset": "process-all/097_be54ca8bb5.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 03페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 121015,
+      "sha256": "6d0230aef8d86d102c376df7631cc2e2d261e2661bab73fd18aa6eb4ba4fd413",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_03.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 98,
+      "asset": "process-all/098_6d0230aef8.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 04페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 98968,
+      "sha256": "e1383596ffb3eb17952acafcb7be21b77793d671ae0dcdd09aef2e606bc7b7ad",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_04.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 99,
+      "asset": "process-all/099_e1383596ff.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 05페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 450211,
+      "sha256": "5cd447676266c60e7da7103efb40909164b164f9faf334b662b896d180f86a37",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_05.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 100,
+      "asset": "process-all/100_5cd4476762.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 06페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 108697,
+      "sha256": "43a38e7245117069370daf2b176435979bd4a3d4abf2682b5e0d008f2ba314fc",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_06.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 101,
+      "asset": "process-all/101_43a38e7245.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 07페이지 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 87478,
+      "sha256": "0d7f87a7ba5e22eda56fea44f29a4c1592c08421a29e6f58fcf15a90f605c208",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/xr_07.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:33",
+      "sequence": 102,
+      "asset": "process-all/102_0d7f87a7ba.png"
+    },
+    {
+      "stage": "03.6 · XR 콘텐츠 탐색",
+      "title": "XR 콘텐츠 탐색 — 전체 보드 · preview",
+      "tool": "html",
+      "variant": "preview",
+      "width": 3336,
+      "height": 4146,
+      "bytes": 2106996,
+      "sha256": "3b27a03b8f72fc2ef6beacebbc6e7d01d2ee088a061cdad210e5138018f72989",
+      "sourcePaths": [
+        "prototypes/kaywon_carousel_v02/renders/board_xr.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-10T12:18:35",
+      "sequence": 103,
+      "asset": "process-all/103_3b27a03b8f.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt1_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 79276,
+      "sha256": "cc4eea2ea9d50662fc9ce713ee29661827f5e6a79d2d9304eaea6ac5f9996a0c",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt1_p01_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 104,
+      "asset": "process-all/104_cc4eea2ea9.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt1_p05_pain",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 89493,
+      "sha256": "7208ffcc9860830de8e9b45328ce7d5ce24d4c73bf4977de1b5c8be574e850e6",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt1_p05_pain.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 105,
+      "asset": "process-all/105_7208ffcc98.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt1_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 83738,
+      "sha256": "6e2b6f8a595e517452f652158293c2f725f8d3724a1bbce9d2d750a884606772",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt1_p09_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 106,
+      "asset": "process-all/106_6e2b6f8a59.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt2_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 64539,
+      "sha256": "4788897a5d82546d989bb60104d7117dff9386925277356ce03683dca43b0dfb",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt2_p01_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 107,
+      "asset": "process-all/107_4788897a5d.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt2_p05_pain",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 62435,
+      "sha256": "f893168ed0dd8dadd324b9316c38faa200a19130c977868e57120e1760746dde",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt2_p05_pain.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 108,
+      "asset": "process-all/108_f893168ed0.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt2_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 44402,
+      "sha256": "6d2308a11ec3990c58d3b22e5332bf339e77c99398374633b964ff3eb6618344",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt2_p09_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 109,
+      "asset": "process-all/109_6d2308a11e.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt3_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 64807,
+      "sha256": "295715e79e817a3e9846001b9613520f775dbe2f60b5ad032db0e012a23360b9",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt3_p01_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 110,
+      "asset": "process-all/110_295715e79e.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt3_p05_pain",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 58179,
+      "sha256": "ac1c995c79ea38bf03bd27ebbb6d24d75b55787f65441e4f11bef16f7de6e018",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt3_p05_pain.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 111,
+      "asset": "process-all/111_ac1c995c79.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — opt3_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 40998,
+      "sha256": "4d0a97da52587377b3c3c50a402de849345303b39c4e12c9c157090963f0befc",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/opt3_p09_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 112,
+      "asset": "process-all/112_4d0a97da52.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — board_main_opt1",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3360,
+      "height": 1350,
+      "bytes": 240900,
+      "sha256": "35aa7f05cc1ec5c07dc31aca721560daf93c99b50d88eb565b3de75b4a192da5",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_main_opt1.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 113,
+      "asset": "process-all/113_35aa7f05cc.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — board_alt_opt2",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3360,
+      "height": 1350,
+      "bytes": 157559,
+      "sha256": "4fafbe53ff66d860ec87f9d85d97bed8647af81cde08581a40eb46c43e49d3a1",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_alt_opt2.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 114,
+      "asset": "process-all/114_4fafbe53ff.png"
+    },
+    {
+      "stage": "04.1 · Gemini track / 3방향 키프레임 탐색",
+      "title": "3방향 키프레임 탐색 — board_alt_opt3",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3360,
+      "height": 1350,
+      "bytes": 147003,
+      "sha256": "a2ab205c1cfc00549497dfe8ed86d2325506da757a2436e105b90df018cdd66f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_alt_opt3.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T10:17:30",
+      "sequence": 115,
+      "asset": "process-all/115_a2ab205c1c.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1102599,
+      "sha256": "e9fd3ead8f3c9e8040dfafc423f6303f32ff1315a62861eb5836e3fa75d623b5",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p01_cover.png",
+        "02_gemini/07_outputs/highres/master_p01_cover_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:58",
+      "sequence": 116,
+      "asset": "process-all/116_e9fd3ead8f.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p02_timeline",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 303969,
+      "sha256": "d49878adf08b9eefd85a9e684fd30010fc83062152594049453307f9e6e98db9",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p02_timeline.png",
+        "02_gemini/07_outputs/highres/master_p02_timeline_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 117,
+      "asset": "process-all/117_d49878adf0.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p03_type_a",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 402075,
+      "sha256": "1c53e543f8bfd9196d95cc33937b7cc557aaa81325699bec33e674615d813297",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p03_type_a.png",
+        "02_gemini/07_outputs/highres/master_p03_type_a_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 118,
+      "asset": "process-all/118_1c53e543f8.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p04_type_b",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 280097,
+      "sha256": "28b5ec922b66ccaf0478d3d258c43ec1685f348e86357ee054d4286d90636cc6",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p04_type_b.png",
+        "02_gemini/07_outputs/highres/master_p04_type_b_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 119,
+      "asset": "process-all/119_28b5ec922b.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p05_qa",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 358806,
+      "sha256": "a4247fc5612f374c06e2a3f6f03721e938fe8b3817ea2207042fa6b5c8304829",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p05_qa.png",
+        "02_gemini/07_outputs/highres/master_p05_qa_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 120,
+      "asset": "process-all/120_a4247fc561.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p06_flow",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 83523,
+      "sha256": "8e60ac23cb8aa90048ef28f817de77248b610742f6a70b8eeaef5eca8d2f83f1",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p06_flow.png",
+        "02_gemini/07_outputs/highres/master_p06_flow_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 121,
+      "asset": "process-all/121_8e60ac23cb.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p07_doc_check",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 99435,
+      "sha256": "26b1a667349bd7f8e61f73f99c37c0e49af77c1957c7a651ac83ada3fb48b4a7",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p07_doc_check.png",
+        "02_gemini/07_outputs/highres/master_p07_doc_check_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:26:59",
+      "sequence": 122,
+      "asset": "process-all/122_26b1a66734.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p08_after",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 198552,
+      "sha256": "ceb470bca998892ffa8bf146c4582ebcff9e6fe36300b3f01b7e8a7ec1bb5209",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p08_after.png",
+        "02_gemini/07_outputs/highres/master_p08_after_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-12T11:27:00",
+      "sequence": 123,
+      "asset": "process-all/123_ceb470bca9.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1026229,
+      "sha256": "3e10a610937dbdfcc4cc573f056829fc887683d064f3aa5a3ee0c28303260042",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/master_p09_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-12T11:27:00",
+      "sequence": 124,
+      "asset": "process-all/124_3e10a61093.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — board_play55_masterpiece_9pages",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3384,
+      "height": 4194,
+      "bytes": 4089467,
+      "sha256": "800ec7bc6bb654166d54f24d2e95f0f144c29f3f6e56833f7d59cf376496ea0a",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_play55_masterpiece_9pages.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-12T11:27:02",
+      "sequence": 125,
+      "asset": "process-all/125_800ec7bc6b.png"
+    },
+    {
+      "stage": "04.2 · Gemini track / PLAY 5.5 마스터 초기본",
+      "title": "PLAY 5.5 마스터 초기본 — master_p09_cta_hires",
+      "tool": "gemini",
+      "variant": "highres",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1026969,
+      "sha256": "c8c28bf36298069baee014ad1f1e86b820a075a3dd0adb6eed98e703dd2c877f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/highres/master_p09_cta_hires.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-12T11:27:01",
+      "sequence": 126,
+      "asset": "process-all/126_c8c28bf362.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1173428,
+      "sha256": "e2b9de7c6a6454069663856d5d8268772628580d373226d3c49251a5c6c8278a",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p01_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 127,
+      "asset": "process-all/127_e2b9de7c6a.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p02_timeline",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 262533,
+      "sha256": "a4c7758b1f756e07c8872679a81651dfe11249526204967ae92743750e05e502",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p02_timeline.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p02_timeline_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 128,
+      "asset": "process-all/128_a4c7758b1f.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p03_type_a",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 301856,
+      "sha256": "8524ab521e2547283712cfe274277fe75a46537d986d8e9b7c66b6c8e281d80a",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p03_type_a.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p03_type_a_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 129,
+      "asset": "process-all/129_8524ab521e.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p04_type_b",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 234039,
+      "sha256": "d5d0467a22e5fbf0c6c29727bb8f75ccce8caa7faefa9156a3969c1582337d71",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p04_type_b.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p04_type_b_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 130,
+      "asset": "process-all/130_d5d0467a22.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p05_qa",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 306837,
+      "sha256": "60c08c9b51474935db6f68312617ab42e6eed0cfdc6c3ce6d1d19ca21d227e02",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p05_qa.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p05_qa_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 131,
+      "asset": "process-all/131_60c08c9b51.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p06_flow",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 88313,
+      "sha256": "7a012f8592fe626ecf95ffd98e580eb7414b41074d887560e71f48379979f774",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p06_flow.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p06_flow_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:26",
+      "sequence": 132,
+      "asset": "process-all/132_7a012f8592.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p07_doc_check",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 94488,
+      "sha256": "8b8d6e5adb8b8bd67bea18bb85c383ac54d9d0b5a993990ee3bbefc7823df356",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p07_doc_check.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p07_doc_check_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:26",
+      "sequence": 133,
+      "asset": "process-all/133_8b8d6e5adb.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p08_after",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 165681,
+      "sha256": "5fd91fe3206eab5b424ae3171330ef528eeb497bded40c3e0e2a5e22048f508f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p08_after.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p08_after_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:26",
+      "sequence": 134,
+      "asset": "process-all/134_5fd91fe320.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1097497,
+      "sha256": "4385ffbde638cea8d6e11ee4e998ba8cd1c5ada279f2b053dfb37b0d1c8f117f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_s2_p09_cta.png",
+        "02_gemini/07_outputs/highres/kyw_s2_p09_cta_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:02:26",
+      "sequence": 135,
+      "asset": "process-all/135_4385ffbde6.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — board_common_guide_9pages",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3360,
+      "height": 4170,
+      "bytes": 3944957,
+      "sha256": "88a5ec539c5529bfcc9cdc432085c9d71d141ef7104c9f7a63215218c1f2580c",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_common_guide_9pages.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:02:27",
+      "sequence": 136,
+      "asset": "process-all/136_88a5ec539c.png"
+    },
+    {
+      "stage": "04.3 · Gemini track / 공통 가이드 9p",
+      "title": "공통 가이드 9p — kyw_s2_p01_cover_hires",
+      "tool": "gemini",
+      "variant": "highres",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1173207,
+      "sha256": "70c31a950dbff4012e4e423dc622f2dc4a581510e4032f562214c966e525dc2b",
+      "sourcePaths": [
+        "02_gemini/07_outputs/highres/kyw_s2_p01_cover_hires.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:02:25",
+      "sequence": 137,
+      "asset": "process-all/137_70c31a950d.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1135215,
+      "sha256": "a33cb867a23dd83219a8ebe816654c191ea7e7b7b61386393a7ad1cf0a67bbe5",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p01_cover.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p01_cover_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:07",
+      "sequence": 138,
+      "asset": "process-all/138_a33cb867a2.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p02_fee",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 86691,
+      "sha256": "63912c050629bf7c75b7608666e9911d6b1f3cf5ec6f064236bcbdc40d014e8d",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p02_fee.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p02_fee_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:07",
+      "sequence": 139,
+      "asset": "process-all/139_63912c0506.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p03_dual",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 88480,
+      "sha256": "0d314e76bd7154ada0fe497cbe79fa23e5ac9c9d49ffb96a280366ed95ca01f6",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p03_dual.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p03_dual_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:07",
+      "sequence": 140,
+      "asset": "process-all/140_0d314e76bd.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p04_mail",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 297293,
+      "sha256": "937aa3d46cd1bef264700673d92ffccec3c55da568fadd6481d987ece9b8b0e2",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p04_mail.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:10:07",
+      "sequence": 141,
+      "asset": "process-all/141_937aa3d46c.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p05_portfolio",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 318395,
+      "sha256": "6dde718199eff76890377100662bcbac68b91e0833546abc4966b8da9727b9f6",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p05_portfolio.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p05_portfolio_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:08",
+      "sequence": 142,
+      "asset": "process-all/142_6dde718199.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p06_time",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 90955,
+      "sha256": "9820e279649f7bc765453f45ca058641d904c933a4f6c4935ca5ffcc2d8e665e",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p06_time.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p06_time_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:08",
+      "sequence": 143,
+      "asset": "process-all/143_9820e27964.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p07_check",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 87005,
+      "sha256": "2663b64a13b80bb5ae58d9077fb249001ed4ad196f9c913d8dcdf69da101471a",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p07_check.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p07_check_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:08",
+      "sequence": 144,
+      "asset": "process-all/144_2663b64a13.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p08_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 1142942,
+      "sha256": "a99a11b21af082491d94997715e4ac8de3d30e973da9285a4e6829b3fa41353b",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/kyw_mst_p08_cta.png",
+        "02_gemini/07_outputs/highres/kyw_mst_p08_cta_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T14:10:08",
+      "sequence": 145,
+      "asset": "process-all/145_a99a11b21a.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — board_mistakes_8pages",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 4464,
+      "height": 2748,
+      "bytes": 3486657,
+      "sha256": "63f83cd70c95f7e4a379b5c490e4bde5e6fd124b04e259f2263796be71c8d6a9",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_mistakes_8pages.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:10:10",
+      "sequence": 146,
+      "asset": "process-all/146_63f83cd70c.png"
+    },
+    {
+      "stage": "04.4 · Gemini track / 원서접수 실수방지 8p",
+      "title": "원서접수 실수방지 8p — kyw_mst_p04_mail_hires",
+      "tool": "gemini",
+      "variant": "highres",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 297354,
+      "sha256": "a83e3f56112c5c8cd650b60166f648bfe2ba44356ba938a2adf168d9218d78ab",
+      "sourcePaths": [
+        "02_gemini/07_outputs/highres/kyw_mst_p04_mail_hires.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:10:08",
+      "sequence": 147,
+      "asset": "process-all/147_a83e3f5611.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_a_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77034,
+      "sha256": "3e1c008574244a20375f7cc6ba0b6700a4151eabd763f11ba494224b94b88363",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_a_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 148,
+      "asset": "process-all/148_3e1c008574.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_a_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 93507,
+      "sha256": "e0efb74479538cec4da5af2fb3fc704b66ff1c0dc33a4bf0920b9394c280c250",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_a_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 149,
+      "asset": "process-all/149_e0efb74479.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_b_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 572120,
+      "sha256": "134c789025e0b892010665052d245f49f27fbdb45a846f3afb6e3daa9fc99049",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_b_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 150,
+      "asset": "process-all/150_134c789025.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_b_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 220477,
+      "sha256": "1240c279fedbfebec9d0769585fee7473cbcee1c33a93ba8005a4b3eb99f6010",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_b_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 151,
+      "asset": "process-all/151_1240c279fe.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_c_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77702,
+      "sha256": "27c13595ab0c8c7e911faca37a98fd7ea418d1c93b0c830c5e481845ce2df054",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_c_cover.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 152,
+      "asset": "process-all/152_27c13595ab.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — concept_c_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 64664,
+      "sha256": "a0a9692dd655e208fa4241f4891e51dd277d9c70ed2333b08922b196577cf804",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/concept_c_cta.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 153,
+      "asset": "process-all/153_a0a9692dd6.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — board_concept_a",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 2240,
+      "height": 1350,
+      "bytes": 175625,
+      "sha256": "e992075574c3d6cdcdb6400cc60b67026fed0e3f6dbff34cb6df5eaad7ac5926",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_concept_a.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:43",
+      "sequence": 154,
+      "asset": "process-all/154_e992075574.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — board_concept_b",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 2240,
+      "height": 1350,
+      "bytes": 820946,
+      "sha256": "dd568686daf96bcf3f67b865fd354b4244bf5e7888f86ea12dde7812bddbd04b",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_concept_b.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:44",
+      "sequence": 155,
+      "asset": "process-all/155_dd568686da.png"
+    },
+    {
+      "stage": "04.5 · Gemini track / A/B/C 디자인 방향",
+      "title": "A/B/C 디자인 방향 — board_concept_c",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 2240,
+      "height": 1350,
+      "bytes": 143299,
+      "sha256": "7d7668aca3b9e4498ca9f386bf1606697b274ecd0c23cfdd60735f004e1ca1d7",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_concept_c.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:16:44",
+      "sequence": 156,
+      "asset": "process-all/156_7d7668aca3.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p68_cover_1786425730800",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 462125,
+      "sha256": "969829c3f49b3712d71cf27b0ac8ec4299000419da26fb0f18a863d6ae6d8830",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p68_cover_1786425730800.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 157,
+      "asset": "process-all/157_969829c3f4.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p68_cta_1786425746820",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 425637,
+      "sha256": "e951d26c3280bd727598dcde3bb8a7443ea576c09991788d38b5e9986dac481f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p68_cta_1786425746820.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 158,
+      "asset": "process-all/158_e951d26c32.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p69_cover_1786425769117",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 489178,
+      "sha256": "638f0074567bd7c352543f2041d7588151dbe88ebd559ec06dca053157713f13",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p69_cover_1786425769117.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 159,
+      "asset": "process-all/159_638f007456.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p69_cta_1786425784807",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 466003,
+      "sha256": "b1f4f02502d92ee27d214f47c8e74c547f06663c58d49af0ad91b0f44dddd95f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p69_cta_1786425784807.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 160,
+      "asset": "process-all/160_b1f4f02502.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p74_cover_1786425803738",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 449939,
+      "sha256": "7dd51ada2b23d3e5931c0edafe047c1c63be9885f05172ce237ca94ac5579d45",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p74_cover_1786425803738.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 161,
+      "asset": "process-all/161_7dd51ada2b.png"
+    },
+    {
+      "stage": "04.6 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — guide_p74_cta_1786425857701",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 574505,
+      "sha256": "594fc977b7ddb1f1c82a8c78ab69c6e47feabd0ed375e8c0a906f4a517e3d329",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/guide_p74_cta_1786425857701.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T14:24:23",
+      "sequence": 162,
+      "asset": "process-all/162_594fc977b7.png"
+    },
+    {
+      "stage": "04.7 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — nanobanana_p02_timeline_1786441823066",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 500063,
+      "sha256": "4843fa60f3bdeac38b1248c188e3e803e647972512ab404f734b03993835c7be",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/nanobanana_p02_timeline_1786441823066.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T18:51:07",
+      "sequence": 163,
+      "asset": "process-all/163_4843fa60f3.png"
+    },
+    {
+      "stage": "04.7 · Gemini track / Nanobanana 생성 탐색",
+      "title": "Nanobanana 생성 탐색 — nanobanana_p03_type_a_1786441850081",
+      "tool": "nanobanana",
+      "variant": "nanobanana",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 445445,
+      "sha256": "12967b845c700ba0c2cb642d9d634d796716a9a2c51f0f4746fc6ae2162ade7d",
+      "sourcePaths": [
+        "02_gemini/07_outputs/nanobanana/nanobanana_p03_type_a_1786441850081.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T18:51:07",
+      "sequence": 164,
+      "asset": "process-all/164_12967b845c.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p01_cover",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77229,
+      "sha256": "be239e8b50edf4d055fb969b6bceb677fc96723ad51e2e14d266313f14624d19",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p01_cover.png",
+        "02_gemini/07_outputs/highres/p74_p01_cover_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 165,
+      "asset": "process-all/165_be239e8b50.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p02_timeline",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 72155,
+      "sha256": "62d71754efc36ab17af1364bdde5e51b60a9bfd91f98d619f975a0bac6500b85",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p02_timeline.png",
+        "02_gemini/07_outputs/highres/p74_p02_timeline_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 166,
+      "asset": "process-all/166_62d71754ef.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p03_type_a",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 72580,
+      "sha256": "d41fa6f2b580c669561ceb277e6944e5ce522555c4d3ea95647416c433129ef8",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p03_type_a.png",
+        "02_gemini/07_outputs/highres/p74_p03_type_a_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 167,
+      "asset": "process-all/167_d41fa6f2b5.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p04_type_b",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 80257,
+      "sha256": "40129b057cf18100d7d2b0a2d6e2c04f7cc60aa6299cfb0bd39ba9068dc49089",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p04_type_b.png",
+        "02_gemini/07_outputs/highres/p74_p04_type_b_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 168,
+      "asset": "process-all/168_40129b057c.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p05_qa",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77682,
+      "sha256": "7fdc4e97c7617a046b7205cb8a53b4b68f8eea635004a8e7b7e1e4a37e4f5a3d",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p05_qa.png",
+        "02_gemini/07_outputs/highres/p74_p05_qa_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 169,
+      "asset": "process-all/169_7fdc4e97c7.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p06_flow",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 62356,
+      "sha256": "52adaf767282c0af7e00b852241c8661684caaf794dbcf67ffac92f4be2f137c",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p06_flow.png",
+        "02_gemini/07_outputs/highres/p74_p06_flow_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 170,
+      "asset": "process-all/170_52adaf7672.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p07_doc_check",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 78277,
+      "sha256": "5be6b925367c5faab8723881557623c3a75b4f56e5a459470883365ecc63328f",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p07_doc_check.png",
+        "02_gemini/07_outputs/highres/p74_p07_doc_check_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 171,
+      "asset": "process-all/171_5be6b92536.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p08_after",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 62709,
+      "sha256": "adc96beecdd1d363a9dd80bb71a2e93a928d32fc49d7d4126d8ab6a54d6073c2",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p08_after.png",
+        "02_gemini/07_outputs/highres/p74_p08_after_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:40",
+      "sequence": 172,
+      "asset": "process-all/172_adc96beecd.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — p74_p09_cta",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 1080,
+      "height": 1350,
+      "bytes": 77451,
+      "sha256": "81082d52642bd56eb5e1f4c0d9631efbd7cac6d976636be8f6bc6c79b803cda0",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/p74_p09_cta.png",
+        "02_gemini/07_outputs/highres/p74_p09_cta_hires.png"
+      ],
+      "sourceCount": 2,
+      "sourceTime": "2026-08-11T18:56:41",
+      "sequence": 173,
+      "asset": "process-all/173_81082d5264.png"
+    },
+    {
+      "stage": "04.8 · Gemini track / P74 포맷 적용본",
+      "title": "P74 포맷 적용본 — board_p74_format_9pages",
+      "tool": "gemini",
+      "variant": "preview",
+      "width": 3360,
+      "height": 4170,
+      "bytes": 649047,
+      "sha256": "f3d1eccc851c1ccc199d4df2031645532c4c8d7c14b30973582d1e6ee6e692fb",
+      "sourcePaths": [
+        "02_gemini/07_outputs/preview/board_p74_format_9pages.png"
+      ],
+      "sourceCount": 1,
+      "sourceTime": "2026-08-11T18:56:41",
+      "sequence": 174,
+      "asset": "process-all/174_f3d1eccc85.png"
+    }
+  ]
+}

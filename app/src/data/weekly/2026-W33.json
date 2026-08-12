@@ -5,7 +5,7 @@
     "to": "2026-08-16"
   },
   "status": "current",
-  "summary": "정기 마감 전 주중 중간 업데이트: SYNC 26페이지 캐러셀과 과정 포트폴리오를 실증하고, OpenAI gpt-image-2 생성 1개와 Gemini 작업 트랙 렌더 7개의 출처를 분리 감사했다.",
+  "summary": "W33 주중 중간 업데이트: SYNC 입시홍보 파일럿의 전체 제작과정을 재감사해 207개 출력 파일을 174개 고유 이미지와 33개 동일 경로로 연결하고, OpenAI 이미지층부터 Gemini 작업 트랙까지 순서형 아카이브로 공개했다.",
   "kpis": {
     "activeProjects": 6,
     "sessions": 3,
@@ -182,17 +182,18 @@
   "projects": [
     {
       "id": "0694",
-      "pct": 85,
+      "pct": 88,
       "filesChanged": 109,
       "imp": 5,
-      "did": "26페이지 입시홍보 파일럿을 실증하고 이미지 출처를 OpenAI gpt-image-2 생성 1개와 Gemini 작업 트랙 렌더 7개로 분리한 포트폴리오를 공개했다.",
-      "nextAction": "입학지원팀 감수, 이미지 권리, 공식 로고와 CTA 링크 상태를 manifest에 연결한다.",
+      "did": "SYNC 제작 출력 207개를 SHA-256으로 전수 조사해 174개 고유 이미지·33개 동일 경로로 연결하고, OpenAI→HTML/CSS→Gemini/Nanobanana의 001–174 전체 제작과정 아카이브를 공개했다.",
+      "nextAction": "입학지원팀 감수, 이미지 권리, 공식 로고와 CTA 링크 상태를 권리 manifest에 연결한다.",
       "deliverables": [
-        "공통 가이드 9p",
-        "실수방지 8p",
-        "PLAY 5.5 마스터 9p",
+        "SYNC 전체 제작과정 아카이브 001–174",
+        "제작 출력 manifest 207 files / 174 unique / 33 duplicates",
         "OpenAI gpt-image-2 이미지층",
-        "출처별 주중 작업과정 포트폴리오"
+        "HTML/CSS 렌더 102개",
+        "Gemini 작업 트랙 63개",
+        "Nanobanana 생성 탐색 8개"
       ]
     },
     {
@@ -237,11 +238,18 @@
       "projectId": "0694",
       "title": "ChatGPT 웹앱과 OpenAI 모델 호출, Gemini 작업 트랙을 분리 표기",
       "description": "Codex image_gen에서 gpt-image-2로 생성한 이미지 1개는 OpenAI 생성물로 기록하되 ChatGPT 웹앱 출력으로 부르지 않는다. 02_gemini의 보드 7개는 HTML/CSS 렌더 결과로 표시해 생성 모델과 작업 디렉터리를 동일시하지 않는다."
+    },
+    {
+      "date": "2026-08-12",
+      "projectId": "0694",
+      "title": "대표 선별본 대신 전체 제작 출력의 해시 기반 순서형 아카이브로 전환",
+      "description": "제작 출력 207개를 SHA-256으로 비교해 고유 이미지 174개와 동일 경로 33개로 연결했다. 제작 로그·파일명 단계·생성시각으로 순서를 복원하고 외부 레퍼런스·원시 공식 사진·분석 차트는 제작 출력물과 구분했다.",
+      "isMilestone": true
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-08-12T01:15:45.671Z",
+  "buildAt": "2026-08-12T12:45:00+09:00",
   "tokens": {
     "total": {
       "in": 1933,

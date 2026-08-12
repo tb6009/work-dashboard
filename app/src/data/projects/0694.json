@@ -1,9 +1,15 @@
 {
   "id": "0694",
   "currentSituation": {
-    "summary": "SYNC 프레임워크 A5 인포그래픽, 작품·과정·환경 중심 8종 이미지 스타일 라이브러리 v0.1, 외부 공개용 비주얼 포트폴리오를 완성하고 5~8페이지 캐러셀 퍼블리싱 프로세스 v0.2와 80점 평가 기준까지 설계했다.",
-    "phase": "비주얼 시스템 v0.1·캐러셀 프로세스 v0.2 완료 · 첫 파일럿 및 공식 CI/원본 자산 검증 단계",
+    "summary": "SYNC 프레임워크를 실제 2027학년도 수시 2차 입시홍보 제작에 적용해 공통 가이드 9p, 실수방지 8p, PLAY 5.5 마스터 9p와 A/B/C 탐색안을 만들고, 근거–렌더–독립평가–하드게이트까지 작업 과정 포트폴리오로 공개했다.",
+    "phase": "W33 주중 파일럿 실증 · 26페이지 캐러셀 및 과정 포트폴리오 완료 · 공식 감수·권리·CTA 확인 대기",
     "recentLogs": [
+      {
+        "date": "2026-08-11",
+        "title": "SYNC 입시홍보 캐러셀 파일럿 및 자동화 실증",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/docs/logs/20260811_log.md",
+        "excerpt": "공식 근거와 데이터 인사이트를 O/D/E/Q로 분리하고 공통 가이드 9p, 실수방지 8p, PLAY 5.5 마스터 9p를 제작했다. 109개 집중 변경 파일, 84개 렌더 이미지, 10개 판단 문서로 제작 과정을 검증했다."
+      },
       {
         "date": "2026-08-10",
         "title": "계원 이미지 스타일 라이브러리 v0.1 제작",
@@ -19,6 +25,34 @@
     ]
   },
   "deliverables": [
+    {
+      "title": "SYNC 주중 작업과정 이미지 포트폴리오",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/sync-process-portfolio/index.html",
+      "fileKind": "html",
+      "summary": "8월 11일 파일럿의 대표 과정 이미지 7개, 필터, 원본 확대, 워크플로·평가·하드게이트를 담은 공개형 HTML 기록.",
+      "modifiedAt": "2026-08-12"
+    },
+    {
+      "title": "2027 수시 2차 공통 가이드 9페이지",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/02_gemini/07_outputs/preview/board_common_guide_9pages.png",
+      "fileKind": "image",
+      "summary": "공식 일정·전형·Q&A·접수 흐름·CTA를 모바일 4:5로 구성한 9페이지 전체 보드. 평가 97/100.",
+      "modifiedAt": "2026-08-11"
+    },
+    {
+      "title": "원서접수 5대 실수 방지 8페이지",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/02_gemini/07_outputs/preview/board_mistakes_8pages.png",
+      "fileKind": "image",
+      "summary": "결제·학과 제한·우편·업로드·마감 실수를 행동 체크리스트로 바꾼 8페이지 보드. 평가 98/100.",
+      "modifiedAt": "2026-08-11"
+    },
+    {
+      "title": "PLAY 5.5 기반 입시 캐러셀 마스터",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/02_gemini/07_outputs/preview/board_p74_format_9pages.png",
+      "fileKind": "image",
+      "summary": "PLAY 5.5의 흰 배경·계열색·반복 로고·페이지 번호·출처 체계를 적용한 9페이지 마스터.",
+      "modifiedAt": "2026-08-11"
+    },
     {
       "title": "SYNC 비주얼 포트폴리오 HTML",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/sync-portfolio/index.html",
@@ -46,34 +80,27 @@
       "fileKind": "md",
       "summary": "프롬프트–출력 대응, 층 분리, 제작 순서, 수정 이력, 해시와 재현 한계를 기록한 케이스 스터디 원본.",
       "modifiedAt": "2026-08-09"
-    },
-    {
-      "title": "계원 캐러셀 퍼블리싱 프로세스 v0.2",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/docs/process/20260810_계원_캐러셀_퍼블리싱_프로세스_v0.2.md",
-      "fileKind": "md",
-      "summary": "5~8페이지 콘텐츠 설계, 초기 시안, 독립 평가, 80점 통과 기준, 2160×2700 고해상도 출력과 실패 시 A/B/C 대안 보존 규칙.",
-      "modifiedAt": "2026-08-10"
     }
   ],
   "nextTasks": [
     {
-      "title": "Q01~Q03 사용자 답변 반영",
-      "description": "캐러셀 페이지 수, 대상자, 첫 파일럿 범위에 관한 우선 질문을 확정해 상세 스토리보드의 입력값으로 사용한다.",
-      "priority": "high",
-      "estimate": "사용자 검토"
-    },
-    {
-      "title": "공식 CI·로고·서체·색상 토큰 확보",
-      "description": "현재 provisional 강조색과 시스템 서체를 계원 공식 CI 원본·로고 안전영역·학과군 색상 체계와 대조해 확정한다.",
+      "title": "입학지원팀 공식 감수 및 CTA 확정",
+      "description": "날짜·비용·학과·제출조건을 최신 모집요강과 재대조하고 정원내 기준 문구, 프로필 링크와 접수처 URL을 승인 기록에 연결한다.",
       "priority": "high",
       "estimate": "담당 부서 협의"
     },
     {
-      "title": "첫 5~8페이지 파일럿 스토리보드 제작",
-      "description": "사용권이 확인된 고해상도 작품·수업·Making 원본을 확보하고 첫 콘텐츠로 전체 평가·출력 흐름을 검증한다.",
+      "title": "이미지·작품·초상권 manifest 연결",
+      "description": "캐러셀별 이미지 출처, 재사용 승인, 초상권과 공식 로고 안전영역 상태를 구조화해 하드게이트를 해제한다.",
       "priority": "high",
-      "estimate": "원본 확보 후 1일"
+      "estimate": "자산대장 확인"
+    },
+    {
+      "title": "신규 콘텐츠 3개 forward test",
+      "description": "같은 스킬과 엔진으로 서로 다른 주제 3개를 제작해 판단 규칙과 자동 평가의 재현성을 검증한다.",
+      "priority": "mid",
+      "estimate": "주제 확정 후 2~3일"
     }
   ],
-  "buildAt": "2026-08-10T11:03:46+09:00"
+  "buildAt": "2026-08-12T10:20:00+09:00"
 }

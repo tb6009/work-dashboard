@@ -43,7 +43,7 @@
   { "id": "067", "categoryId": "06",        "name": "디자인매거진(자인)", "type": "design",     "define": "\"자인\" 디자인 수업 도우미 — 06_Personal_Project/디자인매거진/", "status": "active", "aliases": ["11"] },
   { "id": "068", "categoryId": "06",        "name": "executiveCochingForum", "type": "education", "define": "Father Hunger 발표 확장 (경쟁의 과학적 척추 · 4-dyad 매트릭스 · 인용 검증) — 06_Personal_Project/068_exacutiveCochingForum/", "status": "new", "createdAt": "2026-06-24" },
   { "id": "0691","categoryId": "06",        "name": "WCIF",               "type": "education",  "define": "WCIF 2026 세계문화산업포럼 Future Stage 세션3 패널 (7/2~3 대구) — 06_Personal_Project/0691_WCIF/", "status": "active", "createdAt": "2026-07-01" },
-  { "id": "0694","categoryId": "06",        "name": "SYNC프레임워크 자동화", "type": "design",     "define": "계원예술대학교 입시홍보 콘텐츠의 기획·생성·검증·축적을 연결하는 SYNC 비주얼 자동화 시스템", "status": "new", "createdAt": "2026-08-09", "portfolioUrl": "/sync-portfolio/index.html" },
+  { "id": "0694","categoryId": "06",        "name": "SYNC프레임워크 자동화", "type": "design",     "define": "계원예술대학교 입시홍보 콘텐츠의 기획·생성·검증·축적을 연결하는 SYNC 비주얼 자동화 시스템", "status": "new", "createdAt": "2026-08-09", "portfolioUrl": "/sync-portfolio/index.html", "processPortfolioUrl": "/sync-process-portfolio/index.html" },
 
   { "id": "081", "categoryId": "08",        "name": "Anchornode",        "type": "design",     "define": "Anchor Node 브랜드 + gameaify/spica 3-track — 08_project/081_Anchornode/", "status": "new", "createdAt": "2026-05-11" },
   { "id": "082", "categoryId": "08",        "name": "ICCS",              "type": "research",   "define": "ICCS 프로젝트 (셋업 전) — 08_project/082_ICCS/", "status": "new",    "createdAt": "2026-05-22" },

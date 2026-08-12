@@ -27,6 +27,7 @@ export interface ProjectMeta {
   webUrl?: string;           // 프로덕션 배포 URL (있는 프로젝트만)
   designHistoryUrl?: string; // 디자인 히스토리 페이지 (외부 URL 또는 내부 정적 경로)
   portfolioUrl?: string;     // 외부 공개용 프로젝트 비주얼 포트폴리오
+  processPortfolioUrl?: string; // 작업 중간과정·제작 기록 이미지 포트폴리오
   appUrl?: string;           // 실행 가능한 앱/데모 페이지 (내부 정적 경로 또는 외부 URL). 상세 페이지에 "실행" 버튼으로 노출.
 }
 

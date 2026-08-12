@@ -1,0 +1,248 @@
+{
+  "week": "2026-W33",
+  "range": {
+    "from": "2026-08-10",
+    "to": "2026-08-16"
+  },
+  "status": "current",
+  "summary": "정기 마감 전 주중 중간 업데이트: SYNC를 실제 입시홍보 제작에 적용해 26페이지 캐러셀, A/B/C 탐색, 독립 평가와 과정 포트폴리오까지 실증했다.",
+  "kpis": {
+    "activeProjects": 6,
+    "sessions": 3,
+    "newProjects": 0,
+    "filesChanged": 38
+  },
+  "daily": [
+    {
+      "date": "2026-08-10",
+      "weekday": "월",
+      "filesChanged": 4,
+      "topProjectIds": [
+        "0694",
+        "09",
+        "01",
+        "039",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "01",
+          "did": "[fs scan] 08_Gemini_퍼포먼스_향상_및_원인분석_보고서.md"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 코너스톤_프로젝트_현황_목표대비_진단보고서_테스트_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] index.html · page.tsx · 0694.json · projects.json · 2026-W32.json 외 1건"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "weekday": "화",
+      "filesChanged": 21,
+      "topProjectIds": [
+        "0694",
+        "081",
+        "063",
+        "01",
+        "02"
+      ],
+      "entries": [
+        {
+          "projectId": "0694",
+          "did": "공통 가이드 9p·실수방지 8p·PLAY 5.5 마스터 9p, A/B/C 탐색안, 84개 렌더와 독립 평가를 제작하고 재현 가능한 입시홍보 작업장·스킬 초안을 정리했다.",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/docs/logs/20260811_log.md"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] 09_Gemini_신규프로토콜_실증_비교실험.md · AI_MASTER_RULES.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1025,
+                "out": 1299154,
+                "cache_read": 195535175,
+                "cache_write": 5850464,
+                "messages": 388,
+                "costUSD": 166.817
+              },
+              "claude-fable-5": {
+                "in": 4,
+                "out": 8734,
+                "cache_read": 0,
+                "cache_write": 1218418,
+                "messages": 2,
+                "costUSD": 15.667
+              }
+            },
+            "total": {
+              "in": 1029,
+              "out": 1307888,
+              "cache_read": 195535175,
+              "cache_write": 7068882,
+              "messages": 390
+            },
+            "costUSD": 182.4839
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 10_제출본_캠페인기획_v1.0.md · 00_수시2차_캐러셀_시안_v1.0.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "weekday": "수",
+      "filesChanged": 13,
+      "topProjectIds": [
+        "063",
+        "0694",
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "W33 정기 마감과 분리한 주중 중간 업데이트를 구성하고 0694 프로젝트 타이틀 아래 작업과정 이미지 포트폴리오 HTML 링크를 추가했다."
+        },
+        {
+          "projectId": "0694",
+          "did": "중간과정 대표 이미지 7개를 선별해 필터·원본 확대·워크플로·평가 하드게이트가 포함된 별도 공개 포트폴리오로 기록했다."
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 853,
+                "out": 696154,
+                "cache_read": 124021319,
+                "cache_write": 10266676,
+                "messages": 435,
+                "costUSD": 143.5855
+              },
+              "claude-fable-5": {
+                "in": 51,
+                "out": 86342,
+                "cache_read": 12052410,
+                "cache_write": 3438611,
+                "messages": 27,
+                "costUSD": 59.3527
+              }
+            },
+            "total": {
+              "in": 904,
+              "out": 782496,
+              "cache_read": 136073729,
+              "cache_write": 13705287,
+              "messages": 462
+            },
+            "costUSD": 202.9382
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-14",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-15",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-16",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "0694",
+      "pct": 85,
+      "filesChanged": 109,
+      "imp": 5,
+      "did": "공식 근거–콘텐츠 설계–A/B/C 탐색–모바일 렌더–독립 평가를 실제 26페이지 입시홍보 캐러셀로 실증하고 작업과정 이미지 포트폴리오를 공개했다.",
+      "nextAction": "입학지원팀 감수, 이미지 권리, 공식 로고와 CTA 링크 상태를 manifest에 연결한다.",
+      "deliverables": [
+        "공통 가이드 9p",
+        "실수방지 8p",
+        "PLAY 5.5 마스터 9p",
+        "주중 작업과정 포트폴리오"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 10,
+      "filesChanged": 8,
+      "imp": 4,
+      "did": "W33 주중 중간 업데이트와 0694 과정 포트폴리오 링크·프로젝트 상세 데이터를 WorkDashboard에 통합했다.",
+      "nextAction": "운영 URL에서 프로젝트 타이틀 하단 링크, 필터, 원본 확대와 모바일 레이아웃을 검증한다."
+    },
+    {
+      "id": "081",
+      "pct": 5,
+      "filesChanged": 0,
+      "imp": 3,
+      "did": "AI 세션 사용량이 중간 집계에 반영됐다.",
+      "nextAction": "주간 마감 시 실제 산출물과 토큰 기록을 함께 재검토한다."
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-11",
+      "projectId": "0694",
+      "title": "입시 공식 사실과 데이터 인사이트·연습 예시·미확인 질문을 O/D/E/Q 근거 등급으로 분리",
+      "description": "날짜·비용·학과·제출조건은 공식 원문만 확정 근거로 사용하고, 데이터는 전략 판단, 예시는 설명, 미확인 사항은 게시 중단 조건으로 관리한다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-11",
+      "projectId": "0694",
+      "title": "80점 평가 통과와 외부 게시 하드게이트를 별도 운영",
+      "description": "평가 점수가 높아도 사실 오류, 로고 위반, 이미지 권리 미확인, 입학지원팀 감수 미완료, CTA 미확인 중 하나가 있으면 외부 게시하지 않는다."
+    },
+    {
+      "date": "2026-08-12",
+      "projectId": "063",
+      "title": "W33 데이터는 정기 마감이 아닌 주중 중간 스냅샷으로 발행",
+      "description": "현재 주의 진행 상황을 보여주되 주간 완료로 표현하지 않고, 일요일 종료 후 정기 업데이트에서 수치·비중·다음 작업을 다시 확정한다."
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-08-12T01:15:45.671Z",
+  "tokens": {
+    "total": {
+      "in": 1933,
+      "out": 2090384,
+      "cache_read": 331608904,
+      "cache_write": 20774169
+    },
+    "costUSD": 385.4221,
+    "costKRW": 542632
+  }
+}

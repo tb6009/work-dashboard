@@ -234,6 +234,7 @@ function Hero({
         webUrl={project.webUrl}
         designHistoryUrl={project.designHistoryUrl}
         portfolioUrl={project.portfolioUrl}
+        processPortfolioUrl={project.processPortfolioUrl}
         appUrl={project.appUrl}
       />
       <div
@@ -363,17 +364,20 @@ function ExternalLinkRow({
   webUrl,
   designHistoryUrl,
   portfolioUrl,
+  processPortfolioUrl,
   appUrl,
 }: {
   projectName: string;
   webUrl?: string;
   designHistoryUrl?: string;
   portfolioUrl?: string;
+  processPortfolioUrl?: string;
   appUrl?: string;
 }) {
   const links: { label: string; href: string; emphasis?: boolean }[] = [];
   if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
+  if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
   if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });
   if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
   if (links.length === 0) return null;

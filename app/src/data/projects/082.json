@@ -1,19 +1,61 @@
 {
   "id": "082",
   "currentSituation": {
-    "summary": "ICCS 프로젝트 (셋업 전) — 08_project/082_ICCS/",
-    "phase": "셋업/초기 단계",
-    "recentLogs": [],
-    "blockers": []
+    "summary": "왕초보 에이전트 만들기 수업과제. 문서의 정보구조를 분석하고 여러 인포그래픽 표현을 비교한 뒤 전체 문서로 확장했다.",
+    "phase": "수업과제 기록·갤러리 공개",
+    "recentLogs": [
+      {
+        "date": "2026-08-14",
+        "title": "수업과제 제작과정 갤러리와 WorkDashboard 연결",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/082_ICCS/docs/logs/20260814_log.md",
+        "excerpt": "수업 설계 자료 1개와 인포그래픽 수업과제 결과 23개를 구분하고, 실제 제작 순서·단계·비식별 상태를 확인해 전체 이미지 갤러리로 연결했다."
+      },
+      {
+        "date": "2026-08-13",
+        "title": "훈련과정 카탈로그 시안 2종 제작",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/082_ICCS/docs/logs/20260813_log.md",
+        "excerpt": "기존 카탈로그 프레임을 바탕으로 정보 비교형과 선택 가이드형 시안을 제작하고 PowerPoint 렌더링과 텍스트 오버플로를 확인했다."
+      }
+    ],
+    "blockers": [
+      {
+        "type": "rule",
+        "title": "수업과제와 기업 성과를 구분",
+        "description": "교육용 실습 결과이며 기업 납품이나 실제 운영 성과로 표현하지 않는다.",
+        "severity": "permanent"
+      }
+    ]
   },
-  "deliverables": [],
+  "deliverables": [
+    {
+      "title": "왕초보 에이전트 만들기 수업과제 이미지 갤러리",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/agent-class-process/index.html",
+      "fileKind": "html",
+      "summary": "과제 이미지 23개와 수업 설계 자료 1개를 작업 프로세스와 실제 제작 순서에 따라 보여주는 전체 갤러리.",
+      "modifiedAt": "2026-08-13"
+    },
+    {
+      "title": "수업과제 이미지 manifest",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/agent-class-process/process-manifest.json",
+      "fileKind": "json",
+      "summary": "24개 고유 이미지의 단계·순서·규격·용량·SHA-256과 익명화된 공개 자산 경로를 기록한 검증용 manifest.",
+      "modifiedAt": "2026-08-13"
+    },
+    {
+      "title": "훈련과정 카탈로그 시안 비교",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/08_project/082_ICCS/2026_agent_Skill/outputs/12_동아일보_훈련과정_카탈로그/ECS_훈련과정_카탈로그_시안2종_미리보기.webp",
+      "fileKind": "image",
+      "summary": "수업 설계 과정에서 제작한 훈련과정 카탈로그 시안 2종의 비교 미리보기.",
+      "modifiedAt": "2026-08-13"
+    }
+  ],
   "nextTasks": [
     {
-      "title": "PROJECT.md 정리 + 다음 액션 1줄",
-      "description": "프로젝트 정의 + 현재 상태 + 다음 액션을 PROJECT.md에 1차 정리.",
+      "title": "수업과제 회고와 에이전트 규칙 정리",
+      "description": "첫 변환·표현 비교·전체 확장에서 확인한 규칙을 초보자용 체크리스트로 정리한다.",
       "priority": "mid",
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-05-22T00:00:00+09:00"
+  "buildAt": "2026-08-13T23:59:00+09:00"
 }

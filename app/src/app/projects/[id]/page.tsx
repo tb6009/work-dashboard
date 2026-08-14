@@ -21,8 +21,9 @@ function buildWeekly(currentPct: number) {
 
 function formatCreated(iso: string): { iso: string; rel: string } {
   const created = new Date(iso + 'T00:00:00+09:00');
-  const today = new Date('2026-05-06T00:00:00+09:00');
-  const diff = Math.round((today.getTime() - created.getTime()) / 86400000);
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const diff = Math.max(0, Math.round((today.getTime() - created.getTime()) / 86400000));
   let rel = '';
   if (diff === 0) rel = '오늘';
   else if (diff === 1) rel = '1일 전';
@@ -235,6 +236,7 @@ function Hero({
         designHistoryUrl={project.designHistoryUrl}
         portfolioUrl={project.portfolioUrl}
         processPortfolioUrl={project.processPortfolioUrl}
+        assignmentGalleryUrl={project.assignmentGalleryUrl}
         appUrl={project.appUrl}
       />
       <div
@@ -365,6 +367,7 @@ function ExternalLinkRow({
   designHistoryUrl,
   portfolioUrl,
   processPortfolioUrl,
+  assignmentGalleryUrl,
   appUrl,
 }: {
   projectName: string;
@@ -372,12 +375,14 @@ function ExternalLinkRow({
   designHistoryUrl?: string;
   portfolioUrl?: string;
   processPortfolioUrl?: string;
+  assignmentGalleryUrl?: string;
   appUrl?: string;
 }) {
   const links: { label: string; href: string; emphasis?: boolean }[] = [];
   if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
   if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
+  if (assignmentGalleryUrl) links.push({ label: '수업과제 이미지 갤러리', href: assignmentGalleryUrl, emphasis: true });
   if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });
   if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });
   if (links.length === 0) return null;

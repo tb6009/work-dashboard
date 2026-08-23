@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>작업 입력 — 단계별 흐름 v0.9 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#f2f3f5;color:#333;padding:40px 24px 90px;line-height:1.55}
+  .wrap{max-width:1300px;margin:0 auto}
+  h1{font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:700;color:#000;letter-spacing:-.015em}
+  .sub{font-size:.86rem;color:#6B7280;margin-top:7px}
+  .meta{font-size:.72rem;color:#9CA3AF;margin-top:8px}
+  h2{font-family:'DM Sans',sans-serif;font-size:1.02rem;font-weight:700;color:#000;margin-top:50px;padding-bottom:8px;border-bottom:2px solid #111}
+  .lead{font-size:.84rem;color:#6B7280;margin-top:12px}
+
+  /* 스토리보드 */
+  .board{display:flex;gap:10px;flex-wrap:nowrap;margin-top:20px;overflow-x:auto;padding-bottom:12px;align-items:stretch}
+  .step{flex:none;width:222px;display:flex;flex-direction:column}
+  .arrow{flex:none;align-self:center;color:#c0c4cc;font-size:1.1rem;padding:0 2px;display:flex;align-items:center;min-height:340px}
+  .stepno{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+  .num{width:18px;height:18px;border-radius:50%;background:#111;color:#fff;font-size:.62rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;flex:none;font-family:'DM Sans',sans-serif}
+  .act{font-size:.7rem;font-weight:600;color:#111}
+  .desc{font-size:.68rem;color:#6B7280;line-height:1.5;margin-top:7px;min-height:52px}
+  .desc b{color:#111;font-weight:600}
+  .desc .hl{color:#2563eb;font-weight:600}
+
+  .mini{background:#fff;border:1px solid #e6e6e6;border-radius:11px;overflow:hidden;flex:1;
+    display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .mtop{display:flex;align-items:center;justify-content:space-between;padding:9px 12px 0}
+  .mtitle{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:700;color:#111}
+  .seg{display:flex;background:#f2f3f5;border-radius:5px;padding:1px;width:56px}
+  .seg span{flex:1;text-align:center;font-size:.52rem;padding:2px 0;border-radius:4px;color:#9CA3AF}
+  .seg span.on{background:#fff;color:#111;font-weight:600}
+  .mbody{padding:8px 12px 10px;flex:1}
+
+  .prj{margin-bottom:9px}
+  .phd{display:flex;align-items:center;gap:5px;margin-bottom:3px}
+  .strip{width:2.5px;height:10px;border-radius:2px;flex:none}
+  .pname{font-size:.63rem;font-weight:600;color:#111}
+  .pn{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:.52rem;color:#c0c4cc}
+  .pcm{display:flex;gap:5px;padding:2px 0 2px 8px;font-size:.58rem;color:#6b7480;line-height:1.4;align-items:baseline}
+  .pcm .d{font-family:'DM Sans',sans-serif;font-size:.48rem;color:#c0c4cc;width:20px;flex:none}
+  .pcm.fresh{background:rgba(96,165,250,.1);border-radius:5px;padding:3px 5px 3px 8px;color:#1e40af}
+  .badge{font-family:'DM Sans',sans-serif;font-size:.44rem;color:#9CA3AF;background:#f4f5f7;border-radius:3px;
+    padding:1px 4px;margin-left:auto;flex:none}
+  .badge.new{background:#60A5FA;color:#fff}
+
+  .addin{display:flex;align-items:center;gap:5px;margin:3px 0 0 8px;padding:5px 8px;
+    border:1px dashed #d5d9de;border-radius:6px;font-size:.57rem;color:#b0b4bb}
+  .addin .p{color:#60A5FA;font-weight:600}
+  .addin.open{border:1.5px solid #60A5FA;border-style:solid;background:rgba(96,165,250,.06);color:#333}
+  .addin .cur{color:#60A5FA;font-weight:400}
+  .addin .done{margin-left:auto;font-size:.52rem;color:#60A5FA;font-weight:600;flex:none}
+
+  .dumpbox{border:1.5px solid #e0e3e8;border-radius:8px;padding:8px 9px;background:#fafbfc;margin-top:4px}
+  .dumpbox.act{border-color:#60A5FA;background:rgba(96,165,250,.05)}
+  .dumpbox .ph{font-size:.58rem;color:#9CA3AF;line-height:1.4}
+  .dumpbox .ph.typed{color:#333}
+  .cur{color:#60A5FA}
+  .chips{display:flex;gap:3px;flex-wrap:wrap;margin-top:6px}
+  .chip{font-size:.5rem;padding:2px 6px;border-radius:9px;border:1px solid #e0e3e8;background:#fff;color:#9CA3AF}
+  .chip.on{background:#60A5FA;border-color:#60A5FA;color:#fff;font-weight:600}
+  .chip.guess{background:rgba(96,165,250,.14);border-color:#9dc2f0;color:#2563eb;font-weight:600}
+  .chip.new{border-style:dashed}
+
+  .kbd{background:#d3d6db;border-top:1px solid #b9bcc2;padding:5px 6px 7px}
+  .krow{display:flex;gap:2.5px;margin-bottom:3px;justify-content:center}
+  .key{background:#fff;border-radius:3px;height:15px;flex:1;max-width:16px;box-shadow:0 1px 0 rgba(0,0,0,.15)}
+  .key.wide{max-width:40px}
+  .key.ret{background:#60A5FA;max-width:32px}
+  .snack{background:#111;color:#fff;border-radius:7px;padding:6px 9px;font-size:.55rem;display:flex;
+    align-items:center;gap:7px;margin-top:6px}
+  .snack .u{margin-left:auto;color:#7fb4f5;font-weight:600;flex:none}
+
+  .sec{font-family:'DM Sans',sans-serif;font-size:.52rem;font-weight:600;color:#9CA3AF;
+    text-transform:uppercase;letter-spacing:.1em;margin:9px 0 5px}
+  .sec:first-child{margin-top:0}
+
+  table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border:1px solid #e6e6e6;border-radius:10px;overflow:hidden}
+  th,td{padding:9px 14px;text-align:left;font-size:.79rem;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  th{background:#fafafa;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.06em}
+  tr:last-child td{border-bottom:none}
+  .overflow{overflow-x:auto}
+  .k{font-family:ui-monospace,monospace;font-size:.72rem;background:#f2f3f5;border:1px solid #e0e3e8;border-radius:4px;padding:1px 5px;color:#4b5563}
+  .tag{font-size:.67rem;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+  .g{background:rgba(5,150,105,.12);color:#059669}
+  .b{background:rgba(96,165,250,.12);color:#2563eb}
+  .y{background:rgba(217,164,65,.15);color:#b45309}
+  .note{background:#fffbeb;border:1px dashed #d9a441;border-radius:9px;padding:14px 18px;margin-top:20px;font-size:.81rem;color:#78350f}
+  .note b{font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>작업 입력 — 단계별 흐름</h1>
+  <p class="sub">누를 때마다 화면이 어떻게 바뀌는지. 세 갈래 전부.</p>
+  <p class="meta">v0.9 · 2026-08-22 · v0.8의 인터랙션 상세</p>
+
+  <!-- ═══════════ 흐름 A ═══════════ -->
+  <h2>흐름 A — 목록에 있는 프로젝트 · 탭 1번</h2>
+  <p class="lead">가장 흔한 경우. <b>프로젝트를 고르는 단계가 아예 없습니다</b> — 그 블록 아래에 쓰면 그 프로젝트입니다.</p>
+
+  <div class="board">
+
+    <div class="step">
+      <div class="stepno"><span class="num">1</span><span class="act">작업 탭을 연다</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>학생작업 보고서 841행</span><span class="badge">자동</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+            <div class="pcm"><span class="d">8/20</span><span>서론 문단 재배치</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="desc">프로젝트마다 <b>「+ 한 줄」</b>이 하나씩 붙어 있습니다. 회색 점선이라 눈에 안 거슬립니다.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">2</span><span class="act">「+ 한 줄」을 누른다</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="addin open"><span class="cur">|</span><span class="done">완료</span></div>
+          </div>
+          <div class="prj" style="opacity:.4">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">그 자리가 <b>입력창으로 바뀌고</b> 키보드가 올라옵니다. 화면이 새로 뜨지 않습니다 — <span class="hl">목록을 보면서 씁니다.</span></div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">3</span><span class="act">한 줄 쓴다</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="addin open" style="color:#333">하네싱 §0 경계 다듬음<span class="cur">|</span><span class="done">완료</span></div>
+          </div>
+          <div class="prj" style="opacity:.4">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">날짜·프로젝트는 <b>안 고릅니다.</b> 오늘 날짜와 이 블록의 프로젝트가 자동입니다.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">4</span><span class="act">엔터 · 저장</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">6</span></div>
+            <div class="pcm fresh"><span class="d">오늘</span><span>하네싱 §0 경계 다듬음</span><span class="badge new">방금</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="addin open"><span class="cur">|</span><span class="done">완료</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">줄이 <span class="hl">바로 위에 추가</span>되고 건수가 5 → 6이 됩니다. 입력창은 비워진 채 <b>그대로 열려 있어</b> 이어서 또 쓸 수 있습니다.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">5</span><span class="act">「완료」 또는 바깥 탭</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">6</span></div>
+            <div class="pcm"><span class="d">오늘</span><span>하네싱 §0 경계 다듬음</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+            <div class="pcm"><span class="d">8/20</span><span>서론 문단 재배치</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="desc">키보드가 내려가고 원래 화면으로 돌아옵니다. <b>저장 버튼을 따로 누르지 않습니다.</b></div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════ 흐름 B ═══════════ -->
+  <h2>흐름 B — 목록에 없는 프로젝트 · 탭 1~2번</h2>
+  <p class="lead">이번 주에 아직 안 건드린 프로젝트. 화면 맨 아래 공용 입력창을 씁니다.</p>
+
+  <div class="board">
+
+    <div class="step">
+      <div class="stepno"><span class="num">1</span><span class="act">맨 아래 입력창을 누른다</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj" style="opacity:.5">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">6</span></div>
+            <div class="pcm"><span class="d">오늘</span><span>하네싱 §0 경계 다듬음</span></div>
+          </div>
+          <div class="sec">목록에 없는 것</div>
+          <div class="dumpbox act">
+            <div class="ph">무엇을 했나요<span class="cur">|</span></div>
+            <div class="chips">
+              <span class="chip">RISE 코너스톤</span><span class="chip">논문</span>
+              <span class="chip">081 GameAIfy</span><span class="chip">082 ICCS</span>
+              <span class="chip new">+ 새로</span>
+            </div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">칩은 <b>최근 쓴 순</b>으로 뜹니다. 아직 아무것도 안 골라도 됩니다.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">2</span><span class="act">쓰기 시작한다</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj" style="opacity:.35">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">6</span></div>
+          </div>
+          <div class="sec">목록에 없는 것</div>
+          <div class="dumpbox act">
+            <div class="ph typed">ICCS 강의안 19장까지<span class="cur">|</span></div>
+            <div class="chips">
+              <span class="chip">RISE 코너스톤</span><span class="chip">논문</span>
+              <span class="chip">081 GameAIfy</span><span class="chip guess">082 ICCS ✓</span>
+              <span class="chip new">+ 새로</span>
+            </div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">문장에 「ICCS」가 있으니 <span class="hl">칩이 저절로 옅게 켜집니다.</span> 맞으면 그냥 두고, 틀리면 다른 칩을 누릅니다.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">3</span><span class="act">엔터 · 저장</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#bfac7e"></span><span class="pname">082 ICCS</span><span class="pn">1</span></div>
+            <div class="pcm fresh"><span class="d">오늘</span><span>강의안 19장까지</span><span class="badge new">방금</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="snack"><span>082 ICCS에 저장</span><span class="u">바꾸기</span></div>
+        </div>
+      </div>
+      <div class="desc"><b>082 ICCS 블록이 목록에 새로 생기고</b> 그리로 스크롤됩니다. 아래 검은 띠는 <span class="hl">3초간</span> 떴다 사라집니다 — 잘못 들어갔으면 「바꾸기」.</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">4</span><span class="act">완전히 새 프로젝트라면</span></div>
+      <div class="mini">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="sec">목록에 없는 것</div>
+          <div class="dumpbox act">
+            <div class="ph typed">첫 미팅 정리<span class="cur">|</span></div>
+            <div class="chips">
+              <span class="chip">RISE 코너스톤</span><span class="chip">논문</span>
+              <span class="chip new on">+ 새로</span>
+            </div>
+          </div>
+          <div class="dumpbox" style="margin-top:6px;border-color:#60A5FA">
+            <div class="ph typed" style="font-size:.55rem">프로젝트 이름 &nbsp;<span style="color:#333">068 코칭포럼</span><span class="cur">|</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+      <div class="desc">「+ 새로」를 누르면 <b>이름 한 칸</b>만 더 뜹니다. ID는 안 받습니다. <span class="hl">다음부터는 칩에 저절로 뜹니다.</span></div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════ 흐름 C ═══════════ -->
+  <h2>흐름 C — 자동 유입 · 탭 0번</h2>
+  <p class="lead">진현이 아무것도 안 해도 채워지는 경로. 8월에 session-log가 17일치 쌓였으니, 실제로는 이게 대부분을 채웁니다.</p>
+
+  <div class="board">
+
+    <div class="step">
+      <div class="stepno"><span class="num">1</span><span class="act">Claude Code에서 작업 종료</span></div>
+      <div class="mini" style="min-height:180px">
+        <div class="mtop"><span class="mtitle" style="font-size:.6rem;color:#6B7280">터미널</span></div>
+        <div class="mbody" style="font-family:ui-monospace,monospace;font-size:.52rem;color:#5b6472;line-height:1.7">
+          <div style="color:#059669">✓ session-log 갱신</div>
+          <div style="color:#9CA3AF">docs/logs/20260822_log.md</div>
+          <div style="margin-top:7px;color:#c0c4cc">## 작업한 프로젝트</div>
+          <div style="color:#6b7480">03_school_project/02_RISE/…</div>
+          <div style="color:#c0c4cc">## 작업 내용 요약</div>
+          <div style="color:#6b7480">MNS 회의록 3종 정리…</div>
+        </div>
+      </div>
+      <div class="desc">지금도 매번 하고 계신 일입니다. <b>새로 할 게 없습니다.</b></div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="stepno"><span class="num">2</span><span class="act">앱을 열면 이미 들어와 있다</span></div>
+      <div class="mini" style="min-height:180px">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="mbody">
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">7</span></div>
+            <div class="pcm fresh"><span class="d">오늘</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="pcm"><span class="d">오늘</span><span>하네싱 §0 경계 다듬음</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="desc"><b>「자동」 배지</b>가 붙어 손으로 넣은 것과 구분됩니다. 원본이 <code style="font-size:.62rem">docs/logs/</code>에 있으니 <span class="hl">앱에서는 고치지 않습니다</span> — 숨기기만 됩니다.</div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════ 규칙표 ═══════════ -->
+  <h2>정리 — 무엇을 하면 무엇이 되는가</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th>동작</th><th>결과</th></tr></thead>
+    <tbody>
+      <tr><td>프로젝트 블록의 <b>「+ 한 줄」</b> 탭</td><td>그 자리가 입력창이 됨. 프로젝트·날짜는 자동 지정</td></tr>
+      <tr><td><span class="k">엔터</span></td><td>저장 + 목록 맨 위에 추가. <b>입력창은 열린 채 비워짐</b> → 연속 입력</td></tr>
+      <tr><td><span class="k">완료</span> 또는 바깥 탭</td><td>키보드 내려가고 입력창 닫힘. 저장 버튼 없음</td></tr>
+      <tr><td>쓰다가 화면을 벗어남</td><td>쓰던 내용은 <b>임시 보관</b>. 다시 열면 그대로 있음</td></tr>
+      <tr><td>하단 공용 입력창에 쓰기</td><td>문장에서 프로젝트를 추정해 칩이 옅게 켜짐</td></tr>
+      <tr><td>칩을 직접 누름</td><td>추정을 무시하고 그 프로젝트로 고정</td></tr>
+      <tr><td>아무 칩도 안 켜진 채 엔터</td><td>저장 안 됨. <b>「어디에 넣을까요」</b>를 물어봄</td></tr>
+      <tr><td>저장 직후 검은 띠 <b>「바꾸기」</b></td><td>3초 안에 누르면 프로젝트 다시 고름</td></tr>
+      <tr><td>줄을 왼쪽으로 밀기</td><td>삭제. 자동 유입 줄은 <b>숨기기</b>로 표시</td></tr>
+      <tr><td>본문에 <span class="k">→</span> 를 넣음</td><td>뒤쪽이 「다음 할 일」로 따로 저장 <span style="color:#9CA3AF">(예: 서론 재배치 → 다음은 방법론)</span></td></tr>
+      <tr><td>프로젝트 이름 탭</td><td>그 프로젝트만 펼쳐 전체 이력 보기</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <b>설계 원칙 하나</b> — 이 화면에는 <b>「저장」 버튼이 없습니다.</b> 지금 Work·Thesis 탭은 다 쓰고 저장을 눌러야 남습니다.
+    저장을 안 눌러 날아간 경험이 한 번이라도 있으면 그 화면은 안 쓰게 됩니다. 엔터가 곧 저장이고, 쓰다 만 것은 임시 보관됩니다.
+  </div>
+
+  <div class="note" style="background:#f4f6f8;border-color:#c9cfd6;color:#4b5563">
+    <b>아직 정할 것</b> — ① 프로젝트당 기본으로 몇 줄까지 보일지(지금 시안은 2~3줄) &nbsp;② 자동 유입 줄을 고칠 수 있게 할지(권장: 읽기전용) &nbsp;③ 프로젝트 정렬을 최근순으로 할지 건수순으로 할지
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health 블록 — A안 확정 v0.3 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f2f3f5; color: #333;
+         padding: 40px 24px 80px; line-height: 1.55; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-family: 'DM Sans', sans-serif; font-size: 1.45rem; font-weight: 700; color: #000; letter-spacing: -.01em; }
+  .sub { font-size: .85rem; color: #6B7280; margin-top: 6px; }
+  .meta { font-size: .72rem; color: #9CA3AF; margin-top: 8px; }
+
+  .frames { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 30px; align-items: flex-start; }
+  .col { flex: 1; min-width: 330px; }
+  .col-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .col-title { font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 700;
+               text-transform: uppercase; letter-spacing: .08em; }
+  .t-now { color: #9CA3AF; } .t-a { color: #60A5FA; }
+  .col-note { font-size: .71rem; color: #9CA3AF; }
+  .height { font-family: 'DM Sans', sans-serif; font-size: .68rem; color: #9CA3AF; margin-bottom: 8px; }
+  .height b { color: #333; font-weight: 600; }
+
+  .phone { width: 100%; max-width: 390px; background: #fff; border: 1px solid #e6e6e6;
+           border-radius: 14px; padding: 16px 24px 20px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .seclabel { font-family: 'DM Sans', sans-serif; font-size: .7rem; font-weight: 500; color: #6B7280;
+              text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; }
+
+  /* ── 지금 ── */
+  .old-f { margin-bottom: 10px; }
+  .old-l { font-size: .68rem; color: #808080; margin-bottom: 4px; }
+  .row { display: flex; align-items: center; gap: 6px; }
+  .num { width: 44px; font-size: 14px; color: #333; background: #f8f8f8; border: 1px solid #e6e6e6;
+         border-radius: 6px; padding: 5px 4px; text-align: center; font-family: inherit; }
+  .unit { font-size: .72rem; color: #808080; }
+  .ok { font-size: .7rem; font-weight: 600; color: #fff; background: #60A5FA; border: none;
+        border-radius: 6px; padding: 5px 12px; margin-left: auto; }
+  .txt { width: 100%; font-size: 13px; color: #aaa; background: #f8f8f8; border: 1px solid #e6e6e6;
+         border-radius: 6px; padding: 6px 10px; font-family: inherit; }
+  .chip { font-family: 'DM Sans', sans-serif; font-size: .66rem; color: #6B7280; background: #f8f8f8;
+          border: 1px solid #e6e6e6; border-radius: 10px; padding: 2px 8px; }
+  .chips { display: flex; gap: 4px; margin-top: 6px; }
+  .cond { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #e6e6e6; background: #f8f8f8;
+          color: #808080; font-size: .8rem; font-weight: 600; font-family: inherit; }
+  .cond.on { border: 2px solid #60A5FA; background: rgba(96,165,250,.08); color: #60A5FA; }
+  .step { width: 34px; height: 34px; border-radius: 50%; border: 1px solid #e6e6e6; background: #f8f8f8;
+          font-size: 1rem; color: #6B7280; display: flex; align-items: center; justify-content: center; flex: none; }
+  .step.plus { border-color: #60A5FA; background: rgba(96,165,250,.08); color: #60A5FA; }
+  .cnt { font-size: 1.05rem; font-weight: 600; min-width: 30px; text-align: center; }
+  .dead { opacity: .38; margin-top: 8px; }
+  .dead .old-l { text-decoration: line-through; }
+  .warn { font-size: .65rem; color: #c0392b; margin-top: 3px; }
+
+  /* ── A안 (간격 2배) ── */
+  .cline { display: flex; align-items: center; gap: 12px;
+           padding: 11px 0; border-bottom: 1px solid #f2f2f2; }
+  .cline:last-child { border-bottom: none; padding-bottom: 2px; }
+  .cline:first-of-type { padding-top: 2px; }
+  .clab { font-size: .7rem; color: #808080; width: 42px; flex: none; }
+
+  .auto-line { display: flex; align-items: center; gap: 8px; }
+  .auto-v { font-size: .85rem; color: #333; font-weight: 500; }
+  .auto-dot { color: #d0d0d0; }
+  .auto-src { font-family: 'DM Sans', sans-serif; font-size: .58rem; color: #9CA3AF;
+              text-transform: uppercase; letter-spacing: .06em; margin-left: auto; }
+
+  .cond-s { width: 32px; height: 32px; border-radius: 7px; border: 1px solid #e6e6e6; background: #f8f8f8;
+            color: #808080; font-size: .78rem; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .cond-s.on { border: 2px solid #60A5FA; background: rgba(96,165,250,.08); color: #60A5FA; }
+
+  .grp { display: flex; align-items: center; gap: 4px; }
+  .gname { font-size: .66rem; color: #9CA3AF; margin-right: 3px; }
+  .grp.on .gname { color: #60A5FA; font-weight: 600; }
+  .mini { width: 26px; height: 26px; border-radius: 50%; border: 1px solid #e6e6e6; background: #f8f8f8;
+          font-size: .9rem; color: #9CA3AF; cursor: pointer; display: flex; align-items: center;
+          justify-content: center; flex: none; font-family: inherit; }
+  .mini.plus { border-color: #60A5FA; color: #60A5FA; background: rgba(96,165,250,.07); }
+  .mcnt { font-size: 1.15rem; font-weight: 600; color: #333; min-width: 20px; text-align: center;
+          font-family: 'Inter', sans-serif; }
+  .tot { margin-left: auto; display: flex; align-items: baseline; gap: 1px; }
+  .tot b { font-size: 1.45rem; font-weight: 700; color: #333; line-height: 1; }
+  .tot span { font-size: .74rem; color: #9CA3AF; }
+
+  /* 데이터 패널 */
+  .panel { margin-top: 30px; background: #14161a; border-radius: 12px; padding: 18px 22px; color: #e6e6e6; }
+  .panel h3 { font-family: 'DM Sans', sans-serif; font-size: .72rem; font-weight: 600; color: #8b949e;
+              text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+  .toggle { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .tbtn { font-size: .71rem; padding: 5px 12px; border-radius: 20px; cursor: pointer; border: 1px solid #30363d;
+          background: transparent; color: #8b949e; font-family: inherit; }
+  .tbtn.on { border-color: #60A5FA; color: #60A5FA; background: rgba(96,165,250,.1); }
+  pre { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: .76rem; line-height: 1.65;
+        color: #a5d6ff; white-space: pre-wrap; }
+  .hint { font-size: .71rem; color: #8b949e; margin-top: 10px; }
+
+  h2 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; color: #000; margin-top: 38px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; background: #fff;
+          border: 1px solid #e6e6e6; border-radius: 10px; overflow: hidden; }
+  th, td { padding: 8px 13px; text-align: left; font-size: .79rem; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  th { background: #fafafa; font-family: 'DM Sans', sans-serif; font-size: .69rem; font-weight: 600;
+       color: #6B7280; text-transform: uppercase; letter-spacing: .06em; }
+  tr:last-child td { border-bottom: none; }
+  .overflow { overflow-x: auto; }
+  .yes { color: #059669; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Health 블록 — A안</h1>
+  <p class="sub">줄 간격 2배, 잔수 숫자 확대.</p>
+  <p class="meta">v0.3 · 2026-08-22 · v0.2 A안에서 간격·타입 조정</p>
+
+  <div class="frames">
+
+    <div class="col">
+      <div class="col-head"><span class="col-title t-now">지금</span><span class="col-note">9줄</span></div>
+      <div class="height">세로 약 <b>300px</b> · 손입력 4</div>
+      <div class="phone">
+        <div class="seclabel">Health</div>
+        <div class="old-f">
+          <div class="old-l">수면</div>
+          <div class="row"><input class="num" value="6" readonly><span class="unit">h</span>
+            <input class="num" value="30" readonly><span class="unit">m</span><button class="ok">수정</button></div>
+        </div>
+        <div class="old-f">
+          <div class="old-l">컨디션</div>
+          <div class="row"><button class="cond">1</button><button class="cond">2</button>
+            <button class="cond on">3</button><button class="cond">4</button><button class="cond">5</button></div>
+        </div>
+        <div class="old-f">
+          <div class="old-l">커피</div>
+          <div class="row"><button class="step">−</button><span class="cnt">3잔</span><button class="step plus">+</button></div>
+          <div class="chips"><span class="chip">오전 9시</span><span class="chip">오후 2시</span><span class="chip">오후 4시</span></div>
+        </div>
+        <div class="old-f">
+          <div class="old-l">운동</div>
+          <input class="txt" value="" placeholder="예: 조깅 30분" readonly>
+        </div>
+        <div class="old-f dead">
+          <div class="old-l">수면질 · 식사 · 메모</div>
+          <div class="warn">화면에 없는 칸 — 92일 0건</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col-head"><span class="col-title t-a">바꾼 뒤</span><span class="col-note">3줄 · 눌러보세요</span></div>
+      <div class="height">세로 약 <b>190px</b> · 손입력 2</div>
+      <div class="phone">
+        <div class="seclabel">Health</div>
+
+        <div class="cline">
+          <span class="clab">자동</span>
+          <span class="auto-line">
+            <span class="auto-v">6시간 30분</span><span class="auto-dot">·</span><span class="auto-v">4,210 걸음</span>
+          </span>
+          <span class="auto-src">구글헬스</span>
+        </div>
+
+        <div class="cline">
+          <span class="clab">컨디션</span>
+          <span class="row" data-cond>
+            <button class="cond-s">1</button><button class="cond-s">2</button><button class="cond-s on">3</button>
+            <button class="cond-s">4</button><button class="cond-s">5</button>
+          </span>
+        </div>
+
+        <div class="cline">
+          <span class="clab">커피</span>
+          <span class="grp" id="gAm"><span class="gname">오전</span>
+            <button class="mini" data-p="am" data-d="-1">−</button>
+            <span class="mcnt" id="cAm">0</span>
+            <button class="mini plus" data-p="am" data-d="1">+</button></span>
+          <span class="grp" id="gPm"><span class="gname">오후</span>
+            <button class="mini" data-p="pm" data-d="-1">−</button>
+            <span class="mcnt" id="cPm">0</span>
+            <button class="mini plus" data-p="pm" data-d="1">+</button></span>
+          <span class="tot"><b id="cTot">0</b><span>잔</span></span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel">
+    <h3>저장되는 값</h3>
+    <div class="toggle">
+      <button class="tbtn on" id="tLive">실시간으로 누름</button>
+      <button class="tbtn" id="tBatch">저녁에 몰아서 넣음</button>
+    </div>
+    <pre id="out"></pre>
+    <p class="hint" id="hint"></p>
+  </div>
+
+  <h2>줄어드는 것</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th></th><th>지금</th><th>바꾼 뒤</th></tr></thead>
+    <tbody>
+      <tr><td>세로 높이</td><td>약 300px</td><td class="yes">약 190px</td></tr>
+      <tr><td>줄 수</td><td>9줄</td><td class="yes">3줄</td></tr>
+      <tr><td>손으로 넣는 칸</td><td>4 (수면·컨디션·커피·운동)</td><td class="yes">2 (컨디션·커피)</td></tr>
+      <tr><td>화면 없는 죽은 칸</td><td>3 (수면질·식사·메모)</td><td class="yes">0</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>데이터 처리</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th></th><th>지금</th><th>바꾼 뒤</th></tr></thead>
+    <tbody>
+      <tr><td>coffee</td><td>3</td><td>3 — <b>그대로</b>. 기존 통계·차트 영향 없음</td></tr>
+      <tr><td>coffee_log</td><td>[{hour:9},{hour:14},{hour:16}]</td><td>[{period:"am",hour:9}, {period:"pm",hour:null}]</td></tr>
+      <tr><td>과거 26일치</td><td>—</td><td>읽을 때 hour&lt;12 → 오전. <b>마이그레이션 없음</b></td></tr>
+      <tr><td>고칠 파일</td><td>—</td><td>TodayTab.tsx 1개 + api.ts 타입 1줄</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<script>
+  var live = true, log = { am: [], pm: [] };
+
+  function render() {
+    document.getElementById('cAm').textContent = log.am.length;
+    document.getElementById('cPm').textContent = log.pm.length;
+    document.getElementById('cTot').textContent = log.am.length + log.pm.length;
+    document.getElementById('gAm').classList.toggle('on', log.am.length > 0);
+    document.getElementById('gPm').classList.toggle('on', log.pm.length > 0);
+
+    var all = log.am.concat(log.pm);
+    var body = all.map(function (e) {
+      return '    { period: "' + e.period + '", hour: ' + (e.hour === null ? 'null' : e.hour) + ' }';
+    }).join(',\n');
+    document.getElementById('out').textContent =
+      '{\n  coffee: ' + all.length + ',\n  coffee_log: [' + (all.length ? '\n' + body + '\n  ' : '') + ']\n}';
+    document.getElementById('hint').textContent = live
+      ? '실시간으로 누르면 시각까지 함께 남습니다.'
+      : '몰아서 넣은 건 hour를 비웁니다. 틀린 시각을 채워 넣지 않습니다.';
+  }
+
+  document.querySelectorAll('.mini[data-p]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var p = btn.dataset.p;
+      if (parseInt(btn.dataset.d, 10) > 0) log[p].push({ period: p, hour: live ? (p === 'am' ? 10 : 15) : null });
+      else log[p].pop();
+      render();
+    });
+  });
+
+  document.querySelectorAll('[data-cond] .cond-s').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('[data-cond] .cond-s').forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+    });
+  });
+
+  document.getElementById('tLive').addEventListener('click', function () {
+    live = true; this.classList.add('on');
+    document.getElementById('tBatch').classList.remove('on'); render();
+  });
+  document.getElementById('tBatch').addEventListener('click', function () {
+    live = false; this.classList.add('on');
+    document.getElementById('tLive').classList.remove('on'); render();
+  });
+
+  render();
+</script>
+</body>
+</html>

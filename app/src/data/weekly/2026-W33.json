@@ -4,19 +4,19 @@
     "from": "2026-08-10",
     "to": "2026-08-16"
   },
-  "status": "current",
+  "status": "past",
   "summary": "정기 마감 전 주중 중간 업데이트: SYNC 제작과정 포트폴리오와 함께 왕초보 에이전트 만들기 수업과제의 인포그래픽 제작 과정 24개 이미지를 순서형 갤러리로 기록했다.",
   "kpis": {
-    "activeProjects": 10,
+    "activeProjects": 12,
     "sessions": 3,
     "newProjects": 0,
-    "filesChanged": 203
+    "filesChanged": 317
   },
   "daily": [
     {
       "date": "2026-08-10",
       "weekday": "월",
-      "filesChanged": 3,
+      "filesChanged": 2,
       "topProjectIds": [
         "0694",
         "09",
@@ -42,7 +42,7 @@
     {
       "date": "2026-08-11",
       "weekday": "화",
-      "filesChanged": 20,
+      "filesChanged": 19,
       "topProjectIds": [
         "0694",
         "081",
@@ -105,7 +105,7 @@
     {
       "date": "2026-08-12",
       "weekday": "수",
-      "filesChanged": 81,
+      "filesChanged": 78,
       "topProjectIds": [
         "063",
         "0694",
@@ -225,7 +225,7 @@
     {
       "date": "2026-08-13",
       "weekday": "목",
-      "filesChanged": 84,
+      "filesChanged": 83,
       "topProjectIds": [
         "039",
         "082",
@@ -294,13 +294,15 @@
     {
       "date": "2026-08-14",
       "weekday": "금",
-      "filesChanged": 15,
+      "filesChanged": 108,
       "topProjectIds": [
         "082",
         "063",
         "091",
         "03",
-        "039"
+        "039",
+        "02",
+        "09"
       ],
       "entries": [
         {
@@ -349,41 +351,225 @@
                 "costUSD": 0
               },
               "claude-opus-5": {
-                "in": 44,
-                "out": 91544,
-                "cache_read": 15323504,
-                "cache_write": 86255,
-                "messages": 22,
-                "costUSD": 10.4897
+                "in": 276,
+                "out": 274938,
+                "cache_read": 46537505,
+                "cache_write": 1772352,
+                "messages": 143,
+                "costUSD": 41.2208
               }
             },
             "total": {
-              "in": 150,
-              "out": 170758,
-              "cache_read": 18870339,
-              "cache_write": 1118591,
-              "messages": 75
+              "in": 382,
+              "out": 354152,
+              "cache_read": 50084340,
+              "cache_write": 2804688,
+              "messages": 196
             },
-            "costUSD": 10.4897
+            "costUSD": 41.2208
           }
         },
         {
           "projectId": "039",
           "did": "[fs scan] 01_본보고서_태일_코너스톤_컨설팅_결과보고서_v0.1.md · 01_본보고서_한국주택정보_코너스톤_컨설팅_결과보고서_v0.1.md"
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] _MOVED_09_시안.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] _MOVED_092_영상과제.md"
         }
       ]
     },
     {
       "date": "2026-08-15",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 12,
+      "topProjectIds": [
+        "03",
+        "063",
+        "039",
+        "09",
+        "101",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 620,
+                "out": 579082,
+                "cache_read": 67663407,
+                "cache_write": 2355025,
+                "messages": 327,
+                "costUSD": 63.0308
+              }
+            },
+            "total": {
+              "in": 620,
+              "out": 579082,
+              "cache_read": 67663407,
+              "cache_write": 2355025,
+              "messages": 327
+            },
+            "costUSD": 63.0308
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 24,
+                "out": 25430,
+                "cache_read": 1998445,
+                "cache_write": 28295,
+                "messages": 13,
+                "costUSD": 1.8119
+              }
+            },
+            "total": {
+              "in": 24,
+              "out": 25430,
+              "cache_read": 1998445,
+              "cache_write": 28295,
+              "messages": 13
+            },
+            "costUSD": 1.8119
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 08_MNS_학생작업과_기업적용_v0.1.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] CLAUDE.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 176,
+                "out": 100093,
+                "cache_read": 23447884,
+                "cache_write": 1054297,
+                "messages": 94,
+                "costUSD": 20.8165
+              }
+            },
+            "total": {
+              "in": 176,
+              "out": 100093,
+              "cache_read": 23447884,
+              "cache_write": 1054297,
+              "messages": 94
+            },
+            "costUSD": 20.8165
+          }
+        },
+        {
+          "projectId": "101",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 11,
+                "out": 11655,
+                "cache_read": 4635187,
+                "cache_write": 11892,
+                "messages": 6,
+                "costUSD": 2.6833
+              }
+            },
+            "total": {
+              "in": 11,
+              "out": 11655,
+              "cache_read": 4635187,
+              "cache_write": 11892,
+              "messages": 6
+            },
+            "costUSD": 2.6833
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 26,
+                "out": 7802,
+                "cache_read": 2107240,
+                "cache_write": 55223,
+                "messages": 13,
+                "costUSD": 1.5939
+              }
+            },
+            "total": {
+              "in": 26,
+              "out": 7802,
+              "cache_read": 2107240,
+              "cache_write": 55223,
+              "messages": 13
+            },
+            "costUSD": 1.5939
+          }
+        }
+      ]
     },
     {
       "date": "2026-08-16",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 15,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_통합결과보고서_뼈대_v0.1.md · 09-1_이미지하네싱_레퍼런스자료_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 685,
+                "out": 472330,
+                "cache_read": 112233746,
+                "cache_write": 4621124,
+                "messages": 368,
+                "costUSD": 96.8106
+              }
+            },
+            "total": {
+              "in": 685,
+              "out": 472330,
+              "cache_read": 112233746,
+              "cache_write": 4621124,
+              "messages": 368
+            },
+            "costUSD": 96.8106
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] build_resource_dynamic_workbook.mjs"
+        }
+      ]
     }
   ],
   "projects": [
@@ -468,15 +654,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-08-14T01:14:51.618Z",
+  "buildAt": "2026-08-16T09:16:32.411Z",
   "tokens": {
     "total": {
-      "in": 59350,
-      "out": 3748458,
-      "cache_read": 618727002,
-      "cache_write": 33271207
+      "in": 61124,
+      "out": 5128244,
+      "cache_read": 862026912,
+      "cache_write": 43083160
     },
-    "costUSD": 633.644,
-    "costKRW": 892101
+    "costUSD": 851.1222,
+    "costKRW": 1198286
   }
 }

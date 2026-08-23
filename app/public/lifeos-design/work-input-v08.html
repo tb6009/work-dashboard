@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>작업 탭 입력 인터페이스 — v0.8 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#f2f3f5;color:#333;padding:40px 24px 90px;line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto}
+  h1{font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:700;color:#000;letter-spacing:-.015em}
+  .sub{font-size:.86rem;color:#6B7280;margin-top:7px}
+  .meta{font-size:.72rem;color:#9CA3AF;margin-top:8px}
+  h2{font-family:'DM Sans',sans-serif;font-size:1.02rem;font-weight:700;color:#000;margin-top:48px;padding-bottom:8px;border-bottom:2px solid #111}
+  .diag{background:#fef2f2;border-left:3px solid #c0392b;padding:12px 16px;margin-top:18px;font-size:.83rem;color:#7f1d1d;border-radius:0 8px 8px 0}
+  .diag b{font-weight:600}
+
+  .frames{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;align-items:flex-start}
+  .col{flex:1;min-width:320px;max-width:360px}
+  .cap{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+  .cname{font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:700}
+  .c-now{color:#9CA3AF}.c-new{color:#60A5FA}
+  .cnote{font-size:.68rem;color:#9CA3AF}
+
+  .phone{background:#fff;border:1px solid #e6e6e6;border-radius:16px;overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;flex-direction:column}
+  .ptop{display:flex;align-items:center;justify-content:space-between;padding:13px 18px 0}
+  .pdate{font-family:'DM Sans',sans-serif;font-size:.93rem;font-weight:700;color:#111}
+  .seg{display:flex;background:#f2f3f5;border-radius:7px;padding:2px;width:86px}
+  .seg span{flex:1;text-align:center;font-size:.65rem;padding:3px 0;border-radius:5px;color:#9CA3AF}
+  .seg span.on{background:#fff;color:#111;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .pbody{padding:12px 18px 18px;flex:1}
+
+  .sec{font-family:'DM Sans',sans-serif;font-size:.61rem;font-weight:600;color:#9CA3AF;
+    text-transform:uppercase;letter-spacing:.11em;margin:14px 0 9px;display:flex;align-items:baseline}
+  .sec:first-child{margin-top:2px}
+  .sec .r{margin-left:auto;letter-spacing:0;text-transform:none;color:#c0c4cc}
+
+  /* 지금 — 구 입력 */
+  .oldlab{font-size:.66rem;color:#808080;margin:12px 0 5px}
+  .sel{display:flex;align-items:center;background:#f8f8f8;border:1px solid #e6e6e6;border-radius:7px;
+    padding:8px 11px;font-size:.74rem;color:#333}
+  .sel .car{margin-left:auto;color:#9CA3AF;font-size:.6rem}
+  .inp{background:#f8f8f8;border:1px solid #e6e6e6;border-radius:7px;padding:8px 11px;
+    font-size:.74rem;color:#c0c4cc}
+  .two{display:flex;gap:6px}
+  .two .inp{flex:1}
+  .savebtn{width:100%;padding:9px;font-size:.75rem;font-weight:600;color:#fff;background:#000;
+    border-radius:8px;text-align:center;margin-top:8px}
+  .steps{margin-top:12px;font-size:.68rem;color:#c0392b;line-height:1.8}
+  .steps b{font-weight:600}
+
+  /* 프로젝트 블록 */
+  .prj{margin-bottom:14px}
+  .phd{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .strip{width:3px;height:13px;border-radius:2px;flex:none}
+  .pname{font-size:.77rem;font-weight:600;color:#111}
+  .pn{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:.62rem;color:#c0c4cc}
+  .pcm{display:flex;gap:7px;padding:3px 0 3px 10px;font-size:.71rem;color:#5b6472;line-height:1.45;align-items:baseline}
+  .pcm .d{font-family:'DM Sans',sans-serif;font-size:.57rem;color:#c0c4cc;width:25px;flex:none}
+  .auto{font-family:'DM Sans',sans-serif;font-size:.53rem;color:#9CA3AF;background:#f4f5f7;
+    border-radius:4px;padding:1px 5px;margin-left:auto;flex:none}
+
+  /* 인라인 추가 */
+  .addin{display:flex;align-items:center;gap:7px;margin:4px 0 0 10px;padding:6px 10px;
+    border:1px dashed #d5d9de;border-radius:8px;font-size:.7rem;color:#b0b4bb;cursor:pointer}
+  .addin .p{color:#60A5FA;font-weight:600}
+  .addin:hover{border-color:#60A5FA;color:#60A5FA;background:rgba(96,165,250,.04)}
+  .addin.open{border:1.5px solid #60A5FA;border-style:solid;background:rgba(96,165,250,.05);color:#333;cursor:text}
+  .addin .cur{color:#60A5FA}
+
+  /* 하단 공용 입력 */
+  .dumpbox{border:1.5px solid #60A5FA;border-radius:11px;padding:11px 13px;background:rgba(96,165,250,.04);margin-top:6px}
+  .dumpbox .ph{font-size:.75rem;color:#9CA3AF;line-height:1.5}
+  .dumpbox .cur{color:#60A5FA}
+  .chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+  .chip{font-size:.65rem;padding:4px 10px;border-radius:12px;border:1px solid #e0e3e8;
+    background:#fff;color:#6B7280;cursor:pointer;font-family:inherit}
+  .chip:hover{border-color:#b9cdec}
+  .chip.on{background:#60A5FA;border-color:#60A5FA;color:#fff;font-weight:600}
+  .chip.new{border-style:dashed;color:#9CA3AF}
+  .hintline{font-size:.64rem;color:#9CA3AF;margin-top:8px;line-height:1.5}
+
+  .nav{display:flex;border-top:1px solid #e6e6e6;padding:7px 0 9px;background:#fff}
+  .nv{flex:1;text-align:center}
+  .nv .kr{display:block;font-size:.72rem;font-weight:700;color:#c0c4cc}
+  .nv .en{display:block;font-family:'DM Sans',sans-serif;font-size:.44rem;color:#c0c4cc;text-transform:uppercase;letter-spacing:.05em}
+  .nv.on .kr{color:#000}.nv.on .en{color:#60A5FA}
+
+  table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border:1px solid #e6e6e6;border-radius:10px;overflow:hidden}
+  th,td{padding:9px 14px;text-align:left;font-size:.79rem;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  th{background:#fafafa;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.06em}
+  tr:last-child td{border-bottom:none}
+  .overflow{overflow-x:auto}
+  .tag{font-size:.67rem;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+  .g{background:rgba(5,150,105,.12);color:#059669}
+  .r{background:rgba(192,57,43,.1);color:#c0392b}
+  .b{background:rgba(96,165,250,.12);color:#2563eb}
+  .kbd{font-family:ui-monospace,monospace;font-size:.72rem;background:#f2f3f5;border:1px solid #e0e3e8;
+    border-radius:4px;padding:1px 5px;color:#4b5563}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>작업 탭 — 입력 인터페이스</h1>
+  <p class="sub">프로젝트를 고르는 일을 없앤다. 쓰는 곳이 곧 프로젝트.</p>
+  <p class="meta">v0.8 · 2026-08-22 · 근거: WorkTab.tsx 하드코딩 목록 12개 · project_comments 8월 0건</p>
+
+  <div class="diag">
+    <b>진단</b> — 지금 프로젝트 목록은 코드에 <b>12개가 박혀</b> 있습니다(LifeOS·대시보드·출판기획·마음챗봇·디자인실무·인터뷰·논문리더·강연시리즈·DSAPG·프로젝트매뉴얼·Master·수업).
+    5월 기준이라 <b>요즘 하는 RISE 코너스톤·GameAIfy·ICCS는 하나도 없습니다.</b>
+    그래서 한 줄 쓰려면 매번 「직접 입력」으로 들어가 ID와 이름을 두 칸 치고 나서야 본문을 쓸 수 있었습니다. 손이 많이 간 지점은 코멘트가 아니라 여기입니다.
+  </div>
+
+  <h2>1. 입력 흐름</h2>
+  <div class="frames">
+
+    <!-- 지금 -->
+    <div class="col">
+      <div class="cap"><span class="cname c-now">지금</span><span class="cnote">목록에 없는 프로젝트일 때</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate">Work</span></div>
+        <div class="pbody">
+          <div class="oldlab">프로젝트</div>
+          <div class="sel"><span>061 LifeOS</span><span class="car">▼</span></div>
+          <div class="oldlab" style="color:#c0392b">목록에 없어서 → 직접 입력</div>
+          <div class="two">
+            <div class="inp">프로젝트 ID</div>
+            <div class="inp">프로젝트 이름</div>
+          </div>
+          <div class="oldlab">내용</div>
+          <div class="inp" style="min-height:56px">무엇을 했나요…</div>
+          <div class="savebtn">저장</div>
+
+          <div class="steps">
+            <b>1.</b> 드롭다운 열기<br>
+            <b>2.</b> 목록에 없음을 확인<br>
+            <b>3.</b> 직접 입력 켜기<br>
+            <b>4.</b> ID 치기 <span style="color:#9CA3AF">(“RISE”? “02”? 매번 다르게 침)</span><br>
+            <b>5.</b> 이름 치기<br>
+            <b>6.</b> 본문 치기<br>
+            <b>7.</b> 저장
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 새 안 -->
+    <div class="col" style="max-width:380px">
+      <div class="cap"><span class="cname c-new">바꾼 뒤</span><span class="cnote">눌러보세요</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate">작업</span>
+          <span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="pbody">
+
+          <div class="sec">8월 18 — 24 <span class="r">10건 · 4갈래</span></div>
+
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리 — 카톡 491건에서 추출</span><span class="auto">자동</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>학생작업·기업적용 보고서 (841행)</span><span class="auto">자동</span></div>
+            <div class="addin" data-add="rise"><span class="p">+</span><span class="lbl">한 줄</span></div>
+          </div>
+
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+            <div class="pcm"><span class="d">8/20</span><span>서론 문단 재배치 — 연구공백 앞으로</span></div>
+            <div class="addin" data-add="thesis"><span class="p">+</span><span class="lbl">한 줄</span></div>
+          </div>
+
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#8b5cf6"></span><span class="pname">081 GameAIfy</span><span class="pn">3</span></div>
+            <div class="pcm"><span class="d">8/19</span><span>IA 자문 v0.2 전달</span></div>
+            <div class="addin" data-add="gameaify"><span class="p">+</span><span class="lbl">한 줄</span></div>
+          </div>
+
+          <div class="sec">목록에 없는 것</div>
+          <div class="dumpbox">
+            <div class="ph" id="dph">무엇을 했나요<span class="cur">|</span></div>
+            <div class="chips" id="chips">
+              <button class="chip">RISE 코너스톤</button>
+              <button class="chip">논문</button>
+              <button class="chip">081 GameAIfy</button>
+              <button class="chip">082 ICCS</button>
+              <button class="chip new">+ 새로</button>
+            </div>
+            <div class="hintline">최근 쓴 순서로 뜹니다. 안 고르면 문장에서 알아서 잡고, 틀리면 칩을 눌러 바꿉니다.</div>
+          </div>
+
+        </div>
+        <div class="nav">
+          <span class="nv"><b class="kr">오늘</b><b class="en">Today</b></span>
+          <span class="nv"><b class="kr">흐름</b><b class="en">Flow</b></span>
+          <span class="nv on"><b class="kr">작업</b><b class="en">Work</b></span>
+          <span class="nv"><b class="kr">하루</b><b class="en">Haru</b></span>
+          <span class="nv"><b class="kr">설정</b><b class="en">Settings</b></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>2. 무엇을 바꾸는가</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th></th><th>지금</th><th>바꾼 뒤</th></tr></thead>
+    <tbody>
+      <tr><td>프로젝트 지정</td><td>드롭다운 → 없으면 ID·이름 2칸 손입력</td>
+        <td class="b"><b>쓰는 자리가 곧 프로젝트.</b> 그 블록 아래 「+ 한 줄」을 누르면 지정 끝</td></tr>
+      <tr><td>프로젝트 목록</td><td><span class="tag r">코드에 12개 하드코딩</span> 5월 기준, 갱신 안 됨</td>
+        <td class="b">코멘트 이력과 session-log에서 <b>자동 구성.</b> 손으로 관리 안 함</td></tr>
+      <tr><td>목록에 없는 것</td><td>ID·이름 2칸</td>
+        <td class="b">하단 입력창 + 최근 칩. 「+ 새로」는 이름 한 번만</td></tr>
+      <tr><td>논문 입력</td><td>「어디까지 했나」+「다음에 뭐 하나」 2칸</td>
+        <td class="b">한 줄로 합침. 다음 할 일은 <span class="kbd">→</span> 뒤에 붙이면 분리 저장</td></tr>
+      <tr><td>탭 수</td><td><span class="tag r">7단계</span></td><td><span class="tag g">2단계</span> 누르고 쓰기</td></tr>
+      <tr><td>자동으로 들어온 것</td><td>없음</td><td class="b">session-log에서 온 줄은 <span class="auto" style="margin:0">자동</span> 배지</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>3. 「→」 하나로 다음 할 일까지</h2>
+  <p class="sub" style="margin-top:10px">논문 탭의 2칸 입력은 매번 “다음에 뭐 할지”를 요구했습니다. 4개월간 쓴 날이 2일입니다. 한 줄로 합치되, 쓰고 싶을 때만 붙이게 합니다.</p>
+  <div class="overflow">
+  <table>
+    <thead><tr><th>이렇게 쓰면</th><th>이렇게 저장됩니다</th></tr></thead>
+    <tbody>
+      <tr><td>서론 문단 재배치</td><td>내용: “서론 문단 재배치”</td></tr>
+      <tr><td>서론 문단 재배치 <span class="kbd">→</span> 다음은 방법론 절</td>
+        <td>내용: “서론 문단 재배치” · 다음: “방법론 절”</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>4. 아직 정할 것</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th>항목</th><th>선택지</th></tr></thead>
+    <tbody>
+      <tr><td>블록에 몇 개까지 보일까</td><td>지금 시안은 프로젝트당 최근 2~3줄. 더 보려면 프로젝트 이름을 탭해 펼치기</td></tr>
+      <tr><td>「자동」 줄을 고칠 수 있게 할까</td><td>session-log에서 온 줄은 원본이 따로 있으니 <b>읽기전용</b>을 권합니다. 고치면 원본과 어긋납니다</td></tr>
+      <tr><td>프로젝트 순서</td><td>최근 활동순 / 건수순 / 고정핀. 지금 시안은 <b>최근 활동순</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+<script>
+  var labels = { rise: 'RISE 코너스톤', thesis: '논문', gameaify: '081 GameAIfy' };
+  var samples = {
+    rise: '하네싱 문서 §0 경계 문장 다듬음',
+    thesis: '방법론 절 초안 시작 → 다음은 표본 기준',
+    gameaify: '프리셋 삭제 후 IA 재확인'
+  };
+
+  document.querySelectorAll('.addin').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var k = el.dataset.add;
+      var open = el.classList.contains('open');
+      document.querySelectorAll('.addin').forEach(function (o) {
+        o.classList.remove('open');
+        o.querySelector('.lbl').textContent = '한 줄';
+        o.querySelector('.p').textContent = '+';
+      });
+      if (!open) {
+        el.classList.add('open');
+        el.querySelector('.p').textContent = '';
+        el.querySelector('.lbl').innerHTML = samples[k] + '<span class="cur">|</span>';
+      }
+    });
+  });
+
+  document.querySelectorAll('#chips .chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      if (c.classList.contains('new')) return;
+      var was = c.classList.contains('on');
+      document.querySelectorAll('#chips .chip').forEach(function (x) { x.classList.remove('on'); });
+      if (!was) c.classList.add('on');
+      var on = document.querySelector('#chips .chip.on');
+      document.getElementById('dph').innerHTML =
+        (on ? on.textContent + ' — ' : '') + '무엇을 했나요<span class="cur">|</span>';
+    });
+  });
+</script>
+</body>
+</html>

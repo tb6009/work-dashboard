@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LifeOS 전체 구조 개편 — v0.4 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#f2f3f5;color:#333;padding:40px 24px 90px;line-height:1.55}
+  .wrap{max-width:1240px;margin:0 auto}
+  h1{font-family:'DM Sans',sans-serif;font-size:1.6rem;font-weight:700;color:#000;letter-spacing:-.015em}
+  .sub{font-size:.88rem;color:#6B7280;margin-top:7px}
+  .meta{font-size:.72rem;color:#9CA3AF;margin-top:8px}
+  h2{font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:700;color:#000;margin-top:52px;padding-bottom:8px;border-bottom:2px solid #111}
+  h3{font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+
+  /* ── 구조 트리 ── */
+  .trees{display:flex;gap:24px;flex-wrap:wrap;margin-top:22px}
+  .tree{flex:1;min-width:340px;background:#fff;border:1px solid #e6e6e6;border-radius:12px;padding:20px 22px}
+  .tree.now h3{color:#9CA3AF}
+  .tree.next h3{color:#60A5FA}
+  .tr{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.76rem;line-height:1.95;white-space:pre;overflow-x:auto}
+  .tr .t1{color:#111;font-weight:600}
+  .tr .t2{color:#6B7280}
+  .tr .dim{color:#c0c4cc}
+  .tr .bad{color:#c0392b}
+  .tr .good{color:#059669}
+  .cnt-badge{display:inline-block;font-family:'DM Sans',sans-serif;font-size:.66rem;font-weight:600;
+    padding:2px 8px;border-radius:4px;margin-left:8px}
+  .b-bad{background:rgba(192,57,43,.1);color:#c0392b}
+  .b-good{background:rgba(5,150,105,.12);color:#059669}
+
+  /* ── 폰 프레임 ── */
+  .screens{display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;align-items:flex-start}
+  .scol{flex:1;min-width:300px;max-width:330px}
+  .scap{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+  .sname{font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:700;color:#111}
+  .sfrom{font-size:.68rem;color:#9CA3AF}
+  .phone{background:#fff;border:1px solid #e6e6e6;border-radius:16px;overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;flex-direction:column;min-height:530px}
+  .pbody{padding:14px 20px 16px;flex:1}
+  .ptop{display:flex;align-items:center;justify-content:space-between;padding:12px 20px 0}
+  .pdate{font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;color:#111}
+  .gear{font-size:.9rem;color:#9CA3AF}
+
+  .datestrip{display:flex;gap:5px;padding:10px 20px 4px;overflow:hidden}
+  .dd{flex:1;text-align:center;font-size:.6rem;color:#c0c4cc;padding:4px 0;border-radius:6px}
+  .dd.on{background:#111;color:#fff;font-weight:600}
+
+  .sec{font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:600;color:#9CA3AF;
+    text-transform:uppercase;letter-spacing:.11em;margin:16px 0 8px}
+  .sec:first-child{margin-top:4px}
+
+  .ln{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f4f4f4}
+  .ln:last-child{border-bottom:none}
+  .lb{font-size:.68rem;color:#808080;width:40px;flex:none}
+  .lv{font-size:.8rem;color:#333}
+  .src{font-family:'DM Sans',sans-serif;font-size:.55rem;color:#9CA3AF;text-transform:uppercase;
+    letter-spacing:.06em;margin-left:auto}
+  .cond{width:27px;height:27px;border-radius:6px;border:1px solid #e6e6e6;background:#f8f8f8;
+    color:#9CA3AF;font-size:.7rem;font-weight:600;display:flex;align-items:center;justify-content:center}
+  .cond.on{border:2px solid #60A5FA;background:rgba(96,165,250,.08);color:#60A5FA}
+  .mini{width:22px;height:22px;border-radius:50%;border:1px solid #e6e6e6;background:#f8f8f8;
+    font-size:.72rem;color:#9CA3AF;display:flex;align-items:center;justify-content:center;flex:none}
+  .mini.p{border-color:#60A5FA;color:#60A5FA;background:rgba(96,165,250,.07)}
+  .grp{display:flex;align-items:center;gap:3px}
+  .gn{font-size:.6rem;color:#9CA3AF;margin-right:2px}
+  .mc{font-size:.95rem;font-weight:600;color:#333;min-width:14px;text-align:center}
+  .tot{margin-left:auto;display:flex;align-items:baseline;gap:1px}
+  .tot b{font-size:1.2rem;font-weight:700;color:#333;line-height:1}
+  .tot i{font-size:.65rem;color:#9CA3AF;font-style:normal}
+
+  .slider{flex:1;height:3px;background:linear-gradient(90deg,#f0a0a0,#e6e6e6,#8fd4b0);border-radius:2px;position:relative}
+  .knob{position:absolute;top:-4px;left:56%;width:11px;height:11px;border-radius:50%;background:#fff;
+    border:2px solid #60A5FA}
+
+  /* 입력창 */
+  .dump{border:1.5px solid #60A5FA;border-radius:10px;padding:10px 12px;background:rgba(96,165,250,.04)}
+  .dump .ph{font-size:.78rem;color:#9CA3AF}
+  .dump .cur{color:#60A5FA}
+  .parsed{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+  .pchip{font-family:'DM Sans',sans-serif;font-size:.63rem;padding:3px 8px;border-radius:11px;
+    background:rgba(96,165,250,.1);color:#2563eb;border:1px solid rgba(96,165,250,.3)}
+  .pchip .x{color:#9CA3AF;margin-left:4px}
+
+  .item{display:flex;align-items:baseline;gap:8px;padding:6px 0;font-size:.75rem;color:#4b5563}
+  .tm{font-family:'DM Sans',sans-serif;font-size:.62rem;color:#c0c4cc;width:34px;flex:none}
+  .kind{font-family:'DM Sans',sans-serif;font-size:.6rem;color:#60A5FA;font-weight:600;
+    text-transform:uppercase;letter-spacing:.05em}
+  .dot{width:6px;height:6px;border-radius:50%;background:#e0e0e0;flex:none}
+  .dot.on{background:#60A5FA}
+
+  /* 흐름 화면 */
+  .seg{display:flex;background:#f2f3f5;border-radius:7px;padding:2px;width:96px}
+  .seg span{flex:1;text-align:center;font-size:.68rem;padding:3px 0;border-radius:5px;color:#9CA3AF}
+  .seg span.on{background:#fff;color:#111;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .bars{display:flex;align-items:flex-end;gap:4px;height:30px;flex:1}
+  .bar{flex:1;background:#dbeafe;border-radius:2px 2px 0 0}
+  .bar.hi{background:#60A5FA}
+  .avg{font-size:.68rem;color:#9CA3AF;width:52px;text-align:right;flex:none}
+  .prow{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #f4f4f4;font-size:.76rem}
+  .prow:last-child{border-bottom:none}
+  .pcount{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:.68rem;color:#9CA3AF}
+  .strip{width:3px;height:14px;border-radius:2px;flex:none}
+
+  /* 채팅 */
+  .msg{max-width:80%;font-size:.75rem;padding:7px 11px;border-radius:12px;margin-bottom:8px;line-height:1.5}
+  .msg.me{margin-left:auto;background:#111;color:#fff;border-bottom-right-radius:3px}
+  .msg.bot{background:#f4f5f7;color:#333;border-bottom-left-radius:3px}
+  .msg.mf{background:#eef2f7;color:#1a3a5c;border-bottom-left-radius:3px}
+  .cin{display:flex;align-items:center;gap:8px;border:1px solid #e6e6e6;border-radius:20px;
+    padding:8px 14px;font-size:.74rem;color:#9CA3AF;margin-top:12px}
+
+  /* 하단탭 */
+  .nav{display:flex;border-top:1px solid #e6e6e6;padding:7px 0 9px;background:#fff}
+  .nv{flex:1;text-align:center}
+  .nv .kr{display:block;font-size:.74rem;font-weight:700;color:#c0c4cc}
+  .nv .en{display:block;font-family:'DM Sans',sans-serif;font-size:.45rem;color:#c0c4cc;
+    text-transform:uppercase;letter-spacing:.05em}
+  .nv.on .kr{color:#000}
+  .nv.on .en{color:#60A5FA}
+
+  /* 미확인 박스 */
+  .unk{background:#fffbeb;border:1px dashed #d9a441;border-radius:10px;padding:16px 20px;margin-top:22px}
+  .unk h4{font-family:'DM Sans',sans-serif;font-size:.74rem;font-weight:700;color:#b45309;
+    text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+  .unk p{font-size:.8rem;color:#78350f}
+  .unk ul{margin:8px 0 0 18px;font-size:.79rem;color:#78350f}
+
+  table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border:1px solid #e6e6e6;
+    border-radius:10px;overflow:hidden}
+  th,td{padding:9px 14px;text-align:left;font-size:.79rem;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  th{background:#fafafa;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;color:#6B7280;
+    text-transform:uppercase;letter-spacing:.06em}
+  tr:last-child td{border-bottom:none}
+  .overflow{overflow-x:auto}
+  .tag{font-size:.67rem;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+  .g{background:rgba(5,150,105,.12);color:#059669}
+  .r{background:rgba(192,57,43,.1);color:#c0392b}
+  .b{background:rgba(96,165,250,.12);color:#2563eb}
+  .y{background:rgba(217,164,65,.15);color:#b45309}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>LifeOS 전체 구조 개편</h1>
+  <p class="sub">화면 14개(탭 4 + 하위탭 10) → 4개. 손입력 19칸 → 한 줄 + 2칸.</p>
+  <p class="meta">v0.4 · 2026-08-22 · 근거: 4개월 사용 데이터 · health_logs 칸별 92일 집계 · 코드 실측</p>
+
+  <!-- ══════════ 구조 ══════════ -->
+  <h2>1. 구조</h2>
+  <div class="trees">
+
+    <div class="tree now">
+      <h3>지금 <span class="cnt-badge b-bad">하위탭 10</span></h3>
+      <div class="tr"><span class="t1">홈  /</span>
+  <span class="t2">├ 날씨 · 인사 · 오늘의 한마디</span>
+  <span class="t2">├ 루틴 · 다가오는 일정</span>
+  <span class="t2">└ 하위탭 3</span> <span class="bad">[Daily · Activity · Done]</span>
+
+<span class="t1">기록  /diary</span>
+  <span class="t2">└ 하위탭 5</span> <span class="bad">[Today · Week · Month · Work · Thesis]</span>
+     <span class="t2">Today ─ 일정 · 루틴</span>
+     <span class="t2">        Health</span> <span class="bad">4칸 + 죽은칸 3</span>
+     <span class="t2">        Emotion</span> <span class="dim">에너지·카테고리·칩·기타</span>
+     <span class="t2">        Memo</span>
+     <span class="t2">        Daily Review</span> <span class="bad">5칸 + 저장버튼</span>
+     <span class="t2">        하루와의 대화</span>
+
+<span class="t1">하루  /haru</span>
+  <span class="t2">└ 하위탭 2</span> <span class="bad">[하루 · 맨프레드]</span>
+
+<span class="t1">설정  /settings</span>
+
+<span class="dim">(고아) /friends — 349줄, 링크 0건</span></div>
+    </div>
+
+    <div class="tree next">
+      <h3>바꾼 뒤 <span class="cnt-badge b-good">하위탭 0</span></h3>
+      <div class="tr"><span class="t1">오늘</span>  <span class="dim">← 홈 + 기록·Today</span>
+  <span class="t2">├ 오늘 상태</span>  <span class="good">자동 · 컨디션 · 커피</span>
+  <span class="t2">├ 한 줄 입력</span> <span class="good">← 유일한 자유 입력</span>
+  <span class="t2">├ 일정 · 루틴</span>
+  <span class="t2">└ 오늘 들어온 것</span>
+
+<span class="t1">흐름</span>  <span class="dim">← Week + Month + Work + Thesis</span>
+  <span class="t2">├ 주 / 월 토글</span>
+  <span class="t2">├ 컨디션 · 수면 · 커피 추이</span>
+  <span class="t2">├ 프로젝트</span>   <span class="dim">구 Work</span>
+  <span class="t2">├ 논문</span>       <span class="dim">구 Thesis</span>
+  <span class="t2">└ 기록 다시보기</span>
+
+<span class="t1">하루</span>       <span class="dim">일정 · 실무 비서</span>
+
+<span class="t1">맨프레드</span>   <span class="dim">분리 — 심리적 안전감</span>
+
+<span class="t2">⚙ 설정 → 오늘 화면 우상단</span>
+<span class="t2">✕ /friends 삭제</span></div>
+    </div>
+  </div>
+
+  <!-- ══════════ 화면 ══════════ -->
+  <h2>2. 화면</h2>
+  <div class="screens">
+
+    <!-- 오늘 -->
+    <div class="scol">
+      <div class="scap"><span class="sname">① 오늘</span><span class="sfrom">홈 + 기록·Today</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate">8월 22일 금</span><span class="gear">⚙</span></div>
+        <div class="datestrip">
+          <span class="dd">18</span><span class="dd">19</span><span class="dd">20</span>
+          <span class="dd">21</span><span class="dd on">22</span><span class="dd">23</span><span class="dd">24</span>
+        </div>
+        <div class="pbody">
+
+          <div class="sec">오늘 상태</div>
+          <div class="ln"><span class="lb">자동</span>
+            <span class="lv">6시간 30분 · 4,210걸음</span><span class="src">구글헬스</span></div>
+          <div class="ln"><span class="lb">컨디션</span>
+            <span class="grp" style="gap:4px">
+              <span class="cond">1</span><span class="cond">2</span><span class="cond on">3</span>
+              <span class="cond">4</span><span class="cond">5</span></span></div>
+          <div class="ln"><span class="lb">커피</span>
+            <span class="grp"><span class="gn">오전</span><span class="mini">−</span><span class="mc">2</span><span class="mini p">+</span></span>
+            <span class="grp"><span class="gn">오후</span><span class="mini">−</span><span class="mc">1</span><span class="mini p">+</span></span>
+            <span class="tot"><b>3</b><i>잔</i></span></div>
+          <div class="ln"><span class="lb">에너지</span>
+            <span class="slider"><span class="knob"></span></span>
+            <span class="src" style="color:#60A5FA">보통</span></div>
+
+          <div class="sec">기록</div>
+          <div class="dump">
+            <div class="ph">6시간 자고 좀 피곤. 오후에 논문 서론 반쯤<span class="cur">|</span></div>
+            <div class="parsed">
+              <span class="pchip">컨디션 −1<span class="x">✕</span></span>
+              <span class="pchip">thesis · 서론<span class="x">✕</span></span>
+            </div>
+          </div>
+
+          <div class="sec">오늘</div>
+          <div class="item"><span class="tm">10:00</span><span>학과회의</span></div>
+          <div class="item"><span class="tm">14:00</span><span>코너스톤 검토</span></div>
+          <div class="ln" style="padding-top:10px"><span class="lb">루틴</span>
+            <span class="grp" style="gap:5px">
+              <span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+            </span><span class="src">2 / 4</span></div>
+
+          <div class="sec">들어온 것</div>
+          <div class="item"><span class="tm">09:12</span><span class="kind">감정</span><span>막막함</span></div>
+          <div class="item"><span class="tm">14:30</span><span class="kind">work</span><span>MNS 회의록 정리</span></div>
+
+        </div>
+        <div class="nav">
+          <span class="nv on"><b class="kr">오늘</b><b class="en">Today</b></span>
+          <span class="nv"><b class="kr">흐름</b><b class="en">Flow</b></span>
+          <span class="nv"><b class="kr">하루</b><b class="en">Haru</b></span>
+          <span class="nv"><b class="kr">맨프레드</b><b class="en">Manfred</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 흐름 -->
+    <div class="scol">
+      <div class="scap"><span class="sname">② 흐름</span><span class="sfrom">Week+Month+Work+Thesis</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate">흐름</span>
+          <span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="pbody">
+
+          <div class="sec">8월 18 — 24</div>
+          <div class="ln"><span class="lb">컨디션</span>
+            <span class="bars"><i class="bar" style="height:40%"></i><i class="bar" style="height:60%"></i>
+              <i class="bar hi" style="height:80%"></i><i class="bar" style="height:60%"></i>
+              <i class="bar hi" style="height:100%"></i><i class="bar" style="height:70%"></i>
+              <i class="bar" style="height:45%"></i></span>
+            <span class="avg">평균 3.4</span></div>
+          <div class="ln"><span class="lb">수면</span>
+            <span class="bars"><i class="bar" style="height:60%"></i><i class="bar" style="height:75%"></i>
+              <i class="bar" style="height:45%"></i><i class="bar hi" style="height:95%"></i>
+              <i class="bar" style="height:70%"></i><i class="bar" style="height:55%"></i>
+              <i class="bar" style="height:65%"></i></span>
+            <span class="avg">6.4h</span></div>
+          <div class="ln"><span class="lb">커피</span>
+            <span class="bars"><i class="bar" style="height:50%"></i><i class="bar" style="height:75%"></i>
+              <i class="bar" style="height:25%"></i><i class="bar" style="height:50%"></i>
+              <i class="bar hi" style="height:100%"></i><i class="bar" style="height:75%"></i>
+              <i class="bar" style="height:50%"></i></span>
+            <span class="avg">총 12잔</span></div>
+
+          <div class="sec">프로젝트</div>
+          <div class="prow"><span class="strip" style="background:#60A5FA"></span>
+            <span>RISE 코너스톤</span><span class="pcount">5건</span></div>
+          <div class="prow"><span class="strip" style="background:#8b5cf6"></span>
+            <span>081 GameAIfy</span><span class="pcount">3건</span></div>
+          <div class="prow"><span class="strip" style="background:#059669"></span>
+            <span>061 LifeOS</span><span class="pcount">2건</span></div>
+
+          <div class="sec">논문</div>
+          <div class="prow"><span class="strip" style="background:#d9a441"></span>
+            <span>서론 재배치</span><span class="pcount">2건</span></div>
+
+          <div class="sec">기록 다시보기</div>
+          <div class="item"><span class="tm">8/21</span><span>컨디션3 · 커피2 · “막막했지만 넘김”</span></div>
+          <div class="item"><span class="tm">8/20</span><span>컨디션4 · 커피3</span></div>
+
+        </div>
+        <div class="nav">
+          <span class="nv"><b class="kr">오늘</b><b class="en">Today</b></span>
+          <span class="nv on"><b class="kr">흐름</b><b class="en">Flow</b></span>
+          <span class="nv"><b class="kr">하루</b><b class="en">Haru</b></span>
+          <span class="nv"><b class="kr">맨프레드</b><b class="en">Manfred</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하루 -->
+    <div class="scol">
+      <div class="scap"><span class="sname">③ 하루</span><span class="sfrom">일정 · 실무</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate">하루</span><span class="gear">↻</span></div>
+        <div class="pbody">
+          <div class="msg bot">오늘 10시 학과회의 하나 있고, 코너스톤 검토가 오후에 잡혀 있어요.</div>
+          <div class="msg me">회의 준비 뭐부터 하지</div>
+          <div class="msg bot">어제 정리한 MNS 회의록 3종이 있으니 1페이지 요약본만 다시 보시면 될 것 같아요. 커피는 오늘 벌써 3잔입니다.</div>
+          <div class="cin"><span>메시지…</span><span style="margin-left:auto">↑</span></div>
+        </div>
+        <div class="nav">
+          <span class="nv"><b class="kr">오늘</b><b class="en">Today</b></span>
+          <span class="nv"><b class="kr">흐름</b><b class="en">Flow</b></span>
+          <span class="nv on"><b class="kr">하루</b><b class="en">Haru</b></span>
+          <span class="nv"><b class="kr">맨프레드</b><b class="en">Manfred</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 맨프레드 -->
+    <div class="scol">
+      <div class="scap"><span class="sname">④ 맨프레드</span><span class="sfrom">하루에서 분리</span></div>
+      <div class="phone">
+        <div class="ptop"><span class="pdate" style="color:#1a3a5c">맨프레드</span>
+          <span class="gear" style="font-size:.55rem;letter-spacing:.06em">INSEAD</span></div>
+        <div class="pbody">
+          <div class="msg mf">오늘은 무엇이 마음에 걸립니까.</div>
+          <div class="msg me">논문이 계속 안 나가서요</div>
+          <div class="msg mf">“안 나간다”는 말 안에 두 가지가 섞여 있는 경우가 많습니다. 쓸 것이 없는 것과, 쓸 것이 있는데 손이 안 가는 것. 어느 쪽에 가깝습니까.</div>
+          <div class="cin"><span>맨프레드에게…</span><span style="margin-left:auto">↑</span></div>
+        </div>
+        <div class="nav">
+          <span class="nv"><b class="kr">오늘</b><b class="en">Today</b></span>
+          <span class="nv"><b class="kr">흐름</b><b class="en">Flow</b></span>
+          <span class="nv"><b class="kr">하루</b><b class="en">Haru</b></span>
+          <span class="nv on"><b class="kr">맨프레드</b><b class="en">Manfred</b></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="unk">
+    <h4>아직 확정 못 한 부분</h4>
+    <p>「오늘」 화면의 <b>에너지 슬라이더</b>와, 지금 화면에 있는 <b>감정 칩 · 메모 · Daily Review 5칸</b>의 처분은 아직 근거가 없습니다. journal_entries 칸별 실사용 쿼리(②)를 아직 안 돌렸습니다.</p>
+    <ul>
+      <li>에너지 슬라이더는 일단 남겨서 그렸습니다 — 실사용이 낮게 나오면 뺍니다</li>
+      <li>Daily Review 5칸은 한 줄 입력에 흡수되는 것으로 가정했습니다</li>
+      <li>감정 칩은 컨디션과 역할이 겹칠 수 있어 결과를 보고 정합니다</li>
+    </ul>
+  </div>
+
+  <!-- ══════════ 이동표 ══════════ -->
+  <h2>3. 지금 것이 어디로 가는가</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th>지금</th><th>어디로</th><th>왜</th></tr></thead>
+    <tbody>
+      <tr><td>홈 — 날씨·인사·한마디</td><td><span class="tag b">오늘 상단 (접힘)</span></td><td>매일 볼 것은 아님. 펼치면 보이게</td></tr>
+      <tr><td>홈 — 하위탭 Daily/Activity/Done</td><td><span class="tag b">흐름</span></td><td>돌아보기용. 오늘 화면에 있을 이유 없음</td></tr>
+      <tr><td>기록 — Today</td><td><span class="tag b">오늘</span></td><td>홈과 합침. 보기/넣기 왕복 제거</td></tr>
+      <tr><td>기록 — Week / Month</td><td><span class="tag b">흐름 (주/월 토글)</span></td><td>같은 것의 기간 차이일 뿐</td></tr>
+      <tr><td>기록 — Work / Thesis</td><td><span class="tag b">흐름 · 읽기전용</span></td><td>입력은 한 줄 입력으로. 깊이 2단계 제거</td></tr>
+      <tr><td>Health — 수면 · 운동</td><td><span class="tag g">구글헬스 자동</span></td><td>손입력 91% · 27% → 0</td></tr>
+      <tr><td>Health — 수면질 · 식사 · 메모</td><td><span class="tag r">삭제</span></td><td>화면에 없는 칸. 92일 0건</td></tr>
+      <tr><td>하루 — 맨프레드 상단탭</td><td><span class="tag b">하단탭으로 분리</span></td><td>역할이 다름. 눌러 담을 이유 없음</td></tr>
+      <tr><td>설정 탭</td><td><span class="tag b">⚙ 아이콘</span></td><td>탭 한 칸을 계속 차지할 화면 아님</td></tr>
+      <tr><td>/friends</td><td><span class="tag r">삭제</span></td><td>링크 0건. 주소를 직접 쳐야 도달</td></tr>
+      <tr><td>Memo · Daily Review 5칸</td><td><span class="tag y">미정</span></td><td>쿼리 ② 결과 대기</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ══════════ 순서 ══════════ -->
+  <h2>4. 작업 순서</h2>
+  <p class="sub" style="margin-top:10px">v2.0 폐기(45커밋·114파일)와 같은 사고를 막기 위해, 매 단계 끝에 앱이 정상 작동하고 되돌릴 데가 남아 있게 합니다.</p>
+  <div class="overflow">
+  <table>
+    <thead><tr><th>#</th><th>할 일</th><th>범위</th><th>되돌리기</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>커피 오전/오후 + Health 죽은 칸 정리</td><td>TodayTab 1파일</td><td>커밋 1개 revert</td></tr>
+      <tr><td>2</td><td>/friends 삭제 · 설정을 ⚙로</td><td>라우트 1 + BottomNav</td><td>파일 복구</td></tr>
+      <tr><td>3</td><td>흐름 탭 신설 — Week·Month·Work·Thesis 이사</td><td>새 라우트. <b>구 기록 탭 유지</b></td><td>새 탭만 숨기면 원상복구</td></tr>
+      <tr><td>4</td><td>한 줄 입력창 + 분류 — 오늘 화면에 <b>추가</b></td><td>기존 입력칸 그대로 둔 채 병행</td><td>입력창만 제거</td></tr>
+      <tr><td>5</td><td>며칠 써본 뒤 구 입력칸·구 기록 탭 제거</td><td>진현 승인 후에만</td><td>—</td></tr>
+      <tr><td>6</td><td>맨프레드 분리 · 홈 흡수 마무리</td><td>BottomNav + haru</td><td>커밋 revert</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+</body>
+</html>

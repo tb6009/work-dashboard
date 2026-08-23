@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>작업 입력 — 상단 고정 입력바 v1.0 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#f2f3f5;color:#333;padding:40px 24px 90px;line-height:1.55}
+  .wrap{max-width:1240px;margin:0 auto}
+  h1{font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:700;color:#000;letter-spacing:-.015em}
+  .sub{font-size:.86rem;color:#6B7280;margin-top:7px}
+  .meta{font-size:.72rem;color:#9CA3AF;margin-top:8px}
+  h2{font-family:'DM Sans',sans-serif;font-size:1.02rem;font-weight:700;color:#000;margin-top:48px;padding-bottom:8px;border-bottom:2px solid #111}
+  .lead{font-size:.84rem;color:#6B7280;margin-top:12px}
+  .chg{background:#eff6ff;border-left:3px solid #60A5FA;padding:12px 16px;margin-top:18px;font-size:.83rem;color:#1e40af;border-radius:0 8px 8px 0}
+  .chg b{font-weight:600}
+
+  .frames{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px;align-items:flex-start}
+  .col{flex:1;min-width:270px;max-width:310px}
+  .cap{display:flex;align-items:baseline;gap:7px;margin-bottom:7px}
+  .cname{font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:700;color:#111}
+  .cnote{font-size:.66rem;color:#9CA3AF}
+
+  .phone{background:#fff;border:1px solid #e6e6e6;border-radius:15px;overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;flex-direction:column;min-height:480px}
+  .mtop{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 0}
+  .mtitle{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;color:#111}
+  .seg{display:flex;background:#f2f3f5;border-radius:6px;padding:2px;width:72px}
+  .seg span{flex:1;text-align:center;font-size:.6rem;padding:2px 0;border-radius:4px;color:#9CA3AF}
+  .seg span.on{background:#fff;color:#111;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+
+  /* 상단 고정 입력바 */
+  .sticky{padding:9px 16px 10px;background:#fff;border-bottom:1px solid #eceef1;position:relative}
+  .sticky::after{content:'고정';position:absolute;right:16px;top:-7px;font-family:'DM Sans',sans-serif;
+    font-size:.45rem;color:#b9cdec;letter-spacing:.08em;text-transform:uppercase}
+  .bar{display:flex;align-items:center;gap:8px;border:1px solid #e0e3e8;border-radius:9px;
+    padding:8px 10px;background:#fafbfc;font-size:.7rem;color:#9CA3AF}
+  .bar .plus{margin-left:auto;width:20px;height:20px;border-radius:50%;background:#60A5FA;color:#fff;
+    font-size:.78rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none;line-height:1}
+  .bar.act{border:1.5px solid #60A5FA;background:rgba(96,165,250,.05);color:#333}
+  .cur{color:#60A5FA}
+  .chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+  .chip{font-size:.56rem;padding:3px 8px;border-radius:10px;border:1px solid #e0e3e8;background:#fff;color:#9CA3AF}
+  .chip.guess{background:rgba(96,165,250,.14);border-color:#9dc2f0;color:#2563eb;font-weight:600}
+  .chip.new{border-style:dashed}
+
+  .mbody{padding:11px 16px 14px;flex:1}
+  .sec{font-family:'DM Sans',sans-serif;font-size:.55rem;font-weight:600;color:#9CA3AF;
+    text-transform:uppercase;letter-spacing:.1em;margin:0 0 8px;display:flex;align-items:baseline}
+  .sec .r{margin-left:auto;letter-spacing:0;text-transform:none;color:#c0c4cc}
+
+  .prj{margin-bottom:11px}
+  .phd{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+  .strip{width:3px;height:11px;border-radius:2px;flex:none}
+  .pname{font-size:.7rem;font-weight:600;color:#111}
+  .pn{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:.56rem;color:#c0c4cc}
+  .pcm{display:flex;gap:6px;padding:2px 0 2px 9px;font-size:.64rem;color:#6b7480;line-height:1.42;align-items:baseline}
+  .pcm .d{font-family:'DM Sans',sans-serif;font-size:.52rem;color:#c0c4cc;width:22px;flex:none}
+  .pcm.fresh{background:rgba(96,165,250,.1);border-radius:5px;padding:3px 5px 3px 9px;color:#1e40af}
+  .badge{font-family:'DM Sans',sans-serif;font-size:.47rem;color:#9CA3AF;background:#f4f5f7;border-radius:3px;padding:1px 4px;margin-left:auto;flex:none}
+  .badge.new{background:#60A5FA;color:#fff}
+  .addin{display:flex;align-items:center;gap:5px;margin:3px 0 0 9px;padding:5px 9px;
+    border:1px dashed #d5d9de;border-radius:7px;font-size:.62rem;color:#b0b4bb}
+  .addin .p{color:#60A5FA;font-weight:600}
+
+  .kbd{background:#d3d6db;border-top:1px solid #b9bcc2;padding:5px 6px 7px}
+  .krow{display:flex;gap:2.5px;margin-bottom:3px;justify-content:center}
+  .key{background:#fff;border-radius:3px;height:14px;flex:1;max-width:15px;box-shadow:0 1px 0 rgba(0,0,0,.15)}
+  .key.wide{max-width:38px}
+  .key.ret{background:#60A5FA;max-width:30px}
+  .snack{background:#111;color:#fff;border-radius:7px;padding:6px 9px;font-size:.58rem;display:flex;align-items:center;gap:7px;margin-top:8px}
+  .snack .u{margin-left:auto;color:#7fb4f5;font-weight:600;flex:none}
+
+  .nav{display:flex;border-top:1px solid #e6e6e6;padding:6px 0 8px;background:#fff}
+  .nv{flex:1;text-align:center}
+  .nv .kr{display:block;font-size:.66rem;font-weight:700;color:#c0c4cc}
+  .nv.on .kr{color:#000}
+
+  table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border:1px solid #e6e6e6;border-radius:10px;overflow:hidden}
+  th,td{padding:9px 14px;text-align:left;font-size:.79rem;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  th{background:#fafafa;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.06em}
+  tr:last-child td{border-bottom:none}
+  .overflow{overflow-x:auto}
+  .tag{font-size:.67rem;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+  .g{background:rgba(5,150,105,.12);color:#059669}
+  .r{background:rgba(192,57,43,.1);color:#c0392b}
+  .b{background:rgba(96,165,250,.12);color:#2563eb}
+  .note{background:#f4f6f8;border:1px dashed #c9cfd6;border-radius:9px;padding:14px 18px;margin-top:20px;font-size:.81rem;color:#4b5563}
+  .note b{font-weight:600;color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>작업 입력 — 상단 고정 입력바</h1>
+  <p class="sub">+ 를 맨 위로. 스크롤해도 따라오고, 하단 공용 입력창은 없앱니다.</p>
+  <p class="meta">v1.0 · 2026-08-22 · v0.9의 입력구 재배치</p>
+
+  <div class="chg">
+    <b>왜 하단창을 없애나</b> — 상단 + 를 두면서 하단창을 남기면 입력구가 셋(상단 + · 블록별 + · 하단창)이 됩니다.
+    같은 일을 하는 자리가 셋이면 <b>“어디에 써야 하지”가 새 마찰</b>이 됩니다. 상단 + 가 하단창의 역할을 그대로 가져갑니다.
+  </div>
+
+  <h2>1. 세 컷</h2>
+  <div class="frames">
+
+    <!-- 평소 -->
+    <div class="col">
+      <div class="cap"><span class="cname">평소</span><span class="cnote">36px · 스크롤해도 고정</span></div>
+      <div class="phone">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="sticky">
+          <div class="bar"><span>무엇을 했나요</span><span class="plus">+</span></div>
+        </div>
+        <div class="mbody">
+          <div class="sec">8월 18 — 24 <span class="r">10건 · 4갈래</span></div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>학생작업 보고서 841행</span><span class="badge">자동</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+            <div class="pcm"><span class="d">8/20</span><span>서론 문단 재배치</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#8b5cf6"></span><span class="pname">081 GameAIfy</span><span class="pn">3</span></div>
+            <div class="pcm"><span class="d">8/19</span><span>IA 자문 v0.2 전달</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+        </div>
+        <div class="nav">
+          <span class="nv"><b class="kr">오늘</b></span><span class="nv"><b class="kr">흐름</b></span>
+          <span class="nv on"><b class="kr">작업</b></span><span class="nv"><b class="kr">하루</b></span><span class="nv"><b class="kr">설정</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 눌렀을 때 -->
+    <div class="col">
+      <div class="cap"><span class="cname">+ 를 누르면</span><span class="cnote">칩이 펼쳐짐</span></div>
+      <div class="phone">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="sticky">
+          <div class="bar act">ICCS 강의안 19장까지<span class="cur">|</span></div>
+          <div class="chips">
+            <span class="chip">RISE 코너스톤</span><span class="chip">논문</span>
+            <span class="chip">081 GameAIfy</span><span class="chip guess">082 ICCS ✓</span>
+            <span class="chip new">+ 새로</span>
+          </div>
+        </div>
+        <div class="mbody" style="opacity:.35">
+          <div class="sec">8월 18 — 24</div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#d9a441"></span><span class="pname">논문</span><span class="pn">2</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 저장 후 -->
+    <div class="col">
+      <div class="cap"><span class="cname">엔터 · 저장</span><span class="cnote">입력바는 열린 채</span></div>
+      <div class="phone">
+        <div class="mtop"><span class="mtitle">작업</span><span class="seg"><span class="on">주</span><span>월</span></span></div>
+        <div class="sticky">
+          <div class="bar act"><span class="cur">|</span></div>
+          <div class="snack"><span>082 ICCS에 저장</span><span class="u">바꾸기</span></div>
+        </div>
+        <div class="mbody">
+          <div class="sec">8월 18 — 24 <span class="r">11건 · 5갈래</span></div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#bfac7e"></span><span class="pname">082 ICCS</span><span class="pn">1</span></div>
+            <div class="pcm fresh"><span class="d">오늘</span><span>강의안 19장까지</span><span class="badge new">방금</span></div>
+            <div class="addin"><span class="p">+</span><span>한 줄</span></div>
+          </div>
+          <div class="prj">
+            <div class="phd"><span class="strip" style="background:#60A5FA"></span><span class="pname">RISE 코너스톤</span><span class="pn">5</span></div>
+            <div class="pcm"><span class="d">8/21</span><span>MNS 회의록 3종 정리</span><span class="badge">자동</span></div>
+          </div>
+        </div>
+        <div class="kbd">
+          <div class="krow"><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i><i class="key"></i></div>
+          <div class="krow"><i class="key wide"></i><i class="key"></i><i class="key ret"></i></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>2. 상단 + 와 블록별 + 는 어떻게 다른가</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th></th><th>상단 + (고정)</th><th>블록별 「+ 한 줄」</th></tr></thead>
+    <tbody>
+      <tr><td>언제 쓰나</td><td>일단 적고 싶을 때. 프로젝트를 안 정했거나 목록에 없을 때</td><td>이미 그 프로젝트 줄을 보고 있을 때</td></tr>
+      <tr><td>프로젝트 지정</td><td>칩 또는 문장에서 자동 추정</td><td class="g">필요 없음 — 자리가 곧 프로젝트</td></tr>
+      <tr><td>스크롤 위치</td><td class="g">어디에 있든 항상 보임</td><td>그 블록까지 내려가야 함</td></tr>
+      <tr><td>탭 수</td><td>1탭 + (칩 확인)</td><td class="g">1탭</td></tr>
+      <tr><td>프로젝트가 20개로 늘면</td><td class="g">그대로</td><td>찾아 내려가야 함</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    둘은 <b>겹치지 않습니다.</b> 상단 + 는 “적을 게 생겼다”에서 출발하고, 블록별 + 는 “이 프로젝트를 보다가 생각났다”에서 출발합니다.
+    실제로는 상단 + 가 대부분을 처리하고, 블록별 + 는 목록을 훑다가 덧붙일 때 쓰이게 됩니다.
+  </div>
+
+  <h2>3. 「오늘」의 한 줄 입력과 뭐가 다른가</h2>
+  <div class="overflow">
+  <table>
+    <thead><tr><th></th><th>오늘 · 한 줄 입력</th><th>작업 · 상단 +</th></tr></thead>
+    <tbody>
+      <tr><td>받는 것</td><td>감정 · 컨디션 · 작업 · 논문 — 아무거나</td><td>작업 · 논문만</td></tr>
+      <tr><td>분류</td><td>어느 갈래인지부터 판단</td><td class="g">작업인 건 이미 정해짐. <b>어느 프로젝트인지만</b></td></tr>
+      <tr><td>틀릴 여지</td><td>갈래를 잘못 잡을 수 있음</td><td class="g">적음</td></tr>
+      <tr><td>쓰는 상황</td><td>하루를 정리하며</td><td>일하다 말고</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note" style="background:#fffbeb;border-color:#d9a441;color:#78350f">
+    <b>한 가지 걸리는 점</b> — 상단 입력바가 36px을 늘 차지합니다. 지금 화면은 여유가 있지만, 프로젝트가 늘면 목록이 그만큼 밀립니다.
+    대안으로 <b>우하단 떠 있는 동그란 + 버튼</b>(FAB)도 있습니다. 공간을 안 먹지만 콘텐츠를 가리고, 무엇을 하는 화면인지 한눈에 안 보입니다.
+    저는 <b>지금 안(상단 고정바)</b>을 권합니다 — 작업 탭은 애초에 “적는 화면”이라 입력구가 제목처럼 보이는 게 맞습니다.
+  </div>
+
+</div>
+</body>
+</html>

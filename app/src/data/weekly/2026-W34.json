@@ -1,0 +1,497 @@
+{
+  "week": "2026-W34",
+  "range": {
+    "from": "2026-08-17",
+    "to": "2026-08-23"
+  },
+  "status": "current",
+  "summary": "RISE 7사 보고서를 기업 적용 관점으로 보강하고 Anchornode 보고서 작업을 확장했다. LifeOS는 10개 HTML 시안과 오늘·작업·흐름 중심 정보구조 구현을 시작했으며, WorkDashboard에서 시안을 직접 볼 수 있도록 연결했다.",
+  "kpis": {
+    "activeProjects": 6,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 82
+  },
+  "daily": [
+    {
+      "date": "2026-08-17",
+      "weekday": "월",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "03",
+        "039",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 485,
+                "out": 728047,
+                "cache_read": 78615874,
+                "cache_write": 3269114,
+                "messages": 248,
+                "costUSD": 77.9435
+              }
+            },
+            "total": {
+              "in": 485,
+              "out": 728047,
+              "cache_read": 78615874,
+              "cache_write": 3269114,
+              "messages": 248
+            },
+            "costUSD": 77.9435
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 태일_RISE제출용_결과보고서_v0.7.md · 03_협의와컨설팅_프롬랩스_초안_v0.2.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W34.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "weekday": "화",
+      "filesChanged": 5,
+      "topProjectIds": [
+        "039",
+        "09",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] KPS_RISE제출용_결과보고서_v0.1.md · Once_RISE제출용_결과보고서_v0.1.md · 새론솔루션_RISE제출용_결과보고서_v0.1.md · 태일_RISE제출용_결과보고서_v0.9.md · 한국주택정보_RISE제출용_결과보고서_v0.1.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] 2026-08-18_키토식-암대사-Press-Pulse_브레인덤프.md · index.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 162,
+                "out": 358079,
+                "cache_read": 24951127,
+                "cache_write": 1277451,
+                "messages": 82,
+                "costUSD": 29.4124
+              }
+            },
+            "total": {
+              "in": 162,
+              "out": 358079,
+              "cache_read": 24951127,
+              "cache_write": 1277451,
+              "messages": 82
+            },
+            "costUSD": 29.4124
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W34.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "weekday": "수",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "03",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 10,
+                "out": 2286,
+                "cache_read": 344615,
+                "cache_write": 8840,
+                "messages": 5,
+                "costUSD": 0.2848
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 2286,
+              "cache_read": 344615,
+              "cache_write": 8840,
+              "messages": 5
+            },
+            "costUSD": 0.2848
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] 2026-08-18_키토식-암대사-Press-Pulse_브레인덤프.md · index.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-21",
+      "weekday": "금",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "03",
+        "063",
+        "061",
+        "039",
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 20,
+                "out": 7168,
+                "cache_read": 6286300,
+                "cache_write": 850939,
+                "messages": 10,
+                "costUSD": 8.6408
+              }
+            },
+            "total": {
+              "in": 20,
+              "out": 7168,
+              "cache_read": 6286300,
+              "cache_write": 850939,
+              "messages": 10
+            },
+            "costUSD": 8.6408
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W34.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 1072,
+                "cache_read": 168852,
+                "cache_write": 8448,
+                "messages": 2,
+                "costUSD": 0.164
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 1072,
+              "cache_read": 168852,
+              "cache_write": 8448,
+              "messages": 2
+            },
+            "costUSD": 0.164
+          }
+        },
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-fable-5": {
+                "in": 4,
+                "out": 7096,
+                "cache_read": 0,
+                "cache_write": 89588,
+                "messages": 2,
+                "costUSD": 1.4747
+              },
+              "claude-opus-5": {
+                "in": 11706,
+                "out": 29296,
+                "cache_read": 1973191,
+                "cache_write": 73199,
+                "messages": 24,
+                "costUSD": 2.235
+              }
+            },
+            "total": {
+              "in": 11710,
+              "out": 36392,
+              "cache_read": 1973191,
+              "cache_write": 162787,
+              "messages": 26
+            },
+            "costUSD": 3.7097
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] README.md"
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 10,
+                "out": 5979,
+                "cache_read": 349503,
+                "cache_write": 25434,
+                "messages": 5,
+                "costUSD": 0.4832
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 5979,
+              "cache_read": 349503,
+              "cache_write": 25434,
+              "messages": 5
+            },
+            "costUSD": 0.4832
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "weekday": "토",
+      "filesChanged": 44,
+      "topProjectIds": [
+        "063",
+        "061",
+        "081",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W34.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 42,
+                "out": 34467,
+                "cache_read": 2083583,
+                "cache_write": 64919,
+                "messages": 21,
+                "costUSD": 2.3094
+              }
+            },
+            "total": {
+              "in": 42,
+              "out": 34467,
+              "cache_read": 2083583,
+              "cache_write": 64919,
+              "messages": 21
+            },
+            "costUSD": 2.3094
+          }
+        },
+        {
+          "projectId": "061",
+          "did": "커피 오전·오후 3안, 전체 구조 4안, 작업 입력 3안의 HTML 시안을 만들고 /work·/flow 화면과 하단 5탭 정보구조 구현을 시작했다.",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 286,
+                "out": 284727,
+                "cache_read": 34822532,
+                "cache_write": 791711,
+                "messages": 143,
+                "costUSD": 29.4791
+              }
+            },
+            "total": {
+              "in": 286,
+              "out": 284727,
+              "cache_read": 34822532,
+              "cache_write": 791711,
+              "messages": 143
+            },
+            "costUSD": 29.4791
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1200,
+                "out": 921236,
+                "cache_read": 119279227,
+                "cache_write": 5367627,
+                "messages": 600,
+                "costUSD": 116.2242
+              },
+              "claude-fable-5": {
+                "in": 36,
+                "out": 15603,
+                "cache_read": 1221691,
+                "cache_write": 162593,
+                "messages": 18,
+                "costUSD": 4.0346
+              }
+            },
+            "total": {
+              "in": 1236,
+              "out": 936839,
+              "cache_read": 120500918,
+              "cache_write": 5530220,
+              "messages": 618
+            },
+            "costUSD": 120.2588
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 16,
+                "out": 16561,
+                "cache_read": 767491,
+                "cache_write": 26963,
+                "messages": 8,
+                "costUSD": 0.9664
+              }
+            },
+            "total": {
+              "in": 16,
+              "out": 16561,
+              "cache_read": 767491,
+              "cache_write": 26963,
+              "messages": 8
+            },
+            "costUSD": 0.9664
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "weekday": "일",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "LifeOS HTML 시안 10종을 공개용 정적 경로로 복사하고 버전별 미리보기 인덱스를 만들어 프로젝트 061에 연결했다."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "039",
+      "pct": 35,
+      "filesChanged": 20,
+      "imp": 5,
+      "did": "7개 기업 보고서를 학생 작업 소개에서 기업 실무 적용·중장기 로드맵·다음 학기 연계 중심으로 보강하고 대표·실무자·산학 PM 관점 검토판을 작성했다.",
+      "nextAction": "확인된 적용안을 기존 기업별 Word 보고서 후반부에 순차 반영한다.",
+      "deliverables": [
+        "기업별 실무적용과 다음학기연계 대표실무자검토판 v0.2"
+      ]
+    },
+    {
+      "id": "081",
+      "pct": 30,
+      "filesChanged": 25,
+      "imp": 5,
+      "did": "Anchornode GF_UI 과제 보고서, 결함 표시본, 멀티에이전트 검토 자료와 HTML 보고서 작업을 집중 진행했다.",
+      "nextAction": "보고서의 대표 판단과 실제 UI 근거를 대조해 최종본 범위를 정한다."
+    },
+    {
+      "id": "061",
+      "pct": 20,
+      "filesChanged": 19,
+      "imp": 5,
+      "did": "커피 오전·오후 3안, 전체 구조 4안, 작업 입력 3안의 HTML 시안을 만들고 오늘·작업·흐름·하루·설정 구조와 /work·/flow 화면 구현을 시작했다.",
+      "nextAction": "커피 로그 호환성, Work 저장·삭제, 모바일 화면을 검증한 뒤 점진 배포한다.",
+      "deliverables": [
+        "LifeOS W34 HTML 시안 10종",
+        "/work 작업 입력 화면",
+        "/flow 주·월 흐름 화면"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 10,
+      "filesChanged": 13,
+      "imp": 4,
+      "did": "W34 주간 기록을 재집계하고 LifeOS 디자인 시안 10종을 /lifeos-design/index.html 인덱스에서 직접 열어볼 수 있도록 연결했다.",
+      "nextAction": "인증 상태에서 프로젝트 061·W34 페이지와 모바일 레이아웃을 확인한 뒤 사용자 승인 후 배포한다.",
+      "deliverables": [
+        "LifeOS 디자인 시안 공개 인덱스"
+      ]
+    },
+    {
+      "id": "09",
+      "pct": 5,
+      "filesChanged": 2,
+      "imp": 3,
+      "did": "키토식·암 대사·Press-Pulse 관련 질문과 가설을 브레인덤프로 정리하고 연구 인덱스에 연결했다.",
+      "nextAction": "원자료 검증 전에는 브레인덤프 상태를 유지하고 몸과마음의과학 연구 질문으로 분류한다."
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-22",
+      "projectId": "061",
+      "title": "LifeOS 하단 정보구조를 5개 영역으로 재편",
+      "description": "오늘·작업·흐름·하루·설정으로 분리하고 기존 기록의 Today는 오늘, Week·Month는 흐름, Work·Thesis는 작업으로 옮기는 구현을 시작했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-23",
+      "projectId": "063",
+      "title": "LifeOS W34 HTML 시안 10종을 WorkDashboard에 연결",
+      "description": "원본 시안은 보존하고 공개용 복사본과 인덱스를 /lifeos-design/index.html에 구성해 각 버전을 직접 비교할 수 있게 했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-23",
+      "projectId": "039",
+      "title": "코너스톤 보고서의 중심을 기업 적용 워크프로세스로 전환",
+      "description": "7사별 대표 결정, 실무 담당, 승인·중단 기준, 중장기 적용, 다음 학기 연계를 하나의 검토판으로 정리했다.",
+      "isMilestone": true
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-08-23T12:00:00+09:00",
+  "tokens": {
+    "total": {
+      "in": 13981,
+      "out": 2411617,
+      "cache_read": 270863986,
+      "cache_write": 12016826
+    },
+    "costUSD": 273.6521,
+    "costKRW": 385272
+  }
+}

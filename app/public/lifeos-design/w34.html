@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LifeOS 2026-W34 디자인 시안</title>
+  <style>
+    :root{--bg:#f4f1eb;--paper:#fff;--ink:#171715;--muted:#6f706a;--line:#d9d6cf;--accent:#2865d8;--chip:#e8edf8}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    header{padding:28px clamp(18px,4vw,52px) 20px;border-bottom:1px solid var(--line);background:rgba(244,241,235,.96)}
+    .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700} h1{margin:8px 0 8px;font-size:clamp(28px,4vw,48px);letter-spacing:-.04em}
+    header p{margin:0;max-width:850px;color:var(--muted);line-height:1.65}.layout{display:grid;grid-template-columns:minmax(260px,360px) 1fr;min-height:calc(100vh - 150px)}
+    aside{padding:24px;border-right:1px solid var(--line);overflow:auto;max-height:calc(100vh - 150px)}.group{margin-bottom:28px}.group h2{font-size:12px;letter-spacing:.08em;color:var(--muted);margin:0 0 10px;text-transform:uppercase}
+    .card{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:13px 14px;margin:8px 0;cursor:pointer;color:inherit}.card:hover,.card.active{border-color:var(--accent);box-shadow:0 5px 18px rgba(40,101,216,.1)}
+    .card strong{display:block;font-size:14px;margin-bottom:5px}.card span{font-size:12px;color:var(--muted);line-height:1.45}.tag{display:inline-block!important;margin-top:7px;padding:3px 7px;border-radius:999px;background:var(--chip);color:var(--accent)!important;font-size:10px!important;font-weight:700}
+    main{padding:24px;min-width:0}.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:12px}.toolbar strong{font-size:14px}.toolbar a{margin-left:auto;color:var(--accent);font-size:13px;text-decoration:none}.toolbar a:hover{text-decoration:underline}
+    .frame{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;height:calc(100vh - 220px);min-height:620px;box-shadow:0 12px 35px rgba(0,0,0,.07)}iframe{width:100%;height:100%;border:0;background:#fff}
+    .note{font-size:11px;color:var(--muted);margin-top:10px}.back{display:inline-block;margin-top:12px;color:var(--muted);text-decoration:none;font-size:12px}.back:hover{color:var(--ink)}
+    @media(max-width:840px){header{padding:22px 18px 16px}.layout{display:block}.layout aside{border-right:0;border-bottom:1px solid var(--line);max-height:none;padding:16px 18px}.group{margin-bottom:18px}.cards{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.card{min-width:220px;margin:0}.layout main{padding:16px}.frame{height:72vh;min-height:520px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">LifeOS · 2026-W34 current snapshot</div>
+  <h1>업데이트 디자인 시안</h1>
+  <p>8월 22일에 만든 커피 기록, 전체 정보구조, 작업 입력 인터페이스의 버전 흐름입니다. 왼쪽 시안을 선택하면 이 페이지 안에서 실제 HTML을 바로 확인할 수 있습니다.</p>
+  <a class="back" href="/projects/061">← LifeOS 프로젝트로 돌아가기</a>
+</header>
+<div class="layout">
+  <aside>
+    <section class="group"><h2>커피 오전·오후 기록</h2><div class="cards">
+      <button class="card" data-url="coffee-am-pm-v01.html" data-title="커피 오전·오후 v0.1"><strong>v0.1 · 시작안</strong><span>오전·오후 입력과 Health 섹션 재정리</span></button>
+      <button class="card" data-url="coffee-am-pm-v02.html" data-title="커피 오전·오후 v0.2"><strong>v0.2 · 압축안</strong><span>Health 블록의 정보 밀도와 입력 구조 압축</span></button>
+      <button class="card" data-url="coffee-am-pm-v03.html" data-title="커피 오전·오후 v0.3"><strong>v0.3 · A안</strong><span>선택한 Health 블록 방향</span><span class="tag">TRACK LATEST</span></button>
+    </div></section>
+    <section class="group"><h2>LifeOS 전체 구조</h2><div class="cards">
+      <button class="card" data-url="lifeos-structure-v04.html" data-title="LifeOS 전체 구조 v0.4"><strong>v0.4</strong><span>전체 구조 개편의 첫 시안</span></button>
+      <button class="card" data-url="lifeos-structure-v05.html" data-title="LifeOS 전체 구조 v0.5"><strong>v0.5</strong><span>탭과 정보 위계 보완</span></button>
+      <button class="card" data-url="lifeos-structure-v06.html" data-title="LifeOS 전체 구조 v0.6"><strong>v0.6</strong><span>흐름과 작업 영역 구체화</span></button>
+      <button class="card" data-url="lifeos-structure-v07.html" data-title="LifeOS 전체 구조 v0.7"><strong>v0.7</strong><span>오늘·작업·흐름·하루·설정 구조</span><span class="tag">TRACK LATEST</span></button>
+    </div></section>
+    <section class="group"><h2>작업 입력 인터페이스</h2><div class="cards">
+      <button class="card" data-url="work-input-v08.html" data-title="작업 입력 v0.8"><strong>v0.8 · 기본 입력</strong><span>작업 탭의 입력 인터페이스</span></button>
+      <button class="card" data-url="work-input-flow-v09.html" data-title="작업 입력 흐름 v0.9"><strong>v0.9 · 단계 흐름</strong><span>입력부터 프로젝트 분류까지 단계화</span></button>
+      <button class="card active" data-url="work-input-top-v10.html" data-title="작업 입력 상단 v1.0"><strong>v1.0 · 상단 입력바</strong><span>상단 고정 입력과 프로젝트 선택 구조</span><span class="tag">TRACK LATEST</span></button>
+    </div></section>
+  </aside>
+  <main>
+    <div class="toolbar"><strong id="currentTitle">작업 입력 상단 v1.0</strong><a id="openDirect" href="work-input-top-v10.html" target="_blank" rel="noopener">새 창에서 시안만 보기 ↗</a></div>
+    <div class="frame"><iframe id="preview" src="work-input-top-v10.html" title="LifeOS 디자인 시안 미리보기"></iframe></div>
+    <div class="note">각 시안은 원본 HTML의 공개용 복사본입니다. LifeOS 원본 design 폴더는 수정하지 않았습니다.</div>
+  </main>
+</div>
+<script>
+  const frame=document.getElementById('preview');
+  const title=document.getElementById('currentTitle');
+  const direct=document.getElementById('openDirect');
+  document.querySelectorAll('.card').forEach(card=>card.addEventListener('click',()=>{
+    document.querySelectorAll('.card').forEach(x=>x.classList.remove('active'));
+    card.classList.add('active');
+    frame.src=card.dataset.url;
+    title.textContent=card.dataset.title;
+    direct.href=card.dataset.url;
+    if(innerWidth<841) document.querySelector('main').scrollIntoView({behavior:'smooth'});
+  }));
+</script>
+</body>
+</html>

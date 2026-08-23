@@ -1,26 +1,26 @@
 {
   "id": "061",
   "currentSituation": {
-    "summary": "v2.0 대규모 리팩토링 시도 → 폐기 → v0.8.1 롤백 → v0.9.3 점진 복구 완료. 메모리 시스템 + Calendar OAuth 해결. Vercel 배포 운영 중.",
-    "phase": "Phase 3 — v0.9.3 안정화, v2.0 교훈 기반 점진 개선 전환",
+    "summary": "2026-W34에 커피 오전·오후 기록, 전체 정보구조, 작업 입력 인터페이스를 10개 HTML 시안으로 검토하고 실제 앱에 오늘·작업·흐름·하루·설정 구조를 적용하는 작업을 시작했다.",
+    "phase": "Phase 4 — W34 정보구조·작업입력 재설계 구현 중",
     "recentLogs": [
+      {
+        "date": "2026-08-23",
+        "title": "W34 디자인 시안 10종을 WorkDashboard에서 직접 확인하도록 연결",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/docs/logs/20260823_lifeos_w34_dashboard_link.md",
+        "excerpt": "커피 기록 3안, 전체 구조 4안, 작업 입력 3안을 /lifeos-design/index.html에 공개용 복사본으로 연결. 원본 design 폴더는 보존."
+      },
+      {
+        "date": "2026-08-22",
+        "title": "LifeOS 정보구조 개편과 작업 입력 구현 시작",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/docs/logs/20260823_lifeos_w34_dashboard_link.md",
+        "excerpt": "하단 내비게이션을 오늘·작업·흐름·하루·설정으로 재편하고 /work·/flow 화면, 커피 AM/PM 데이터 구조, Today 통합을 구현 중."
+      },
       {
         "date": "2026-05-13",
         "title": "v0.9.3 — 메모리 시스템 + Calendar OAuth 해결 + 다수 UX 개선",
         "logFilePath": "",
-        "excerpt": "하루 메모리(프로필+주간요약+오늘컨텍스트), 홈 스케줄 체크, Week 네비, Recommendation 삭제, Calendar KST/OAuth 8시간 디버깅 해결."
-      },
-      {
-        "date": "2026-05-12",
-        "title": "v2.0 폐기 Postmortem + v0.8.1 롤백 + v0.9.1 복구 시작",
-        "logFilePath": "",
-        "excerpt": "45 commits/114 files 리팩토링 폐기. UI 디테일·인터랙션 손실이 원인. v0.8.1로 안전 롤백 후 점진 복구 전환."
-      },
-      {
-        "date": "2026-05-09",
-        "title": "v0.9.0 — 커피 트래킹 + Google Calendar 동기화 + Todo 삭제/시간",
-        "logFilePath": "",
-        "excerpt": "커피 스테퍼+차트+자동감지, Calendar→Supabase 동기화, Todo ✕삭제+시간표시, 디자인 진화 레포트."
+        "excerpt": "하루 메모리, 홈 스케줄 체크, Week 네비, Calendar KST/OAuth 문제를 해결."
       }
     ],
     "blockers": [
@@ -51,72 +51,93 @@
   "deliverables": [
     {
       "title": "v2.0 Postmortem 리포트",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/docs/2026-05-12_v2.0_postmortem.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/docs/2026-05-12_v2.0_postmortem.md",
       "fileKind": "md",
       "summary": "v2.0 폐기 원인 7가지 분석, 사용자 의도 미스매치, 향후 방지책 6가지.",
       "modifiedAt": "2026-05-12"
     },
     {
       "title": "v0.9.3 CHANGELOG",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/CHANGELOG.md",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/CHANGELOG.md",
       "fileKind": "md",
       "summary": "v0.1~v0.9.3 전체 버전 히스토리. 메모리 시스템, Calendar OAuth, 홈 스케줄 체크 등.",
       "modifiedAt": "2026-05-13"
     },
     {
       "title": "하루 대화방 (v0.9.3)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/haru/page.tsx",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/src/app/haru/page.tsx",
       "fileKind": "tsx",
       "summary": "메모리 시스템 탑재 — 프로필+주간요약+오늘컨텍스트 기반 맞춤 대화.",
       "modifiedAt": "2026-05-13"
     },
     {
       "title": "기록(Diary) 페이지 (v0.9.3)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/diary/page.tsx",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/src/app/diary/page.tsx",
       "fileKind": "tsx",
       "summary": "Today/Week/Month 탭. Week 주간 네비, 수면·커피 기준선, 감정 10색 차트.",
       "modifiedAt": "2026-05-13"
     },
     {
       "title": "홈 페이지 (v0.9.3)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/src/app/page.tsx",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/src/app/page.tsx",
       "fileKind": "tsx",
       "summary": "시간 기반 컬러, 3블록 브리핑, 스케줄 체크 버튼, 루틴 연속일수, Recommendation.",
       "modifiedAt": "2026-05-13"
     },
     {
       "title": "디자인 진화 레포트 (Stage 1~8)",
-      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/061_LifeOS/app/docs/design-evolution-report.html",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/docs/design-evolution-report.html",
       "fileKind": "html",
       "summary": "v0.1~v0.8 디자인 변천사 인터랙티브 문서.",
       "modifiedAt": "2026-05-09"
+    },
+    {
+      "title": "W34 LifeOS 디자인 시안 인덱스",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/design/lifeos_작업입력_상단_v1.0_시안.html",
+      "fileKind": "html",
+      "summary": "커피 기록 3안·전체 구조 4안·작업 입력 3안. WorkDashboard /lifeos-design/index.html에서 10개 HTML 직접 확인.",
+      "modifiedAt": "2026-08-23"
+    },
+    {
+      "title": "작업 탭 구현",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/src/app/work/page.tsx",
+      "fileKind": "tsx",
+      "summary": "주·월 작업 기록, 프로젝트 자동 추정, 상단 고정 입력, 프로젝트별 기록·삭제 흐름.",
+      "modifiedAt": "2026-08-22"
+    },
+    {
+      "title": "흐름 탭 구현",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/061_LifeOS/app/src/app/flow/page.tsx",
+      "fileKind": "tsx",
+      "summary": "기존 Week·Month 기록을 몸과 기분의 주·월 흐름 화면으로 분리.",
+      "modifiedAt": "2026-08-22"
     }
   ],
   "nextTasks": [
     {
-      "title": "v0.9.3 모바일 안정화",
-      "description": "iPhone 13 safe-area, iOS Safari z-index, 16px input 강제 등 모바일 특이사항 점검.",
+      "title": "W34 변경사항 기능 검증",
+      "description": "오늘·작업·흐름·하루·설정 이동, Work 저장·삭제, Today 입력, 모바일 레이아웃을 실제 데이터로 점검.",
       "priority": "high",
       "estimate": "1일"
     },
     {
-      "title": "OPENAI_API_KEY 환경변수 정리",
-      "description": "Vercel env에 OPENAI_API_KEY 등록. localStorage 의존 제거.",
+      "title": "커피 로그 데이터 호환성 점검",
+      "description": "기존 coffee_log의 hour 구조와 새 AM/PM period 구조가 충돌하지 않는지 데이터 마이그레이션·fallback 확인.",
       "priority": "high",
-      "estimate": "30분"
+      "estimate": "반나절"
     },
     {
-      "title": "v2.0 산출물 선별 cherry-pick",
-      "description": "회고 색상 시스템, 시간 네비 등 가치 있는 기능을 v0.9.x 위에 layer로 점진 도입.",
+      "title": "디자인 시안과 구현본 대조",
+      "description": "전체 구조 v0.7과 작업 입력 v1.0을 실제 앱 화면과 비교해 누락·차이를 기록.",
       "priority": "mid",
-      "estimate": "기능당 반나절"
+      "estimate": "반나절"
     },
     {
-      "title": "Fitbit 연동 검토",
-      "description": "수면·운동 데이터를 Fitbit API에서 자동 수집 가능성 검토.",
-      "priority": "low",
-      "estimate": "반나절 (조사)"
+      "title": "사용자 승인 후 점진 배포",
+      "description": "v2.0 회고 원칙에 따라 대규모 일괄 머지 대신 검증된 화면부터 단계적으로 반영.",
+      "priority": "mid",
+      "estimate": "기능별 반나절"
     }
   ],
-  "buildAt": "2026-05-13T15:00:00+09:00"
+  "buildAt": "2026-08-23T12:00:00+09:00"
 }

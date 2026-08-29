@@ -1,0 +1,440 @@
+{
+  "project": "마음이 — 비 오는 날의 회복",
+  "builtAt": "2026-08-29",
+  "scope": {
+    "processImages": 8,
+    "videos": 11,
+    "lectureSlides": 20
+  },
+  "process": [
+    {
+      "id": "00",
+      "title": "전체 제작 프로세스 맵",
+      "src": "assets/process-00.png",
+      "sourcePath": "06_프로세스정리/00_전체_제작프로세스_맵.png",
+      "width": 1800,
+      "height": 2725,
+      "bytes": 1456983,
+      "sha256": "60847f05c563ebabf9c0e7ae6ce82db023cf52169ec491d521eb6d380391207f"
+    },
+    {
+      "id": "01",
+      "title": "캐릭터 정체성·표정·에너지 체계",
+      "src": "assets/process-01.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/01_reference_identity.png",
+      "width": 1800,
+      "height": 1772,
+      "bytes": 1638590,
+      "sha256": "2ebf8fd02dbb3936bc4d68dd24d366c433c554bfd026758c54f99b3e5631c277"
+    },
+    {
+      "id": "02",
+      "title": "스토리보드 v0.1–v0.4 반복 개선",
+      "src": "assets/process-02.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/02_storyboard_evolution.png",
+      "width": 1800,
+      "height": 2558,
+      "bytes": 3164765,
+      "sha256": "71ab24e978289d0fd9be132ad0c61b251c43955262d585759ede483ef60b13bb"
+    },
+    {
+      "id": "03",
+      "title": "카메라와 공간의 인과 설계",
+      "src": "assets/process-03.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/03_camera_spatial_design.png",
+      "width": 1800,
+      "height": 1772,
+      "bytes": 2659024,
+      "sha256": "8fe6495ff02b3bd1d1ad3a92f977a40a60a3763cdee7a87d40a0d23a156f732b"
+    },
+    {
+      "id": "04",
+      "title": "A–E 영상 키프레임 제작",
+      "src": "assets/process-04.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/04_generation_keyframes.png",
+      "width": 1800,
+      "height": 4916,
+      "bytes": 3904707,
+      "sha256": "f5f390242d2160185ea1bb0a3c149a37e3f416ac9a3226c7e2274d0e2a1863f0"
+    },
+    {
+      "id": "05",
+      "title": "A–E 독립 영상 생성·수정·QA",
+      "src": "assets/process-05.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/05_block_generation_qa.png",
+      "width": 1800,
+      "height": 4130,
+      "bytes": 5345634,
+      "sha256": "394e4b078790c991a39e9afffc1d1d7c141b1144aa7883fafa8ad474ec6c02f2"
+    },
+    {
+      "id": "06",
+      "title": "54초 블록 연결 마스터 진단",
+      "src": "assets/process-06.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/06_master_54s_audit.png",
+      "width": 1800,
+      "height": 1772,
+      "bytes": 2011298,
+      "sha256": "f7bab3d562dc090aa24747c3ffef04564ac23fbac958c48363e923a600f1ff0f"
+    },
+    {
+      "id": "07",
+      "title": "30초 단일 원테이크 정밀 QA",
+      "src": "assets/process-07.png",
+      "sourcePath": "06_프로세스정리/01_step_contact_sheets/07_single_take_30s_qa.png",
+      "width": 1800,
+      "height": 1772,
+      "bytes": 2076419,
+      "sha256": "d87bf33d39f154a30b3e4ffea3e9cd10c8a27bdb8ae1d38d3c3de20008151736"
+    }
+  ],
+  "videos": [
+    {
+      "id": "01",
+      "title": "A v0.1 · 노트에서 등장",
+      "status": "사용 제외",
+      "note": "종이를 관통하는 형태 오류가 발생한 최초 비교본.",
+      "src": "assets/videos/01.mp4",
+      "poster": "assets/posters/01.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/A_notebook_emergence_v0.1_REJECTED.mp4",
+      "sourceFilename": "A_notebook_emergence_v0.1_REJECTED.mp4",
+      "sourceBytes": 15458686,
+      "sourceSha256": "b365a440a7cbaf124b88d2ec5ace1f96c9df7f56a38f73a8f885f675e3ae44cb",
+      "webBytes": 1842435,
+      "webSha256": "59525f673b7114821e735016fa8b70e02554a21ec4ce9c4035511e75b0342528",
+      "posterBytes": 50316
+    },
+    {
+      "id": "02",
+      "title": "A v0.2 · 노트 위 기립",
+      "status": "수정본",
+      "note": "몸과 두 발을 노트 표면 위에 고정한 편집 교정본.",
+      "src": "assets/videos/02.mp4",
+      "poster": "assets/posters/02.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/A_notebook_emergence_v0.2_EDITED.mp4",
+      "sourceFilename": "A_notebook_emergence_v0.2_EDITED.mp4",
+      "sourceBytes": 13482090,
+      "sourceSha256": "c859b2b8f93bb3f3eb9b1ca858ab9732c3f2834888ccbcde8b5244a801005829",
+      "webBytes": 1573284,
+      "webSha256": "f0e5551c564533fbaa8ee83f287c9d3e3a3b8579426fdee74d997dc353da07b5",
+      "posterBytes": 47149
+    },
+    {
+      "id": "03",
+      "title": "B v0.1 · 점프와 착지",
+      "status": "비교본",
+      "note": "착지까지만 구현되어 구르기와 기립이 부족한 초기본.",
+      "src": "assets/videos/03.mp4",
+      "poster": "assets/posters/03.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/B_sigh_jump_landing_v0.1.mp4",
+      "sourceFilename": "B_sigh_jump_landing_v0.1.mp4",
+      "sourceBytes": 9583671,
+      "sourceSha256": "dd4a574fe36a157b825fddb0bd341b9b95f18cee045cb4a2edac80922ea29fd9",
+      "webBytes": 1011103,
+      "webSha256": "d4d03083e2797fff1b156c7c1acbb4a79bdf39c84108ac258beeeb0a027ebf25",
+      "posterBytes": 47151
+    },
+    {
+      "id": "04",
+      "title": "B v0.2 · 구르기와 기립",
+      "status": "수정본",
+      "note": "한 번 구른 뒤 일어나는 동작을 보완한 승인 후보.",
+      "src": "assets/videos/04.mp4",
+      "poster": "assets/posters/04.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/B_sigh_jump_roll_stand_v0.2.mp4",
+      "sourceFilename": "B_sigh_jump_roll_stand_v0.2.mp4",
+      "sourceBytes": 8628884,
+      "sourceSha256": "dcd30d11b9f9a881afc923b50bdd874ac8104bb1ed3a885e482fc53e4b519b3b",
+      "webBytes": 908343,
+      "webSha256": "b73e16592a5c4ae10d05ed1c1b40d57a1a5300cb733f186364fef51c5bbba35c",
+      "posterBytes": 45641
+    },
+    {
+      "id": "05",
+      "title": "C1 · 빨강에서 주황",
+      "status": "블록 완성",
+      "note": "무거운 걷기와 에너지 회복의 시작.",
+      "src": "assets/videos/05.mp4",
+      "poster": "assets/posters/05.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/C1_red_to_orange_heavy_walk_v0.1.mp4",
+      "sourceFilename": "C1_red_to_orange_heavy_walk_v0.1.mp4",
+      "sourceBytes": 12593674,
+      "sourceSha256": "c51a94c8d936837aa298f530e46ea655fb64da279b543e9328e9d2d8c8af9184",
+      "webBytes": 1208133,
+      "webSha256": "4a35e6350a3f26226a88392a76a30279a0973e0b0a49090f75392cd6ec198528",
+      "posterBytes": 74722
+    },
+    {
+      "id": "06",
+      "title": "C2 · 노랑·초록·무지개",
+      "status": "블록 완성",
+      "note": "도시 가로수길에서 색 변화와 무지개를 연결.",
+      "src": "assets/videos/06.mp4",
+      "poster": "assets/posters/06.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/C2_orange_yellow_hops_green_rainbow_v0.1.mp4",
+      "sourceFilename": "C2_orange_yellow_hops_green_rainbow_v0.1.mp4",
+      "sourceBytes": 17700366,
+      "sourceSha256": "d3dd557c712792b49cdb0de59eeeebaa0d3d859da0c36512831541d9b0b3fd0f",
+      "webBytes": 1603752,
+      "webSha256": "701e55e7d365b4af42641a4acf83d3697e5f9c7b0326ab83096265cd29065596",
+      "posterBytes": 41715
+    },
+    {
+      "id": "07",
+      "title": "D · 도약과 구름 접근",
+      "status": "재검토",
+      "note": "후면 오빗에서 형태 돌기가 발견된 진단 대상.",
+      "src": "assets/videos/07.mp4",
+      "poster": "assets/posters/07.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/D_jump_24mm_orbit_cloud_v0.1.mp4",
+      "sourceFilename": "D_jump_24mm_orbit_cloud_v0.1.mp4",
+      "sourceBytes": 14268958,
+      "sourceSha256": "9bc093750098edd79eb9ed0ce8b5c958639678adedd96729ee4cc768502637fc",
+      "webBytes": 1311718,
+      "webSha256": "ae15b9352bc3ca02a2f91148d96332ce53417f82c7cd62db0dd1d359888f1d28",
+      "posterBytes": 89131
+    },
+    {
+      "id": "08",
+      "title": "E v0.1 · 구름 착석과 윙크",
+      "status": "비교본",
+      "note": "대칭 착석과 일정한 줌이 경직되어 보인 초기본.",
+      "src": "assets/videos/08.mp4",
+      "poster": "assets/posters/08.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/E_cloud_sit_to_wink_v0.1.mp4",
+      "sourceFilename": "E_cloud_sit_to_wink_v0.1.mp4",
+      "sourceBytes": 6308676,
+      "sourceSha256": "bf6227e22ddd22e731c64a0b9bae7430e10528b604740973654fc670509a209f",
+      "webBytes": 467325,
+      "webSha256": "589318fad274ae227ba836df3ab11f8b7d8f47ff5d94add8b8b59b8e09e36de9",
+      "posterBytes": 21307
+    },
+    {
+      "id": "09",
+      "title": "E v0.2 · 이완된 착석",
+      "status": "수정본",
+      "note": "비대칭 무게 이동과 이완된 포즈를 보완.",
+      "src": "assets/videos/09.mp4",
+      "poster": "assets/posters/09.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/E_cloud_sit_to_wink_v0.2.mp4",
+      "sourceFilename": "E_cloud_sit_to_wink_v0.2.mp4",
+      "sourceBytes": 5989154,
+      "sourceSha256": "14e705d5df988e3937d8269419791f4e64ba5b4b16cae3115a5bcc9756694448",
+      "webBytes": 418683,
+      "webSha256": "7cad1effe2a1ce341c0aed6f6c68b107b936cd3f9eaf648578f4056a1f99a25f",
+      "posterBytes": 20363
+    },
+    {
+      "id": "10",
+      "title": "54초 세로형 연결 마스터",
+      "status": "진단본",
+      "note": "A–E 독립 클립을 연결한 첫 완성본. 경계 이질감 진단 기준.",
+      "src": "assets/videos/10.mp4",
+      "poster": "assets/posters/10.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/MAEUMI_rainy_day_recovery_vertical_master_v0.1.mp4",
+      "sourceFilename": "MAEUMI_rainy_day_recovery_vertical_master_v0.1.mp4",
+      "sourceBytes": 72517115,
+      "sourceSha256": "66bf43a8f919c41626eb8e7e0c9d92ef48408dcabc65d564bbf840885dc6b6e9",
+      "webBytes": 6994038,
+      "webSha256": "a8c9a7f5981d49bc76a8e7f7616c8dd6cc7a874c2c6c9a749b64865ae1931032",
+      "posterBytes": 47149
+    },
+    {
+      "id": "11",
+      "title": "30초 단일 원테이크",
+      "status": "현재 기준본",
+      "note": "Seedance 2.5 단일 생성. 공간·색·배경 연결은 개선됐으나 360° 오빗은 미달.",
+      "src": "assets/videos/11.mp4",
+      "poster": "assets/posters/11.jpg",
+      "sourcePath": "04_영상/00_Higgsfield_입력패키지/06_output_clips/MAEUMI_single_take_30s_seedance2.5_v0.1.mp4",
+      "sourceFilename": "MAEUMI_single_take_30s_seedance2.5_v0.1.mp4",
+      "sourceBytes": 47059007,
+      "sourceSha256": "7ec9ac9897f6cacec4419b81861831388a784550b52fc2d2e355337f1613f4fa",
+      "webBytes": 5457657,
+      "webSha256": "a6e31ae0c27b36930ab48b8a3089d2fe6bb0eccdbc6cb9a10ac00923817d9000",
+      "posterBytes": 50684
+    }
+  ],
+  "slides": [
+    {
+      "number": 1,
+      "src": "assets/slides/slide-01.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-1.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 607593,
+      "sha256": "d026917b19ce6e02f3e85c792f8014bc0eb055419f4abc5a1261bfd12955d06b"
+    },
+    {
+      "number": 2,
+      "src": "assets/slides/slide-02.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-2.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 80974,
+      "sha256": "c5e93d0f1e5cd4402038755855b7e386f2ee2e3bc481e7ed2db54b8e20fa4db5"
+    },
+    {
+      "number": 3,
+      "src": "assets/slides/slide-03.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-3.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 73798,
+      "sha256": "7f6628067794428cbb65a473250e36af95e7b04dcb3aa07e81d8ee6e22868ddc"
+    },
+    {
+      "number": 4,
+      "src": "assets/slides/slide-04.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-4.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 155954,
+      "sha256": "6438af9132af5f1b9e6f748d0e024599d644bbfa1908c9fc211a070a691c8249"
+    },
+    {
+      "number": 5,
+      "src": "assets/slides/slide-05.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-5.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 80852,
+      "sha256": "0b731bce7a02d762b0c701c9771e3e11f4a4961bb6cb3d73a4388f7ed617b9b1"
+    },
+    {
+      "number": 6,
+      "src": "assets/slides/slide-06.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-6.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 714262,
+      "sha256": "81b82430cd6f3c7a2049f425ce4ba205548d02858d75279650cff3185b27b8c2"
+    },
+    {
+      "number": 7,
+      "src": "assets/slides/slide-07.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-7.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 351995,
+      "sha256": "3164be772a4bc60bc075f44300b1518447d7140c76cad4d9fe41c8c6de0d6d7e"
+    },
+    {
+      "number": 8,
+      "src": "assets/slides/slide-08.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-8.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 88856,
+      "sha256": "fa1fef17d51be638fb75e47f20eeeb47687ea9820ffe62cc4871183dff1a63e5"
+    },
+    {
+      "number": 9,
+      "src": "assets/slides/slide-09.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-9.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 1273740,
+      "sha256": "bb69bc00308dafc7fa10b97478c0c8e59c408a4b5b4fbfecad5bd4eca46487fa"
+    },
+    {
+      "number": 10,
+      "src": "assets/slides/slide-10.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-10.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 658869,
+      "sha256": "ede717c543414394ca243772baf586e897be33813efb834e39f0d30c86115c12"
+    },
+    {
+      "number": 11,
+      "src": "assets/slides/slide-11.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-11.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 72548,
+      "sha256": "e2e268f8e17269f86f135b37d481ad1d5c09635e5c3646fb75ea4687a2e93ebc"
+    },
+    {
+      "number": 12,
+      "src": "assets/slides/slide-12.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-12.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 809364,
+      "sha256": "32bcda13dd7f327fc879b172032c65d832490ea64103e9241d4854745e8b5e4f"
+    },
+    {
+      "number": 13,
+      "src": "assets/slides/slide-13.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-13.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 306584,
+      "sha256": "82bfea9d0fec4a81804f81230263153126f769778feb7edefa1d95687f7bfd5f"
+    },
+    {
+      "number": 14,
+      "src": "assets/slides/slide-14.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-14.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 727627,
+      "sha256": "17144f9b4061523e29edc24d8cc82d347fbc55fc3da7d07416f73005cf6b28de"
+    },
+    {
+      "number": 15,
+      "src": "assets/slides/slide-15.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-15.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 91084,
+      "sha256": "dc761449c50618d0a886757a9724f955948c51f87fab25f521735462fc0530cb"
+    },
+    {
+      "number": 16,
+      "src": "assets/slides/slide-16.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-16.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 93906,
+      "sha256": "13fb9dbcd926488f8c121db14072d499aa9333a389be895d92f07aebef3f8009"
+    },
+    {
+      "number": 17,
+      "src": "assets/slides/slide-17.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-17.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 193574,
+      "sha256": "0fb837e3e48b01a35649b2f7388fb0745f7cd437da74e61fd868360da9139e52"
+    },
+    {
+      "number": 18,
+      "src": "assets/slides/slide-18.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-18.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 478803,
+      "sha256": "56d06c7d18de251489f99ea8831b452a3b354eb2b4406d18545928356858f640"
+    },
+    {
+      "number": 19,
+      "src": "assets/slides/slide-19.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-19.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 95672,
+      "sha256": "9b4b7bb5d699aea94fcf638a7c417022c17faf0dc85c25dbebce5e9cf7b0d2c6"
+    },
+    {
+      "number": 20,
+      "src": "assets/slides/slide-20.png",
+      "sourcePath": "06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1/slide-20.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 148037,
+      "sha256": "7dece44baaa1c30cc81e69641a87bc1fcd9fd27477089474f0e7dc110cfffc82"
+    }
+  ]
+}

@@ -236,6 +236,7 @@ function Hero({
         designHistoryUrl={project.designHistoryUrl}
         portfolioUrl={project.portfolioUrl}
         processPortfolioUrl={project.processPortfolioUrl}
+        mediaPortfolioUrl={project.mediaPortfolioUrl}
         assignmentGalleryUrl={project.assignmentGalleryUrl}
         appUrl={project.appUrl}
       />
@@ -367,6 +368,7 @@ function ExternalLinkRow({
   designHistoryUrl,
   portfolioUrl,
   processPortfolioUrl,
+  mediaPortfolioUrl,
   assignmentGalleryUrl,
   appUrl,
 }: {
@@ -375,6 +377,7 @@ function ExternalLinkRow({
   designHistoryUrl?: string;
   portfolioUrl?: string;
   processPortfolioUrl?: string;
+  mediaPortfolioUrl?: string;
   assignmentGalleryUrl?: string;
   appUrl?: string;
 }) {
@@ -382,6 +385,7 @@ function ExternalLinkRow({
   if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
   if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
+  if (mediaPortfolioUrl) links.push({ label: '이미지·동영상 포트폴리오', href: mediaPortfolioUrl, emphasis: true });
   if (assignmentGalleryUrl) links.push({ label: '수업과제 이미지 갤러리', href: assignmentGalleryUrl, emphasis: true });
   if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });
   if (webUrl) links.push({ label: projectName.toUpperCase(), href: webUrl });

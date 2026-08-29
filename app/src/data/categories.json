@@ -9,5 +9,6 @@
   { "id": "08", "name": "project",          "label": "외부 프로젝트",       "description": "브랜드·강의·강연",                       "order": 8, "hidden": false },
   { "id": "09", "name": "몸과마음의과학",      "label": "몸과 마음의 과학",     "description": "강의·연구·출판 통합",                    "order": 9, "hidden": false },
   { "id": "10", "name": "보고살피다",         "label": "보고살피다",          "description": "\"보살피고\" 챗봇 빌드 + 실험",            "order": 10, "hidden": false },
-  { "id": "11", "name": "omx_wiki",         "label": "지식 위키",           "description": "LLM 유지보수 영속 지식 위키 (Karpathy LLM Wiki 패턴)", "order": 11, "hidden": false }
+  { "id": "11", "name": "omx_wiki",         "label": "지식 위키",           "description": "LLM 유지보수 영속 지식 위키 (Karpathy LLM Wiki 패턴)", "order": 11, "hidden": false },
+  { "id": "13", "name": "Image",            "label": "이미지·영상 제작",     "description": "생성 이미지·AI 영상 제작과 방법론 아카이브",  "order": 13, "hidden": false }
 ]

@@ -1,0 +1,420 @@
+{
+  "week": "2026-W35",
+  "range": {
+    "from": "2026-08-24",
+    "to": "2026-08-30"
+  },
+  "status": "current",
+  "summary": "Higgsfield 마음이 AI 영상 프로젝트를 신설하고, 30초 단일 원테이크 기준본과 이미지 8장·영상 11개·강의 슬라이드 20장을 연결한 제작과정 포트폴리오를 구축했다.",
+  "kpis": {
+    "activeProjects": 8,
+    "sessions": 1,
+    "newProjects": 1,
+    "filesChanged": 161
+  },
+  "daily": [
+    {
+      "date": "2026-08-24",
+      "weekday": "월",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "081",
+        "039",
+        "063",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 30,
+                "out": 22146,
+                "cache_read": 9862026,
+                "cache_write": 32018,
+                "messages": 15,
+                "costUSD": 5.6849
+              }
+            },
+            "total": {
+              "in": 30,
+              "out": 22146,
+              "cache_read": 9862026,
+              "cache_write": 32018,
+              "messages": 15
+            },
+            "costUSD": 5.6849
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] IJM_RISE제출용_결과보고서_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] v0.8_ai_activity_3months_A3_portrait.html"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 128,
+                "out": 103948,
+                "cache_read": 11659427,
+                "cache_write": 299862,
+                "messages": 64,
+                "costUSD": 10.3032
+              }
+            },
+            "total": {
+              "in": 128,
+              "out": 103948,
+              "cache_read": 11659427,
+              "cache_write": 299862,
+              "messages": 64
+            },
+            "costUSD": 10.3032
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "weekday": "화",
+      "filesChanged": 6,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "081",
+        "09",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_전체_진행_체크리스트.md · README.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 42,
+                "out": 20515,
+                "cache_read": 3720822,
+                "cache_write": 49355,
+                "messages": 21,
+                "costUSD": 2.682
+              }
+            },
+            "total": {
+              "in": 42,
+              "out": 20515,
+              "cache_read": 3720822,
+              "cache_write": 49355,
+              "messages": 21
+            },
+            "costUSD": 2.682
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W35.json"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] README.md · PROGRESS.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 2328,
+                "cache_read": 1359432,
+                "cache_write": 4928,
+                "messages": 2,
+                "costUSD": 0.7687
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 2328,
+              "cache_read": 1359432,
+              "cache_write": 4928,
+              "messages": 2
+            },
+            "costUSD": 0.7687
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 14,
+                "out": 6946,
+                "cache_read": 2335038,
+                "cache_write": 7729,
+                "messages": 7,
+                "costUSD": 1.3895
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 6946,
+              "cache_read": 2335038,
+              "cache_write": 7729,
+              "messages": 7
+            },
+            "costUSD": 1.3895
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] AI_보고서_문체규칙.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "weekday": "수",
+      "filesChanged": 5,
+      "topProjectIds": [
+        "02",
+        "063",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 46,
+                "out": 60235,
+                "cache_read": 2089332,
+                "cache_write": 208730,
+                "messages": 23,
+                "costUSD": 3.8553
+              }
+            },
+            "total": {
+              "in": 46,
+              "out": 60235,
+              "cache_read": 2089332,
+              "cache_write": 208730,
+              "messages": 23
+            },
+            "costUSD": 3.8553
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W35.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 2026-08-26_수업-프로젝트-계획서_브레인덤프.md · CLAUDE.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 70,
+                "out": 21774,
+                "cache_read": 3705714,
+                "cache_write": 215729,
+                "messages": 35,
+                "costUSD": 3.7459
+              }
+            },
+            "total": {
+              "in": 70,
+              "out": 21774,
+              "cache_read": 3705714,
+              "cache_write": 215729,
+              "messages": 35
+            },
+            "costUSD": 3.7459
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-28",
+      "weekday": "금",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 01_기업제안_검토_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 214,
+                "out": 279176,
+                "cache_read": 33250749,
+                "cache_write": 556145,
+                "messages": 107,
+                "costUSD": 27.0818
+              }
+            },
+            "total": {
+              "in": 214,
+              "out": 279176,
+              "cache_read": 33250749,
+              "cache_write": 556145,
+              "messages": 107
+            },
+            "costUSD": 27.0818
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W35.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "weekday": "토",
+      "filesChanged": 123,
+      "topProjectIds": [
+        "131",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "131",
+          "did": "마음이 AI 영상 제작 프로세스 정리: 95개 고유 콘텐츠 감사, 7단계 콘택트시트, A–E 비교·수정 영상, 54초 마스터 진단, 30초 단일 원테이크 QA, 20장 강의자료 완성"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 10_2회차_외국어학습_진행_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 80,
+                "out": 77866,
+                "cache_read": 20541826,
+                "cache_write": 102846,
+                "messages": 40,
+                "costUSD": 12.8608
+              }
+            },
+            "total": {
+              "in": 80,
+              "out": 77866,
+              "cache_read": 20541826,
+              "cache_write": 102846,
+              "messages": 40
+            },
+            "costUSD": 12.8608
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W35.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "081",
+      "pct": 9,
+      "filesChanged": 14,
+      "imp": 3,
+      "nextAction": "Anchornode 후속 작업 범위 재확인"
+    },
+    {
+      "id": "131",
+      "pct": 71,
+      "filesChanged": 115,
+      "imp": 5,
+      "did": "마음이 9:16 AI 영상의 7단계 제작·QA 기록을 정리하고 30초 원테이크 기준본과 이미지·영상 통합 포트폴리오를 공개했다.",
+      "nextAction": "30초 기준본 검토 후 360° 오빗 보완 여부 결정",
+      "deliverables": [
+        "06_프로세스정리/01_제작프로세스_파일인벤토리.md",
+        "MAEUMI_single_take_30s_seedance2.5_v0.1.mp4",
+        "/higgsfield-maeumi-portfolio/index.html"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "사람의 집중시간을 로그만으로 단정하지 않고 모든 시간 수치를 `추정 활동시간`으로 표시했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "개인정보와 산출물 본문을 외부로 전송하지 않고 로컬 파일만 읽어 HTML에 필요한 요약 데이터만 포함했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "반복 사용이 가능하도록 정적 HTML뿐 아니라 재생성 스크립트도 함께 만들었다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-29",
+      "projectId": "131",
+      "title": "독립 블록 연결 대신 30초 단일 생성 시간축을 현재 기준본으로 채택",
+      "description": "54초 마스터의 클립 경계에서 카메라 높이·캐릭터 크기·배경 구조가 리셋되는 문제를 확인해 Seedance 2.5 단일 원테이크로 전환했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-29",
+      "projectId": "131",
+      "title": "완성본만 선별하지 않고 거절·비교·수정·진단본을 함께 공개",
+      "description": "제작 의사결정을 검증할 수 있도록 과정 이미지 8장, 영상 11개, 강의 슬라이드 20장을 실제 단계와 판정에 따라 통합했다."
+    }
+  ],
+  "newProjects": [
+    "131"
+  ],
+  "labelChanges": [
+    {
+      "projectId": "131",
+      "from": null,
+      "to": "new"
+    }
+  ],
+  "buildAt": "2026-08-29T15:46:32+09:00",
+  "tokens": {
+    "total": {
+      "in": 628,
+      "out": 594934,
+      "cache_read": 88524366,
+      "cache_write": 1477342
+    },
+    "costUSD": 68.3721,
+    "costKRW": 96260
+  }
+}

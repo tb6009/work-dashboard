@@ -1,0 +1,96 @@
+{
+  "id": "131",
+  "currentSituation": {
+    "summary": "마음이 9:16 AI 영상의 서사·스토리보드·키프레임·A–E 생성·수정·QA를 완료하고, 54초 연결 마스터의 이질감을 보완한 30초 단일 원테이크 v0.1을 현재 기준본으로 확정했다.",
+    "phase": "Current baseline — 30초 원테이크 v0.1 검토",
+    "recentLogs": [
+      {
+        "date": "2026-08-29",
+        "title": "전체 제작 프로세스·파일 인벤토리 정리",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/06_프로세스정리/01_제작프로세스_파일인벤토리.md",
+        "excerpt": "95개 고유 콘텐츠와 패키지 복사본을 구분하고, 7단계 제작·검수 흐름을 복원했다."
+      },
+      {
+        "date": "2026-08-29",
+        "title": "30초 단일 원테이크 v0.1 정밀 QA",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/04_영상/00_Higgsfield_입력패키지/07_제작로그/04_single_take_30s_v0.1_QA.md",
+        "excerpt": "공간·색·배경 연결과 윙크 엔딩은 통과했으며 360° 오빗은 미달로 기록했다."
+      },
+      {
+        "date": "2026-08-28",
+        "title": "54초 연결 마스터 이질감 진단",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/04_영상/00_Higgsfield_입력패키지/07_제작로그/03_master_v0.1_어색한장면_원테이크_진단.md",
+        "excerpt": "독립 생성 클립 경계의 카메라·캐릭터·공간 리셋을 확인해 단일 생성 시간축으로 전환했다."
+      }
+    ],
+    "blockers": [
+      "30초·1080p 재생성에는 270크레딧이 필요하지만 기록된 잔액은 174.06크레딧이다.",
+      "현재 기준본의 360° 카메라 오빗, 낙하 중 일부 형태, 착석 초기 자세는 부분 미달이다."
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "30초 단일 원테이크 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/04_영상/00_Higgsfield_입력패키지/06_output_clips/MAEUMI_single_take_30s_seedance2.5_v0.1.mp4",
+      "fileKind": "other",
+      "summary": "Seedance 2.5 단일 생성으로 공간·색·배경의 연속성을 개선한 현재 기준본.",
+      "modifiedAt": "2026-08-29"
+    },
+    {
+      "title": "54초 세로형 연결 마스터 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/04_영상/00_Higgsfield_입력패키지/06_output_clips/MAEUMI_rainy_day_recovery_vertical_master_v0.1.mp4",
+      "fileKind": "other",
+      "summary": "A–E 독립 생성 클립을 연결한 첫 완성본이자 이질감 진단 기준.",
+      "modifiedAt": "2026-08-28"
+    },
+    {
+      "title": "전체 제작 프로세스 맵",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/06_프로세스정리/00_전체_제작프로세스_맵.png",
+      "fileKind": "image",
+      "summary": "브리프부터 30초 원테이크 QA까지 전체 제작 흐름을 연결한 맵.",
+      "modifiedAt": "2026-08-29"
+    },
+    {
+      "title": "제작 프로세스·파일 인벤토리",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/06_프로세스정리/01_제작프로세스_파일인벤토리.md",
+      "fileKind": "md",
+      "summary": "파일 규모, 단계별 의사결정, 비용과 QA 판정을 정리한 정본 보고서.",
+      "modifiedAt": "2026-08-29"
+    },
+    {
+      "title": "의사결정과 검증 강의자료",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/Higgsfield/GPT/01_마음이/06_프로세스정리/마음이_AI영상제작_의사결정과검증_강의자료_v0.1.pptx",
+      "fileKind": "other",
+      "summary": "제작 의사결정과 실패·수정·검증을 20장으로 정리한 강의자료.",
+      "modifiedAt": "2026-08-29"
+    },
+    {
+      "title": "이미지·동영상 통합 포트폴리오",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/higgsfield-maeumi-portfolio/index.html",
+      "fileKind": "html",
+      "summary": "과정 이미지 8장, 영상 11개, 강의 슬라이드 20장을 제작 순서로 보는 웹 아카이브.",
+      "modifiedAt": "2026-08-29"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "현재 기준본 사용자 검토",
+      "description": "30초 원테이크 v0.1의 낙하·착석·엔딩 리듬을 확인하고 재생성 필요성을 결정한다.",
+      "priority": "high",
+      "estimate": "30분"
+    },
+    {
+      "title": "360° 오빗 우선순위 결정",
+      "description": "오빗 미달을 수용할지, 후면 3-view 기준과 추가 크레딧을 확보해 v0.2를 만들지 결정한다.",
+      "priority": "high",
+      "estimate": "의사결정"
+    },
+    {
+      "title": "후반 작업",
+      "description": "최종 사용본 확정 후 오디오, 색보정, 필요 시 30초 이하 축약본을 제작한다.",
+      "priority": "mid",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-08-29T15:00:00+09:00"
+}

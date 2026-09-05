@@ -62,5 +62,6 @@
 
   { "id": "11",  "categoryId": "11",        "name": "omx_wiki",          "type": "system",     "define": "LLM 유지보수 영속 지식 위키 (Karpathy LLM Wiki 패턴) — 11_omx_wiki/ (01_맨프레드봇 제외)", "status": "active", "createdAt": "2026-07-01" },
 
-  { "id": "131", "categoryId": "13",        "name": "Higgsfield · 마음이", "type": "design",     "define": "스케치북 속 마음이가 빗속에서 회복해 구름 위에 앉는 9:16 AI 영상 — 서사·스토리보드·키프레임·Seedance 생성·QA 기록", "status": "new", "createdAt": "2026-08-29", "mediaPortfolioUrl": "/higgsfield-maeumi-portfolio/index.html" }
+  { "id": "131", "categoryId": "13",        "name": "Higgsfield · 마음이", "type": "design",     "define": "스케치북 속 마음이가 빗속에서 회복해 구름 위에 앉는 9:16 AI 영상 — 서사·스토리보드·키프레임·Seedance 생성·QA 기록", "status": "new", "createdAt": "2026-08-29", "mediaPortfolioUrl": "/higgsfield-maeumi-portfolio/index.html" },
+  { "id": "132", "categoryId": "13",        "name": "2026 가을 스토리텔링", "type": "design",     "define": "화가별 개인 이미지 하네스 — 렘브란트·르누아르 회화 참조를 조명·팔레트·붓질·구도로 분해해 초상에 적용 + 창 크기에 따른 바다 지각 비교 다이어그램 — 13_Image/2026_가을_스토리텔링/", "status": "new", "createdAt": "2026-09-01" }
 ]

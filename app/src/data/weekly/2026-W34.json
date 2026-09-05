@@ -4,7 +4,7 @@
     "from": "2026-08-17",
     "to": "2026-08-23"
   },
-  "status": "current",
+  "status": "past",
   "summary": "RISE 7사 보고서를 기업 적용 관점으로 보강하고 Anchornode 보고서 작업을 확장했다. LifeOS는 10개 HTML 시안과 오늘·작업·흐름 중심 정보구조 구현을 시작했으며, WorkDashboard에서 시안을 직접 볼 수 있도록 연결했다.",
   "kpis": {
     "activeProjects": 6,

@@ -10,7 +10,7 @@
     "activeProjects": 13,
     "sessions": 0,
     "newProjects": 0,
-    "filesChanged": 250
+    "filesChanged": 260
   },
   "daily": [
     {
@@ -411,7 +411,7 @@
     {
       "date": "2026-08-01",
       "weekday": "토",
-      "filesChanged": 111,
+      "filesChanged": 110,
       "topProjectIds": [
         "03",
         "063",
@@ -551,7 +551,7 @@
     {
       "date": "2026-08-02",
       "weekday": "일",
-      "filesChanged": 18,
+      "filesChanged": 29,
       "topProjectIds": [
         "03",
         "034",
@@ -593,20 +593,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 9,
-                "out": 17344,
-                "cache_read": 4291566,
-                "cache_write": 18450,
-                "messages": 5,
+                "in": 119,
+                "out": 293571,
+                "cache_read": 25565247,
+                "cache_write": 790179,
+                "messages": 65,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 9,
-              "out": 17344,
-              "cache_read": 4291566,
-              "cache_write": 18450,
-              "messages": 5
+              "in": 119,
+              "out": 293571,
+              "cache_read": 25565247,
+              "cache_write": 790179,
+              "messages": 65
             },
             "costUSD": 0
           }
@@ -617,22 +617,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-4-7": {
-                "in": 34,
-                "out": 11341,
-                "cache_read": 2696738,
-                "cache_write": 60498,
-                "messages": 34,
-                "costUSD": 6.0305
+                "in": 49,
+                "out": 13908,
+                "cache_read": 3653175,
+                "cache_write": 64982,
+                "messages": 44,
+                "costUSD": 7.742
               }
             },
             "total": {
-              "in": 34,
-              "out": 11341,
-              "cache_read": 2696738,
-              "cache_write": 60498,
-              "messages": 34
+              "in": 49,
+              "out": 13908,
+              "cache_read": 3653175,
+              "cache_write": 64982,
+              "messages": 44
             },
-            "costUSD": 6.0305
+            "costUSD": 7.742
           }
         }
       ]
@@ -742,15 +742,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-08-02T02:59:18.609Z",
+  "buildAt": "2026-08-02T14:08:26.722Z",
   "tokens": {
     "total": {
-      "in": 36903,
-      "out": 3523926,
-      "cache_read": 612177767,
-      "cache_write": 48211536
+      "in": 37028,
+      "out": 3802720,
+      "cache_read": 634407885,
+      "cache_write": 48987749
     },
-    "costUSD": 195.9188,
-    "costKRW": 288001
+    "costUSD": 197.6302,
+    "costKRW": 290516
   }
 }

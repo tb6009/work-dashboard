@@ -4,7 +4,7 @@
     "from": "2026-08-24",
     "to": "2026-08-30"
   },
-  "status": "current",
+  "status": "past",
   "summary": "Higgsfield 마음이 AI 영상 프로젝트를 신설하고, 30초 단일 원테이크 기준본과 이미지 8장·영상 11개·강의 슬라이드 20장을 연결한 제작과정 포트폴리오를 구축했다.",
   "kpis": {
     "activeProjects": 8,
@@ -310,22 +310,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 80,
-                "out": 77866,
-                "cache_read": 20541826,
-                "cache_write": 102846,
-                "messages": 40,
-                "costUSD": 12.8608
+                "in": 82,
+                "out": 77973,
+                "cache_read": 20660140,
+                "cache_write": 104679,
+                "messages": 41,
+                "costUSD": 12.934
               }
             },
             "total": {
-              "in": 80,
-              "out": 77866,
-              "cache_read": 20541826,
-              "cache_write": 102846,
-              "messages": 40
+              "in": 82,
+              "out": 77973,
+              "cache_read": 20660140,
+              "cache_write": 104679,
+              "messages": 41
             },
-            "costUSD": 12.8608
+            "costUSD": 12.934
           }
         },
         {
@@ -406,15 +406,15 @@
       "to": "new"
     }
   ],
-  "buildAt": "2026-08-29T15:46:32+09:00",
+  "buildAt": "2026-08-29T13:08:57.749Z",
   "tokens": {
     "total": {
-      "in": 628,
-      "out": 594934,
-      "cache_read": 88524366,
-      "cache_write": 1477342
+      "in": 630,
+      "out": 595041,
+      "cache_read": 88642680,
+      "cache_write": 1479175
     },
-    "costUSD": 68.3721,
-    "costKRW": 96260
+    "costUSD": 68.4454,
+    "costKRW": 96364
   }
 }

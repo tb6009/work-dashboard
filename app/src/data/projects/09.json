@@ -1,9 +1,15 @@
 {
   "id": "09",
   "currentSituation": {
-    "summary": "몸과마음의과학 수업 Q&A 에이전트 — 2025년 강의 자료 아카이브 완료. 2026년 강의 준비 시 재활성화 대기 paused 상태.",
-    "phase": "Paused — 2026년 강의 준비 시 재활성화 예정",
+    "summary": "2026 가을학기 오리엔테이션 제작으로 재활성화 — 4:5 캐러셀 대표 시안 6장과 16:9 가로형을 만들고, 14페이지 문안을 디자인 지시와 분리한 콘텐츠 문서로 통합했다.",
+    "phase": "Active — 오리엔테이션 시안 승인 대기",
     "recentLogs": [
+      {
+        "date": "2026-09-04",
+        "title": "오리엔테이션 캐러셀·가로형 시안 + 콘텐츠 문서",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260904_log.md",
+        "excerpt": "대표 6장을 세로·가로 두 판형으로 만들고 미확정 항목은 채우지 않고 분리했다."
+      },
       {
         "date": "2026-04-24",
         "title": "관리 마스터 구축 — 09 PROJECT.md/CLAUDE.md 정비",
@@ -13,6 +19,27 @@
     ]
   },
   "deliverables": [
+    {
+      "title": "오리엔테이션 콘텐츠 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/outputs/2026_몸과마음의과학_오리엔테이션_콘텐츠_v0.1.md",
+      "fileKind": "md",
+      "summary": "14페이지 확정 문안과 미확정 항목을 분리한 통합 문서.",
+      "modifiedAt": "2026-09-04"
+    },
+    {
+      "title": "오리엔테이션 가로형 시안 v0.1(16:9)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/outputs/2026_orientation_sample_landscape/몸과마음의과학_오리엔테이션_가로형_시안_v0.1.pptx",
+      "fileKind": "other",
+      "summary": "강의 화면용 비대칭 그리드로 재구성한 6장.",
+      "modifiedAt": "2026-09-04"
+    },
+    {
+      "title": "오리엔테이션 캐러셀 시안 v0.1(4:5)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09_몸과마음의과학/outputs/2026_orientation_sample/몸과마음의과학_오리엔테이션_캐러셀_시안_v0.1.pptx",
+      "fileKind": "other",
+      "summary": "입시홍보 캐러셀 문법을 적용한 세로형 대표 6장.",
+      "modifiedAt": "2026-09-04"
+    },
     {
       "title": "PROJECT.md (정의·상태)",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/09-몸과마음의과학/PROJECT.md",
@@ -44,10 +71,16 @@
   ],
   "nextTasks": [
     {
-      "title": "재활성화 조건 — 2026년 강의 일정 확정 시",
-      "description": "2026년 강의 개강 확정되면 paused → active 전환. QA_아카이브 활용 계획 수립.",
-      "priority": "low",
-      "estimate": "1일 (활성화 시)"
+      "title": "디자인 방향 승인",
+      "description": "세로·가로 두 판형 중 기준을 정하고 나머지 8페이지 확장 여부를 결정한다.",
+      "priority": "high",
+      "estimate": "의사결정"
+    },
+    {
+      "title": "미확정 6개 항목 확정",
+      "description": "점수 배분·일정·장소 등 비워둔 항목을 확정해 문안 최종본을 만든다.",
+      "priority": "high",
+      "estimate": "1시간"
     },
     {
       "title": "Q&A 에이전트 최신 강의 내용 반영",
@@ -62,5 +95,5 @@
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-05-06T00:00:00+09:00"
+  "buildAt": "2026-09-05T12:49:11+09:00"
 }

@@ -1,9 +1,15 @@
 {
   "id": "039",
   "currentSituation": {
-    "summary": "네트워킹데이 강의자료 — 베인 'payoff 4조건' 핵심축 + 논문 2편 (Aouad·Lykouris·Zhong, Lande) 보조. Once 비주얼 시스템 적용 다이어그램 + 전체덱 v0.2 + 파라독스 pptx (06-18)",
-    "phase": "강의자료 v0.2 + 스톤프레임워크 PT v0.2 — 막1·2 슬라이드 초안화 단계",
+    "summary": "2026 가을 Value-up 연구회 축으로 이동 — 리서치 1차·2차와 인용 명세서를 정리하고 충분성 점검을 거쳐 계원 기업지원 통합운영안 v0.1로 묶었다.",
+    "phase": "Value-up 연구회 — 운영안 v0.1 · 리서치 충분성 점검 완료",
     "recentLogs": [
+      {
+        "date": "2026-09-02",
+        "title": "계원 기업지원 통합운영안 v0.1 + 리서치 충분성 점검",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_가을_Value-up연구회/Claude/00_리서치/05_리서치_충분성_점검_v0.1.md",
+        "excerpt": "1·2차 리서치와 인용 명세서를 대조해 미확보 자료를 별도 목록으로 남겼다."
+      },
       {
         "date": "2026-06-18",
         "title": "네트워킹데이 강의 — AI 생산성 역설 강의자료 + Once 비주얼 적용",
@@ -15,17 +21,32 @@
         "title": "스톤프레임워크 PT — 클레임스파인 v0.1/v0.2 + 슬라이드내용 v0.1/v0.2",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
         "excerpt": "스톤프레임워크 PT 자료 정비. 슬라이드내용 v0.2까지."
-      },
-      {
-        "date": "2026-06-01",
-        "title": "RISE 3종 행사 계획서 v0.1 완성 — 네트워킹데이·AI 워크숍·터칭데이",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/05_실행계획서/05_2-2_6월18일_네트워킹데이_행사계획서_v0.1.md",
-        "excerpt": "2026년 6월 18일 개최 예정 제2회 기업 네트워킹데이·CEO 대상 AI 워크숍·디자인 터칭데이 행사계획서 v0.1 작성."
       }
     ],
     "blockers": []
   },
   "deliverables": [
+    {
+      "title": "계원 기업지원 통합운영안 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_수정사업계획서/01_문안/07_2026_계원_기업지원_통합운영안_v0.1.md",
+      "fileKind": "md",
+      "summary": "기업지원 사업을 하나의 운영 구조로 묶은 문안.",
+      "modifiedAt": "2026-09-02"
+    },
+    {
+      "title": "리서치 인용 명세서 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_가을_Value-up연구회/Claude/00_리서치/02_리서치_인용_명세서_v0.1.md",
+      "fileKind": "md",
+      "summary": "인용마다 원문 근거·적용 위치·검증 상태를 기록한 명세서.",
+      "modifiedAt": "2026-08-31"
+    },
+    {
+      "title": "Value-up 연구회 운영안 v0.2",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_가을_Value-up연구회/Claude/01_Value-up연구모임_운영안_v0.2.md",
+      "fileKind": "md",
+      "summary": "연구회 운영 구조와 일정 초안.",
+      "modifiedAt": "2026-09-02"
+    },
     {
       "title": "AI 생산성 파라독스 강의 PPT v0.1",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/RISE/06_네트워킹데이/강의자료/AI_생산성_파라독스_v0.1.pptx",
@@ -78,6 +99,18 @@
   ],
   "nextTasks": [
     {
+      "title": "리서치 검토 핵심 1페이지 확정",
+      "description": "1·2차 리서치를 한 페이지로 압축한 검토본을 확정한다.",
+      "priority": "high",
+      "estimate": "2시간"
+    },
+    {
+      "title": "미확보 자료 확보",
+      "description": "06 미확보자료 목록과 07 경상원 자료를 확보해 명세서를 갱신한다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
       "title": "막1·2 실제 슬라이드 초안화 + 4조건 ①② 사례 삽입",
       "description": "사용자 개인·스쿨 프로젝트 실제 사례를 ①프로세스 재설계 ②전체 라이프사이클에 삽입.",
       "priority": "high",
@@ -88,19 +121,7 @@
       "description": "베인 사례 강조. 1장 추가.",
       "priority": "mid",
       "estimate": "반나절"
-    },
-    {
-      "title": "사용자 '일하는 방식' 변화 분석 (다음 턴 요청)",
-      "description": "프로젝트 전체에서 몇 달 전 대비 변화 분석 자료.",
-      "priority": "mid",
-      "estimate": "1일"
-    },
-    {
-      "title": "기획안 v1.0 완성 + 예산계획서 v0.2 정합",
-      "description": "행사계획서 v0.1 기반 기획안 v1.0 작성 + 예산계획서와 정합성 확인.",
-      "priority": "high",
-      "estimate": "1주"
     }
   ],
-  "buildAt": "2026-06-18T11:00:00+09:00"
+  "buildAt": "2026-09-05T12:49:11+09:00"
 }

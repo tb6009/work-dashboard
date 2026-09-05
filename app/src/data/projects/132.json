@@ -1,0 +1,68 @@
+{
+  "id": "132",
+  "currentSituation": {
+    "summary": "화가별 개인 이미지 하네스를 렘브란트·르누아르 두 체계로 분리하고, 정체성 우선 → 기하 고정 → 부위별 재작업 → 품질 게이트 순의 생성·평가 절차를 세웠다. 별도 축으로 창 크기에 따른 바다 지각 차이 다이어그램을 만들었다.",
+    "phase": "하네스 v1.2 — 르누아르 baseline 생성 대기",
+    "recentLogs": [
+      {
+        "date": "2026-09-03",
+        "title": "창 크기·바다 지각 비교 다이어그램 v1~v3",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260903_log.md",
+        "excerpt": "같은 수평선·섬·범선을 공유하게 해 창 크기만 지각 차이의 변수로 남겼다."
+      },
+      {
+        "date": "2026-09-02",
+        "title": "르누아르 하네스 v1.2 적용 재생성",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260902_log.md",
+        "excerpt": "얼굴 정체성 앵커를 고정하고 얼굴·의상·배경의 붓 크기를 분리했다."
+      },
+      {
+        "date": "2026-09-01",
+        "title": "렘브란트·르누아르 하네스 신설 + 에이전트 검증 도입",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260901_log.md",
+        "excerpt": "파인튜닝 없이 매 실행 참조하는 방식으로 정하고, 6개 게이트 4/5 이상만 채택했다."
+      }
+    ],
+    "blockers": [
+      "얼굴 정체성 점수가 회화층·붓질 위계 점수와 반비례하는 구간이 남아 있다."
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "렘브란트 마스터 프롬프트 v3",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/2026_가을_스토리텔링/렘브란트하네싱/PROMPT_V3_REMBRANDT_MASTER.md",
+      "fileKind": "md",
+      "summary": "ground → 반투명 earth mass → 제한된 highlight 층위로 재설계한 초상 프롬프트 규격.",
+      "modifiedAt": "2026-09-01"
+    },
+    {
+      "title": "르누아르 하네스 평가 v1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/2026_가을_스토리텔링/르누아르하네싱/EVALUATION_V1.md",
+      "fileKind": "md",
+      "summary": "정체성·회화층·붓질 위계를 5점 척도로 채점한 독립 평가 기록.",
+      "modifiedAt": "2026-09-02"
+    },
+    {
+      "title": "창 크기 지각 비교 다이어그램",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/2026_가을_스토리텔링/창크기_바다지각/outputs/02_panorama-window-5m_v3-window-kept-island-smaller.png",
+      "fileKind": "image",
+      "summary": "30cm 창과 5m 파노라마 창이 같은 바다를 어떻게 다르게 보이게 하는지 비교한 16:9 대조본.",
+      "modifiedAt": "2026-09-03"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "르누아르 baseline 생성",
+      "description": "shot_01 production prompt로 후보를 만들고 6개 게이트에서 재평가한다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "정체성·회화성 트레이드오프 정리",
+      "description": "정체성 점수와 붓질 위계 점수가 함께 4/5를 넘는 조건을 기록으로 남긴다.",
+      "priority": "mid",
+      "estimate": "2시간"
+    }
+  ],
+  "buildAt": "2026-09-05T12:49:11+09:00"
+}

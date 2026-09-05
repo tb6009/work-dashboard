@@ -1,0 +1,117 @@
+{
+  "week": "2026-W33",
+  "range": {
+    "from": "2026-08-10",
+    "to": "2026-08-16"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 3,
+    "sessions": 1,
+    "newProjects": 1,
+    "filesChanged": 9
+  },
+  "daily": [
+    {
+      "date": "2026-08-10",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "0694",
+        "09"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "weekday": "화",
+      "filesChanged": 9,
+      "topProjectIds": [
+        "11"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-13",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-14",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-15",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-16",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "11",
+      "pct": 100,
+      "filesChanged": 9,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "0694",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "09",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-11",
+      "projectId": "11",
+      "title": "비실기 100%(서류/면접) 전형에 대한 수험생 불안 해소를 1차 핵심 메시지로 설정",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-11",
+      "projectId": "11",
+      "title": "1차 프로토타입은 검토 효율화를 위해 [표지-본문Q&A-엔딩CTA] 3개 키프레임 중심으로 3종(메인+대안2",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "11"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-08-11T07:55:11.601Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-08-11T07:55:11.601Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

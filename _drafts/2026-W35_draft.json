@@ -1,0 +1,104 @@
+{
+  "week": "2026-W35",
+  "range": {
+    "from": "2026-08-24",
+    "to": "2026-08-30"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 1,
+    "sessions": 1,
+    "newProjects": 0,
+    "filesChanged": 14
+  },
+  "daily": [
+    {
+      "date": "2026-08-24",
+      "weekday": "월",
+      "filesChanged": 14,
+      "topProjectIds": [
+        "081"
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-26",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-27",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-28",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-29",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-08-30",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "081",
+      "pct": 100,
+      "filesChanged": 14,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "사람의 집중시간을 로그만으로 단정하지 않고 모든 시간 수치를 `추정 활동시간`으로 표시했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "개인정보와 산출물 본문을 외부로 전송하지 않고 로컬 파일만 읽어 HTML에 필요한 요약 데이터만 포함했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-08-24",
+      "projectId": "081",
+      "title": "반복 사용이 가능하도록 정적 HTML뿐 아니라 재생성 스크립트도 함께 만들었다.",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-08-23T23:53:01.740Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-08-23T23:53:01.740Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

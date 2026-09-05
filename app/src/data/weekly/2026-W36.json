@@ -1,0 +1,433 @@
+{
+  "week": "2026-W36",
+  "range": {
+    "from": "2026-08-31",
+    "to": "2026-09-06"
+  },
+  "status": "current",
+  "summary": "화가별 개인 이미지 하네스 프로젝트를 신설해 렘브란트·르누아르 화풍 생성과 독립 평가 게이트를 구축하고, 보물AI 종합보고서 PDF·신규 수업제안서 v0.1·몸과마음의과학 오리엔테이션 시안을 함께 마무리했다.",
+  "kpis": {
+    "activeProjects": 5,
+    "sessions": 6,
+    "newProjects": 1,
+    "filesChanged": 97
+  },
+  "daily": [
+    {
+      "date": "2026-08-31",
+      "weekday": "월",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "11",
+        "039",
+        "063",
+        "03",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_연구정리_v0.1.md · 01_리서치_1차_v0.1.md · 02_리서치_인용_명세서_v0.1.md · PROJECT_BRIEF.md · PROJECT_BRIEF_KO.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 108,
+                "out": 69040,
+                "cache_read": 6073083,
+                "cache_write": 327016,
+                "messages": 54,
+                "costUSD": 6.8069
+              }
+            },
+            "total": {
+              "in": 108,
+              "out": 69040,
+              "cache_read": 6073083,
+              "cache_write": 327016,
+              "messages": 54
+            },
+            "costUSD": 6.8069
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 5358,
+                "cache_read": 279420,
+                "cache_write": 4326,
+                "messages": 2,
+                "costUSD": 0.3007
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 5358,
+              "cache_read": 279420,
+              "cache_write": 4326,
+              "messages": 2
+            },
+            "costUSD": 0.3007
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "weekday": "화",
+      "filesChanged": 39,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "132"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 05_리서치_충분성_점검_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 42,
+                "out": 39570,
+                "cache_read": 5694619,
+                "cache_write": 66990,
+                "messages": 21,
+                "costUSD": 4.2555
+              }
+            },
+            "total": {
+              "in": 42,
+              "out": 39570,
+              "cache_read": 5694619,
+              "cache_write": 66990,
+              "messages": 21
+            },
+            "costUSD": 4.2555
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        },
+        {
+          "projectId": "132",
+          "did": "[fs scan] PROJECT.md · OPERATING_PROCEDURE.md · PROMPT_V2_REMBRANDT_PORTRAIT.md · PROMPT_V3_REMBRANDT_MASTER.md · README.md 외 26건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "weekday": "수",
+      "filesChanged": 4,
+      "topProjectIds": [
+        "132",
+        "039",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "132",
+          "did": "르누아르 하네스 v1.2를 적용해 초상 재생성. 얼굴 정체성 앵커 고정 + 부위별 붓질 분리(얼굴 미세·의상 중간·정원 용해)"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] README.md · 02_원문_핵심발췌.md · 07_2026_계원_기업지원_통합운영안_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 14,
+                "out": 9948,
+                "cache_read": 2133569,
+                "cache_write": 23986,
+                "messages": 7,
+                "costUSD": 1.4655
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 9948,
+              "cache_read": 2133569,
+              "cache_write": 23986,
+              "messages": 7
+            },
+            "costUSD": 1.4655
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "weekday": "목",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "132",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "132",
+          "did": "창 크기·바다 지각 비교 다이어그램 신설. 30cm 정사각 창과 5m 파노라마 창의 16:9 대조본 v1~v3 생성"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 00_리서치계획_v0.1.md · PROJECT.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "weekday": "금",
+      "filesChanged": 13,
+      "topProjectIds": [
+        "03",
+        "063",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 186,
+                "out": 99227,
+                "cache_read": 13453996,
+                "cache_write": 444281,
+                "messages": 93,
+                "costUSD": 11.9854
+              }
+            },
+            "total": {
+              "in": 186,
+              "out": 99227,
+              "cache_read": 13453996,
+              "cache_write": 444281,
+              "messages": 93
+            },
+            "costUSD": 11.9854
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] preview-1.layout.json · preview-2.layout.json · preview-3.layout.json · preview-4.layout.json · preview-5.layout.json 외 2건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "weekday": "토",
+      "filesChanged": 4,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 04_리서치검토_핵심1페이지_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] projects.json · 2026-W35.json · extract-from-filesystem.mjs",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 86,
+                "out": 33638,
+                "cache_read": 4147598,
+                "cache_write": 195813,
+                "messages": 43,
+                "costUSD": 4.139
+              }
+            },
+            "total": {
+              "in": 86,
+              "out": 33638,
+              "cache_read": 4147598,
+              "cache_write": 195813,
+              "messages": 43
+            },
+            "costUSD": 4.139
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "132",
+      "pct": 40,
+      "filesChanged": 31,
+      "imp": 4,
+      "did": "화가별 개인 이미지 하네스를 신설해 렘브란트·르누아르 두 체계로 분리하고, 정체성 우선 → 기하 고정 → 부위별 재작업 → 품질 게이트 순의 생성·평가 절차를 세웠다.",
+      "nextAction": "르누아르 shot_01 baseline 생성 후 6개 게이트 재평가",
+      "deliverables": [
+        "렘브란트하네싱/PROMPT_V3_REMBRANDT_MASTER.md",
+        "르누아르하네싱/EVALUATION_V1.md",
+        "창크기_바다지각/outputs/02_panorama-window-5m_v3-window-kept-island-smaller.png"
+      ]
+    },
+    {
+      "id": "03",
+      "pct": 22,
+      "filesChanged": 24,
+      "imp": 4,
+      "did": "보물AI 1·2회차 종합보고서를 A4 PDF로 조판하고, 2026 가을학기 신규 수업제안서 v0.1과 현재 진행상황 요약을 작성했다.",
+      "nextAction": "이수구분 택일·교과 서식 확인·평가안 확정 후 제안서 v0.2",
+      "deliverables": [
+        "output/pdf/08_1회차_종합보고서_v0.3.pdf",
+        "output/pdf/11_2회차_종합보고서_v0.3.pdf",
+        "신규수업제안/03_제안서/수업제안서.md"
+      ]
+    },
+    {
+      "id": "039",
+      "pct": 20,
+      "filesChanged": 30,
+      "imp": 3,
+      "did": "RISE 리서치 1차와 인용 명세서를 정리하고 계원 기업지원 통합운영안 v0.1로 묶었다.",
+      "nextAction": "리서치 검토 핵심 1페이지 확정 후 운영안 v0.2"
+    },
+    {
+      "id": "09",
+      "pct": 10,
+      "filesChanged": 7,
+      "imp": 3,
+      "did": "몸과마음의과학 오리엔테이션 캐러셀 4:5 대표 시안 6장과 강의 화면용 16:9 가로형을 제작하고, 14페이지 문안을 디자인 지시와 분리한 콘텐츠 문서로 통합했다.",
+      "nextAction": "디자인 방향 승인 후 나머지 8페이지 확장 · 미확정 6개 항목 확정",
+      "deliverables": [
+        "outputs/2026_orientation_sample/몸과마음의과학_오리엔테이션_캐러셀_시안_v0.1.pptx",
+        "outputs/2026_orientation_sample_landscape/몸과마음의과학_오리엔테이션_가로형_시안_v0.1.pptx"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 8,
+      "filesChanged": 4,
+      "imp": 2,
+      "did": "13_Image 계열을 트래킹 대상에 편입하고 W36을 마감했다.",
+      "nextAction": "월간 회고(9월) 집계 시점 결정"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-31",
+      "projectId": "03",
+      "title": "보물AI 종합보고서를 원본 수정 없이 A4 PDF로 조판했다.",
+      "description": "1·2회차 Markdown v0.3과 로컬 이미지를 그대로 두고 조판만 수행. 1회차 11쪽·그림 11장, 2회차 9쪽·그림 5장으로 폰트 임베딩과 이미지 수 일치를 확인했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-01",
+      "projectId": "132",
+      "title": "모델 재학습 대신 매 실행에 작품을 참조하는 방식을 택했다.",
+      "description": "파인튜닝 없이 회화 참조를 실행마다 입력하는 reference-conditioned generation으로 운영하고, 얼굴 정체성·얼굴 해부·생성 오류를 통과 못 하면 폐기하는 하드 게이트로 지정했다."
+    },
+    {
+      "date": "2026-09-01",
+      "projectId": "132",
+      "title": "화가별로 하네스를 분리하고 스타일을 필터가 아닌 구조로 정의했다.",
+      "description": "렘브란트와 르누아르 체계를 각각 독립 폴더로 나누고, 르누아르는 파스텔·소프트포커스 필터가 아니라 warm-cool 색 구조·선택적 가장자리 통합·부위별 붓 위계를 품질 기준으로 삼았다."
+    },
+    {
+      "date": "2026-09-01",
+      "projectId": "132",
+      "title": "생성 결과를 별도 에이전트가 독립 채점하게 했다.",
+      "description": "프롬프트는 REVISE 후 PASS를 받아야 실행하고, 결과는 6개 게이트에서 모두 4/5 이상이어야 채택한다. 안경이 완전한 원으로 남은 1차 결과는 REVISE 판정 후 단일 수정으로 통과시켰다."
+    },
+    {
+      "date": "2026-09-02",
+      "projectId": "132",
+      "title": "실패 원인을 스타일 평균화로 진단하고 하네스를 정체성 우선 구조로 바꿨다.",
+      "description": "정체성 1~3/5, 회화층 2/5의 원인이 얼굴 골격보다 스타일을 앞세우고 화면 전체에 같은 터치를 준 데 있다고 보고, identity-first → geometry lock → region-specific repaint → quality gate 순서로 갱신했다. 정체성 4/5 미만은 자동 폐기한다."
+    },
+    {
+      "date": "2026-09-03",
+      "projectId": "132",
+      "title": "창 크기 비교에서 창 외 요소를 모두 고정했다.",
+      "description": "두 그림이 같은 수평선·섬·암초·범선을 공유하게 해 창 크기만 지각 차이의 변수로 남겼다. 화면 속 창을 줄인 v2 해석은 사용자 피드백으로 폐기하고, v3에서 원래 2m×5m 창을 유지한 채 바다만 광각으로 조정했다."
+    },
+    {
+      "date": "2026-09-04",
+      "projectId": "03",
+      "title": "신규 수업을 이론·설계 중심으로 두고 고비용 실습은 분리했다.",
+      "description": "2·3학년 2학점 주당 2시간 온라인 조건에서 본과목은 이론·설계로 한정하고, 장비·비용이 큰 실습은 캡스톤·산학 연계로 뺐다. 평가는 성과 수치가 아니라 문제·기준·측정·되먹임·AI 비평·한계 인식을 보는 안을 1차 권고했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-04",
+      "projectId": "09",
+      "title": "오리엔테이션을 세로 캐러셀과 가로 강의화면 두 판형으로 나눴다.",
+      "description": "입시홍보 캐러셀의 대형 타이포·고정 헤더 문법을 유지한 4:5 대표 시안 6장을 먼저 만들고, 같은 색·타이포를 16:9 비대칭 그리드로 옮겨 강의 화면용을 별도 제작했다. 미확정 점수·일정은 채우지 않고 확인 필요 항목으로 분리했다."
+    },
+    {
+      "date": "2026-09-05",
+      "projectId": "063",
+      "title": "13_Image 계열을 대시보드 트래킹에 넣되 얼굴 참조는 파일명까지 가렸다.",
+      "description": "파서가 13_Image를 아예 훑지 않아 이번 주 최대 작업이 빈칸으로 잡히던 문제를 132 신설과 EXPLICIT 매핑 추가로 해결했다. 개인 사진 폴더와 정체성 인덱스 파일은 파일명 노출도 막았고, 재스캔으로 줄어든 W35 파일 수는 마감본 값으로 되돌렸다."
+    }
+  ],
+  "newProjects": [
+    "132"
+  ],
+  "labelChanges": [
+    {
+      "projectId": "132",
+      "from": null,
+      "to": "new"
+    }
+  ],
+  "buildAt": "2026-09-05T12:47:21+09:00",
+  "tokens": {
+    "total": {
+      "in": 440,
+      "out": 256781,
+      "cache_read": 31782285,
+      "cache_write": 1062412
+    },
+    "costUSD": 28.9529,
+    "costKRW": 40763
+  }
+}

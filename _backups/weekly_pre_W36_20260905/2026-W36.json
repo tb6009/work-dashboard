@@ -1,0 +1,265 @@
+{
+  "week": "2026-W36",
+  "range": {
+    "from": "2026-08-31",
+    "to": "2026-09-06"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 4,
+    "sessions": 0,
+    "newProjects": 1,
+    "filesChanged": 53
+  },
+  "daily": [
+    {
+      "date": "2026-08-31",
+      "weekday": "월",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "11",
+        "039",
+        "063",
+        "03",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_연구정리_v0.1.md · 01_리서치_1차_v0.1.md · 02_리서치_인용_명세서_v0.1.md · PROJECT_BRIEF.md · PROJECT_BRIEF_KO.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 108,
+                "out": 69040,
+                "cache_read": 6073083,
+                "cache_write": 327016,
+                "messages": 54,
+                "costUSD": 6.8069
+              }
+            },
+            "total": {
+              "in": 108,
+              "out": 69040,
+              "cache_read": 6073083,
+              "cache_write": 327016,
+              "messages": 54
+            },
+            "costUSD": 6.8069
+          }
+        },
+        {
+          "projectId": "01",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 4,
+                "out": 5358,
+                "cache_read": 279420,
+                "cache_write": 4326,
+                "messages": 2,
+                "costUSD": 0.3007
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 5358,
+              "cache_read": 279420,
+              "cache_write": 4326,
+              "messages": 2
+            },
+            "costUSD": 0.3007
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "weekday": "화",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 05_리서치_충분성_점검_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 42,
+                "out": 39570,
+                "cache_read": 5694619,
+                "cache_write": 66990,
+                "messages": 21,
+                "costUSD": 4.2555
+              }
+            },
+            "total": {
+              "in": 42,
+              "out": 39570,
+              "cache_read": 5694619,
+              "cache_write": 66990,
+              "messages": 21
+            },
+            "costUSD": 4.2555
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "weekday": "수",
+      "filesChanged": 4,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] README.md · 02_원문_핵심발췌.md · 07_2026_계원_기업지원_통합운영안_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 14,
+                "out": 9948,
+                "cache_read": 2133569,
+                "cache_write": 23986,
+                "messages": 7,
+                "costUSD": 1.4655
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 9948,
+              "cache_read": 2133569,
+              "cache_write": 23986,
+              "messages": 7
+            },
+            "costUSD": 1.4655
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "weekday": "목",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 00_리서치계획_v0.1.md · PROJECT.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W36.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "weekday": "금",
+      "filesChanged": 3,
+      "topProjectIds": [
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 186,
+                "out": 99227,
+                "cache_read": 13453996,
+                "cache_write": 444281,
+                "messages": 93,
+                "costUSD": 11.9854
+              }
+            },
+            "total": {
+              "in": 186,
+              "out": 99227,
+              "cache_read": 13453996,
+              "cache_write": 444281,
+              "messages": 93
+            },
+            "costUSD": 11.9854
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-09-06",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "11",
+      "pct": 0,
+      "filesChanged": 0,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [],
+  "newProjects": [
+    "11"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-09-04T00:05:09.228Z",
+  "tokens": {
+    "total": {
+      "in": 354,
+      "out": 223143,
+      "cache_read": 27634687,
+      "cache_write": 866599
+    },
+    "costUSD": 24.8139,
+    "costKRW": 34935
+  }
+}

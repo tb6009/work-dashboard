@@ -123,6 +123,9 @@ const EXPLICIT = {
   '10_보고살피다/101_일상다반사': '101',
   '10_보고살피다/102_GPT_실험': '102',
   '10_보고살피다/103_Gemini_실험': '103',
+  // 13: 2026-09-05 추가 — 13_Image 이미지 프로젝트 트래킹 개시
+  '13_Image/Higgsfield': '131',
+  '13_Image/2026_가을_스토리텔링': '132',
 };
 
 function findProjectId(absPath) {
@@ -160,7 +163,11 @@ const EXCLUDE_REL = [
   '00_personal/reports/weekly',
   '00_personal/reports/monthly',
   '10_보고살피다/104_맨프레드교수님',
+  '13_Image/2026_가을_스토리텔링/레퍼런스',
+  '13_Image/2026_가을_스토리텔링/인진하네스',
 ];
+// 개인 얼굴 정체성 참조는 파일명까지 비공개
+const EXCLUDE_NAME = /identity[_-]?index/i;
 const INCLUDE_EXT = /\.(md|tsx?|jsx?|json|html|css|py|sh|mjs|yaml|yml|svg|tex)$/i;
 
 function shouldExcludeRel(rel) {
@@ -180,7 +187,7 @@ function walk(dir) {
     if (shouldExcludeRel(rel)) continue;
     if (e.isDirectory()) {
       walk(abs);
-    } else if (INCLUDE_EXT.test(e.name)) {
+    } else if (INCLUDE_EXT.test(e.name) && !EXCLUDE_NAME.test(e.name)) {
       try {
         const st = statSync(abs);
         if (st.mtime >= weekFrom && st.mtime < weekTo) {
@@ -196,7 +203,7 @@ function walk(dir) {
 for (const cat of Object.keys({
   '01_admin': 1, '02_Data_Kaywon': 1, '03_school_project': 1, '04_aSSIST': 1,
   '05_phD_Research': 1, '06_Personal_Project': 1, '08_project': 1,
-  '09_몸과마음의과학': 1, '10_보고살피다': 1,
+  '09_몸과마음의과학': 1, '10_보고살피다': 1, '13_Image': 1,
 })) {
   const root = join(WORKSPACE, cat);
   if (existsSync(root)) walk(root);

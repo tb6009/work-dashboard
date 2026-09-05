@@ -1,25 +1,52 @@
 {
   "id": "03",
   "currentSituation": {
-    "summary": "디자인 실무 프로젝트 4개 운영 중 — Data_Once(마케팅), Data_Jstrata(브랜드), 새론솔루션(UX 컨설팅), 관리비책(캐릭터 디자인).",
-    "phase": "Active — 새론솔루션 시안 3종 완성, 관리비책 캐릭터 5인 제작",
+    "summary": "2026 가을학기 축으로 이동 — 보물AI 1·2회차 종합보고서를 A4 PDF로 발간하고, 신규 수업제안서 v0.1과 리서치 인용명세서(R1~R5·K1~K3)를 묶었다.",
+    "phase": "2026 가을학기 — 수업제안서 v0.1 검토 대기",
     "recentLogs": [
+      {
+        "date": "2026-08-31",
+        "title": "보물AI 1·2회차 종합보고서 PDF 조판",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260831_log.md",
+        "excerpt": "원본 Markdown·이미지를 수정하지 않고 A4 20쪽·그림 16장으로 조판했다."
+      },
+      {
+        "date": "2026-09-04",
+        "title": "신규 수업제안서 v0.1 + 현재 진행상황 요약",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260904_log.md",
+        "excerpt": "2·3학년 2학점 온라인 조건으로 이론·설계 중심 과목을 설계하고 평가안 B를 권고했다."
+      },
       {
         "date": "2026-05-14",
         "title": "새론솔루션 UX 진단 + 시안 3종 HTML 목업 완성",
         "logFilePath": "",
         "excerpt": "하수악취 대시보드 6측면 진단. Light/Dark OLED/Map-First 3종. Figma Starter 한도로 중단."
-      },
-      {
-        "date": "2026-05-14",
-        "title": "관리비책 캐릭터 이미지 5인분 생성 + 프로세스 보고서",
-        "logFilePath": "",
-        "excerpt": "임지훈·남서윤·김채린·정수희·이지윤·전미숙 스케치 기반 캐릭터 3종 × 표정·동작 시트."
       }
     ],
     "blockers": []
   },
   "deliverables": [
+    {
+      "title": "신규 수업제안서 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/2026_가을학기/신규수업제안/03_제안서/수업제안서.md",
+      "fileKind": "md",
+      "summary": "2·3학년 2학점 온라인 신규 과목 기획안.",
+      "modifiedAt": "2026-09-04"
+    },
+    {
+      "title": "보물AI 2회차 종합보고서 v0.3",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/2026_가을학기/디자인실무프로젝트2/00_보물AI/output/pdf/11_2회차_종합보고서_v0.3.pdf",
+      "fileKind": "other",
+      "summary": "9쪽·그림 5장 A4 PDF.",
+      "modifiedAt": "2026-08-31"
+    },
+    {
+      "title": "보물AI 1회차 종합보고서 v0.3",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/2026_가을학기/디자인실무프로젝트2/00_보물AI/output/pdf/08_1회차_종합보고서_v0.3.pdf",
+      "fileKind": "other",
+      "summary": "11쪽·그림 11장 A4 PDF.",
+      "modifiedAt": "2026-08-31"
+    },
     {
       "title": "새론솔루션 진단 리포트",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_새론솔루션/02_분석/01_현시안_진단리포트.md",
@@ -51,6 +78,24 @@
   ],
   "nextTasks": [
     {
+      "title": "이수구분·서식 확인",
+      "description": "전공교양/전공선택 택일과 교과 서식·심의 절차를 확인한다.",
+      "priority": "high",
+      "estimate": "1시간"
+    },
+    {
+      "title": "수업제안서 v0.2",
+      "description": "수강 인원 상한·평가 비율·산학 협력 여부를 확정해 반영한다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "보물AI 도해 교체",
+      "description": "외부 제출 시 저작권 안내에 따라 논문 그림을 직접 제작한 도해로 바꾼다.",
+      "priority": "mid",
+      "estimate": "1일"
+    },
+    {
       "title": "새론솔루션 Figma Variant A 완성",
       "description": "Figma Starter 한도 리셋 후 Refined Light 시안 Figma 작업 재개.",
       "priority": "high",
@@ -61,13 +106,7 @@
       "description": "5인 캐릭터 중 앱 적용할 최종안 선정 + 에셋 정리.",
       "priority": "high",
       "estimate": "반나절"
-    },
-    {
-      "title": "Data_Once persona_lab 결과 정리",
-      "description": "페르소나 실험 결과 → 마케팅 인사이트 도출.",
-      "priority": "mid",
-      "estimate": "1일"
     }
   ],
-  "buildAt": "2026-05-16T00:00:00+09:00"
+  "buildAt": "2026-09-05T12:49:11+09:00"
 }

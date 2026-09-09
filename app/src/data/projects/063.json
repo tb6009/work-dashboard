@@ -1,9 +1,15 @@
 {
   "id": "063",
   "currentSituation": {
-    "summary": "운영 모드 — W14~W36 23주 누적. 이번 주 13_Image 계열을 트래킹 대상에 편입(132 신설)하고, 개인 얼굴 정체성 참조는 파일명까지 비공개로 막았다.",
-    "phase": "운영 모드 — 주간 마감 + 월간·연간 집계 대기",
+    "summary": "운영 모드 — W14~W37 24주 누적. 이번 주 파일 활동의 요일 귀속을 UTC에서 로컬(KST) 기준으로 고쳐, 오전 9시 이전 작업이 전날로 밀리던 오류를 없앴다.",
+    "phase": "운영 모드 — 주간 마감 + 9월 월간 집계 대기",
     "recentLogs": [
+      {
+        "date": "2026-09-09",
+        "title": "W37 마감 + 요일 귀속 UTC→KST 수정",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/PROJECT.md",
+        "excerpt": "extract-from-filesystem.mjs가 mtime을 UTC로 잘라 09:00 KST 이전 작업이 전날로 밀렸다. 주차 범위·일자 버킷을 모두 로컬 시각 계산으로 교체."
+      },
       {
         "date": "2026-09-05",
         "title": "W36 마감 + 13_Image 트래킹 편입",
@@ -15,12 +21,6 @@
         "title": "W25 주간업데이트 세팅 + CURRENT_WEEK_ID W24→W25 전환",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
         "excerpt": "W24 status→done, W25 projects[] 채우기, data.ts CURRENT_WEEK_ID 전환. 11주 데이터 누적."
-      },
-      {
-        "date": "2026-05-05",
-        "title": "Phase 2 Next.js 16 앱 구축 완료 — 5라우트 + 차트 7종",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260505_log.md",
-        "excerpt": "/, /weekly, /monthly/[m], /yearly/[y], /projects/[id] 모두 200 OK. PageShell·Topbar·Footer 공통 컴포넌트."
       }
     ]
   },
@@ -71,15 +71,21 @@
   "nextTasks": [
     {
       "title": "9월 월간 회고 집계",
-      "description": "W36 마감 이후 9월분 월간 집계를 언제 돌릴지 정한다.",
+      "description": "W36·W37 마감 이후 9월분 월간 집계를 언제 돌릴지 정한다.",
       "priority": "mid",
       "estimate": "1시간"
     },
     {
-      "title": "W35 결정 설명 채우기",
-      "description": "W35 decisions의 description이 TODO로 남아 있다. 마감 주 수정 여부를 결정한다.",
+      "title": "로그 파서 프로젝트 매핑 교정",
+      "description": "extract-week.mjs가 '박사연구'를 09, 'RISE 연구회'를 04로 잘못 매핑한다. 경로 기반 매핑과 맞춘다.",
+      "priority": "high",
+      "estimate": "1시간"
+    },
+    {
+      "title": "0500 프로젝트 상세 JSON 신설",
+      "description": "이번 주 최대 작업 프로젝트인데 projects/0500.json이 없어 상세 페이지가 비어 있다.",
       "priority": "mid",
-      "estimate": "30분"
+      "estimate": "1시간"
     },
     {
       "title": "mtime 재스캔 드리프트 대응",
@@ -88,5 +94,5 @@
       "estimate": "1시간"
     }
   ],
-  "buildAt": "2026-09-05T12:49:11+09:00"
+  "buildAt": "2026-09-09T12:10:00+09:00"
 }

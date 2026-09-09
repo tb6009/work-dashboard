@@ -1,9 +1,15 @@
 {
   "id": "039",
   "currentSituation": {
-    "summary": "2026 가을 Value-up 연구회 축으로 이동 — 리서치 1차·2차와 인용 명세서를 정리하고 충분성 점검을 거쳐 계원 기업지원 통합운영안 v0.1로 묶었다.",
-    "phase": "Value-up 연구회 — 운영안 v0.1 · 리서치 충분성 점검 완료",
+    "summary": "내부진단보고서 v0.2 — 진단 축을 '실행 앞뒤의 공백'에서 '개인 역량을 조직 역량으로 전환하는 체계의 부족'으로 확장하고, 얼라이언스 기반 이중 트랙 기업지원 모델을 제안했다.",
+    "phase": "Value-up 연구회 — 내부진단보고서 v0.2 · 내부 검토 대기",
     "recentLogs": [
+      {
+        "date": "2026-09-07",
+        "title": "내부진단 및 구축 제안 v0.2 — 이중 트랙 기업지원 모델",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260907_log.md",
+        "excerpt": "교수 역량 부족을 단정하지 않고 역량을 진단·매칭·이전하는 체계의 부재로 기술했다. 펀드 조성은 파일럿 성과 기반 중장기 목표로 표현."
+      },
       {
         "date": "2026-09-02",
         "title": "계원 기업지원 통합운영안 v0.1 + 리서치 충분성 점검",
@@ -15,12 +21,6 @@
         "title": "네트워킹데이 강의 — AI 생산성 역설 강의자료 + Once 비주얼 적용",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260618_log.md",
         "excerpt": "베인을 강의 척추로, 논문 2편은 막3 보조. payoff 4조건 다이어그램 + 두숫자 축 설명 + 전체덱 v0.1/v0.2 + AI_생산성_파라독스 pptx. 무지개색 폐기, 크림/필름레드/명조 시스템 적용."
-      },
-      {
-        "date": "2026-06-15",
-        "title": "스톤프레임워크 PT — 클레임스파인 v0.1/v0.2 + 슬라이드내용 v0.1/v0.2",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260615_log.md",
-        "excerpt": "스톤프레임워크 PT 자료 정비. 슬라이드내용 v0.2까지."
       }
     ],
     "blockers": []
@@ -99,29 +99,29 @@
   ],
   "nextTasks": [
     {
-      "title": "리서치 검토 핵심 1페이지 확정",
-      "description": "1·2차 리서치를 한 페이지로 압축한 검토본을 확정한다.",
+      "title": "내부 설득용 문체·분량 검토",
+      "description": "v0.2 본문의 문체와 분량을 사용자가 검토해 방향을 확정한다.",
       "priority": "high",
-      "estimate": "2시간"
+      "estimate": "1시간"
+    },
+    {
+      "title": "운영계획서 정합성 조정",
+      "description": "확정된 방향에 맞춰 연구회 운영계획서와 내부진단보고서를 맞춘다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "내부역량 조사서·기업 수요조사서 초안",
+      "description": "이중 트랙 모델을 돌리는 데 필요한 두 조사서를 초안화한다.",
+      "priority": "high",
+      "estimate": "1일"
     },
     {
       "title": "미확보 자료 확보",
       "description": "06 미확보자료 목록과 07 경상원 자료를 확보해 명세서를 갱신한다.",
-      "priority": "high",
-      "estimate": "반나절"
-    },
-    {
-      "title": "막1·2 실제 슬라이드 초안화 + 4조건 ①② 사례 삽입",
-      "description": "사용자 개인·스쿨 프로젝트 실제 사례를 ①프로세스 재설계 ②전체 라이프사이클에 삽입.",
-      "priority": "high",
-      "estimate": "2일"
-    },
-    {
-      "title": "Netflix shifting-left before/after 흐름도 슬라이드 (선택)",
-      "description": "베인 사례 강조. 1장 추가.",
       "priority": "mid",
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-09-05T12:49:11+09:00"
+  "buildAt": "2026-09-09T12:10:00+09:00"
 }

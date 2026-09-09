@@ -1,0 +1,168 @@
+{
+  "week": "2026-W37",
+  "range": {
+    "from": "2026-09-07",
+    "to": "2026-09-13"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 4,
+    "sessions": 1,
+    "newProjects": 1,
+    "filesChanged": 52
+  },
+  "daily": [
+    {
+      "date": "2026-09-07",
+      "weekday": "월",
+      "filesChanged": 31,
+      "topProjectIds": [
+        "09",
+        "04",
+        "0500",
+        "063",
+        "039",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 09_인용명세서.md · 12_AI업무사용_측정척도.md · index.md · log.md · 00_INDEX.md 외 3건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 02_컨설팅_프로세스_1p_v0.1.md · 03_연구회_방향_1p_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 30,
+                "out": 31765,
+                "cache_read": 2218285,
+                "cache_write": 53619,
+                "messages": 15,
+                "costUSD": 2.2385
+              }
+            },
+            "total": {
+              "in": 30,
+              "out": 31765,
+              "cache_read": 2218285,
+              "cache_write": 53619,
+              "messages": 15
+            },
+            "costUSD": 2.2385
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "weekday": "화",
+      "filesChanged": 21,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_INDEX.md · 19A_모델1_설문원문·번안검토_v0.1.md · 20B_TC_WE_성과·보상_설문원문·수정안_v0.1.md · 20C_개인양손잡이성_14문항·도입행동_보완_v0.1.md · 20_연구개요_3개모형_근거·설문_검토본_v0.1.md 외 6건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-09-10",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-09-11",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-09-12",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-09-13",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "09",
+      "pct": 50,
+      "filesChanged": 9,
+      "imp": 0,
+      "nextAction": "TODO"
+    },
+    {
+      "id": "04",
+      "pct": 50,
+      "filesChanged": 9,
+      "imp": 0,
+      "nextAction": "TODO"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-09-07",
+      "projectId": "09",
+      "title": "업무영역 확장, 업무성과, 개인 보상을 서로 다른 연구결과로 분리했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-09-07",
+      "projectId": "09",
+      "title": "업무혁신이 보상 증가로 이어지지 않을 가능성은 결론이 아니라 연구 3의 경쟁가설로 남겼다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-09-07",
+      "projectId": "09",
+      "title": "이전 14번 모형은 발전과정 기록으로 보존하고 15번을 현재 정본으로 지정했다.",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [
+    "04"
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-09-08T14:57:20.460Z",
+  "tokens": {
+    "total": {
+      "in": 30,
+      "out": 31765,
+      "cache_read": 2218285,
+      "cache_write": 53619
+    },
+    "costUSD": 2.2385,
+    "costKRW": 3152
+  }
+}

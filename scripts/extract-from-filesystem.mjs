@@ -46,21 +46,30 @@ if (!weekId || !/^\d{4}-W\d{2}$/.test(weekId)) {
 }
 
 // ─── ISO 주차 → 날짜 범위
+// mtime은 로컬(KST) 기준으로 해석한다. UTC로 자르면 09:00 KST 이전 작업이
+// 전날로 밀려 요일 귀속이 하루씩 어긋난다.
 function isoWeekRange(year, week) {
-  const jan4 = new Date(Date.UTC(year, 0, 4));
-  const jan4Day = jan4.getUTCDay() || 7;
+  const jan4 = new Date(year, 0, 4);
+  const jan4Day = jan4.getDay() || 7;
   const week1Mon = new Date(jan4);
-  week1Mon.setUTCDate(jan4.getUTCDate() - jan4Day + 1);
+  week1Mon.setDate(jan4.getDate() - jan4Day + 1);
+  week1Mon.setHours(0, 0, 0, 0);
   const monday = new Date(week1Mon);
-  monday.setUTCDate(week1Mon.getUTCDate() + (week - 1) * 7);
+  monday.setDate(week1Mon.getDate() + (week - 1) * 7);
   const sunday = new Date(monday);
-  sunday.setUTCDate(monday.getUTCDate() + 7);     // 일요일 24:00
+  sunday.setDate(monday.getDate() + 7);           // 일요일 24:00 (로컬)
   return { from: monday, to: sunday };
+}
+
+// 로컬 시각 기준 YYYY-MM-DD
+function localDay(d) {
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
 const [yStr, wStr] = weekId.split('-W');
 const { from: weekFrom, to: weekTo } = isoWeekRange(+yStr, +wStr);
-console.log(`📅 ${weekId} = ${weekFrom.toISOString().slice(0, 10)} ~ ${new Date(weekTo - 1).toISOString().slice(0, 10)}`);
+console.log(`📅 ${weekId} = ${localDay(weekFrom)} ~ ${localDay(new Date(weekTo - 1))}`);
 console.log(DRY ? '🔍 DRY-RUN' : '⚠️  apply 모드');
 
 // ─── 프로젝트 메타 + ID 추론 매핑
@@ -214,7 +223,7 @@ console.log(`📁 발견한 수정 파일: ${found.length}건`);
 // ─── 일자·프로젝트별 그룹핑
 const byDayProject = new Map(); // 'YYYY-MM-DD::id' → [filenames]
 for (const f of found) {
-  const day = f.mtime.toISOString().slice(0, 10);
+  const day = localDay(f.mtime);
   const key = day + '::' + f.projectId;
   if (!byDayProject.has(key)) byDayProject.set(key, []);
   byDayProject.get(key).push(f.abs);

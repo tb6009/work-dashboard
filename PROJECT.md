@@ -2,7 +2,7 @@
 
 > 한 줄 정의: cloude_Code 27 프로젝트의 주간·월간·연간 작업 활동을 시각화하는 외부 공개 대시보드
 > 상태: 🟢 active
-> 최종 업데이트: 2026-09-05 (W36 마감 + 13_Image 트래킹 편입(132 신설) + CURRENT_WEEK_ID → W36 승격)
+> 최종 업데이트: 2026-09-09 (W37 업데이트 + 요일 귀속 UTC→KST 수정 + CURRENT_WEEK_ID → W37 승격)
 
 ---
 
@@ -81,6 +81,7 @@
 - [x] **W28·W29·W30 의미 보강 3주 일괄 마감** (2026-07-23) — auto-capture hook이 daily 활동은 계속 캡처했으나 의미 레이어(summary·projects·decisions)가 W28부터 3주 밀려 `CURRENT_WEEK_ID`도 W28에 정체. 세 주를 근거 수준별로 차등 보강: **W29**(7/13~19)는 일일 로그 5건 기반 완전 보강 — projects 5·decisions 7(02 계원예대 종합 실증 보고서 발간+독립 재검증 / 0811 개미파이 브랜드 3축 확정 / 091 신문 6부작 착수+서지오류 3건 정정 / 0500 Design-Driven 논문 이중언어 분해 / 063 중단세션 마감). **W30**(7/20~, 현재 주)은 7/20 로그+fs 기반 부분 보강 — 02 최종보고서 통계 정합성 관철·docx·06_최종보고서 신설. **W28**(7/6~12)은 **일일 로그가 없어** fs-scan만으로 경량 요약(081·03·02)만 넣고 `decisions`는 빈 배열 유지 — 출처 없는 결정 생성 금지 룰 준수. `CURRENT_WEEK_ID` → W30 승격. 백업 `_backups/weekly_pre_enrich_20260723/`.
 - [x] **W36 마감 + 13_Image 트래킹 편입** (2026-09-05) — 파서가 `13_Image`를 walk 루트에 두지 않아 이번 주 최대 작업(화가별 이미지 하네스 193파일)이 빈칸으로 잡히던 문제를 해결. `projects.json`에 **132(2026 가을 스토리텔링)** 신설 + `extract-from-filesystem.mjs`에 `13_Image/2026_가을_스토리텔링`→132 · `13_Image/Higgsfield`→131 매핑과 walk 루트 추가. 개인정보 규칙 적용: 개인 사진 폴더(`레퍼런스`)·이름이 든 하네스 폴더는 EXCLUDE_REL, `identity_index` 계열은 파일명 노출까지 차단. W36 의미 보강(projects 5·decisions 9·milestone 2) + `CURRENT_WEEK_ID` → W36 + W34·W35 status `current`→`past` 정정. PNG만 남는 작업(창크기_바다지각)은 fs 스캔이 못 보므로 일일 로그 근거로 entries 2건 수동 보강. 백업 `_backups/weekly_pre_W36_20260905/`.
 - [x] **W35 filesChanged 회귀 복원** (2026-09-05) — auto-capture 재스캔으로 W35가 161→57(8/29 123→21)로 줄어 마감본 값으로 복원. 원인은 mtime 기반 스캔의 드리프트(파일이 나중 주에 다시 수정되면 지난 주 집계에서 빠짐). 토큰·비용 갱신분은 그대로 반영.
+- [x] **W37 업데이트 + 요일 귀속 UTC→KST 수정** (2026-09-09) — `extract-from-filesystem.mjs`가 mtime을 `toISOString()`으로 잘라 **09:00 KST 이전 작업이 전날로 밀리던** 요일 귀속 오류를 발견. 주차 범위(`isoWeekRange`)와 일자 버킷을 모두 로컬 시각 계산으로 교체(`localDay()` 신설). 이번 주 9/9 오전 작업 16건이 9/8에 잡히던 것이 정상 귀속. 지난 주차는 마감본 보존 원칙에 따라 소급 재계산하지 않음. 또한 로그 파서(`extract-week.mjs`)가 '박사연구'→**09**, 'RISE 연구회'→**04**로 오매핑한 것을 경로 근거(`05_phD_Research/00_연구가이드`→0500, `03_school_project/02_RISE`→039)로 수기 교정하고 `newProjects`의 허위 신규(04)를 제거. W37 의미 보강(projects 4·decisions 8·milestone 2) + W36 status `current`→`past` + `CURRENT_WEEK_ID` → W37. 백업 `_backups/weekly_pre_W37_20260909/`.
 - [~] Claude cron으로 매주 월요일 09:00 자동 빌드 — 원격 routine 차단(워크스페이스 부재). 옵션 A(로컬 launchd) 권장, 사용자 결정 대기.
 - [-] 재구조화 후속 `path` 필드 — EXPLICIT map과 define이 이미 동기화. 중복 데이터 회피로 스킵.
 - [∞] **운영 모드** Phase 4 — 월간·연간 회고 집계

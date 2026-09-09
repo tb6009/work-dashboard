@@ -1,9 +1,15 @@
 {
   "id": "03",
   "currentSituation": {
-    "summary": "2026 가을학기 축으로 이동 — 보물AI 1·2회차 종합보고서를 A4 PDF로 발간하고, 신규 수업제안서 v0.1과 리서치 인용명세서(R1~R5·K1~K3)를 묶었다.",
-    "phase": "2026 가을학기 — 수업제안서 v0.1 검토 대기",
+    "summary": "2026 가을학기 — 프롬랩스 「Creus」 연계 주문식 교육과정 운영계획서를 v0.2까지 썼다. 시각디자인리서치·디자인실무프로젝트Ⅱ 두 교과에 기업 과제를 나눠 편성했다. 신규 수업제안서 v0.1은 검토 대기.",
+    "phase": "2026 가을학기 — 주문식 운영계획서 v0.2 · 기업 정보 확정 대기",
     "recentLogs": [
+      {
+        "date": "2026-09-07",
+        "title": "주문식 교육과정 운영계획서 v0.1 → v0.2",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/2026_가을학기/주문식교육/02_운영계획서_v0.2.md",
+        "excerpt": "생성에서 운영으로 옮겨간 실무 역량을 목표로 잡고, 기업 과제를 두 교과에 나눠 한 학기에 실무 전 주기를 완결하는 구성으로 썼다."
+      },
       {
         "date": "2026-08-31",
         "title": "보물AI 1·2회차 종합보고서 PDF 조판",
@@ -15,12 +21,6 @@
         "title": "신규 수업제안서 v0.1 + 현재 진행상황 요약",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260904_log.md",
         "excerpt": "2·3학년 2학점 온라인 조건으로 이론·설계 중심 과목을 설계하고 평가안 B를 권고했다."
-      },
-      {
-        "date": "2026-05-14",
-        "title": "새론솔루션 UX 진단 + 시안 3종 HTML 목업 완성",
-        "logFilePath": "",
-        "excerpt": "하수악취 대시보드 6측면 진단. Light/Dark OLED/Map-First 3종. Figma Starter 한도로 중단."
       }
     ],
     "blockers": []
@@ -78,6 +78,12 @@
   ],
   "nextTasks": [
     {
+      "title": "주문식 운영계획서 v0.3",
+      "description": "기업 정보·참여 인원·인턴십/채용약정 수 등 [ ] 표시된 확정 대기 칸을 채운다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
       "title": "이수구분·서식 확인",
       "description": "전공교양/전공선택 택일과 교과 서식·심의 절차를 확인한다.",
       "priority": "high",
@@ -108,5 +114,5 @@
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-09-05T12:49:11+09:00"
+  "buildAt": "2026-09-09T12:10:00+09:00"
 }

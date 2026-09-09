@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-08-24T09:17:41.010667+09:00",
+  "range": {
+    "from": "2026-05-27",
+    "to": "2026-08-24",
+    "days": 90
+  },
+  "metrics": {
+    "elapsedMinutes": 9385.1,
+    "aiTotalMinutes": 12671.5,
+    "concurrency": 1.35,
+    "segments": 605,
+    "activeDays": 69
+  },
+  "projects": [
+    {
+      "id": "etc",
+      "name": "기타",
+      "category": "기타",
+      "minutes": 5084.6,
+      "sessions": 304,
+      "sources": [
+        "Claude",
+        "Codex",
+        "Hermes"
+      ]
+    },
+    {
+      "id": "039",
+      "name": "RISE 코너스톤",
+      "category": "보고서",
+      "minutes": 2751.0,
+      "sessions": 100,
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Writing",
+      "category": "글쓰기",
+      "minutes": 1637.9,
+      "sessions": 61,
+      "sources": [
+        "Claude",
+        "Hermes"
+      ]
+    },
+    {
+      "id": "081",
+      "name": "Anchornode",
+      "category": "보고서",
+      "minutes": 1319.4,
+      "sessions": 44,
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "id": "09",
+      "name": "몸과마음의과학",
+      "category": "리서치",
+      "minutes": 852.9,
+      "sessions": 45,
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "id": "104",
+      "name": "맨프레드봇",
+      "category": "에이전트",
+      "minutes": 653.0,
+      "sessions": 33,
+      "sources": [
+        "Claude",
+        "Hermes"
+      ]
+    },
+    {
+      "id": "061",
+      "name": "LifeOS",
+      "category": "제품개발",
+      "minutes": 181.0,
+      "sessions": 7,
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "id": "01",
+      "name": "AI 작업환경",
+      "category": "시스템",
+      "minutes": 151.7,
+      "sessions": 7,
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "id": "063",
+      "name": "WorkDashboard",
+      "category": "제품개발",
+      "minutes": 40.0,
+      "sessions": 4,
+      "sources": [
+        "Claude",
+        "Hermes"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "minutes": 6632.9000000000015,
+      "input": 124971,
+      "cacheRead": 3778784453,
+      "cacheWrite": 213469578,
+      "output": 23649315,
+      "reasoning": 0,
+      "total": 4016028317,
+      "requests": 11465,
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 1619.6000000000004,
+      "input": 47565667,
+      "cacheRead": 708889728,
+      "cacheWrite": 0,
+      "output": 2566350,
+      "reasoning": 517006,
+      "total": 759538751,
+      "requests": 6112,
+      "id": "gpt-5.6-sol",
+      "name": "GPT-5.6 Sol",
+      "sources": [
+        "Codex",
+        "Hermes"
+      ]
+    },
+    {
+      "minutes": 1810.6999999999998,
+      "input": 28093076,
+      "cacheRead": 182091776,
+      "cacheWrite": 0,
+      "output": 1162978,
+      "reasoning": 164542,
+      "total": 211512372,
+      "requests": 1618,
+      "id": "gpt-5.5",
+      "name": "GPT-5.5",
+      "sources": [
+        "Codex"
+      ]
+    },
+    {
+      "minutes": 1141.5,
+      "input": 322252,
+      "cacheRead": 563843025,
+      "cacheWrite": 46490378,
+      "output": 4004052,
+      "reasoning": 0,
+      "total": 614659707,
+      "requests": 2011,
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 640.5,
+      "input": 10833,
+      "cacheRead": 97468209,
+      "cacheWrite": 9231879,
+      "output": 1706633,
+      "reasoning": 0,
+      "total": 108417554,
+      "requests": 657,
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 392.40000000000003,
+      "input": 64786,
+      "cacheRead": 149615948,
+      "cacheWrite": 9304588,
+      "output": 700313,
+      "reasoning": 0,
+      "total": 159685635,
+      "requests": 524,
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 199.5,
+      "input": 1348541,
+      "cacheRead": 5464704,
+      "cacheWrite": 0,
+      "output": 8031,
+      "reasoning": 6786,
+      "total": 6828062,
+      "requests": 155,
+      "id": "codex-auto-review",
+      "name": "Codex Auto Review",
+      "sources": [
+        "Codex"
+      ]
+    },
+    {
+      "minutes": 122.8,
+      "input": 175778,
+      "cacheRead": 66131272,
+      "cacheWrite": 14975340,
+      "output": 751897,
+      "reasoning": 0,
+      "total": 82034287,
+      "requests": 310,
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 66.8,
+      "input": 255,
+      "cacheRead": 11154410,
+      "cacheWrite": 373514,
+      "output": 156531,
+      "reasoning": 0,
+      "total": 11684710,
+      "requests": 134,
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "sources": [
+        "Claude"
+      ]
+    },
+    {
+      "minutes": 17.6,
+      "input": 2380019,
+      "cacheRead": 29401088,
+      "cacheWrite": 0,
+      "output": 106912,
+      "reasoning": 17194,
+      "total": 31905213,
+      "requests": 135,
+      "id": "unknown",
+      "name": "모델 미확인",
+      "sources": [
+        "Codex",
+        "Hermes"
+      ]
+    },
+    {
+      "minutes": 27.200000000000003,
+      "input": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "output": 0,
+      "reasoning": 0,
+      "total": 0,
+      "requests": 94,
+      "id": "<synthetic>",
+      "name": "Claude 내부 합성",
+      "sources": [
+        "Claude"
+      ]
+    }
+  ],
+  "unclassified": {
+    "segments": 304,
+    "minutes": 5084.6,
+    "sources": {
+      "Codex": 212,
+      "Claude": 80,
+      "Hermes": 12
+    }
+  },
+  "coverage": {
+    "Claude": "assistant message model + usage fields; subagents excluded",
+    "Codex": "turn_context model + cumulative token_count positive deltas",
+    "Hermes": "state.db session model and token totals; subagents excluded"
+  }
+}

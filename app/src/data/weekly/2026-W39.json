@@ -10,13 +10,13 @@
     "activeProjects": 3,
     "sessions": 1,
     "newProjects": 0,
-    "filesChanged": 108
+    "filesChanged": 109
   },
   "daily": [
     {
       "date": "2026-09-21",
       "weekday": "월",
-      "filesChanged": 108,
+      "filesChanged": 109,
       "topProjectIds": [
         "09",
         "063",
@@ -30,22 +30,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 216,
-                "out": 90172,
-                "cache_read": 17445351,
-                "cache_write": 234109,
-                "messages": 108,
-                "costUSD": 12.4412
+                "in": 362,
+                "out": 177331,
+                "cache_read": 40155956,
+                "cache_write": 644260,
+                "messages": 181,
+                "costUSD": 28.5397
               }
             },
             "total": {
-              "in": 216,
-              "out": 90172,
-              "cache_read": 17445351,
-              "cache_write": 234109,
-              "messages": 108
+              "in": 362,
+              "out": 177331,
+              "cache_read": 40155956,
+              "cache_write": 644260,
+              "messages": 181
             },
-            "costUSD": 12.4412
+            "costUSD": 28.5397
           }
         },
         {
@@ -99,13 +99,14 @@
     {
       "id": "063",
       "pct": 57,
-      "filesChanged": 61,
+      "filesChanged": 62,
       "imp": 5,
-      "did": "089(임차in케어)와 021(계원 입시 커뮤니케이션)을 대시보드에 편입하고, 두 프로젝트의 제작 과정을 같은 형식의 공개 기록으로 만들었다. 089는 원본 허브를 옮겨 HTML 산출물 20종을 최신순 버전 아카이브로 붙였고(458MB→70MB), 021은 흩어져 있던 프로세스 문서·평가표·감사 기록을 한 페이지로 새로 쓰고 캐러셀 6버전 134페이지를 갤러리로 묶었다(195MB→27MB). 두 빌드 모두 스크립트로 재현 가능하다. 파서에는 089·085·021 매핑과 민감 폴더 제외 규칙을 추가했다.",
+      "did": "089(임차in케어)와 021(계원 입시 커뮤니케이션)을 대시보드에 편입하고, 두 프로젝트의 제작 과정을 같은 형식의 공개 기록으로 만들었다. 완성본만 늘어놓지 않고 각 버전 페이지 안에 되돌린 자리를 이전·이후로 함께 넣었다 — 089는 v0.8 컨셉별 이미지 교체와 v0.7 연속성 앵커 재제작, 021은 SET A 모바일 재설계 8쌍·C·D·E v2 보정 8쌍·키비주얼 source→파생 계보 30장·평가 2회차 점수 변화. 089 허브에는 무드 부적합·접근 실패·Adobe Stock 차단·Bing 무효 35건을 「버린 것 · 못 본 것」으로 남겼다. 모든 페이지에 공용 라이트박스를 붙여 원본 픽셀 크기로 볼 수 있게 했다. 두 빌드 모두 스크립트로 재현 가능하다.",
       "nextAction": "9월 월간 회고 집계",
       "deliverables": [
         "06_Personal_Project/063_workDashboard/scripts/build-ien-portfolio.mjs",
         "06_Personal_Project/063_workDashboard/scripts/build-kaywon-portfolio.mjs",
+        "06_Personal_Project/063_workDashboard/scripts/lib/lightbox.mjs",
         "06_Personal_Project/063_workDashboard/app/public/ien-process/index.html",
         "06_Personal_Project/063_workDashboard/app/public/kaywon-process/index.html"
       ]
@@ -189,19 +190,38 @@
       "projectId": "063",
       "title": "시안 상태 표지를 지우지 않고 그대로 공개했다.",
       "description": "PLAY 5.5 파일럿의 INTERNAL TEST · NOT FOR PUBLISHING 워터마크와 「외부 게시 승인 0건」을 숨기지 않았다. 감수 전 시안임을 페이지마다 고지한다."
+    },
+    {
+      "date": "2026-09-21",
+      "projectId": "063",
+      "title": "포트폴리오에 완성본만 올리지 않고 되돌린 자리를 같은 페이지에 넣었다.",
+      "description": "버전 아카이브는 “무엇이 나왔나”만 보여준다. 각 버전 페이지 맨 아래에 이전·이후를 나란히 붙여 “무엇을 왜 고쳤나”가 그 자리에서 보이게 했다. 089 24쌍 + 캐스팅 3장, 021 16쌍 + 키비주얼 계보 30장.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-21",
+      "projectId": "063",
+      "title": "실패와 못 본 것을 지우지 않고 공개했다.",
+      "description": "089 허브에 「버린 것 · 못 본 것」 신설 — 무드 부적합 6건(제외 사유 포함) · 접근 실패 7건 · Adobe Stock 차단 8건(표본 0장) · Bing 무효 14건. 무엇을 못 봤는지가 결론의 신뢰 구간이라 남겼다. 021도 SET B가 source·규격화에서 멈춘 자리를 계보에 그대로 뒀다."
+    },
+    {
+      "date": "2026-09-21",
+      "projectId": "063",
+      "title": "이미지 뷰어를 두 포트폴리오가 공유하는 한 모듈로 뺐다.",
+      "description": "scripts/lib/lightbox.mjs 하나를 38개 페이지에 주입한다. FIT↔100% 토글로 원본 픽셀 확인, 드래그 이동, ←→/Esc. 계원 페이지 이미지는 1080px로 줄어 있던 것을 네이티브 1080×1350으로 다시 뽑았다."
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-21T12:06:06.195293+09:00",
+  "buildAt": "2026-09-21T12:32:44.900850+09:00",
   "tokens": {
     "total": {
-      "in": 216,
-      "out": 90172,
-      "cache_read": 17445351,
-      "cache_write": 234109
+      "in": 362,
+      "out": 177331,
+      "cache_read": 40155956,
+      "cache_write": 644260
     },
-    "costUSD": 12.4412,
-    "costKRW": 17516
+    "costUSD": 28.5397,
+    "costKRW": 40181
   }
 }

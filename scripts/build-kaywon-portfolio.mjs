@@ -13,6 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { LIGHTBOX_CSS, LIGHTBOX_JS } from './lib/lightbox.mjs';
 
 const SRC = '/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon';
 const DEST = path.resolve(import.meta.dirname, '../app/public/kaywon-process');
@@ -94,6 +95,127 @@ const VERSIONS = [
   },
 ];
 
+/* ── 과정·되돌림 자료 (버전 페이지 안에서 함께 본다) ── */
+const KV = '04_production/02_assets/autonomous_major_keyvisuals_v0.1';
+
+const DRAFTS = {
+  'sets345-v2': {
+    title: '되돌린 자리 — v1에서 무엇이 바뀌었나',
+    intro: '24페이지 전부 제목·설명의 자간과 굵기를 기준 세트에 맞췄다. 그 위에 개별 문제가 있던 8페이지만 따로 손봤다. 왼쪽이 v1, 오른쪽이 v2다.',
+    pairs: [
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/abundance/set_C_07.png', 'C-07 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/abundance/set_C_07.png', 'C-07 · v2'],
+        why: '배경이 약해 페이지가 비어 보였다. 새 이미지를 만들지 않고 기존 맥락 이미지를 다시 드러냈다.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_02.png', 'E-02 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_02.png', 'E-02 · v2'],
+        why: '같은 이유. 배경 보정.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_07.png', 'E-07 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_07.png', 'E-07 · v2'],
+        why: '같은 이유. 배경 보정.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_08.png', 'E-08 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_08.png', 'E-08 · v2'],
+        why: 'CTA 페이지. 배경 보정.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/tactile/set_D_07.png', 'D-07 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/tactile/set_D_07.png', 'D-07 · v2'],
+        why: '정보가 짧아 페이지가 근거 없이 보였다. 설명 문장을 보강했다.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_03.png', 'E-03 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_03.png', 'E-03 · v2'],
+        why: '같은 이유. 설명 보강.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_04.png', 'E-04 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_04.png', 'E-04 · v2'],
+        why: '같은 이유. 설명 보강.' },
+      { before: ['05_outputs/06_autonomous_major_sets345_v1/structure/set_E_06.png', 'E-06 · v1'],
+        after:  ['05_outputs/03_new_renders/autonomous_major_sets345_v2/structure/set_E_06.png', 'E-06 · v2'],
+        why: '같은 이유. 설명 보강.' },
+    ],
+  },
+
+  'set1-v2': {
+    title: '되돌린 자리 — 1차 8페이지를 모바일에서 다시 보다',
+    intro: '왼쪽이 1차(A~E v1의 SET A), 오른쪽이 재설계본이다. 되돌린 것은 네 가지 — ① 이미지 위 각진 흰색 박스를 없애고 이미지의 네거티브 스페이스에 글을 앉혔다 ② 표지만 강한 키 이미지를 남기고 세부 페이지용 저밀도 파생 이미지를 따로 만들었다 ③ 세로 카드 나열을 2×2 면으로 묶었다 ④ 화면의 근거 표기를 지우고 evidence와 README에만 남겼다.',
+    pairs: Array.from({ length: 8 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      return {
+        before: [`05_outputs/04_autonomous_major_carousels/multiple/set_A_${n}.png`, `A-${n} · 1차`],
+        after:  [`05_outputs/05_autonomous_major_set1_v2/set1_v2_${n}.png`, `A-${n} · 재설계`],
+        why: '',
+      };
+    }),
+  },
+
+  'sets-a-e-v1': {
+    title: '이미지는 어떻게 만들어졌나 — source → 규격화 → 파생',
+    intro: '콘셉트마다 독립 키비주얼을 한 장 만들고(source), 1080×1350으로 규격화한 뒤, 페이지별 장면을 그 키비주얼에서 파생시켰다. 보존된 PNG 30개 중 AI 생성·편집 결과는 25개, 나머지 5개는 단순 규격화본이라 새 생성으로 세지 않는다. 프로젝트 전용 학습·파인튜닝은 0회.',
+    lineages: [
+      { label: 'SET A · 좋아하는 게 하나가 아니라면 (레드)', items: [
+        [`${KV}/01_multiple_interests_source.png`, 'source', '최초 키비주얼'],
+        [`${KV}/01_multiple_interests_1080x1350.png`, '규격화', '크롭·리사이즈. 새 생성 아님'],
+        [`${KV}/01_multiple_interests_support_v2.png`, '파생 v2', '저밀도 지원 이미지'],
+        [`${KV}/01_page02_multiple_interests_v3.png`, '파생 v3', 'p02 장면'],
+        [`${KV}/01_page03_discovery_v3.png`, '파생 v3', 'p03 장면'],
+        [`${KV}/01_page05_process_v3.png`, '파생 v3', 'p05 장면'],
+        [`${KV}/01_page06_target_v3.png`, '파생 v3', 'p06 장면'],
+        [`${KV}/01_page07_flow_v3.png`, '파생 v3', 'p07 장면'],
+        [`${KV}/01_page08_cta_v3.png`, '파생 v3', 'p08 CTA 1안'],
+        [`${KV}/01_page08_cta_ipad_v4.png`, '파생 v4', 'p08 CTA 2안 — 채택'],
+      ] },
+      { label: 'SET B · 내 전공, 경험해보고 고를래 (블루) — 여기서 멈췄다', items: [
+        [`${KV}/02_experience_then_choose_source.png`, 'source', '최초 키비주얼'],
+        [`${KV}/02_experience_then_choose_1080x1350.png`, '규격화', '파생 이미지가 없다. SET B는 이후 프로세스에서 제외됐다'],
+      ] },
+      { label: 'SET C · 하고 싶은 게 너무 많아 (오커)', items: [
+        [`${KV}/03_too_many_interests_source.png`, 'source', '최초 키비주얼'],
+        [`${KV}/03_too_many_interests_1080x1350.png`, '규격화', ''],
+        [`${KV}/03_connected_interests_v3.png`, '파생 v3', '연결 장면'],
+        [`${KV}/03_experience_modules_v3.png`, '파생 v3', '경험 모듈'],
+        [`${KV}/03_support_compare_v2.png`, '파생 v2', '비교 장면'],
+        [`${KV}/03_support_organize_v2.png`, '파생 v2', '정리 장면'],
+      ] },
+      { label: 'SET D · 직접 해봐야 알지 (그린)', items: [
+        [`${KV}/04_try_to_know_source.png`, 'source', '최초 키비주얼'],
+        [`${KV}/04_try_to_know_1080x1350.png`, '규격화', ''],
+        [`${KV}/04_four_experiments_v3.png`, '파생 v3', '실험 장면'],
+        [`${KV}/04_feedback_v3.png`, '파생 v3', '피드백 장면'],
+        [`${KV}/04_support_try_v2.png`, '파생 v2', '시도 장면'],
+        [`${KV}/04_support_progress_v2.png`, '파생 v2', '진행 장면'],
+      ] },
+      { label: 'SET E · 첫 학기는 탐색 (딥블루)', items: [
+        [`${KV}/05_semester_transition_source.png`, 'source', '최초 키비주얼'],
+        [`${KV}/05_semester_transition_1080x1350.png`, '규격화', ''],
+        [`${KV}/05_support_flow_v2.png`, '파생 v2', '흐름 장면'],
+        [`${KV}/05_preparation_v3.png`, '파생 v3', '준비 장면'],
+        [`${KV}/05_support_system_v3.png`, '파생 v3', '지원 장면'],
+        [`${KV}/05_support_cta_v2.png`, '파생 v2', 'CTA 장면'],
+      ] },
+    ],
+  },
+
+  'character-major': {
+    title: '초안과 수정본 — 색을 바꾸고, 보드를 세 번 다시 짰다',
+    intro: '왼쪽이 초안, 오른쪽이 계열 Main Color를 적용한 수정본이다. 전체 보드는 이미지 배치를 바꿔 세 번 다시 뽑았다.',
+    pairs: Array.from({ length: 9 }, (_, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      return {
+        before: [`05_outputs/02_character_major_outputs/character_major_${n}.png`, `p${n} · 초안`],
+        after:  [`05_outputs/02_character_major_outputs/character_major_${n}_green.png`, `p${n} · 색 적용`],
+        why: '',
+      };
+    }),
+  },
+};
+
+/* 평가 점수 변화는 이미지가 아니라 표로 — play55-pilot 전용 */
+const EVAL_DELTA = `
+  <h3>평가는 두 번 돌았다</h3>
+  <p>파일럿 3종 모두 v0.1에서 지적을 받고 고친 뒤 v0.2에서 다시 채점했다. 점수가 오른 자리가 곧 되돌린 자리다.</p>
+  <table>
+    <tr><th style="width:230px">파일럿</th><th class="n" style="width:80px">v0.1</th><th class="n" style="width:80px">v0.2</th><th>무엇을 고쳤나</th></tr>
+    <tr class="hi"><td><strong>포트폴리오 vs 면접</strong></td><td class="n">80</td><td class="n">92</td><td>p3의 혼합 작품 썸네일을 빼서 단일 작품의 공식 증거 페이지로 의미를 맞췄다. 학교의 지시처럼 들리던 <code>보여주세요</code>를 학생의 연습 행동인 <code>정리해보세요</code>로 바꿨다.</td></tr>
+    <tr><td><strong>2027 수시 2차 안내</strong></td><td class="n">—</td><td class="n">86</td><td>p1 브랜드 대비·p4 공식 문구·p7 공식 딥링크와 이미지 증거를 보강했다.</td></tr>
+    <tr><td><strong>원서접수 실수 방지</strong></td><td class="n">—</td><td class="n">89</td><td>수험생 관점 46/50. 본문 42px·카드 38px로 모바일 가독성을 올렸다.</td></tr>
+  </table>
+  <p>그래도 셋 다 외부 게시로 올라가지 못했다. 점수가 아니라 <strong>하드게이트</strong> 때문이다 — 작품명·제작진·연도·재사용 권리가 비어 있었고, PLAY 로고는 PDF에서 추출한 테스트 자산이었다. 그래서 모든 페이지에 <code>INTERNAL TEST · NOT FOR PUBLISHING</code> 워터마크가 그대로 남아 있다.</p>`;
+
 /* ── 이미지 변환 ── */
 let converted = 0;
 function jpeg(srcAbs, destAbs, maxPx) {
@@ -120,7 +242,7 @@ for (const v of VERSIONS) {
     const out = [];
     for (const f of files) {
       const name = `${g.dir || 'p'}_${f.replace(/\.png$/i, '.jpg')}`;
-      jpeg(path.join(dir, f), path.join(outImg, name), 1080);
+      jpeg(path.join(dir, f), path.join(outImg, name), 1350);
       out.push({ file: name, label: f.replace(/\.png$/i, '') });
     }
     v._groups.push({ label: g.label, items: out });
@@ -130,14 +252,46 @@ for (const v of VERSIONS) {
     const abs = path.join(srcRoot, b);
     if (!fs.existsSync(abs)) { console.warn(`  ! 보드 없음: ${v.slug}/${b}`); continue; }
     const name = `board_${b.replace(/\.png$/i, '.jpg').replace(/^board_/, '')}`;
-    jpeg(abs, path.join(outImg, name), 2000);
+    jpeg(abs, path.join(outImg, name), 2400);
     v._boards.push({ file: name, label: b.replace(/\.png$/i, '').replace(/^board_/, '') });
   }
   v._pageCount = v._groups.reduce((s, g) => s + g.items.length, 0);
 }
 
+/* ── 과정 자료 이미지 변환 ── */
+let draftCount = 0;
+function draftImg(slug, relPath) {
+  const abs = path.join(SRC, relPath);
+  if (!fs.existsSync(abs)) { console.warn(`  ! 과정자료 없음: ${relPath}`); return null; }
+  const name = 'd_' + relPath.replace(/[^\w.-]+/g, '_').replace(/\.png$/i, '.jpg');
+  const out = path.join(DEST, 'v', slug, 'img', name);
+  if (!fs.existsSync(out)) { jpeg(abs, out, 1350); draftCount++; }
+  return name;
+}
+
+for (const v of VERSIONS) {
+  const d = DRAFTS[v.slug];
+  if (!d) continue;
+  for (const pr of d.pairs || []) {
+    pr._b = draftImg(v.slug, pr.before[0]);
+    pr._a = draftImg(v.slug, pr.after[0]);
+  }
+  for (const ln of d.lineages || []) {
+    ln._items = (ln.items || []).map(([rel, tag, note]) => ({ file: draftImg(v.slug, rel), tag, note }))
+      .filter((x) => x.file);
+  }
+  v._drafts = d;
+}
+
 const TOTAL_PAGES = VERSIONS.reduce((s, v) => s + v._pageCount, 0);
-console.log(`이미지 변환 ${converted}건 · 버전 ${VERSIONS.length} · 페이지 ${TOTAL_PAGES}`);
+for (const v of VERSIONS) {
+  const d = v._drafts;
+  const n = d ? ((d.pairs || []).filter((x) => x._b && x._a).length
+    + (d.lineages || []).reduce((s2, l) => s2 + l._items.length, 0)) : 0;
+  v._draftBadge = n ? ` · <strong style="color:var(--mid)">과정 시안 ${n}</strong>`
+    : (v.slug === 'play55-pilot' ? ' · <strong style="color:var(--mid)">평가 2회차 기록</strong>' : '');
+}
+console.log(`이미지 변환 ${converted}건(과정자료 ${draftCount}) · 버전 ${VERSIONS.length} · 페이지 ${TOTAL_PAGES}`);
 
 /* ── 공통 스타일 ── */
 const CSS = `
@@ -232,6 +386,35 @@ td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-45)}
 footer{padding:60px 0 90px;border-top:1px solid var(--ink);font-size:13.5px;color:var(--ink-70)}
 footer b{color:var(--ink);font-weight:700}
 footer p+p{margin-top:16px}
+
+/* 과정 · 되돌림 */
+.pairs{margin-top:30px;display:grid;gap:34px}
+.pair{border-top:1px solid var(--line);padding-top:20px}
+.pair .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.pair figure{margin:0;position:relative}
+.pair img{border:1px solid var(--line);background:var(--wash);width:100%}
+.pair .tag{position:absolute;top:8px;left:8px;font-size:10.5px;font-weight:800;letter-spacing:.06em;
+ padding:3px 8px;color:#fff;background:rgba(20,21,25,.72)}
+.pair .tag.after{background:var(--sig)}
+.pair figcaption{margin-top:7px;font-size:11.5px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.pair .why{margin-top:12px;font-size:13.5px;color:var(--ink-70);max-width:70ch}
+.pair .why:empty{display:none}
+@media(max-width:560px){.pair .shots{grid-template-columns:1fr}}
+
+.lineage{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px}
+.lineage figure{margin:0}
+.lineage img{border:1px solid var(--line);background:var(--wash);width:100%}
+.lineage .tag{display:inline-block;margin-top:7px;font-size:10px;font-weight:800;letter-spacing:.06em;
+ padding:2px 7px;color:#fff;background:var(--mid)}
+.lineage .tag.src{background:var(--deep)}
+.lineage .tag.norm{background:var(--ink-45)}
+.lineage figcaption{margin-top:5px;font-size:11.5px;color:var(--ink-45);line-height:1.5}
+
+.rej{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.rej-item figure{margin:0}
+.rej-item img{border:1px solid var(--line);width:100%;filter:grayscale(.15)}
+.rej-item .why{margin-top:9px;font-size:12.5px;color:var(--ink-70);line-height:1.55}
+.rej-item .why b{color:var(--warn)}
 `;
 
 const NOTICE = `<div class="notice"><b>내부 제작 시안 · 외부 게시 승인 전</b> — 이 페이지의 캐러셀은 학과·입학지원팀 감수를 받지 않은 제작 시안이다. 등장하는 인물·수업·작품 장면은 생성형 콘셉트 이미지이며 실제 계원예술대학교 학생·수업·작품이 아니다. 사실 문장은 2027학년도 공식 모집요강에서 직접 확인한 범위(5·18·42·57·80쪽)를 넘지 않는다.</div>`;
@@ -241,8 +424,9 @@ function page({ title, body, css = '' }) {
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
-<style>${CSS}${css}</style></head><body>
+<style>${CSS}${LIGHTBOX_CSS}${css}</style></head><body>
 ${body}
+<script>${LIGHTBOX_JS}</script>
 </body></html>`;
 }
 
@@ -257,6 +441,45 @@ ${g.items.map((it) => `    <figure><img src="img/${it.file}" alt="${it.label}" l
   const boards = v._boards.length ? `
   <h3>전체 보드</h3>
 ${v._boards.map((b) => `  <figure class="board"><img src="img/${b.file}" alt="${b.label}" loading="lazy"><figcaption>${b.label}</figcaption></figure>`).join('\n')}` : '';
+
+  const d = v._drafts;
+  let drafts = '';
+  if (d) {
+    const pairs = (d.pairs || []).filter((pr) => pr._b && pr._a).map((pr) => `
+    <div class="pair">
+      <div class="shots">
+        <figure><span class="tag">이전</span><img src="img/${pr._b}" alt="${pr.before[1]}" data-title="${pr.before[1]}" data-note="${pr.why || d.intro}" loading="lazy"><figcaption>${pr.before[1]}</figcaption></figure>
+        <figure><span class="tag after">이후</span><img src="img/${pr._a}" alt="${pr.after[1]}" data-title="${pr.after[1]}" data-note="${pr.why || d.intro}" loading="lazy"><figcaption>${pr.after[1]}</figcaption></figure>
+      </div>
+      <div class="why">${pr.why || ''}</div>
+    </div>`).join('\n');
+
+    const lineages = (d.lineages || []).map((ln) => `
+  <h3>${ln.label}</h3>
+  <div class="lineage">
+${ln._items.map((it) => {
+      const cls = it.tag === 'source' ? ' src' : (it.tag === '규격화' ? ' norm' : '');
+      return `    <figure><img src="img/${it.file}" alt="${it.tag}" loading="lazy" data-title="${ln.label} · ${it.tag}" data-note="${it.note || ''}"><span class="tag${cls}">${it.tag}</span><figcaption>${it.note || ''}</figcaption></figure>`;
+    }).join('\n')}
+  </div>`).join('\n');
+
+    drafts = `
+<section id="drafts" data-gallery><div class="wrap">
+  <div class="eyebrow">과정 · Drafts</div>
+  <h2>${d.title}</h2>
+  <p>${d.intro}</p>
+${pairs ? `  <div class="pairs">${pairs}\n  </div>` : ''}
+${lineages}
+${d.extra || ''}
+</div></section>`;
+  } else if (v.slug === 'play55-pilot') {
+    drafts = `
+<section id="drafts"><div class="wrap">
+  <div class="eyebrow">과정 · Drafts</div>
+  <h2>되돌린 자리 — 점수가 오른 곳이 고친 곳이다</h2>
+${EVAL_DELTA}
+</div></section>`;
+  }
 
   fs.writeFileSync(path.join(DEST, 'v', v.slug, 'index.html'), page({
     title: `${v.title} · 계원 입시 커뮤니케이션`,
@@ -273,10 +496,14 @@ ${v._boards.map((b) => `  <figure class="board"><img src="img/${b.file}" alt="${
   </div>
   <a class="back" href="${BASE}/index.html#versions">← 전체 프로세스 기록으로</a>
 </div></header>
-<section><div class="wrap">
+<section data-gallery><div class="wrap">
   <p class="sub">${v.note}</p>
+  <p class="lb-hint">이미지를 누르면 전체 화면으로 열립니다 · 100% 버튼으로 원본 픽셀 크기 · ← → 로 이동</p>
 ${groups}
 ${boards}
+</div></section>
+${drafts}
+<section><div class="wrap">
   ${NOTICE}
 </div></section>
 <footer><div class="wrap">
@@ -304,7 +531,7 @@ function versionRow(v) {
     + `<span class="vv">${v.tag}</span><span class="vd">${v.date.slice(5).replace('-', '.')}</span>`
     + `<span class="vt">${v.title} →</span>`
     + `<span class="vn">${v.lede.split('. ')[0]}.</span>`
-    + `<span class="vm">${v._pageCount}페이지 · 보드 ${v._boards.length}장</span></a>`;
+    + `<span class="vm">${v._pageCount}페이지 · 보드 ${v._boards.length}장${v._draftBadge || ''}</span></a>`;
 }
 
 const HUB = page({
@@ -387,6 +614,7 @@ ${GATES.map(([id, t, d, p]) => `    <div class="gate"><span class="gid">${id}</s
   <div class="eyebrow">05 · Versions</div>
   <h2>캐러셀 버전 전체 — 최신순</h2>
   <p class="sub">렌더된 캐러셀 ${TOTAL_PAGES}페이지, 버전 ${VERSIONS.length}종. 위가 가장 최신이다.</p>
+  <p>각 버전 페이지 안에는 완성본만이 아니라 <strong>그 버전에서 되돌린 자리</strong>가 같이 들어 있다 — 이전·이후 나란히 보기, 키비주얼이 source에서 파생으로 갈라지는 계보, 평가 점수가 오른 지점. 이미지를 누르면 전체 화면으로 열리고 <code>100%</code>에서 원본 픽셀로 본다.</p>
   <div class="varch">
 ${VERSIONS.map(versionRow).join('\n')}
   </div>

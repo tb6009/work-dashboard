@@ -94,6 +94,83 @@ td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-45)}
 footer{padding:60px 0 90px;border-top:1px solid var(--ink);font-size:13.5px;color:var(--ink-70)}
 footer b{color:var(--ink);font-weight:700}
 footer p+p{margin-top:16px}
+
+/* 과정 · 되돌림 */
+.pairs{margin-top:30px;display:grid;gap:34px}
+.pair{border-top:1px solid var(--line);padding-top:20px}
+.pair .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.pair figure{margin:0;position:relative}
+.pair img{border:1px solid var(--line);background:var(--wash);width:100%}
+.pair .tag{position:absolute;top:8px;left:8px;font-size:10.5px;font-weight:800;letter-spacing:.06em;
+ padding:3px 8px;color:#fff;background:rgba(20,21,25,.72)}
+.pair .tag.after{background:var(--sig)}
+.pair figcaption{margin-top:7px;font-size:11.5px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.pair .why{margin-top:12px;font-size:13.5px;color:var(--ink-70);max-width:70ch}
+.pair .why:empty{display:none}
+@media(max-width:560px){.pair .shots{grid-template-columns:1fr}}
+
+.lineage{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px}
+.lineage figure{margin:0}
+.lineage img{border:1px solid var(--line);background:var(--wash);width:100%}
+.lineage .tag{display:inline-block;margin-top:7px;font-size:10px;font-weight:800;letter-spacing:.06em;
+ padding:2px 7px;color:#fff;background:var(--mid)}
+.lineage .tag.src{background:var(--deep)}
+.lineage .tag.norm{background:var(--ink-45)}
+.lineage figcaption{margin-top:5px;font-size:11.5px;color:var(--ink-45);line-height:1.5}
+
+.rej{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.rej-item figure{margin:0}
+.rej-item img{border:1px solid var(--line);width:100%;filter:grayscale(.15)}
+.rej-item .why{margin-top:9px;font-size:12.5px;color:var(--ink-70);line-height:1.55}
+.rej-item .why b{color:var(--warn)}
+
+[data-gallery] img,
+.gal img, .board img, .pair img, .rej img, .lineage img, figure img { cursor: zoom-in; }
+.lb-hint{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-45,#888);
+ margin-top:10px;letter-spacing:.02em}
+.lb-hint::before{content:"⤢";font-size:13px}
+
+.lb{position:fixed;inset:0;z-index:9999;display:none;background:rgba(12,13,16,.96);
+ -webkit-user-select:none;user-select:none}
+.lb.is-open{display:block}
+.lb-stage{position:absolute;inset:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.lb-stage.is-zoom{overflow:auto;display:block;cursor:grab}
+.lb-stage.is-zoom.is-drag{cursor:grabbing}
+.lb-img{display:block;max-width:calc(100vw - 120px);max-height:calc(100vh - 150px);
+ object-fit:contain;background:#fff;box-shadow:0 8px 60px rgba(0,0,0,.5)}
+.lb-stage.is-zoom .lb-img{max-width:none;max-height:none;margin:auto}
+
+.lb-bar{position:absolute;left:0;right:0;z-index:3;display:flex;align-items:center;gap:14px;
+ padding:14px 20px;color:#fff;font-size:12.5px;line-height:1.5}
+.lb-bar.top{top:0;background:linear-gradient(rgba(0,0,0,.55),transparent)}
+/* 상단 바는 버튼만 클릭을 받고, 나머지 영역은 아래 stage로 통과시킨다 */
+.lb-bar.top{pointer-events:none}
+.lb-bar.top .lb-btn{pointer-events:auto}
+.lb-bar.bot{bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.6));justify-content:center;
+ flex-wrap:wrap;text-align:center;pointer-events:none}
+.lb-cap{flex:1;min-width:0;font-weight:600;letter-spacing:-.01em;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-count{font-variant-numeric:tabular-nums;color:rgba(255,255,255,.62);white-space:nowrap}
+.lb-note{max-width:78ch;color:rgba(255,255,255,.78);font-size:13px;line-height:1.6}
+.lb-note b{color:#fff}
+
+.lb-btn{appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);
+ color:#fff;font:inherit;font-size:11.5px;font-weight:700;letter-spacing:.04em;
+ padding:6px 11px;cursor:pointer;border-radius:2px;white-space:nowrap}
+.lb-btn:hover{background:rgba(255,255,255,.16)}
+.lb-btn[aria-pressed="true"]{background:#fff;color:#111}
+.lb-btn.x{font-size:16px;line-height:1;padding:5px 10px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+ width:52px;height:80px;display:flex;align-items:center;justify-content:center;
+ appearance:none;border:0;background:rgba(0,0,0,.28);color:#fff;font-size:26px;cursor:pointer}
+.lb-nav:hover{background:rgba(0,0,0,.55)}
+.lb-nav.prev{left:0}.lb-nav.next{right:0}
+.lb-nav[hidden]{display:none}
+@media(max-width:640px){
+  .lb-img{max-width:100vw;max-height:calc(100vh - 170px)}
+  .lb-nav{width:40px;height:62px;font-size:20px}
+  .lb-bar{padding:10px 12px;gap:8px}
+}
 </style></head><body>
 
 <nav><div class="wrap">
@@ -182,13 +259,14 @@ footer p+p{margin-top:16px}
   <div class="eyebrow">05 · Versions</div>
   <h2>캐러셀 버전 전체 — 최신순</h2>
   <p class="sub">렌더된 캐러셀 134페이지, 버전 6종. 위가 가장 최신이다.</p>
+  <p>각 버전 페이지 안에는 완성본만이 아니라 <strong>그 버전에서 되돌린 자리</strong>가 같이 들어 있다 — 이전·이후 나란히 보기, 키비주얼이 source에서 파생으로 갈라지는 계보, 평가 점수가 오른 지점. 이미지를 누르면 전체 화면으로 열리고 <code>100%</code>에서 원본 픽셀로 본다.</p>
   <div class="varch">
-<a class="vrow is-final" href="v/sets345-v2/index.html"><span class="vv">v2</span><span class="vd">09.18</span><span class="vt">SET C·D·E 모바일 업그레이드 v2 →</span><span class="vn">기준 세트(SET A v2)의 타이포·자간 체계를 C·D·E에 옮겼다.</span><span class="vm">24페이지 · 보드 3장</span></a>
+<a class="vrow is-final" href="v/sets345-v2/index.html"><span class="vv">v2</span><span class="vd">09.18</span><span class="vt">SET C·D·E 모바일 업그레이드 v2 →</span><span class="vn">기준 세트(SET A v2)의 타이포·자간 체계를 C·D·E에 옮겼다.</span><span class="vm">24페이지 · 보드 3장 · <strong style="color:var(--mid)">과정 시안 8</strong></span></a>
 <a class="vrow" href="v/sets345-v1/index.html"><span class="vv">v1</span><span class="vd">09.16</span><span class="vt">SET C·D·E 독립 제작 1차 →</span><span class="vn">SET A에서 확정한 8단계 순서(콘셉트 규정 → 페이지별 이미지 계획 → 키/파생 이미지 → 조판 → 모바일 검수 → 보드 검수 → 국소 수정 → 최종 출력)를 세 세트에 처음 적용한 판.</span><span class="vm">24페이지 · 보드 3장</span></a>
-<a class="vrow" href="v/set1-v2/index.html"><span class="vv">v2 · 기준</span><span class="vd">09.16</span><span class="vt">SET A 모바일 재설계 — 이후 모든 세트의 기준 →</span><span class="vn">1차 40페이지를 모바일에서 다시 보고 네 가지를 되돌렸다.</span><span class="vm">8페이지 · 보드 1장</span></a>
-<a class="vrow" href="v/sets-a-e-v1/index.html"><span class="vv">v1</span><span class="vd">09.16</span><span class="vt">5개 독립 캐러셀 A~E 1차 — 40페이지 →</span><span class="vn">다섯 문안을 한 캐러셀에 섞지 않고 각각 8페이지 독립 캐러셀로 확장했다.</span><span class="vm">40페이지 · 보드 5장</span></a>
-<a class="vrow" href="v/character-major/index.html"><span class="vv">β</span><span class="vd">08.26</span><span class="vt">캐릭터 관련 전공 비교 캐러셀 →</span><span class="vn">“캐릭터를 하고 싶다”는 하나의 관심이 애니메이션·게임미디어·XR 세 전공으로 갈라지는 지점을 비교로 보여주는 판.</span><span class="vm">9페이지 · 보드 3장</span></a>
-<a class="vrow" href="v/play55-pilot/index.html"><span class="vv">pilot</span><span class="vd">08.10</span><span class="vt">PLAY 5.5 캐러셀 3종 파일럿 — 80점 게이트의 출발점 →</span><span class="vn">수시 2차 안내 · 원서접수 실수 방지 · 포트폴리오 vs 면접 세 주제를 각각 7~11페이지로 만들고, 제작 에이전트와 분리된 평가 에이전트로 이중 채점했다.</span><span class="vm">29페이지 · 보드 3장</span></a>
+<a class="vrow" href="v/set1-v2/index.html"><span class="vv">v2 · 기준</span><span class="vd">09.16</span><span class="vt">SET A 모바일 재설계 — 이후 모든 세트의 기준 →</span><span class="vn">1차 40페이지를 모바일에서 다시 보고 네 가지를 되돌렸다.</span><span class="vm">8페이지 · 보드 1장 · <strong style="color:var(--mid)">과정 시안 8</strong></span></a>
+<a class="vrow" href="v/sets-a-e-v1/index.html"><span class="vv">v1</span><span class="vd">09.16</span><span class="vt">5개 독립 캐러셀 A~E 1차 — 40페이지 →</span><span class="vn">다섯 문안을 한 캐러셀에 섞지 않고 각각 8페이지 독립 캐러셀로 확장했다.</span><span class="vm">40페이지 · 보드 5장 · <strong style="color:var(--mid)">과정 시안 30</strong></span></a>
+<a class="vrow" href="v/character-major/index.html"><span class="vv">β</span><span class="vd">08.26</span><span class="vt">캐릭터 관련 전공 비교 캐러셀 →</span><span class="vn">“캐릭터를 하고 싶다”는 하나의 관심이 애니메이션·게임미디어·XR 세 전공으로 갈라지는 지점을 비교로 보여주는 판.</span><span class="vm">9페이지 · 보드 3장 · <strong style="color:var(--mid)">과정 시안 9</strong></span></a>
+<a class="vrow" href="v/play55-pilot/index.html"><span class="vv">pilot</span><span class="vd">08.10</span><span class="vt">PLAY 5.5 캐러셀 3종 파일럿 — 80점 게이트의 출발점 →</span><span class="vn">수시 2차 안내 · 원서접수 실수 방지 · 포트폴리오 vs 면접 세 주제를 각각 7~11페이지로 만들고, 제작 에이전트와 분리된 평가 에이전트로 이중 채점했다.</span><span class="vm">29페이지 · 보드 3장 · <strong style="color:var(--mid)">평가 2회차 기록</strong></span></a>
   </div>
 </div></section>
 
@@ -231,4 +309,122 @@ footer p+p{margin-top:16px}
   박진현 · 2026.08.09 – 09.18 · 기록 2026.09.21</p>
   <p>공개본 안내 — 입시 원자료, 지원자 단위 집계와 세그먼트 표, 합성 패널 문안 투표 원문은 내부 기획 전용으로 분류되어 이 기록에 포함하지 않았다. 이미지는 웹 전송을 위해 JPEG로 재인코딩했다.</p>
 </div></footer>
+<script>
+(function(){
+  var imgs = [], idx = 0, zoom = false;
+  var lb, stage, view, cap, count, note, zbtn, raw, prev, next;
+
+  function collect(el){
+    var scope = el.closest('[data-gallery]') || el.closest('section') || document.body;
+    return Array.prototype.slice.call(scope.querySelectorAll('img')).filter(function(i){
+      return i.naturalWidth !== 0 || i.complete || true;
+    });
+  }
+
+  function build(){
+    lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.innerHTML =
+      '<div class="lb-bar top">'
+      + '<span class="lb-cap"></span>'
+      + '<span class="lb-count"></span>'
+      + '<button class="lb-btn zoom" aria-pressed="false">100%</button>'
+      + '<a class="lb-btn raw" target="_blank" rel="noopener">새 탭에서 원본</a>'
+      + '<button class="lb-btn x" aria-label="닫기">✕</button>'
+      + '</div>'
+      + '<div class="lb-stage"><img class="lb-img" alt=""></div>'
+      + '<button class="lb-nav prev" aria-label="이전">‹</button>'
+      + '<button class="lb-nav next" aria-label="다음">›</button>'
+      + '<div class="lb-bar bot"><span class="lb-note"></span></div>';
+    document.body.appendChild(lb);
+    stage = lb.querySelector('.lb-stage');
+    view  = lb.querySelector('.lb-img');
+    cap   = lb.querySelector('.lb-cap');
+    count = lb.querySelector('.lb-count');
+    note  = lb.querySelector('.lb-note');
+    zbtn  = lb.querySelector('.zoom');
+    raw   = lb.querySelector('.raw');
+    prev  = lb.querySelector('.prev');
+    next  = lb.querySelector('.next');
+
+    lb.querySelector('.x').addEventListener('click', close);
+    prev.addEventListener('click', function(e){ e.stopPropagation(); go(-1); });
+    next.addEventListener('click', function(e){ e.stopPropagation(); go(1); });
+    zbtn.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+    stage.addEventListener('click', function(e){ if (e.target === stage) close(); });
+    view.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+
+    // 100% 상태에서 드래그로 이동
+    var down = false, sx = 0, sy = 0, sl = 0, st = 0;
+    stage.addEventListener('mousedown', function(e){
+      if (!zoom) return;
+      down = true; sx = e.clientX; sy = e.clientY; sl = stage.scrollLeft; st = stage.scrollTop;
+      stage.classList.add('is-drag'); e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if (!down) return;
+      stage.scrollLeft = sl - (e.clientX - sx);
+      stage.scrollTop  = st - (e.clientY - sy);
+    });
+    window.addEventListener('mouseup', function(){ down = false; stage.classList.remove('is-drag'); });
+
+    document.addEventListener('keydown', function(e){
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') go(-1);
+      else if (e.key === 'ArrowRight') go(1);
+    });
+  }
+
+  function meta(img){
+    var fig = img.closest('figure');
+    var fc = fig && fig.querySelector('figcaption');
+    return {
+      title: img.getAttribute('data-title') || img.alt || (fc ? fc.textContent.trim() : ''),
+      note: img.getAttribute('data-note')
+        || (img.closest('.pair') ? (img.closest('.pair').querySelector('.why') || {}).textContent : '')
+        || (img.closest('.rej-item') ? (img.closest('.rej-item').querySelector('.why') || {}).textContent : '')
+        || ''
+    };
+  }
+
+  function setZoom(on){
+    zoom = on;
+    stage.classList.toggle('is-zoom', on);
+    zbtn.setAttribute('aria-pressed', String(on));
+    zbtn.textContent = on ? 'FIT' : '100%';
+    if (on) {
+      stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+      stage.scrollTop  = (stage.scrollHeight - stage.clientHeight) / 2;
+    }
+  }
+
+  function show(){
+    var img = imgs[idx];
+    var m = meta(img);
+    view.src = img.currentSrc || img.src;
+    view.alt = m.title;
+    cap.textContent = m.title;
+    note.textContent = (m.note || '').trim();
+    count.textContent = (idx + 1) + ' / ' + imgs.length;
+    raw.href = img.currentSrc || img.src;
+    prev.hidden = next.hidden = imgs.length < 2;
+    setZoom(false);
+  }
+
+  function go(d){ idx = (idx + d + imgs.length) % imgs.length; show(); }
+  function close(){ lb.classList.remove('is-open'); document.body.style.overflow = ''; view.src = ''; }
+
+  document.addEventListener('click', function(e){
+    var img = e.target.closest ? e.target.closest('img') : null;
+    if (!img || img.closest('.lb') || img.closest('a[href]')) return;
+    if (!lb) build();
+    imgs = collect(img);
+    idx = Math.max(0, imgs.indexOf(img));
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    show();
+  });
+})();
+</script>
 </body></html>

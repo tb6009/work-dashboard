@@ -130,17 +130,74 @@ footer b{color:var(--ink);font-weight:700}
 .vwrap:last-child{border-bottom:0}
 .vwrap .vrow{border-bottom:0}
 .vwrap .vsubs{padding:0 0 18px 208px}
+.vdraft{display:inline-block;margin-left:9px;font-size:11px;font-weight:800;letter-spacing:.03em;
+ color:var(--deep);background:var(--pale);padding:2px 8px;vertical-align:1px}
 @media(max-width:700px){
   .vrow{grid-template-columns:1fr;gap:2px}
   .vrow .vn,.vsubs{grid-column:1}
   .vwrap .vsubs{padding-left:0}
+}
+
+.rej{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.rej-item figure{margin:0}
+.rej-item img{width:100%;height:auto;display:block;border:1px solid var(--line);filter:grayscale(.2);cursor:zoom-in}
+.rej-item .why{margin-top:9px;font-size:12.5px;color:var(--ink-70);line-height:1.55}
+.rej-item .why b{color:var(--amber)}
+.rej-item .why strong{font-weight:700}
+
+[data-gallery] img,
+.gal img, .board img, .pair img, .rej img, .lineage img, figure img { cursor: zoom-in; }
+.lb-hint{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-45,#888);
+ margin-top:10px;letter-spacing:.02em}
+.lb-hint::before{content:"⤢";font-size:13px}
+
+.lb{position:fixed;inset:0;z-index:9999;display:none;background:rgba(12,13,16,.96);
+ -webkit-user-select:none;user-select:none}
+.lb.is-open{display:block}
+.lb-stage{position:absolute;inset:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.lb-stage.is-zoom{overflow:auto;display:block;cursor:grab}
+.lb-stage.is-zoom.is-drag{cursor:grabbing}
+.lb-img{display:block;max-width:calc(100vw - 120px);max-height:calc(100vh - 150px);
+ object-fit:contain;background:#fff;box-shadow:0 8px 60px rgba(0,0,0,.5)}
+.lb-stage.is-zoom .lb-img{max-width:none;max-height:none;margin:auto}
+
+.lb-bar{position:absolute;left:0;right:0;z-index:3;display:flex;align-items:center;gap:14px;
+ padding:14px 20px;color:#fff;font-size:12.5px;line-height:1.5}
+.lb-bar.top{top:0;background:linear-gradient(rgba(0,0,0,.55),transparent)}
+/* 상단 바는 버튼만 클릭을 받고, 나머지 영역은 아래 stage로 통과시킨다 */
+.lb-bar.top{pointer-events:none}
+.lb-bar.top .lb-btn{pointer-events:auto}
+.lb-bar.bot{bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.6));justify-content:center;
+ flex-wrap:wrap;text-align:center;pointer-events:none}
+.lb-cap{flex:1;min-width:0;font-weight:600;letter-spacing:-.01em;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-count{font-variant-numeric:tabular-nums;color:rgba(255,255,255,.62);white-space:nowrap}
+.lb-note{max-width:78ch;color:rgba(255,255,255,.78);font-size:13px;line-height:1.6}
+.lb-note b{color:#fff}
+
+.lb-btn{appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);
+ color:#fff;font:inherit;font-size:11.5px;font-weight:700;letter-spacing:.04em;
+ padding:6px 11px;cursor:pointer;border-radius:2px;white-space:nowrap}
+.lb-btn:hover{background:rgba(255,255,255,.16)}
+.lb-btn[aria-pressed="true"]{background:#fff;color:#111}
+.lb-btn.x{font-size:16px;line-height:1;padding:5px 10px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+ width:52px;height:80px;display:flex;align-items:center;justify-content:center;
+ appearance:none;border:0;background:rgba(0,0,0,.28);color:#fff;font-size:26px;cursor:pointer}
+.lb-nav:hover{background:rgba(0,0,0,.55)}
+.lb-nav.prev{left:0}.lb-nav.next{right:0}
+.lb-nav[hidden]{display:none}
+@media(max-width:640px){
+  .lb-img{max-width:100vw;max-height:calc(100vh - 170px)}
+  .lb-nav{width:40px;height:62px;font-size:20px}
+  .lb-bar{padding:10px 12px;gap:8px}
 }
 </style></head><body>
 
 <nav><div class="wrap">
 <b>임차in케어 · 브랜드 리서치</b>
 <a href="#process">프로세스</a><a href="#undo">되돌림 5유형</a><a href="#prompt">프롬프트</a>
-<a href="#target">타깃</a><a href="#gap">안 된 것</a><a href="#versions">버전 아카이브</a><a href="#index">자료 인덱스</a>
+<a href="#target">타깃</a><a href="#gap">안 된 것</a><a href="#versions">버전 아카이브</a><a href="#rejects">버린 것</a><a href="#index">자료 인덱스</a>
 </div></nav>
 
 <header><div class="wrap">
@@ -415,14 +472,15 @@ table negative space only <span class="k">20 percent</span>, context <span class
   <div class="eyebrow">06 · Versions</div>
   <h2>시안 버전 전체 — 최신순</h2>
   <p class="sub">사흘간 만든 HTML 산출물 20종. 위가 가장 최신이다. 각 항목은 새 탭에서 열린다.</p>
+  <p><strong>과정 시안</strong> 배지가 붙은 버전은 페이지 맨 아래에 <strong>그 버전에서 되돌린 자리</strong>가 이전·이후로 나란히 들어 있다. 어느 페이지에서든 이미지를 누르면 전체 화면으로 열리고, <code>100%</code>에서 원본 픽셀 크기로 본다.</p>
   <div class="varch">
 <a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_전체13P_A4가로_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.1</span><span class="vd">09-21 11:29</span><span class="vt">브랜드전략 인포그래픽 · 전체 13P (A4 가로) ↗</span><span class="vn">리서치 전 과정을 13페이지 인포그래픽으로 재구성한 전체판</span></a>
 <a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_A4가로_v0.3/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.3</span><span class="vd">09-21 09:49</span><span class="vt">인포그래픽 핵심페이지 (A4 가로) ↗</span><span class="vn">살핌·발견·준비·지원 4단계 한 장 요약 — 최종본</span></a>
 <a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_A4가로_v0.2/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.2</span><span class="vd">09-21 09:37</span><span class="vt">인포그래픽 핵심페이지 (A4 가로) ↗</span><span class="vn">가로 판형 1차. 여백·위계 조정 전</span></a>
 <a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.1</span><span class="vd">09-21 09:35</span><span class="vt">인포그래픽 핵심페이지 (A4 세로) ↗</span><span class="vn">세로 판형 최초안</span></a>
-<div class="vwrap"><a class="vrow is-final" href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/index.html" target="_blank" rel="noopener"><span class="vv">v0.8</span><span class="vd">09-21 07:18</span><span class="vt">타깃확장 컨셉 3세트 — 최종 시안 ↗</span><span class="vn">5그룹 타깃 반영 · 3컨셉 × 7페이지 · 신규 이미지 12장</span></a><div class="vsubs"><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
+<div class="vwrap"><a class="vrow is-final" href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/index.html" target="_blank" rel="noopener"><span class="vv">v0.8</span><span class="vd">09-21 07:18</span><span class="vt">타깃확장 컨셉 3세트 — 최종 시안 ↗</span><span class="vn">5그룹 타깃 반영 · 3컨셉 × 7페이지 · 신규 이미지 12장<span class="vdraft">과정 시안 컨셉별 8 + 캐스팅</span></span></a><div class="vsubs"><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
 <a class="vrow" href="04_산출물/20260921_5그룹_인물생활이미지_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">IMG v0.1</span><span class="vd">09-21 06:48</span><span class="vt">5그룹 인물·생활 이미지 ↗</span><span class="vn">첫 독립 · 혼자 사는 생활 · 둘의 새 살림 · 친구 공동거주 · 가족과 돌봄</span></a>
-<a class="vrow" href="04_산출물/20260921_일상의여백_생활연결_v0.7/index.html" target="_blank" rel="noopener"><span class="vv">v0.7</span><span class="vd">09-21 00:12</span><span class="vt">일상의 여백 — 생활 연결 재제작 ↗</span><span class="vn">연속성 앵커 도입. 같은 인물·같은 동네로 4단계를 잇는다</span></a>
+<a class="vrow" href="04_산출물/20260921_일상의여백_생활연결_v0.7/index.html" target="_blank" rel="noopener"><span class="vv">v0.7</span><span class="vd">09-21 00:12</span><span class="vt">일상의 여백 — 생활 연결 재제작 ↗</span><span class="vn">연속성 앵커 도입. 같은 인물·같은 동네로 4단계를 잇는다<span class="vdraft">과정 시안 8</span></span></a>
 <div class="vwrap"><a class="vrow" href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/index.html" target="_blank" rel="noopener"><span class="vv">v0.6</span><span class="vd">09-21 00:18</span><span class="vt">독립컨셉 3세트 — 모바일 UI + A4 ↗</span><span class="vn">모바일 화면 목업 추가 · 컨셉별 서체 차별화</span></a><div class="vsubs"><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
 <div class="vwrap"><a class="vrow" href="04_산출물/20260920_독립컨셉_3세트_v0.5/index.html" target="_blank" rel="noopener"><span class="vv">v0.5</span><span class="vd">09-20 23:47</span><span class="vt">독립컨셉 3세트 — 18페이지 ↗</span><span class="vn">컨셉을 독립 문서로 분리 · 촬영 디렉션 포함</span></a><div class="vsubs"><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
 <a class="vrow" href="04_산출물/20260920_맑은시선_코랄_4단계_v0.4/index.html" target="_blank" rel="noopener"><span class="vv">v0.4</span><span class="vd">09-20 23:39</span><span class="vt">맑은 시선 — 코랄 4단계 ↗</span><span class="vn">4단계를 장면으로 풀고 코랄을 포인트로</span></a>
@@ -434,14 +492,40 @@ table negative space only <span class="k">20 percent</span>, context <span class
 <a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/03_일상의여백.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 03 일상의 여백 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
 <a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/02_맑은시선.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 02 맑은 시선 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
 <a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/01_잔잔한온기.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 01 잔잔한 온기 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
-<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.2/index.html" target="_blank" rel="noopener"><span class="vv">v0.2</span><span class="vd">09-19</span><span class="vt">브랜드 무드보드 3안 — 세 컨셉 확정 ↗</span><span class="vn">컨택트시트를 참조로 투입. 잔잔한 온기 · 맑은 시선 · 일상의 여백</span></a>
-<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">v0.1</span><span class="vd">09-19</span><span class="vt">A3 무드보드 3안 — 전면 기각 ↗</span><span class="vn">대담한 온기 · 선명한 전문성 · 생기 있는 생활. 기준 없이 그려 전부 되돌림</span></a>
+<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.2/index.html" target="_blank" rel="noopener"><span class="vv">v0.2</span><span class="vd">09-19</span><span class="vt">브랜드 무드보드 3안 — 세 컨셉 확정 ↗</span><span class="vn">컨택트시트를 참조로 투입. 잔잔한 온기 · 맑은 시선 · 일상의 여백<span class="vdraft">과정 시안 전환 기록</span></span></a>
+<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">v0.1</span><span class="vd">09-19</span><span class="vt">A3 무드보드 3안 — 전면 기각 ↗</span><span class="vn">대담한 온기 · 선명한 전문성 · 생기 있는 생활. 기준 없이 그려 전부 되돌림<span class="vdraft">과정 시안 기각 사유</span></span></a>
   </div>
+</div></section>
+
+
+<!-- 버린 것들 -->
+<section id="rejects" data-gallery><div class="wrap">
+  <div class="eyebrow">06 · Rejected</div>
+  <h2>버린 것 · 못 본 것</h2>
+  <p>리서치에서 나온 결과를 전부 쓰지 않았다. 쓰지 않기로 한 것과 <strong>끝내 보지 못한 것</strong>을 지우지 않고 남긴다. 무엇을 못 봤는지가 결론의 신뢰 구간이다.</p>
+  <p class="sub">이미지를 누르면 전체 화면으로 열린다 · 100% 버튼에서 원본 픽셀 · ← → 로 이동</p>
+
+  <h3>무드 부적합 — 캡처는 됐지만 뺐다</h3>
+  <p>접근 실패가 아니다. 지정한 무드에 맞지 않아 후보에서 뺀 것이다. 다만 <strong>'여백이 아닌 해법'의 대조군</strong>으로는 남겨 둔다. 국내 뷰티 3곳은 브랜드가 말하는 것과 고객이 처음 보는 화면이 다른 사례다 — 월 5,900원을 팔아야 하는 임차in케어에 그대로 걸리는 질문이다.</p>
+  <div class="rej"><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B042_IMG001_web_20260920.jpg" alt="당근" loading="lazy" data-title="당근"></figure><div class="why"><strong>당근</strong> — 생활 흔적은 있으나 <b>여백이 없다.</b> 정보 나열이 지배적</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B044_IMG001_web_20260920.jpg" alt="Monocle" loading="lazy" data-title="Monocle"></figure><div class="why"><strong>Monocle</strong> — 여백이 아니라 <b>밀도</b>가 핵심이다. 무드가 반대</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B046_IMG001_web_20260920.jpg" alt="무신사 스탠다드" loading="lazy" data-title="무신사 스탠다드"></figure><div class="why"><strong>무신사 스탠다드</strong> — 할인 배너 3개 + 태그 나열. 플랫폼 종속이라 브랜드 고유 지면도 아니다</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B047_IMG001_web_20260920.jpg" alt="아로마티카" loading="lazy" data-title="아로마티카"></figure><div class="why"><strong>아로마티카</strong> — 비건·친환경 브랜드인데 <b>홈이 세일 지면</b>이다</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B049_IMG001_web_20260920.jpg" alt="어뮤즈" loading="lazy" data-title="어뮤즈"></figure><div class="why"><strong>어뮤즈</strong> — 정보 과밀. 색조 프로모션 지면</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_무드부적합/B050_IMG001_web_20260920.jpg" alt="라카" loading="lazy" data-title="라카"></figure><div class="why"><strong>라카</strong> — 프로모션 띠가 화면을 가른다. 여백 없음</div></div></div>
+
+  <h3>접근 실패 — 화면을 못 봤다</h3>
+  <p>캡처 자체가 실패한 건들이다. 오류 페이지와 봇 차단 화면까지 그대로 보관했다. 우회하지 않았다.</p>
+  <div class="rej"><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B011_IMG001_web_20260920.jpg" alt="B011" loading="lazy" data-title="B011"></figure><div class="why"><strong>B011</strong> — 캡처 실패</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B013_IMG001_web_20260920.jpg" alt="B013" loading="lazy" data-title="B013"></figure><div class="why"><strong>B013</strong> — 캡처 실패</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B017_IMG001_web_20260920.jpg" alt="B017" loading="lazy" data-title="B017"></figure><div class="why"><strong>B017</strong> — 캡처 실패</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B028_IMG001_web_20260920.jpg" alt="B028" loading="lazy" data-title="B028"></figure><div class="why"><strong>B028</strong> — 캡처 실패</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B029_IMG001_web_20260920.jpg" alt="B029" loading="lazy" data-title="B029"></figure><div class="why"><strong>B029</strong> — 캡처 실패</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B035_Cereal_errorpage.jpg" alt="B035 · Cereal errorpage" loading="lazy" data-title="B035 · Cereal errorpage"></figure><div class="why"><strong>B035 · Cereal errorpage</strong> — 오류 페이지</div></div><div class="rej-item"><figure><img src="01_리서치/실제기업_브랜드레퍼런스/_접근실패/B054_YouthToThePeople_cloudflare.jpg" alt="B054 · YouthToThePeople cloudflare" loading="lazy" data-title="B054 · YouthToThePeople cloudflare"></figure><div class="why"><strong>B054 · YouthToThePeople cloudflare</strong> — 봇 차단 화면</div></div></div>
+
+  <h3>Adobe Stock — 표본 0장</h3>
+  <p>8건 검색 전부 <code>액세스가 일시적으로 제한되었습니다</code>를 반환했다. 로그인 후 재시도도 같았다. 계획의 「우회하지 말고 한계를 기록한다」에 따라 추가 우회를 시도하지 않았다.
+  <strong>남은 구멍 —</strong> 상업 스톡의 전형성을 직접 관찰하지 못했다. Q02의 클리셰 판정은 Pinterest와 Google에만 의존한다.</p>
+  <div class="rej"><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q01_adobestock_continuous-monitoring-care_20260919_121.jpg" alt="Q01 · continuous monitoring care" loading="lazy" data-title="Q01 · continuous monitoring care"></figure><div class="why"><strong>Q01 · continuous monitoring care</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q02_adobestock_financial-security-shield_20260919_117.jpg" alt="Q02 · financial security shield" loading="lazy" data-title="Q02 · financial security shield"></figure><div class="why"><strong>Q02 · financial security shield</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q02_adobestock_happy-family-home-insurance_20260919_119.jpg" alt="Q02 · happy family home insurance" loading="lazy" data-title="Q02 · happy family home insurance"></figure><div class="why"><strong>Q02 · happy family home insurance</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q02_adobestock_insurance-family-protection_20260919_116.jpg" alt="Q02 · insurance family protection" loading="lazy" data-title="Q02 · insurance family protection"></figure><div class="why"><strong>Q02 · insurance family protection</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q02_adobestock_monitoring-dashboard-security_20260919_120.jpg" alt="Q02 · monitoring dashboard security" loading="lazy" data-title="Q02 · monitoring dashboard security"></figure><div class="why"><strong>Q02 · monitoring dashboard security</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q02_adobestock_protection-guardian-concept_20260919_118.jpg" alt="Q02 · protection guardian concept" loading="lazy" data-title="Q02 · protection guardian concept"></figure><div class="why"><strong>Q02 · protection guardian concept</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q04_adobestock_professional-consultant-meeting_20260919_122.jpg" alt="Q04 · professional consultant meeting" loading="lazy" data-title="Q04 · professional consultant meeting"></figure><div class="why"><strong>Q04 · professional consultant meeting</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_adobestock/Q05_adobestock_safety-net-support-concept_20260919_123.jpg" alt="Q05 · safety net support concept" loading="lazy" data-title="Q05 · safety net support concept"></figure><div class="why"><strong>Q05 · safety net support concept</strong> — <b>액세스가 일시적으로 제한되었습니다</b> — 표본 0장</div></div></div>
+
+  <h3>Bing Images — 69장 전량 격리</h3>
+  <p>검색어와 결과의 대응이 깨졌다. <code>hero protection rescue advertising</code>에 맨체스터 유나이티드 사진이, <code>조용한 따뜻함</code>에 미국 Veterans Day 템플릿이, <code>insurance brand advertising family</code>에 한국 트로트 가수 사진이 돌아왔다. 원인은 특정하지 못했다. 본 인벤토리에서 제거하고 별도 CSV로 분리했다.</p>
+  <div class="rej"><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q01_bing__20260919_009.jpg" alt="Q01 · (검색어 없음)" loading="lazy" data-title="Q01 · (검색어 없음)"></figure><div class="why"><strong>Q01 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q01_bing_continuous-quiet-monitoring-calm_20260919_005.jpg" alt="Q01 · continuous quiet monitoring calm" loading="lazy" data-title="Q01 · continuous quiet monitoring calm"></figure><div class="why"><strong>Q01 · continuous quiet monitoring calm</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing__20260919_009.jpg" alt="Q02 · (검색어 없음)" loading="lazy" data-title="Q02 · (검색어 없음)"></figure><div class="why"><strong>Q02 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing_financial-security-shield-icon_20260919_002.jpg" alt="Q02 · financial security shield icon" loading="lazy" data-title="Q02 · financial security shield icon"></figure><div class="why"><strong>Q02 · financial security shield icon</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing_hero-protection-rescue-advertising_20260919_003.jpg" alt="Q02 · hero protection rescue advertising" loading="lazy" data-title="Q02 · hero protection rescue advertising"></figure><div class="why"><strong>Q02 · hero protection rescue advertising</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing_insurance-brand-advertising-family_20260919_001.jpg" alt="Q02 · insurance brand advertising family" loading="lazy" data-title="Q02 · insurance brand advertising family"></figure><div class="why"><strong>Q02 · insurance brand advertising family</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing_overly-emotional-family-advertising_20260919_005.jpg" alt="Q02 · overly emotional family advertising" loading="lazy" data-title="Q02 · overly emotional family advertising"></figure><div class="why"><strong>Q02 · overly emotional family advertising</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q02_bing_surveillance-dashboard-dark-ui_20260919_007.jpg" alt="Q02 · surveillance dashboard dark ui" loading="lazy" data-title="Q02 · surveillance dashboard dark ui"></figure><div class="why"><strong>Q02 · surveillance dashboard dark ui</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q03_bing__20260919_009.jpg" alt="Q03 · (검색어 없음)" loading="lazy" data-title="Q03 · (검색어 없음)"></figure><div class="why"><strong>Q03 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q04_bing__20260919_009.jpg" alt="Q04 · (검색어 없음)" loading="lazy" data-title="Q04 · (검색어 없음)"></figure><div class="why"><strong>Q04 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q05_bing__20260919_009.jpg" alt="Q05 · (검색어 없음)" loading="lazy" data-title="Q05 · (검색어 없음)"></figure><div class="why"><strong>Q05 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q05_bing_open-boundary-architecture-not-enclosure_20260919_034.jpg" alt="Q05 · open boundary architecture not enclosure" loading="lazy" data-title="Q05 · open boundary architecture not enclosure"></figure><div class="why"><strong>Q05 · open boundary architecture not enclosure</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q05_bing_safety-net-beneath-minimal_20260919_008.jpg" alt="Q05 · safety net beneath minimal" loading="lazy" data-title="Q05 · safety net beneath minimal"></figure><div class="why"><strong>Q05 · safety net beneath minimal</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div><div class="rej-item"><figure><img src="01_리서치/이미지리서치/_INVALID_bing/grids/Q06_bing__20260919_009.jpg" alt="Q06 · (검색어 없음)" loading="lazy" data-title="Q06 · (검색어 없음)"></figure><div class="why"><strong>Q06 · (검색어 없음)</strong> — 검색어–결과 대응이 깨진 <b>무효 표본</b></div></div></div>
 </div></section>
 
 <!-- 인덱스 -->
 <section id="index"><div class="wrap">
-  <div class="eyebrow">07 · Index</div>
+  <div class="eyebrow">08 · Index</div>
   <h2>제작 자료 전체</h2>
   <div class="stats" style="margin-top:32px">
     <div class="stat"><b>2,385</b><span>전체 파일</span></div>
@@ -488,7 +572,7 @@ table negative space only <span class="k">20 percent</span>, context <span class
 
 <!-- 원칙 -->
 <section><div class="wrap">
-  <div class="eyebrow">08 · Principles</div>
+  <div class="eyebrow">09 · Principles</div>
   <h2>정리 — 열두 개</h2>
   <table>
     <tr><td class="n" style="width:40px">1</td><td><strong>순서를 뒤집는다.</strong> 시안을 그리기 전에 “무엇을 기준으로 고를지”를 먼저 정한다</td></tr>
@@ -515,4 +599,122 @@ table negative space only <span class="k">20 percent</span>, context <span class
   공개본 안내 — 클라이언트 제공 원본(<code>대표님 자료/</code>), AI 세션 전문(<code>00_GPT/</code>), 내부 메모, 클라이언트 종합 보고서는 이 공개 페이지에 포함하지 않았다. 이미지는 웹 전송을 위해 JPEG로 재인코딩했다.</p></div>
 </footer>
 
+<script>
+(function(){
+  var imgs = [], idx = 0, zoom = false;
+  var lb, stage, view, cap, count, note, zbtn, raw, prev, next;
+
+  function collect(el){
+    var scope = el.closest('[data-gallery]') || el.closest('section') || document.body;
+    return Array.prototype.slice.call(scope.querySelectorAll('img')).filter(function(i){
+      return i.naturalWidth !== 0 || i.complete || true;
+    });
+  }
+
+  function build(){
+    lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.innerHTML =
+      '<div class="lb-bar top">'
+      + '<span class="lb-cap"></span>'
+      + '<span class="lb-count"></span>'
+      + '<button class="lb-btn zoom" aria-pressed="false">100%</button>'
+      + '<a class="lb-btn raw" target="_blank" rel="noopener">새 탭에서 원본</a>'
+      + '<button class="lb-btn x" aria-label="닫기">✕</button>'
+      + '</div>'
+      + '<div class="lb-stage"><img class="lb-img" alt=""></div>'
+      + '<button class="lb-nav prev" aria-label="이전">‹</button>'
+      + '<button class="lb-nav next" aria-label="다음">›</button>'
+      + '<div class="lb-bar bot"><span class="lb-note"></span></div>';
+    document.body.appendChild(lb);
+    stage = lb.querySelector('.lb-stage');
+    view  = lb.querySelector('.lb-img');
+    cap   = lb.querySelector('.lb-cap');
+    count = lb.querySelector('.lb-count');
+    note  = lb.querySelector('.lb-note');
+    zbtn  = lb.querySelector('.zoom');
+    raw   = lb.querySelector('.raw');
+    prev  = lb.querySelector('.prev');
+    next  = lb.querySelector('.next');
+
+    lb.querySelector('.x').addEventListener('click', close);
+    prev.addEventListener('click', function(e){ e.stopPropagation(); go(-1); });
+    next.addEventListener('click', function(e){ e.stopPropagation(); go(1); });
+    zbtn.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+    stage.addEventListener('click', function(e){ if (e.target === stage) close(); });
+    view.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+
+    // 100% 상태에서 드래그로 이동
+    var down = false, sx = 0, sy = 0, sl = 0, st = 0;
+    stage.addEventListener('mousedown', function(e){
+      if (!zoom) return;
+      down = true; sx = e.clientX; sy = e.clientY; sl = stage.scrollLeft; st = stage.scrollTop;
+      stage.classList.add('is-drag'); e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if (!down) return;
+      stage.scrollLeft = sl - (e.clientX - sx);
+      stage.scrollTop  = st - (e.clientY - sy);
+    });
+    window.addEventListener('mouseup', function(){ down = false; stage.classList.remove('is-drag'); });
+
+    document.addEventListener('keydown', function(e){
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') go(-1);
+      else if (e.key === 'ArrowRight') go(1);
+    });
+  }
+
+  function meta(img){
+    var fig = img.closest('figure');
+    var fc = fig && fig.querySelector('figcaption');
+    return {
+      title: img.getAttribute('data-title') || img.alt || (fc ? fc.textContent.trim() : ''),
+      note: img.getAttribute('data-note')
+        || (img.closest('.pair') ? (img.closest('.pair').querySelector('.why') || {}).textContent : '')
+        || (img.closest('.rej-item') ? (img.closest('.rej-item').querySelector('.why') || {}).textContent : '')
+        || ''
+    };
+  }
+
+  function setZoom(on){
+    zoom = on;
+    stage.classList.toggle('is-zoom', on);
+    zbtn.setAttribute('aria-pressed', String(on));
+    zbtn.textContent = on ? 'FIT' : '100%';
+    if (on) {
+      stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+      stage.scrollTop  = (stage.scrollHeight - stage.clientHeight) / 2;
+    }
+  }
+
+  function show(){
+    var img = imgs[idx];
+    var m = meta(img);
+    view.src = img.currentSrc || img.src;
+    view.alt = m.title;
+    cap.textContent = m.title;
+    note.textContent = (m.note || '').trim();
+    count.textContent = (idx + 1) + ' / ' + imgs.length;
+    raw.href = img.currentSrc || img.src;
+    prev.hidden = next.hidden = imgs.length < 2;
+    setZoom(false);
+  }
+
+  function go(d){ idx = (idx + d + imgs.length) % imgs.length; show(); }
+  function close(){ lb.classList.remove('is-open'); document.body.style.overflow = ''; view.src = ''; }
+
+  document.addEventListener('click', function(e){
+    var img = e.target.closest ? e.target.closest('img') : null;
+    if (!img || img.closest('.lb') || img.closest('a[href]')) return;
+    if (!lb) build();
+    imgs = collect(img);
+    idx = Math.max(0, imgs.indexOf(img));
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    show();
+  });
+})();
+</script>
 </body></html>

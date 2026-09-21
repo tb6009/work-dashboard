@@ -5,18 +5,18 @@
     "to": "2026-09-27"
   },
   "status": "current",
-  "summary": "임차in케어를 타깃 5그룹까지 넓혀 최종 시안 v0.8과 브랜드전략 인포그래픽 13페이지로 마감하고, 임차in·계원 입시 두 프로젝트의 제작 과정을 각각 한 페이지 기록 + 버전 아카이브로 묶어 대시보드에 공개한 주.",
+  "summary": "임차in케어를 타깃 5그룹까지 넓혀 최종 시안 v0.8과 브랜드전략 인포그래픽 13페이지로 마감하고, 그 사흘의 전 과정을 한 페이지 기록으로 묶어 대시보드에 공개한 주.",
   "kpis": {
     "activeProjects": 3,
     "sessions": 1,
     "newProjects": 0,
-    "filesChanged": 108
+    "filesChanged": 95
   },
   "daily": [
     {
       "date": "2026-09-21",
       "weekday": "월",
-      "filesChanged": 108,
+      "filesChanged": 95,
       "topProjectIds": [
         "09",
         "063",
@@ -30,22 +30,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 216,
-                "out": 90172,
-                "cache_read": 17445351,
-                "cache_write": 234109,
-                "messages": 108,
-                "costUSD": 12.4412
+                "in": 124,
+                "out": 33361,
+                "cache_read": 7501123,
+                "cache_write": 165307,
+                "messages": 62,
+                "costUSD": 5.6184
               }
             },
             "total": {
-              "in": 216,
-              "out": 90172,
-              "cache_read": 17445351,
-              "cache_write": 234109,
-              "messages": 108
+              "in": 124,
+              "out": 33361,
+              "cache_read": 7501123,
+              "cache_write": 165307,
+              "messages": 62
             },
-            "costUSD": 12.4412
+            "costUSD": 5.6184
           }
         },
         {
@@ -98,21 +98,19 @@
   "projects": [
     {
       "id": "063",
-      "pct": 57,
-      "filesChanged": 61,
-      "imp": 5,
-      "did": "089(임차in케어)와 021(계원 입시 커뮤니케이션)을 대시보드에 편입하고, 두 프로젝트의 제작 과정을 같은 형식의 공개 기록으로 만들었다. 089는 원본 허브를 옮겨 HTML 산출물 20종을 최신순 버전 아카이브로 붙였고(458MB→70MB), 021은 흩어져 있던 프로세스 문서·평가표·감사 기록을 한 페이지로 새로 쓰고 캐러셀 6버전 134페이지를 갤러리로 묶었다(195MB→27MB). 두 빌드 모두 스크립트로 재현 가능하다. 파서에는 089·085·021 매핑과 민감 폴더 제외 규칙을 추가했다.",
+      "pct": 50,
+      "filesChanged": 48,
+      "imp": 4,
+      "did": "089(임차in케어)를 대시보드에 편입했다. 「05_리서치프로세스」 허브를 공개본으로 옮기고 그 아래에 HTML 산출물 20종을 최신순 버전 아카이브로 붙였다. 클라이언트 원본·AI 세션 전문·PDF는 공개본에서 제외하고, 이미지는 JPEG로 재인코딩해 458MB를 70MB로 줄였다. 파서에 089·085·021 매핑을 추가해 그동안 빠져 있던 02_Communication_Kaywon 활동도 집계에 들어왔다.",
       "nextAction": "9월 월간 회고 집계",
       "deliverables": [
         "06_Personal_Project/063_workDashboard/scripts/build-ien-portfolio.mjs",
-        "06_Personal_Project/063_workDashboard/scripts/build-kaywon-portfolio.mjs",
-        "06_Personal_Project/063_workDashboard/app/public/ien-process/index.html",
-        "06_Personal_Project/063_workDashboard/app/public/kaywon-process/index.html"
+        "06_Personal_Project/063_workDashboard/app/public/ien-process/index.html"
       ]
     },
     {
       "id": "089",
-      "pct": 42,
+      "pct": 47,
       "filesChanged": 45,
       "imp": 5,
       "did": "타깃을 1인 가구에서 첫 독립·혼자 사는 생활·둘의 새 살림·친구 공동거주·가족과 돌봄 5그룹으로 넓히고 인물·생활 이미지를 다시 생성했다. 일상의 여백을 연속성 앵커로 재제작(v0.7)한 뒤 세 컨셉 각 7페이지의 최종 시안 v0.8을 마감했다. 브랜드 전략 인포그래픽은 핵심페이지 v0.1→v0.3, 전체 13페이지 v0.1까지 냈고 사흘의 과정을 기록 페이지로 남겼다.",
@@ -125,7 +123,7 @@
     },
     {
       "id": "03",
-      "pct": 1,
+      "pct": 3,
       "filesChanged": 1,
       "imp": 2,
       "did": "2026 교내 정책연구 신청서를 v0.2로 정리했다.",
@@ -170,38 +168,19 @@
       "projectId": "063",
       "title": "02_Communication_Kaywon을 트래킹에 편입했다(021).",
       "description": "W38 자율전공학과 캐러셀 37건이 매핑 누락으로 빈칸이던 문제. 단 입시 원자료(01_data/01_official_original)는 파일명까지 제외한다."
-    },
-    {
-      "date": "2026-09-21",
-      "projectId": "063",
-      "title": "계원 입시 프로세스 기록은 있는 문서를 옮기지 않고 새로 썼다.",
-      "description": "089는 원본에 이미 「05_리서치프로세스」 허브가 있어 옮기기만 했다. 021은 프로세스 문서·평가표·근거 감사·질문 로그가 다섯 폴더에 흩어져 있어, 공개용 서술(G0~G9 게이트 · 근거의 세 층 · 되돌림 7건 · 80점 게이트 · 안 된 것)을 새로 조립했다."
-    },
-    {
-      "date": "2026-09-21",
-      "projectId": "063",
-      "title": "계원 공개본에서 지원자 단위 수치와 세그먼트 표를 뺐다.",
-      "description": "타게팅 분석 원문이 🔴 내부 기획 전용이고 「대외 홍보 문안에 사용하지 않는다」는 라벨을 달고 있어, 방법(교차학과 지원 행동을 탐색 수요의 대리변수로 사용)만 서술하고 인원·비중은 싣지 않았다. 입시 원자료와 합성 패널 문안 투표 원문도 제외.",
-      "isMilestone": true
-    },
-    {
-      "date": "2026-09-21",
-      "projectId": "063",
-      "title": "시안 상태 표지를 지우지 않고 그대로 공개했다.",
-      "description": "PLAY 5.5 파일럿의 INTERNAL TEST · NOT FOR PUBLISHING 워터마크와 「외부 게시 승인 0건」을 숨기지 않았다. 감수 전 시안임을 페이지마다 고지한다."
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-21T12:06:06.195293+09:00",
+  "buildAt": "2026-09-21T11:45:38.916441+09:00",
   "tokens": {
     "total": {
-      "in": 216,
-      "out": 90172,
-      "cache_read": 17445351,
-      "cache_write": 234109
+      "in": 124,
+      "out": 33361,
+      "cache_read": 7501123,
+      "cache_write": 165307
     },
-    "costUSD": 12.4412,
-    "costKRW": 17516
+    "costUSD": 5.6184,
+    "costKRW": 7910
   }
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SET A 모바일 재설계 — 이후 모든 세트의 기준 · 계원 입시 커뮤니케이션</title>
+<style>
+:root{
+  --ink:#141519; --ink-70:rgba(20,21,25,.70); --ink-45:rgba(20,21,25,.45);
+  --deep:#1B2A6B; --mid:#31459E; --sig:#0000FE; --pale:#DCE2F5; --wash:#F2F4FA;
+  --warn:#B4341F; --line:#E4E6EE; --bg:#fff;
+  --gut:clamp(18px,4vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);line-height:1.68;
+ font-family:Pretendard,'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+ -webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--gut)}
+img{max-width:100%;height:auto;display:block}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);
+ border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:24px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+nav a{font-size:13px;color:var(--ink-45);text-decoration:none}
+nav a:hover{color:var(--deep)}
+
+header{padding:clamp(76px,13vh,168px) 0 clamp(64px,10vh,128px)}
+h1{font-size:clamp(36px,6.8vw,82px);font-weight:800;letter-spacing:-.045em;line-height:1.05}
+h1 em{font-style:normal;color:var(--mid)}
+.lede{margin-top:28px;font-size:clamp(15px,1.5vw,18px);color:var(--ink-70);max-width:52ch}
+.thesis{margin-top:52px;padding:26px 30px;background:var(--wash);border-left:3px solid var(--sig);
+ font-size:clamp(17px,2vw,23px);font-weight:700;letter-spacing:-.02em;line-height:1.5}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--line);
+ border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:52px}
+.stat{background:#fff;padding:22px 18px}
+.stat b{display:block;font-size:clamp(24px,3.4vw,38px);font-weight:800;letter-spacing:-.04em;line-height:1.1;color:var(--deep)}
+.stat span{display:block;margin-top:5px;font-size:12px;color:var(--ink-45)}
+.stat.warn b{color:var(--warn)}
+
+section{padding:clamp(60px,8.5vh,110px) 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;color:var(--mid);text-transform:uppercase}
+h2{margin-top:12px;font-size:clamp(27px,4.2vw,50px);font-weight:800;letter-spacing:-.035em;line-height:1.14}
+h3{margin:52px 0 6px;font-size:clamp(19px,2.2vw,25px);font-weight:700;letter-spacing:-.025em}
+p{margin-top:14px;max-width:70ch}
+.sub{color:var(--ink-45);font-size:14px;margin-top:8px}
+strong{font-weight:700}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--wash);padding:1px 5px}
+
+table{width:100%;border-collapse:collapse;margin-top:26px;font-size:14.5px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--ink-45);text-transform:uppercase;
+ border-bottom:1px solid var(--ink)}
+tr.hi td{background:var(--wash)}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-45)}
+
+.gates{margin-top:30px;border-top:1px solid var(--line)}
+.gate{display:grid;grid-template-columns:76px 1fr;gap:0 20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.gate .gid{font-size:13px;font-weight:800;color:var(--mid);font-variant-numeric:tabular-nums}
+.gate .gt{font-size:16.5px;font-weight:700;letter-spacing:-.02em}
+.gate .gd{grid-column:2;font-size:14px;color:var(--ink-70);margin-top:4px}
+.gate .gp{grid-column:2;margin-top:8px;font-size:12.5px;color:var(--mid);font-weight:700}
+@media(max-width:640px){.gate{grid-template-columns:1fr}.gate .gd,.gate .gp{grid-column:1}}
+
+/* 버전 아카이브 */
+.varch{margin-top:34px;border-top:1px solid var(--line)}
+.vrow{display:grid;grid-template-columns:104px 96px 1fr;gap:0 20px;align-items:baseline;
+ padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.vrow:hover{background:var(--wash)}
+.vrow .vv{font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--mid);font-variant-numeric:tabular-nums}
+.vrow .vd{font-size:12px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.vrow .vt{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.vrow .vn{grid-column:3;font-size:13.5px;color:var(--ink-70);margin-top:3px}
+.vrow .vm{grid-column:3;margin-top:9px;font-size:12px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.vrow.is-final{background:var(--wash)}
+.vrow.is-final .vv{color:var(--deep)}
+@media(max-width:700px){.vrow{grid-template-columns:1fr;gap:2px}.vrow .vn,.vrow .vm{grid-column:1}}
+
+/* 갤러리 */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px;margin-top:22px}
+.gal figure{margin:0}
+.gal img{border:1px solid var(--line);background:var(--wash)}
+.gal figcaption{margin-top:7px;font-size:11.5px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.board{margin-top:26px}
+.board img{border:1px solid var(--line)}
+.board figcaption{margin-top:9px;font-size:12.5px;color:var(--ink-45)}
+
+.back{display:inline-block;margin-top:26px;font-size:13px;font-weight:700;color:var(--mid);
+ text-decoration:none;border-bottom:1px solid currentColor}
+.notice{margin-top:30px;padding:18px 22px;border:1px solid var(--pale);background:var(--wash);
+ font-size:13.5px;color:var(--ink-70)}
+.notice b{color:var(--warn)}
+
+footer{padding:60px 0 90px;border-top:1px solid var(--ink);font-size:13.5px;color:var(--ink-70)}
+footer b{color:var(--ink);font-weight:700}
+footer p+p{margin-top:16px}
+</style></head><body>
+<header><div class="wrap">
+  <div class="eyebrow">계원 입시 커뮤니케이션 · 버전 아카이브</div>
+  <h1>SET A 모바일 재설계 — 이후 모든 세트의 기준</h1>
+  <p class="lede">1차 40페이지를 모바일에서 다시 보고 네 가지를 되돌렸다. 이미지 위 각진 흰색 박스를 없애고 이미지의 네거티브 스페이스에 글을 앉혔고, 표지만 강한 키 이미지를 유지한 채 세부 페이지에는 저밀도 파생 이미지를 따로 만들었다. 경험 정보면은 단색 SVG 아이콘으로 재구성했고, 화면의 근거 표기는 지우되 evidence와 README에는 남겼다.</p>
+  <div class="stats">
+    <div class="stat"><b>v2 · 기준</b><span>버전</span></div>
+    <div class="stat"><b>09.16</b><span>제작일</span></div>
+    <div class="stat"><b>8</b><span>페이지</span></div>
+    <div class="stat"><b>1</b><span>전체 보드</span></div>
+    <div class="stat"><b>1080<span style="font-size:.5em">×1350</span></b><span>규격 · 4:5 PNG</span></div>
+  </div>
+  <a class="back" href="/kaywon-process/index.html#versions">← 전체 프로세스 기록으로</a>
+</div></header>
+<section><div class="wrap">
+  <p class="sub">이 8페이지에서 확정된 순서가 C·D·E에 그대로 적용됐다.</p>
+
+  <h3>SET A · 좋아하는 게 하나가 아니라면? (레드)</h3>
+  <div class="gal">
+    <figure><img src="img/p_set1_v2_01.jpg" alt="set1_v2_01" loading="lazy"><figcaption>set1_v2_01</figcaption></figure>
+    <figure><img src="img/p_set1_v2_02.jpg" alt="set1_v2_02" loading="lazy"><figcaption>set1_v2_02</figcaption></figure>
+    <figure><img src="img/p_set1_v2_03.jpg" alt="set1_v2_03" loading="lazy"><figcaption>set1_v2_03</figcaption></figure>
+    <figure><img src="img/p_set1_v2_04.jpg" alt="set1_v2_04" loading="lazy"><figcaption>set1_v2_04</figcaption></figure>
+    <figure><img src="img/p_set1_v2_05.jpg" alt="set1_v2_05" loading="lazy"><figcaption>set1_v2_05</figcaption></figure>
+    <figure><img src="img/p_set1_v2_06.jpg" alt="set1_v2_06" loading="lazy"><figcaption>set1_v2_06</figcaption></figure>
+    <figure><img src="img/p_set1_v2_07.jpg" alt="set1_v2_07" loading="lazy"><figcaption>set1_v2_07</figcaption></figure>
+    <figure><img src="img/p_set1_v2_08.jpg" alt="set1_v2_08" loading="lazy"><figcaption>set1_v2_08</figcaption></figure>
+  </div>
+
+  <h3>전체 보드</h3>
+  <figure class="board"><img src="img/board_set1_v2.jpg" alt="set1_v2" loading="lazy"><figcaption>set1_v2</figcaption></figure>
+  <div class="notice"><b>내부 제작 시안 · 외부 게시 승인 전</b> — 이 페이지의 캐러셀은 학과·입학지원팀 감수를 받지 않은 제작 시안이다. 등장하는 인물·수업·작품 장면은 생성형 콘셉트 이미지이며 실제 계원예술대학교 학생·수업·작품이 아니다. 사실 문장은 2027학년도 공식 모집요강에서 직접 확인한 범위(5·18·42·57·80쪽)를 넘지 않는다.</div>
+</div></section>
+<footer><div class="wrap">
+  <p><b>계원 입시 커뮤니케이션 통합 시스템</b> — SET A 모바일 재설계 — 이후 모든 세트의 기준<br>박진현 · 02_Communication_Kaywon</p>
+</div></footer>
+</body></html>

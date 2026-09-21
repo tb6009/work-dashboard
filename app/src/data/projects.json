@@ -6,7 +6,7 @@
 
   { "id": "02",  "categoryId": "02",        "name": "Data_Kaywon",       "type": "data",       "define": "계원예대 신입생 중도탈락 분석 (ML 예측 + 군집분석) — 02_Data_Kaywon/", "status": "active", "aliases": ["22"] },
 
-  { "id": "021", "categoryId": "02",        "name": "계원 입시 커뮤니케이션", "type": "design",     "define": "2027 입시 커뮤니케이션 통합 시스템 — 공식 모집요강 근거화 · 학과별 캐러셀 제작 — 02_Communication_Kaywon/", "status": "new", "createdAt": "2026-09-16" },
+  { "id": "021", "categoryId": "02",        "name": "계원 입시 커뮤니케이션", "type": "design",     "define": "2027 입시 커뮤니케이션 통합 시스템 — 공식 모집요강 근거화 · 학과별 캐러셀 제작 — 02_Communication_Kaywon/", "status": "new", "createdAt": "2026-09-16", "researchProcessUrl": "/kaywon-process/index.html", "portfolioUrl": "/kaywon-process/v/sets345-v2/index.html" },
 
   { "id": "03",  "categoryId": "03",        "name": "디자인실무프로젝트(umbrella)", "type": "design", "define": "학교 프로젝트 묶음 — Data_Jstrata · Data_Once · Data_Study · MNServe · 관리비책 · 새론솔루션 · 기초디자인 · 코첼라", "status": "active", "designHistoryUrl": "/portfolio/kochstar-image-history/" },
   { "id": "031", "categoryId": "03",        "name": "Data_Jstrata",      "type": "design",     "define": "J스트라타 레스베라트롤 브랜드 디자인 — 03_school_project/01_수업/Data_Jstrata/", "status": "active", "createdAt": "2026-05-17" },

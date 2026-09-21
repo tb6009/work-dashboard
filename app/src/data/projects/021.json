@@ -1,0 +1,103 @@
+{
+  "id": "021",
+  "currentSituation": {
+    "summary": "계원예술대학교 입시홍보 SNS 캐러셀의 기획·제작·평가 시스템. 8월 PLAY 5.5 파일럿 3종에서 G0~G9 게이트와 80점 이중 평가를 세우고, 9월 자율전공학과에서 5개 독립 캐러셀 A~E(40p)를 만든 뒤 SET A를 모바일 기준으로 재설계해 C·D·E까지 v2로 올렸다. 렌더 총 134페이지. 외부 게시 승인은 아직 0건이다.",
+    "phase": "자율전공학과 C·D·E v2 완료 · 학과·입학지원팀 감수 대기",
+    "recentLogs": [
+      {
+        "date": "2026-09-18",
+        "title": "SET C·D·E 모바일 업그레이드 v2 + 제작 스킬 고정",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260918_log.md",
+        "excerpt": "새 이미지를 생성하지 않고 기존 맥락 이미지를 다시 드러내 기준 세트와 시각적 일관성을 유지했다."
+      },
+      {
+        "date": "2026-09-17",
+        "title": "데이터 근거·이미지 생성량 이중 감사",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260917_log.md",
+        "excerpt": "실제 관찰값과 합성 패널을 분리 표시하고, 복합점수·평가요소는 응답 수가 아닌 계산량으로 명시했다. 전용 학습 0회."
+      },
+      {
+        "date": "2026-09-16",
+        "title": "공식 모집요강 근거화 + 5개 독립 캐러셀 제작",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260916_log.md",
+        "excerpt": "비공식 내부 문서·커뮤니티 자료를 배제하고 공식 모집요강만 사용해 자율전공학과 근거를 독립 파일로 분리했다."
+      }
+    ],
+    "blockers": [
+      "학생 작품 이미지의 SNS 재사용 권리, 얼굴·작업 장면의 게시 동의 범위가 미확인(Q04·Q05)이라 외부 게시본을 만들 수 없다.",
+      "공식 벡터 로고와 대학 BI 원본 미확보 — 현재 PLAY 로고는 PDF 추출 테스트 자산이다.",
+      "게시용 페이지별 최종 한글 조판 미확정."
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "전체 프로세스 기록 + 캐러셀 버전 아카이브 (공개본)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/kaywon-process/index.html",
+      "fileKind": "html",
+      "summary": "G0~G9 게이트 · 근거의 세 층 · 되돌림 7건 · 80점 게이트 · 버전 6종 134페이지.",
+      "modifiedAt": "2026-09-21"
+    },
+    {
+      "title": "자율전공학과 SET C·D·E v2 (최신)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon/05_outputs/03_new_renders/autonomous_major_sets345_v2",
+      "fileKind": "image",
+      "summary": "기준 세트의 타이포 체계를 옮기고 배경·설명을 보정한 24페이지.",
+      "modifiedAt": "2026-09-18"
+    },
+    {
+      "title": "자율전공학과 5개 독립 캐러셀 콘텐츠 시안 v0.1",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon/03_planning/04_content_specs/20260916_자율전공학과_5개독립캐러셀_콘텐츠시안_v0.1.md",
+      "fileKind": "md",
+      "summary": "A~E 5세트 × 8페이지 페이지별 문안·이미지·레이아웃 명세.",
+      "modifiedAt": "2026-09-16"
+    },
+    {
+      "title": "자율전공학과 캐러셀 확정 제작 프로세스 v1.0",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon/03_planning/04_content_specs/20260916_자율전공학과_캐러셀_확정프로세스_v1.0.md",
+      "fileKind": "md",
+      "summary": "SET A에서 확정한 10단계와 후속 세트 적용 순서.",
+      "modifiedAt": "2026-09-16"
+    },
+    {
+      "title": "PLAY 5.5 캐러셀 전체 제작 프로세스 v1.0",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon/07_records/process/20260810_PLAY55_캐러셀_전체제작프로세스_v1.0.md",
+      "fileKind": "md",
+      "summary": "G0~G9 게이트와 통과 조건, 이중 평가 배점 정의.",
+      "modifiedAt": "2026-08-10"
+    },
+    {
+      "title": "2027 공식 모집요강 자율전공학과 근거",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/02_Communication_Kaywon/01_data/02_evidence/06_자율전공학과_근거/61_2027_공식모집요강_자율전공학과.md",
+      "fileKind": "md",
+      "summary": "모집인원·선발방식·학과 운영·교육내용·학생 지원을 독립 근거 파일로 분리.",
+      "modifiedAt": "2026-09-16"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "학과·입학지원팀 감수 요청",
+      "description": "핵심 메시지가 모집요강 직접 인용이 아닌 기획 문안이므로 외부 게시 전 감수를 받는다. Q04·Q05 권리·동의 확인을 함께 요청한다.",
+      "priority": "high",
+      "estimate": "대기"
+    },
+    {
+      "title": "공개등급 자동 검사 스크립트",
+      "description": "🟢/🔴 등급이 붙은 근거만 화면 문안으로 나가도록 렌더 전 자동 검사를 건다.",
+      "priority": "high",
+      "estimate": "반나절"
+    },
+    {
+      "title": "근거 manifest에 해시·갱신일 추가",
+      "description": "데이터·근거 파일별 해시와 갱신일을 manifest에 기록해 모집요강 개정 시 영향 범위를 추적한다.",
+      "priority": "mid",
+      "estimate": "2시간"
+    },
+    {
+      "title": "캐릭터 전공 캐러셀 게시용 조판 확정",
+      "description": "페이지별 4:5 게시본 한글 조판을 확정한다.",
+      "priority": "mid",
+      "estimate": "미정"
+    }
+  ],
+  "buildAt": "2026-09-21T14:00:00+09:00"
+}

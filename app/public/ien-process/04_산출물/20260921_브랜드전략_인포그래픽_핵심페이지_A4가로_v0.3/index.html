@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>임차in케어 4단계 인포그래픽 — A4 가로</title>
+<style>
+@font-face{font-family:Pretendard;src:url('/ien-process/_fonts/PretendardVariable.ttf') format('truetype');font-weight:100 900;font-display:swap}
+:root{--paper:#fbfaf6;--white:#fff;--ink:#303b43;--muted:#65737b;--line:#d4e0e6;--air:#e5f1f7;--mist:#bdd9e9;--sky:#80b2cf;--deep:#3d7293;--coral:#f3a185;--coral-soft:#fff0ea}
+*{box-sizing:border-box}
+html,body{margin:0;background:#dfe4e6;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;color:var(--ink)}
+body{display:flex;justify-content:center;padding:28px}
+.page{position:relative;width:1123px;height:794px;overflow:hidden;background:var(--paper);padding:38px 50px 30px;box-shadow:0 18px 54px rgba(35,49,56,.16)}
+.page:before{content:"";position:absolute;inset:0 0 auto;height:7px;background:linear-gradient(90deg,var(--deep) 0 48%,var(--sky) 48% 84%,var(--coral) 84%)}
+.mast{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.eyebrow{display:flex;align-items:center;gap:9px;color:var(--deep);font-size:10px;font-weight:760;letter-spacing:.16em}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+.brand{font-size:13px;font-weight:760;letter-spacing:-.035em}
+.claim{display:grid;grid-template-columns:520px 1fr;align-items:end;gap:36px}
+.title-block h1{margin:0;font-size:48px;line-height:1;letter-spacing:-.058em;font-weight:780}
+.question{margin-top:8px;color:var(--deep);font-size:19px;font-weight:720;letter-spacing:-.025em}
+.answer p{margin:0 0 3px;color:var(--muted);font-size:16px;line-height:1.62;letter-spacing:-.018em;word-break:keep-all}
+.infographic{position:relative;margin-top:14px;height:395px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0 52px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;height:305px;position:relative}
+.flow-arrow{position:absolute;top:128px;width:38px;height:2px;background:var(--sky);z-index:3}
+.flow-arrow:after{content:"";position:absolute;right:-1px;top:-5px;border-left:9px solid var(--sky);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.a1{left:236px}.a2{left:501px}.a3{left:766px}
+.stage{position:relative;background:#fff;border:1px solid var(--line);padding:15px 17px 14px;min-width:0}
+.stage.prepare{border-color:rgba(243,161,133,.75)}
+.stage-head{display:flex;align-items:center;justify-content:space-between}
+.stage-no{font-size:11px;font-weight:780;color:var(--deep);letter-spacing:.12em}
+.stage-state{font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+.illus{height:96px;margin:3px 0 1px;display:grid;place-items:center}
+.illus svg{width:100%;height:100%}
+.illus .base{fill:var(--air)}.illus .soft{fill:var(--mist)}.illus .accent{fill:var(--coral)}.illus .dark{fill:var(--deep)}
+.illus .line{fill:none;stroke:var(--deep);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.illus .thin{fill:none;stroke:var(--sky);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.stage h2{margin:0;font-size:28px;line-height:1;letter-spacing:-.045em}
+.stage strong{display:block;margin:7px 0 6px;font-size:16px;line-height:1.25;color:var(--deep);letter-spacing:-.03em}
+.stage p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.48;letter-spacing:-.02em;word-break:keep-all}
+.repeat{position:absolute;left:0;right:0;bottom:14px;height:26px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}
+.repeat .line{height:1px;background:var(--mist);position:relative}
+.repeat .line.left:before{content:"";position:absolute;left:0;top:-4px;border-right:7px solid var(--mist);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.repeat .line.right:after{content:"";position:absolute;right:0;top:-4px;border-left:7px solid var(--mist);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.repeat .outcome{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:7px 17px;border-radius:20px;font-size:11px}
+.repeat .outcome b{font-size:13px}.repeat .outcome em{font-style:normal;color:var(--mist)}
+.evidence{display:grid;grid-template-columns:1.45fr .78fr;gap:34px;padding-top:16px}
+.evidence h3{margin:0 0 6px;font-size:15.5px;color:var(--deep);letter-spacing:.025em}
+.evidence p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;letter-spacing:-.018em;word-break:keep-all}
+.standards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:9px}
+.standard{border-top:3px solid var(--mist);padding-top:7px}
+.standard b{display:block;font-size:13.5px;margin-bottom:2px}.standard span{font-size:12px;color:var(--muted)}
+.status{background:var(--air);padding:13px 15px;border-left:4px solid var(--deep)}
+.status b{display:block;color:var(--deep);font-size:13.5px;margin-bottom:5px}
+.status p{font-size:12px;line-height:1.5}
+.folio{position:absolute;left:50px;right:50px;bottom:15px;display:flex;justify-content:space-between;color:#8b989f;font-size:8px;letter-spacing:.06em}
+@page{size:A4 landscape;margin:0}
+@media print{html,body{background:#fff}body{padding:0}.page{box-shadow:none;width:297mm;height:210mm}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="mast"><div class="eyebrow"><i></i>CARE BEHAVIOR · 04 STEPS</div><div class="brand">임차in케어</div></div>
+
+  <header class="claim">
+    <div class="title-block"><h1>살핌에서 지원까지</h1><div class="question">케어는 어떻게 작동하는가?</div></div>
+    <div class="answer"><p>문제가 생긴 뒤 한 번 개입하는 것이 아니라, 계약부터 거주와 만기까지 변화의 의미와 다음 행동을 연결합니다.</p></div>
+  </header>
+
+  <section class="infographic" aria-label="살핌 발견 준비 지원 4단계 흐름">
+    <div class="flow-arrow a1"></div><div class="flow-arrow a2"></div><div class="flow-arrow a3"></div>
+    <div class="flow">
+      <article class="stage">
+        <div class="stage-head"><span class="stage-no">01 · OBSERVE</span><span class="stage-state">지속 확인</span></div>
+        <div class="illus">
+          <svg viewBox="0 0 190 105" role="img" aria-label="집과 살핌을 나타내는 선형 일러스트">
+            <circle class="base" cx="95" cy="53" r="43"/><path class="line" d="M65 51 95 27l30 24v29H65Z"/><path class="line" d="M85 80V61h20v19"/>
+            <path class="dark" d="M117 42c13 0 22 10 22 10s-9 10-22 10-22-10-22-10 9-10 22-10Z"/><circle fill="#fff" cx="117" cy="52" r="4"/>
+            <path class="thin" d="M49 32c7-9 16-15 27-19M141 69c-4 9-11 16-21 22"/>
+          </svg>
+        </div>
+        <h2>살핌</h2><strong>계속 확인합니다</strong><p>계약·등기·기한·거주 상황의 변화를 지속적으로 확인합니다.</p>
+      </article>
+
+      <article class="stage">
+        <div class="stage-head"><span class="stage-no">02 · DETECT</span><span class="stage-state">조기 포착</span></div>
+        <div class="illus">
+          <svg viewBox="0 0 190 105" role="img" aria-label="문서의 변화를 발견하는 선형 일러스트">
+            <rect class="base" x="47" y="17" width="71" height="75" rx="3"/><path class="line" d="M59 27h45v55H59zM69 41h25M69 51h25M69 61h17"/>
+            <circle class="accent" cx="121" cy="38" r="9"/><path class="line" d="m112 76 15-15 9 9 18-23M144 47h10v10"/>
+            <path class="thin" d="M39 30h11M39 40h11M39 50h11"/>
+          </svg>
+        </div>
+        <h2>발견</h2><strong>먼저 알아챕니다</strong><p>문제로 이어질 가능성이 있는 변동을 조기에 포착합니다.</p>
+      </article>
+
+      <article class="stage prepare">
+        <div class="stage-head"><span class="stage-no">03 · PREPARE</span><span class="stage-state">다음 행동</span></div>
+        <div class="illus">
+          <svg viewBox="0 0 190 105" role="img" aria-label="체크리스트로 준비하는 선형 일러스트">
+            <circle fill="#fff0ea" cx="95" cy="53" r="43"/><rect class="line" x="67" y="20" width="56" height="70" rx="3"/>
+            <path class="line" d="m76 39 5 5 8-10M76 58l5 5 8-10M76 77l5 5 8-10M96 39h17M96 58h17M96 77h17"/>
+            <circle class="accent" cx="124" cy="21" r="7"/><path class="thin" d="M50 72c8 10 17 16 29 20M140 36c-3-10-10-18-19-23"/>
+          </svg>
+        </div>
+        <h2>준비</h2><strong>다음 행동을 분명히 합니다</strong><p>변화의 의미와 지금 해야 할 일을 이해하기 쉽게 안내합니다.</p>
+      </article>
+
+      <article class="stage">
+        <div class="stage-head"><span class="stage-no">04 · SUPPORT</span><span class="stage-state">지원 작동</span></div>
+        <div class="illus">
+          <svg viewBox="0 0 190 105" role="img" aria-label="사람을 받치는 지원 구조의 선형 일러스트">
+            <circle class="base" cx="95" cy="52" r="43"/><circle class="dark" cx="95" cy="36" r="10"/><path class="line" d="M77 67c3-13 10-20 18-20s15 7 18 20"/>
+            <path class="line" d="M47 67c11 1 17 7 22 15M143 67c-11 1-17 7-22 15M69 82c8-5 17-7 26-7s18 2 26 7"/>
+            <path class="thin" d="M53 31c7-10 16-17 27-20M137 31c-7-10-16-17-27-20"/>
+          </svg>
+        </div>
+        <h2>지원</h2><strong>혼자 처리하지 않게 합니다</strong><p>어려운 시점에 절차·비용·전문가 지원 구조를 작동합니다.</p>
+      </article>
+    </div>
+    <div class="repeat"><span class="line left"></span><div class="outcome"><b>안심한 일상</b><em>계약 → 거주 → 변동 → 만기 동안 반복</em></div><span class="line right"></span></div>
+  </section>
+
+  <section class="evidence">
+    <div>
+      <h3>정본의 3문장을 고객 경험의 4단계로 확장했습니다</h3>
+      <p>네 단계는 기능 목록이 아니라 고객이 경험하는 흐름입니다. 발견에서 끝나지 않고 준비와 지원까지 이어져야 고객이 상황을 이해하고 실제로 행동할 수 있습니다.</p>
+      <div class="standards">
+        <div class="standard"><b>계속 확인합니다</b><span>등기와 위험 변동</span></div>
+        <div class="standard"><b>무엇을 해야 할지 알려드립니다</b><span>상황에 맞는 대응 순서</span></div>
+        <div class="standard"><b>혼자 처리하지 않게 합니다</b><span>비용·서류·현장 대응</span></div>
+      </div>
+    </div>
+    <aside class="status"><b>표현 상태 · 사용자 채택 구조</b><p>‘살핌–발견–준비–지원’은 대표 자료의 케어 정의와 표준 3문장을 바탕으로 구조화한 모델입니다. 대표 문서의 원문 명칭은 아니므로 최종 브랜드 시스템 반영 전 실제 운영 프로세스와 대조가 필요합니다.</p></aside>
+  </section>
+
+  <footer class="folio"><span>BRAND STRATEGY INFOGRAPHIC · LANDSCAPE PROTOTYPE 03</span><span>01 / CARE BEHAVIOR</span></footer>
+</main>
+</body>
+</html>

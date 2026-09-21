@@ -1,0 +1,285 @@
+{
+  "week": "2026-W38",
+  "range": {
+    "from": "2026-09-14",
+    "to": "2026-09-20"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 5,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 193
+  },
+  "daily": [
+    {
+      "date": "2026-09-14",
+      "weekday": "월",
+      "filesChanged": 77,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "03",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_INDEX.md · 01_JournalOfVisualizedExperience_존재확인_v0.1.md · 02_김청(Cheong_Kim)_프로필·연구계보_v0.1.md · 03_인용_명세서_v0.1.md · 04_투고_기여방향_조건부_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 01_글로벌_브랜딩_전략_계획_v0.1.md · 02_주장검증_명세서_v0.1.md · 00_GPT대화_KPS_추출_v0.1.md · 01_기존자산_인벤토리_v0.1.md 외 2건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 122,
+                "out": 90803,
+                "cache_read": 9237948,
+                "cache_write": 344491,
+                "messages": 61,
+                "costUSD": 9.0427
+              }
+            },
+            "total": {
+              "in": 122,
+              "out": 90803,
+              "cache_read": 9237948,
+              "cache_write": 344491,
+              "messages": 61
+            },
+            "costUSD": 9.0427
+          }
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] PROJECT.md · ECS김현정_맞춤특강_bg_v0.5.html · ECS김현정_맞춤특강_plain_v0.5.html · ECS김현정_호스트강조_bg_v0.6.html · ECS김현정_호스트강조_plain_v0.6.html 외 15건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "weekday": "화",
+      "filesChanged": 68,
+      "topProjectIds": [
+        "03",
+        "081",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_작업상태.md · 08_03_전문브랜드_비교범위와_초기후보_v0.1.md · 09_03_전문브랜드_VRIO와_제품기술디자인커뮤니케이션_보고서_v0.1.md · 10_03_전문브랜드_VRIO_인용_명세서_v0.1.md · 11_04_가치사슬_사업모델_수익성_공개단서_보고서_v0.1.md 외 4건"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · SKILL.md · AGENTS.md · PROJECT.md · AI_INSTRUCTION_MIGRATION.md 외 48건"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] ECS김현정_통합상단_bg_v0.7.html · ECS김현정_통합상단_plain_v0.7.html · ECS김현정_하단확장_bg_v0.8.html · ECS김현정_하단확장_plain_v0.8.html · build_ecs_kim_v07.mjs 외 1건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "weekday": "수",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 36,
+                "out": 49017,
+                "cache_read": 1745747,
+                "cache_write": 132250,
+                "messages": 18,
+                "costUSD": 2.925
+              }
+            },
+            "total": {
+              "in": 36,
+              "out": 49017,
+              "cache_read": 1745747,
+              "cache_write": 132250,
+              "messages": 18
+            },
+            "costUSD": 2.925
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "weekday": "목",
+      "filesChanged": 6,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 02_4주차_리서치_자료_해제_v0.1.md · 01_REMST_브랜드_선행리서치_v0.1.md · 02_REMST_소비자반응_SNS_마켓_v0.1.md · 00_인용_명세서_v0.1.md 외 1건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 158,
+                "out": 79013,
+                "cache_read": 12825689,
+                "cache_write": 288311,
+                "messages": 79,
+                "costUSD": 10.1909
+              }
+            },
+            "total": {
+              "in": 158,
+              "out": 79013,
+              "cache_read": 12825689,
+              "cache_write": 288311,
+              "messages": 79
+            },
+            "costUSD": 10.1909
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "weekday": "금",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 43_AI불안·테크노스트레스·AI_FoMO_개념계보·연구질문_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-5": {
+                "in": 2,
+                "out": 247,
+                "cache_read": 92864,
+                "cache_write": 886,
+                "messages": 1,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 2,
+              "out": 247,
+              "cache_read": 92864,
+              "cache_write": 886,
+              "messages": 1
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_패키지_안내.md · 01_설치가이드.md · 02_사용가이드.md · 03_작성_작업프로세스.md · 04_자료_활용가능성.md 외 13건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "weekday": "토",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "063",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 44,
+                "out": 22847,
+                "cache_read": 4929907,
+                "cache_write": 179590,
+                "messages": 22,
+                "costUSD": 4.1588
+              }
+            },
+            "total": {
+              "in": 44,
+              "out": 22847,
+              "cache_read": 4929907,
+              "cache_write": 179590,
+              "messages": 22
+            },
+            "costUSD": 4.1588
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "일",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] AI크래프팅_경로모형.html · AI크래프팅_경로모형.md · 00_전체틀_구간도.svg · 01_1편_갈림.svg · 02_2편_대가.svg 외 1건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        }
+      ]
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-09-20T14:01:19.406Z",
+  "tokens": {
+    "total": {
+      "in": 362,
+      "out": 241927,
+      "cache_read": 28832155,
+      "cache_write": 945528
+    },
+    "costUSD": 26.3175,
+    "costKRW": 37052
+  }
+}

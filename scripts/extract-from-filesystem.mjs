@@ -127,6 +127,9 @@ const EXPLICIT = {
   '08_project/082_ICCS': '082',
   '08_project/083_촬영용스크립트': '083',
   '08_project/084_강연시리즈': '084',
+  '02_Communication_Kaywon': '021',
+  '08_project/085_에듀피스': '085',
+  '08_project/089_임차in': '089',
   '09_몸과마음의과학/091_출판기획': '091',
   '09_몸과마음의과학/092_영상과제': '092',
   '10_보고살피다/101_일상다반사': '101',
@@ -148,7 +151,8 @@ function findProjectId(absPath) {
   // fallback: 카테고리 root 매칭
   const cat = rel.split('/')[0];
   const catMap = {
-    '01_admin': '01', '02_Data_Kaywon': '02', '03_school_project': '03',
+    '01_admin': '01', '02_Data_Kaywon': '02', '02_Communication_Kaywon': '021',
+    '03_school_project': '03',
     '05_phD_Research': '05', '06_Personal_Project': '06',
     '08_project': '08', '09_몸과마음의과학': '09', '10_보고살피다': '10',
   };
@@ -174,6 +178,11 @@ const EXCLUDE_REL = [
   '10_보고살피다/104_맨프레드교수님',
   '13_Image/2026_가을_스토리텔링/레퍼런스',
   '13_Image/2026_가을_스토리텔링/인진하네스',
+  // 089: 클라이언트 제공 원본과 AI 세션 전문은 파일명까지 비공개
+  '08_project/089_임차in/대표님 자료',
+  '08_project/089_임차in/00_GPT',
+  // 계원 입시 원자료(지원자 단위)는 파일명까지 비공개
+  '02_Communication_Kaywon/01_data/01_official_original',
 ];
 // 개인 얼굴 정체성 참조는 파일명까지 비공개
 const EXCLUDE_NAME = /identity[_-]?index/i;
@@ -210,7 +219,7 @@ function walk(dir) {
 
 // 카테고리 루트만 walk
 for (const cat of Object.keys({
-  '01_admin': 1, '02_Data_Kaywon': 1, '03_school_project': 1, '04_aSSIST': 1,
+  '01_admin': 1, '02_Data_Kaywon': 1, '02_Communication_Kaywon': 1, '03_school_project': 1, '04_aSSIST': 1,
   '05_phD_Research': 1, '06_Personal_Project': 1, '08_project': 1,
   '09_몸과마음의과학': 1, '10_보고살피다': 1, '13_Image': 1,
 })) {

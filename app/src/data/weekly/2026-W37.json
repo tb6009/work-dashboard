@@ -4,19 +4,19 @@
     "from": "2026-09-07",
     "to": "2026-09-13"
   },
-  "status": "current",
+  "status": "past",
   "summary": "박사연구를 도입·성과·보상 3개 모형으로 확정하고 한·영 통합 설문지와 설문실시·코딩·척도검증 명세까지 세운 주. RISE 내부진단보고서를 이중 트랙 기업지원 모델로 v0.2 개정하고, 주문식 교육과정 운영계획서 v0.2를 작성했다.",
   "kpis": {
-    "activeProjects": 4,
+    "activeProjects": 5,
     "sessions": 3,
     "newProjects": 0,
-    "filesChanged": 64
+    "filesChanged": 108
   },
   "daily": [
     {
       "date": "2026-09-07",
       "weekday": "월",
-      "filesChanged": 40,
+      "filesChanged": 33,
       "topProjectIds": [
         "039",
         "03",
@@ -74,10 +74,11 @@
     {
       "date": "2026-09-09",
       "weekday": "수",
-      "filesChanged": 20,
+      "filesChanged": 33,
       "topProjectIds": [
         "0500",
-        "063"
+        "063",
+        "03"
       ],
       "entries": [
         {
@@ -90,22 +91,46 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 70,
-                "out": 13505,
-                "cache_read": 2375924,
-                "cache_write": 106486,
-                "messages": 35,
-                "costUSD": 2.1915
+                "in": 132,
+                "out": 29610,
+                "cache_read": 6120246,
+                "cache_write": 171629,
+                "messages": 66,
+                "costUSD": 4.8737
               }
             },
             "total": {
-              "in": 70,
-              "out": 13505,
-              "cache_read": 2375924,
-              "cache_write": 106486,
-              "messages": 35
+              "in": 132,
+              "out": 29610,
+              "cache_read": 6120246,
+              "cache_write": 171629,
+              "messages": 66
             },
-            "costUSD": 2.1915
+            "costUSD": 4.8737
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 03_경영전략_모듈_아이데이션_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 42,
+                "out": 33766,
+                "cache_read": 2306266,
+                "cache_write": 114384,
+                "messages": 21,
+                "costUSD": 2.7124
+              }
+            },
+            "total": {
+              "in": 42,
+              "out": 33766,
+              "cache_read": 2306266,
+              "cache_write": 114384,
+              "messages": 21
+            },
+            "costUSD": 2.7124
           }
         }
       ]
@@ -113,26 +138,113 @@
     {
       "date": "2026-09-10",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 6,
+      "topProjectIds": [
+        "01",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "01",
+          "did": "[fs scan] 10_질문·사용패턴_실측분석_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 05_글로벌_브랜드에이전시_전략-시각화_레퍼런스_v0.1.md · 04_이미지_읽는_기본방법_v0.1.md · 04_이미지_읽는_기본방법_초간단_v0.1.md · 04_이미지_읽는_기본방법_학생용_v0.1.md · PROJECT.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        }
+      ]
     },
     {
       "date": "2026-09-11",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 6,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "039",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 90_연구모델_형성과정_로그.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 06_기업강사_니즈분석과_제공가치_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 22,
+                "out": 25143,
+                "cache_read": 4358367,
+                "cache_write": 41250,
+                "messages": 11,
+                "costUSD": 3.0657
+              }
+            },
+            "total": {
+              "in": 22,
+              "out": 25143,
+              "cache_read": 4358367,
+              "cache_write": 41250,
+              "messages": 11
+            },
+            "costUSD": 3.0657
+          }
+        }
+      ]
     },
     {
       "date": "2026-09-12",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 7,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 31-2_예비조사_설문지_원문재점검·순서개편.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        }
+      ]
     },
     {
       "date": "2026-09-13",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 19,
+      "topProjectIds": [
+        "063",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W37.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 40_연구2_확정모형_성과·보상_통합_v0.1.md"
+        }
+      ]
     }
   ],
   "projects": [
@@ -236,15 +348,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-09T03:03:25.643Z",
+  "buildAt": "2026-09-13T04:11:04.959Z",
   "tokens": {
     "total": {
-      "in": 100,
-      "out": 45270,
-      "cache_read": 4594209,
-      "cache_write": 160105
+      "in": 226,
+      "out": 120284,
+      "cache_read": 15003164,
+      "cache_write": 380882
     },
-    "costUSD": 4.43,
-    "costKRW": 6237
+    "costUSD": 12.8903,
+    "costKRW": 18148
   }
 }

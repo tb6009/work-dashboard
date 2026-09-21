@@ -1,0 +1,330 @@
+{
+  "week": "2026-W28",
+  "range": {
+    "from": "2026-07-06",
+    "to": "2026-07-12"
+  },
+  "status": "done",
+  "summary": "081 개미파이 브랜딩 심화(페르소나 프로토타입·개미학 리서치·아트스타일 분류) · 03 RISE 2-2 수정사업계획서 본문 v1.0→v1.1 · 02 입시전형 정원 최적화 설계 — 세부 로그 없이 파일시스템 활동만 캡처된 주",
+  "kpis": {
+    "activeProjects": 3,
+    "sessions": 5,
+    "newProjects": 0,
+    "filesChanged": 66
+  },
+  "daily": [
+    {
+      "date": "2026-07-06",
+      "weekday": "월",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 02.json · 053.json · 055.json · 0691.json · projects.json 외 3건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-7": {
+                "in": 91,
+                "out": 50693,
+                "cache_read": 5568276,
+                "cache_write": 288424,
+                "messages": 61,
+                "costUSD": 17.5637
+              }
+            },
+            "total": {
+              "in": 91,
+              "out": 50693,
+              "cache_read": 5568276,
+              "cache_write": 288424,
+              "messages": 61
+            },
+            "costUSD": 17.5637
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 4,
+                "out": 1714,
+                "cache_read": 68676,
+                "cache_write": 50000,
+                "messages": 2,
+                "costUSD": 1.1691
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 1714,
+              "cache_read": 68676,
+              "cache_write": 50000,
+              "messages": 2
+            },
+            "costUSD": 1.1691
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W28.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "weekday": "수",
+      "filesChanged": 11,
+      "topProjectIds": [
+        "02",
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 16_종합_경쟁률반영_입시정원_최적화_설계안.md"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · CLAUDE.md · 01_Workspace_Prototype.html · PROJECT.md · 01_Persona_and_JTBD.md 외 5건"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "weekday": "목",
+      "filesChanged": 17,
+      "topProjectIds": [
+        "081",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[fs scan] PROGRESS.md · 05_Game_Graphics_and_Ant_Research.md · 06_Myrmecology_Branding_Metaphors.md · 07_Competitor_UI_UX_Layouts.md · 08_Ant_Branding_and_Graphic_Design.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 110634,
+                "out": 195409,
+                "cache_read": 24100061,
+                "cache_write": 1222251,
+                "messages": 144,
+                "costUSD": 75.3825
+              }
+            },
+            "total": {
+              "in": 110634,
+              "out": 195409,
+              "cache_read": 24100061,
+              "cache_write": 1222251,
+              "messages": 144
+            },
+            "costUSD": 75.3825
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W28.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 2,
+                "out": 2203,
+                "cache_read": 18984,
+                "cache_write": 313096,
+                "messages": 1,
+                "costUSD": 6.0643
+              }
+            },
+            "total": {
+              "in": 2,
+              "out": 2203,
+              "cache_read": 18984,
+              "cache_write": 313096,
+              "messages": 1
+            },
+            "costUSD": 6.0643
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "weekday": "토",
+      "filesChanged": 22,
+      "topProjectIds": [
+        "03",
+        "081",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 01_베이스_대비_3개대학_차이분석_v0.1.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-fable-5": {
+                "in": 85431,
+                "out": 109758,
+                "cache_read": 2672057,
+                "cache_write": 626227,
+                "messages": 41,
+                "costUSD": 0
+              },
+              "claude-opus-4-8": {
+                "in": 224064,
+                "out": 333801,
+                "cache_read": 16771413,
+                "cache_write": 2425901,
+                "messages": 144,
+                "costUSD": 99.0388
+              }
+            },
+            "total": {
+              "in": 309495,
+              "out": 443559,
+              "cache_read": 19443470,
+              "cache_write": 3052128,
+              "messages": 185
+            },
+            "costUSD": 99.0388
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] Cartoony.json · Hand-drawn.json · Indie.json · Pixel_Graphics.json · Realistic.json 외 2건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 4,
+                "out": 1150,
+                "cache_read": 592896,
+                "cache_write": 1498,
+                "messages": 2,
+                "costUSD": 1.0037
+              }
+            },
+            "total": {
+              "in": 4,
+              "out": 1150,
+              "cache_read": 592896,
+              "cache_write": 1498,
+              "messages": 2
+            },
+            "costUSD": 1.0037
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W28.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "weekday": "일",
+      "filesChanged": 8,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 02_2-2_수정사업계획서_본문_v1.0.md · 03_2-2_수정사업계획서_본문_v1.1_수정표시.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 12,
+                "out": 5516,
+                "cache_read": 3780388,
+                "cache_write": 4178,
+                "messages": 6,
+                "costUSD": 6.1628
+              }
+            },
+            "total": {
+              "in": 12,
+              "out": 5516,
+              "cache_read": 3780388,
+              "cache_write": 4178,
+              "messages": 6
+            },
+            "costUSD": 6.1628
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W28.json"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "081",
+      "pct": 45,
+      "filesChanged": 30,
+      "imp": 3,
+      "nextAction": "구 05·08·09 처리 · 02 브랜드 문서 재작성(아키텍처+‘파이’ 유지 결정) · 제품 실사"
+    },
+    {
+      "id": "03",
+      "pct": 35,
+      "filesChanged": 8,
+      "imp": 3,
+      "nextAction": "RISE 2-2 수정사업계획서 심사 대응 마감"
+    },
+    {
+      "id": "02",
+      "pct": 20,
+      "filesChanged": 5,
+      "imp": 2,
+      "nextAction": "입시전형 정원 최적화 설계안 확정"
+    }
+  ],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-07-23T02:40:00.000Z",
+  "tokens": {
+    "total": {
+      "in": 420242,
+      "out": 700244,
+      "cache_read": 53572751,
+      "cache_write": 4931575
+    },
+    "costUSD": 206.3849,
+    "costKRW": 303386
+  }
+}

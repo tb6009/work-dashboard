@@ -1,0 +1,668 @@
+{
+  "week": "2026-W33",
+  "range": {
+    "from": "2026-08-10",
+    "to": "2026-08-16"
+  },
+  "status": "past",
+  "summary": "정기 마감 전 주중 중간 업데이트: SYNC 제작과정 포트폴리오와 함께 왕초보 에이전트 만들기 수업과제의 인포그래픽 제작 과정 24개 이미지를 순서형 갤러리로 기록했다.",
+  "kpis": {
+    "activeProjects": 12,
+    "sessions": 3,
+    "newProjects": 0,
+    "filesChanged": 317
+  },
+  "daily": [
+    {
+      "date": "2026-08-10",
+      "weekday": "월",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "0694",
+        "09",
+        "01",
+        "039",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "01",
+          "did": "[fs scan] 08_Gemini_퍼포먼스_향상_및_원인분석_보고서.md"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 코너스톤_프로젝트_현황_목표대비_진단보고서_테스트_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] index.html · page.tsx · 0694.json · projects.json · 2026-W32.json 외 1건"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "weekday": "화",
+      "filesChanged": 19,
+      "topProjectIds": [
+        "0694",
+        "081",
+        "063",
+        "01",
+        "02"
+      ],
+      "entries": [
+        {
+          "projectId": "0694",
+          "did": "공통 가이드 9p·실수방지 8p·PLAY 5.5 마스터 9p, A/B/C 탐색안, 84개 렌더와 독립 평가를 제작하고 재현 가능한 입시홍보 작업장·스킬 초안을 정리했다.",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/0694_SYNC프레임워크_자동화/docs/logs/20260811_log.md"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] 09_Gemini_신규프로토콜_실증_비교실험.md · AI_MASTER_RULES.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1025,
+                "out": 1299154,
+                "cache_read": 195535175,
+                "cache_write": 5850464,
+                "messages": 388,
+                "costUSD": 166.817
+              },
+              "claude-fable-5": {
+                "in": 4,
+                "out": 8734,
+                "cache_read": 0,
+                "cache_write": 1218418,
+                "messages": 2,
+                "costUSD": 15.667
+              }
+            },
+            "total": {
+              "in": 1029,
+              "out": 1307888,
+              "cache_read": 195535175,
+              "cache_write": 7068882,
+              "messages": 390
+            },
+            "costUSD": 182.4839
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 10_제출본_캠페인기획_v1.0.md · 00_수시2차_캐러셀_시안_v1.0.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "weekday": "수",
+      "filesChanged": 78,
+      "topProjectIds": [
+        "063",
+        "0694",
+        "081",
+        "02",
+        "039",
+        "082",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "W33 정기 마감과 분리한 주중 중간 업데이트를 구성하고 0694 프로젝트 타이틀 아래 작업과정 이미지 포트폴리오 HTML 링크를 추가했다."
+        },
+        {
+          "projectId": "0694",
+          "did": "과정 포트폴리오의 이미지 출처를 재감사해 OpenAI gpt-image-2 생성 1개와 Gemini 작업 트랙의 HTML/CSS 렌더 7개를 분리 표기했다. ChatGPT 웹앱 생성물은 확인되지 않았다."
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 1871,
+                "out": 1767790,
+                "cache_read": 297733485,
+                "cache_write": 15242552,
+                "messages": 973,
+                "costUSD": 288.3368
+              },
+              "claude-fable-5": {
+                "in": 67,
+                "out": 112444,
+                "cache_read": 13244756,
+                "cache_write": 4233845,
+                "messages": 37,
+                "costUSD": 71.7907
+              }
+            },
+            "total": {
+              "in": 1938,
+              "out": 1880234,
+              "cache_read": 310978241,
+              "cache_write": 19476397,
+              "messages": 1010
+            },
+            "costUSD": 360.1275
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 20_제출보고서_v1.0.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 5,
+                "out": 2699,
+                "cache_read": 1016482,
+                "cache_write": 472580,
+                "messages": 3,
+                "costUSD": 3.5294
+              }
+            },
+            "total": {
+              "in": 5,
+              "out": 2699,
+              "cache_read": 1016482,
+              "cache_write": 472580,
+              "messages": 3
+            },
+            "costUSD": 3.5294
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 코너스톤_프로젝트_현황_목표대비_진단보고서_업데이트_v0.2.md"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] 02_구성안_1안_압축형_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 3265,
+                "out": 309410,
+                "cache_read": 64593613,
+                "cache_write": 3026750,
+                "messages": 481,
+                "costUSD": 58.9656
+              },
+              "claude-sonnet-5": {
+                "in": 52871,
+                "out": 40584,
+                "cache_read": 10694257,
+                "cache_write": 731047,
+                "messages": 100,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 56136,
+              "out": 349994,
+              "cache_read": 75287870,
+              "cache_write": 3757797,
+              "messages": 581
+            },
+            "costUSD": 58.9656
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] 2026-08-11_고당-정제탄수화물-소화기신호_브레인덤프.md · 2026-08-11_정보중독-브레인프라이_브레인덤프.md · index.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "weekday": "목",
+      "filesChanged": 83,
+      "topProjectIds": [
+        "039",
+        "082",
+        "063",
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 한국주택정보_자연문체본문_v0.1.md · build_khi_report_v01.js"
+        },
+        {
+          "projectId": "082",
+          "did": "왕초보 에이전트 만들기 수업과제로 문서 정보구조를 분석하고, 인포그래픽 표현 비교·전체 문서 확장 결과 23개와 수업 설계 자료 1개를 순서형 갤러리로 정리했다.",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 47,
+                "out": 14166,
+                "cache_read": 7397741,
+                "cache_write": 37557,
+                "messages": 25,
+                "costUSD": 4.288
+              }
+            },
+            "total": {
+              "in": 47,
+              "out": 14166,
+              "cache_read": 7397741,
+              "cache_write": 37557,
+              "messages": 25
+            },
+            "costUSD": 4.288
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 18,
+                "out": 7859,
+                "cache_read": 5131506,
+                "cache_write": 1293262,
+                "messages": 10,
+                "costUSD": 10.8452
+              }
+            },
+            "total": {
+              "in": 18,
+              "out": 7859,
+              "cache_read": 5131506,
+              "cache_write": 1293262,
+              "messages": 10
+            },
+            "costUSD": 10.8452
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "weekday": "금",
+      "filesChanged": 108,
+      "topProjectIds": [
+        "082",
+        "063",
+        "091",
+        "03",
+        "039",
+        "02",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "082",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 27,
+                "out": 14860,
+                "cache_read": 4509648,
+                "cache_write": 46141,
+                "messages": 14,
+                "costUSD": 2.9148
+              }
+            },
+            "total": {
+              "in": 27,
+              "out": 14860,
+              "cache_read": 4509648,
+              "cache_write": 46141,
+              "messages": 14
+            },
+            "costUSD": 2.9148
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 13_밀도와해상도_컨셉_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-5": {
+                "in": 106,
+                "out": 79214,
+                "cache_read": 3546835,
+                "cache_write": 1032336,
+                "messages": 53,
+                "costUSD": 0
+              },
+              "claude-opus-5": {
+                "in": 276,
+                "out": 274938,
+                "cache_read": 46537505,
+                "cache_write": 1772352,
+                "messages": 143,
+                "costUSD": 41.2208
+              }
+            },
+            "total": {
+              "in": 382,
+              "out": 354152,
+              "cache_read": 50084340,
+              "cache_write": 2804688,
+              "messages": 196
+            },
+            "costUSD": 41.2208
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 01_본보고서_태일_코너스톤_컨설팅_결과보고서_v0.1.md · 01_본보고서_한국주택정보_코너스톤_컨설팅_결과보고서_v0.1.md"
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] _MOVED_09_시안.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] _MOVED_092_영상과제.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "weekday": "토",
+      "filesChanged": 12,
+      "topProjectIds": [
+        "03",
+        "063",
+        "039",
+        "09",
+        "101",
+        "091"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 620,
+                "out": 579082,
+                "cache_read": 67663407,
+                "cache_write": 2355025,
+                "messages": 327,
+                "costUSD": 63.0308
+              }
+            },
+            "total": {
+              "in": 620,
+              "out": 579082,
+              "cache_read": 67663407,
+              "cache_write": 2355025,
+              "messages": 327
+            },
+            "costUSD": 63.0308
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 24,
+                "out": 25430,
+                "cache_read": 1998445,
+                "cache_write": 28295,
+                "messages": 13,
+                "costUSD": 1.8119
+              }
+            },
+            "total": {
+              "in": 24,
+              "out": 25430,
+              "cache_read": 1998445,
+              "cache_write": 28295,
+              "messages": 13
+            },
+            "costUSD": 1.8119
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 08_MNS_학생작업과_기업적용_v0.1.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] CLAUDE.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 176,
+                "out": 100093,
+                "cache_read": 23447884,
+                "cache_write": 1054297,
+                "messages": 94,
+                "costUSD": 20.8165
+              }
+            },
+            "total": {
+              "in": 176,
+              "out": 100093,
+              "cache_read": 23447884,
+              "cache_write": 1054297,
+              "messages": 94
+            },
+            "costUSD": 20.8165
+          }
+        },
+        {
+          "projectId": "101",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 11,
+                "out": 11655,
+                "cache_read": 4635187,
+                "cache_write": 11892,
+                "messages": 6,
+                "costUSD": 2.6833
+              }
+            },
+            "total": {
+              "in": 11,
+              "out": 11655,
+              "cache_read": 4635187,
+              "cache_write": 11892,
+              "messages": 6
+            },
+            "costUSD": 2.6833
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 26,
+                "out": 7802,
+                "cache_read": 2107240,
+                "cache_write": 55223,
+                "messages": 13,
+                "costUSD": 1.5939
+              }
+            },
+            "total": {
+              "in": 26,
+              "out": 7802,
+              "cache_read": 2107240,
+              "cache_write": 55223,
+              "messages": 13
+            },
+            "costUSD": 1.5939
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "weekday": "일",
+      "filesChanged": 15,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 00_통합결과보고서_뼈대_v0.1.md · 09-1_이미지하네싱_레퍼런스자료_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 685,
+                "out": 472330,
+                "cache_read": 112233746,
+                "cache_write": 4621124,
+                "messages": 368,
+                "costUSD": 96.8106
+              }
+            },
+            "total": {
+              "in": 685,
+              "out": 472330,
+              "cache_read": 112233746,
+              "cache_write": 4621124,
+              "messages": 368
+            },
+            "costUSD": 96.8106
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W33.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] build_resource_dynamic_workbook.mjs"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "0694",
+      "pct": 70,
+      "filesChanged": 109,
+      "imp": 5,
+      "did": "26페이지 입시홍보 파일럿을 실증하고 이미지 출처를 OpenAI gpt-image-2 생성 1개와 Gemini 작업 트랙 렌더 7개로 분리한 포트폴리오를 공개했다.",
+      "nextAction": "입학지원팀 감수, 이미지 권리, 공식 로고와 CTA 링크 상태를 manifest에 연결한다.",
+      "deliverables": [
+        "공통 가이드 9p",
+        "실수방지 8p",
+        "PLAY 5.5 마스터 9p",
+        "OpenAI gpt-image-2 이미지층",
+        "출처별 주중 작업과정 포트폴리오"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 10,
+      "filesChanged": 8,
+      "imp": 4,
+      "did": "W33 주중 중간 업데이트와 0694 과정 포트폴리오 링크·프로젝트 상세 데이터를 WorkDashboard에 통합했다.",
+      "nextAction": "운영 URL에서 프로젝트 타이틀 하단 링크, 필터, 원본 확대와 모바일 레이아웃을 검증한다."
+    },
+    {
+      "id": "081",
+      "pct": 5,
+      "filesChanged": 0,
+      "imp": 3,
+      "did": "AI 세션 사용량이 중간 집계에 반영됐다.",
+      "nextAction": "주간 마감 시 실제 산출물과 토큰 기록을 함께 재검토한다."
+    },
+    {
+      "id": "082",
+      "pct": 15,
+      "filesChanged": 24,
+      "imp": 4,
+      "did": "왕초보 에이전트 만들기 수업과제의 작업 프로세스를 정리하고, 과제 이미지 23개와 수업 설계 자료 1개를 전체 제작 순서 갤러리로 공개했다.",
+      "nextAction": "수업 회고와 초보자용 에이전트 제작 체크리스트를 정리한다.",
+      "deliverables": [
+        "수업과제 이미지 23개",
+        "수업 설계 자료 1개",
+        "전체 제작과정 이미지 갤러리"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-08-11",
+      "projectId": "0694",
+      "title": "입시 공식 사실과 데이터 인사이트·연습 예시·미확인 질문을 O/D/E/Q 근거 등급으로 분리",
+      "description": "날짜·비용·학과·제출조건은 공식 원문만 확정 근거로 사용하고, 데이터는 전략 판단, 예시는 설명, 미확인 사항은 게시 중단 조건으로 관리한다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-08-11",
+      "projectId": "0694",
+      "title": "80점 평가 통과와 외부 게시 하드게이트를 별도 운영",
+      "description": "평가 점수가 높아도 사실 오류, 로고 위반, 이미지 권리 미확인, 입학지원팀 감수 미완료, CTA 미확인 중 하나가 있으면 외부 게시하지 않는다."
+    },
+    {
+      "date": "2026-08-12",
+      "projectId": "063",
+      "title": "W33 데이터는 정기 마감이 아닌 주중 중간 스냅샷으로 발행",
+      "description": "현재 주의 진행 상황을 보여주되 주간 완료로 표현하지 않고, 일요일 종료 후 정기 업데이트에서 수치·비중·다음 작업을 다시 확정한다."
+    },
+    {
+      "date": "2026-08-12",
+      "projectId": "0694",
+      "title": "ChatGPT 웹앱과 OpenAI 모델 호출, Gemini 작업 트랙을 분리 표기",
+      "description": "Codex image_gen에서 gpt-image-2로 생성한 이미지 1개는 OpenAI 생성물로 기록하되 ChatGPT 웹앱 출력으로 부르지 않는다. 02_gemini의 보드 7개는 HTML/CSS 렌더 결과로 표시해 생성 모델과 작업 디렉터리를 동일시하지 않는다."
+    },
+    {
+      "date": "2026-08-13",
+      "projectId": "082",
+      "title": "기업 작업이 아닌 수업과제로 분리 표기",
+      "description": "공개 화면에서는 조직명을 사용하지 않고 왕초보 에이전트 만들기 수업과제로 기록한다. 과제 결과는 기업 납품이나 실제 운영 성과로 표현하지 않는다.",
+      "isMilestone": true
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-08-16T09:16:32.411Z",
+  "tokens": {
+    "total": {
+      "in": 61124,
+      "out": 5128244,
+      "cache_read": 862026912,
+      "cache_write": 43083160
+    },
+    "costUSD": 851.1222,
+    "costKRW": 1198286
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "week": "2026-W29",
+  "range": {
+    "from": "2026-07-13",
+    "to": "2026-07-19"
+  },
+  "status": "done",
+  "summary": "02 계원예대 취업·소득 종합 실증 보고서(11차트) 발간 + 독립 재검증(Fisher·Holm 보정, 399행+12p PPT) · 0811 개미파이 브랜딩 리서치 검증·재작성·재리서치(마크·개념·컬러 확정) · 091 「몸과 마음의 과학」 경제지 6부작 신문연재 투고 착수 · 0500 Design-Driven Innovation 논문 이중언어 분해",
+  "kpis": {
+    "activeProjects": 5,
+    "sessions": 5,
+    "newProjects": 0,
+    "filesChanged": 55
+  },
+  "daily": [
+    {
+      "date": "2026-07-13",
+      "weekday": "월",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-07-14",
+      "weekday": "화",
+      "filesChanged": 33,
+      "topProjectIds": [
+        "02",
+        "063",
+        "03",
+        "081",
+        "091",
+        "09",
+        "039"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 51_소득_졸업생_소득분위_대비_취업결합분석보고서.md · 52_소득_졸업생_학번코호트별_소득분위_대비_취업결합분석보고서.md · 53_고교유형_졸업생_학번코호트별_취업결합분석보고서.md · 54_소득_학과별_가구소득_양극화분석보고서.md · 55_소득_전공_취업_다차원매핑분석보고서.md 외 7건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W29.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 14,
+                "out": 5695,
+                "cache_read": 4590915,
+                "cache_write": 22407,
+                "messages": 7,
+                "costUSD": 7.7338
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 5695,
+              "cache_read": 4590915,
+              "cache_write": 22407,
+              "messages": 7
+            },
+            "costUSD": 7.7338
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] shot_meta.json · top10.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 95,
+                "out": 66808,
+                "cache_read": 13524643,
+                "cache_write": 150664,
+                "messages": 42,
+                "costUSD": 28.1239
+              }
+            },
+            "total": {
+              "in": 95,
+              "out": 66808,
+              "cache_read": 13524643,
+              "cache_write": 150664,
+              "messages": 42
+            },
+            "costUSD": 28.1239
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 83,
+                "out": 82533,
+                "cache_read": 3542153,
+                "cache_write": 260696,
+                "messages": 43,
+                "costUSD": 16.3925
+              }
+            },
+            "total": {
+              "in": 83,
+              "out": 82533,
+              "cache_read": 3542153,
+              "cache_write": 260696,
+              "messages": 43
+            },
+            "costUSD": 16.3925
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 322,
+                "out": 115668,
+                "cache_read": 10201379,
+                "cache_write": 1737938,
+                "messages": 166,
+                "costUSD": 56.5683
+              }
+            },
+            "total": {
+              "in": 322,
+              "out": 115668,
+              "cache_read": 10201379,
+              "cache_write": 1737938,
+              "messages": 166
+            },
+            "costUSD": 56.5683
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 06_3-2-1_공용장비_구축개방_로드맵_v0.1.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": [
+        "081",
+        "09"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 106,
+                "out": 113387,
+                "cache_read": 24654482,
+                "cache_write": 118646,
+                "messages": 54,
+                "costUSD": 47.712
+              }
+            },
+            "total": {
+              "in": 106,
+              "out": 113387,
+              "cache_read": 24654482,
+              "cache_write": 118646,
+              "messages": 54
+            },
+            "costUSD": 47.712
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 8,
+                "out": 83719,
+                "cache_read": 1284271,
+                "cache_write": 42780,
+                "messages": 4,
+                "costUSD": 9.0076
+              }
+            },
+            "total": {
+              "in": 8,
+              "out": 83719,
+              "cache_read": 1284271,
+              "cache_write": 42780,
+              "messages": 4
+            },
+            "costUSD": 9.0076
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "weekday": "목",
+      "filesChanged": 5,
+      "topProjectIds": [
+        "091",
+        "063",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "091",
+          "did": "[fs scan] 04_연재_제안서_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W29.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] _INDEX.md · 01_RBV_리소스_기반관점.md · 06_디자인분야_연구맥락_정리.md · index.md · log.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "weekday": "금",
+      "filesChanged": 14,
+      "topProjectIds": [
+        "02",
+        "063",
+        "091",
+        "081"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 57_취업_소득_학점_분석_검증보고서.md · 57_취업_소득_학점_분석_검증보고서_인용_명세서.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] categories.json · projects.json · extract-from-filesystem.mjs",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 58,
+                "out": 32710,
+                "cache_read": 2868703,
+                "cache_write": 64865,
+                "messages": 29,
+                "costUSD": 7.9734
+              }
+            },
+            "total": {
+              "in": 58,
+              "out": 32710,
+              "cache_read": 2868703,
+              "cache_write": 64865,
+              "messages": 29
+            },
+            "costUSD": 7.9734
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[fs scan] 04_연재_제안서_v0.1.md"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] PROGRESS.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "weekday": "토",
+      "filesChanged": 1,
+      "topProjectIds": [
+        "063",
+        "09",
+        "081",
+        "091",
+        "0500"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 162,
+                "out": 101896,
+                "cache_read": 19530585,
+                "cache_write": 1075204,
+                "messages": 93,
+                "costUSD": 57.1006
+              }
+            },
+            "total": {
+              "in": 162,
+              "out": 101896,
+              "cache_read": 19530585,
+              "cache_write": 1075204,
+              "messages": 93
+            },
+            "costUSD": 57.1006
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 60,
+                "out": 25955,
+                "cache_read": 12192493,
+                "cache_write": 85363,
+                "messages": 31,
+                "costUSD": 21.8368
+              }
+            },
+            "total": {
+              "in": 60,
+              "out": 25955,
+              "cache_read": 12192493,
+              "cache_write": 85363,
+              "messages": 31
+            },
+            "costUSD": 21.8368
+          }
+        },
+        {
+          "projectId": "081",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 9,
+                "out": 3920,
+                "cache_read": 2413108,
+                "cache_write": 5283,
+                "messages": 5,
+                "costUSD": 4.0129
+              }
+            },
+            "total": {
+              "in": 9,
+              "out": 3920,
+              "cache_read": 2413108,
+              "cache_write": 5283,
+              "messages": 5
+            },
+            "costUSD": 4.0129
+          }
+        },
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-4-8": {
+                "in": 11,
+                "out": 13394,
+                "cache_read": 2981924,
+                "cache_write": 21528,
+                "messages": 7,
+                "costUSD": 5.8813
+              }
+            },
+            "total": {
+              "in": 11,
+              "out": 13394,
+              "cache_read": 2981924,
+              "cache_write": 21528,
+              "messages": 7
+            },
+            "costUSD": 5.8813
+          }
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 무제개인의 수준 **높은 양손 잡이성은** 조직 해법보다 **개인이 탐색과 활용을 조정하는 능력** 으로 직접 보는 것이 가장 큰 차이입니다.1.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "weekday": "일",
+      "filesChanged": 2,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] paper_to_excel.py"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W29.json"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "02",
+      "pct": 35,
+      "filesChanged": 19,
+      "imp": 5,
+      "nextAction": "학교 데이터사전으로 학번 의미 확인 · 다항 로지스틱 회귀(학과·연도·GPA·소득 통제) 설계"
+    },
+    {
+      "id": "081",
+      "pct": 20,
+      "filesChanged": 15,
+      "imp": 4,
+      "nextAction": "구 05·08·09 처리 · 02 브랜드 문서 재작성 · gameaify.com 제품 실사 · 사용자 5명 인터뷰"
+    },
+    {
+      "id": "091",
+      "pct": 20,
+      "filesChanged": 6,
+      "imp": 4,
+      "nextAction": "미디어-회복 문헌(8장 근거) 재개 · 저자 가필본 반영 v0.2 · 서지오류 3건 원본 반영"
+    },
+    {
+      "id": "0500",
+      "pct": 15,
+      "filesChanged": 6,
+      "imp": 3,
+      "nextAction": "Excel 병합정렬 행 1:1 재분할 · 인용 명세서 원문·페이지·DOI 재검증"
+    },
+    {
+      "id": "063",
+      "pct": 10,
+      "filesChanged": 5,
+      "imp": 2,
+      "nextAction": "/주간업데이트로 이번 주 통합 · CURRENT_WEEK_ID 승격 · 재배포"
+    }
+  ],
+  "decisions": [
+    {
+      "projectId": "02",
+      "date": "2026-07-14",
+      "title": "가계 소득 × 졸업생 진로 연관성 실증(N=2,700)",
+      "description": "입학 학번 코호트 재매칭으로 유효표본 2,700명 확보. 4대 대분류 p=0.0158, 12대 세부분위 p=0.0406으로 소득-진로 연관성 성립. 학과별 소득 양극화(공간/산업전공 6.5분위 vs 순수예술 5.0분위)도 규명. 11종 차트 종합 실증 보고서 발간.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "02",
+      "date": "2026-07-17",
+      "title": "독립 재검증 후 ‘약한 연관성’으로 해석 확정",
+      "description": "Fisher 검정+Holm 보정 재계산 결과 Cramér’s V가 작고 졸업연도별로 재현되지 않아 유의성은 유지하되 ‘약한 연관성’으로 해석. N=2,700은 학교 데이터사전 확인 전까지 ‘학번 일치 전문학사 학생’으로 기술(‘입학 코호트’ 명명 보류). 공식 취업률과 졸업자 중 취업자 비율 분리.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "081",
+      "date": "2026-07-15",
+      "title": "개미파이 브랜드 방향 확정",
+      "description": "마크=추상 기호(이름이 이미 개미를 말하므로), 개념=‘작지만 뭉치면 강함’(한·중·일 동시 긍정), ‘당신도 개미다’(위계 제거). 게임AI 16곳 중 14곳이 네온 → 네온 폐기·흙빛 통일, 다크 그라운드(L8%)로 Scenario(L76%)와 명도 차별화. 개미 마크·개념·컬러 3축 근거 기반 재정의.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "091",
+      "date": "2026-07-18",
+      "title": "경제지 6부작 신문연재 3축 통합 · 대주제 ‘과잉의 시대’",
+      "description": "자기비난 해체 서사(뼈대)+생활영역(매회 소재)+시대진단(공론성)을 한 몸으로 통합. 목차 SSOT=단행본 12_목차_v0.4. 문체=존댓말 본문+핵심만 반말 선언, AI티 제거.",
+      "isMilestone": true
+    },
+    {
+      "projectId": "091",
+      "date": "2026-07-18",
+      "title": "인용 검증 3대 문제 → 서지오류 3건 정정",
+      "description": "미루기뇌영상 Zhang→Chen 2022, Prather 2013 SLEEP→Psychosomatic Medicine, 자아고갈재현 Bernecker→Carruth 2023. 근거 없는 소재(‘과잉의 시대’ 문헌부재, 3부 10-1 원문부재) 삭제·각주 없이 처리. 자아고갈 반박(Hagger 2016·Vohs 2021·Dang 2016) PubMed 검증 완료 = 연재 최강 카드.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "0500",
+      "date": "2026-07-19",
+      "title": "논문 분석 로컬 처리 원칙 + 미검증 DOI 명시",
+      "description": "Design-Driven Innovation 영문 PDF를 원문 기준, 번역 PDF는 로컬 OCR 대조용으로만 사용. 외부 Claude 번역 호출 중단(내용 로컬 밖 미전송). 문장 경계 다를 시 1:2·2:1 병합정렬 감사표시, 외부 레지스트리 미확인 DOI는 ‘미검증’ 명시.",
+      "isMilestone": false
+    },
+    {
+      "projectId": "063",
+      "date": "2026-07-18",
+      "title": "중단 세션(7/17 API 중단) 그대로 이어서 마감",
+      "description": "파일시스템에 남은 결과물(재구조화 매핑+W28 백필+W29 신설)이 완결 단위라 판단, 재작성 없이 검증만 거쳐 커밋 77db436 푸시. CURRENT_WEEK_ID는 ‘하던 작업’ 범위 밖이라 승격 보류, 다음 월요일 처리로 결정.",
+      "isMilestone": false
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-07-23T02:40:00.000Z",
+  "tokens": {
+    "total": {
+      "in": 928,
+      "out": 645685,
+      "cache_read": 97784656,
+      "cache_write": 3585374
+    },
+    "costUSD": 262.343,
+    "costKRW": 385644
+  }
+}

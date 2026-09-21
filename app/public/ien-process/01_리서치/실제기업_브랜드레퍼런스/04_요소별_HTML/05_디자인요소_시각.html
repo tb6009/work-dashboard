@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>디자인 요소 시각 분석 — 임차in케어</title>
+<meta name="description" content="41개 브랜드 108장. 타입·스페이싱·이미지 사용량을 브라우저 computed style에서 실측하고 실물 크롭과 함께 정리했다.">
+<style>
+:root{--ink:#1d2733;--sub:#5d6b7a;--line:#e3e8ec;--bg:#f6f7f8;--card:#fff;--accent:#093760;--warn:#b45309;--meas:#0f766e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;
+ font-family:-apple-system,BlinkMacSystemFont,'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);padding:38px 30px 28px}
+.wrap{max-width:1680px;margin:0 auto}
+h1{margin:0 0 6px;font-size:27px;font-weight:700;letter-spacing:-.02em}
+.sub{margin:0;color:var(--sub);font-size:14px}
+.note{margin-top:16px;padding:11px 14px;background:#fffbf0;border:1px solid #f0e3c2;border-radius:7px;font-size:12.5px;color:#6b5a30}
+nav{background:#fff;border-bottom:1px solid var(--line);padding:11px 30px;position:sticky;top:0;z-index:9}
+nav a{display:inline-block;margin-right:16px;font-size:13px;color:var(--sub);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-color:var(--accent)}
+main{padding:32px 30px 80px}
+section{margin-bottom:56px;scroll-margin-top:60px}
+.shead{display:flex;align-items:baseline;gap:11px;margin-bottom:6px;flex-wrap:wrap}
+.code{font-size:11px;font-weight:700;letter-spacing:.07em;color:#fff;background:var(--meas);padding:3px 8px;border-radius:4px}
+.code.obs{background:#5d6b7a}
+h2{margin:0;font-size:20px;font-weight:650;letter-spacing:-.01em}
+.sdesc{margin:0 0 16px;color:var(--sub);font-size:13.5px;max-width:940px}
+figure{margin:0 0 20px;background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+figure img{width:100%;display:block}
+figcaption{padding:11px 14px;font-size:12.5px;color:var(--sub);border-top:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;font-size:13px;margin-bottom:18px}
+th,td{padding:9px 13px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{background:#f0f3f5;font-weight:650;font-size:12px;color:var(--sub)}
+tbody tr:last-child td{border-bottom:none}
+.hi{font-weight:700;color:var(--accent)}
+.key{background:#fff;border:2px solid var(--accent);border-radius:9px;padding:15px 17px;margin:18px 0}
+.key h3{margin:0 0 7px;font-size:15.5px;font-weight:700}
+.key p{margin:0;font-size:13.2px;color:var(--sub)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:15px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:14px 16px}
+.card h3{margin:0 0 6px;font-size:14.5px;font-weight:650}
+.card p{margin:0;font-size:12.8px;color:var(--sub)}
+.card .tag{display:inline-block;margin-bottom:7px;font-size:10.5px;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:4px;padding:2px 7px}
+.fail{background:#fff7ed;border-color:#f0dcc0}.fail h3{color:var(--warn)}
+.typ{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin-bottom:18px}
+.typcard{background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.typcard .crop{background:#fafbfc;border-bottom:1px solid var(--line);padding:0;max-height:150px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.typcard .crop img{max-width:100%;height:auto;display:block}
+.typcard .meta{padding:10px 13px}
+.typcard .bn{font-size:13.5px;font-weight:650;margin-bottom:3px}
+.typcard .val{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--sub);line-height:1.5}
+.ratio{font-weight:700;color:var(--accent)}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#eef1f3;padding:1px 5px;border-radius:3px}
+footer{border-top:1px solid var(--line);background:#fff;padding:26px 30px;font-size:12.5px;color:var(--sub)}
+@media (prefers-color-scheme:dark){
+ :root{--ink:#e8edf2;--sub:#98a6b4;--line:#2b3440;--bg:#151b22;--card:#1c242d;--accent:#55dc8c;--meas:#2dd4bf}
+ .code{color:#0f1720} header,footer,nav{background:#1c242d} thead th{background:#222c36}
+ .note{background:#2a2418;border-color:#4a3f26;color:#d8c99a} .fail{background:#2a2015;border-color:#4a3a26}
+ .key{background:#1c242d} .typcard .crop{background:#151b22} code{background:#222c36}
+}
+</style></head><body>
+<header><div class="wrap">
+ <h1>디자인 요소 시각 분석</h1>
+ <p class="sub">41개 브랜드 · 108장 · 2026-09-20 · v0.2</p>
+ <div class="note"><b>측정과 관찰을 나눴다.</b> 청록 뱃지는 <b>실측</b>(브라우저 computed style · DOM 쿼리 · 픽셀 분석),
+ 회색 뱃지는 <b>육안 관찰</b>이다. <code>font-family</code>는 CSS 스택이라 실제 렌더 폰트와 다를 수 있다.
+ 색은 캡처 화면의 픽셀값이며 <b>공식 브랜드 색상값이 아니다</b>. 공식 브랜드 가이드는 한 곳도 확인하지 않았다.
+ 시각 인상에서 전환율·매출로 비약하지 않았다.</div>
+</div></header>
+<nav><div class="wrap">
+ <a href="#color">색</a><a href="#type">타입 — 국내</a><a href="#type2">타입 — 해외</a>
+ <a href="#layout">레이아웃·스페이싱</a><a href="#image">이미지 유형</a><a href="#common">공통 요소</a><a href="#apply">적용</a>
+</div></nav>
+<main><div class="wrap">
+<section id="color">
+ <div class="shead"><span class="code">COL 색 · 실측</span><h2>이미지별 색 톤 구성</h2></div>
+ <p class="sdesc">배경색만 뽑은 단독 팔레트를 폐기했다. 평균을 내면 Wise 한 브랜드가 57%를 먹는다.
+ 대신 <b>세로 = 샘플 한 장, 가로 = 그 이미지 안에서 쓰인 색 톤</b>으로 다시 만들었다.</p>
+ <figure><img src="img/T1_잔잔한온기_색톤매트릭스.jpg" alt="잔잔한 온기 색 톤 매트릭스" loading="lazy">
+  <figcaption>잔잔한 온기 — 12장</figcaption></figure>
+ <figure><img src="img/T2_맑은시선_색톤매트릭스.jpg" alt="맑은 시선 색 톤 매트릭스" loading="lazy">
+  <figcaption>맑은 시선 — 12장</figcaption></figure>
+ <figure><img src="img/T3_일상의여백_색톤매트릭스.jpg" alt="일상의 여백 색 톤 매트릭스" loading="lazy">
+  <figcaption>일상의 여백 — 12장</figcaption></figure>
+ <div class="key"><h3>색은 좁게, 명도는 넓게</h3>
+  <p>한 이미지 안의 톤들이 서로 인접한 색이다. Typology <code>#BCC2C1 #B4BBBA #D9DEDC</code>, 29CM 전부 회색조,
+  Nécessaire 베이지 변주, 달바 연두 변주, Dulcie 짙은 청록 변주. 대비색을 나란히 쓰지 않는다.</p></div>
+ <table><thead><tr><th>무드</th><th>색상 분산</th><th>명도 폭</th></tr></thead><tbody>
+ <tr><td>잔잔한 온기</td><td>0.104</td><td>0.58</td></tr>
+ <tr><td>맑은 시선</td><td>0.087</td><td>0.49</td></tr>
+ <tr><td>일상의 여백</td><td class="hi">0.065 (최소)</td><td class="hi">0.65 (최대)</td></tr>
+ </tbody></table>
+ <p class="sdesc"><b>임차in케어 적용</b> — 그린 하나를 쓰되 명도 단계를 여러 개 만든다. 브랜드북 4-1의 70:25:5는 면적 규정이라 충돌하지 않는다.
+ <b>한계</b> — 색상 분산에 유채 톤 1개짜리 축퇴 사례(0.000)가 섞여 있다.</p>
+</section>
+
+<section id="type">
+ <div class="shead"><span class="code">TYP 타입 · 실측</span><h2>국내 11곳 중 8곳이 Pretendard 계열</h2></div>
+ <p class="sdesc">크롭은 브라우저에서 해당 요소만 2배 해상도로 잘라낸 것이고, 값은 <code>getComputedStyle</code> 실측이다.
+ 국내는 헤드라인이 35px로 작아 <b>위계 대비가 2.3배</b>뿐이다.</p>
+ <div class="typ"><div class="typcard">
+ <div class="crop"><img src="img/B001_head.jpg" alt="직방 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">직방 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Pretendard · 36px · w600<br>
+ 본문 Pretendard 16px → 대비 <span class="ratio">2.2배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B002_head.jpg" alt="다방 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">다방 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Pretendard Variable · 24px · w400 · 행간 38px · 자간 -0.5px<br>
+ 본문 Pretendard Variable 14px → 대비 <span class="ratio">1.7배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B004_head.jpg" alt="아파트너 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">아파트너 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Pretendard · 56px · w700 · 행간 72px · 자간 -0.728px<br>
+ 본문 Pretendard 14px → 대비 <span class="ratio">4.0배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B006_head.jpg" alt="로톡 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">로톡 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Pretendard Variable · 24px · w700 · 행간 34px<br>
+ 본문 Pretendard Variable 16px → 대비 <span class="ratio">1.5배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B007_head.jpg" alt="HUG 주택도시보증공사 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">HUG 주택도시보증공사 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Noto sans · 33px · w700 · 행간 46.2px · 자간 -1.5px<br>
+ 본문 Noto sans 16px → 대비 <span class="ratio">2.1배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B008_head.jpg" alt="SGI서울보증 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">SGI서울보증 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Roboto · 32px · w700<br>
+ 본문 Roboto 16px → 대비 <span class="ratio">2.0배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B030_head.jpg" alt="29CM 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">29CM <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Pretendard Variable · 40px · w700 · 행간 48px<br>
+ 본문 Pretendard Variable 16px → 대비 <span class="ratio">2.5배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B021_head.jpg" alt="토스 toss 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">토스 toss <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">Toss Product Sans OTF · 80px · w700 · 행간 96px<br>
+ 본문 Toss Product Sans OTF 16px → 대비 <span class="ratio">5.0배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B003_head.jpg" alt="집토스 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">집토스 <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">SUIT · 18px · w800 · 행간 18px<br>
+ 본문 SUIT 12px → 대비 <span class="ratio">1.5배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B051_head.jpg" alt="달바 d&#x27;Alba 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">달바 d&#x27;Alba <span style="font-weight:400;color:var(--sub);font-size:12px">· KR</span></div>
+ <div class="val">freight-neo-pro · 74px · w300 · 행간 81.4px · 자간 -0.26px<br>
+ 본문 freight-neo-pro 15px → 대비 <span class="ratio">4.9배</span></div></div>
+</div></div>
+ <div class="key"><h3>서체로는 차별화가 안 된다</h3>
+  <p>직방·다방·아파트너·로톡·오설록·카카오뱅크·29CM·톤28이 전부 Pretendard 계열이다.
+  자체 서체는 토스(Toss Product Sans)뿐, 명조는 달바뿐. <b>임차in케어 브랜드북 4-3의 프리텐다드 단일 규정은 국내 표준을 따르는 것이다.</b>
+  차별화는 크기·굵기·여백에서 찾아야 한다.</p></div>
+</section>
+
+<section id="type2">
+ <div class="shead"><span class="code">TYP 타입 · 실측</span><h2>해외는 크고 대비가 높다 (4.7배)</h2></div>
+ <p class="sdesc">같은 카테고리인데 헤드라인이 66.5px로 두 배 가깝다.</p>
+ <div class="typ"><div class="typcard">
+ <div class="crop"><img src="img/B009_head.jpg" alt="Lemonade 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">Lemonade <span style="font-weight:400;color:var(--sub);font-size:12px">· US</span></div>
+ <div class="val">Merriweather · 55px · w400 · 행간 71.5px<br>
+ 본문 Lato 12px → 대비 <span class="ratio">4.6배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B010_head.jpg" alt="Jetty 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">Jetty <span style="font-weight:400;color:var(--sub);font-size:12px">· US</span></div>
+ <div class="val">GT Eesti Bold · 61.2px · w700 · 행간 66.6px · 자간 -0.612px<br>
+ 본문 Maison Neue Bold 14.4px → 대비 <span class="ratio">4.2배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B015_head.jpg" alt="Canopy 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">Canopy <span style="font-weight:400;color:var(--sub);font-size:12px">· UK</span></div>
+ <div class="val">Bicyclette ultra · 100px · w900 · 행간 82px · uppercase<br>
+ 본문 Bicyclette 14px → 대비 <span class="ratio">7.1배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B031_head.jpg" alt="LeaseLock 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">LeaseLock <span style="font-weight:400;color:var(--sub);font-size:12px">· US</span></div>
+ <div class="val">lato · 57.6px · w700 · 행간 86.4px · 자간 1px · uppercase<br>
+ 본문 static 14px → 대비 <span class="ratio">4.1배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B014_head.jpg" alt="Goodlord 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">Goodlord <span style="font-weight:400;color:var(--sub);font-size:12px">· UK</span></div>
+ <div class="val">Anek Latin · 84px · w500 · 행간 84px<br>
+ 본문 Inter 16px → 대비 <span class="ratio">5.2배</span></div></div>
+</div><div class="typcard">
+ <div class="crop"><img src="img/B012_head.jpg" alt="Belong 헤드라인" loading="lazy"></div>
+ <div class="meta"><div class="bn">Belong <span style="font-weight:400;color:var(--sub);font-size:12px">· US</span></div>
+ <div class="val">Montserrat · 54px · w600 · 행간 62px · 자간 0.5px<br>
+ 본문 Montserrat 12px → 대비 <span class="ratio">4.5배</span></div></div>
+</div></div>
+ <table><thead><tr><th>구분</th><th>헤드라인</th><th>본문</th><th>대비</th></tr></thead><tbody>
+ <tr><td>A축 국내</td><td>35.4px</td><td>15.2px</td><td class="hi">2.3배</td></tr>
+ <tr><td>A축 해외</td><td>66.5px</td><td>14.1px</td><td class="hi">4.7배</td></tr>
+ <tr><td>잔잔한 온기</td><td>27.0px</td><td>13.7px</td><td>2.0배</td></tr>
+ <tr><td>일상의 여백</td><td>49.7px</td><td>15.9px</td><td>3.1배</td></tr>
+ <tr><td>맑은 시선</td><td>77.9px</td><td>14.3px</td><td class="hi">5.4배</td></tr>
+ </tbody></table>
+ <div class="cards"><div class="card "><span class="tag">대문자+초굵기</span><h3>Canopy</h3><p><code>Bicyclette ultra 100px w900 uppercase</code> → 대비 <b>7.1배</b></p></div><div class="card "><span class="tag">세리프 헤드라인</span><h3>Lemonade · Oscar · Kinfolk</h3><p><code>Merriweather 55px w400</code></p></div><div class="card "><span class="tag">음수 자간</span><h3>아파트너 · HUG · Jetty</h3><p><code>-0.728px</code> <code>-1.5px</code> <code>-0.612px</code> — 큰 글자에서 조인다</p></div><div class="card "><span class="tag">가는 굵기 대형</span><h3>달바 · Typology</h3><p><code>74px w300</code> <code>80px w500</code></p></div><div class="card "><span class="tag">행간 0.82</span><h3>Canopy</h3><p><code>100px / 82px</code> — 줄이 겹친다</p></div></div>
+</section>
+
+<section id="layout">
+ <div class="shead"><span class="code">LAY 레이아웃 · 실측</span><h2>블록 수는 같고, 간격이 절반이다</h2></div>
+ <p class="sdesc">가로선은 행별 변화량으로 찾은 내용 블록의 경계다. 숫자는 블록 사이 간격(원본 높이 대비 %).</p>
+ <figure><img src="img/L1_레이아웃구조.jpg" alt="레이아웃 구조 다이어그램" loading="lazy">
+  <figcaption>Typology 37% · 토스 24% — 여백을 한 곳에 몰아준다. Stripe·직방은 1~6%로 균일하게 조밀하다.</figcaption></figure>
+ <table><thead><tr><th>구분</th><th>블록 수</th><th>평균 간격</th><th>최대 간격</th></tr></thead><tbody>
+ <tr><td>A축 국내</td><td>6.4개</td><td class="hi">4.9%</td><td>10.7%</td></tr>
+ <tr><td>A축 해외</td><td>6.3개</td><td class="hi">8.0%</td><td>16.9%</td></tr>
+ <tr><td>잔잔한 온기</td><td>5.2개</td><td>7.4%</td><td>15.2%</td></tr>
+ <tr><td>맑은 시선</td><td>6.2개</td><td>7.6%</td><td>15.2%</td></tr>
+ <tr><td>일상의 여백</td><td>5.1개</td><td>6.4%</td><td>11.5%</td></tr>
+ </tbody></table>
+ <div class="key"><h3>여백은 고르게 넉넉한 게 아니라 한 곳에 몰아준 큰 공백이다</h3>
+  <p>블록 수는 국내·해외가 같다(6.4 vs 6.3). 정보량은 비슷한데 <b>크기와 간격이 절반</b>이라 빽빽해 보인다.</p></div>
+ <div class="cards"><div class="card fail"><span class="tag">측정 한계</span><h3>불균등도는 무드를 가르지 못한다</h3><p>최대÷평균 비율이 1.83~2.11로 차이가 작다. 국내·해외 간격 차이(4.9% vs 8.0%)가 훨씬 뚜렷하다. 블록·간격은 캡처 픽셀에서 읽은 <b>시각적 블록</b>이지 CSS 값이 아니다.</p></div></div>
+</section>
+
+<section id="image">
+ <div class="shead"><span class="code">IMG 이미지 · 실측+관찰</span><h2>히어로 이미지 유형과 스타일</h2></div>
+ <p class="sdesc">왼쪽 위일수록 사진 질감이 강하고 오른쪽 아래로 갈수록 평면(일러스트·색면·텍스트)이다.</p>
+ <figure><img src="img/IM1_히어로_유형.jpg" alt="히어로 이미지 유형 보드" loading="lazy">
+  <figcaption>41개 브랜드 홈 화면 상단. 수치는 채도 / 밝기 / 질감 실측, 사진·SVG·영상 개수는 DOM 실측.</figcaption></figure>
+ <div class="cards"><div class="card "><span class="tag">UI 스크린샷</span><h3>집토스·다방·아파트너·Notion·Goodlord·HUG·로톡·Belong</h3><p>제품 화면을 그대로 히어로에</p></div><div class="card "><span class="tag">일러스트·타이포·색면</span><h3>Lemonade·Canopy·Wise·Stripe·Jetty·LeaseLock</h3><p>사진 없이 개념을 전달한다</p></div><div class="card "><span class="tag">제품 정물</span><h3>톤28·달바·Typology·TRAVELER'S·오설록·Frama·HAY·Le Labo·&Tradition·Hem</h3><p>사물을 세워 찍는다</p></div><div class="card "><span class="tag">인물 단독(연출)</span><h3>미소·토스·SGI·Everlane·Nécessaire·카카오뱅크</h3><p>한 사람, 카메라 의식</p></div><div class="card "><span class="tag">인물 복수(관계)</span><h3>Oscar Health·TurboTenant·KINTO</h3><p>둘 이상의 관계</p></div><div class="card "><span class="tag">풍경·자연</span><h3>Dulcie·KINTO</h3><p>사람이 없거나 작다</p></div><div class="card "><span class="tag">에디토리얼·인쇄</span><h3>Kinfolk·29CM·프릳츠</h3><p>지면을 그대로</p></div><div class="card "><span class="tag">썸네일 그리드</span><h3>Airbnb</h3><p>선택지를 나열한다</p></div></div>
+ <div class="key"><h3>카테고리가 유형을 결정한다 — 무드가 아니라</h3>
+  <p>국내 부동산·보증은 거의 전부 <b>UI 스크린샷</b>, 해외 렌터 서비스는 거의 전부 <b>일러스트·타이포</b>다.
+  Lemonade·Jetty·Canopy·LeaseLock·Goodlord에 사진이 사실상 없다.
+  같은 보장 카테고리인데 Oscar는 인물 관계 사진, 국내 SGI는 연예인 단독 컷이다.</p></div>
+ <table><thead><tr><th>구분</th><th>사진</th><th>SVG</th><th>영상</th><th>alt 누락</th></tr></thead><tbody>
+ <tr><td>A축 국내</td><td class="hi">8.4장</td><td>1.6개</td><td>0.1</td><td>45%</td></tr>
+ <tr><td>A축 해외</td><td>2.1장</td><td class="hi">4.3개</td><td>0.6</td><td>15%</td></tr>
+ </tbody></table>
+ <p class="sdesc">종횡비 — 맑은 시선은 가로 64%(와이드 히어로), 일상의 여백은 정방 44%(제품 그리드).
+ <b>alt 누락률은 접근성 준수 판정이 아니다.</b></p>
+</section>
+
+<section id="common">
+ <div class="shead"><span class="code obs">공통 요소 · 관찰</span><h2>세 컨셉을 가로질러 반복되는 것</h2></div>
+ <p class="sdesc">무드가 달라도 반복되는 것만 모았다. 3회 이상만 올린다.</p>
+ <div class="cards"><div class="card "><span class="tag">5곳 · 3무드</span><h3>한 색의 명도 변주</h3><p>대비색을 나란히 쓰지 않는다 — Typology·29CM·Nécessaire·달바·Dulcie</p></div><div class="card "><span class="tag">4곳 · 2무드</span><h3>위계 장치를 하나만 쓴다</h3><p>크기면 크기, 색이면 색 — 토스·Stripe·Oscar·카뱅</p></div><div class="card "><span class="tag">3곳 · 2무드</span><h3>여백을 한 곳에 몰아준다</h3><p>Typology 37% · 토스 24% · Dulcie 29%</p></div><div class="card "><span class="tag">6곳 · 3무드</span><h3>조형은 선과 사각형뿐</h3><p>장식 도형이 없다 — &Tradition·Stripe·Dulcie·카뱅·Notion·29CM</p></div><div class="card "><span class="tag">관찰</span><h3>아이콘이 적다</h3><p>절제된 브랜드일수록 아이콘 수가 적다. Blue Bottle은 파란 점 하나</p></div><div class="card "><span class="tag">4곳 · 2국가</span><h3>브랜드 지면과 판매 지면이 분리된다</h3><p>프릳츠·오설록·TRAVELER'S·아로마티카</p></div></div>
+ <p class="sdesc"><b>공통이 아닌 것</b> — 서체(세리프/산세리프가 갈린다), 어두움(잔잔한 온기만 26.4%),
+ 사진 유무(카테고리가 결정하지 무드가 결정하지 않는다).</p>
+</section>
+
+<section id="apply">
+ <div class="shead"><span class="code obs">적용 · 관찰</span><h2>임차in케어 — 수치로 말하면</h2></div>
+ <table><thead><tr><th>요소</th><th>지금 정해진 것</th><th>리서치가 가리키는 방향</th><th>충돌·위험</th></tr></thead><tbody>
+ <tr><td>서체</td><td>프리텐다드 단일 (4-3)</td><td>국내 8곳이 같은 서체 — <b>차별화 불가</b></td><td>차별화를 다른 데서 찾아야</td></tr>
+ <tr><td>위계</td><td>규정 없음</td><td>국내 2.3배는 낮다 → <b>3~4배</b></td><td>필수 안내 16블록과 충돌</td></tr>
+ <tr><td>간격</td><td>규정 없음</td><td>4.9% → <b>7~8%</b></td><td>한 화면 정보량이 줄어든다</td></tr>
+ <tr><td>색</td><td>그린 5% (4-1)</td><td>그린 하나 + <b>명도 단계 여러 개</b></td><td>없음 (면적 규정이라)</td></tr>
+ <tr><td>사진</td><td>"아무 일 없는 날들" (4-4)</td><td>국내 관행은 UI 스크린샷 8.4장 — <b>다르게 가면 낯설다</b></td><td>촬영 자산 0장</td></tr>
+ <tr><td>조형</td><td>심볼 파생형만 (4-4)</td><td>공통 요소와 일치</td><td>없음</td></tr>
+ <tr><td>아이콘</td><td>규정 없음</td><td>줄이는 쪽</td><td>상태색 3종과의 관계 미정</td></tr>
+ </tbody></table>
+</section>
+</div></main>
+<footer><div class="wrap">상세 <b>07_시각분석/디자인요소_시각분석_v0.2.md</b> ·
+ 원자료 <b>타입_스페이싱_요약.csv · 레이아웃_간격_실측.csv · 색톤_분산_실측.csv · 이미지사용_실측.json</b> ·
+ 보드 포맷은 아직 확정하지 않았다(사용자 지시).</div></footer>
+</body></html>

@@ -1,0 +1,444 @@
+{
+  "week": "2026-W23",
+  "range": {
+    "from": "2026-06-01",
+    "to": "2026-06-07"
+  },
+  "status": "current",
+  "summary": "RISE 행사계획서 v0.1 · CPSF 역량명제 확정 · Kaywon 질문유형 분석 · Nabaksa 브랜드전략 4축 병행",
+  "kpis": {
+    "activeProjects": 9,
+    "sessions": 4,
+    "newProjects": 0,
+    "filesChanged": 158
+  },
+  "daily": [
+    {
+      "date": "2026-06-01",
+      "weekday": "월",
+      "filesChanged": 27,
+      "topProjectIds": [
+        "039",
+        "063",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 05_2-2_6월18일_네트워킹데이_행사계획서_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 43,
+                "out": 20484,
+                "cache_read": 8546579,
+                "cache_write": 48071,
+                "messages": 37,
+                "costUSD": 3.0516
+              }
+            },
+            "total": {
+              "in": 43,
+              "out": 20484,
+              "cache_read": 8546579,
+              "cache_write": 48071,
+              "messages": 37
+            },
+            "costUSD": 3.0516
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] app.jsx · artboard-editorial.jsx · artboard-grid.jsx · artboard-quiet.jsx · artboard-universal.jsx 외 3건"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-06-03",
+      "weekday": "수",
+      "filesChanged": 1,
+      "topProjectIds": [
+        "063",
+        "054",
+        "056"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        },
+        {
+          "projectId": "054",
+          "did": "[fs scan] 02_분기점진술_역량명제분석.md"
+        },
+        {
+          "projectId": "056",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-4-5": {
+                "in": 47038,
+                "out": 6622,
+                "cache_read": 3479958,
+                "cache_write": 305703,
+                "messages": 51,
+                "costUSD": 0.8103
+              },
+              "claude-sonnet-4-6": {
+                "in": 8551,
+                "out": 19581,
+                "cache_read": 1518851,
+                "cache_write": 52107,
+                "messages": 17,
+                "costUSD": 0.9704
+              }
+            },
+            "total": {
+              "in": 55589,
+              "out": 26203,
+              "cache_read": 4998809,
+              "cache_write": 357810,
+              "messages": 68
+            },
+            "costUSD": 1.7807
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "weekday": "목",
+      "filesChanged": 26,
+      "topProjectIds": [
+        "063",
+        "02",
+        "061",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] question_response_analysis.md",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 12,
+                "out": 61653,
+                "cache_read": 1134688,
+                "cache_write": 27587,
+                "messages": 12,
+                "costUSD": 1.3687
+              }
+            },
+            "total": {
+              "in": 12,
+              "out": 61653,
+              "cache_read": 1134688,
+              "cache_write": 27587,
+              "messages": 12
+            },
+            "costUSD": 1.3687
+          }
+        },
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 30,
+                "out": 10191,
+                "cache_read": 1776161,
+                "cache_write": 15206,
+                "messages": 30,
+                "costUSD": 0.7428
+              }
+            },
+            "total": {
+              "in": 30,
+              "out": 10191,
+              "cache_read": 1776161,
+              "cache_write": 15206,
+              "messages": 30
+            },
+            "costUSD": 0.7428
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] brand-context.md · brand-strategy.md · brief-orchestrator.md · challenger.md · creative-critique.md 외 19건"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "weekday": "금",
+      "filesChanged": 18,
+      "topProjectIds": [
+        "063",
+        "03",
+        "061"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 39,
+                "out": 11400,
+                "cache_read": 1765641,
+                "cache_write": 224906,
+                "messages": 25,
+                "costUSD": 1.5442
+              }
+            },
+            "total": {
+              "in": 39,
+              "out": 11400,
+              "cache_read": 1765641,
+              "cache_write": 224906,
+              "messages": 25
+            },
+            "costUSD": 1.5442
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] F-BIZ-02.md · F-IND-03.md · F-REG-02.md · F-VIS-02.md"
+        },
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-4-6": {
+                "in": 70,
+                "out": 35304,
+                "cache_read": 1590521,
+                "cache_write": 147689,
+                "messages": 48,
+                "costUSD": 1.5608
+              }
+            },
+            "total": {
+              "in": 70,
+              "out": 35304,
+              "cache_read": 1590521,
+              "cache_write": 147689,
+              "messages": 48
+            },
+            "costUSD": 1.5608
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "weekday": "토",
+      "filesChanged": 53,
+      "topProjectIds": [
+        "061",
+        "02",
+        "062",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "061",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-4-5": {
+                "in": 180,
+                "out": 5321,
+                "cache_read": 803964,
+                "cache_write": 381046,
+                "messages": 32,
+                "costUSD": 0.5835
+              },
+              "claude-sonnet-4-6": {
+                "in": 171,
+                "out": 120501,
+                "cache_read": 11553983,
+                "cache_write": 793878,
+                "messages": 119,
+                "costUSD": 8.2513
+              }
+            },
+            "total": {
+              "in": 351,
+              "out": 125822,
+              "cache_read": 12357947,
+              "cache_write": 1174924,
+              "messages": 151
+            },
+            "costUSD": 8.8348
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] 05_유형화_분석_계획_A+B.md · 소득분위_0_10_연도별_당해이탈률_분석.md · 소득분위_연도별추이_및_학과별상세분석.md · 소득분위_통계정합성_검정보고서.md · 소득분위별_성적_입학점수_분포분석.md 외 31건"
+        },
+        {
+          "projectId": "062",
+          "did": "[fs scan] background.js · popup.html · popup.js · supabase.js"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "weekday": "일",
+      "filesChanged": 33,
+      "topProjectIds": [
+        "02",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "02",
+          "did": "[fs scan] 계원예대_신입생_종합분석보고서.md · 고교유형별_학업성적_및_소득배경_상호작용_분석.md · 일반고_비율과_이탈률_통계분석보고서.md · 건축디자인과_세부분석보고서.md · 게임미디어과_세부분석보고서.md 외 20건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W23.json",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-4-5": {
+                "in": 67,
+                "out": 4429,
+                "cache_read": 318109,
+                "cache_write": 57143,
+                "messages": 18,
+                "costUSD": 0.1255
+              },
+              "claude-sonnet-4-6": {
+                "in": 92,
+                "out": 41035,
+                "cache_read": 3181245,
+                "cache_write": 130081,
+                "messages": 72,
+                "costUSD": 2.058
+              }
+            },
+            "total": {
+              "in": 159,
+              "out": 45464,
+              "cache_read": 3499354,
+              "cache_write": 187224,
+              "messages": 90
+            },
+            "costUSD": 2.1834
+          }
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "054",
+      "pct": 25,
+      "filesChanged": 1,
+      "imp": 4,
+      "did": "T1 4사례 분기점 진술 역량명제 분석 완료. v0.14 봇 팀 라운드테이블(4조교 병렬) — 구조·방법론·정합성·윤문 쟁점 정리",
+      "nextAction": "역량 명제 논증 완결 + v0.15 윤문조교 지적 반영"
+    },
+    {
+      "id": "039",
+      "pct": 20,
+      "filesChanged": 1,
+      "imp": 3,
+      "did": "RISE 2-2 산학협력 3종 행사 계획서 v0.1 — 제2회 기업 네트워킹데이·CEO AI 워크숍·디자인 터칭데이",
+      "nextAction": "기획안 v1.0 완성 + 예산계획서 v0.2 정합"
+    },
+    {
+      "id": "03",
+      "pct": 15,
+      "filesChanged": 24,
+      "imp": 3,
+      "did": "Nabaksa's lab 브랜드 전략·컨텍스트·리서치 작업 — brand-context, brand-strategy, F-BIZ/IND/REG/VIS 리서치 파일 24건",
+      "nextAction": "새론솔루션 Figma Variant A 완성"
+    },
+    {
+      "id": "02",
+      "pct": 20,
+      "filesChanged": 57,
+      "imp": 4,
+      "did": "05_gemini ML 분석 완성(06-06~07) — 익명화 통합 데이터셋 구축(6,089명×62변수) + 랜덤포레스트 제적 예측(AUC 0.880) + 5관점 K-means 군집분석 + 학과별 보고서 22종 자동 생성. 04_산출물 종합분석보고서·소득분위·고교유형별 분석 보고서 완성.",
+      "nextAction": "종합분석보고서 v08 최종 완성 + 정책 함의 정리"
+    },
+    {
+      "id": "056",
+      "pct": 10,
+      "filesChanged": 0,
+      "imp": 3,
+      "did": "SAI 논문군 정합성조교 발제 — Kemp·Moser·Li·Krishna 4논문의 'situated' 개념 equivocation 분석",
+      "nextAction": "SituatedAI 개념 정의 초안 + PROJECT.md 정리"
+    },
+    {
+      "id": "01",
+      "pct": 5,
+      "filesChanged": 8,
+      "imp": 2,
+      "did": "디자인 파운데이션 artboard 작업 — editorial·grid·quiet·universal 4종",
+      "nextAction": "작업공간 운영 유지"
+    },
+    {
+      "id": "061",
+      "pct": 5,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "v0.9.3 운영 지속 — AI 세션 작업 (파일 변경 없음)",
+      "nextAction": "v0.9.3 모바일 안정화"
+    },
+    {
+      "id": "063",
+      "pct": 5,
+      "filesChanged": 3,
+      "imp": 2,
+      "did": "W23 주간 업데이트 + 대시보드 유지",
+      "nextAction": "Phase 4 Monthly·Yearly 집계 자동화"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-06-03",
+      "projectId": "054",
+      "title": "CPSF 역량 명제 확정",
+      "description": "제약 명제 대신 역량 명제로 결정. '동적 re-bounding 자체가 mechanization 회피 역량'. 김수진 사례는 deviant case(경계 조건)로 재배치.",
+      "isMilestone": false
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-06-07T13:49:12.352Z",
+  "tokens": {
+    "total": {
+      "in": 56293,
+      "out": 336521,
+      "cache_read": 35669700,
+      "cache_write": 2183417
+    },
+    "costUSD": 21.067,
+    "costKRW": 30968
+  }
+}

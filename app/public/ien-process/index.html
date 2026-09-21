@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>임차in케어 브랜드 리서치 — 3일의 기록</title>
+<style>
+:root{
+  --ink:#1C2422; --ink-70:rgba(28,36,34,.70); --ink-45:rgba(28,36,34,.45);
+  --deep:#194D2E; --mid:#2D764A; --sig:#55DC8C; --pale:#D7EADF; --wash:#F0F5F2;
+  --amber:#B45309; --line:#E3EAE7; --bg:#fff;
+  --gut:clamp(18px,4vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);line-height:1.68;
+ font-family:Pretendard,'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+ -webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--gut)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);
+ border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:26px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+nav a{font-size:13px;color:var(--ink-45);text-decoration:none}
+nav a:hover{color:var(--deep)}
+
+/* hero — 여백을 한 곳에 몰아준다 (D3) */
+header{padding:clamp(80px,14vh,180px) 0 clamp(70px,11vh,140px)}
+h1{font-size:clamp(38px,7.2vw,86px);font-weight:800;letter-spacing:-.045em;line-height:1.04}
+h1 em{font-style:normal;color:var(--mid)}
+.lede{margin-top:30px;font-size:clamp(15px,1.5vw,18px);color:var(--ink-70);max-width:50ch}
+.thesis{margin-top:56px;padding:26px 30px;background:var(--wash);border-left:3px solid var(--sig);
+ font-size:clamp(17px,2vw,23px);font-weight:700;letter-spacing:-.02em;line-height:1.5}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--line);
+ border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:56px}
+.stat{background:#fff;padding:22px 18px}
+.stat b{display:block;font-size:clamp(24px,3.4vw,38px);font-weight:800;letter-spacing:-.04em;line-height:1.1;color:var(--deep)}
+.stat span{display:block;margin-top:5px;font-size:12px;color:var(--ink-45)}
+.stat.warn b{color:var(--amber)}
+
+/* sections */
+section{padding:clamp(64px,9vh,116px) 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;color:var(--mid);text-transform:uppercase}
+h2{margin-top:12px;font-size:clamp(28px,4.4vw,52px);font-weight:800;letter-spacing:-.035em;line-height:1.14}
+h3{margin:56px 0 6px;font-size:clamp(19px,2.2vw,25px);font-weight:700;letter-spacing:-.025em}
+h4{margin:34px 0 4px;font-size:16px;font-weight:700;letter-spacing:-.02em}
+p{margin-top:14px;max-width:70ch}
+.sub{color:var(--ink-45);font-size:14px;margin-top:8px}
+strong{font-weight:700}
+
+/* quote — 진현의 실제 말 */
+blockquote{margin:22px 0;padding:20px 24px;background:var(--wash);border-radius:3px;
+ font-size:clamp(15px,1.6vw,18px);line-height:1.66}
+blockquote .who{display:block;margin-bottom:10px;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--mid)}
+blockquote b{background:linear-gradient(transparent 62%,var(--sig) 62%);font-weight:700}
+blockquote + blockquote{margin-top:-8px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--ink-45);text-transform:uppercase}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.hi td{background:var(--wash)}
+
+/* images */
+.grid{display:grid;gap:14px;margin:22px 0}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g5{grid-template-columns:repeat(5,1fr)}
+figure{margin:0}
+figure img{width:100%;display:block;border:1px solid var(--line);border-radius:2px;background:var(--wash)}
+figcaption{margin-top:7px;font-size:11.5px;color:var(--ink-45);letter-spacing:-.01em}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:24px 0}
+.ba .side b{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.07em;padding:3px 9px;border-radius:3px;margin-bottom:9px}
+.before b{background:#F5E6E0;color:#8A4B33}
+.after b{background:var(--pale);color:var(--deep)}
+
+/* code */
+pre{margin:16px 0;padding:18px 20px;background:var(--ink);color:#D8E8DF;border-radius:3px;
+ font-size:12.5px;line-height:1.72;overflow-x:auto;
+ font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+pre .k{color:var(--sig);font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;
+ background:var(--wash);padding:1px 5px;border-radius:2px}
+
+/* type cards */
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);margin:26px 0}
+.type{background:#fff;padding:22px 20px}
+.type .no{font-size:30px;font-weight:800;color:var(--pale);line-height:1;letter-spacing:-.04em}
+.type h5{margin-top:8px;font-size:15px;font-weight:700;letter-spacing:-.02em}
+.type p{margin-top:7px;font-size:13px;color:var(--ink-70);line-height:1.6}
+
+/* point */
+.point{margin:26px 0;padding:18px 22px;border:1px solid var(--line);border-left:3px solid var(--mid);border-radius:2px;
+ font-size:14.5px;line-height:1.7}
+.point b{color:var(--deep)}
+.point .tag{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--mid);margin-bottom:7px}
+
+/* index links */
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--line);margin:24px 0}
+.idx a{background:#fff;padding:20px;text-decoration:none;color:inherit;display:block}
+.idx a:hover{background:var(--wash)}
+.idx .t{font-size:14.5px;font-weight:700;letter-spacing:-.02em;color:var(--deep)}
+.idx .d{margin-top:5px;font-size:12.5px;color:var(--ink-45);line-height:1.55}
+.idx .p{margin-top:9px;font-size:11px;color:var(--mid);font-family:ui-monospace,Menlo,monospace;word-break:break-all}
+
+footer{padding:64px 0 90px;border-top:1px solid var(--line);color:var(--ink-45);font-size:13px}
+footer b{color:var(--ink);font-weight:700}
+@media(max-width:820px){.g3,.g5{grid-template-columns:repeat(2,1fr)}.ba{grid-template-columns:1fr}}
+@media(max-width:560px){.g2,.g3,.g5{grid-template-columns:1fr}}
+
+/* 버전 아카이브 */
+.varch{margin-top:34px;border-top:1px solid var(--line)}
+.vrow{display:grid;grid-template-columns:104px 84px 1fr;gap:0 20px;align-items:baseline;
+ padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.vrow:hover{background:var(--wash)}
+.vrow .vv{font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--mid);font-variant-numeric:tabular-nums}
+.vrow .vd{font-size:12px;color:var(--ink-45);font-variant-numeric:tabular-nums}
+.vrow .vt{font-size:17px;font-weight:700;letter-spacing:-.02em}
+.vrow .vn{grid-column:3;font-size:13.5px;color:var(--ink-70);margin-top:3px}
+.vrow.is-final{background:var(--wash)}
+.vrow.is-final .vv{color:var(--deep)}
+.vsubs{grid-column:3;display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.vsubs a{font-size:12px;font-weight:700;color:var(--deep);text-decoration:none;
+ border:1px solid var(--pale);background:#fff;padding:5px 10px;border-radius:2px}
+.vsubs a:hover{border-color:var(--mid)}
+.vwrap{border-bottom:1px solid var(--line)}
+.vwrap:last-child{border-bottom:0}
+.vwrap .vrow{border-bottom:0}
+.vwrap .vsubs{padding:0 0 18px 208px}
+@media(max-width:700px){
+  .vrow{grid-template-columns:1fr;gap:2px}
+  .vrow .vn,.vsubs{grid-column:1}
+  .vwrap .vsubs{padding-left:0}
+}
+</style></head><body>
+
+<nav><div class="wrap">
+<b>임차in케어 · 브랜드 리서치</b>
+<a href="#process">프로세스</a><a href="#undo">되돌림 5유형</a><a href="#prompt">프롬프트</a>
+<a href="#target">타깃</a><a href="#gap">안 된 것</a><a href="#versions">버전 아카이브</a><a href="#index">자료 인덱스</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">2026.09.19 – 09.21 · 3 DAYS</div>
+  <h1>AI와 브랜드 리서치를<br>한다는 것 <em>— 되돌림 17번의 기록</em></h1>
+  <p class="lede">㈜아이엔 「임차in케어」 브랜드 컨셉·Look&amp;Feel 자문. 사람 한 명과 두 개의 AI가 사흘간 78번 주고받았다. 이 페이지의 모든 인용은 실제 대화 원문이다.</p>
+  <div class="thesis">AI와 일한다는 건 만드는 일이 아니라 되돌리는 일이다.</div>
+  <div class="stats">
+    <div class="stat"><b>78</b><span>주고받은 턴 (GPT 65 + Claude 13)</span></div>
+    <div class="stat"><b>939</b><span>수집 이미지 (유효 표본)</span></div>
+    <div class="stat"><b>41</b><span>실측한 기업</span></div>
+    <div class="stat"><b>16</b><span>조사한 경쟁 서비스</span></div>
+    <div class="stat"><b>8</b><span>시안 버전 v0.1→v0.8</span></div>
+    <div class="stat"><b>17</b><span>되돌린 횟수</span></div>
+    <div class="stat warn"><b>0</b><span>고객 인터뷰</span></div>
+  </div>
+</div></header>
+
+<!-- 프로세스 -->
+<section id="process"><div class="wrap">
+  <div class="eyebrow">01 · Process</div>
+  <h2>다섯 단계로 어떻게 갔나</h2>
+  <p>시안부터 그리지 않았다. 클라이언트는 이미 브랜드북 458줄·사업설명서 1,035줄·BI 가이드 22쪽을 갖고 있었고, 대표 본인이 <strong>“문서가 계속 커지고 대표 자신도 따라가기 벅찬 상태”</strong>라고 썼다. 부족한 것은 문서가 아니라 <strong>판단 기준</strong>이었다.</p>
+
+  <table>
+    <tr><th style="width:130px">단계</th><th>한 일</th><th style="width:150px">도구</th><th style="width:210px">남은 것</th></tr>
+    <tr><td><strong>① 생각(가설)</strong></td><td>백지에서 다시 묻기. 은유 → 행동 프레임</td><td>ChatGPT</td><td>살핌–발견–준비–지원</td></tr>
+    <tr><td><strong>② 수집</strong></td><td>이미지 939장 · 기업 41곳 · 경쟁 16곳 · 단행본 1권</td><td>Claude Code</td><td>컨택트시트 · 실측표 · 근원 3층</td></tr>
+    <tr><td><strong>③ 정리</strong></td><td>측정과 추정 분리 · 출처 검증</td><td>Claude Code</td><td>인용 명세서 · 게이트 10개</td></tr>
+    <tr><td><strong>④ 전략</strong></td><td>시장에서 우리 자리 찾기</td><td>Claude Code</td><td>포지셔닝 축 · 색 진단 · 보고서</td></tr>
+    <tr><td><strong>⑤ 시각화</strong></td><td>시안 v0.1 → v0.8</td><td>ChatGPT image_gen</td><td>3컨셉 × 7페이지</td></tr>
+  </table>
+
+  <h3>① 은유에서 행동으로</h3>
+  <p>AI가 물었다. “안심은 셋 중 무엇입니까 — 보호막 안의 안심 / 누가 보고 있다는 안심 / 평범한 일상을 살 수 있다는 안심?”</p>
+  <blockquote><span class="who">진현 · 9/18 23:33</span>전문가가 전체 여정을 보면서 케어해주는 느낌. <b>아이가 뒤뚱뒤뚱 걸어서 넘어져도 다시 일으켜 세워주는 따뜻한 엄마느낌</b>이 하나이고 (…) 3가지가 종합적으로 접근되는 느낌이면 좋겠음.</blockquote>
+  <p>그런데 ‘엄마’를 광고에 그대로 쓰면 고객이 아이가 된다. 그래서 행동으로 번역했다. 그리고 2분 뒤, 문장 하나를 직접 고쳤다.</p>
+  <blockquote><span class="who">진현 · 23:35</span>→ 문제가 생기면 필요한 순간에 개입한다 <b>→ 이것보다 문제가 생길 수 있는 변동상황이 발생하면 미리 알리고 어떻게 준비 해야 하는지 전달한다.</b></blockquote>
+  <p>이 한 줄이 브랜드를 <strong>사후 대응에서 사전 예방으로</strong> 옮겼다. 결과는 <strong>「살핌 → 발견 → 준비 → 지원」</strong>. 사흘간 한 번도 안 바뀐 유일한 구조이고, 마지막 시안 v0.8의 7페이지 구성도 이 위에 서 있다.</p>
+  <div class="point"><span class="tag">수업 포인트</span>좋은 은유일수록 그대로 쓰면 위험하다. <b>은유는 느낌을 찾는 도구이고, 쓸 때는 행동으로 바꿔야 한다.</b></div>
+
+  <h3>② 수집 — 언어를 바꾸자 다른 세계가 나왔다</h3>
+  <div class="grid g2">
+    <figure><img src="01_리서치/이미지리서치/03_contact_sheets/Q02_contact_sheet.jpg" alt="Q02 컨택트시트"><figcaption>Q02 — 한국 전세 카테고리의 시각 기본값. 방패·마스코트·연예인·정보 과밀·초록과 파랑</figcaption></figure>
+    <figure><img src="01_리서치/이미지리서치/03_contact_sheets/Q06_contact_sheet.jpg" alt="Q06 컨택트시트"><figcaption>Q06 — 돌아갈 장소. 한국어로 검색하자 철문·도어록·형광등·좁은 복도가 나왔다</figcaption></figure>
+  </div>
+  <table>
+    <tr><th>영어 검색</th><th>한국어 검색</th></tr>
+    <tr><td>목재 현관문, 포치, 화분, 웰컴 매트</td><td><strong>철문, 도어록, 형광등, 타일 바닥</strong></td></tr>
+    <tr><td>따뜻한 텅스텐 조명</td><td>차가운 형광등</td></tr>
+    <tr><td>잔디·정원</td><td>자전거·우편함·소화전</td></tr>
+  </table>
+  <p>여기서 원리가 나왔다. <strong>따뜻함을 공간에서 찾지 말고 빛에서 찾는다.</strong> 한국 임차 주거의 공간은 좁고 중성적이다. 따뜻함은 인테리어가 아니라 문 안쪽에서 새어 나오는 빛에 있다.</p>
+
+  <h3>기업 41곳은 눈이 아니라 자로 쟀다</h3>
+  <div class="grid g3">
+    <figure><img src="01_리서치/실제기업_브랜드레퍼런스/07_시각분석/TY1_타이포_비교.jpg" alt="타이포 비교"><figcaption>타이포 — 브라우저 계산값에서 실측</figcaption></figure>
+    <figure><img src="01_리서치/실제기업_브랜드레퍼런스/07_시각분석/L1_레이아웃구조.jpg" alt="레이아웃"><figcaption>레이아웃 — 블록 수와 간격</figcaption></figure>
+    <figure><img src="01_리서치/실제기업_브랜드레퍼런스/07_시각분석/T3_일상의여백_색톤매트릭스.jpg" alt="색톤 매트릭스"><figcaption>색 톤 — 이미지별 구성 (평균 내지 않았다)</figcaption></figure>
+  </div>
+  <table>
+    <tr><th></th><th class="n">국내</th><th class="n">해외</th></tr>
+    <tr><td>제목 글자 크기</td><td class="n">35.4px</td><td class="n">66.5px</td></tr>
+    <tr class="hi"><td>제목 ÷ 본문 (위계)</td><td class="n"><strong>2.3배</strong></td><td class="n"><strong>4.7배</strong></td></tr>
+    <tr><td>화면당 정보 덩어리</td><td class="n">6.4개</td><td class="n">6.3개</td></tr>
+    <tr class="hi"><td>덩어리 간격</td><td class="n"><strong>4.9%</strong></td><td class="n"><strong>8.0%</strong></td></tr>
+    <tr><td>사진 수</td><td class="n">8.4장</td><td class="n">2.1장</td></tr>
+  </table>
+  <p><strong>정보량은 같다.</strong> 국내 화면이 답답한 이유는 내용이 많아서가 아니라 크기와 간격이었다.</p>
+
+  <h3>③ AI가 자기 결과를 버렸다</h3>
+  <p>처음엔 웹사이트 첫 화면에서 픽셀을 뽑아 색을 분석했다. 결과가 전부 어둡고 칙칙했다. 원인은 방법에 있었다 — 첫 화면 대부분이 사진이라 <strong>브랜드 색이 아니라 사진의 평균색</strong>을 뽑고 있었다. 분석을 버리고 층을 올렸다.</p>
+  <table>
+    <tr><th>층</th><th>성격</th><th>거기서 나온 사실</th></tr>
+    <tr><td>운영 웹사이트</td><td>마모됨. 프로모션이 덮고 있다</td><td>—</td></tr>
+    <tr><td>제작 스튜디오 사례</td><td>자기 홍보</td><td>Wise가 핀테크 파랑을 버린 이유</td></tr>
+    <tr class="hi"><td><strong>공식 가이드 문서</strong></td><td><strong>정본</strong></td><td>토스 공식 <strong>2색</strong> · 카카오뱅크 로고색 <strong>검정 하나</strong></td></tr>
+  </table>
+  <div class="point"><span class="tag">수업 포인트</span>자료에는 <b>층</b>이 있다. 운영 화면 &lt; 제작사 사례 &lt; 공식 규정 문서. 위로 올라갈수록 사실에 가깝다.</div>
+
+  <h3>④ 클라이언트의 전제가 틀렸다</h3>
+  <p>브랜드북에 “사고 전부터 작동하는 <strong>유일한</strong> 주거 케어”라는 문장이 있었다. 아무도 확인한 적이 없어서 16곳을 조사했다. 결과는 <strong>「아니오」</strong>였다.</p>
+  <table>
+    <tr><th>서비스</th><th>하는 일</th><th>비용</th></tr>
+    <tr class="hi"><td><strong>HUG 안심전세앱</strong> (2026.9 개편)</td><td>주소만 넣으면 위험도 분석 · 등기 변동 알림 2년 6개월</td><td><strong>무료</strong></td></tr>
+    <tr class="hi"><td><strong>경기도 안심 부동산</strong> (2026.9.15)</td><td>계약 전 권리분석 · 24시간 등기 감시</td><td><strong>무료</strong></td></tr>
+    <tr><td>체크팀</td><td>등기 알림 + 권리분석</td><td>월 1,100원</td></tr>
+  </table>
+  <p>임차in케어 출시는 10월이다. <strong>정부가 한 달 먼저, 공짜로 시작했다.</strong> 그런데 세 층으로 자르니 빈자리가 보였다.</p>
+  <table>
+    <tr><th>층</th><th>지금 누가 하나</th></tr>
+    <tr><td><strong>감시</strong> — 계속 본다</td><td>공공이 무료로 포화</td></tr>
+    <tr><td><strong>판단</strong> — 뭘 할지 알려준다</td><td>공공이 무료로 포화</td></tr>
+    <tr class="hi"><td><strong>실행</strong> — 대신 처리한다</td><td><strong>전부 사고가 난 뒤에만 열린다</strong></td></tr>
+  </table>
+  <p>셋을 잇는 곳이 없었다. <strong>차별점은 기능이 아니라 연결에 있다.</strong></p>
+  <div class="point"><span class="tag">수업 포인트</span>클라이언트가 “우리만 한다”고 말할 때, 그건 <b>검증 대상</b>이지 전제가 아니다.</div>
+</div></section>
+
+<!-- 되돌림 -->
+<section id="undo"><div class="wrap">
+  <div class="eyebrow">02 · Core</div>
+  <h2>되돌림 17번, 다섯 유형</h2>
+  <p>사람이 개입한 17번을 유형으로 묶었다. <strong>열일곱 번 중 열한 번이 “줄여라”거나 “되돌려라”였다.</strong></p>
+
+  <div class="types">
+    <div class="type"><div class="no">01</div><h5>범위를 되돌린다</h5><p>작업 자체를 다시 정의한다. 가장 이르고 가장 크게 바뀐다</p></div>
+    <div class="type"><div class="no">02</div><h5>방법을 되돌린다</h5><p>AI의 기본 작업 방식을 바꾼다</p></div>
+    <div class="type"><div class="no">03</div><h5>세기를 되돌린다</h5><p>가장 많았다. 한 방향으로만 말하면 실패한다</p></div>
+    <div class="type"><div class="no">04</div><h5>구체성을 올린다</h5><p>형용사를 치수로 바꾼다</p></div>
+    <div class="type"><div class="no">05</div><h5>출처를 되돌린다</h5><p>말의 주인을 구분한다</p></div>
+  </div>
+
+  <h3>① 범위 — “그 일이 아니다”</h3>
+  <blockquote><span class="who">진현 · 9/18 23:25 · 시작 3분 뒤</span>일단 <b>브랜드를 처음부터 다시 만드는게 필요해.</b> 현재의 디자인 가이드와 스타일들이 맞는지부터 질문이 시작되. 현재 디자인에서 <b>남길것과 바꿔야할 것</b>을 새로운 경영 전략 방향성에서 검토부터 하면 될까?</blockquote>
+  <p>“고쳐 쓰자”와 “다시 보자”는 전혀 다른 작업이 된다. <strong>이 한 줄이 이후 3일을 결정했다.</strong></p>
+  <blockquote><span class="who">진현 · 9/20 21:58</span>어떤 비주얼 스타일이 컨셉에 맞는지 일단 확인해서 제안해줘. <b>생성하지 말고</b> 적절하다고 파악되는 스타일들을 컨셉별로 보여줘. <b>리서치에 찾은 비주얼 스타일을.</b></blockquote>
+  <p>AI에게 “만들어줘”라고 하면 만든다. 그런데 <strong>근거는 안 생긴다.</strong> 모아둔 41곳에서 고르고 이유를 대게 하는 것이 리서치와 시안을 잇는 방법이다.</p>
+
+  <h3>② 방법 — “그렇게 하지 말고”</h3>
+  <blockquote><span class="who">진현 · 9/19 00:37</span>일단 가깝다고 느끼는 이미지 10장 보다 <b>30장씩</b>을 찾아주세요. (…) 너한테 부탁하면 너는 <b>전형적인 이미지 하나씩만 뽑아줘서.</b> 나는 훨씬 많은 양의 이미지를 검색해서 리뷰 해서 <b>이미지의 경향과 공통요인을 뽑거든.</b></blockquote>
+  <p>이 수정 하나로 180장 목표가 <strong>939장</strong>이 됐다. 앞서 본 발견들은 <strong>많이 봤기 때문에</strong> 보였다.</p>
+  <div class="point"><span class="tag">수업 포인트</span>AI는 “예쁜 것 몇 개”를 잘 고른다. 리서치에 필요한 건 <b>전형(典型)</b>이고, 전형은 양을 봐야 보인다.</div>
+
+  <h3>③ 세기 — “너무 세다 / 너무 약하다”</h3>
+  <h4>첫 무드보드, 전면 기각</h4>
+  <div class="ba">
+    <div class="side before"><b>BEFORE — v0.1</b>
+      <div class="grid g3">
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.1/01_대담한온기.jpg" alt=""><figcaption>01 대담한 온기</figcaption></figure>
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.1/02_선명한전문성.jpg" alt=""><figcaption>02 선명한 전문성</figcaption></figure>
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.1/03_생기있는생활.jpg" alt=""><figcaption>03 생기 있는 생활</figcaption></figure>
+      </div>
+    </div>
+    <div class="side after"><b>AFTER — v0.2</b>
+      <div class="grid g3">
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.2/01_잔잔한온기.jpg" alt=""><figcaption>01 잔잔한 온기</figcaption></figure>
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.2/02_맑은시선.jpg" alt=""><figcaption>02 맑은 시선</figcaption></figure>
+        <figure><img src="04_산출물/20260919_브랜드무드보드_v0.2/03_일상의여백.jpg" alt=""><figcaption>03 일상의 여백</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <blockquote><span class="who">진현 · 9/19 02:31</span><b>너무 과격하다.</b> 이미지리서치를 기준으로 해야하는데 컨셉 반영 전에 좀 더 예민하고 섬세하게 갔으면 좋겠어. <b>너무 거칠고 볼드하고 과격해.</b> 무드보드니까 무드를 보여줘. <b>느낌적인 느낌.</b></blockquote>
+  <p>다시 만들 때는 <strong>앞서 모은 컨택트시트를 참조 이미지로 직접 넣었다.</strong> 상상해서 그리지 말고 우리가 실제로 모은 것의 분위기에서 출발하라는 뜻이다. 여기서 나온 세 컨셉 이름이 끝까지 간다.</p>
+
+  <h4>색을 여섯 번 주고받았다</h4>
+  <blockquote><span class="who">진현 · 9/20 14:05~14:31</span>시안 3의 경우에 <b>옐로우가 카카오 페이지랑 너무 비슷하다.</b></blockquote>
+  <blockquote><b>잔잔한 온기의 오렌지색이 너무 쎼다.</b> 오렌지보다 조금 라이트하지만 <b>더 선명한 색</b>이 있으면 어때?</blockquote>
+  <blockquote><b>맑은시선은 좀 너무 촌스럽다.</b> 좀 더 가벼운 하늘색과 좀 더 진중한 깊이있는 하늘색 <b>2가지</b>를 같이 사용해보면 어떨까?</blockquote>
+  <blockquote>에어블루와 딥스카이의 <b>중간색들</b>이 있으면 좋겠음.</blockquote>
+  <blockquote>배경이 너무 틴트한 색이라서 <b>거의 화이트에 조금의 칼러 힌트</b>를 넣으면 좋겠어. <b>웜톤 화이트</b> 같은 느낌.</blockquote>
+
+  <h4 style="color:var(--deep)">가장 중요한 한 쌍 — 1분 간격</h4>
+  <blockquote><span class="who">진현 · 9/20 15:07</span>페이지 레이아웃 할때도 보면 조형형태의 반영을 더 해달라고 하는데 <b>특징이 너무 없네.</b></blockquote>
+  <blockquote><span class="who">진현 · 9/20 15:08 · 바로 다음 턴</span><b>조형형태가 너무 과하지 않게</b> 작업해주세요.</blockquote>
+  <p>모순처럼 보이지만 모순이 아니다. <strong>AI는 한쪽을 지적받으면 반대쪽 끝으로 간다.</strong> 그래서 한 번 밀면 반드시 한 번 당겨야 한다. 이게 <strong>“폭을 정해주는”</strong> 일이다.</p>
+  <div class="point"><span class="tag">수업 포인트</span>피드백을 한 방향으로만 주면 진자운동이 시작된다. <b>“더 ○○하게”를 말했으면, 그 다음에 “단, 여기까지”를 말해야 한다.</b></div>
+
+  <h3>④ 구체성 — “형용사를 치수로”</h3>
+  <blockquote><span class="who">진현 · 9/20 15:06 · 사진 한 장을 다섯 군데 짚었다</span>일상의 여백에서 <b>3페이지의 이미지가 좀 쌩뚱맞음.</b> 테이블의 빈공간이 너무 크고 종이와 계약서 관련 내용이 명확하게 보여지지 않음. 그리고 <b>창 아래로 보이는 아파트가 좀 불편함.</b> <b>의자의 경우도 좀 어색함.</b> 현재 이미지를 보면 <b>창이 큰 집(2p)와 주택동네인(4p)랑 이미지의 연결이 안되는 것</b> 같아. (…) 대표이미지도 좋은데 <b>집이 임차인 치고는 너무 큰 것 같아서.</b></blockquote>
+  <div class="ba">
+    <div class="side before"><b>BEFORE — v0.6</b>
+      <div class="grid g3">
+        <figure><img src="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/03_일상의여백/01_살핌.jpg" alt=""><figcaption>살핌</figcaption></figure>
+        <figure><img src="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/03_일상의여백/03_준비.jpg" alt=""><figcaption>준비 — 창밖 아파트·빈 테이블</figcaption></figure>
+        <figure><img src="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/03_일상의여백/04_지원.jpg" alt=""><figcaption>지원</figcaption></figure>
+      </div>
+    </div>
+    <div class="side after"><b>AFTER — v0.7</b>
+      <div class="grid g3">
+        <figure><img src="04_산출물/20260921_일상의여백_생활연결_v0.7/01_살핌.jpg" alt=""><figcaption>살핌 — 작은 집·허리 높이 창</figcaption></figure>
+        <figure><img src="04_산출물/20260921_일상의여백_생활연결_v0.7/03_준비.jpg" alt=""><figcaption>준비 — 계약서와 손만</figcaption></figure>
+        <figure><img src="04_산출물/20260921_일상의여백_생활연결_v0.7/04_지원.jpg" alt=""><figcaption>지원 — 같은 인물·같은 동네</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <p>프롬프트가 이렇게 바뀌었다. <strong>“소박하게”가 아니라 치수다.</strong></p>
+<pre><span class="k">normal sized waist-height window (NOT floor-to-ceiling),
+small 80cm light oak two-person table</span>
+Eye-level medium-wide <span class="k">50mm feel</span>, no wide-angle spacious luxury.
+room remains small, tasteful but not aspirational luxury.
+No staircase, mansion, huge hallway.</pre>
+  <p>그리고 <strong>연속성 장치</strong>가 새로 들어갔다.</p>
+<pre><span class="k">Reference image is the continuity anchor</span> for person, compact home,
+neighborhood, light and materials, not a layout to duplicate.
+Create the next scene in the <span class="k">SAME compact home</span>,
+<span class="k">SAME Korean woman in ivory cotton shirt with tied dark hair.</span></pre>
+  <p>세 번째 장에서는 화면에 무엇이 들어오면 <em>안 되는지</em>까지 지정했다.</p>
+<pre>closely cropped so <span class="k">NO window, outdoor buildings, chair or person's face</span> is visible.
+Documents and hands occupy about <span class="k">65 percent</span>,
+table negative space only <span class="k">20 percent</span>, context <span class="k">15 percent</span>.</pre>
+  <div class="point"><span class="tag">수업 포인트</span>① AI 이미지의 품질은 형용사가 아니라 <b>숫자</b>에서 온다. ② <b>연속성은 자동으로 안 생긴다.</b> 앞 이미지를 기준으로 넣어줘야 같은 세계가 된다.</div>
+
+  <h3>⑤ 출처 — “이거 누가 한 말이야”</h3>
+  <blockquote><span class="who">진현 · 9/18 23:51 · 네 단계 표를 받고</span>이 부분이 지금 <b>니가 작업한거니? 아님 대표님의 자료에서 온거니?</b></blockquote>
+  <p>이 질문 이후 라벨 다섯 개를 정했다 — <code>[대표 원문]</code> <code>[사용자 해석]</code> <code>[AI 제안]</code> <code>[공동 가설]</code> <code>[확정]</code>. 그리고 검증 단계에서 실제로 세 건이 걸렸다.</p>
+  <table>
+    <tr><th>걸린 것</th><th>내용</th><th>조치</th></tr>
+    <tr><td>출처 누락</td><td>포지셔닝 문장 틀의 <strong>원저자가 빠져 있었다</strong> (1991년 책)</td><td>병기</td></tr>
+    <tr><td>용어 오용</td><td>“시각 부채”가 통용 용어와 달랐다</td><td>교체</td></tr>
+    <tr class="hi"><td><strong>출처 없음</strong></td><td>「표현 영토 3종」 — 찾아보니 <strong>어디에도 없었다</strong></td><td><strong>사용 금지</strong></td></tr>
+  </table>
+  <div class="point"><span class="tag">수업 포인트</span>AI가 제시한 프레임워크는 <b>이름이 그럴듯할수록 의심</b>해야 한다. 검색해서 원문이 안 나오면 없는 것이다.</div>
+
+  <h3>보너스 — 뒤늦게 나온 조건 하나가 전략을 바꿨다</h3>
+  <blockquote><span class="who">진현 · 9/20 13:39 · 색 논의 중</span>좀 <b>볼드한 명시성이 높은 유니크 한 색</b>이 좀 있으면 좋을 것 같아. 왜냐면 앞으로 이 색이 <b>전국의 부동산에서 터치스크린 키오스크로 제공되야 하는데</b> 들어가 있는 것이 잘 보이면 좋겠어서.</blockquote>
+  <p>이건 취향이 아니라 <strong>요구사항</strong>이다. 손에 든 앱과 멀리서 스치듯 보는 키오스크는 필요한 색이 다르다.</p>
+  <div class="point"><span class="tag">수업 포인트</span>“어디에 쓰이나”를 <b>초반에</b> 물어야 한다. 늦게 나온 조건이 앞의 작업을 무효로 만든다.</div>
+</div></section>
+
+<!-- 프롬프트 -->
+<section id="prompt"><div class="wrap">
+  <div class="eyebrow">03 · Prompt</div>
+  <h2>프롬프트는 어떻게 자랐나</h2>
+  <p>같은 “브랜드 이미지를 만들어줘”인데 사흘 사이 이렇게 달라졌다. <strong>늘어난 것은 지시가 아니라 제약이다.</strong></p>
+  <table>
+    <tr><th style="width:80px">버전</th><th style="width:180px">성격</th><th>대표 문장</th></tr>
+    <tr><td><strong>v0.1</strong></td><td>만들 것을 나열</td><td><code>oversized confident typography, large coral curved color fields</code></td></tr>
+    <tr class="hi"><td><strong>v0.2</strong></td><td><strong>금지 목록이 절반</strong></td><td><code>no bold typography, no slogans, no logo… This is a feeling before any branding concept</code></td></tr>
+    <tr><td><strong>v0.4</strong></td><td>리서치가 단어로</td><td><code>Korean low-rise housing… SIDE BY SIDE, Equal footing, no handshake</code></td></tr>
+    <tr class="hi"><td><strong>v0.7</strong></td><td><strong>치수와 연속성</strong></td><td><code>waist-height window (NOT floor-to-ceiling), 80cm table… SAME woman, SAME home</code></td></tr>
+  </table>
+  <h3>v0.4의 단어는 어디서 왔나</h3>
+  <table>
+    <tr><th style="width:280px">프롬프트 단어</th><th>출처</th></tr>
+    <tr><td><code>low-rise housing</code></td><td>한국어 검색에서 나온 실물 (Q06 컨택트시트)</td></tr>
+    <tr><td><code>no decaying danger imagery</code></td><td>브랜드북의 공포 이미지 금지 규정</td></tr>
+    <tr><td><code>SIDE BY SIDE</code> · <code>no handshake</code></td><td>이미지리서치에서 확인한 「옆에서 동행」</td></tr>
+  </table>
+  <p><strong>여기까지 와야 “리서치를 했다”고 말할 수 있다.</strong></p>
+</div></section>
+
+<!-- 타깃 -->
+<section id="target"><div class="wrap">
+  <div class="eyebrow">04 · Target</div>
+  <h2>타깃을 다시 나눈 일</h2>
+  <blockquote><span class="who">진현 · 9/20 21:36</span>이 버전은 이대로 놔둬주시구요. 아주 좋아요. (…) 일단 이 세 시안마다 구체적인 타깃 그룹이 다를 것 같아. <b>그런데 지금 이미지를 보면 한명의 예쁜여자만 있자나.</b></blockquote>
+  <p>AI가 통계를 근거로 6그룹을 제안했고, 진현이 하나를 뺐다.</p>
+  <blockquote><span class="who">진현 · 21:45</span><b>집을 바꾸는 재정착 이건 좀 아닌 것 같음. 이건 빼고</b> 우리 주변에서 볼 수 있는 <b>일반인들의 얼굴</b>을 만들어주세요.</blockquote>
+  <div class="grid g5">
+    <figure><img src="04_산출물/20260921_5그룹_인물생활이미지_v0.1/01_첫독립.jpg" alt=""><figcaption>첫 독립 — 20대 남학생</figcaption></figure>
+    <figure><img src="04_산출물/20260921_5그룹_인물생활이미지_v0.1/02_혼자사는생활.jpg" alt=""><figcaption>혼자 사는 생활 — 40대 여성</figcaption></figure>
+    <figure><img src="04_산출물/20260921_5그룹_인물생활이미지_v0.1/03_둘의새살림.jpg" alt=""><figcaption>둘의 새 살림 — 30대 남녀</figcaption></figure>
+    <figure><img src="04_산출물/20260921_5그룹_인물생활이미지_v0.1/04_친구와함께.jpg" alt=""><figcaption>친구 공동거주 — 남성 두 명</figcaption></figure>
+    <figure><img src="04_산출물/20260921_5그룹_인물생활이미지_v0.1/05_가족과돌봄.jpg" alt=""><figcaption>가족·돌봄 — 3세대</figcaption></figure>
+  </div>
+  <p>그리고 중요한 판정이 하나 있었다. 세 디자인 컨셉을 <strong>세 인구집단의 전용 디자인으로 고정하지 않기로</strong> 했다. 같은 사람이 첫 계약에서는 명료함을 원하고, 거주 중에는 일상의 지속을 원하기 때문이다.</p>
+  <div class="point"><span class="tag">수업 포인트</span>① <b>“예쁜 여자 한 명”은 AI 이미지의 기본값이다.</b> 캐스팅은 명시적으로 깨야 한다. ② 타깃을 나이·성별로 잡으면 캐스팅이 먼저 정해지고 생각이 멈춘다. <b>“지금 무엇이 가장 급한 사람”</b>으로 잡으면 장면이 나온다.</div>
+</div></section>
+
+<!-- 안 된 것 -->
+<section id="gap"><div class="wrap">
+  <div class="eyebrow">05 · Limits</div>
+  <h2>안 된 것 — 이것도 수업 재료다</h2>
+  <p>3일에 이만큼 했다는 이야기로 끝나면 <strong>잘못 배운다.</strong> 못 한 것을 같이 봐야 한다.</p>
+  <table>
+    <tr><th style="width:230px">항목</th><th>상태</th></tr>
+    <tr class="hi"><td><strong>고객 인터뷰</strong></td><td><strong>0건.</strong> 이 리서치에 실제 임차인의 목소리가 하나도 없다</td></tr>
+    <tr><td>클라이언트 인터뷰</td><td>질문지(27문항)만 완성. 아직 못 만났다</td></tr>
+    <tr class="hi"><td>이미지 939장 분류</td><td><strong>AI 단독 판정. 사람이 한 번도 검토 안 했다</strong></td></tr>
+    <tr><td>경쟁 서비스</td><td>웹에서만 봤다. 가입해보지 않았다</td></tr>
+    <tr><td>색 인쇄 대응</td><td>Pantone 대응표 없음</td></tr>
+    <tr><td>결정</td><td><strong>5건 전부 미정</strong> — 색·심볼·이미지 노선·무료 경계·ONLY 정의</td></tr>
+    <tr><td>시안의 실제 효과</td><td><strong>전혀 모른다.</strong> 전부 설계 가설이다</td></tr>
+  </table>
+  <div class="point"><span class="tag">토론</span>939장을 보고 내린 판단과, 임차인 5명을 만나서 내린 판단은 무엇이 다를까? <b>둘 중 하나만 할 수 있다면?</b></div>
+</div></section>
+
+
+<!-- 버전 아카이브 -->
+<section id="versions"><div class="wrap">
+  <div class="eyebrow">06 · Versions</div>
+  <h2>시안 버전 전체 — 최신순</h2>
+  <p class="sub">사흘간 만든 HTML 산출물 20종. 위가 가장 최신이다. 각 항목은 새 탭에서 열린다.</p>
+  <div class="varch">
+<a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_전체13P_A4가로_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.1</span><span class="vd">09-21 11:29</span><span class="vt">브랜드전략 인포그래픽 · 전체 13P (A4 가로) ↗</span><span class="vn">리서치 전 과정을 13페이지 인포그래픽으로 재구성한 전체판</span></a>
+<a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_A4가로_v0.3/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.3</span><span class="vd">09-21 09:49</span><span class="vt">인포그래픽 핵심페이지 (A4 가로) ↗</span><span class="vn">살핌·발견·준비·지원 4단계 한 장 요약 — 최종본</span></a>
+<a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_A4가로_v0.2/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.2</span><span class="vd">09-21 09:37</span><span class="vt">인포그래픽 핵심페이지 (A4 가로) ↗</span><span class="vn">가로 판형 1차. 여백·위계 조정 전</span></a>
+<a class="vrow" href="04_산출물/20260921_브랜드전략_인포그래픽_핵심페이지_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">INFO v0.1</span><span class="vd">09-21 09:35</span><span class="vt">인포그래픽 핵심페이지 (A4 세로) ↗</span><span class="vn">세로 판형 최초안</span></a>
+<div class="vwrap"><a class="vrow is-final" href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/index.html" target="_blank" rel="noopener"><span class="vv">v0.8</span><span class="vd">09-21 07:18</span><span class="vt">타깃확장 컨셉 3세트 — 최종 시안 ↗</span><span class="vn">5그룹 타깃 반영 · 3컨셉 × 7페이지 · 신규 이미지 12장</span></a><div class="vsubs"><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
+<a class="vrow" href="04_산출물/20260921_5그룹_인물생활이미지_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">IMG v0.1</span><span class="vd">09-21 06:48</span><span class="vt">5그룹 인물·생활 이미지 ↗</span><span class="vn">첫 독립 · 혼자 사는 생활 · 둘의 새 살림 · 친구 공동거주 · 가족과 돌봄</span></a>
+<a class="vrow" href="04_산출물/20260921_일상의여백_생활연결_v0.7/index.html" target="_blank" rel="noopener"><span class="vv">v0.7</span><span class="vd">09-21 00:12</span><span class="vt">일상의 여백 — 생활 연결 재제작 ↗</span><span class="vn">연속성 앵커 도입. 같은 인물·같은 동네로 4단계를 잇는다</span></a>
+<div class="vwrap"><a class="vrow" href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/index.html" target="_blank" rel="noopener"><span class="vv">v0.6</span><span class="vd">09-21 00:18</span><span class="vt">독립컨셉 3세트 — 모바일 UI + A4 ↗</span><span class="vn">모바일 화면 목업 추가 · 컨셉별 서체 차별화</span></a><div class="vsubs"><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_모바일UI_A4_v0.6/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
+<div class="vwrap"><a class="vrow" href="04_산출물/20260920_독립컨셉_3세트_v0.5/index.html" target="_blank" rel="noopener"><span class="vv">v0.5</span><span class="vd">09-20 23:47</span><span class="vt">독립컨셉 3세트 — 18페이지 ↗</span><span class="vn">컨셉을 독립 문서로 분리 · 촬영 디렉션 포함</span></a><div class="vsubs"><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/01_잔잔한온기/index.html" target="_blank" rel="noopener">01 잔잔한 온기 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/02_맑은시선/index.html" target="_blank" rel="noopener">02 맑은 시선 ↗</a><a href="04_산출물/20260920_독립컨셉_3세트_v0.5/03_일상의여백/index.html" target="_blank" rel="noopener">03 일상의 여백 ↗</a></div></div>
+<a class="vrow" href="04_산출물/20260920_맑은시선_코랄_4단계_v0.4/index.html" target="_blank" rel="noopener"><span class="vv">v0.4</span><span class="vd">09-20 23:39</span><span class="vt">맑은 시선 — 코랄 4단계 ↗</span><span class="vn">4단계를 장면으로 풀고 코랄을 포인트로</span></a>
+<a class="vrow" href="04_산출물/20260920_색상이미지_통합시안_v0.3/index.html" target="_blank" rel="noopener"><span class="vv">v0.3</span><span class="vd">09-20 23:26</span><span class="vt">색상 이미지 통합 시안 ↗</span><span class="vn">웜톤 화이트 · Iris→Sky 4단. 세 컨셉의 색을 통합</span></a>
+<a class="vrow" href="02_브랜드컨셉/05_신규색상_디자인컨셉_3안_프리뷰.html" target="_blank" rel="noopener"><span class="vv">COLOR</span><span class="vd">09-20 23:13</span><span class="vt">신규 색상 디자인컨셉 3안 프리뷰 ↗</span><span class="vn">기존 BI를 벗어난 신규 색 방향 3안</span></a>
+<a class="vrow" href="02_브랜드컨셉/06_색상체계_3안_보드.html" target="_blank" rel="noopener"><span class="vv">COLOR</span><span class="vd">09-20 22:38</span><span class="vt">색 체계 3안 보드 ↗</span><span class="vn">대비비 실측 기반 3안 비교 + 화면 목업</span></a>
+<a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/05_디자인요소_시각.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 15:33</span><span class="vt">디자인 요소 — 시각 분석 ↗</span><span class="vn">41개 기업 실측을 타이포·레이아웃·색톤으로 분해</span></a>
+<a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/04_디자인요소_추출.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:54</span><span class="vt">디자인 요소 — 추출 ↗</span><span class="vn">레퍼런스에서 재사용 가능한 요소만 걷어낸 표</span></a>
+<a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/03_일상의여백.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 03 일상의 여백 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
+<a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/02_맑은시선.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 02 맑은 시선 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
+<a class="vrow" href="01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/01_잔잔한온기.html" target="_blank" rel="noopener"><span class="vv">REF</span><span class="vd">09-20 14:33</span><span class="vt">레퍼런스 — 01 잔잔한 온기 ↗</span><span class="vn">컨셉별 실제 기업 레퍼런스 보드</span></a>
+<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.2/index.html" target="_blank" rel="noopener"><span class="vv">v0.2</span><span class="vd">09-19</span><span class="vt">브랜드 무드보드 3안 — 세 컨셉 확정 ↗</span><span class="vn">컨택트시트를 참조로 투입. 잔잔한 온기 · 맑은 시선 · 일상의 여백</span></a>
+<a class="vrow" href="04_산출물/20260919_브랜드무드보드_v0.1/index.html" target="_blank" rel="noopener"><span class="vv">v0.1</span><span class="vd">09-19</span><span class="vt">A3 무드보드 3안 — 전면 기각 ↗</span><span class="vn">대담한 온기 · 선명한 전문성 · 생기 있는 생활. 기준 없이 그려 전부 되돌림</span></a>
+  </div>
+</div></section>
+
+<!-- 인덱스 -->
+<section id="index"><div class="wrap">
+  <div class="eyebrow">07 · Index</div>
+  <h2>제작 자료 전체</h2>
+  <div class="stats" style="margin-top:32px">
+    <div class="stat"><b>2,385</b><span>전체 파일</span></div>
+    <div class="stat"><b>2,179</b><span>이미지</span></div>
+    <div class="stat"><b>98</b><span>문서 (md)</span></div>
+    <div class="stat"><b>20</b><span>HTML 시안</span></div>
+    <div class="stat"><b>11</b><span>PDF</span></div>
+    <div class="stat"><b>1.4GB</b><span>전체 용량</span></div>
+  </div>
+
+  <h3>바로 열어볼 것</h3>
+  <div class="idx">
+    <a href="01_리서치/이미지리서치/03_contact_sheets/Q01_contact_sheet.jpg"><div class="t">컨택트시트 6장</div><div class="d">939장 수집의 결과를 한 장씩에 모은 판. Q01~Q06</div><div class="p">01_리서치/이미지리서치/03_contact_sheets/</div></a>
+    <a href="01_리서치/실제기업_브랜드레퍼런스/07_시각분석/TY1_타이포_비교.jpg"><div class="t">실측 시각분석 보드</div><div class="d">타이포·레이아웃·색톤 매트릭스·히어로 유형</div><div class="p">01_리서치/실제기업_브랜드레퍼런스/07_시각분석/</div></a>
+    <a href="02_브랜드컨셉/06_색상체계_3안_보드.html"><div class="t">색 체계 3안 보드 ↗</div><div class="d">대비비 실측 기반 3안 비교 + 화면 목업</div><div class="p">02_브랜드컨셉/06_색상체계_3안_보드.html</div></a>
+    <a href="04_산출물/20260921_타깃확장_컨셉3세트_v0.8/index.html"><div class="t">최종 시안 v0.8 ↗</div><div class="d">3컨셉 × 7페이지. 5그룹 반영</div><div class="p">04_산출물/20260921_타깃확장_컨셉3세트_v0.8/</div></a>
+  </div>
+
+  <h3>시안 계보 v0.1 → v0.8</h3>
+  <table>
+    <tr><th style="width:70px">버전</th><th style="width:70px">날짜</th><th>무엇이 바뀌었나</th><th class="n" style="width:60px">png</th><th class="n" style="width:60px">pdf</th></tr>
+    <tr class="hi"><td><strong>v0.1</strong></td><td>9/19</td><td>A3 무드보드 3안 — <strong>전면 기각</strong></td><td class="n">6</td><td class="n">1</td></tr>
+    <tr><td><strong>v0.2</strong></td><td>9/19</td><td>컨택트시트를 참조로 투입. <strong>세 컨셉 확정</strong></td><td class="n">3</td><td class="n">0</td></tr>
+    <tr><td><strong>v0.3</strong></td><td>9/20</td><td>색 통합. 웜톤 화이트 · Iris→Sky 4단</td><td class="n">3</td><td class="n">0</td></tr>
+    <tr><td><strong>v0.4</strong></td><td>9/20</td><td>4단계를 장면으로. 코랄 포인트</td><td class="n">4</td><td class="n">0</td></tr>
+    <tr><td><strong>v0.5</strong></td><td>9/20</td><td>독립 3세트 18페이지 · 촬영 디렉션</td><td class="n">12</td><td class="n">0</td></tr>
+    <tr><td><strong>v0.6</strong></td><td>9/21</td><td>모바일 UI · 서체 차별화 · A4 PDF</td><td class="n">37</td><td class="n">3</td></tr>
+    <tr class="hi"><td><strong>v0.7</strong></td><td>9/21</td><td>일상의여백 재제작. <strong>연속성 앵커</strong></td><td class="n">11</td><td class="n">1</td></tr>
+    <tr class="hi"><td><strong>v0.8</strong></td><td>9/21</td><td><strong>5그룹 반영 · 각 7페이지 · 신규 12장</strong></td><td class="n">72</td><td class="n">3</td></tr>
+  </table>
+
+  <h3>폴더 구조</h3>
+  <table>
+    <tr><th style="width:190px">폴더</th><th>내용</th><th class="n" style="width:80px">파일</th><th class="n" style="width:80px">이미지</th></tr>
+    <tr><td><code>대표님 자료/</code></td><td>클라이언트 제공 원본 (수정 금지)</td><td class="n">11</td><td class="n">1</td></tr>
+    <tr><td><code>00_GPT/</code></td><td>1단계 생각 · 2차 튜닝 · <strong>대화 전문</strong></td><td class="n">14</td><td class="n">0</td></tr>
+    <tr class="hi"><td><code>01_리서치/</code></td><td>이미지 939장 · 기업 41곳 · 경쟁 16곳 · 문헌</td><td class="n">2,063</td><td class="n">1,982</td></tr>
+    <tr><td><code>02_브랜드컨셉/</code></td><td>역추적 · 작업 기준 · 전략 · 색 진단</td><td class="n">13</td><td class="n">0</td></tr>
+    <tr><td><code>04_산출물/</code></td><td>시안 v0.1~v0.8 · 인포그래픽 · 보고서</td><td class="n">236</td><td class="n">159</td></tr>
+    <tr><td><code>05_리서치프로세스/</code></td><td>이 기록 · 수업 자료 · 세션 원문</td><td class="n">7</td><td class="n">0</td></tr>
+  </table>
+  <p class="sub">상세 인덱스는 <code>05_리서치프로세스/05_자료_인덱스.md</code>에 있다.</p>
+</div></section>
+
+<!-- 원칙 -->
+<section><div class="wrap">
+  <div class="eyebrow">08 · Principles</div>
+  <h2>정리 — 열두 개</h2>
+  <table>
+    <tr><td class="n" style="width:40px">1</td><td><strong>순서를 뒤집는다.</strong> 시안을 그리기 전에 “무엇을 기준으로 고를지”를 먼저 정한다</td></tr>
+    <tr><td class="n">2</td><td><strong>은유는 행동으로 번역한 뒤에 쓴다</strong></td></tr>
+    <tr><td class="n">3</td><td><strong>AI가 낸 결과를 AI가 검증한다</strong></td></tr>
+    <tr><td class="n">4</td><td><strong>자료에는 층이 있다.</strong> 운영 화면 &lt; 제작사 사례 &lt; 공식 규정 문서</td></tr>
+    <tr><td class="n">5</td><td><strong>출처 없는 프레임워크를 의심한다.</strong> 이름이 그럴듯할수록</td></tr>
+    <tr><td class="n">6</td><td><strong>검색어의 언어가 세계를 바꾼다</strong></td></tr>
+    <tr><td class="n">7</td><td><strong>AI 이미지의 실력은 금지 목록과 숫자에서 나온다</strong></td></tr>
+    <tr class="hi"><td class="n">8</td><td><strong>한 번 밀면 한 번 당긴다.</strong> “더 ○○하게” 다음엔 “단, 여기까지”</td></tr>
+    <tr><td class="n">9</td><td><strong>연속성은 지시해야 생긴다</strong></td></tr>
+    <tr class="hi"><td class="n">10</td><td><strong>“생성하지 말고 리서치에서 골라라”</strong></td></tr>
+    <tr><td class="n">11</td><td><strong>캐스팅의 기본값을 명시적으로 깬다</strong></td></tr>
+    <tr><td class="n">12</td><td><strong>클라이언트의 전제도 검증 대상이다</strong></td></tr>
+  </table>
+</div></section>
+
+<footer><div class="wrap">
+  <p><b>임차in케어 브랜드 리서치 — 진행 과정 기록</b><br>
+  박진현 (외부 자문) · 2026.09.19 – 09.21 · 기록 2026.09.21</p>
+  <p style="margin-top:18px">이 페이지의 모든 인용은 실제 대화 원문이다. 시안 이미지는 ChatGPT <code>image_gen</code>으로 생성한 <strong>가상 장면</strong>이며 실제 고객·사례가 아니다. 색·심볼·이미지 노선은 <strong>클라이언트 미승인 제안</strong>이다.</p>
+  <p style="margin-top:18px">이 페이지 자체가 리서치 결론을 따른다 — <strong>유채색 한 계열</strong>, 위계 대비 약 4배, 여백을 히어로 한 곳에 몰아줌, 장식 도형 없음.</p>
+</div>  <div class="wrap"><p style="margin-top:18px;font-size:13px;color:var(--ink-45)">
+  공개본 안내 — 클라이언트 제공 원본(<code>대표님 자료/</code>), AI 세션 전문(<code>00_GPT/</code>), 내부 메모, 클라이언트 종합 보고서는 이 공개 페이지에 포함하지 않았다. 이미지는 웹 전송을 위해 JPEG로 재인코딩했다.</p></div>
+</footer>
+
+</body></html>

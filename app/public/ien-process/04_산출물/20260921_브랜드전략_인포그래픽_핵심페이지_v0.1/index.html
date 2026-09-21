@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>임차in케어 — 살핌·발견·준비·지원</title>
+<style>
+@font-face{font-family:Pretendard;src:url('/ien-process/_fonts/PretendardVariable.ttf') format('truetype');font-weight:100 900;font-display:swap}
+:root{
+  --paper:#fbfaf6;--ink:#303b43;--muted:#66737b;--line:#d9e4e9;
+  --air:#e5f1f7;--mist:#bdd9e9;--sky:#80b2cf;--deep:#3d7293;
+  --coral:#f3a185;--white:#fff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#dfe4e6;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;color:var(--ink)}
+body{display:flex;justify-content:center;padding:32px}
+.page{position:relative;width:794px;height:1123px;overflow:hidden;background:var(--paper);padding:56px 58px 42px;box-shadow:0 18px 54px rgba(35,49,56,.16)}
+.page:before{content:"";position:absolute;inset:0 0 auto;height:8px;background:linear-gradient(90deg,var(--deep) 0 47%,var(--sky) 47% 83%,var(--coral) 83%)}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--deep);font-size:11px;font-weight:720;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+h1{font-size:39px;line-height:1.13;letter-spacing:-.055em;margin:18px 0 13px;font-weight:720}
+.lead{margin:0;max-width:610px;color:var(--muted);font-size:16px;line-height:1.62;letter-spacing:-.015em}
+.visual{position:relative;height:500px;margin-top:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.orbit{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.orbit .route{fill:none;stroke:var(--sky);stroke-width:2}
+.orbit .trace{fill:none;stroke:var(--mist);stroke-width:1;stroke-dasharray:3 6}
+.step{position:absolute;width:248px;height:154px;padding:19px 21px 17px;border-radius:3px;background:var(--white);border:1px solid rgba(61,114,147,.16);box-shadow:0 8px 24px rgba(48,59,67,.055)}
+.step.s1{left:10px;top:28px}.step.s2{right:10px;top:28px}.step.s3{right:10px;bottom:28px}.step.s4{left:10px;bottom:28px}
+.step-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.step-num{font-size:11px;color:var(--deep);font-weight:750;letter-spacing:.12em}
+.step-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--air);color:var(--deep)}
+.step-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.step h2{margin:0 0 7px;font-size:26px;line-height:1;letter-spacing:-.045em}
+.step strong{display:block;margin-bottom:6px;font-size:13px;line-height:1.35;color:var(--deep)}
+.step p{margin:0;font-size:11.4px;line-height:1.48;color:var(--muted);word-break:keep-all}
+.step.s3{border-color:rgba(243,161,133,.48)}
+.step.s3 .step-icon{background:#fff0ea;color:#c86f54}
+.center{position:absolute;left:244px;top:161px;width:190px;height:176px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:52% 48% 49% 51% / 48% 54% 46% 52%;background:var(--ink);color:#fff;box-shadow:0 12px 30px rgba(48,59,67,.14)}
+.center:after{content:"";position:absolute;right:16px;top:22px;width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.center small{font-size:10px;letter-spacing:.16em;color:var(--mist);font-weight:700}
+.center b{font-size:24px;letter-spacing:-.04em;margin:8px 0 6px}
+.center span{font-size:11px;line-height:1.45;color:#d5e0e5}
+.explain{display:grid;grid-template-columns:1.12fr .88fr;gap:34px;padding-top:25px}
+.explain h3{margin:0 0 10px;font-size:12px;color:var(--deep);letter-spacing:.08em}
+.explain p{margin:0;font-size:12px;line-height:1.7;color:var(--muted);word-break:keep-all}
+.standard{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:13px}
+.standard div{border-top:2px solid var(--mist);padding-top:8px;font-size:10.5px;line-height:1.45;color:var(--muted)}
+.standard b{display:block;color:var(--ink);font-size:11px;margin-bottom:2px}
+.note{padding:15px 17px;background:var(--air);border-radius:3px}
+.note b{display:block;font-size:12px;margin-bottom:7px;color:var(--deep)}
+.note p{font-size:10.5px;line-height:1.58}
+.folio{position:absolute;left:58px;right:58px;bottom:26px;display:flex;justify-content:space-between;align-items:center;color:#89969d;font-size:9px;letter-spacing:.04em}
+.folio .brand{color:var(--ink);font-weight:720;font-size:11px;letter-spacing:-.02em}
+@page{size:A4 portrait;margin:0}
+@media print{html,body{background:#fff}body{padding:0}.page{box-shadow:none;width:210mm;height:297mm}.step,.center{box-shadow:none}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div class="eyebrow"><span class="dot"></span>CARE BEHAVIOR · 04 STEPS</div>
+    <h1>케어는 네 번의 행동으로<br>계속 작동합니다</h1>
+    <p class="lead">평소에는 조용히 살피고, 변화는 먼저 발견하며, 준비할 일을 분명히 안내하고, 혼자 처리하기 어려운 순간에는 지원 구조를 작동합니다.</p>
+  </header>
+
+  <section class="visual" aria-label="살핌 발견 준비 지원 순환 인포그래픽">
+    <svg class="orbit" viewBox="0 0 678 500" aria-hidden="true">
+      <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#80b2cf"/></marker></defs>
+      <path class="route" marker-end="url(#arrow)" d="M270 105 H396"/>
+      <path class="route" marker-end="url(#arrow)" d="M544 190 V306"/>
+      <path class="route" marker-end="url(#arrow)" d="M396 397 H270"/>
+      <path class="route" marker-end="url(#arrow)" d="M134 306 V190"/>
+      <circle class="trace" cx="339" cy="249" r="114"/>
+    </svg>
+
+    <article class="step s1">
+      <div class="step-head"><span class="step-num">01 · OBSERVE</span><span class="step-icon"><svg viewBox="0 0 24 24"><path d="M3 12s3.4-5 9-5 9 5 9 5-3.4 5-9 5-9-5-9-5Z"/><circle cx="12" cy="12" r="2.5"/></svg></span></div>
+      <h2>살핌</h2><strong>계속 확인합니다</strong>
+      <p>계약·등기·기한·거주 상황의 변화를 지속적으로 확인합니다.</p>
+    </article>
+
+    <article class="step s2">
+      <div class="step-head"><span class="step-num">02 · DETECT</span><span class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 18 9 13l3 3 7-8"/><path d="M15 8h4v4"/></svg></span></div>
+      <h2>발견</h2><strong>먼저 알아챕니다</strong>
+      <p>문제로 이어질 가능성이 있는 변동을 조기에 포착합니다.</p>
+    </article>
+
+    <article class="step s3">
+      <div class="step-head"><span class="step-num">03 · PREPARE</span><span class="step-icon"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"/><path d="M10 8h4M10 12h4M10 16h3"/></svg></span></div>
+      <h2>준비</h2><strong>다음 행동을 분명히 합니다</strong>
+      <p>변화의 의미와 지금 해야 할 일을 이해하기 쉽게 안내합니다.</p>
+    </article>
+
+    <article class="step s4">
+      <div class="step-head"><span class="step-num">04 · SUPPORT</span><span class="step-icon"><svg viewBox="0 0 24 24"><path d="M4 13c2-4 5-6 8-6s6 2 8 6"/><path d="M7 13v5M17 13v5M7 18h10"/></svg></span></div>
+      <h2>지원</h2><strong>혼자 처리하지 않게 합니다</strong>
+      <p>어려운 시점에 절차·비용·전문가 지원 구조를 작동합니다.</p>
+    </article>
+
+    <div class="center"><small>THE OUTCOME</small><b>안심한 일상</b><span>계약부터 거주와 만기까지<br>네 행동이 반복됩니다</span></div>
+  </section>
+
+  <section class="explain">
+    <div>
+      <h3>정본의 3문장을 4단계 행동으로 확장했습니다</h3>
+      <p>네 단계는 기능 목록이 아니라 고객이 경험하는 순서입니다. 발견에서 끝나지 않고 준비와 지원까지 이어질 때, 고객은 실제로 이해하고 행동할 수 있습니다.</p>
+      <div class="standard">
+        <div><b>계속 확인합니다</b>등기와 위험 변동</div>
+        <div><b>알려드립니다</b>상황별 대응 순서</div>
+        <div><b>혼자 두지 않습니다</b>비용·서류·현장 대응</div>
+      </div>
+    </div>
+    <aside class="note">
+      <b>표현 상태</b>
+      <p>‘살핌–발견–준비–지원’은 대표 자료의 케어 정의와 표준 3문장을 바탕으로 구조화한 모델이며, 박진현 교수가 채택한 표현입니다. 대표 문서의 원문 명칭은 아니므로 최종 브랜드 시스템 반영 전 운영 프로세스와 대조가 필요합니다.</p>
+    </aside>
+  </section>
+
+  <footer class="folio"><span class="brand">임차in케어</span><span>BRAND STRATEGY INFOGRAPHIC · PROTOTYPE 01</span></footer>
+</main>
+</body>
+</html>

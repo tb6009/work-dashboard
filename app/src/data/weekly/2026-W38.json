@@ -1,0 +1,463 @@
+{
+  "week": "2026-W38",
+  "range": {
+    "from": "2026-09-14",
+    "to": "2026-09-20"
+  },
+  "status": "past",
+  "summary": "KPS 산학 공개자료 4대 조사를 한 주에 끝내고, ㈜아이엔 「임차in케어」 브랜드 자문을 착수 이틀 만에 시안 v0.5까지 밀어올린 주. 자율전공학과 캐러셀 5세트와 Anchor Node IR 디자인 시스템도 같이 돌았다.",
+  "kpis": {
+    "activeProjects": 7,
+    "sessions": 7,
+    "newProjects": 2,
+    "filesChanged": 342
+  },
+  "daily": [
+    {
+      "date": "2026-09-14",
+      "weekday": "월",
+      "filesChanged": 77,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "03",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_INDEX.md · 01_JournalOfVisualizedExperience_존재확인_v0.1.md · 02_김청(Cheong_Kim)_프로필·연구계보_v0.1.md · 03_인용_명세서_v0.1.md · 04_투고_기여방향_조건부_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 01_글로벌_브랜딩_전략_계획_v0.1.md · 02_주장검증_명세서_v0.1.md · 00_GPT대화_KPS_추출_v0.1.md · 01_기존자산_인벤토리_v0.1.md 외 2건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 122,
+                "out": 90803,
+                "cache_read": 9237948,
+                "cache_write": 344491,
+                "messages": 61,
+                "costUSD": 9.0427
+              }
+            },
+            "total": {
+              "in": 122,
+              "out": 90803,
+              "cache_read": 9237948,
+              "cache_write": 344491,
+              "messages": 61
+            },
+            "costUSD": 9.0427
+          }
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] PROJECT.md · ECS김현정_맞춤특강_bg_v0.5.html · ECS김현정_맞춤특강_plain_v0.5.html · ECS김현정_호스트강조_bg_v0.6.html · ECS김현정_호스트강조_plain_v0.6.html 외 15건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "weekday": "화",
+      "filesChanged": 68,
+      "topProjectIds": [
+        "03",
+        "081",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_작업상태.md · 08_03_전문브랜드_비교범위와_초기후보_v0.1.md · 09_03_전문브랜드_VRIO와_제품기술디자인커뮤니케이션_보고서_v0.1.md · 10_03_전문브랜드_VRIO_인용_명세서_v0.1.md · 11_04_가치사슬_사업모델_수익성_공개단서_보고서_v0.1.md 외 4건"
+        },
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · SKILL.md · AGENTS.md · PROJECT.md · AI_INSTRUCTION_MIGRATION.md 외 48건"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] ECS김현정_통합상단_bg_v0.7.html · ECS김현정_통합상단_plain_v0.7.html · ECS김현정_하단확장_bg_v0.8.html · ECS김현정_하단확장_plain_v0.8.html · build_ecs_kim_v07.mjs 외 1건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "weekday": "수",
+      "filesChanged": 40,
+      "topProjectIds": [
+        "03",
+        "063",
+        "021"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 36,
+                "out": 49017,
+                "cache_read": 1745747,
+                "cache_write": 132250,
+                "messages": 18,
+                "costUSD": 2.925
+              }
+            },
+            "total": {
+              "in": 36,
+              "out": 49017,
+              "cache_read": 1745747,
+              "cache_write": 132250,
+              "messages": 18
+            },
+            "costUSD": 2.925
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "021",
+          "did": "[fs scan] 61_2027_공식모집요강_자율전공학과.md · 99_출처맵.md · 02_자율전공학과_세부타깃_입시데이터_v0.1.md · 03_자율전공학과_영타깃_문안20종_합성투표_v0.1.md · 03_generate_autonomous_major_synthetic_vote.mjs 외 24건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "weekday": "목",
+      "filesChanged": 10,
+      "topProjectIds": [
+        "03",
+        "063",
+        "021"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] CLAUDE.md · 02_4주차_리서치_자료_해제_v0.1.md · 01_REMST_브랜드_선행리서치_v0.1.md · 02_REMST_소비자반응_SNS_마켓_v0.1.md · 00_인용_명세서_v0.1.md 외 1건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 158,
+                "out": 79013,
+                "cache_read": 12825689,
+                "cache_write": 288311,
+                "messages": 79,
+                "costUSD": 10.1909
+              }
+            },
+            "total": {
+              "in": 158,
+              "out": 79013,
+              "cache_read": 12825689,
+              "cache_write": 288311,
+              "messages": 79
+            },
+            "costUSD": 10.1909
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "021",
+          "did": "[fs scan] 04_자율전공학과_시안_데이터근거_계보_v1.0.md · 05_자율전공학과_이미지생성_수정량_감사_v1.0.md · 자율전공학과_시안_데이터계보.svg · 20260916_자율전공학과_문안20종_투표순위.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "weekday": "금",
+      "filesChanged": 26,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "03",
+        "021"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 43_AI불안·테크노스트레스·AI_FoMO_개념계보·연구질문_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-5": {
+                "in": 2,
+                "out": 247,
+                "cache_read": 92864,
+                "cache_write": 886,
+                "messages": 1,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 2,
+              "out": 247,
+              "cache_read": 92864,
+              "cache_write": 886,
+              "messages": 1
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_패키지_안내.md · 01_설치가이드.md · 02_사용가이드.md · 03_작성_작업프로세스.md · 04_자료_활용가능성.md 외 13건"
+        },
+        {
+          "projectId": "021",
+          "did": "[fs scan] PROCESS_AND_QA.md · README.md · audit.mjs · audit_report.json · content.js 외 3건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "weekday": "토",
+      "filesChanged": 45,
+      "topProjectIds": [
+        "063",
+        "03",
+        "089"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 44,
+                "out": 22847,
+                "cache_read": 4929907,
+                "cache_write": 179590,
+                "messages": 22,
+                "costUSD": 4.1588
+              }
+            },
+            "total": {
+              "in": 44,
+              "out": 22847,
+              "cache_read": 4929907,
+              "cache_write": 179590,
+              "messages": 22
+            },
+            "costUSD": 4.1588
+          }
+        },
+        {
+          "projectId": "089",
+          "did": "[fs scan] CLAUDE.md · 01_브랜드재정의_논의흐름_v0.1.md · 02_비주얼리서치_계획_v0.1.md · 03_이미지레퍼런스_수집프로토콜_v0.1.md · 04_Claude_이미지레퍼런스_연구계획서_v0.1.md 외 39건"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "일",
+      "filesChanged": 76,
+      "topProjectIds": [
+        "0500",
+        "063",
+        "089"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] AI크래프팅_경로모형.html · AI크래프팅_경로모형.md · 00_전체틀_구간도.svg · 01_1편_갈림.svg · 02_2편_대가.svg 외 1건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W38.json"
+        },
+        {
+          "projectId": "089",
+          "did": "[fs scan] 05_Claude_실제기업_브랜드비주얼_리서치계획서_v0.1.md · 04_WhatGreatBrandsDo_인용_명세서.md · 04_WhatGreatBrandsDo_적용_v0.1.md · 05_갈래0_경쟁대체재_실사_v0.1.md · 05_갈래0_경쟁대체재_실사_인용_명세서.md 외 61건"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "089",
+      "pct": 30,
+      "filesChanged": 104,
+      "imp": 5,
+      "did": "㈜아이엔 「임차in케어」 브랜드 컨셉·Look&Feel 자문을 착수했다. 외부 리서치를 바로 시작하지 않고 내부 자료에서 뽑은 경쟁 가설 세 개를 먼저 갈라 검증 계획을 세운 뒤, 이미지 939장 수집·실제 기업 41곳 실측·컨택트시트 6장을 거쳐 무드보드 v0.1(전면 기각) → v0.2(세 컨셉 확정) → 색 통합 v0.3 → 코랄 4단계 v0.4 → 독립 컨셉 3세트 v0.5까지 갔다.",
+      "nextAction": "5그룹 타깃 반영 v0.8 마감 후 클라이언트 결정 요청 5건 회신 대기",
+      "deliverables": [
+        "08_project/089_임차in/04_산출물/20260920_독립컨셉_3세트_v0.5/index.html",
+        "08_project/089_임차in/02_브랜드컨셉/06_색상체계_3안_보드.html",
+        "08_project/089_임차in/04_산출물/01_브랜드리서치_종합보고서_v0.1.md",
+        "08_project/089_임차in/01_리서치/실제기업_브랜드레퍼런스/04_요소별_HTML/05_디자인요소_시각.html"
+      ]
+    },
+    {
+      "id": "03",
+      "pct": 24,
+      "filesChanged": 85,
+      "imp": 5,
+      "did": "KPS 산학 공개자료 4대 조사(산업구조·시장변화 / 고객 구매결정 / 전문브랜드 VRIO / 가치사슬·사업모델·수익성)를 근거대장까지 붙여 전부 작성했다. 제품 90카드 전수분류와 웨이브가이드·혼 특허 5건 기술군 분해를 앞세웠고, 수익성 극대화 전략에서 CM2·현금공헌 기준의 Hybrid Profit Engine을 기본 가설로 세웠다. REMST 폴더 정리와 Data Corpus 공유 플러그인도 같이 했다.",
+      "nextAction": "사업주체 관계표·3개년 사업별 손익·프로젝트 10건 원가 등 내부자료 확보 후 4대 조사 결론 검증",
+      "deliverables": [
+        "03_school_project/2026_가을학기/디자인실무프로젝트2/00_KPS/01_ChatGPT/23_공개자료_4대조사/06_01_산업구조와_시장변화_보고서_v0.2.md",
+        "03_school_project/2026_가을학기/디자인실무프로젝트2/00_KPS/01_ChatGPT/23_공개자료_4대조사/09_03_전문브랜드_VRIO와_제품기술디자인커뮤니케이션_보고서_v0.1.md",
+        "03_school_project/2026_가을학기/디자인실무프로젝트2/00_KPS/01_ChatGPT/23_공개자료_4대조사/13_04A_수익성극대화_전략보고서_v0.1.md"
+      ]
+    },
+    {
+      "id": "081",
+      "pct": 16,
+      "filesChanged": 57,
+      "imp": 4,
+      "did": "Anchor Node IR의 HTML 디자인 시스템 v0.1을 10개 화면으로 정리하고, 포인트 컬러를 Signal Yellow 한 색으로 통일했다. 23페이지를 23A 사업구조·23B 실행근거로 분해해 레이아웃을 검증하고 3D 리본 배경을 텍스트 세이프 버전까지 만들었다.",
+      "nextAction": "원본 핵심 5페이지 HTML 샘플 + 23A/23B 우선 제작",
+      "deliverables": [
+        "08_project/081_Anchornode/IR/output/html_sample_v02/01_IR_Design_System.html",
+        "08_project/081_Anchornode/IR/output/AnchorNode_IR_Design_Test_v05.pptx"
+      ]
+    },
+    {
+      "id": "0500",
+      "pct": 11,
+      "filesChanged": 38,
+      "imp": 4,
+      "did": "연구모델 1 사용논문 5편 102쪽을 문장 단위 영문–국문 Excel로 변환하고, 각 본문 시트에 인용 우선순위·사용 예정 章·최종 인용 여부 입력란을 붙였다. AI 불안·테크노스트레스·AI FoMO 개념 계보도 별도로 정리했다.",
+      "nextAction": "우선순위·메모 입력 후 채택 문장을 PDF 원문 페이지와 재대조",
+      "deliverables": [
+        "05_phD_Research/00_연구가이드/글쓰기/03_연구모델/원문/모델 1-사용논문/Excel/"
+      ]
+    },
+    {
+      "id": "021",
+      "pct": 11,
+      "filesChanged": 37,
+      "imp": 4,
+      "did": "2027 공식 모집요강에서 자율전공학과 항목을 직접 확인해 근거 파일로 분리하고, 학과 소개 캐러셀 5세트(A~E)를 모바일 정보구조까지 다시 설계했다. 제작 과정을 전용 스킬로 고정했다.",
+      "nextAction": "선택 가능 전공·배정 기준이 공식 발표되면 근거 파일 갱신",
+      "deliverables": [
+        "02_Communication_Kaywon/01_data/02_evidence/06_자율전공학과_근거/61_2027_공식모집요강_자율전공학과.md"
+      ]
+    },
+    {
+      "id": "082",
+      "pct": 7,
+      "filesChanged": 26,
+      "imp": 3,
+      "did": "2026 인재키움 A3 홍보물을 v0.1→v0.8까지 여덟 번 고쳤다. 발신 주체를 ICCS에서 ECS·김현정 교수로 바꾸고, 90–95% 교육비 환급을 첫 핵심 정보로 올렸다.",
+      "nextAction": "QR 링크 확정 후 인쇄용 PDF/PPTX 마감"
+    },
+    {
+      "id": "063",
+      "pct": 1,
+      "filesChanged": 1,
+      "imp": 1,
+      "did": "auto-capture hook이 W38 stub을 자동 생성했다. 의미 보강은 W39 월요일 사이클에서 처리.",
+      "nextAction": "9월 월간 회고 집계 시점 결정"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-09-14",
+      "projectId": "03",
+      "title": "웹사이트 제품 90개를 “판매 중인 90개 SKU”가 아니라 “웹 카드 수”로 기록했다.",
+      "description": "사이트 카드 수를 제품 수로 옮겨 쓰면 이후 시계열·점유율 계산이 전부 틀어진다. 기사 연도와 출시 연도도 분리하고 기업입력 연혁·언론·공식 사이트·특허를 근거 수준으로 나눠 표시했다."
+    },
+    {
+      "date": "2026-09-14",
+      "projectId": "03",
+      "title": "AVING의 “웨이브 가이드 혼”을 단일 특허로 단정하지 않고 기술군으로 분해했다.",
+      "description": "2017년 혼 2건, 2026년 평면파 이퀄라이저, 2025년 실링 웨이브가이드로 나눴다. 특허 명세서의 성능값은 출원인 내부 설명으로 표시하고 독립시험 결과로 쓰지 않았다."
+    },
+    {
+      "date": "2026-09-15",
+      "projectId": "03",
+      "title": "KPS를 수직통합 기업으로 확정하지 않고 “수직통합 가능성을 가진 복합형 전문음향 기업”으로 판정했다.",
+      "description": "공개 재무제표와 사업별 손익이 없어 매출·마진을 추정하지 않았다. 표준 시스템 3종과 Long Sound Care를 우선 검증 대상으로, OEM은 설비가동·현금·학습 기여를 확인할 기반사업 후보로 남겼다."
+    },
+    {
+      "date": "2026-09-15",
+      "projectId": "03",
+      "title": "매출총이익이 아니라 CM2·현금공헌을 수익성의 측정 단위로 잡았다.",
+      "description": "직접노무·출장·보증·기술지원·재고·미수금을 포함해 고객×SKU×프로젝트×사업모델 단위로 본다. 특정 표본의 효과크기나 업계 평균 마진을 KPS에 그대로 적용하지 않았다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-15",
+      "projectId": "081",
+      "title": "IR 팔레트에서 주황 계열을 빼고 포인트를 Signal Yellow 한 색으로 고정했다.",
+      "description": "노란색은 페이지당 결론 하나에만 쓴다. 로고는 일반 페이지 42px 심볼, 커버 190px 워드마크로 크기까지 못 박고 모든 이미지 컴포넌트 기본값을 object-fit: contain으로 고정했다."
+    },
+    {
+      "date": "2026-09-17",
+      "projectId": "021",
+      "title": "실제 371명 관찰값과 100명 합성 패널을 캐러셀 문안에서 분리 표시했다.",
+      "description": "2,000개 복합점수와 10,000개 평가요소는 응답 수가 아니라 계산량임을 명시했다. AI 생성·편집 결과 25개도 호출 횟수가 아닌 “확인 가능한 최소 산출량”으로 적었다."
+    },
+    {
+      "date": "2026-09-19",
+      "projectId": "089",
+      "title": "외부 리서치보다 경쟁 가설 세 개를 먼저 갈랐다.",
+      "description": "“케어 안의 보호 구조 / 전체를 보는 제너럴리스트 / 아무 일 없는 일상의 안심”을 구분해 검증하는 계획을 먼저 세웠다. 기존 필요자료 목록이 UX 실행 자료 중심이라 파운더 철학·행동 증거·시각 은유·배제 기준을 보강했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-19",
+      "projectId": "089",
+      "title": "무드보드 v0.1 세 방향을 전면 기각했다.",
+      "description": "기준 없이 먼저 그린 시안이라 고를 근거가 없었다. 컨택트시트 939장을 참조로 투입한 뒤 다시 그려 v0.2에서 잔잔한 온기·맑은 시선·일상의 여백 세 컨셉을 확정했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-20",
+      "projectId": "089",
+      "title": "세 컨셉을 한 문서에 겹치지 않고 각각 독립 HTML로 분리했다.",
+      "description": "컨셉마다 색·서체·촬영 디렉션이 달라 한 장에서 비교하면 서로를 흐린다. v0.5에서 6페이지씩 독립 문서로 나눴다."
+    },
+    {
+      "date": "2026-09-18",
+      "projectId": "03",
+      "title": "회사별 플러그인을 복제하지 않고 공통 플러그인 하나에서 선택 회사만 읽게 했다.",
+      "description": "개인정보·원본·기업 비공개 자료는 배포에서 빼고 공통 규칙과 회사별 최소 작업 경계만 담았다."
+    }
+  ],
+  "newProjects": [
+    {
+      "id": "089",
+      "name": "임차in케어 (㈜아이엔)",
+      "reason": "㈜아이엔 브랜드 컨셉·Look&Feel 외부 자문 착수 (9/19)"
+    },
+    {
+      "id": "021",
+      "name": "계원 입시 커뮤니케이션",
+      "reason": "02_Communication_Kaywon 트래킹 편입 — 2027 입시 캐러셀 제작 개시 (9/16)"
+    }
+  ],
+  "labelChanges": [],
+  "buildAt": "2026-09-21T11:45:02.004291+09:00",
+  "tokens": {
+    "total": {
+      "in": 362,
+      "out": 241927,
+      "cache_read": 28832155,
+      "cache_write": 945528
+    },
+    "costUSD": 26.3175,
+    "costKRW": 37052
+  }
+}

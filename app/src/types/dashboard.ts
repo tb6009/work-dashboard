@@ -31,6 +31,7 @@ export interface ProjectMeta {
   mediaPortfolioUrl?: string;   // 이미지·동영상을 함께 보는 제작과정 포트폴리오
   assignmentGalleryUrl?: string; // 수업과제 전체 제작과정 이미지 갤러리
   researchProcessUrl?: string;   // 리서치·제작 전 과정을 한 페이지로 묶은 허브 (하위 버전 아카이브 포함)
+  caseStudiesUrl?: string;       // 프로젝트·케이스 단위 이미지 사례연구 웹 인덱스
   appUrl?: string;           // 실행 가능한 앱/데모 페이지 (내부 정적 경로 또는 외부 URL). 상세 페이지에 "실행" 버튼으로 노출.
 }
 

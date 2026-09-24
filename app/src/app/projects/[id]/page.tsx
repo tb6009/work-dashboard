@@ -239,6 +239,7 @@ function Hero({
         mediaPortfolioUrl={project.mediaPortfolioUrl}
         assignmentGalleryUrl={project.assignmentGalleryUrl}
         researchProcessUrl={project.researchProcessUrl}
+        caseStudiesUrl={project.caseStudiesUrl}
         appUrl={project.appUrl}
       />
       <div
@@ -372,6 +373,7 @@ function ExternalLinkRow({
   mediaPortfolioUrl,
   assignmentGalleryUrl,
   researchProcessUrl,
+  caseStudiesUrl,
   appUrl,
 }: {
   projectName: string;
@@ -382,11 +384,13 @@ function ExternalLinkRow({
   mediaPortfolioUrl?: string;
   assignmentGalleryUrl?: string;
   researchProcessUrl?: string;
+  caseStudiesUrl?: string;
   appUrl?: string;
 }) {
   const links: { label: string; href: string; emphasis?: boolean }[] = [];
   if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (researchProcessUrl) links.push({ label: '전체 프로세스 + 버전 아카이브', href: researchProcessUrl, emphasis: true });
+  if (caseStudiesUrl) links.push({ label: '이미지 케이스 스터디', href: caseStudiesUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
   if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
   if (mediaPortfolioUrl) links.push({ label: '이미지·동영상 포트폴리오', href: mediaPortfolioUrl, emphasis: true });

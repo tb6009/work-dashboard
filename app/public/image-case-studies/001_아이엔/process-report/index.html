@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="프롬프트 중심 이미지 제작과 기하 우선 정교한 이미지 제작을 일반 독자를 위해 설명한 매거진형 가이드">
+  <title>이미지를 만드는 두 가지 길 · 이미지 제작프로세스최적화</title>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <style>
+    :root{
+      --white:#fff;--paper:#f7f8f7;--air:#e5f1f7;--mist:#bdd9e9;
+      --sky:#80b2cf;--deep:#3d7293;--ink:#303b43;--muted:#677782;
+      --coral:#f3a185;--line:#cedbe1;--max:1480px;
+      --font:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Noto Sans KR",sans-serif
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.65;word-break:keep-all}
+    img{display:block;width:100%;height:auto}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}p{margin:0 0 .8rem}h1,h2,h3{margin:0;line-height:1.16;letter-spacing:-.045em}h1{font-size:clamp(2.8rem,6.7vw,7.2rem);font-weight:600}h2{font-size:clamp(1.9rem,3.5vw,3.8rem);font-weight:600}h3{font-size:clamp(1.08rem,1.7vw,1.55rem);font-weight:600}
+    .shell{max-width:var(--max);margin:auto}.eyebrow{font-size:.72rem;letter-spacing:.17em;font-weight:700;color:var(--deep);text-transform:uppercase}.kicker{font-size:clamp(1.2rem,2.1vw,2rem);line-height:1.55}.caption{font-size:.76rem;line-height:1.6;color:var(--muted);margin-top:.7rem}.rule{border-top:1px solid var(--line)}.accent{width:54px;height:6px;background:var(--coral)}
+    .plain-note{display:grid;grid-template-columns:110px 1fr;gap:1rem;margin-top:1.25rem;padding:1rem 1.1rem;background:var(--air);border-left:5px solid var(--sky)}.plain-note b{font-size:.72rem;letter-spacing:.08em;color:var(--deep)}.plain-note p{margin:0;font-size:.82rem;line-height:1.55}.plain-note.caution{background:#fff4ef;border-left-color:var(--coral)}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--white);padding:12px;z-index:99}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    nav{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:.72rem 3vw}.brand{font-weight:700}.brand span{color:var(--deep)}.navlinks{display:flex;gap:1.2rem;font-size:.76rem}.navlinks a{text-decoration:none}.navlinks a:hover,.navlinks a:focus-visible{color:var(--deep);text-decoration:underline}
+    .cover{background:var(--white);min-height:620px;display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}.cover-copy{padding:clamp(2.8rem,5vw,5.5rem) 4vw;display:flex;flex-direction:column;justify-content:center}.cover h1 em{font-style:normal;color:var(--deep)}.cover .kicker{max-width:620px;margin:1.4rem 0}.cover-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:.72rem;color:var(--muted)}.cover-media{min-height:520px;position:relative;overflow:hidden}.cover-media img{height:100%;object-fit:cover}.cover-media::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:var(--coral)}
+    section{padding:clamp(2.5rem,4vw,4.2rem) 3vw;background:var(--white);margin-top:8px}.section-head{display:block;margin-bottom:1.55rem}.section-head>.eyebrow{margin:0 0 .38rem;white-space:nowrap}.section-head .intro{max-width:1180px}.section-head .intro p{max-width:900px;margin:.55rem 0 0;color:var(--muted)}
+    .lead-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:3vw;align-items:start}.dropcap:first-letter{float:left;font-size:4.8rem;line-height:.8;padding:.15rem .65rem 0 0;color:var(--deep)}.pullquote{font-size:clamp(1.35rem,2.4vw,2.5rem);line-height:1.42;padding:1.25rem 0;border-top:5px solid var(--coral);border-bottom:1px solid var(--line)}
+    .roads{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.road{padding:2rem}.road+ .road{border-left:1px solid var(--line)}.road-index{font-size:3rem;color:var(--mist);font-weight:700;line-height:1}.road h3{margin:.65rem 0}.road ul{padding-left:1.15rem;margin:.8rem 0}.road li{margin:.35rem 0}.tag{display:inline-block;background:var(--air);color:var(--deep);padding:.25rem .5rem;font-size:.68rem;font-weight:700}
+    .phase-strip{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:.7rem}.phase-strip span{padding:.55rem .8rem;background:var(--air);border-right:2px solid var(--white);font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--deep)}.phase-strip span:last-child{border-right:0}.timeline{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.step{position:relative;padding:1.05rem 1.1rem 1rem 3.25rem;min-height:112px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.step b{position:absolute;left:1rem;top:1.05rem;color:var(--deep);font-size:.7rem;letter-spacing:.08em}.step strong{display:block;margin:0 0 .35rem}.step p{margin:0;font-size:.72rem;line-height:1.5;color:var(--muted)}.step.is-gate:after{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--coral)}
+    .tech-details{margin-top:1rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.tech-details summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem .2rem;cursor:pointer;font-size:.82rem;font-weight:700;color:var(--deep);list-style:none}.tech-details summary::-webkit-details-marker{display:none}.tech-details summary:after{content:"＋";font-size:1.25rem;font-weight:400}.tech-details[open] summary:after{content:"－"}.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-bottom:1.2rem}.tech-card{padding:1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.tech-card.wide{grid-column:span 2}.tech-card b{display:block;margin-bottom:.5rem;font-size:.72rem;letter-spacing:.06em;color:var(--deep)}.tech-card dl{margin:0}.tech-card div{display:grid;grid-template-columns:minmax(76px,.8fr) 1.2fr;gap:.55rem;padding:.24rem 0}.tech-card dt,.tech-card dd{margin:0;font-size:.68rem;line-height:1.45}.tech-card dt{color:var(--muted)}.tech-card dd{font-weight:500}.tech-card code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.64rem;background:var(--air);padding:.08rem .25rem}.pass{color:#2f7254}.pending{color:#9a533b}
+    .process-evidence{margin-top:3.2rem;padding-top:1.2rem;border-top:1px solid var(--line)}.process-evidence-head{display:grid;grid-template-columns:150px 1fr;gap:3vw;margin-bottom:1.5rem}.process-evidence-head h3{font-weight:500}.process-evidence-head p{max-width:720px;margin:.45rem 0 0;color:var(--muted);font-size:.82rem}.stage-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem 14px}.stage-shot,.stage-shot:nth-child(1),.stage-shot:nth-child(6){margin:0;padding-top:.7rem;border-top:1px solid var(--line)}.stage-open{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}.stage-open:focus-visible{outline:3px solid var(--coral);outline-offset:3px}.stage-shot img{aspect-ratio:16/10;object-fit:contain;background:var(--air)}.stage-open:hover img{filter:brightness(.94)}.stage-shot figcaption{display:grid;grid-template-columns:36px 1fr;gap:.6rem;align-items:start;margin-top:.65rem}.stage-no{font-size:1.15rem;font-weight:600;line-height:1;color:var(--sky)}.stage-copy{font-size:.7rem;line-height:1.45;color:var(--muted)}.stage-copy strong{display:block;color:var(--ink);font-size:.78rem;margin-bottom:.1rem}
+    .lightbox{width:min(94vw,1320px);max-width:none;height:min(92vh,920px);padding:0;border:0;background:#111;color:#fff}.lightbox::backdrop{background:rgba(13,22,27,.88);backdrop-filter:blur(5px)}.lightbox-inner{height:100%;display:grid;grid-template-rows:auto 1fr auto}.lightbox-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid #39434a}.lightbox-count{font-size:.72rem;letter-spacing:.12em;color:#b9c6cc}.lightbox-close,.lightbox-nav{border:1px solid #60717a;background:transparent;color:#fff;cursor:pointer;font:600 .8rem var(--font)}.lightbox-close{padding:.45rem .7rem}.lightbox-stage{min-height:0;display:grid;grid-template-columns:52px 1fr 52px;align-items:center}.lightbox-image{width:100%;height:100%;min-height:0;object-fit:contain;background:#111}.lightbox-nav{width:38px;height:52px;justify-self:center;font-size:1.2rem}.lightbox-caption{padding:.8rem 1rem;border-top:1px solid #39434a;font-size:.82rem;color:#d7e0e4}.lightbox-caption strong{color:#fff;margin-right:.5rem}
+    .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo-pair figure{margin:0}.photo-pair img{aspect-ratio:16/10;object-fit:cover}.photo-pair .blue{border-bottom:5px solid var(--deep)}.photo-pair .coral{border-bottom:5px solid var(--coral)}
+    .numbers{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:1.7rem}.metric{padding:1.3rem 1rem;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{display:block;font-size:clamp(1.7rem,3vw,3rem);color:var(--deep);line-height:1}.metric span{display:block;margin-top:.6rem;font-size:.72rem;color:var(--muted)}
+    .cost-table{width:100%;border-collapse:collapse;margin-top:1.7rem}.cost-table th,.cost-table td{text-align:left;padding:.8rem .75rem;border-top:1px solid var(--line);vertical-align:top}.cost-table th{font-size:.7rem;letter-spacing:.06em;color:var(--deep)}.cost-table td{font-size:.82rem}.cost-table tbody tr:hover{background:var(--air)}
+    .gate-list{counter-reset:gate;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.gate{position:relative;display:block;padding:2.6rem 1rem 1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:175px}.gate:before{counter-increment:gate;content:"0" counter(gate);position:absolute;left:1rem;top:.75rem;font-size:1.2rem;font-weight:600;color:var(--sky)}.gate h3{font-size:1rem}.gate p{font-size:.72rem;line-height:1.5;color:var(--muted)}.gate .status{display:inline-block;font-size:.66rem;padding:.25rem .45rem;background:var(--air);color:var(--deep)}.gate .status.fail{background:#fbe6de;color:#8b4a36}
+    .blue-section{background:var(--air)}.blue-section .section-head{margin-bottom:1.5rem}.angle-grid{display:grid;grid-template-columns:1fr;gap:0}.angle-grid figure{margin:0}.angle-grid img{aspect-ratio:16/8;object-fit:contain;background:rgba(255,255,255,.38);border-bottom:6px solid var(--deep)}.angle-notes{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(61,114,147,.35)}.angle-notes .note{padding:.9rem 1rem;border-right:1px solid rgba(61,114,147,.35);border-bottom:1px solid rgba(61,114,147,.35)}.angle-notes .note p{margin-bottom:.3rem;font-size:.74rem}.angle-notes .note h3{font-size:1rem;margin-bottom:.25rem}
+    .decision{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}.decision article{padding:2rem 0;border-top:5px solid var(--deep)}.decision article:last-child{border-top-color:var(--coral)}.decision h3{margin-bottom:1rem}.decision p{color:var(--muted)}
+    .glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}.term{padding:1.5rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.term:nth-child(3n){border-right:0}.term dt{font-weight:700;color:var(--deep)}.term dd{margin:.5rem 0 0;color:var(--muted);font-size:.85rem}
+    footer{background:var(--ink);color:var(--white);padding:2.5rem 3vw}.footer-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem}.footer-grid p{color:#c8d0d4}.footer-mark{font-size:1.7rem}.source-links{display:flex;flex-direction:column;gap:.3rem;font-size:.74rem}
+    [contenteditable="true"]:focus{outline:2px solid var(--coral);outline-offset:5px}
+    @media(max-width:1024px){.numbers{grid-template-columns:repeat(4,1fr)}.metric{padding:1rem .75rem}.metric strong{font-size:clamp(1.5rem,3vw,2.5rem)}.process-evidence-head{grid-template-columns:120px 1fr}.gate-list{grid-template-columns:repeat(3,1fr)}.tech-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.navlinks{display:none}.cover{grid-template-columns:1fr;min-height:0}.cover-media{min-height:320px;order:-1}.cover-copy{padding:2rem 5vw 2.8rem}.process-evidence-head,.lead-grid,.footer-grid{grid-template-columns:1fr}.process-evidence-head{gap:.55rem}.roads,.photo-pair,.decision{grid-template-columns:1fr}.road+.road{border-left:0;border-top:1px solid var(--line)}.timeline{grid-template-columns:repeat(3,1fr)}.step{min-height:116px;padding:.75rem .55rem}.step b{position:static;display:block;margin-bottom:.35rem}.step p{font-size:.64rem}.tech-grid{grid-template-columns:1fr 1fr}.tech-card.wide{grid-column:span 2}.stage-gallery{grid-template-columns:repeat(2,1fr)}.stage-shot figcaption{grid-template-columns:28px 1fr}.plain-note{grid-template-columns:1fr;gap:.35rem}.numbers{grid-template-columns:repeat(2,1fr)}.gate-list{grid-template-columns:repeat(2,1fr)}.angle-notes{grid-template-columns:repeat(2,1fr)}.angle-grid img{aspect-ratio:16/9}.glossary{grid-template-columns:repeat(2,1fr)}.term,.term:nth-child(3n){border-right:1px solid var(--line)}.term:nth-child(2n){border-right:0}.cost-table{display:block;overflow-x:auto}.lightbox{width:100vw;height:100vh;max-height:none}.lightbox-stage{grid-template-columns:40px 1fr 40px}.lightbox-nav{width:32px}}
+    @media(max-width:375px){body{font-size:15px}.cover-meta{display:block}.cover-meta span{display:block;margin:.4rem 0}section{padding-left:6vw;padding-right:6vw}.road{padding:2rem 0}}
+    @media(prefers-color-scheme:dark){:root{--white:#182126;--paper:#11181c;--air:#20343e;--mist:#365362;--ink:#edf3f5;--muted:#b4c0c6;--line:#38505c;--deep:#91c5df;--sky:#73a8c4}.cover-media img,.photo-pair img,.angle-grid img{filter:brightness(.88)}header{background:rgba(24,33,38,.94)}footer{background:#0b1013}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media print{header{display:none}body{background:#fff}section{break-inside:avoid;margin:0;padding:18mm 16mm}.cover{min-height:260mm}.cover-media{min-height:180mm}.navlinks{display:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">본문으로 바로가기</a>
+  <header>
+    <nav aria-label="주요 섹션">
+      <a class="brand" href="#top">이미지 제작<span>프로세스최적화</span></a>
+      <div class="navlinks"><a href="index.html" aria-current="page">매거진</a><a href="docs/overview.html">통합 안내</a><a href="docs/prompt-first.html">01 프롬프트</a><a href="docs/geometry-first.html">02 정교한 제작</a><a href="docs/operations.html">기록 규칙</a></div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article id="top" class="cover">
+      <div class="cover-copy">
+        <p class="eyebrow">IN CARE DESIGN STUDY · ISSUE 01</p>
+        <h1 contenteditable="true">이미지를<br>만드는<br><em>두 가지 길</em></h1>
+        <p class="kicker" data-pretext contenteditable="true">한 장을 빨리 완성하는 방법과, 한 공간을 여러 번 정확하게 사용하는 방법은 서로 다릅니다.</p>
+        <div class="accent" aria-hidden="true"></div>
+        <div class="cover-meta"><span>일반 독자를 위한 이미지 제작 안내서</span><span>2026. 09</span><span>IMAGE PROCESS / 01—02</span></div>
+      </div>
+      <div class="cover-media"><img src="assets/original-living-room.png" alt="창으로 자연광이 들어오는 거실에서 책을 읽는 사람과 강아지"></div>
+    </article>
+
+    <section id="why">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">OPENING ESSAY</p><div class="intro"><h2 contenteditable="true">사진처럼 보이는 것과 사진처럼 만들어지는 것은 다릅니다.</h2><p>생성형 이미지는 빛과 분위기를 놀랍도록 빠르게 만듭니다. 하지만 테이블, 창문, 책장이 같은 공간에 놓여 있는지는 별개의 문제입니다.</p></div></div>
+        <div class="lead-grid">
+          <div><p class="dropcap">처음에는 문장으로 원하는 장면을 설명했습니다. “따뜻한 거실, 35mm 렌즈, 정확한 투시.” 결과는 자연스러웠지만 선을 길게 연장해보면 테이블과 TV장이 서로 다른 방향을 바라봤습니다. 사람의 눈은 얼굴과 빛을 먼저 보기에 오류를 늦게 발견합니다.</p><p>그래서 제작을 두 갈래로 나눴습니다. 첫 번째는 프롬프트로 완성 이미지를 빠르게 만드는 길입니다. 두 번째는 카메라와 공간을 먼저 세우고 그 위에 사람과 빛을 얹는 길입니다.</p></div>
+          <blockquote class="pullquote">“정교함은 더 긴 프롬프트가 아니라, 틀린 단계에서 멈출 수 있는 과정에서 나옵니다.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="roads">
+          <article class="road"><div class="road-index">01</div><span class="tag">PROMPT-FIRST</span><h3>프롬프트에서 정확한 이미지 제작</h3><p>원본과 문장을 함께 넣고 완성 이미지를 바로 만듭니다. 한두 장의 콘셉트와 분위기 탐색에 빠릅니다.</p><ul><li>첫 결과가 빠르다</li><li>사람·식물·빛이 자연스럽다</li><li>수정할 때 공간까지 다시 바뀔 수 있다</li><li>여러 앵글에서는 매번 공간을 재해석한다</li></ul></article>
+          <article class="road"><div class="road-index">02</div><span class="tag">GEOMETRY-FIRST</span><h3>정교한 이미지 제작</h3><p>35mm 카메라와 방·가구의 위치를 먼저 계산합니다. 이후 생성형 모델은 재질과 인물, 빛을 맡습니다.</p><ul><li>첫 장은 더 오래 걸린다</li><li>가구와 공간의 투시를 측정할 수 있다</li><li>같은 방에서 카메라만 옮길 수 있다</li><li>여러 버전을 만들수록 장당 비용이 내려간다</li></ul></article>
+        </div>
+        <aside class="plain-note"><b>쉽게 말하면</b><p><strong>01은 한 장을 빠르게 잘 만드는 방식</strong>이고, <strong>02는 같은 방을 여러 장에서 다시 쓰기 위해 먼저 설계도를 만드는 방식</strong>입니다. 결과물이 한두 장이면 01이, 앵글과 카메라 버전이 계속 늘어나면 02가 유리합니다.</p></aside>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">THE NINE STAGES</p><div class="intro"><h2>정교한 이미지는 아홉 번의 작은 결정으로 만듭니다.</h2><p>각 단계는 하나의 질문만 해결합니다. 앞 단계가 틀리면 뒤 단계로 넘어가지 않습니다.</p></div></div>
+        <div class="phase-strip" aria-label="제작 과정의 세 구간"><span>PLAN · 01—03 설계</span><span>BUILD · 04—06 구축</span><span>FINISH · 07—09 마감</span></div>
+        <div class="timeline" aria-label="정교한 이미지 제작 9단계">
+          <div class="step"><b>01</b><strong>장면 구성</strong><p>무엇을 어디에 보여줄지 정합니다.</p></div>
+          <div class="step is-gate"><b>02</b><strong>카메라</strong><p>높이·35mm·방향을 수치로 고정합니다.</p></div>
+          <div class="step is-gate"><b>03</b><strong>공간</strong><p>방과 가구를 단순한 상자로 세웁니다.</p></div>
+          <div class="step"><b>04</b><strong>배치</strong><p>사람·책·강아지의 접촉을 맞춥니다.</p></div>
+          <div class="step"><b>05</b><strong>조명</strong><p>창의 빛과 그림자 방향을 정합니다.</p></div>
+          <div class="step is-gate"><b>06</b><strong>사진화</strong><p>기하를 유지하며 재질을 입힙니다.</p></div>
+          <div class="step"><b>07</b><strong>렌즈 분기</strong><p>Sony·Canon 표현을 나눕니다.</p></div>
+          <div class="step"><b>08</b><strong>색보정</strong><p>화이트밸런스와 톤을 다듬습니다.</p></div>
+          <div class="step is-gate"><b>09</b><strong>최종 검증</strong><p>투시·인물·색을 다시 검사합니다.</p></div>
+        </div>
+        <details class="tech-details">
+          <summary>TECH SPECS · 실제 카메라·투시·검증 수치 펼쳐보기</summary>
+          <div class="tech-grid">
+            <article class="tech-card"><b>01 · FRAME</b><dl><div><dt>Canvas</dt><dd>1536 × 1024 px</dd></div><div><dt>Sensor</dt><dd>36 × 24 mm</dd></div><div><dt>Projection</dt><dd>2-point, level</dd></div></dl></article>
+            <article class="tech-card"><b>02 · CAMERA</b><dl><div><dt>Focal length</dt><dd>35 mm</dd></div><div><dt>Focal px</dt><dd>1493.33 px</dd></div><div><dt>Height</dt><dd>1.50 m</dd></div></dl></article>
+            <article class="tech-card"><b>03 · COORDINATES</b><dl><div><dt>Position</dt><dd><code>−3.5, −5.5, 1.5 m</code></dd></div><div><dt>Target</dt><dd><code>0, 2.0, 1.1 m</code></dd></div><div><dt>Horizon</dt><dd>y = 439.83 px</dd></div></dl></article>
+            <article class="tech-card"><b>04 · VANISHING POINTS</b><dl><div><dt>VP-X</dt><dd><code>3971.74, 439.83</code></dd></div><div><dt>VP-Y</dt><dd><code>70.30, 439.83</code></dd></div><div><dt>Y difference</dt><dd class="pass">0.00 px · PASS</dd></div></dl></article>
+            <article class="tech-card wide"><b>05 · GEOMETRY LOCKS</b><dl><div><dt>고정</dt><dd>캔버스·크롭·건축·가구 꼭짓점</dd></div><div><dt>금지</dt><dd>후속 단계의 기하 재생성·오브젝트별 워핑</dd></div><div><dt>순서</dt><dd>렌즈 효과는 Stage 06 이후, LUT는 Stage 07 이후</dd></div></dl></article>
+            <article class="tech-card wide"><b>06 · QUALITY GATES</b><dl><div><dt>VP cluster</dt><dd>반경 ≤ 46 px</dd></div><div><dt>Horizon</dt><dd>소실점 y 차이 ≤ 10 px</dd></div><div><dt>Vertical</dt><dd>수직 편차 ≤ 1.0°</dd></div><div><dt>Drift</dt><dd>승인 기하 이동 ≤ 9 px</dd></div></dl></article>
+            <article class="tech-card wide"><b>07 · SONY BRANCH</b><dl><div><dt>Setup</dt><dd>Alpha 1 II + FE 35mm F1.4 GM</dd></div><div><dt>Exposure</dt><dd>f/2.8 · 1/200s · ISO 100 · focus ≈ 3.0m</dd></div><div><dt>Rendering</dt><dd>중립·약간 차가운 중간톤, 높은 미세 대비</dd></div></dl></article>
+            <article class="tech-card wide"><b>08 · CANON BRANCH</b><dl><div><dt>Setup</dt><dd>EOS R1 + RF35mm F1.4 L VCM</dd></div><div><dt>Exposure</dt><dd>f/2.8 · 1/200s · ISO 100 · focus ≈ 3.0m</dd></div><div><dt>Rendering</dt><dd>따뜻한 중립, 부드러운 미세 대비와 하이라이트</dd></div></dl></article>
+            <article class="tech-card wide"><b>09 · CURRENT VERDICT</b><dl><div><dt>Analytic proxy</dt><dd class="pass">투영 기하 PASS</dd></div><div><dt>Photoreal output</dt><dd class="pending">사진화 후 테이블 선 드리프트 · 미승인</dd></div><div><dt>승인 방식</dt><dd>자동 계측 + 사람의 시각 검토 모두 필요</dd></div></dl></article>
+          </div>
+        </details>
+        <aside class="plain-note"><b>왜 잠글까요?</b><p>조명이나 색을 고칠 때 테이블 모서리까지 함께 움직이면 무엇이 좋아졌는지 판단할 수 없습니다. 앞 단계에서 승인한 좌표는 잠그고, 다음 단계에서는 허용된 요소만 바꿉니다.</p></aside>
+        <div class="process-evidence">
+          <div class="process-evidence-head"><p class="eyebrow">WORKING FILES</p><div><h3>설계 → 구축 → 검증</h3><p>이번 거실 장면의 실제 중간 산출물입니다. 왼쪽 위부터 순서대로 읽습니다.</p></div></div>
+          <div class="stage-gallery" aria-label="이미지 제작 중간 단계 도식과 작업 이미지">
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="01 · 장면 구성" data-copy="시선과 점유 영역을 나눕니다."><img src="assets/process/01-composition-zones.png" alt="거실 장면을 창문, 인물, 소파, 테이블 영역으로 나눈 구성 도식"></button><figcaption><span class="stage-no">01</span><span class="stage-copy"><strong>장면 구성</strong>시선과 점유 영역을 나눕니다.</span></figcaption></figure>
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="02 · 투시 제어" data-copy="가구 선과 소실점을 맞춥니다."><img src="assets/process/02-perspective-control.png" alt="거실 이미지 위에 수평선과 소실점 보조선을 표시한 투시 제어 도식"></button><figcaption><span class="stage-no">02</span><span class="stage-copy"><strong>투시 제어</strong>가구 선과 소실점을 맞춥니다.</span></figcaption></figure>
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="03 · 공간 블로킹" data-copy="상자로 크기와 깊이를 봅니다."><img src="assets/process/03-space-blocking.png" alt="거실 공간과 가구를 단순한 입체 상자로 표시한 공간 블로킹 이미지"></button><figcaption><span class="stage-no">03</span><span class="stage-copy"><strong>공간 블로킹</strong>상자로 크기와 깊이를 봅니다.</span></figcaption></figure>
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="04 · 인물·오브젝트" data-copy="좌석과 바닥 접촉을 맞춥니다."><img src="assets/process/04-placement.png" alt="거실 안 인물과 가구의 위치 및 접촉 관계를 조정한 배치 단계 이미지"></button><figcaption><span class="stage-no">04</span><span class="stage-copy"><strong>인물·오브젝트</strong>좌석과 바닥 접촉을 맞춥니다.</span></figcaption></figure>
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="05 · 공통 조명" data-copy="주광과 그림자를 고정합니다."><img src="assets/process/05-common-lighting.png" alt="창문 자연광의 방향과 밝기를 적용한 공통 조명 마스터 이미지"></button><figcaption><span class="stage-no">05</span><span class="stage-copy"><strong>공통 조명</strong>주광과 그림자를 고정합니다.</span></figcaption></figure>
+            <figure class="stage-shot"><button class="stage-open" type="button" data-title="06 · 35mm 검증" data-copy="두 소실점의 수평선을 계측합니다."><img src="assets/process/06-analytic-35mm-proxy.png" alt="35밀리미터 카메라 수치로 렌더링한 거실의 분석적 3D 프록시"></button><figcaption><span class="stage-no">06</span><span class="stage-copy"><strong>35mm 검증</strong>두 소실점의 수평선을 계측합니다.</span></figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">CASE STUDY</p><div class="intro"><h2>같은 거실, 다른 제작 방식</h2><p>왼쪽은 최초 이미지입니다. 오른쪽은 공통 장면을 먼저 만든 뒤 Sony 35mm 해석을 적용한 하네스 후보입니다.</p></div></div>
+        <div class="photo-pair">
+          <figure><img class="coral" src="assets/original-living-room.png" alt="최초 거실 이미지"><figcaption class="caption">ORIGINAL · 자연스러운 분위기, 그러나 테이블과 가구의 투시 불일치</figcaption></figure>
+          <figure><img class="blue" src="assets/sony-a1ii-35gm-harness-v01.png" alt="하네스 과정을 거친 Sony 35mm 거실 이미지"><figcaption class="caption">HARNESS H1 · 공통 장면에서 카메라 표현만 분기, 최종 투시는 아직 검증 미통과</figcaption></figure>
+        </div>
+        <div class="numbers">
+          <div class="metric"><strong>35mm</strong><span>풀프레임 기준으로 계산한 초점거리</span></div>
+          <div class="metric"><strong>1.50m</strong><span>분석적 프록시의 카메라 높이</span></div>
+          <div class="metric"><strong>0px</strong><span>프록시 단계의 두 소실점 높이 차</span></div>
+          <div class="metric"><strong>166px+</strong><span>기존 사진화 후보에서 관측한 근사 투시 오차</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cost">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">COST &amp; TIME</p><div class="intro"><h2>왜 더 오래 걸리고 언제부터 더 빨라질까요?</h2><p>정교한 방식은 첫 장에 공간과 카메라를 만드는 시간이 듭니다. 하지만 그 자산을 다시 쓸 수 있어 두 번째 앵글부터 비용이 내려갑니다.</p></div></div>
+        <table class="cost-table">
+          <thead><tr><th>제작 방식</th><th>첫 장</th><th>추가 한 장</th><th>잘 맞는 상황</th><th>주의점</th></tr></thead>
+          <tbody>
+            <tr><td><strong>01 단일 생성</strong></td><td>1×</td><td>1×</td><td>아이디어 스케치</td><td>공간 일관성이 낮음</td></tr>
+            <tr><td><strong>01 반복 수정</strong></td><td>2–5×</td><td>1–3×</td><td>한 장의 분위기 개선</td><td>실패 원인을 추적하기 어려움</td></tr>
+            <tr><td><strong>02 하네스</strong></td><td>4–8×</td><td>0.4–1×</td><td>카메라·색 A/B 비교</td><td>단계별 검증 필요</td></tr>
+            <tr><td><strong>02 3D+합성</strong></td><td>6–12×</td><td>0.2–0.7×</td><td>여러 앵글·건축·가구</td><td>초기 모델 구축 필요</td></tr>
+          </tbody>
+        </table>
+        <p class="caption">상대 계획값입니다. 실제 토큰 수나 시간은 모델·해상도·서비스 상태에 따라 달라집니다.</p>
+        <aside class="plain-note"><b>읽는 방법</b><p>첫 장만 보면 하네스 방식이 비싸 보입니다. 하지만 방과 카메라를 재사용하는 두 번째 장부터 다시 설계할 항목이 줄어듭니다. 표의 배수는 실측 청구액이 아니라 제작 계획을 위한 상대값입니다.</p></aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">QUALITY GATES</p><div class="intro"><h2>좋아 보이는 것만으로 통과시키지 않습니다.</h2><p>자동 측정과 사람의 검토가 모두 끝나야 다음 단계로 넘어갑니다.</p></div></div>
+        <div class="gate-list">
+          <article class="gate"><div><h3>투시</h3><p>같은 방향의 선이 하나의 소실점 군집으로 모이는가?</p></div><span class="status">군집 반경 46px</span></article>
+          <article class="gate"><div><h3>수직</h3><p>창틀·책장·테이블 다리가 같은 카메라를 따르는가?</p></div><span class="status">1° 이내</span></article>
+          <article class="gate"><div><h3>접지</h3><p>발과 가구 다리가 바닥과 좌판에 실제로 닿는가?</p></div><span class="status">전 접점 확인</span></article>
+          <article class="gate"><div><h3>드리프트</h3><p>사진화 과정에서 승인된 꼭짓점이 움직이지 않았는가?</p></div><span class="status">9px 이내</span></article>
+          <article class="gate"><div><h3>현재 사례</h3><p>프록시는 통과했지만 사진화 결과는 테이블 선이 이동했습니다.</p></div><span class="status fail">사진화 미통과</span></article>
+        </div>
+        <aside class="plain-note caution"><b>숫자의 차이</b><p><strong>46px</strong>은 여러 선이 한 소실점 주변에 모이는 허용 반경, <strong>10px</strong>은 좌우 소실점의 높이 차, <strong>9px</strong>은 사진화 후 승인 좌표가 움직일 수 있는 한계입니다. 서로 다른 오차를 측정하므로 바꾸어 쓰면 안 됩니다.</p></aside>
+      </div>
+    </section>
+
+    <section id="angles" class="blue-section">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">3D SPACE WORKFLOW</p><div class="intro"><h2>3D 공간 제작으로 장면 구성을 수월하게</h2><p>3D 마스터가 있으면 방과 가구를 다시 상상할 필요가 없습니다. 카메라 높이·방향·렌즈만 바꿉니다.</p></div></div>
+        <div class="angle-grid">
+          <figure><img src="assets/process/06-analytic-35mm-proxy.png" alt="35mm 카메라로 계산한 거실 3D 프록시"><figcaption class="caption">분석적 35mm 프록시 · 수평선 y=439.83px · 두 소실점의 y차이 0px</figcaption></figure>
+          <div class="angle-notes">
+            <div class="note"><p class="eyebrow">MOVE</p><h3>카메라 위치</h3><p>왼쪽·오른쪽·낮은 시점·높은 시점으로 이동합니다.</p></div>
+            <div class="note"><p class="eyebrow">LENS</p><h3>24 / 35 / 50mm</h3><p>공간은 그대로 두고 화각과 원근만 바꿉니다.</p></div>
+            <div class="note"><p class="eyebrow">LIGHT</p><h3>오전 / 오후 / 야간</h3><p>가구 위치를 건드리지 않고 조명 rig만 교체합니다.</p></div>
+            <div class="note"><p class="eyebrow">COLOR</p><h3>Sony / Canon</h3><p>같은 렌더에서 색·미세 대비·하이라이트만 분기합니다.</p></div>
+          </div>
+        </div>
+        <aside class="plain-note caution"><b>카메라 표현의 범위</b><p>Sony·Canon 분기는 실제 RAW 파일이나 제조사 광학 모델을 물리적으로 재현한 것이 아닙니다. 동일한 35mm 장면에서 미세 대비·화이트밸런스·하이라이트 전이를 각 시스템의 일반적 표현 방향으로 해석한 시각적 시뮬레이션입니다.</p></aside>
+      </div>
+    </section>
+
+    <section id="choose">
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">HOW TO CHOOSE</p><div class="intro"><h2>빠른 한 장인가, 오래 쓰는 한 공간인가</h2><p>좋은 방식은 하나가 아닙니다. 최종 이미지 수와 정확도 요구가 선택을 결정합니다.</p></div></div>
+        <div class="decision">
+          <article><p class="eyebrow">CHOOSE 01</p><h3>이럴 때는 프롬프트 방식</h3><p>한두 장의 아이디어, 분위기 탐색, 촉박한 납기, 건축 직선이 중요하지 않은 장면.</p></article>
+          <article><p class="eyebrow">CHOOSE 02</p><h3>이럴 때는 정교한 방식</h3><p>가구·공간의 정확성, 세 개 이상의 앵글, 렌즈 비교, 캠페인용 반복 제작.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head"><p class="eyebrow">CONTENT SUMMARY</p><div class="intro"><h2>내용 정리</h2></div></div>
+        <dl class="glossary">
+          <div class="term"><dt>소실점</dt><dd>멀어지는 평행선이 화면에서 만나는 것처럼 보이는 점.</dd></div>
+          <div class="term"><dt>수평선</dt><dd>카메라 눈높이에 해당하는 선. 같은 바닥 방향의 소실점이 놓입니다.</dd></div>
+          <div class="term"><dt>프록시</dt><dd>완성 모델 전에 공간과 크기만 확인하는 단순한 3D 상자.</dd></div>
+          <div class="term"><dt>하네스</dt><dd>제작 단계와 검증을 정해 같은 방식으로 반복할 수 있게 만든 틀.</dd></div>
+          <div class="term"><dt>드리프트</dt><dd>후속 생성 과정에서 원래 고정한 선이나 물체 위치가 조금씩 움직이는 현상.</dd></div>
+          <div class="term"><dt>LUT</dt><dd>완성 이미지의 색과 대비를 한 번에 바꾸는 색 변환표.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" aria-label="WORKING FILES 확대 사진첩">
+    <div class="lightbox-inner">
+      <div class="lightbox-bar"><span class="lightbox-count" aria-live="polite"></span><button class="lightbox-close" type="button">닫기 ×</button></div>
+      <div class="lightbox-stage"><button class="lightbox-nav lightbox-prev" type="button" aria-label="이전 이미지">‹</button><img class="lightbox-image" src="assets/process/01-composition-zones.png" alt="거실 장면 구성 도식 확대 이미지"><button class="lightbox-nav lightbox-next" type="button" aria-label="다음 이미지">›</button></div>
+      <div class="lightbox-caption" aria-live="polite"></div>
+    </div>
+  </dialog>
+
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-mark">이미지 제작프로세스최적화</div><p>기술을 더 쓰는 것이 목적이 아닙니다. 틀린 결과에 시간을 더 쓰지 않는 것이 목적입니다.</p></div>
+      <div class="source-links"><strong>RELATED DOCUMENTS</strong><a href="docs/overview.html">00 통합 안내</a><a href="docs/prompt-first.html">01 프롬프트 방식</a><a href="docs/geometry-first.html">02 정교한 방식</a><a href="docs/operations.html">03 기록규칙</a></div>
+    </div>
+  </footer>
+
+  <!-- FALLBACK: vendor/pretext.js missing, using CDN -->
+  <script type="module">
+    import { prepare, layout } from 'https://esm.sh/@chenglou/pretext';
+    await document.fonts.ready;
+    const elements=[...document.querySelectorAll('[data-pretext]')];
+    const prepared=new Map();
+    const prep=el=>prepared.set(el,prepare(el.textContent,getComputedStyle(el).font));
+    elements.forEach(prep);
+    function relayout(){for(const [el,handle] of prepared){const lineHeight=parseFloat(getComputedStyle(el).lineHeight);const result=layout(handle,el.clientWidth,lineHeight);el.style.minHeight=`${result.height}px`;}}
+    new ResizeObserver(relayout).observe(document.body);
+    elements.forEach(el=>new MutationObserver(()=>{prep(el);relayout()}).observe(el,{characterData:true,subtree:true,childList:true}));
+    relayout();
+  </script>
+  <script>
+    (()=>{
+      const items=[...document.querySelectorAll('.stage-open')];
+      const dialog=document.querySelector('.lightbox');
+      const image=dialog.querySelector('.lightbox-image');
+      const caption=dialog.querySelector('.lightbox-caption');
+      const count=dialog.querySelector('.lightbox-count');
+      let current=0;
+      const render=()=>{
+        const item=items[current],thumb=item.querySelector('img');
+        image.src=thumb.src; image.alt=thumb.alt;
+        caption.innerHTML=`<strong>${item.dataset.title}</strong>${item.dataset.copy}`;
+        count.textContent=`WORKING FILES · ${current+1} / ${items.length}`;
+      };
+      const move=step=>{current=(current+step+items.length)%items.length;render();};
+      items.forEach((item,index)=>item.addEventListener('click',()=>{current=index;render();dialog.showModal();}));
+      dialog.querySelector('.lightbox-close').addEventListener('click',()=>dialog.close());
+      dialog.querySelector('.lightbox-prev').addEventListener('click',()=>move(-1));
+      dialog.querySelector('.lightbox-next').addEventListener('click',()=>move(1));
+      dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+      dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft')move(-1);if(event.key==='ArrowRight')move(1);});
+    })();
+  </script>
+</body>
+</html>

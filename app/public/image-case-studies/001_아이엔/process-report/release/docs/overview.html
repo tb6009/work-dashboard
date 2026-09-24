@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="이미지 제작 방식 선택과 비용
+최적화를 위한 통합 안내">
+  <title>이미지 제작프로세스최적화 · 이미지 제작프로세스최적화</title>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="document.css">
+</head>
+<body data-page="overview">
+  <header class="site-head">
+    <nav class="site-nav" aria-label="문서 메뉴">
+      <a class="site-brand" href="../index.html">이미지 제작<span>프로세스최적화</span></a>
+      <div class="site-links">
+        <a href="../index.html">매거진</a>
+        <a href="overview.html" data-page-link="overview">통합 안내</a>
+        <a href="prompt-first.html" data-page-link="prompt-first">01 프롬프트</a>
+        <a href="geometry-first.html" data-page-link="geometry-first">02 정교한 제작</a>
+        <a href="operations.html" data-page-link="operations">기록 규칙</a>
+      </div>
+    </nav>
+  </header>
+  <main class="doc-shell">
+    <article class="doc-article"><h1
+id="이미지-제작프로세스최적화">이미지 제작프로세스최적화</h1>
+<blockquote>
+<p>동일 장면을 빠르게 만드는 방식과, 투시·카메라·공간 구조를 검증하며
+정교하게 만드는 방식을 목적에 따라 선택하고 비용을 줄이는 운영 문서</p>
+</blockquote>
+<h2 id="1-문서-체계">1. 문서 체계</h2>
+<table>
+<thead>
+<tr>
+<th>버전</th>
+<th>문서</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="prompt-first.html">프롬프트에서 정확한 이미지 제작</a></td>
+<td>텍스트 프롬프트와 참조 이미지로 완성 이미지를 직접 생성하고 반복
+수정하는 방식</td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="geometry-first.html">정교한 이미지 제작</a></td>
+<td>3D·카메라 기하를 먼저 확정하고 생성형 모델은 재질·인물·조명·색
+처리에 제한적으로 사용하는 방식</td>
+</tr>
+<tr>
+<td>운영</td>
+<td><a href="operations.html">토큰·검증·최적화 기록규칙</a></td>
+<td>제작별 토큰·시간·호출·실패·검증 결과를 같은 형식으로 기록하는
+규칙</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-최적화-목표">2. 최적화 목표</h2>
+<p>이미지 제작 최적화는 단순히 호출 횟수를 줄이는 것이 아니다. 다음 네
+비용의 총합을 낮추는 것이다.</p>
+<ol type="1">
+<li><strong>생성 비용</strong>: 프롬프트 작성과 이미지 생성 호출</li>
+<li><strong>검증 비용</strong>: 투시·형태·접지·색·광학 검사</li>
+<li><strong>재작업 비용</strong>: 오류가 발견된 단계까지 되돌아가는
+비용</li>
+<li><strong>변형 비용</strong>: 동일 공간의 다른 카메라·렌즈·조명·색
+버전을 만드는 비용</li>
+</ol>
+<p>최적화 대상은 다음 식으로 관리한다.</p>
+<pre class="text"><code>총 제작비용 = 초기 구축비용 + 생성 호출비용 + 검증비용 + 실패 재작업비용 + 파생 버전 비용</code></pre>
+<p>01 방식은 초기 구축비용이 낮고 재작업·파생 비용이 높다. 02 방식은
+초기 구축비용이 높지만 동일 공간의 파생 버전이 늘어날수록 평균 비용이
+낮아진다.</p>
+<h2 id="3-방식-선택-기준">3. 방식 선택 기준</h2>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>권장 방식</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>아이디어 스케치 1–3장</td>
+<td>01</td>
+<td>초기 속도가 가장 빠름</td>
+</tr>
+<tr>
+<td>구조 정확도가 낮아도 되는 분위기 이미지</td>
+<td>01</td>
+<td>투시 계측 비용이 불필요</td>
+</tr>
+<tr>
+<td>최종 결과 한 장, 납기 매우 짧음</td>
+<td>01+최소 검증</td>
+<td>비용 대비 효율적</td>
+</tr>
+<tr>
+<td>건축·가구 직선이 중요한 이미지</td>
+<td>02</td>
+<td>카메라 행렬과 강체 구조 필요</td>
+</tr>
+<tr>
+<td>동일 공간의 여러 카메라 앵글</td>
+<td>02</td>
+<td>3D 공간을 재사용할 수 있음</td>
+</tr>
+<tr>
+<td>24/35/50mm 렌즈 비교</td>
+<td>02</td>
+<td>렌즈값만 변경 가능</td>
+</tr>
+<tr>
+<td>Sony/Canon A/B 비교</td>
+<td>02</td>
+<td>동일 기하·조명 마스터를 공유 가능</td>
+</tr>
+<tr>
+<td>캠페인용 다수 파생 이미지</td>
+<td>02</td>
+<td>초기 비용을 여러 결과에 분산</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-토큰과-시간의-상대-모델">4. 토큰과 시간의 상대 모델</h2>
+<p>정확한 토큰 수와 생성시간은 모델·해상도·서비스 상태에 따라 달라진다.
+아래 값은 이번 사례를 바탕으로 한 <strong>상대 계획값</strong>이며 실제
+사용량이 아니다.</p>
+<table>
+<thead>
+<tr>
+<th>방식</th>
+<th style="text-align: right;">텍스트 작업량</th>
+<th style="text-align: right;">이미지 호출</th>
+<th style="text-align: right;">초기 시간</th>
+<th style="text-align: right;">파생 1장 비용</th>
+<th>검증 가능성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 단일 생성</td>
+<td style="text-align: right;">1×</td>
+<td style="text-align: right;">1×</td>
+<td style="text-align: right;">1×</td>
+<td style="text-align: right;">1×</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>01 반복 수정</td>
+<td style="text-align: right;">2–4×</td>
+<td style="text-align: right;">2–5×</td>
+<td style="text-align: right;">2–5×</td>
+<td style="text-align: right;">1–3×</td>
+<td>중간</td>
+</tr>
+<tr>
+<td>02 하네스</td>
+<td style="text-align: right;">3–6×</td>
+<td style="text-align: right;">3–6×</td>
+<td style="text-align: right;">4–8×</td>
+<td style="text-align: right;">0.4–1×</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>02 3D+합성</td>
+<td style="text-align: right;">4–8×</td>
+<td style="text-align: right;">2–5×</td>
+<td style="text-align: right;">6–12×</td>
+<td style="text-align: right;">0.2–0.7×</td>
+<td>가장 높음</td>
+</tr>
+</tbody>
+</table>
+<p>핵심은 파생 수량이다. 같은 공간에서 앵글·렌즈·조명·카메라 색을 여러
+개 만들면 02 방식의 3D 마스터 구축비용이 재사용되므로 장당 평균비용이
+감소한다.</p>
+<h2 id="5-통합-최적화-파이프라인">5. 통합 최적화 파이프라인</h2>
+<pre class="text"><code>목적·파생 수량 결정
+  ↓
+01 또는 02 방식 선택
+  ↓
+저해상도 구성 검토
+  ↓
+기하 필요 시 카메라·공간 잠금
+  ↓
+인물·오브젝트·조명 제작
+  ↓
+카메라·렌즈·색 분기
+  ↓
+자동 검증 → 사람 검토
+  ↓
+통과본만 고해상도 출력</code></pre>
+<h2 id="6-비용을-줄이는-핵심-규칙">6. 비용을 줄이는 핵심 규칙</h2>
+<ol type="1">
+<li><strong>고해상도 생성은 마지막 한 번만 한다.</strong> 구성·투시는
+저해상도 제어도로 검증한다.</li>
+<li><strong>한 번에 한 변수만 바꾼다.</strong> 수정 원인을 추적할 수
+있어 재시도 프롬프트가 짧아진다.</li>
+<li><strong>공통 마스터를 먼저 만든다.</strong> Sony·Canon, 오전·야간,
+LUT 차이는 마지막에 분기한다.</li>
+<li><strong>기하 실패 시 외관 작업을 중단한다.</strong> 잘못된 투시 위에
+조명과 색을 쌓지 않는다.</li>
+<li><strong>실패본을 삭제하지 않는다.</strong> 실패 원인과 좌표를 남겨
+같은 오류 프롬프트를 반복하지 않는다.</li>
+<li><strong>카메라값과 미학적 표현을 분리한다.</strong> 35mm 투시는
+카메라 행렬로, Sony·Canon 감성은 색·미세 대비 단계로 관리한다.</li>
+<li><strong>승인된 단계만 재사용한다.</strong> 미통과 기하를 마스터로
+승격하지 않는다.</li>
+</ol>
+<h2 id="7-이번-사례에서-확인된-사실">7. 이번 사례에서 확인된 사실</h2>
+<ul>
+<li>프롬프트만으로 “같은 소실점”을 지시해도 생성형 모델은 꼭짓점을
+이동시켰다.</li>
+<li>카메라별 이미지를 각각 생성하면 렌즈 차이와 장면 차이가 섞였다.</li>
+<li>공통 마스터에서 Sony·Canon을 분기하자 비교 공정성이 개선됐다.</li>
+<li>분석적 35mm 프록시는 두 소실점의 y차이를 <code>0px</code>로 만들 수
+있었다.</li>
+<li>프록시를 사진화하는 과정에서는 다시 기하 드리프트가 발생할 수
+있으므로 최종 사진도 재측정해야 한다.</li>
+</ul>
+<h2 id="8-최종-산출물-등급">8. 최종 산출물 등급</h2>
+<table>
+<thead>
+<tr>
+<th>등급</th>
+<th>조건</th>
+<th>사용 가능 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concept</td>
+<td>구성만 승인</td>
+<td>아이디어 검토</td>
+</tr>
+<tr>
+<td>Visual</td>
+<td>육안상 자연스러움</td>
+<td>무드보드·프레젠테이션</td>
+</tr>
+<tr>
+<td>Controlled</td>
+<td>공통 마스터와 단계 기록 보유</td>
+<td>카메라·색 A/B 비교</td>
+</tr>
+<tr>
+<td>Geometry-verified</td>
+<td>투시·수직·접지 수치 통과</td>
+<td>건축·가구 표현</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>Geometry-verified + 인물·광학·색·출력 QC</td>
+<td>최종 납품</td>
+</tr>
+</tbody>
+</table>
+<p>현재 <code>IMG_20260922_0001</code>의 생성형 후보는
+<code>Controlled</code> 이하이며, 분석적 35mm 프록시만 기하 계산에서
+통과했다. 사진화 결과는 별도 검증 전까지
+<code>Geometry-verified</code>로 부르지 않는다.</p>
+      <nav class="doc-next" aria-label="이전·다음 문서"><span></span><a href="prompt-first.html">01
+프롬프트 방식 →</a></nav>
+    </article>
+    <aside class="doc-toc" aria-label="현재 문서 목차"><strong>ON THIS PAGE</strong><ul>
+<li><a href="#이미지-제작프로세스최적화"
+id="toc-이미지-제작프로세스최적화">이미지 제작프로세스최적화</a>
+<ul>
+<li><a href="#1-문서-체계" id="toc-1-문서-체계">1. 문서 체계</a></li>
+<li><a href="#2-최적화-목표" id="toc-2-최적화-목표">2. 최적화
+목표</a></li>
+<li><a href="#3-방식-선택-기준" id="toc-3-방식-선택-기준">3. 방식 선택
+기준</a></li>
+<li><a href="#4-토큰과-시간의-상대-모델"
+id="toc-4-토큰과-시간의-상대-모델">4. 토큰과 시간의 상대 모델</a></li>
+<li><a href="#5-통합-최적화-파이프라인"
+id="toc-5-통합-최적화-파이프라인">5. 통합 최적화 파이프라인</a></li>
+<li><a href="#6-비용을-줄이는-핵심-규칙"
+id="toc-6-비용을-줄이는-핵심-규칙">6. 비용을 줄이는 핵심 규칙</a></li>
+<li><a href="#7-이번-사례에서-확인된-사실"
+id="toc-7-이번-사례에서-확인된-사실">7. 이번 사례에서 확인된
+사실</a></li>
+<li><a href="#8-최종-산출물-등급" id="toc-8-최종-산출물-등급">8. 최종
+산출물 등급</a></li>
+</ul></li>
+</ul></aside>
+  </main>
+  <footer class="site-footer"><div><span>IMAGE PROCESS OPTIMIZATION · RELEASE 2026.09</span><span>원본 Markdown과 함께 관리되는 HTML 문서</span></div></footer>
+  <script>
+    const page=document.body.dataset.page;
+    document.querySelector(`[data-page-link="overview"]`)?.setAttribute('aria-current','page');
+  </script>
+</body>
+</html>

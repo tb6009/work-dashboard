@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "record_type": "process_publication",
+  "corpus_id": "PROC_20260923_0001",
+  "title": "이미지 제작프로세스최적화",
+  "description": "동일 장면을 대상으로 프롬프트 중심 제작과 기하 우선 이미지 하네싱을 비교하고, 투시·카메라·렌즈·조명·색보정·검증 과정을 정리한 공개용 매거진과 기술 문서 묶음",
+  "status": "release_ready",
+  "language": "ko",
+  "created_at": "2026-09-23",
+  "updated_at": "2026-09-23",
+  "related_image_ids": [
+    "IMG_20260922_0001",
+    "IMG_20260922_0002"
+  ],
+  "canonical": {
+    "directory": "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report",
+    "entry_html": "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/release/index.html",
+    "source_documents": [
+      "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/00_이미지 제작프로세스최적화.md",
+      "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/01_프롬프트에서 정확한 이미지 제작.md",
+      "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/02_정교한 이미지 제작.md",
+      "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/03_토큰·검증·최적화 기록규칙.md"
+    ]
+  },
+  "workdashboard": {
+    "project_id": "1300",
+    "slug": "image-process-optimization",
+    "route": "/image-process-optimization/index.html",
+    "public_directory": "06_Personal_Project/063_workDashboard/app/public/image-process-optimization"
+  },
+  "release": {
+    "archive": "13_Image/1302_Image_Case_Studies/web/001_아이엔/process-report/이미지제작프로세스최적화_release_20260923.zip",
+    "html_documents": 5,
+    "missing_internal_links": 0,
+    "broken_images": 0,
+    "external_runtime_dependencies": 0
+  },
+  "tags": [
+    "image-generation",
+    "perspective",
+    "camera-simulation",
+    "35mm",
+    "image-harness",
+    "workflow-optimization"
+  ]
+}

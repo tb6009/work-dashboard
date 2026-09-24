@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "slug": "image-process-optimization",
+  "title": "이미지 제작프로세스최적화",
+  "projectId": "1300",
+  "entry": "/image-process-optimization/index.html",
+  "sourceCorpus": "13_Image/1300_이미지분석 Corpus",
+  "sourceRecord": "07_이미지제작프로세스최적화/corpus-entry.json",
+  "releaseDate": "2026-09-23",
+  "visibility": "public",
+  "contentType": "process-magazine",
+  "tags": ["이미지 제작", "투시", "카메라", "렌즈", "하네싱"]
+}

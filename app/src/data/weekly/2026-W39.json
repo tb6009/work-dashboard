@@ -7,16 +7,16 @@
   "status": "current",
   "summary": "임차in케어를 타깃 5그룹까지 넓혀 최종 시안 v0.8과 브랜드전략 인포그래픽 13페이지로 마감하고, 임차in·계원 입시 두 프로젝트의 제작 과정을 각각 한 페이지 기록 + 버전 아카이브로 묶어 대시보드에 공개한 주.",
   "kpis": {
-    "activeProjects": 3,
+    "activeProjects": 6,
     "sessions": 1,
     "newProjects": 0,
-    "filesChanged": 109
+    "filesChanged": 127
   },
   "daily": [
     {
       "date": "2026-09-21",
       "weekday": "월",
-      "filesChanged": 109,
+      "filesChanged": 107,
       "topProjectIds": [
         "09",
         "063",
@@ -30,22 +30,22 @@
           "tokens": {
             "byModel": {
               "claude-opus-5": {
-                "in": 362,
-                "out": 177331,
-                "cache_read": 40155956,
-                "cache_write": 644260,
-                "messages": 181,
-                "costUSD": 28.5397
+                "in": 368,
+                "out": 181073,
+                "cache_read": 41212685,
+                "cache_write": 648290,
+                "messages": 184,
+                "costUSD": 29.1868
               }
             },
             "total": {
-              "in": 362,
-              "out": 177331,
-              "cache_read": 40155956,
-              "cache_write": 644260,
-              "messages": 181
+              "in": 368,
+              "out": 181073,
+              "cache_read": 41212685,
+              "cache_write": 648290,
+              "messages": 184
             },
-            "costUSD": 28.5397
+            "costUSD": 29.1868
           }
         },
         {
@@ -61,20 +61,124 @@
     {
       "date": "2026-09-22",
       "weekday": "화",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 8,
+      "topProjectIds": [
+        "081",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "081",
+          "did": "[fs scan] CLAUDE.md · 00_인용_명세서.md · 01_버티컬AI_이해_v0.1.md · PROJECT.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 100,
+                "out": 66049,
+                "cache_read": 5263156,
+                "cache_write": 127566,
+                "messages": 50,
+                "costUSD": 5.0806
+              }
+            },
+            "total": {
+              "in": 100,
+              "out": 66049,
+              "cache_read": 5263156,
+              "cache_write": 127566,
+              "messages": 50
+            },
+            "costUSD": 5.0806
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W39.json"
+        }
+      ]
     },
     {
       "date": "2026-09-23",
       "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 11,
+      "topProjectIds": [
+        "063",
+        "03",
+        "039",
+        "083"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W39.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 224,
+                "out": 172660,
+                "cache_read": 27912464,
+                "cache_write": 306293,
+                "messages": 112,
+                "costUSD": 20.1882
+              }
+            },
+            "total": {
+              "in": 224,
+              "out": 172660,
+              "cache_read": 27912464,
+              "cache_write": 306293,
+              "messages": 112
+            },
+            "costUSD": 20.1882
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 14_디자인터칭데이_상담가능_문제유형표_v0.1.md"
+        },
+        {
+          "projectId": "083",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 6,
+                "out": 1710,
+                "cache_read": 495216,
+                "cache_write": 3096,
+                "messages": 3,
+                "costUSD": 0.3097
+              }
+            },
+            "total": {
+              "in": 6,
+              "out": 1710,
+              "cache_read": 495216,
+              "cache_write": 3096,
+              "messages": 3
+            },
+            "costUSD": 0.3097
+          }
+        }
+      ]
     },
     {
       "date": "2026-09-24",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 1,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W39.json"
+        }
+      ]
     },
     {
       "date": "2026-09-25",
@@ -213,15 +317,15 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-21T12:32:44.900850+09:00",
+  "buildAt": "2026-09-24T09:45:59.320Z",
   "tokens": {
     "total": {
-      "in": 362,
-      "out": 177331,
-      "cache_read": 40155956,
-      "cache_write": 644260
+      "in": 698,
+      "out": 421492,
+      "cache_read": 74883521,
+      "cache_write": 1085245
     },
-    "costUSD": 28.5397,
-    "costKRW": 40181
+    "costUSD": 54.7653,
+    "costKRW": 77104
   }
 }

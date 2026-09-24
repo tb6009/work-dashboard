@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="3D 공간과 카메라 기하를 우선하는
+정교한 이미지 제작 과정">
+  <title>02 정교한 이미지 제작 · 이미지 제작프로세스최적화</title>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="document.css">
+</head>
+<body data-page="geometry-first">
+  <header class="site-head">
+    <nav class="site-nav" aria-label="문서 메뉴">
+      <a class="site-brand" href="../index.html">이미지 제작<span>프로세스최적화</span></a>
+      <div class="site-links">
+        <a href="../index.html">매거진</a>
+        <a href="overview.html" data-page-link="overview">통합 안내</a>
+        <a href="prompt-first.html" data-page-link="prompt-first">01 프롬프트</a>
+        <a href="geometry-first.html" data-page-link="geometry-first">02 정교한 제작</a>
+        <a href="operations.html" data-page-link="operations">기록 규칙</a>
+      </div>
+    </nav>
+  </header>
+  <main class="doc-shell">
+    <article class="doc-article"><h1 id="02-버전--정교한-이미지-제작">02
+버전 — 정교한 이미지 제작</h1>
+<h2 id="1-정의">1. 정의</h2>
+<p>공간과 카메라를 먼저 수학적·3차원적으로 고정한 뒤 생성형 모델의
+역할을 인물·재질·조명·광학·색 표현으로 제한하는 방식이다. 목적은
+“사진처럼 보이는 이미지”뿐 아니라 <strong>같은 공간을 여러 시점에서도
+유지할 수 있는 이미지 시스템</strong>을 만드는 것이다.</p>
+<h2 id="2-제작-계층">2. 제작 계층</h2>
+<pre class="text"><code>Scene master
+  ├─ Room geometry
+  ├─ Furniture geometry
+  ├─ Camera rig
+  ├─ Lighting rig
+  ├─ Subject/pose layer
+  ├─ Material/texture layer
+  └─ Camera/color branches</code></pre>
+<p>공간·가구·카메라는 재사용 자산이고, 인물·조명·색은 장면별 또는 버전별
+변경 자산이다.</p>
+<h2 id="3-전체-프로세스">3. 전체 프로세스</h2>
+<h3 id="stage-01--장면-설계">Stage 01 — 장면 설계</h3>
+<ul>
+<li>이미지 목적, 피사체, 화면비, 시선 흐름 결정</li>
+<li>필요한 파생 앵글과 렌즈 목록을 먼저 작성</li>
+<li>출력: composition map</li>
+</ul>
+<h3 id="stage-02--카메라-캘리브레이션">Stage 02 — 카메라
+캘리브레이션</h3>
+<ul>
+<li>센서 크기, 초점거리, 해상도, 카메라 높이, yaw·pitch·roll 설정</li>
+<li>카메라 내부행렬 <code>K</code>와 외부행렬 <code>R|t</code> 계산</li>
+<li>출력: 카메라 JSON, 수평선, 소실점</li>
+</ul>
+<h3 id="stage-03--공간가구-프록시">Stage 03 — 공간·가구 프록시</h3>
+<ul>
+<li>방, 창, 문, 테이블, 소파, 책장, 미디어 콘솔을 실제 단위 박스로
+모델링</li>
+<li>같은 세계축에 평행한 선이 같은 소실점으로 수렴하는지 검사</li>
+<li>출력: wireframe, depth, normal, object ID</li>
+</ul>
+<h3 id="stage-04--인물오브젝트-배치">Stage 04 — 인물·오브젝트 배치</h3>
+<ul>
+<li>골반·등·발·손·책의 접촉 관계 설정</li>
+<li>인물과 가구의 실제 크기 범위 확인</li>
+<li>가림 관계와 그림자 접점을 기록</li>
+</ul>
+<h3 id="stage-05--조명">Stage 05 — 조명</h3>
+<ul>
+<li>광원의 방향·크기·색온도·세기 설정</li>
+<li>직사광과 반사광 분리</li>
+<li>기하를 변경하지 않고 조명 패스만 검증</li>
+</ul>
+<h3 id="stage-06--사진화">Stage 06 — 사진화</h3>
+<ul>
+<li>3D 프록시를 제어 입력으로 사용</li>
+<li>생성형 모델은 재질·인물·식물·생활 소품을 사진화</li>
+<li>직선 구조와 카메라 투시는 변경 금지</li>
+</ul>
+<h3 id="stage-07--카메라렌즈-분기">Stage 07 — 카메라·렌즈 분기</h3>
+<ul>
+<li>동일 마스터에서 24/35/50mm 또는 Sony/Canon 분기</li>
+<li>기하는 카메라 행렬에서 계산하고 브랜드 차이는 색·미세
+대비·하이라이트 처리로 제한</li>
+</ul>
+<h3 id="stage-08--색보정lut">Stage 08 — 색보정·LUT</h3>
+<ul>
+<li>화이트밸런스, 노출, tone curve, gamut 변환 적용</li>
+<li>LUT는 픽셀 위치나 윤곽을 바꾸지 않음</li>
+</ul>
+<h3 id="stage-09--최종-검증">Stage 09 — 최종 검증</h3>
+<ul>
+<li>투시, 수직, 접지, 형태, 조명, 심도, 색, 아티팩트 검사</li>
+<li>자동 통과와 사람 승인을 모두 기록</li>
+</ul>
+<h2 id="4-카메라-계산-예시">4. 카메라 계산 예시</h2>
+<p>이번 35mm 프록시는 다음 조건으로 계산했다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: right;">값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>이미지</td>
+<td style="text-align: right;">1536×1024px</td>
+</tr>
+<tr>
+<td>센서</td>
+<td style="text-align: right;">36×24mm</td>
+</tr>
+<tr>
+<td>초점거리</td>
+<td style="text-align: right;">35mm</td>
+</tr>
+<tr>
+<td>수평 초점거리</td>
+<td style="text-align: right;">1493.33px</td>
+</tr>
+<tr>
+<td>카메라 높이</td>
+<td style="text-align: right;">1.50m</td>
+</tr>
+<tr>
+<td>수평선</td>
+<td style="text-align: right;">y=439.83px</td>
+</tr>
+<tr>
+<td>X축 소실점</td>
+<td style="text-align: right;">(3971.74, 439.83)</td>
+</tr>
+<tr>
+<td>Y축 소실점</td>
+<td style="text-align: right;">(70.30, 439.83)</td>
+</tr>
+<tr>
+<td>소실점 y 차이</td>
+<td style="text-align: right;">0.00px</td>
+</tr>
+</tbody>
+</table>
+<p>분석적 프록시는 2점 투시 조건을 수학적으로 통과한다. 그러나 사진화
+출력은 생성 과정에서 선이 이동할 수 있으므로 다시 측정해야 한다.</p>
+<h2 id="5-검증-게이트">5. 검증 게이트</h2>
+<table>
+<thead>
+<tr>
+<th>게이트</th>
+<th>기준</th>
+<th>실패 시 복귀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VP 군집</td>
+<td>이미지 폭의 3% 이하</td>
+<td>Stage 02–03</td>
+</tr>
+<tr>
+<td>두 VP의 수평선 차</td>
+<td>이미지 높이의 1% 이하</td>
+<td>Stage 02–03</td>
+</tr>
+<tr>
+<td>수직 편차</td>
+<td>설정값 대비 1° 이하</td>
+<td>Stage 02</td>
+</tr>
+<tr>
+<td>기하 드리프트</td>
+<td>대각선의 0.5% 이하</td>
+<td>Stage 06</td>
+</tr>
+<tr>
+<td>접지</td>
+<td>모든 지지점이 바닥·좌판과 연결</td>
+<td>Stage 04</td>
+</tr>
+<tr>
+<td>조명 일치</td>
+<td>광원과 투영 그림자 방향 일치</td>
+<td>Stage 05</td>
+</tr>
+<tr>
+<td>카메라 분기 일치</td>
+<td>분기 전후 구조 좌표 유지</td>
+<td>Stage 07</td>
+</tr>
+<tr>
+<td>색 안전</td>
+<td>심각한 shadow/highlight clipping 없음</td>
+<td>Stage 08</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-토큰과-제작시간-최적화">6. 토큰과 제작시간 최적화</h2>
+<h3 id="초기-구축">초기 구축</h3>
+<ul>
+<li>01보다 카메라 명세·좌표·검증 문서가 많아 텍스트 작업량이
+증가한다.</li>
+<li>프록시 제작과 검증 때문에 첫 장은 느리다.</li>
+<li>대신 오류를 외관 제작 전에 발견해 고품질 재생성 낭비를 막는다.</li>
+</ul>
+<h3 id="재사용-단계">재사용 단계</h3>
+<ul>
+<li>카메라 위치만 변경하면 새 수평선·소실점·구도를 자동 계산할 수
+있다.</li>
+<li>가구 모델을 다시 만들지 않고 다른 앵글을 렌더링한다.</li>
+<li>공통 렌더에서 Sony·Canon·LUT만 분기한다.</li>
+<li>동일 공간의 파생 수량이 늘어날수록 장당 평균비용이 감소한다.</li>
+</ul>
+<h3 id="권장-해상도-전략">권장 해상도 전략</h3>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>권장 출력</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구성·프록시</td>
+<td>768px 수준</td>
+<td>빠른 오류 발견</td>
+</tr>
+<tr>
+<td>투시 검증</td>
+<td>최종 화면비, 저해상도</td>
+<td>좌표 비율 유지</td>
+</tr>
+<tr>
+<td>인물·재질 후보</td>
+<td>1024–1536px</td>
+<td>형태 평가 가능</td>
+</tr>
+<tr>
+<td>최종 승인</td>
+<td>목표 납품 해상도</td>
+<td>불필요한 고해상도 호출 방지</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-다중-앵글-제작">7. 다중 앵글 제작</h2>
+<p>3D 마스터가 승인되면 다음 값만 바꾼다.</p>
+<ul>
+<li>카메라 위치 <code>(x, y, z)</code></li>
+<li>yaw·pitch·roll</li>
+<li>초점거리와 센서 크기</li>
+<li>초점거리와 조리개</li>
+<li>시간대와 조명 rig</li>
+</ul>
+<p>변경 후 공간·가구의 세계좌표는 유지된다. 따라서 정면, 좌측, 우측,
+낮은 시점, 높은 시점이 모두 같은 방으로 연결된다.</p>
+<h2 id="8-sonycanon-분리-원칙">8. Sony·Canon 분리 원칙</h2>
+<p>두 버전은 다음을 공유한다.</p>
+<ul>
+<li>카메라 위치와 35mm 투영</li>
+<li>장면 구조와 인물 포즈</li>
+<li>조명 방향과 노출 기준</li>
+<li>초점 위치와 심도 범위</li>
+</ul>
+<p>차이는 다음 단계에만 둔다.</p>
+<ul>
+<li>color response의 시각적 해석</li>
+<li>microcontrast와 sharpening</li>
+<li>highlight shoulder</li>
+<li>적색·녹색·청색 분리 경향</li>
+<li>주변부와 보케의 절제된 표현</li>
+</ul>
+<p>실제 제조사 RAW 데이터와 렌즈 프로파일이 없으면 “Sony/Canon 물리
+복제”가 아니라 “Sony/Canon 시각적 해석”으로 기록한다.</p>
+<h2 id="9-실패-방지-규칙">9. 실패 방지 규칙</h2>
+<ol type="1">
+<li>분석적 프록시가 통과하기 전에 사진화를 시작하지 않는다.</li>
+<li>사진화 결과가 프록시 모서리를 벗어나면 외관이 좋아도 승인하지
+않는다.</li>
+<li>생성형 모델이 직선 구조를 다시 그린 경우 해당 구조를 결정론적
+렌더·합성으로 복원한다.</li>
+<li>카메라 앵글 변경 시 이전 사진을 변형하지 않고 3D 마스터에서 새로
+투영한다.</li>
+<li>최종 색보정은 기하 검증 이후에만 수행한다.</li>
+</ol>
+<h2 id="10-현재-구현-상태">10. 현재 구현 상태</h2>
+<ul>
+<li>35mm 분석적 프록시: 제작 완료, 소실점 y 차이 <code>0px</code></li>
+<li>프록시 카메라 데이터: JSON 저장</li>
+<li>사진화 후보: 제작 가능하지만 최종 기하 재검증 필요</li>
+<li>완전한 Blender/CAD 장면: 로컬 Blender 미설치로 미구축</li>
+</ul>
+<p>관련 파일:</p>
+<ul>
+<li><code>06_이미지하네스/build_35mm_proxy.py</code></li>
+<li><code>06_이미지하네스/projects/IMG_20260922_0001/02_perspective/analytic-35mm-proxy-v01.png</code></li>
+<li><code>06_이미지하네스/projects/IMG_20260922_0001/02_perspective/analytic-35mm-camera-v01.json</code></li>
+</ul>
+      <nav class="doc-next" aria-label="이전·다음 문서"><a href="prompt-first.html">← 01
+프롬프트 방식</a><a href="operations.html">기록 규칙 →</a></nav>
+    </article>
+    <aside class="doc-toc" aria-label="현재 문서 목차"><strong>ON THIS PAGE</strong><ul>
+<li><a href="#02-버전--정교한-이미지-제작"
+id="toc-02-버전--정교한-이미지-제작">02 버전 — 정교한 이미지 제작</a>
+<ul>
+<li><a href="#1-정의" id="toc-1-정의">1. 정의</a></li>
+<li><a href="#2-제작-계층" id="toc-2-제작-계층">2. 제작 계층</a></li>
+<li><a href="#3-전체-프로세스" id="toc-3-전체-프로세스">3. 전체
+프로세스</a></li>
+<li><a href="#4-카메라-계산-예시" id="toc-4-카메라-계산-예시">4. 카메라
+계산 예시</a></li>
+<li><a href="#5-검증-게이트" id="toc-5-검증-게이트">5. 검증
+게이트</a></li>
+<li><a href="#6-토큰과-제작시간-최적화"
+id="toc-6-토큰과-제작시간-최적화">6. 토큰과 제작시간 최적화</a></li>
+<li><a href="#7-다중-앵글-제작" id="toc-7-다중-앵글-제작">7. 다중 앵글
+제작</a></li>
+<li><a href="#8-sonycanon-분리-원칙" id="toc-8-sonycanon-분리-원칙">8.
+Sony·Canon 분리 원칙</a></li>
+<li><a href="#9-실패-방지-규칙" id="toc-9-실패-방지-규칙">9. 실패 방지
+규칙</a></li>
+<li><a href="#10-현재-구현-상태" id="toc-10-현재-구현-상태">10. 현재
+구현 상태</a></li>
+</ul></li>
+</ul></aside>
+  </main>
+  <footer class="site-footer"><div><span>IMAGE PROCESS OPTIMIZATION · RELEASE 2026.09</span><span>원본 Markdown과 함께 관리되는 HTML 문서</span></div></footer>
+  <script>
+    const page=document.body.dataset.page;
+    document.querySelector(`[data-page-link="geometry-first"]`)?.setAttribute('aria-current','page');
+  </script>
+</body>
+</html>

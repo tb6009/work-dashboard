@@ -1,0 +1,22 @@
+{
+  "source_mockup": "08_project/089_임차in/04_산출물/20260920_독립컨셉_3세트_v0.5/02_맑은시선/index.html",
+  "source_plan": "07_이미지제작프로세스최적화/00_이미지 제작프로세스최적화.md",
+  "mode": "plan-driven",
+  "html_file": "07_이미지제작프로세스최적화/이미지제작프로세스최적화_매거진.html",
+  "pretext_tier": "content-heavy editorial",
+  "framework": "vanilla",
+  "iterations": 9,
+  "date": "2026-09-23",
+  "screen": "image-process-optimization-magazine",
+  "branch": "gf-ui/foundations-and-fix-v2",
+  "design_reference": "임차in케어 맑은 시선: White, Air Blue, Deep Sky, Apricot Coral, thin rules, neutral daylight photography, strong whitespace",
+  "stage_gallery": "설계·구축·마감 3단계 흐름과 실제 중간 산출물 6종을 결합한 컴팩트 인포그래픽",
+  "technical_detail": "캔버스·센서·35mm 투영·카메라 좌표·소실점·기하 잠금·품질 게이트·Sony/Canon 분기 수치를 접이식 명세로 제공",
+  "typography_and_density": "Pretendard 단일 산세리프 체계, 축소된 섹션·카드·커버 여백, 최대 폭 1480px",
+  "content_review": "하네스 원본과 수치 재대조. VP 군집 46px, 수평선 y차 10px, 기하 드리프트 9px을 분리하고 친절한 설명 5개 추가",
+  "heading_layout": "영문 키커 1줄 아래 국문 세미볼드 타이틀. 강제 줄바꿈 제거. 3D 공간 이미지는 전폭, MOVE·LENS·LIGHT·COLOR는 하단 4열",
+  "gallery": "WORKING FILES 6종 클릭 확대, 이전·다음·키보드 탐색을 제공하는 dialog 사진첩",
+  "metrics_layout": "641px 이상에서 수치 4단 유지, 640px 이하에서만 2단",
+  "release_bundle": "release/index.html + docs HTML 4종 + assets + 공통 CSS",
+  "release_navigation": "매거진·통합 안내·01 프롬프트·02 정교한 제작·기록 규칙 상호 연결"
+}

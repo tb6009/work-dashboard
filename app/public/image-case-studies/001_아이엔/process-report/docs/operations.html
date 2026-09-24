@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="이미지 제작 비용과 검증 결과를
+비교하기 위한 기록 규칙">
+  <title>토큰·검증·최적화 기록규칙 · 이미지 제작프로세스최적화</title>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="document.css">
+</head>
+<body data-page="operations">
+  <header class="site-head">
+    <nav class="site-nav" aria-label="문서 메뉴">
+      <a class="site-brand" href="../index.html">이미지 제작<span>프로세스최적화</span></a>
+      <div class="site-links">
+        <a href="../index.html">매거진</a>
+        <a href="overview.html" data-page-link="overview">통합 안내</a>
+        <a href="prompt-first.html" data-page-link="prompt-first">01 프롬프트</a>
+        <a href="geometry-first.html" data-page-link="geometry-first">02 정교한 제작</a>
+        <a href="operations.html" data-page-link="operations">기록 규칙</a>
+      </div>
+    </nav>
+  </header>
+  <main class="doc-shell">
+    <article class="doc-article"><h1
+id="토큰검증최적화-기록규칙">토큰·검증·최적화 기록규칙</h1>
+<h2 id="1-목적">1. 목적</h2>
+<p>이미지의 품질뿐 아니라 어떤 제작 경로가 더 적은 호출·시간·재작업으로
+목표를 달성했는지 비교하기 위한 기록 규칙이다.</p>
+<h2 id="2-작업별-필수-기록">2. 작업별 필수 기록</h2>
+<table>
+<thead>
+<tr>
+<th>필드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>project_id</code></td>
+<td>이미지 또는 장면 ID</td>
+</tr>
+<tr>
+<td><code>process_version</code></td>
+<td>01 prompt-first / 02 geometry-first</td>
+</tr>
+<tr>
+<td><code>stage</code></td>
+<td>현재 제작 단계</td>
+</tr>
+<tr>
+<td><code>input_assets</code></td>
+<td>사용한 원본·제어도·프록시</td>
+</tr>
+<tr>
+<td><code>prompt_revision</code></td>
+<td>프롬프트 버전</td>
+</tr>
+<tr>
+<td><code>generation_calls</code></td>
+<td>이미지 생성 호출 횟수</td>
+</tr>
+<tr>
+<td><code>analysis_calls</code></td>
+<td>분석·검증 횟수</td>
+</tr>
+<tr>
+<td><code>elapsed_time</code></td>
+<td>가능할 때 실제 경과시간</td>
+</tr>
+<tr>
+<td><code>token_usage</code></td>
+<td>도구가 제공할 때만 실제값 기록</td>
+</tr>
+<tr>
+<td><code>validation</code></td>
+<td>투시·형태·접지·조명·색 판정</td>
+</tr>
+<tr>
+<td><code>failure_reason</code></td>
+<td>실패 원인과 발생 단계</td>
+</tr>
+<tr>
+<td><code>reusable_assets</code></td>
+<td>다음 버전에 재사용 가능한 자산</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-토큰-기록-원칙">3. 토큰 기록 원칙</h2>
+<ul>
+<li>실제 사용량을 도구에서 받지 못하면 숫자를 추정해 확정값처럼 쓰지
+않는다.</li>
+<li>상대값은 <code>1×</code>, <code>2–4×</code>처럼 계획 범위로
+표시한다.</li>
+<li>텍스트 토큰과 이미지 생성 호출을 분리한다.</li>
+<li>긴 프롬프트가 항상 더 정확한 것은 아니므로 프롬프트 길이보다 실패
+재호출 수를 함께 본다.</li>
+</ul>
+<h2 id="4-검증-횟수-기록">4. 검증 횟수 기록</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;stage&quot;</span><span class="fu">:</span> <span class="st">&quot;02_perspective&quot;</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;attempt&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;machine_validation&quot;</span><span class="fu">:</span> <span class="st">&quot;passed&quot;</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;human_validation&quot;</span><span class="fu">:</span> <span class="st">&quot;pending&quot;</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;metrics&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;vp_y_difference_px&quot;</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;vertical_deviation_deg&quot;</span><span class="fu">:</span> <span class="fl">0.0</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;next_action&quot;</span><span class="fu">:</span> <span class="st">&quot;hold_for_human_review&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>검증 실패 후 같은 단계에서 재작업하면 <code>attempt</code>를 올린다.
+다음 단계로 넘어갔다가 되돌아오면 원인 단계와 발견 단계를 모두
+기록한다.</p>
+<h2 id="5-최적화-지표">5. 최적화 지표</h2>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>계산</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First-pass pass rate</td>
+<td>최초 통과 단계 / 전체 단계</td>
+<td>초기 명세 품질</td>
+</tr>
+<tr>
+<td>Rework rate</td>
+<td>재작업 단계 / 전체 단계</td>
+<td>공정 안정성</td>
+</tr>
+<tr>
+<td>Calls per approved image</td>
+<td>총 생성 호출 / 승인 이미지</td>
+<td>생성 효율</td>
+</tr>
+<tr>
+<td>Validation yield</td>
+<td>통과 결과 / 검증 결과</td>
+<td>후보 품질</td>
+</tr>
+<tr>
+<td>Reuse ratio</td>
+<td>재사용 자산 / 전체 자산</td>
+<td>하네스 효율</td>
+</tr>
+<tr>
+<td>Variant marginal cost</td>
+<td>파생 제작비 / 파생 수량</td>
+<td>다중 앵글 효율</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-비교-시-금지사항">6. 비교 시 금지사항</h2>
+<ul>
+<li>MAE 하나를 원본 정체성 보존도 전체로 부르지 않는다.</li>
+<li>선명도 하나를 이미지 품질 점수로 부르지 않는다.</li>
+<li>육안상 좋아 보인다는 이유로 투시 수치 실패를 통과시키지 않는다.</li>
+<li>소실점 검출 방법이 다른 버전의 오차를 단순 개선율로 나누지
+않는다.</li>
+<li>실제 RAW·렌즈 프로파일 없이 카메라 물리 복제를 주장하지 않는다.</li>
+</ul>
+<h2 id="7-최적화-회고-템플릿">7. 최적화 회고 템플릿</h2>
+<pre class="text"><code>목표:
+선택한 프로세스와 이유:
+총 생성 호출:
+총 검증 횟수:
+실패가 처음 발생한 단계:
+실패가 발견된 단계:
+재사용한 자산:
+폐기한 작업:
+최종 승인 등급:
+다음 제작에서 제거할 단계:
+다음 제작에서 강화할 게이트:</code></pre>
+      <nav class="doc-next" aria-label="이전·다음 문서"><a href="geometry-first.html">← 02
+정교한 제작</a></nav>
+    </article>
+    <aside class="doc-toc" aria-label="현재 문서 목차"><strong>ON THIS PAGE</strong><ul>
+<li><a href="#토큰검증최적화-기록규칙"
+id="toc-토큰검증최적화-기록규칙">토큰·검증·최적화 기록규칙</a>
+<ul>
+<li><a href="#1-목적" id="toc-1-목적">1. 목적</a></li>
+<li><a href="#2-작업별-필수-기록" id="toc-2-작업별-필수-기록">2. 작업별
+필수 기록</a></li>
+<li><a href="#3-토큰-기록-원칙" id="toc-3-토큰-기록-원칙">3. 토큰 기록
+원칙</a></li>
+<li><a href="#4-검증-횟수-기록" id="toc-4-검증-횟수-기록">4. 검증 횟수
+기록</a></li>
+<li><a href="#5-최적화-지표" id="toc-5-최적화-지표">5. 최적화
+지표</a></li>
+<li><a href="#6-비교-시-금지사항" id="toc-6-비교-시-금지사항">6. 비교 시
+금지사항</a></li>
+<li><a href="#7-최적화-회고-템플릿" id="toc-7-최적화-회고-템플릿">7.
+최적화 회고 템플릿</a></li>
+</ul></li>
+</ul></aside>
+  </main>
+  <footer class="site-footer"><div><span>IMAGE PROCESS OPTIMIZATION · RELEASE 2026.09</span><span>원본 Markdown과 함께 관리되는 HTML 문서</span></div></footer>
+  <script>
+    const page=document.body.dataset.page;
+    document.querySelector(`[data-page-link="operations"]`)?.setAttribute('aria-current','page');
+  </script>
+</body>
+</html>

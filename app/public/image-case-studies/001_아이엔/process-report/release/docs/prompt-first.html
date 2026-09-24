@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="프롬프트 중심 이미지 제작 과정과
+검증 기준">
+  <title>01 프롬프트에서 정확한 이미지
+제작 · 이미지 제작프로세스최적화</title>
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="document.css">
+</head>
+<body data-page="prompt-first">
+  <header class="site-head">
+    <nav class="site-nav" aria-label="문서 메뉴">
+      <a class="site-brand" href="../index.html">이미지 제작<span>프로세스최적화</span></a>
+      <div class="site-links">
+        <a href="../index.html">매거진</a>
+        <a href="overview.html" data-page-link="overview">통합 안내</a>
+        <a href="prompt-first.html" data-page-link="prompt-first">01 프롬프트</a>
+        <a href="geometry-first.html" data-page-link="geometry-first">02 정교한 제작</a>
+        <a href="operations.html" data-page-link="operations">기록 규칙</a>
+      </div>
+    </nav>
+  </header>
+  <main class="doc-shell">
+    <article class="doc-article"><h1
+id="01-버전--프롬프트에서-정확한-이미지-제작">01 버전 — 프롬프트에서
+정확한 이미지 제작</h1>
+<h2 id="1-정의">1. 정의</h2>
+<p>텍스트 프롬프트, 원본 이미지, 투시 가이드 이미지를 생성형 모델에
+입력하고 완성 이미지 또는 수정 이미지를 직접 얻는 방식이다. 이번
+프로젝트의 원본→v1→v2→v3→v4 과정이 여기에 해당한다.</p>
+<h2 id="2-기본-프로세스">2. 기본 프로세스</h2>
+<pre class="text"><code>요구사항 작성
+→ 원본 분석
+→ 오류를 프롬프트로 명시
+→ 전체 또는 국소 재생성
+→ 육안 비교
+→ 문제 부위 재프롬프트
+→ 카메라·렌즈·색 표현 추가
+→ 최종 선택</code></pre>
+<h2 id="3-프롬프트-구조">3. 프롬프트 구조</h2>
+<pre class="text"><code>Use case
+Input image role
+Primary request
+Scene/backdrop
+Subject and pose
+Composition/framing
+Perspective constraints
+Lighting/mood
+Camera/lens interpretation
+Color finish
+Locked invariants
+Avoid list</code></pre>
+<p>정확도를 높이려면 “투시를 맞춰라”가 아니라 다음처럼 대상과 불변
+조건을 분리해야 한다.</p>
+<ul>
+<li>테이블은 하나의 직육면체로 유지</li>
+<li>테이블과 미디어 콘솔은 동일한 두 소실점을 사용</li>
+<li>수직 구조물은 같은 카메라의 수직축을 사용</li>
+<li>인물·책·소파 접촉은 유지</li>
+<li>수정 대상 이외의 얼굴·강아지·창·외부 풍경은 변경 금지</li>
+</ul>
+<h2 id="4-검증-루프">4. 검증 루프</h2>
+<table>
+<thead>
+<tr>
+<th>검증</th>
+<th>질문</th>
+<th>실패 시 수정 범위</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구성</td>
+<td>주 피사체와 시선 흐름이 맞는가</td>
+<td>전체 프레이밍</td>
+</tr>
+<tr>
+<td>투시</td>
+<td>같은 축 선들이 같은 소실점으로 모이는가</td>
+<td>가구·공간 구조</td>
+</tr>
+<tr>
+<td>형태</td>
+<td>손·다리·책·의자가 완전한 구조인가</td>
+<td>대상 전체 형태</td>
+</tr>
+<tr>
+<td>접지</td>
+<td>가구 다리·발·소품이 표면에 닿는가</td>
+<td>접촉과 그림자</td>
+</tr>
+<tr>
+<td>조명</td>
+<td>광원 방향과 그림자가 일치하는가</td>
+<td>조명만 수정</td>
+</tr>
+<tr>
+<td>렌즈</td>
+<td>왜곡과 심도가 화면 전체에서 연속적인가</td>
+<td>광학 효과만 수정</td>
+</tr>
+<tr>
+<td>색</td>
+<td>피부·중립색·하이라이트가 안정적인가</td>
+<td>색보정만 수정</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-토큰호출-최적화">5. 토큰·호출 최적화</h2>
+<ol type="1">
+<li>최초 프롬프트에 모든 문제를 넣기보다 우선순위 1개만 수정한다.</li>
+<li>매 반복마다 불변 조건을 짧게 다시 적는다.</li>
+<li>동일한 실패가 두 번 반복되면 프롬프트를 늘리지 말고 제어 이미지 또는
+02 방식으로 전환한다.</li>
+<li>Sony·Canon을 각각 처음부터 생성하지 말고 가능하면 공통 장면에서
+분기한다.</li>
+<li>비교 대상이 아닌 소품 변화는 금지해 재검토 범위를 줄인다.</li>
+</ol>
+<h2 id="6-장점">6. 장점</h2>
+<ul>
+<li>초기 결과가 빠르다.</li>
+<li>인물·식물·천·빛 같은 유기적 요소가 자연스럽다.</li>
+<li>정확한 3D 모델이 없어도 제작할 수 있다.</li>
+<li>아이디어와 분위기를 다양하게 탐색하기 쉽다.</li>
+</ul>
+<h2 id="7-한계">7. 한계</h2>
+<ul>
+<li>프롬프트의 “정확한 소실점”은 픽셀 구속조건이 아니다.</li>
+<li>수정할 때마다 얼굴·가구·외부 풍경이 함께 변할 수 있다.</li>
+<li>카메라 브랜드 표현과 장면 재구성 차이가 혼합된다.</li>
+<li>반복 프롬프트가 길어져도 동일 오류가 해결된다는 보장이 없다.</li>
+<li>다른 카메라 앵글을 만들 때 공간 구조를 다시 추정한다.</li>
+</ul>
+<h2 id="8-중단전환-기준">8. 중단·전환 기준</h2>
+<p>다음 중 하나가 발생하면 01 방식의 반복을 중단하고 02 방식으로
+전환한다.</p>
+<ul>
+<li>동일 투시 오류가 2회 이상 반복</li>
+<li>건축·가구 직선이 납품 기준의 핵심</li>
+<li>동일 공간에서 3개 이상의 카메라 앵글 필요</li>
+<li>카메라·렌즈 비교에서 장면을 완전히 동일하게 유지해야 함</li>
+<li>재생성으로 인물 정체성이나 제품 형태가 계속 변함</li>
+</ul>
+<h2 id="9-이번-사례의-판정">9. 이번 사례의 판정</h2>
+<ul>
+<li>v2는 원본 픽셀 변화가 가장 작아 자연교정에 유리했다.</li>
+<li>v3·v4는 인물 포즈와 카메라 감성을 개선했지만 투시 기술검증을
+통과하지 못했다.</li>
+<li>따라서 01 방식은 사진적 자연스러움에는 유효했으나 엄밀한 건축·가구
+투시를 보장하지 못했다.</li>
+</ul>
+      <nav class="doc-next" aria-label="이전·다음 문서"><a href="overview.html">← 통합
+안내</a><a href="geometry-first.html">02 정교한 제작 →</a></nav>
+    </article>
+    <aside class="doc-toc" aria-label="현재 문서 목차"><strong>ON THIS PAGE</strong><ul>
+<li><a href="#01-버전--프롬프트에서-정확한-이미지-제작"
+id="toc-01-버전--프롬프트에서-정확한-이미지-제작">01 버전 — 프롬프트에서
+정확한 이미지 제작</a>
+<ul>
+<li><a href="#1-정의" id="toc-1-정의">1. 정의</a></li>
+<li><a href="#2-기본-프로세스" id="toc-2-기본-프로세스">2. 기본
+프로세스</a></li>
+<li><a href="#3-프롬프트-구조" id="toc-3-프롬프트-구조">3. 프롬프트
+구조</a></li>
+<li><a href="#4-검증-루프" id="toc-4-검증-루프">4. 검증 루프</a></li>
+<li><a href="#5-토큰호출-최적화" id="toc-5-토큰호출-최적화">5. 토큰·호출
+최적화</a></li>
+<li><a href="#6-장점" id="toc-6-장점">6. 장점</a></li>
+<li><a href="#7-한계" id="toc-7-한계">7. 한계</a></li>
+<li><a href="#8-중단전환-기준" id="toc-8-중단전환-기준">8. 중단·전환
+기준</a></li>
+<li><a href="#9-이번-사례의-판정" id="toc-9-이번-사례의-판정">9. 이번
+사례의 판정</a></li>
+</ul></li>
+</ul></aside>
+  </main>
+  <footer class="site-footer"><div><span>IMAGE PROCESS OPTIMIZATION · RELEASE 2026.09</span><span>원본 Markdown과 함께 관리되는 HTML 문서</span></div></footer>
+  <script>
+    const page=document.body.dataset.page;
+    document.querySelector(`[data-page-link="prompt-first"]`)?.setAttribute('aria-current','page');
+  </script>
+</body>
+</html>

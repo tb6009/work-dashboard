@@ -4,19 +4,19 @@
     "from": "2026-09-21",
     "to": "2026-09-27"
   },
-  "status": "current",
-  "summary": "임차in케어를 타깃 5그룹까지 넓혀 최종 시안 v0.8과 브랜드전략 인포그래픽 13페이지로 마감하고, 임차in·계원 입시 두 프로젝트의 제작 과정을 각각 한 페이지 기록 + 버전 아카이브로 묶어 대시보드에 공개한 주.",
+  "status": "past",
+  "summary": "임차in·계원 입시 두 프로세스 포트폴리오를 공개하며 시작해, 1300 이미지 코퍼스를 세 폴더 한 프로젝트로 묶고, 주말 이틀 동안 KCS 학습모듈 학습 1~6 본문·이미지와 Value-up 연구모임 인포그래픽을 완성한 주.",
   "kpis": {
-    "activeProjects": 6,
-    "sessions": 1,
-    "newProjects": 0,
-    "filesChanged": 127
+    "activeProjects": 7,
+    "sessions": 7,
+    "newProjects": 1,
+    "filesChanged": 1156
   },
   "daily": [
     {
       "date": "2026-09-21",
       "weekday": "월",
-      "filesChanged": 107,
+      "filesChanged": 104,
       "topProjectIds": [
         "09",
         "063",
@@ -61,10 +61,11 @@
     {
       "date": "2026-09-22",
       "weekday": "화",
-      "filesChanged": 8,
+      "filesChanged": 63,
       "topProjectIds": [
         "081",
-        "063"
+        "063",
+        "1300"
       ],
       "entries": [
         {
@@ -94,18 +95,23 @@
         {
           "projectId": "063",
           "did": "[fs scan] 2026-W39.json"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 00_메타데이터_저장규칙.md · 2025_스토리텔링_시각코퍼스_통합체계_및_고도화_제안서.md · 20260922_세션_전체대화_및_구축과정_종합기록.md · 8대도메인_프롬프트_결합레시피_엔진_설계서.md · AI_이미지생성_인풋언어_가이드_Imagen_Gemini_NanoBanana.md 외 50건"
         }
       ]
     },
     {
       "date": "2026-09-23",
       "weekday": "수",
-      "filesChanged": 11,
+      "filesChanged": 345,
       "topProjectIds": [
         "063",
         "03",
         "039",
-        "083"
+        "083",
+        "1300"
       ],
       "entries": [
         {
@@ -163,50 +169,281 @@
             },
             "costUSD": 0.3097
           }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] IMG_20260923_0003.json · IMG_20260923_0003_분석.md · build_v4_perspective_control.py · IMG_20260923_0003_facs-emotion-diagnosis.svg · README.md 외 311건"
         }
       ]
     },
     {
       "date": "2026-09-24",
       "weekday": "목",
-      "filesChanged": 1,
+      "filesChanged": 185,
       "topProjectIds": [
-        "063"
+        "063",
+        "1300"
       ],
       "entries": [
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W39.json"
+          "did": "[fs scan] 2026-W39.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 62,
+                "out": 9437,
+                "cache_read": 2107044,
+                "cache_write": 80721,
+                "messages": 31,
+                "costUSD": 1.7943
+              }
+            },
+            "total": {
+              "in": 62,
+              "out": 9437,
+              "cache_read": 2107044,
+              "cache_write": 80721,
+              "messages": 31
+            },
+            "costUSD": 1.7943
+          }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 00_Codex_자동관리규약.md · 01_작업대기열.md · 20260924_02_제품군기반_이미지교육시스템_설계.md · 20260924_03_단계별_Claude_Gemini_작업지시.md · 20260924_04_설계_인용_명세서.md 외 165건"
         }
       ]
     },
     {
       "date": "2026-09-25",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 36,
+      "topProjectIds": [
+        "063",
+        "0311",
+        "1300",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] next-env.d.ts"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] CLAUDE.md · 06_학습모듈_목차_v0.2.md · 06_학습모듈_목차_v0.3.md · 07_학습모듈_상세목차_v0.1.md · 00_수집기준.md 외 24건"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] PROJECT.md · 20260925_PROJECT_정리전_이력.md · CURRENT_STATE.md · 03_1300-1302_활용과_프로세스최적화_v1.0.md · 04_실행안내와_최적화보완_20260925.md 외 1건"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 8,
+                "out": 1951,
+                "cache_read": 1344030,
+                "cache_write": 1282000,
+                "messages": 4,
+                "costUSD": 8.7333
+              },
+              "claude-sonnet-5": {
+                "in": 424,
+                "out": 45709,
+                "cache_read": 20228828,
+                "cache_write": 682146,
+                "messages": 212,
+                "costUSD": 0
+              },
+              "claude-opus-5-5": {
+                "in": 148,
+                "out": 67310,
+                "cache_read": 11567066,
+                "cache_write": 198760,
+                "messages": 71,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 580,
+              "out": 114970,
+              "cache_read": 33139924,
+              "cache_write": 2162906,
+              "messages": 287
+            },
+            "costUSD": 8.7333
+          }
+        }
+      ]
     },
     {
       "date": "2026-09-26",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 245,
+      "topProjectIds": [
+        "091",
+        "063",
+        "0311",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "091",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 40,
+                "out": 29402,
+                "cache_read": 3108017,
+                "cache_write": 116744,
+                "messages": 20,
+                "costUSD": 3.0189
+              }
+            },
+            "total": {
+              "in": 40,
+              "out": 29402,
+              "cache_read": 3108017,
+              "cache_write": 116744,
+              "messages": 20
+            },
+            "costUSD": 3.0189
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W39.json"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 06_이미지자산_수집인용생성_정책_v0.1.md · 00_집필규격_v0.1.md · 01_학습1_비주얼스토리텔링_이해하기_v0.3.md · 01_학습1_비주얼스토리텔링_이해하기_v0.4.md · 02_학습2_비주얼콘셉트와맥락설계하기_v0.2.md 외 240건"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 26,
+                "out": 16805,
+                "cache_read": 2410947,
+                "cache_write": 62300,
+                "messages": 13,
+                "costUSD": 2.0151
+              }
+            },
+            "total": {
+              "in": 26,
+              "out": 16805,
+              "cache_read": 2410947,
+              "cache_write": 62300,
+              "messages": 13
+            },
+            "costUSD": 2.0151
+          }
+        }
+      ]
     },
     {
       "date": "2026-09-27",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 178,
+      "topProjectIds": [
+        "063",
+        "039",
+        "0311",
+        "1300",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W39.json"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 01_VITAL_자가점검표.md · 02_ChatGPT_활용도_체크리스트.md"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 00_수집카탈로그.md · 01_학습1_인용_명세서_v0.1.md · 01_학습1_인용_명세서_v0.2.md · 15_새세션_작업인계_20260927.md · 00_검토결과와_사용안내.md 외 20건"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] progress.py · 감사로그.md · 추적로그.md · NEXT_SESSION.md · PROJECT.md 외 36건"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5": {
+                "in": 122,
+                "out": 73254,
+                "cache_read": 8400567,
+                "cache_write": 156844,
+                "messages": 61,
+                "costUSD": 7.0125
+              },
+              "claude-opus-5-5": {
+                "in": 126,
+                "out": 87712,
+                "cache_read": 9336317,
+                "cache_write": 496679,
+                "messages": 61,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 248,
+              "out": 160966,
+              "cache_read": 17736884,
+              "cache_write": 653523,
+              "messages": 122
+            },
+            "costUSD": 7.0125
+          }
+        }
+      ]
     }
   ],
   "projects": [
     {
+      "id": "0311",
+      "pct": 30,
+      "imp": 5,
+      "did": "KCS 「AI 비주얼 스토리텔링과 이미지제작」 목차를 6장 스토리텔링 구조로 개편하고(9/25), 주말 이틀 동안 학습 1~6 통합 원고·섹션 원고·본문 이미지·산출물 D01~D11을 완성했다. 컵·티백·밤 같은 반복 소재를 한 모양으로 맞추느라 이미지를 여러 차례 다시 만들었고, 수정 전 버전은 검수 이력으로 남겼다. 독립 검토 점수는 학습별 94~97점.",
+      "nextAction": "9/30 최종 제출 전 통합 점검",
+      "deliverables": [
+        "06_Personal_Project/063_workDashboard/app/public/kcs-module-images/index.html",
+        "03_school_project/2026_가을학기/교내 연구/2026_학습모듈개발/06_챕터"
+      ],
+      "filesChanged": 300
+    },
+    {
+      "id": "1300",
+      "pct": 28,
+      "imp": 4,
+      "did": "거실·커플 테이블 이미지의 투시 교정에서 시작해 Perspective-first 이미지 하네스와 제작 프로세스 매거진을 만들었다. 1301 원천 코퍼스는 5,063 레코드까지 정리하고 감사 #21로 구간을 마감했다(최종 승인 18건, 승인률 2.7%). 1302 케이스 스터디를 신설해 001 아이엔·002 RL Purple·003 밤 시각데이터를 웹으로 묶었고, 003은 보강 리서치로 S1 96·S2 92·S3 91점까지 올렸다.",
+      "nextAction": "② 원리층 채움 — 브리프→슬롯 시스템 병목",
+      "deliverables": [
+        "06_Personal_Project/063_workDashboard/app/public/image-case-studies/index.html",
+        "06_Personal_Project/063_workDashboard/app/public/image-process-optimization/index.html"
+      ],
+      "filesChanged": 588
+    },
+    {
       "id": "063",
-      "pct": 57,
+      "pct": 22,
       "filesChanged": 62,
       "imp": 5,
       "did": "089(임차in케어)와 021(계원 입시 커뮤니케이션)을 대시보드에 편입하고, 두 프로젝트의 제작 과정을 같은 형식의 공개 기록으로 만들었다. 완성본만 늘어놓지 않고 각 버전 페이지 안에 되돌린 자리를 이전·이후로 함께 넣었다 — 089는 v0.8 컨셉별 이미지 교체와 v0.7 연속성 앵커 재제작, 021은 SET A 모바일 재설계 8쌍·C·D·E v2 보정 8쌍·키비주얼 source→파생 계보 30장·평가 2회차 점수 변화. 089 허브에는 무드 부적합·접근 실패·Adobe Stock 차단·Bing 무효 35건을 「버린 것 · 못 본 것」으로 남겼다. 모든 페이지에 공용 라이트박스를 붙여 원본 픽셀 크기로 볼 수 있게 했다. 두 빌드 모두 스크립트로 재현 가능하다.",
-      "nextAction": "9월 월간 회고 집계",
+      "nextAction": "W40 주간 운영 + 9월 월간 회고 집계",
       "deliverables": [
         "06_Personal_Project/063_workDashboard/scripts/build-ien-portfolio.mjs",
         "06_Personal_Project/063_workDashboard/scripts/build-kaywon-portfolio.mjs",
@@ -216,8 +453,19 @@
       ]
     },
     {
+      "id": "039",
+      "pct": 9,
+      "imp": 4,
+      "did": "Value-up 연구모임(계원 × VITAL) 개요 2쪽·세부계획 5쪽을 하루에 v0.3까지 고치고, 같은 내용을 1페이지 인포그래픽 4버전과 A3 세로 인포그래픽 2버전으로 압축했다. 선과 상자 도식은 SVG로 그렸고, 일정·예산·성과 범위는 협의안으로 남겼다.",
+      "nextAction": "문안·도식 사용자 검토 후 모임 일시·행사 슬롯 반영",
+      "deliverables": [
+        "06_Personal_Project/063_workDashboard/app/public/valueup-infographics/index.html"
+      ],
+      "filesChanged": 114
+    },
+    {
       "id": "089",
-      "pct": 42,
+      "pct": 8,
       "filesChanged": 45,
       "imp": 5,
       "did": "타깃을 1인 가구에서 첫 독립·혼자 사는 생활·둘의 새 살림·친구 공동거주·가족과 돌봄 5그룹으로 넓히고 인물·생활 이미지를 다시 생성했다. 일상의 여백을 연속성 앵커로 재제작(v0.7)한 뒤 세 컨셉 각 7페이지의 최종 시안 v0.8을 마감했다. 브랜드 전략 인포그래픽은 핵심페이지 v0.1→v0.3, 전체 13페이지 v0.1까지 냈고 사흘의 과정을 기록 페이지로 남겼다.",
@@ -227,6 +475,14 @@
         "08_project/089_임차in/04_산출물/20260921_브랜드전략_인포그래픽_전체13P_A4가로_v0.1/index.html",
         "08_project/089_임차in/05_리서치프로세스/index.html"
       ]
+    },
+    {
+      "id": "081",
+      "pct": 2,
+      "imp": 2,
+      "did": "앵커노드 버티컬 AI 이해 문서 v0.1과 인용 명세서를 정리했다.",
+      "nextAction": "IR 4질문 기준선으로 브랜드 학습 이어가기",
+      "filesChanged": 8
     },
     {
       "id": "03",
@@ -313,19 +569,144 @@
       "projectId": "063",
       "title": "이미지 뷰어를 두 포트폴리오가 공유하는 한 모듈로 뺐다.",
       "description": "scripts/lib/lightbox.mjs 하나를 38개 페이지에 주입한다. FIT↔100% 토글로 원본 픽셀 확인, 드래그 이동, ←→/Esc. 계원 페이지 이미지는 1080px로 줄어 있던 것을 네이티브 1080×1350으로 다시 뽑았다."
+    },
+    {
+      "date": "2026-09-24",
+      "projectId": "1300",
+      "title": "1300·1301·1302를 한 프로젝트로 묶고 케이스 스터디를 웹으로 연결했다.",
+      "description": "분석·원천 코퍼스·사례연구 3축. 케이스 스터디 정적 사이트를 대시보드 상세 페이지 타이틀 아래 링크로 공개.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-26",
+      "projectId": "0311",
+      "title": "후보 재구성 이미지는 독립 실행 증거로 과장하지 않고 [교육용 재구성]으로 표시했다.",
+      "description": "최종 티백은 무지 흰 태그에서 필터까지 끈 한 줄, 물 밖 흰 필터, 물속 젖은 갈색으로 고정했다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-09-26",
+      "projectId": "0311",
+      "title": "학습 1~6 본문 초안을 모두 갖췄다.",
+      "description": "통합 원고·섹션 원고·이미지·D01~D11. 독립 품질 검토 94~97점.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-27",
+      "projectId": "1300",
+      "title": "1301 코덱스 협업 구간을 감사 #21로 마감했다.",
+      "description": "코퍼스 정본은 09-23 이후 변화 0건, 모든 작업이 후보·승인 레이어에서만 일어났다. 감사관 도구 결함 누적 4건(과대·과소 양쪽).",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-09-27",
+      "projectId": "1300",
+      "title": "밤 데이터를 1302 케이스 003으로 분리하되 정본은 학습모듈에 두었다.",
+      "description": "1302는 원본 저장소가 아니라 생성·평가 사례 저장소라 manifest(SHA-256)로 원본을 연결한다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-09-27",
+      "projectId": "039",
+      "title": "Value-up 도식은 생성 이미지 없이 SVG로 그리고, 미확정 예산·성과는 확약하지 않았다.",
+      "description": "인포그래픽은 글 중심에서 사람·관계 일러스트 중심으로 옮겨 A3 세로 v0.2까지.",
+      "isMilestone": false
     }
   ],
-  "newProjects": [],
+  "newProjects": [
+    {
+      "id": "0311",
+      "name": "KCS 학습모듈 개발",
+      "reason": "03_school_project/2026_가을학기 매핑 누락 보정 — 학습모듈 집필 트래킹 편입 (9/25)"
+    }
+  ],
   "labelChanges": [],
-  "buildAt": "2026-09-24T09:45:59.320Z",
+  "buildAt": "2026-09-28T03:05:12.021Z",
   "tokens": {
     "total": {
-      "in": 698,
-      "out": 421492,
-      "cache_read": 74883521,
-      "cache_write": 1085245
+      "in": 1654,
+      "out": 753072,
+      "cache_read": 133386337,
+      "cache_write": 4161439
     },
-    "costUSD": 54.7653,
-    "costKRW": 77104
+    "costUSD": 77.3395,
+    "costKRW": 108885
+  },
+  "externalAI": {
+    "codex": {
+      "byModel": {
+        "codex-auto-review": {
+          "in": 304810,
+          "cached": 2575360,
+          "out": 2963,
+          "turns": 24,
+          "costUSD": 0.0
+        },
+        "gpt-6-astra": {
+          "in": 2229733,
+          "cached": 46150272,
+          "out": 237012,
+          "turns": 386,
+          "costUSD": 80.3
+        },
+        "gpt-5.6-sol": {
+          "in": 12846449,
+          "cached": 326568576,
+          "out": 1851129,
+          "turns": 2607,
+          "costUSD": 219.04
+        }
+      },
+      "costUSD": 299.34,
+      "costByDay": {
+        "2026-09-21": 36.22,
+        "2026-09-22": 13.57,
+        "2026-09-23": 15.68,
+        "2026-09-24": 53.62,
+        "2026-09-25": 20.37,
+        "2026-09-26": 102.08,
+        "2026-09-27": 57.79
+      },
+      "images": 203,
+      "imagesByDay": {
+        "2026-09-21": 21,
+        "2026-09-22": 12,
+        "2026-09-23": 11,
+        "2026-09-24": 21,
+        "2026-09-26": 85,
+        "2026-09-27": 53
+      }
+    },
+    "gemini": {
+      "byModel": {
+        "gemini-3.8-flash": {
+          "in": 32796886,
+          "cached": 246663765,
+          "out": 1323273,
+          "requests": 1950,
+          "costUSD": 48.06
+        },
+        "gemini-pro-default": {
+          "in": 230556,
+          "cached": 362431,
+          "out": 10440,
+          "requests": 13,
+          "costUSD": 0.66
+        },
+        "gemini-3.7-flash": {
+          "in": 590411,
+          "cached": 3100505,
+          "out": 44224,
+          "requests": 52,
+          "costUSD": 0.84
+        }
+      },
+      "costUSD": 49.56,
+      "estimated": true
+    },
+    "totalUSD": 426.24,
+    "totalKRW": 600099,
+    "note": "API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
+    "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)"
   }
 }

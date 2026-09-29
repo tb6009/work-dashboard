@@ -1,9 +1,15 @@
 {
   "id": "039",
   "currentSituation": {
-    "summary": "내부진단보고서 v0.2 — 진단 축을 '실행 앞뒤의 공백'에서 '개인 역량을 조직 역량으로 전환하는 체계의 부족'으로 확장하고, 얼라이언스 기반 이중 트랙 기업지원 모델을 제안했다.",
-    "phase": "Value-up 연구회 — 내부진단보고서 v0.2 · 내부 검토 대기",
+    "summary": "Value-up 연구모임(계원 × VITAL) 개요 2쪽·세부계획 5쪽을 v0.3까지 고치고, 같은 내용을 1페이지(A4 가로)와 A3 세로 인포그래픽으로 압축했다. 글·도식 중심에서 사람·관계 일러스트 중심으로 옮겼다. 일정·예산·성과 범위는 협의안으로 남겨 두었다.",
+    "phase": "Value-up 연구모임 — 개요·세부계획 v0.3 + A3 인포그래픽 v0.2 · 사용자 검토 대기",
     "recentLogs": [
+      {
+        "date": "2026-09-27",
+        "title": "개요·세부계획 v0.1~v0.3 + 1페이지·A3 인포그래픽",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260927_log.md",
+        "excerpt": "선과 상자 도식은 생성 이미지 없이 SVG로 제작했다. 미확정 예산·성과는 확약하지 않았다."
+      },
       {
         "date": "2026-09-07",
         "title": "내부진단 및 구축 제안 v0.2 — 이중 트랙 기업지원 모델",
@@ -15,17 +21,18 @@
         "title": "계원 기업지원 통합운영안 v0.1 + 리서치 충분성 점검",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_가을_Value-up연구회/Claude/00_리서치/05_리서치_충분성_점검_v0.1.md",
         "excerpt": "1·2차 리서치와 인용 명세서를 대조해 미확보 자료를 별도 목록으로 남겼다."
-      },
-      {
-        "date": "2026-06-18",
-        "title": "네트워킹데이 강의 — AI 생산성 역설 강의자료 + Once 비주얼 적용",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260618_log.md",
-        "excerpt": "베인을 강의 척추로, 논문 2편은 막3 보조. payoff 4조건 다이어그램 + 두숫자 축 설명 + 전체덱 v0.1/v0.2 + AI_생산성_파라독스 pptx. 무지개색 폐기, 크림/필름레드/명조 시스템 적용."
       }
     ],
     "blockers": []
   },
   "deliverables": [
+    {
+      "title": "Value-up 인포그래픽·도식 포트폴리오 (공개본)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/valueup-infographics/index.html",
+      "fileKind": "html",
+      "summary": "A3·1페이지 인포그래픽 6버전, 도식 3버전, 문서 7쪽 3버전 — 47장.",
+      "modifiedAt": "2026-09-28"
+    },
     {
       "title": "계원 기업지원 통합운영안 v0.1",
       "filePath": "/Users/jinhyunpark/Documents/cloude_Code/03_school_project/02_RISE/2026_수정사업계획서/01_문안/07_2026_계원_기업지원_통합운영안_v0.1.md",
@@ -123,5 +130,5 @@
       "estimate": "반나절"
     }
   ],
-  "buildAt": "2026-09-09T12:10:00+09:00"
+  "buildAt": "2026-09-28T09:00:00+09:00"
 }

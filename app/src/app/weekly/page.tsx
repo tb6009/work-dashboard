@@ -4,6 +4,7 @@ import WeekStrip from '@/components/period/WeekStrip';
 import PeriodProjectTile from '@/components/period/PeriodProjectTile';
 import DailyActivityBar from '@/components/charts/DailyActivityBar';
 import TokenSummary from '@/components/TokenSummary';
+import ExternalAIUsage from '@/components/ExternalAIUsage';
 import { aggregateWeek } from '@/lib/tokens';
 import {
   loadWeek,
@@ -146,6 +147,7 @@ function WeekDetail({ week, isCurrentWeek }: WeekDetailProps) {
           </p>
         ) : null}
         <TokenSummary tokens={aggregateWeek(week)} scopeLabel={week.week} />
+        <ExternalAIUsage usage={week.externalAI} claudeUSD={aggregateWeek(week).costUSD} />
       </section>
 
       {/* KPI */}

@@ -99,6 +99,7 @@ const EXPLICIT = {
   '03_school_project/01_수업/코첼라': '038',
   '03_school_project/02_RISE': '039',
   '03_school_project/03_산학프로젝트/기람테크': '0310',
+  '03_school_project/2026_가을학기/교내 연구/2026_학습모듈개발': '0311',
   '04_aSSIST/수업실습': '04',
   // 05: 2026-06-20 전면 재구조화 — 본연구 01~04 번호화 + 지원폴더(_봇·_방법론·_코퍼스)
   '05_phD_Research/00_연구가이드': '0500',
@@ -138,6 +139,10 @@ const EXPLICIT = {
   // 13: 2026-09-05 추가 — 13_Image 이미지 프로젝트 트래킹 개시
   '13_Image/Higgsfield': '131',
   '13_Image/2026_가을_스토리텔링': '132',
+  // 2026-09-28 — 1300 통합 프로젝트 3개 폴더 매핑 누락 보정
+  '13_Image/1300_이미지분석 Corpus': '1300',
+  '13_Image/1301_Image_Corpus': '1300',
+  '13_Image/1302_Image_Case_Studies': '1300',
 };
 
 function findProjectId(absPath) {

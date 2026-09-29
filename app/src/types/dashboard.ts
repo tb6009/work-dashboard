@@ -151,6 +151,7 @@ export interface WeeklySnapshot {
   labelChanges?: Array<{ projectId: string; from: LabelStatus | null; to: LabelStatus }>;
 
   tokens?: WeeklyTokenSummary;
+  externalAI?: ExternalAIUsage;
 
   buildAt: string;           // ISO timestamp
 }
@@ -230,4 +231,14 @@ export interface YearlySnapshot {
   milestones: DecisionEntry[];
   insights: string[];
   buildAt: string;
+}
+
+/** Claude 외 AI 사용량 — scripts/extract-external-ai-usage.py */
+export interface ExternalAIUsage {
+  codex: { costUSD: number; images: number; imagesByDay?: Record<string, number>; costByDay?: Record<string, number>; byModel?: Record<string, unknown> };
+  gemini: { costUSD: number; estimated?: boolean; byModel?: Record<string, unknown> };
+  totalUSD: number;
+  totalKRW: number;
+  note: string;
+  pricingSource: string;
 }

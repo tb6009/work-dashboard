@@ -1,0 +1,67 @@
+{
+  "id": "1300",
+  "currentSituation": {
+    "summary": "이미지 분석(1300)·원천 코퍼스(1301)·사례연구(1302) 3축. 투시 교정 하네스와 제작 프로세스를 정리했고, 코퍼스는 5,063행으로 구간 마감, 케이스 스터디 3건을 웹으로 공개했다.",
+    "phase": "운영 중 · 003 밤 시각데이터 생성 검증 대기",
+    "recentLogs": [
+      {
+        "date": "2026-09-27",
+        "title": "1301 구간 마감(감사 #21) + 003 밤 시각데이터 90점대 보강",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260927_log.md",
+        "excerpt": "최종 승인 18건. 밤 케이스 S1 96·S2 92·S3 91점(자료 준비도)."
+      },
+      {
+        "date": "2026-09-24",
+        "title": "1302 케이스 스터디 신설 — 001 아이엔·002 RL Purple",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260924_log.md"
+      },
+      {
+        "date": "2026-09-23",
+        "title": "Perspective-first 하네스 + 제작 프로세스 매거진",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260923_log.md"
+      }
+    ],
+    "blockers": [
+      "② 원리층 11%, ① 브리프층 0% — 브리프→슬롯 연결이 병목.",
+      "밤 5뷰 동일성·조리 상태 고해상도 자료 미확보."
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "이미지 케이스 스터디 (공개본)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/image-case-studies/index.html",
+      "fileKind": "html",
+      "summary": "001 아이엔 · 002 RL Purple · 003 밤.",
+      "modifiedAt": "2026-09-28"
+    },
+    {
+      "title": "이미지 제작 프로세스 최적화 (공개본)",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/06_Personal_Project/063_workDashboard/app/public/image-process-optimization/index.html",
+      "fileKind": "html",
+      "summary": "투시 우선 하네스와 단계별 교정 기록.",
+      "modifiedAt": "2026-09-24"
+    },
+    {
+      "title": "1301 현재 상태",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/1301_Image_Corpus/CURRENT_STATE.md",
+      "fileKind": "md",
+      "summary": "코퍼스 5,063행 · 심사 링크 18개.",
+      "modifiedAt": "2026-09-25"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "003 밤 S2 5뷰 동일성 검사",
+      "description": "같은 밤 5뷰를 생성·검수한다.",
+      "priority": "high",
+      "estimate": "미정"
+    },
+    {
+      "title": "② 원리층 채움",
+      "description": "브리프→슬롯 병목 해소.",
+      "priority": "mid",
+      "estimate": "미정"
+    }
+  ],
+  "buildAt": "2026-09-29T09:00:00+09:00"
+}

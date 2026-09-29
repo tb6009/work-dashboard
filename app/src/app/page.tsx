@@ -19,6 +19,7 @@ import {
 } from '@/lib/calendar';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
 import TokenSummary from '@/components/TokenSummary';
+import ExternalAIUsage from '@/components/ExternalAIUsage';
 import { aggregateWeek } from '@/lib/tokens';
 import type { ProjectContribution, ProjectType } from '@/types/dashboard';
 
@@ -170,6 +171,7 @@ export default async function Home() {
           </div>
         </div>
         <TokenSummary tokens={weekTokens} scopeLabel="이번 주" />
+        <ExternalAIUsage usage={week.externalAI} claudeUSD={weekTokens.costUSD} />
 
         {/* KPI grid */}
         <div

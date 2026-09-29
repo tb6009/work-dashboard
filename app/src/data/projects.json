@@ -17,8 +17,9 @@
   { "id": "036", "categoryId": "03",        "name": "새론솔루션",         "type": "design",     "define": "광주 남구 스마트 하수악취 대시보드 UX — 03_school_project/03_산학프로젝트/새론솔루션/", "status": "active", "createdAt": "2026-05-14" },
   { "id": "037", "categoryId": "03",        "name": "기초디자인",         "type": "design",     "define": "happy design language 분석 — 03_school_project/01_수업/기초디자인/", "status": "new",    "createdAt": "2026-05-22" },
   { "id": "038", "categoryId": "03",        "name": "코첼라",             "type": "design",     "define": "이미지 생성·로고·reference — 03_school_project/01_수업/코첼라/", "status": "new",    "createdAt": "2026-05-22" },
-  { "id": "039", "categoryId": "03",        "name": "RISE",              "type": "design",     "define": "AI 산학협력 시각화 (PT/접촉시트/근거자료) — 03_school_project/02_RISE/", "status": "active", "createdAt": "2026-05-24" },
+  { "id": "039", "categoryId": "03",        "name": "RISE",              "type": "design",     "define": "AI 산학협력 시각화 (PT/접촉시트/근거자료) — 03_school_project/02_RISE/", "status": "active", "createdAt": "2026-05-24", "portfolioUrl": "/valueup-infographics/index.html" },
   { "id": "0310","categoryId": "03",        "name": "기람테크",           "type": "design",     "define": "기람테크 산학협력 프로젝트 — 03_school_project/03_산학프로젝트/기람테크/", "status": "new",    "createdAt": "2026-06-20" },
+  { "id": "0311","categoryId": "03",        "name": "KCS 학습모듈 개발",   "type": "education",  "define": "KCS 「AI 이미지 제작」 학습모듈 「AI 비주얼 스토리텔링과 이미지제작」 집필 — 학습 1~6 본문·이미지·산출물 D01~D11 — 03_school_project/2026_가을학기/교내 연구/2026_학습모듈개발/", "status": "new", "createdAt": "2026-09-28", "portfolioUrl": "/kcs-module-images/index.html" },
 
   { "id": "04",  "categoryId": "04",        "name": "aSSIST 수업실습",    "type": "education",  "define": "aSSIST 수업실습 학생 작업장 — 04_aSSIST/수업실습/", "status": "active", "createdAt": "2026-05-22" },
 

@@ -1,0 +1,190 @@
+{
+  "week": "2026-W40",
+  "range": {
+    "from": "2026-09-28",
+    "to": "2026-10-04"
+  },
+  "status": "current",
+  "summary": "W40 개시 — 이번 주 초점은 KCS 학습모듈 9/30 최종 제출.",
+  "kpis": {
+    "activeProjects": 3,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 60
+  },
+  "daily": [
+    {
+      "date": "2026-09-28",
+      "weekday": "월",
+      "filesChanged": 17,
+      "topProjectIds": [
+        "063",
+        "03",
+        "0311"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] PROJECT.md · next-env.d.ts · index.html · index.html · 0311.json 외 7건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 166,
+                "out": 74246,
+                "cache_read": 12501763,
+                "cache_write": 705152,
+                "messages": 83,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 166,
+              "out": 74246,
+              "cache_read": 12501763,
+              "cache_write": 705152,
+              "messages": 83
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 28,
+                "out": 19618,
+                "cache_read": 2935818,
+                "cache_write": 60957,
+                "messages": 14,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 28,
+              "out": 19618,
+              "cache_read": 2935818,
+              "cache_write": 60957,
+              "messages": 14
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] AI_비주얼스토리텔링과_이미지제작_통합본_v0.4_학습1-3이미지_검토본.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "화",
+      "filesChanged": 43,
+      "topProjectIds": [
+        "0311",
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 21_전공역량서식_검토_인용_명세서.md · 21_전공역량서식_검토_인용_명세서_v0.2.md · 21_전공역량서식_자료충족도와_작성방안_20260929_v0.1.md · 21_전공역량서식_자료충족도와_작성방안_20260929_v0.2.md · 01_시각디자인과_전공역량정의및평가기준_초안_v0.1.md 외 3건"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 64,
+                "out": 43099,
+                "cache_read": 3886521,
+                "cache_write": 171802,
+                "messages": 32,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 64,
+              "out": 43099,
+              "cache_read": 3886521,
+              "cache_write": 171802,
+              "messages": 32
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W40.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 10,
+                "out": 1362,
+                "cache_read": 832968,
+                "cache_write": 470570,
+                "messages": 5,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 1362,
+              "cache_read": 832968,
+              "cache_write": 470570,
+              "messages": 5
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-09-29T01:48:25.856Z",
+  "tokens": {
+    "total": {
+      "in": 268,
+      "out": 138325,
+      "cache_read": 20157070,
+      "cache_write": 1408481
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

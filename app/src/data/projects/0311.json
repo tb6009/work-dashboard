@@ -1,25 +1,25 @@
 {
   "id": "0311",
   "currentSituation": {
-    "summary": "KCS 「AI 비주얼 스토리텔링과 이미지제작」 학습 1~6 본문 초안을 모두 갖췄다. 9/25 목차를 6장 스토리텔링 구조로 개편하고, 9/26~27 이틀간 본문·섹션 원고·이미지·산출물 D01~D11을 완성했다. 컵·티백·밤처럼 반복되는 소재를 한 모양으로 맞추느라 이미지 수정이 많았다. 독립 검토 점수는 학습별 94~97점.",
-    "phase": "학습 1~6 초안 완료 · 9/30 최종 제출 전 통합 점검",
+    "summary": "학습 1~6 본문과 이미지 32장을 갖춘 뒤, 전공역량·평가기준 서식과 맞추고 통합본 v0.9, HWP 205쪽 v0.3까지 편집했다. CH6 밤 샘플 v4는 승인 대기.",
+    "phase": "최종 제출 편집 · HWP v0.4 레이아웃 검수",
     "recentLogs": [
+      {
+        "date": "2026-09-30",
+        "title": "AI 환경·공식 출처 보완 (MD v0.9)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260930_log.md",
+        "excerpt": "독립 검토 90점."
+      },
+      {
+        "date": "2026-09-29",
+        "title": "전공역량·평가기준 서식 + 통합본 v0.8 + HWP v0.3(205쪽)",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260929_log.md"
+      },
       {
         "date": "2026-09-27",
         "title": "밤 조리 상태 시각데이터 구체화 + CH6 수정본·학습 1~3 이미지 수정보완",
         "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260927_log.md",
         "excerpt": "밤 데이터는 1302 케이스 003으로 분리 등록하고 정본은 학습모듈에 유지했다."
-      },
-      {
-        "date": "2026-09-26",
-        "title": "학습 1~6 본문·이미지 완성 + Markdown 전체 통합",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260926_log.md",
-        "excerpt": "후보 재구성 이미지는 독립 실행 증거로 과장하지 않고 [교육용 재구성]으로 표시했다."
-      },
-      {
-        "date": "2026-09-25",
-        "title": "학습 1 검증 + 6장 구조 개편 + 200쪽 상세 목차",
-        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20260925_log.md"
       }
     ],
     "blockers": [
@@ -52,17 +52,23 @@
   ],
   "nextTasks": [
     {
-      "title": "9/30 최종 제출 통합 점검",
-      "description": "학습 1~6 통합본 형식·분량·이미지 링크를 모듈검사관으로 최종 채점한다.",
+      "title": "HWP v0.4 저장·레이아웃 검수",
+      "description": "변경 구간 화면 확인 후 제출.",
       "priority": "high",
-      "estimate": "하루"
+      "estimate": "반나절"
     },
     {
-      "title": "인용 이미지 권리 재검증",
-      "description": "공공영역·CC 이미지의 권리 표기를 제출 직전에 다시 확인한다.",
+      "title": "공식 코드·대상·시수 반영",
+      "description": "승인값 확정 후 반영.",
       "priority": "high",
-      "estimate": "2시간"
+      "estimate": "대기"
+    },
+    {
+      "title": "CH6 밤 샘플 v4 승인 여부",
+      "description": "승인 시 통합본 이미지 교체.",
+      "priority": "mid",
+      "estimate": "대기"
     }
   ],
-  "buildAt": "2026-09-28T09:00:00+09:00"
+  "buildAt": "2026-09-30T12:00:00+09:00"
 }

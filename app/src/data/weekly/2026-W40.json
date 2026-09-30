@@ -5,12 +5,12 @@
     "to": "2026-10-04"
   },
   "status": "current",
-  "summary": "W40 개시 — 이번 주 초점은 KCS 학습모듈 9/30 최종 제출.",
+  "summary": "KCS 학습모듈 제출 주간 — 전공역량·평가기준 서식을 맞추고 통합본을 v0.9, HWP를 205쪽 v0.3까지 올렸다. 대시보드는 W39 마감과 주말 이미지 포트폴리오를 반영했다.",
   "kpis": {
-    "activeProjects": 3,
-    "sessions": 0,
+    "activeProjects": 2,
+    "sessions": 3,
     "newProjects": 0,
-    "filesChanged": 60
+    "filesChanged": 87
   },
   "daily": [
     {
@@ -80,7 +80,7 @@
     {
       "date": "2026-09-29",
       "weekday": "화",
-      "filesChanged": 43,
+      "filesChanged": 52,
       "topProjectIds": [
         "0311",
         "03",
@@ -144,8 +144,66 @@
     {
       "date": "2026-09-30",
       "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 18,
+      "topProjectIds": [
+        "0311",
+        "063",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 34_AI환경과기능_인용_명세서_20260930.md · 35_v0.9_독립검토_20260930.md · AI_비주얼스토리텔링과_이미지제작_통합본_v0.9_AI환경구분과공식출처보완.md · MODULE_MAP.md · PROJECT.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 20,
+                "out": 3372,
+                "cache_read": 2466312,
+                "cache_write": 253739,
+                "messages": 10,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 20,
+              "out": 3372,
+              "cache_read": 2466312,
+              "cache_write": 253739,
+              "messages": 10
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 6,
+                "out": 930,
+                "cache_read": 819725,
+                "cache_write": 1515,
+                "messages": 3,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 6,
+              "out": 930,
+              "cache_read": 819725,
+              "cache_write": 1515,
+              "messages": 3
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-10-01",
@@ -172,19 +230,97 @@
       "topProjectIds": []
     }
   ],
-  "projects": [],
-  "decisions": [],
+  "projects": [
+    {
+      "id": "0311",
+      "pct": 70,
+      "filesChanged": 57,
+      "imp": 5,
+      "did": "시각디자인과 전공역량 초안(v0.3)과 평가기준 서식(v0.7)을 만들고, 학습모듈 통합본을 v0.5→v0.9로 개정했다. HWP는 표 분할·머리행 반복으로 205쪽 v0.3을 저장했고, 9/30 AI 환경 기능 설명을 공식 출처와 연결했다(독립 검토 90점). 이미지 32장은 유지.",
+      "nextAction": "한글 UI에서 v0.4 저장 · 변경 구간 레이아웃 검수 · 최종 제출",
+      "deliverables": [
+        "03_school_project/2026_가을학기/교내 연구/2026_학습모듈개발/04_작업/21_학습모듈_HWP편집_20260929"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 30,
+      "filesChanged": 18,
+      "imp": 3,
+      "did": "W39 마감, 학습모듈·Value-up 이미지 포트폴리오, Codex·Gemini 비용 집계, 1300 상세 패널을 추가했다.",
+      "nextAction": "푸시 후 배포 확인"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-09-29",
+      "projectId": "0311",
+      "title": "A-1 역량명을 「메시지와 스토리 설계」로 통일했다.",
+      "description": "비주얼 콘셉트·의미 설계는 스토리의 시각화 역할로 하위요소에 둔다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-09-29",
+      "projectId": "0311",
+      "title": "HWP 긴 표는 행 묶음으로 나누고 머리행을 반복했다.",
+      "description": "본문·이미지 보존, 205쪽 v0.3. 화면 검수 통과.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-09-30",
+      "projectId": "0311",
+      "title": "AI 도구 기능 설명을 회사·공식 문서·URL과 연결했다.",
+      "description": "일반 앱과 API 지원 범위를 구분하고, 실제 도구 연결은 미검증으로 표시.",
+      "isMilestone": false
+    }
+  ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-29T01:48:25.856Z",
+  "buildAt": "2026-09-30T07:19:49.320Z",
   "tokens": {
     "total": {
-      "in": 268,
-      "out": 138325,
-      "cache_read": 20157070,
-      "cache_write": 1408481
+      "in": 294,
+      "out": 142627,
+      "cache_read": 23443107,
+      "cache_write": 1663735
     },
     "costUSD": 0,
     "costKRW": 0
+  },
+  "externalAI": {
+    "codex": {
+      "byModel": {
+        "gpt-6-astra": {
+          "in": 2976166,
+          "cached": 97939328,
+          "out": 205083,
+          "turns": 703,
+          "costUSD": 137.96
+        },
+        "gpt-5.6-sol": {
+          "in": 702992,
+          "cached": 13615104,
+          "out": 63898,
+          "turns": 99,
+          "costUSD": 9.54
+        }
+      },
+      "costUSD": 147.5,
+      "costByDay": {
+        "2026-09-29": 128.15,
+        "2026-09-30": 19.34
+      },
+      "images": 0,
+      "imagesByDay": {}
+    },
+    "gemini": {
+      "byModel": {},
+      "costUSD": 0,
+      "estimated": true
+    },
+    "totalUSD": 147.5,
+    "totalKRW": 207664,
+    "note": "API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
+    "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)"
   }
 }

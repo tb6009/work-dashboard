@@ -30,6 +30,8 @@ FORMS = {
 
 # 공개 대상 하위 폴더 (SRC 기준). 루트는 항상 포함
 SUBDIRS = ['', '질문 검토', '질문 검토/최종 설문', '질문 검토/챕터']
+MODEL_SRC = '질문 검토/최종설문/04_연구1·2_핵심모형·보조변수_설명.html'
+MODEL_OUT = '연구모델_04_연구1·2_핵심모형·보조변수_설명.html'
 TEXT_EXT = {'.md', '.html'}
 DOWNLOAD_EXT = {'.xlsx'}
 VER_RE = re.compile(r'_v(\d+(?:\.\d+)*)$')
@@ -201,6 +203,12 @@ def build():
             (DEST / 'files').mkdir(exist_ok=True)
             shutil.copy2(p, DEST / out)
 
+    # 최종 연구모델 설명 (질문 검토/최종설문/04) — 허브 상단 「연구모델」 섹션에서 링크
+    t = (SRC / MODEL_SRC).read_text(encoding='utf-8')
+    t = strip_pdf_links(t)
+    t = re.sub(r'(<body[^>]*>)', r'\1<a href="index.html" style="position:fixed;right:12px;bottom:12px;z-index:99;background:#000;color:#fff;padding:6px 10px;font:13px sans-serif;text-decoration:none">← 허브</a>', t, count=1)
+    (DEST / MODEL_OUT).write_text(t, encoding='utf-8')
+
     (DEST / 'index.html').write_text(hub(latest, older, mapping), encoding='utf-8')
     print(f'latest {len(latest)} · older {len(older)} → {DEST}')
 
@@ -231,9 +239,15 @@ def hub(latest, older, m):
     L = lambda rel, label=None: link(m, rel, label)
     F = FORMS
     body = f"""
-<div class="eyebrow">0500 연구가이드 · 박사 연구모델 작업 기록 · 2026-09-20 → 2026-10-04</div>
+<div class="eyebrow">0500 연구가이드 · 박사 연구모델 작업 기록 · 2026-09-20 → 2026-10-06</div>
 <h1>디자이너의 생성형 AI 사용과 일의 수행·역량 개발 행동</h1>
 <p class="muted">한 번의 설문, 두 개의 연구. 연구 1은 일을 바꾸는 행동과 업무상 결과·보상, 연구 2는 직업 위협과 역량 개발 행동. PLS-SEM · 일회 횡단 설문 · 유급 디자인 업무 종사자(직원·프리랜서).</p>
+<h2>연구모델 (최종 설계 합의안 v1.0 · 2026-10-05)</h2>
+<div class="card"><b>연구 1·2 핵심모형·보조변수 설명</b><br><a href="{MODEL_OUT}">{MODEL_OUT.removeprefix('연구모델_')}</a><br>
+<span class="muted">연구 1: USE → TC → TP·JE·WI (결과 3개 병렬). GAIL은 USE→TC, EXP는 TC→세 결과를 조절.<br>
+연구 2: THR → USE → SC + THR → SC 직접경로. GAIL은 첫 단계, EXP는 둘째 단계를 조절.<br>
+통합 설문 69문항 · 일회 자기보고. 본조사 검증·배포 전 — 연구자 개발 JE와 바뀐 응답척도·기간은 채택 전 검증 필요.</span></div>
+
 <div class="forms">
   <a class="primary" href="{F['ko_view']}" target="_blank" rel="noopener"><b>설문 참여 · 국문</b><span>Google Forms 응답 링크</span></a>
   <a class="primary" href="{F['en_view']}" target="_blank" rel="noopener"><b>Survey · English</b><span>Google Forms response link</span></a>

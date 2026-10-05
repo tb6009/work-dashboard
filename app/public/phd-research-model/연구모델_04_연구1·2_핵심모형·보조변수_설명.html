@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연구 1·2 최종 연구모델 보고서 — 설계 합의안 v1.0</title>
+<style>
+:root{--navy:#173149;--ink:#203241;--sub:#516474;--blue:#216886;--teal:#24786f;--gold:#b57932;--bg:#edf2f3;--paper:#fff;--line:#d9e3e7;--soft:#f5f8f8;--warn:#fff4e4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}a{color:var(--blue);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}main{max-width:1180px;margin:auto;padding:0 24px 80px}header{background:var(--navy);color:white;padding:42px max(24px,calc((100vw - 1132px)/2));margin:0 -24px 30px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.14em;color:#9dd5dd}.topline{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}.topline nav{display:flex;gap:12px;flex-wrap:wrap}.topline a{color:#d5e9ed;font-size:13px;text-decoration:none}.topline a:hover{text-decoration:underline}h1{font-size:clamp(31px,4vw,49px);letter-spacing:-.05em;line-height:1.19;margin:22px 0 15px;max-width:940px}header p{color:#d7e4ea;max-width:900px;margin:0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.chip{border:1px solid #8aaab7;border-radius:100px;padding:5px 10px;color:#e6f1f3;font-size:12px}.chip.warn{border-color:#e0b779;color:#ffe3ad}.section{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:28px 32px;margin:20px 0;box-shadow:0 2px 12px #17314908}.section h2{font-size:25px;letter-spacing:-.035em;line-height:1.3;margin:0 0 13px}.section h3{font-size:18px;margin:24px 0 9px}.section p{margin:8px 0}.lead{font-size:18px;color:#30495c}.muted,.note{color:var(--sub)}.note{font-size:13px}.kicker{font-size:12px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}.kicker.teal{color:var(--teal)}.status{border-left:4px solid var(--gold);background:var(--warn);padding:14px 18px;margin:18px 0;border-radius:0 7px 7px 0}.status strong{color:#81501b}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.model{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;background:#fbfdfd;padding:23px;min-width:0}.model.study2{border-top-color:var(--teal)}.model h3{margin:0 0 7px}.model p{font-size:14px;color:var(--sub)}.diagram{overflow-x:auto;margin:15px 0 8px}.diagram svg{display:block;width:100%;min-width:510px;max-width:680px;margin:auto;font-family:inherit}.svgbox{fill:white;stroke:#31556a;stroke-width:2}.svgbox.teal{stroke:#24786f}.svgmod{fill:#e6f2f4;stroke:#216886;stroke-width:1.5}.svgtxt{font-size:16px;font-weight:700;fill:#173149;text-anchor:middle}.svgsub{font-size:11px;font-weight:500;fill:#586c79;text-anchor:middle}.svgline{fill:none;stroke:#31556a;stroke-width:2.2}.svgdash{fill:none;stroke:#216886;stroke-width:1.8;stroke-dasharray:5 5}.svglabel{font-size:11px;fill:#216886;font-weight:700;text-anchor:middle}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini{border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--soft)}.mini b{display:block;margin-bottom:5px}.mini p{font-size:14px;margin:0;color:var(--sub)}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:12px 0 4px;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top}th{background:#eef4f5;color:#375263;font-size:12px;white-space:nowrap}td:first-child{font-weight:750;white-space:nowrap}ul,ol{padding-left:22px;margin:8px 0}li{margin:5px 0}code{font-size:.91em;background:#edf3f4;border-radius:4px;padding:2px 5px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eff4f5;border-left:3px solid var(--blue);padding:17px 19px;font-size:13px;line-height:1.7;border-radius:0 6px 6px 0}.pill{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:3px 8px;white-space:nowrap}.pill.hold{color:#8b5722;background:#fff7eb;border-color:#e8caa0}.pill.ready{color:#23675a;background:#eaf7f2;border-color:#b9dace}.callout{background:#edf7f5;border:1px solid #c7e3dd;border-radius:8px;padding:15px 18px}.source-list{font-size:14px}.source-list li{margin:8px 0}.footer{color:var(--sub);font-size:12px;padding:12px 0}.print{border:1px solid #a7c4ce;background:transparent;color:#e6f1f3;padding:7px 12px;border-radius:6px;cursor:pointer;font:inherit;font-size:12px}
+@media(max-width:760px){main{padding:0 12px 50px}header{margin:0 -12px 18px;padding:25px 18px}.section{padding:20px 17px}.two,.grid3{grid-template-columns:1fr}.model{padding:18px}.tablewrap{margin:0 -4px}th,td{padding:9px 8px}.topline nav{gap:8px}}
+@media print{@page{size:A4;margin:15mm}body{background:#fff;font-size:11px}main{padding:0;max-width:none}header{margin:0 0 12px;padding:20px;background:#fff;color:var(--ink);border-bottom:2px solid var(--navy)}header p{color:var(--sub)}.chip{color:var(--ink);border-color:var(--line)}.topline nav,.print{display:none}.section{box-shadow:none;break-inside:avoid;border-radius:0;margin:10px 0;padding:16px}.section h2{font-size:18px}.two{grid-template-columns:1fr 1fr;gap:8px}.model{padding:10px}.diagram svg{min-width:0}.grid3{gap:6px}table{font-size:10px}th,td{padding:6px}pre{font-size:10px}.eyebrow{color:var(--blue)}h1{font-size:29px}.status{padding:8px 12px}}
+.diagram svg{min-width:0}
+@media screen and (max-width:760px){.diagram svg{min-width:510px}}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;right:12px;bottom:12px;z-index:99;background:#000;color:#fff;padding:6px 10px;font:13px sans-serif;text-decoration:none">← 허브</a>
+<header>
+  <div class="topline"><span class="eyebrow">RESEARCH MODEL REPORT · 2026.10.05</span><nav aria-label="보고서 목차"><a href="#model">모형</a><a href="#measures">변수·설문</a><a href="#analysis">분석</a><a href="#gates">검증 과제</a><a href="#sources">근거</a><button class="print" type="button" onclick="window.print()">인쇄·PDF</button></nav></div>
+  <h1>디자이너의 생성형 AI 사용과<br>업무 변화·역량 개발</h1>
+  <p>연구 1·2 최종 연구모델 보고서 <strong>— 현재 설계 합의안 v1.0</strong>. 같은 설문에서 두 연구를 수행하되, 연구별 질문과 결과변수를 분리한다.</p>
+  <div class="chips"><span class="chip">유급 디자인 업무 종사자</span><span class="chip">연구 1·2 통합 설문 69문항</span><span class="chip">일회 자기보고 설계</span><span class="chip warn">본조사 검증·배포 전</span></div>
+</header>
+<main>
+<section class="section" id="summary">
+  <div class="kicker">Executive summary</div><h2>핵심 결론</h2>
+  <p class="lead">연구 1은 생성형 AI 사용이 과업 크래프팅과 세 업무상 결과에 어떻게 연결되는지 묻는다. 연구 2는 직업대체 위협·걱정과 AI 사용, 스킬 크래프팅의 관련성을 묻는다.</p>
+  <div class="status"><strong>‘최종’은 현재의 모형 선택을 뜻한다.</strong> 척도 타당화나 가설 검정이 끝났다는 뜻은 아니다. 특히 연구자 개발 JE와 변경된 응답척도·기간은 본조사 채택 전에 검증해야 한다.</div>
+  <div class="grid3"><div class="mini"><b>연구 1의 세 결과</b><p>TP는 AI의 지각된 생산성 기여, JE는 담당 과업의 확대, WI는 업무강도 증가다. 세 변수를 ‘좋은 결과’ 하나로 합치지 않는다.</p></div><div class="mini"><b>조절의 위치</b><p>GAIL은 USE→TC를 조절한다. EXP는 TC→TP·JE·WI 세 경로를 각각 조절한다.</p></div><div class="mini"><b>연구 2의 별도 질문</b><p>THR→USE→SC와 THR→SC 직접경로를 검토한다. GAIL은 첫 단계, EXP는 둘째 단계를 조절한다.</p></div></div>
+</section>
+
+<section class="section" id="model">
+  <div class="kicker">01 · Conceptual framework</div><h2>두 연구의 현재 모형</h2>
+  <div class="two">
+  <article class="model"><div class="kicker">Study 1 · 업무 변화와 결과</div><h3>과업 크래프팅의 이득과 부담을 함께 본다</h3><p>주경로: USE→TC→TP·JE·WI. 결과 세 개는 병렬이다.</p>
+    <div class="diagram"><svg viewBox="0 0 660 460" role="img" aria-labelledby="st1t st1d"><title id="st1t">연구 1 현재 모형</title><desc id="st1d">업무상 AI 사용에서 과업 크래프팅으로, 과업 크래프팅에서 생산성 기여, 과업 확대, 업무강도 증가로 향한다. GAIL은 첫 경로를, EXP는 세 결과 경로를 조절한다.</desc><defs><marker id="a1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#31556a"/></marker><marker id="m1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#216886"/></marker></defs>
+      <rect class="svgmod" x="165" y="25" width="150" height="64" rx="8"/><text class="svgtxt" x="240" y="52">AI 리터러시</text><text class="svgsub" x="240" y="73">GAIL · 첫 경로 조절</text>
+      <rect class="svgmod" x="445" y="25" width="150" height="64" rx="8"/><text class="svgtxt" x="520" y="52">직업 전문성</text><text class="svgsub" x="520" y="73">EXP · 세 경로 조절</text>
+      <rect class="svgbox" x="25" y="204" width="150" height="76" rx="8"/><text class="svgtxt" x="100" y="236">AI 사용</text><text class="svgsub" x="100" y="259">USE</text>
+      <rect class="svgbox" x="270" y="204" width="160" height="76" rx="8"/><text class="svgtxt" x="350" y="236">과업 크래프팅</text><text class="svgsub" x="350" y="259">TC</text>
+      <rect class="svgbox" x="500" y="120" width="145" height="70" rx="8"/><text class="svgtxt" x="572" y="148">생산성 기여</text><text class="svgsub" x="572" y="170">TP · 지각</text>
+      <rect class="svgbox" x="500" y="215" width="145" height="70" rx="8"/><text class="svgtxt" x="572" y="243">과업 확대</text><text class="svgsub" x="572" y="265">JE · 회고</text>
+      <rect class="svgbox" x="500" y="310" width="145" height="70" rx="8"/><text class="svgtxt" x="572" y="338">업무강도 증가</text><text class="svgsub" x="572" y="360">WI · 회고</text>
+      <path class="svgline" d="M175 242 H264" marker-end="url(#a1)"/><path class="svgline" d="M430 225 L494 161" marker-end="url(#a1)"/><path class="svgline" d="M430 242 H494" marker-end="url(#a1)"/><path class="svgline" d="M430 260 L494 341" marker-end="url(#a1)"/>
+      <path class="svgdash" d="M240 89 V185 L220 225" marker-end="url(#m1)"/><path class="svgdash" d="M520 89 V145 L455 211" marker-end="url(#m1)"/><text class="svglabel" x="470" y="149">세 경로 조절</text><text class="svgsub" x="350" y="425">USE 직접경로·GAIL/EXP 주효과는 분석식에 포함</text>
+    </svg></div><p class="note">EXP 점선은 TC에서 세 결과로 향하는 경로 전체에 적용한다. 화살표는 검정할 방향이지 확인된 인과관계가 아니다.</p>
+  </article>
+  <article class="model study2"><div class="kicker teal">Study 2 · 역량 개발 행동</div><h3>위협, 사용, 개발 행동의 관계를 본다</h3><p>주경로: THR→USE→SC. THR→SC 직접경로를 함께 추정한다.</p>
+    <div class="diagram"><svg viewBox="0 0 660 460" role="img" aria-labelledby="st2t st2d"><title id="st2t">연구 2 현재 모형</title><desc id="st2d">직업대체 위협·걱정에서 AI 사용으로, AI 사용에서 스킬 크래프팅으로 향한다. 위협에서 스킬 크래프팅의 직접경로도 있다. GAIL은 첫 단계, EXP는 둘째 단계를 조절한다.</desc><defs><marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#31556a"/></marker><marker id="m2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#216886"/></marker></defs>
+      <rect class="svgmod" x="128" y="37" width="155" height="68" rx="8"/><text class="svgtxt" x="205" y="65">AI 리터러시</text><text class="svgsub" x="205" y="87">GAIL · 첫 단계 조절</text>
+      <rect class="svgmod" x="387" y="37" width="155" height="68" rx="8"/><text class="svgtxt" x="464" y="65">직업 전문성</text><text class="svgsub" x="464" y="87">EXP · 둘째 단계 조절</text>
+      <rect class="svgbox teal" x="25" y="195" width="160" height="80" rx="8"/><text class="svgtxt" x="105" y="225">직업대체 위협</text><text class="svgsub" x="105" y="250">THR · 걱정 포함</text>
+      <rect class="svgbox teal" x="260" y="195" width="145" height="80" rx="8"/><text class="svgtxt" x="332" y="225">AI 사용</text><text class="svgsub" x="332" y="250">USE</text>
+      <rect class="svgbox teal" x="500" y="195" width="145" height="80" rx="8"/><text class="svgtxt" x="572" y="225">스킬 크래프팅</text><text class="svgsub" x="572" y="250">SC</text>
+      <path class="svgline" d="M185 235 H254" marker-end="url(#a2)"/><path class="svgline" d="M405 235 H494" marker-end="url(#a2)"/><path class="svgline" d="M105 275 V355 H572 V281" marker-end="url(#a2)"/><text class="svglabel" x="338" y="344">THR→SC 직접경로</text>
+      <path class="svgdash" d="M205 105 V193 L219 219" marker-end="url(#m2)"/><path class="svgdash" d="M464 105 V193 L451 219" marker-end="url(#m2)"/><text class="svgsub" x="330" y="415">GAIL/EXP 주효과는 분석식에 포함</text>
+    </svg></div><p class="note">SC는 역량 개발을 위한 행동이다. 실제 기술 수준의 상승을 직접 측정하지 않는다.</p>
+  </article>
+  </div>
+  <div class="callout" style="margin-top:16px"><strong>공유 변수:</strong> USE·GAIL·EXP는 통합 설문에서 한 번만 측정한다. 연구 1과 연구 2에서 변수의 분석상 역할은 다르다.</div>
+</section>
+
+<section class="section" id="questions"><div class="kicker">02 · Research questions</div><h2>보고서가 답하려는 질문</h2>
+  <div class="two"><div><h3>연구 1</h3><ol><li>USE와 TC는 어떻게 관련되며, 그 관련성은 GAIL에 따라 달라지는가?</li><li>TC는 TP·JE·WI와 각각 어떻게 관련되며, 세 관련성은 EXP에 따라 달라지는가?</li><li>USE와 각 결과의 직접 관련성과 TC를 통한 조건부 간접 관련성은 어떻게 나타나는가?</li><li>생산성 기여·과업 확대·강도 증가·지각된 소득 영향은 어떤 조합으로 나타나는가?</li></ol></div><div><h3>연구 2</h3><ol><li>THR은 USE 및 SC와 각각 어떻게 관련되는가?</li><li>THR→USE 관련성은 GAIL에 따라 달라지는가?</li><li>USE→SC 관련성은 EXP에 따라 달라지는가?</li><li>THR과 SC 사이의 직접 관련성과 조건부 간접 관련성은 어떻게 나타나는가?</li></ol></div></div>
+  <p class="note">모든 질문은 일회 설문의 통계적 관련성을 묻는다. 경로의 방향은 이론적 배치이며 인과효과를 식별하지 않는다.</p>
+</section>
+
+<section class="section" id="measures"><div class="kicker">03 · Operationalization</div><h2>변수, 역할, 실제 측정</h2>
+  <div class="tablewrap"><table><thead><tr><th>코드</th><th>뜻과 문항 수</th><th>연구 1</th><th>연구 2</th><th>해석·검증 경계</th></tr></thead><tbody>
+    <tr><td>USE</td><td>업무상 생성형 AI 사용 · 4</td><td>선행변수</td><td>매개 위치</td><td>정보·아이디어·질문·문제해결 중심. 제작·수정 전체 사용량으로 확대 해석하지 않는다.</td></tr>
+    <tr><td>TC</td><td>확장·도전 중심 과업 크래프팅 · 4</td><td>매개 위치</td><td>—</td><td>지난 1주 행동. JE의 ‘과업이 늘어남’과 개념·문항 중복을 확인한다.</td></tr>
+    <tr><td>TP</td><td>AI의 지각된 생산성 기여 · 3</td><td>병렬 결과</td><td>—</td><td>시간 절약·생산성·수행 가능량에 대한 지각. 객관적 효율이나 실제 성과가 아니다.</td></tr>
+    <tr><td>JE</td><td>담당 과업 종류·범위의 지각된 확대 · 3</td><td>병렬 결과</td><td>—</td><td>연구자 개발 후보. 사용 전후 비교이며 AI가 변화를 일으켰다는 증거가 아니다.</td></tr>
+    <tr><td>WI</td><td>업무강도 증가 · 5</td><td>병렬 결과</td><td>—</td><td>IDS 하위척도 번안 후보. 원문의 기간과 다른 기준 시점, WI5의 프리랜서 적용성을 검토한다.</td></tr>
+    <tr><td>GAIL</td><td>생성형 AI 리터러시 · 17</td><td>USE→TC 조절</td><td>THR→USE 조절</td><td>5개 하위영역을 보존한다. 17개 총평균이나 고차요인을 검증 없이 확정하지 않는다.</td></tr>
+    <tr><td>EXP</td><td>자기평가 직업 전문성 · 5</td><td>TC→TP·JE·WI 조절</td><td>USE→SC 조절</td><td>6점 응답. 객관적 경력연수나 AI 도입 전 능력으로 취급하지 않는다.</td></tr>
+    <tr><td>THR</td><td>AI 대체 위협·걱정 · 4</td><td>—</td><td>선행변수</td><td>위협의 적응적 대응과 회피적 대응을 모두 허용한다.</td></tr>
+    <tr><td>SC</td><td>스킬 크래프팅 행동 · 4</td><td>—</td><td>결과</td><td>기술 탐색·학습·역량 확장 노력. 실제 역량 증가와 다르다.</td></tr>
+    <tr><td>ACT</td><td>기획·탐색·제작·수정의 AI 사용 빈도 · 4</td><td colspan="2">보조 사용 프로필</td><td>USE에 자동 합산하지 않는다. 활동을 하지 않음과 활동 중 AI 미사용을 구분한다.</td></tr>
+    <tr><td>INC_AI</td><td>AI의 지각된 소득 영향 · 1</td><td>별도 보조 결과</td><td>—</td><td>실제 소득액 변화가 아니다. TP·JE·WI에서 소득으로 가는 주경로는 확정하지 않았다.</td></tr>
+  </tbody></table></div>
+  <p class="note">핵심 측정 문항은 연구 1 변수 41개(USE4+TC4+TP3+JE3+WI5+GAIL17+EXP5), 연구 2 고유 변수 8개(THR4+SC4)로 49개다. ACT4·INC_AI1·선별·진단·배경·의견 15개를 더한 통합 설문은 질문 카드 69개다. 실제 제시 수는 분기에 따라 다르다.</p>
+</section>
+
+<section class="section" id="survey"><div class="kicker">04 · Survey design</div><h2>설문 v0.9.2에 반영한 운영 결정</h2>
+  <div class="tablewrap"><table><thead><tr><th>항목</th><th>현재 운영안</th><th>분석상 처리</th></tr></thead><tbody>
+    <tr><td>업무 기준</td><td>REF_JOB에서 사내 디자인팀·외부 에이전시/파견·프리랜서·사업주 등을 복수 선택한다. REF_MAIN에서 주된 업무 한 가지를 고른다.</td><td>이후 답변의 기준 업무를 통일한다. Google 설문에는 두 문항의 선택지 자동 연동이 아직 없다.</td></tr>
+    <tr><td>비교 기준</td><td>PRE_AI는 실제 유급 디자인 과업에 생성형 AI를 처음 사용하기 전의 업무 경험을 묻는다. COMPARE는 전후 비교 가능성을 묻는다.</td><td>비교 불가자의 JE·WI는 구조적 결측이다. 0이나 중립점으로 대체하지 않는다.</td></tr>
+    <tr><td>시작 시점</td><td>모호한 ‘반복 사용 시작’ 질문과 연·월 회상 문항을 제거했다.</td><td>노출 기간을 정밀하게 통제할 수 없다는 한계를 기록한다. 필요하면 연도 범주를 인지면담에서 시험한다.</td></tr>
+    <tr><td>JE 진단</td><td>JE_DIR, JE_NEW, JE_LOST로 확대·축소·교체를 구분한다.</td><td>세 문항은 JE1–3의 척도 점수에 합산하지 않는다.</td></tr>
+    <tr><td>응답척도</td><td>TC·TP·JE·WI·SC는 7점. EXP는 원형인 6점. ACT는 7점 빈도 후보.</td><td>원척도 5→7 변경은 방법 절에 명시하고, 수정 척도의 이해·측정구조를 새로 확인한다.</td></tr>
+    <tr><td>비실질응답</td><td>일반 ‘판단 어려움’은 삭제했다. 회상 실패의 ‘기억나지 않음’과 구조적 ‘해당 없음’은 필요한 문항에 남겼다.</td><td>비실질응답을 척도 중간점에 섞지 않는다.</td></tr>
+  </tbody></table></div>
+  <p class="note">현재 Google 설문은 69개 카드·15개 섹션의 비게시 편집본이다. HTML은 넓은 지문 화면과 일부 분기를 시험하는 로컬 파일이며 응답을 전송·저장하지 않는다.</p>
+</section>
+
+<section class="section" id="analysis"><div class="kicker">05 · Analysis plan</div><h2>분석 모형과 해석의 범위</h2>
+  <div class="two"><div><h3>연구 1의 개념식</h3><pre>TC = a₀ + a₁USE + a₂GAIL + a₃(USE×GAIL) + 공변량 + ε
+Yₖ = b₀ₖ + b₁ₖTC + cₖUSE + dₖEXP
+     + hₖ(TC×EXP) + 공변량 + εₖ
+Yₖ ∈ {TP, JE, WI}
+
+조건부 간접 관련성 후보:
+(a₁ + a₃GAIL) × (b₁ₖ + hₖEXP)</pre><p class="note">각 결과의 EXP 상호작용은 별도로 검정한다. USE 직접경로와 두 조절변수의 주효과를 유지한다.</p></div><div><h3>연구 2의 개념식</h3><pre>USE = d₀ + d₁THR + d₂GAIL
+      + d₃(THR×GAIL) + 공변량 + ε
+SC  = e₀ + e₁USE + e₂THR + e₃EXP
+      + e₄(USE×EXP) + 공변량 + ε
+
+조건부 간접 관련성 후보:
+(d₁ + d₃GAIL) × (e₁ + e₄EXP)</pre><p class="note">THR→SC 직접경로를 유지한다. EXP·GAIL을 임의로 고/저 집단으로 이분화하지 않는다.</p></div></div>
+  <div class="status"><strong>중요한 시간 불일치:</strong> TC는 지난 1주 행동이고 JE·WI는 과거 대비 현재의 회고적 변화다. 같은 시점의 응답으로 최근 TC가 장기간 변화를 일으켰다고 결론 내릴 수 없다. ‘매개’는 모형상의 위치이며 인과적 매개 검증 완료를 뜻하지 않는다.</div>
+  <p>INC_AI는 범주형 보조 결과로 기술·탐색 분석한다. 소득 감소·불변·증가 중 하나만으로 과업 변화의 이득이나 비용을 판정하지 않는다. TP·JE·WI 점수를 더하거나 빼서 단일 순이득 점수를 만들지 않는다.</p>
+</section>
+
+<section class="section" id="alternatives"><div class="kicker">06 · Competing explanations</div><h2>반대 가설과 대안 모형</h2>
+  <div class="grid3"><div class="mini"><b>역방향 설명</b><p>이미 업무강도가 높은 사람이 AI를 더 사용하고 TC를 더 할 수 있다. 위협감도 AI 사용의 원인이 아니라 결과일 수 있다.</p></div><div class="mini"><b>공통 원인</b><p>고객 요구, 조직의 역할 재배치, 경력, 과업 유형이 TC·JE·WI를 함께 움직일 수 있다. 배경변수를 무조건 넣지 않고 이론적 공변량을 사전 지정한다.</p></div><div class="mini"><b>조절의 반대 방향</b><p>높은 EXP는 AI의 이득을 키울 수도, 대체 효과를 줄일 수도 있다. WI에서는 부담을 완충하거나 추가 업무 배정과 연결될 수도 있다.</p></div></div>
+  <h3>JE의 세 가지 사전 선택지</h3><ol><li><strong>우선 검토안:</strong> 기존 TC를 유지하고 JE를 별도 결과척도로 개발한다.</li><li><strong>구분 실패 시:</strong> JE를 주모형에서 유보하고 탐색·진단 결과로 보고한다.</li><li><strong>연구 목적 변경 시:</strong> TC와 JE를 함께 재개발한다. 이 경우 기존 TC의 검증을 승계하지 않는다.</li></ol>
+  <p>현재 보고서는 첫째 안을 채택한 <em>검증 전 설계</em>다. TC–JE의 구분이 실패하면 둘째 안으로 전환하는 기준을 본조사 전에 기록한다. TV·SV·IWB를 연구 1 주모형에 다시 넣지 않는다.</p>
+</section>
+
+<section class="section" id="gates"><div class="kicker">07 · Adoption gates</div><h2>본조사 채택까지 남은 검증</h2>
+  <div class="tablewrap"><table><thead><tr><th>게이트</th><th>확인할 사항</th><th>현재</th><th>통과하지 못하면</th></tr></thead><tbody>
+    <tr><td>원문·번안</td><td>문항·기간·응답앵커의 원문 위치와 변경 이력을 확정한다. EXP 전체 라벨과 5→7 수정의 범위를 명시한다.</td><td><span class="pill hold">부분 확인</span></td><td>원형 확인 또는 연구자 번안으로 명시하고 재검토한다.</td></tr>
+    <tr><td>내용·이해</td><td>전문가 내용 검토와 직원·프리랜서 인지면담으로 TC–JE 구분, JE 기준점, WI5, ACT·EXP 라벨을 확인한다.</td><td><span class="pill hold">미실시</span></td><td>문항을 수정하고 재면담한다.</td></tr>
+    <tr><td>적용·분기</td><td>비실질응답·누락·구조적 결측, REF_JOB/REF_MAIN, 비교 불가 분기를 실제 폼에서 시험한다.</td><td><span class="pill hold">부분 구현</span></td><td>수집 전에 분기와 선택지 연동을 고친다.</td></tr>
+    <tr><td>측정구조</td><td>JE 요인구조, TC–JE 판별성, WI 집단별 적용성, GAIL 5영역 구조, 신뢰도·수렴성을 예비자료로 평가한다.</td><td><span class="pill hold">자료 없음</span></td><td>JE 주경로 유보나 재개발을 사전 기준에 따라 결정한다.</td></tr>
+    <tr><td>구조분석</td><td>연구 1의 네 조절경로와 연구 2의 두 조절경로에 대해 검정력·표본·상호작용 추정법·다중검정·결측 처리와 공변량을 사전 기록한다.</td><td><span class="pill hold">미확정</span></td><td>유의한 경로만 사후 선택하지 않는다.</td></tr>
+    <tr><td>배포 준비</td><td>참여설명, 자료관리, 기관 심의·승인, 실제 제출 시험, 저장 방식을 확정한다.</td><td><span class="pill hold">미완료</span></td><td>본조사 게시를 보류한다.</td></tr>
+  </tbody></table></div>
+  <p class="note">척도별 수치 기준은 <a href="질문%20검토/연구1_실제설문_v0.9/02_채택판정·인용_명세서_v0.9.md">채택 판정 명세서</a>의 내부 운영기준을 따른다. 단일 임계값만으로 타당성을 확정하지 않는다.</p>
+</section>
+
+<section class="section" id="sources"><div class="kicker">08 · Traceability</div><h2>결정의 출처와 버전 관계</h2>
+  <ul class="source-list">
+    <li><a href="24_연구1_JE반영_현재모델_인수인계_v0.2.md">24 · 연구 1 현재 모델과 인수인계</a> — JE 채택, TV 제외, GAIL 1경로·EXP 3경로의 현 기준.</li>
+    <li><a href="25_연구1_권장모형·설문재구성안_v0.3.md">25 · 권장모형·설문재구성안</a> — 직접경로, JE 대안, 기간·판별성 검토. EXP 조절을 탐색으로 낮추는 제안은 후속 사용자 결정에 따라 현재 보고서에 적용하지 않았다.</li>
+    <li><a href="11_연구1·2_통합모형·연구질문_v0.1.html">11 · 이전 통합모형</a> — 연구 2의 THR→USE→SC와 조절 위치. 이 문서의 연구 1 IWB·보상 경로는 현재 기준이 아니다.</li>
+    <li><a href="질문%20검토/연구1_실제설문_v0.9/02_채택판정·인용_명세서_v0.9.md">설문 채택판정·원문 인용 명세서</a> — 변수별 원문 대조, 미검증 사항, 채택 게이트.</li>
+    <li><a href="질문%20검토/연구1_실제설문_v0.9.2/02_변경·검증_메모_v0.9.2.md">v0.9.2 변경·검증 메모</a> — 7점·6점 운영, REF_JOB 복수선택, 시작 시점·JE 진단 문항 수정.</li>
+    <li><a href="질문%20검토/연구1_실제설문_v0.9.2/01_통합설문_v0.9.2.html">v0.9.2 로컬 통합설문</a> · <a href="질문%20검토/연구1_실제설문_v0.9.2/03_통합문항코드북_v0.9.2.tsv">문항 코드북</a> · <a href="https://docs.google.com/forms/d/1EYEVKYd25SzEJlI6gpr7WkcO-IMODqsvXfcvrbTJ6tk/edit">Google 설문 편집본</a>.</li>
+  </ul>
+  <p class="note">이 보고서는 위의 로컬 원문 대조 기록과 최신 설문을 종합한 설계 문서다. 새로운 외부 문헌의 효과크기, 실증 결과, 척도 신뢰도 수치를 추가하지 않았다. 원문 확보·번안·측정 검증 상태는 각 명세서의 표시를 유지한다.</p>
+</section>
+<div class="footer">작성: 2026-10-05 · 상태: 설계 합의안 / 본조사 채택 전 · 버전 간 충돌 시 최신 사용자 결정과 v0.9.2 설문을 우선한다.</div>
+</main>
+</body>
+</html>

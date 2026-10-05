@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1100" viewBox="0 0 2000 1100" role="img" aria-labelledby="title desc">
+  <title id="title">연구 1 — 과업 재설계의 이득과 비용: 개념모형 초안</title>
+  <desc id="desc">USE에서 TC로, TC에서 생산성 기여·지각된 직무확대·업무강도 증가으로 향하는 제안 경로. GAIL은 USE에서 TC 경로를, EXP는 TC에서 세 결과변수로 향하는 경로를 조절한다. 소득 변화 INC_AI는 별도 보조 결과이다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="11" markerHeight="11" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#111"/></marker>
+  </defs>
+  <rect width="2000" height="1100" fill="white"/>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, sans-serif" fill="#111">
+    <text x="70" y="88" font-size="52">Model 1 — 개념모형 초안</text>
+    <text x="70" y="151" font-size="34">생성형 AI 활용 디자이너: 과업 재설계의 이득과 비용</text>
+    <g font-size="34" text-anchor="middle">
+      <text x="235" y="298">AI 활용</text>
+      <text x="685" y="298">적응 행동</text>
+      <text x="1220" y="298">핵심 종속변수</text>
+      <text x="1730" y="298">보조 결과</text>
+    </g>
+    <g fill="none" stroke="#111" stroke-width="2.8" marker-end="url(#arrow)">
+      <path d="M390 560 H522"/>
+      <path d="M845 537 L1040 423"/>
+      <path d="M845 560 H1040"/>
+      <path d="M845 583 L1040 743"/>
+    </g>
+    <g fill="white" stroke="#111" stroke-width="4.5">
+      <rect x="80" y="477" width="310" height="166"/>
+      <rect x="525" y="477" width="320" height="166"/>
+      <rect x="1045" y="345" width="350" height="145"/>
+      <rect x="1045" y="505" width="350" height="145"/>
+      <rect x="1045" y="665" width="350" height="145"/>
+    </g>
+    <g font-size="39" font-weight="700">
+      <text x="106" y="535">USE</text>
+      <text x="552" y="535">TC</text>
+      <text x="1072" y="402">TP</text>
+      <text x="1072" y="562">JE</text>
+      <text x="1072" y="722">WI (IDS)</text>
+    </g>
+    <g font-size="29">
+      <text x="106" y="597">생성형 AI 사용</text>
+      <text x="552" y="589">과업 재설계</text>
+      <text x="552" y="624" font-size="23">Task Crafting</text>
+      <text x="1072" y="449" font-size="25">AI의 지각된 생산성 기여</text>
+      <text x="1072" y="609" font-size="25">지각된 직무확대</text>
+      <text x="1072" y="769" font-size="25">업무강도 증가</text>
+    </g>
+    <rect x="1510" y="330" width="415" height="485" fill="none" stroke="#888" stroke-width="1.7" stroke-dasharray="6 6"/>
+    <text x="1717" y="410" text-anchor="middle" font-size="32">개인의 소득 보상</text>
+    <rect x="1540" y="477" width="355" height="166" fill="white" stroke="#111" stroke-width="4.5"/>
+    <text x="1565" y="535" font-size="39" font-weight="700">INC_AI</text>
+    <text x="1565" y="597" font-size="28">지각된 소득 영향</text>
+    <text x="1717" y="708" text-anchor="middle" font-size="24">업무 변화에 소득 증가가</text>
+    <text x="1717" y="744" text-anchor="middle" font-size="24">동반되는지 별도 확인</text>
+    <text x="1717" y="784" text-anchor="middle" font-size="21" fill="#555">핵심 결과 → 소득 인과경로 미설정</text>
+    <g fill="none" stroke="#111" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)">
+      <path d="M457 430 V553"/>
+      <path d="M935 796 L945 479"/>
+      <path d="M955 796 L970 560"/>
+      <path d="M975 796 L995 709"/>
+    </g>
+    <g fill="white" stroke="#111" stroke-width="4">
+      <rect x="322" y="335" width="270" height="95"/>
+      <rect x="820" y="800" width="250" height="80"/>
+    </g>
+    <text x="345" y="374" font-size="34" font-weight="700">GAIL</text>
+    <text x="345" y="411" font-size="24">생성형 AI 리터러시</text>
+    <text x="840" y="835" font-size="32" font-weight="700">EXP</text>
+    <text x="840" y="866" font-size="24">업무 숙련도</text>
+    <path d="M70 906 H1930" stroke="#aaa" stroke-width="1"/>
+    <text x="70" y="945" font-size="25">점선 화살표 = 조절효과: GAIL → USE–TC 경로 / EXP → TC–세 종속변수 경로</text>
+    <text x="70" y="979" font-size="23" fill="#555">실선 화살표는 이론 검토를 위한 제안 경로이며, 인과관계·완전매개·효과의 방향을 확정하지 않음.</text>
+    <text x="70" y="1018" font-size="23" fill="#555">TV·SV·IWB·접근/회피 구분 제외. JE는 AI 업무 활용 이전 대비 변화: 문항 개발·검증 필요.</text>
+    <text x="1930" y="1066" text-anchor="end" font-size="20" fill="#777">2026-10-05 · v0.2 · JE 반영 / TV 제외</text>
+  </g>
+</svg>

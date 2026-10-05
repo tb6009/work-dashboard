@@ -1,0 +1,126 @@
+{
+  "week": "2026-W41",
+  "range": {
+    "from": "2026-10-05",
+    "to": "2026-10-11"
+  },
+  "status": "current",
+  "summary": "0500 박사 연구모델 최종 설계 합의안(v1.0)과 최종설문 패키지 정리, 대시보드 연구모델 허브에 공개",
+  "kpis": {
+    "activeProjects": 2,
+    "sessions": 1,
+    "newProjects": 0,
+    "filesChanged": 32
+  },
+  "daily": [
+    {
+      "date": "2026-10-05",
+      "weekday": "월",
+      "filesChanged": 32,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 23_연구1_TC_이득과비용_모형설명_v0.1.md · 24_연구1_JE반영_현재모델_인수인계_v0.2.md · 25_연구1_권장모형·설문재구성안_v0.3.md · 22_연구2_현재모형_흑백_v0.1.svg · 23_연구1_TC_이득과비용_흑백_v0.1.svg 외 21건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W41.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 14,
+                "out": 1525,
+                "cache_read": 1008867,
+                "cache_write": 143251,
+                "messages": 7,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 1525,
+              "cache_read": 1008867,
+              "cache_write": 143251,
+              "messages": 7
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "사용자는 우선 레이아웃을 확인하려고 하므로 새 초안을 '레이아웃 테스트'로 명명했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "연구참여자에게 링크를 공유하지 않았다. 연구책임자·소속·연락처·자료보관 등의 안내가 아직 확정되지 않았다. ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "긴 문항은 표형의 좁은 행 라벨이 아니라 독립 객관식 문항으로 넣어 가독성을 시험했다.",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-10-05T09:50:18.269Z",
+  "tokens": {
+    "total": {
+      "in": 14,
+      "out": 1525,
+      "cache_read": 1008867,
+      "cache_write": 143251
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

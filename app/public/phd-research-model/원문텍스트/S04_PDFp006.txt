@@ -1,0 +1,58 @@
+292                           Onne Janssen
+
+(3) I invest more in my job than I receive in return; (4) The rewards I receive are not proportional to
+my investments; (5) I put more energy into my job than it is worth; (6) I feel unfairly treated in my
+job. All responses were reverse-coded, so that higher scores indicated more eVort–reward fairness.
+Cronbach’s of the summative scale was .90.
+
+Innovative work behaviour. This was assessed by nine items based on Scott and Bruce’s (1994) scale for
+individual innovative behaviour in the workplace. Drawing on Kanter’s (1988) work on the stages of
+innovation, three items refer to idea generation, three items to idea promotion, and three items to idea
+realization. The 9-item IWB scale was completed by both the respondents (self-reports) and their
+supervisors (leader-reports). We chose for self-reports besides observer-scores for three reasons.
+First, a worker’s cognitive representation and reports of his or her own IWB may be more subtle than
+those of his or her supervisor, since a worker has much more information about the historical,
+contextual, intentional and other backgrounds of his or her own work activities (cf. Jones & Nisbett,
+1971). Second, the assessment of IWB as discretionary work behaviour is much like many forms of
+subjective performance appraisal, highly susceptible to idiosyncratic interpretations and thus likely to
+vary across diVerent raters (Organ & Konovsky, 1989). Finally, the supervisor measure may miss
+much genuine employee innovative  activities, and may capture only those gestures intended to
+impress the supervisor (Organ & Konovsky, 1989). However, while self-reports might be more subtle
+than leader-scores, the latter measure provides an assessment of IWB that is procedurally independent
+of the participants’ self-reports of job demands and perceived eVort–reward fairness. Therefore,
+respondents provided self-reports and were rated by their direct supervisors (leader-reports) on the
+following nine innovative work behaviour items: (1) Creating new ideas for diYcult issues (idea
+generation); (2) Searching out new working methods, techniques, or instruments (idea generation); (3)
+Generating original solutions for problems (idea generation); (4) Mobilizing support for innovative
+ideas (idea promotion); (5) Acquiring approval for innovative ideas (idea promotion); (6) Making
+important organizational members enthusiastic for innovative ideas (idea promotion); (7) Transform-
+ing innovative ideas into useful applications (idea realization); (8) Introducing innovative ideas into
+the work environment in a systematic way (idea realization); (9) Evaluating the utility of innovative
+ideas (idea realization).  It was indicated how often employees performed those innovative work
+behaviours in the workplace. The response format was a 7-point scale ranging from ‘never’ (1) to
+‘always’ (7). Intercorrelations between the three aspects of innovative work behaviour ranged from .84
+(between idea generation and idea realization) to .87 (between idea generation and idea promotion) for
+the leader-reports, and from .76 (between idea generation and idea realization) to .85 (between idea
+promotion and idea realization) for the self-reports. Given these high intercorrelations and following
+Scott and Bruce (1994), idea generation, idea promotion, and idea realization were conceived to
+combine additively to create an overall scale of innovative work behaviour. Cronbach’s was .95 for
+the self-rated and .96 for the leader-rated scores of IWB.
+
+Covariates. To control for the possibility that socio-demographic diVerences in the predictor and
+outcome variables might lead to spurious relationships, gender (1 = male, 2 = female), age (in years),
+organization tenure (in years), and education (1 = primary education, 2 = initial vocational education,
+3 = higher vocational education, and 4 = post-graduate degree) were entered as covariates in the
+analysis.
+  Moreover, for theoretical reasons elaborated in the theoretical section of this paper, job control also
+served as a covariate in order to control for a possible confound with fairness perceptions. Job control
+was measured by a Dutch 11-item scale developed and validated by Van Veldhoven and Meijman
+(1994). The measure consists of items focusing on timing control and method control developed by
+Jackson, Wall, Martin, and Davids (1993; cf. Wall et al., 1996). The items included are: (1) Can you
+choose the methods to use carrying out your work? (2) Do you plan your own work? (3) Do you set
+your own pace? (4) Can you vary how you do your work? (5) On your job, do you have the freedom
+to take a break whenever you wish to? (6) Do you decide on the order in which you do things? (7)
+Do you decide when to  nish a piece of work? (8) Do you have full authority in determining how
+much time you spend on particular tasks? (9) Can you decide how to go about getting your job done?
+(10) Does your job allow you to organize your work by yourself? (11) Do you have full authority in
+determining the content of your work? The items were followed by a 4-point response scale (never,
+sometimes, often, always). Cronbach’s was .90.

@@ -1,0 +1,66 @@
+         1324                               MORGESON AND HUMPHREY
+
+
+          The use of multiple skills is often challenging and thereby engag-     physical ease factor identified by Edwards et al. (1999) and is
+            ing to perform.                                                        consistent with the physical demand dimension highlighted by
+               Specialization.  Specialization reflects the extent to which a job    Stone and Gueutal (1985), although we focus only on the physical
+            involves performing specialized tasks or possessing specialized     strength, endurance, effort, and activity aspects of the job. The
+          knowledge and skill. This notion of specialization was first iden-    equipment responsibilities and health hazards identified by Stone
+              tified by Campion (1988) and later clarified by Edwards et al.    and Gueutal were included as  distinct  factors  in the present
+            (1999). As opposed to the breadth of activities and skills inherent     research.
+             in task and skill variety, specialization reflects a depth of knowl-      Work conditions.  Work conditions  reflect the environment
+           edge and skill in a particular area.                                  within which a job is performed. It includes the presence of health
+                                                                             hazards (Stone & Gueutal, 1985) and noise, temperature, and
+           Social Characteristics                                               cleanliness of the working environment (Campion & McClelland,
+                                                                          1991; Edwards et al., 1999).
+              Social support.  Social support reflects the degree to which a
+                                                                        Equipment use.  Equipment use reflects the variety and com-
+            job provides opportunities for advice and assistance from others.
+                                                                                     plexity of the technology and equipment used in a job. Although
+           This  includes  Karasek’s  (Karasek,  1979;  Karasek,  Brisson,
+                                                                               not previously assessed by job design measures, other research has       broadly.     Kawakami, Houtman, Bongers, & Amick, 1998) notion of super-     identified the importance of considering the equipment and tech-
+             visor and coworker social support and the construct of friendship
+                                                                         nology used at work (Goodman, 1986; Harvey, Friedman, Hakel,publishers.         opportunities at work posited by Sims et al. (1976). Although not
+                                           & Cornelius, 1988).
+allied          traditionally studied in job design contexts, research from other          domains suggests that social support  is  critical for well-beingitsdisseminated                                                                                Methodofbe      (Ryan & Deci, 2001; Wrzesniewski, Dutton, & Debebe, 2003),
+oneto       particularly for jobs that are stressful or lack many motivational    Measure Development Strategy
+   not     work characteristics.or
+  is         Interdependence.  Interdependence reflects the degree to which        In developing the WDQ, we began by searching the literature to find
+   and       the job depends on others and others depend on it to complete the      existing items for each of the constructs. Although our goal was to use
+    user     work (Kiggundu, 1981). As such, interdependence reflects the      existing items (without revising them) wherever possible, this was notAssociation         “connectedness” of jobs to each other. Integral to this definition     always possible. When we could not use existing items, we adapted
+            are two distinct forms of interdependence (Kiggundu, 1981): (a)      existing items and developed new items. When we were choosing, revising,
+                                                                                           or writing new items, several principles directed our efforts. First, item
+            the extent to which work flows from one job to other jobs (initiated         individual                                                                                       choice, revision, and writing were guided by our definition of the construct
+            interdependence) and (b) the extent to which a job is affected by   the                                                                            (which was derived from the work design literature). When there werePsychologicalof     work from other jobs (received interdependence).                   numerous potential items, we chose those that best reflected the construct
+   use         Interaction outside the organization.   Interaction outside the      definition. When revisions were made to existing items, changes were
+            organization reflects the extent to which the job requires employ-    made to better measure the underlying construct or otherwise clarify theAmerican         ees to interact and communicate with individuals external to the      item. When we created new items, we sought to write items that (a)
+            organization. This interaction could take place with suppliers,      reflected the construct definition and (b) were distinct from the otherthepersonal
+bythe      customers, or any other external entity. The “dealing with others”      identified work characteristics. The WDQ is thus a mix of existing items
+   for       construct (Sims et al., 1976) is similar, although we focus solely on     (17%), adapted items (33%), and new items (50%). All items are contained
+             interactions with individuals beyond the organization’s bound-      in the Appendix.
+                                                                                     Second, we chose to use a relatively simple response scale. We did this     solely        aries.  It  is also similar to the “serves the public” dimension
+                                                                                    because the use of more complex response scales in the job design area hascopyrighted          identified by Stone and Gueutal (1985), although the interaction
+is                                                                             been shown to add substantial amounts of construct-irrelevant variance
+            outside the organization construct goes beyond simply interacting                                                                                 (Harvey et al., 1985). As such, all items used a simple 5-point strongly       intended           with and serving customers.                                             disagree to strongly agree scale. Third, because negatively worded items  is
+            Feedback from others.  Feedback from others reflects the de-     have been shown to produce factor structure problems in other work designdocument
+            gree to which others in the organization provide information about     measures (Idaszak & Drasgow, 1987), items were positively worded such      article
+This         performance. Although Hackman and Oldham (1975) focused on      that greater levels of agreement indicated the presence of more of the work
+    This      feedback from the job itself, early theorizing suggested that feed-      characteristic. The only exceptions to this were the job complexity scale
+           back could also come from other people (Hackman & Lawler,     and one ergonomics item, because they are easier to comprehend when
+           1971) given a job’s particular place in the organizational structure.    worded in the negative. Fourth, to achieve adequate internal consistency
+                                                                                                           reliability yet maintain reasonable survey length, a minimum of four items
+            In particular, coworkers and supervisors are two potentially im-
+                                                                         was used to assess each construct. The only exception to this rule was when
+            portant sources of feedback.
+                                                                                           multiple dimensions of a construct were thought to exist (i.e., the three
+                                                                                            aspects of autonomy). In instances such as this, three items were used to
+          Contextual Characteristics                                       measure each subdimension (e.g., the autonomy scale has nine items).
+                                                                                                          Fifth, most items referred to the job itself as opposed to an individual’s             Ergonomics.  Ergonomics reflects the degree to which a job
+                                                                                              reaction to the job. This was done because it is the properties of the job
+            allows correct or appropriate posture and movement. The impor-
+                                                                                                                      itself, and not idiosyncratic reactions to the job, that are important in work
+            tance of this aspect of work design can be found in the extensive                                                                                       design measurement. A small number of items did reference the broader
+           ergonomics literature as well as job design research (Campion &    work environment (e.g., “the workplace is free from excessive noise”) or
+           Thayer, 1985; Edwards et al., 1999).                                    personal experiences (e.g., “people I work with are friendly”) to reflect
+              Physical demands.  Physical demands reflect the level of phys-    some of the construct definitions. Sixth, the items were grouped by work
+              ical activity or effort required in the job. This is similar to the      characteristic construct (instead of being randomly distributed). Research

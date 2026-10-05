@@ -1,0 +1,53 @@
+Ask only if Q003 - employeeageyear,99
+
+Q004 - employeeagecat1: age groups asked                  Single coded
+
+Not back
+
+Which of the following age groups do you fall into?
+
+Normal
+1       Below 16 years
+2      Between 16 and 24 years
+3      Between 25 and 34 years
+4      Between 35 and 49 years
+5      Between 50 and 64 years
+6      65 years or more
+
+
+Q005 - employeeagecat2: age groups all                     Single coded
+
+Not back | Dummy
+
+Normal
+1   Below 16 years             GO TO SCREEN OUT
+2   Between 16 and 24 years
+3   Between 25 and 34 years
+4   Between 35 and 49 years
+5   Between 50 and 64 years
+6   65 years or more
+
+
+
+Q006 - employed: Employment screening                     Single coded
+
+Not back
+
+What is your current employment status?
+
+Normal
+1    I am employed
+2    I am self-employed            GO TO SCREEN OUT
+3    I am currently not employed         GO TO SCREEN OUT
+
+
+Q007 - sector: Sector                                        Single coded
+
+Not back
+
+What sector do you work in?
+
+Normal
+1   Finance and insurance
+2   Manufacturing
+3   None of these              GO TO SCREEN OUT

@@ -1,0 +1,905 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>디자이너의 생성형 AI 사용과 업무 경험 설문지</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 12_연구1·2_통합설문지_예비조사검토본_v0.2.md · 2026-10-03 21:55</div><h1>디자이너의 생성형 AI 사용과 업무 경험 설문지</h1>
+<p>2026-10-03 · 예비조사 검토본 v0.2 · 모형11 내용 v0.4 반영 · 08 v0.2 원문 재대조·13 검토 반영</p>
+<p><strong>v0.2 결정(2026-10-03):</strong> 모든 리커트형 응답을 7점으로 통일. 생성형 AI 사용 경험이 없는 사람은 설문 종료. 경력 3년 조건·예술/실용 분류 문항은 넣지 않음. 해외판 소득 문항은 §11-2 끝의 안 참조.</p>
+<p><strong>본조사 배포본이 아닙니다.</strong> 연구 안내의 빈칸, EXP 응답앵커, 기간, 프리랜서 번안, 보상 정의를 확정해야 합니다. 인쇄·설문 플랫폼 이관용 문서이며 HTML은 응답 저장·전송 기능이 없는 정적 문서입니다.</p>
+<h2>연구자용 — 최신 모형과 설문 역할</h2>
+<ul>
+<li>연구1: USE→TC→IWB·TP→보상. GAIL은 USE→TC, EXP는 TC→IWB·TP 조절.</li>
+<li>연구2: THR→USE→SC 및 THR→SC 직접경로. GAIL은 THR→USE, EXP는 USE→SC 조절.</li>
+<li>매개·조절·직접효과마다 새 설문을 만들지 않습니다. USE·GAIL·EXP는 공통으로 한 번만 측정합니다.</li>
+<li>핵심 후보50문항, ACT4·CHG3·경제보상7코드 별도. 금액·시간의 두 기간 입력칸과 배경·분기는 추가입니다.</li>
+<li>현재 경제적 보상 변화는 본문 유지. 기회보상3개는 부록의 미채택 후보이며, 본문 점수나 총보상 척도로 합산하지 않습니다.</li>
+<li>연구자용 안내와 부록은 실제 응답자 배포 시 제외합니다. 순서대로 진행하되 문항별 회상기간에 유의합니다.</li>
+</ul>
+<h2>0. 참여 안내와 동의</h2>
+<p>이 연구는 디자이너의 생성형 AI 사용, 업무 행동 및 직업 경험을 살펴봅니다. 정답은 없으며 본인의 경험에 따라 답해 주세요. 특정한 변화가 있었거나 AI를 긍정적으로 평가해야 하는 것은 아닙니다.</p>
+<p>연구책임자·소속: [확정 필요] / 문의: [확정 필요]</p>
+<p>예상 소요시간: [예비조사 실측 후 기입] / 참여 사례: [유무·조건 확정]</p>
+<p>수집 항목은 업무 경험, AI 사용, 경력·근로형태와 선택적인 소득 정보입니다. 기관명·고객명·연락처 등 식별정보는 이 설문에 적지 마세요. 개인정보 처리·익명성 수준·자료보관 기간·폐기 방법·철회 가능 범위: [실제 연구계획 및 심의에 맞춰 확정]. 완전 익명 수집이라 응답 식별이 불가능한 경우 제출 후 개별 자료 삭제가 어려울 수 있습니다. 금액 응답은 거절할 수 있습니다.</p>
+<p>참여는 자발적이며 원하지 않는 질문은 건너뛰거나 참여를 중단할 수 있습니다. 참여 거절·중단에 따른 불이익은 없습니다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONSENT</td>
+<td>위 안내를 읽고 자발적으로 연구에 참여하는 데 동의하십니까?</td>
+<td>□ 동의함 □ 동의하지 않음 → 종료</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: 빈칸이 있는 상태로 모집·배포하지 않습니다. 심의 필요 여부 및 척도 번안·사용 조건을 확인하세요.</p>
+</blockquote>
+<h2>1. 업무·사용 경험 확인</h2>
+<p>생성형 AI는 지시에 따라 텍스트·이미지·영상·음성·코드를 생성하거나 수정하는 기능을 뜻합니다. 일반 소프트웨어의 수동 편집 기능만 사용한 경우는 포함하지 않습니다. 한 도구를 기획과 제작 등 여러 활동에 사용할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>현재 또는 최근3개월 동안 보수를 받는 디자인 업무를 수행했습니까?</td>
+<td>□ 예 □ 아니오</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>생성형 AI를 업무에 사용한 경험이 있습니까?</td>
+<td>□ 없음 → 종료 □ 있지만 최근3개월에는 사용하지 않음 □ 최근3개월 사용</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>현재 일하는 형태를 모두 선택해 주세요.</td>
+<td>□ 조직 소속 직원 □ 독립 프리랜서 □ 개인사업자·사업주 □ 기타: ____</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>최근3개월 디자인 업무소득에서 가장 큰 비중을 차지한 형태는 무엇입니까?</td>
+<td>□ 근로소득 □ 독립 업무소득 □ 비슷함 □ 해당 기간 소득 없음 □ 판단불가</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용 분기안: S1=아니오는 예비조사에서는 사유를 확인하고 본조사 적격기준 확정 후 종료 여부를 정합니다. S2=없음(사용 경험 없음)은 설문을 종료한다(v0.2 결정, 원 GAIL 연구와 같은 방식). 최근3개월 비사용자는 USE·ACT·TP·GAIL을 건너뛰는 안으로 검토하고, 핵심 사용자 모형의 분석대상과 분리합니다. 건너뛴 문항을 0 또는 중간값으로 넣지 않습니다. ACT는 현재 사용자라도 최근30일 사용이 없으면 0일입니다. TP 비사용자는 적용불가. GAIL의 비사용자 타당성은 미확보입니다.</p>
+</blockquote>
+<h2>2. 업무상 생성형 AI 사용</h2>
+<p>평소 업무에서 다음 문장이 자신에게 얼마나 해당하는지 답해 주세요.</p>
+<p>응답: 1 전혀 동의하지 않음 / 2 동의하지 않음 / 3 약간 동의하지 않음 / 4 동의도 반대도 아님 / 5 약간 동의함 / 6 동의함 / 7 매우 동의함.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USE1</td>
+<td>나는 평소 업무에서 아이디어를 얻고 업무 관련 논의를 하기 위해 생성형 AI를 사용한다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>USE2</td>
+<td>나는 평소 업무에서 업무 문제의 해결책을 얻기 위해 생성형 AI를 사용한다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>USE3</td>
+<td>나는 평소 업무에서 업무 관련 질문을 하기 위해 생성형 AI를 사용한다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>USE4</td>
+<td>나는 평소 업무에서 업무 관련 지식을 얻기 위해 생성형 AI를 사용한다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S01. 원7점 동의. 중간 국문 앵커는 번안 제안. 제작 사용 전체를 포괄하는 척도 아님.</p>
+</blockquote>
+<h2>3. 활동별 생성형 AI 사용</h2>
+<p>최근30일 동안 각 활동에 생성형 AI의 생성·수정 기능을 사용한 날은 며칠입니까? 같은 날 여러 활동을 했다면 각 활동에 포함하세요.</p>
+<p>응답: 0–30일 / 해당 활동 자체를 하지 않음 / 기억하기 어려움. 응답란에 일수 또는 해당 범주를 적어 주세요.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACT1</td>
+<td>기획: 목표·문제 정의, 콘셉트 또는 작업계획 수립에 생성형 AI를 사용한 날은 며칠입니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>ACT2</td>
+<td>탐색: 자료·레퍼런스·아이디어·대안을 탐색하는 데 생성형 AI를 사용한 날은 며칠입니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>ACT3</td>
+<td>제작: 실제 업무용 텍스트·이미지·영상·음성·코드 등의 초안이나 결과물을 생성하는 데 생성형 AI를 사용한 날은 며칠입니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>ACT4</td>
+<td>수정: 기존 초안이나 결과물을 수정·보완하는 데 생성형 AI를 사용한 날은 며칠입니까?</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: 연구자 재구성. 활동을 했으나 AI를 쓰지 않은 경우 0일. 네 문항 일수를 합산하지 않음. S10 참고.</p>
+</blockquote>
+<h2>4. 과업을 바꾸는 행동</h2>
+<p>지난1주일 동안 다음 행동을 어느 정도 했습니까?</p>
+<p>응답: 1 전혀 하지 않음 / 2 거의 하지 않음 / 3 조금 함 / 4 보통 정도 함 / 5 꽤 함 / 6 많이 함 / 7 매우 많이 함.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TC1</td>
+<td>나는 업무에서 더 많은 과업을 적극적으로 맡았다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>TC2</td>
+<td>나는 과업의 구조나 순서를 바꾸어 과업의 복잡성을 더했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>TC3</td>
+<td>나는 과업이 더 도전적이 되도록 바꾸었다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>TC4</td>
+<td>나는 업무에서 내리는 어려운 의사결정의 수를 늘렸다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S02. 촉진 TC. 복잡성 추가를 간소화로 바꾸지 않음. 원척도는 5점(1 not at all–5 a great deal). v0.2에서 7점으로 조정, 중간 국문 앵커는 제안.</p>
+</blockquote>
+<h2>5. 기술·역량 개발 행동</h2>
+<p>지난1주일 동안 다음 행동을 어느 정도 했습니까?</p>
+<p>응답: 1 전혀 하지 않음 / 2 거의 하지 않음 / 3 조금 함 / 4 보통 정도 함 / 5 꽤 함 / 6 많이 함 / 7 매우 많이 함.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC1</td>
+<td>나는 업무에서 더 폭넓은 역량을 개발하려고 적극적으로 노력했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>SC2</td>
+<td>나는 핵심 기술의 범위를 넘어서는 새로운 것을 업무에서 배우려고 노력했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>SC3</td>
+<td>나는 전반적인 업무 수행에 필요한 새로운 기술을 적극적으로 탐색했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>SC4</td>
+<td>나는 업무에서 전반적인 기술·역량을 넓힐 기회를 찾아보았다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S02. 촉진 SC이며 실제 역량 증가 점수가 아님. 원 5점 → 7점 조정.</p>
+</blockquote>
+<h2>6. 새로운 아이디어와 업무 행동</h2>
+<p>최근3개월 동안 다음 행동을 얼마나 자주 했습니까? 관계자는 실제 업무상 관련된 상사·동료·고객·협업자를 말합니다.</p>
+<p>응답: 1 전혀 하지 않음 / 2 거의 하지 않음 / 3 드물게 함 / 4 가끔 함 / 5 자주 함 / 6 매우 자주 함 / 7 항상 함. 필요한 승인·관계 상황 자체가 없으면 적용불가로 표시하세요.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IWB1</td>
+<td>어려운 문제에 대해 새로운 아이디어를 만들었다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB2</td>
+<td>새로운 작업방법·기술·도구를 찾아보았다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB3</td>
+<td>문제에 대한 독창적인 해결책을 만들었다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB4</td>
+<td>혁신적인 아이디어에 대한 지지를 모았다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB5</td>
+<td>혁신적인 아이디어에 대한 승인을 얻었다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB6</td>
+<td>업무상 중요한 관계자들이 혁신적인 아이디어에 관심과 열의를 갖도록 했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB7</td>
+<td>혁신적인 아이디어를 실제로 유용하게 활용할 수 있는 형태로 바꾸었다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB8</td>
+<td>혁신적인 아이디어를 나의 업무환경에 체계적으로 도입했다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>IWB9</td>
+<td>혁신적인 아이디어의 유용성을 평가했다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S04. IWB5는 v0.2에서 원문("Acquiring approval for innovative ideas") 대응으로 복원. 최근3개월·중간 앵커·적용불가와 프리랜서 관계자 준거는 연구자 적응. IWB5·6 우선 인지면담.</p>
+</blockquote>
+<h2>7. 생성형 AI의 업무 기여</h2>
+<p>사용하는 생성형 AI가 다음 측면에 어느 정도 기여한다고 느끼십니까?</p>
+<p>응답: 1 전혀 아님 / 2 거의 아님 / 3 조금 / 4 보통 정도 / 5 꽤 / 6 많이 / 7 매우 많이.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TP1</td>
+<td>생성형 AI는 업무에 드는 시간을 절약해 준다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>TP2</td>
+<td>생성형 AI는 나의 업무 생산성을 높여 준다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>TP3</td>
+<td>생성형 AI를 사용하면 사용하지 않을 때보다 더 많은 업무를 수행할 수 있다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S03. 원 5점(not at all–a great deal) → 7점 조정. application→GenAI 번안. 실제 성과 변화나 품질 전반을 측정하는 것이 아님.</p>
+</blockquote>
+<h2>8. 자신의 디자인 업무 숙련</h2>
+<p>AI 활용능력만이 아니라 주된 디자인 직업 영역에서 자신의 능력을 평가해 주세요.</p>
+<p>응답: EXP1–4 = 1 전혀 능숙하지 않음 / 2 능숙하지 않음 / 3 약간 능숙하지 않음 / 4 보통 / 5 약간 능숙함 / 6 능숙함 / 7 매우 능숙함. EXP5 = 1 매우 낮음 / 2 낮음 / 3 약간 낮음 / 4 보통 / 5 약간 높음 / 6 높음 / 7 매우 높음. 판단하기 어려우면 판단불가.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EXP1</td>
+<td>지난 1년 동안, 전반적으로 나는 일을 정확하고 실수가 적게 수행할 능력이 어느 정도 있었습니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>EXP2</td>
+<td>지난 1년 동안, 전반적으로 나는 업무 접근방법에 관해 신속하게 결정할 능력이 어느 정도 있었습니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>EXP3</td>
+<td>전반적으로 나는 중요한 문제와 부차적인 문제를 구별하고 우선순위를 정할 능력이 어느 정도 있습니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>EXP4</td>
+<td>나는 내 직업 분야의 작업방법·재료·기술에 관한 특정 결정의 장단점을 따져 판단할 능력이 어느 정도 있습니까?</td>
+<td>______</td>
+</tr>
+<tr>
+<td>EXP5</td>
+<td>자신의 전반적인 기술·역량의 질을 어떻게 평가하십니까?</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S05. 원 6점(not at all–extremely) → 7점 조정. 7점 통일로 EXP5 원 앵커 미확보 문제는 해소되나 앵커 문구는 연구자 제안. 원문은 진술형("I consider myself … competent")이며 위 의문형은 응답 편의를 위한 변경. EXP1·2는 경력1년 미만 시 판단불가 허용; 실제 배포 전 처리 확정.</p>
+</blockquote>
+<h2>9. 생성형 AI 활용 역량</h2>
+<p>현재 자신에게 다음 문장이 얼마나 해당하는지 답해 주세요.</p>
+<p>응답: 1 전혀 동의하지 않음 / 2 동의하지 않음 / 3 약간 동의하지 않음 / 4 동의도 반대도 아님 / 5 약간 동의함 / 6 동의함 / 7 매우 동의함. EC4에서 적용되는 지침이 없으면 적용불가.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAIL_BO1</td>
+<td>나는 내가 사용하는 생성형 AI의 원리와 한계를 이해한다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_BO2</td>
+<td>나는 생성형 AI 도구의 핵심 기능과 협업 기능을 능숙하게 활용할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_BO3</td>
+<td>나는 생성형 AI를 사용할 때 마주치는 일반적인 기술 문제를 해결할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_PE1</td>
+<td>나는 과업 요구사항에 맞는 효과적인 생성형 AI 프롬프트를 설계할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_PE2</td>
+<td>나는 전문용어와 예시를 활용하여 생성형 AI 프롬프트를 개선할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_PE3</td>
+<td>나는 생성된 결과와 피드백에 따라 생성형 AI 프롬프트를 지속적으로 다듬을 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_QE1</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 정확성과 신뢰성을 평가할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_QE2</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 일관성과 정합성을 평가할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_QE3</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 논리성과 완결성을 평가할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_IA1</td>
+<td>나는 생성형 AI를 통해 업무의 혁신 기회를 찾아내고 활용할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_IA2</td>
+<td>나는 생성형 AI를 사용하여 업무를 위한 창의적이고 혁신적인 아이디어를 만들어낼 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_IA3</td>
+<td>나는 생성형 AI를 사용하여 혁신적인 아이디어를 가시적인 결과로 전환할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_EC1</td>
+<td>나는 생성형 AI를 사용할 때 윤리적 위험을 피할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_EC2</td>
+<td>나는 생성형 AI를 사용할 때 개인정보와 민감한 데이터를 보호할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_EC3</td>
+<td>나는 생성형 AI 사용과 관련된 법률과 규정을 준수할 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_EC4</td>
+<td>나는 생성형 AI를 사용할 때 내 업무에 적용되는 조직 또는 고객의 지침을 따를 수 있다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>GAIL_EC5</td>
+<td>나는 생성형 AI를 사용할 때 직업윤리를 준수할 수 있다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S06. EC4 고객 지침 추가는 미검증 번안. 5차원 유지, 무조건 단일평균 금지. GAIL_IA와 IWB 판별 필요.</p>
+</blockquote>
+<h2>10. 생성형 AI와 현재의 일</h2>
+<p>생성형 AI는 앞으로 10년 안에 일부 직장과 일자리를 바꿀 것으로 예상됩니다. 현재 하고 있는 일을 생각하며 다음 문장에 답해 주세요.</p>
+<p>응답: 1 전혀 동의하지 않음 / 2 동의하지 않음 / 3 약간 동의하지 않음 / 4 동의도 반대도 아님 / 5 약간 동의함 / 6 동의함 / 7 매우 동의함.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>THR1</td>
+<td>나는 나의 일자리가 생성형 AI로 대체될 수 있다고 생각한다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>THR2</td>
+<td>나는 현재 업무에서 하는 일이 생성형 AI로 대체될 수 있다는 점이 걱정된다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>THR3</td>
+<td>나는 생성형 AI가 사람의 업무를 대체하면서 현재의 직업적 위치를 유지하기 어려워질까 걱정된다.</td>
+<td>______</td>
+</tr>
+<tr>
+<td>THR4</td>
+<td>나는 생성형 AI가 사람의 업무를 대체하면서 내가 속한 산업에서의 직업적 미래가 걱정된다.</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: S07. 원척도명 STARA Awareness(이 연구용 신규 4문항, EFA만). 원 5점 → 7점 조정. 정의문→현재 일 문두는 원문 구조 복원(v0.2). STARA→GenAI. 3개 걱정 문항 포함. THR3의 조직 미래→직업적 위치 변경을 타당화해야 함.</p>
+</blockquote>
+<h2>11. 업무와 소득의 변화</h2>
+<p>다음 두 기간을 비교해 주세요. 변화가 없으면 그대로 표시해 주세요. AI 때문에 변했다고 가정하지 않습니다.</p>
+<ul>
+<li>A기간(최근 완결3개월): [YYYY-MM-DD]부터 [YYYY-MM-DD]까지</li>
+<li>B기간(바로 이전 완결3개월): [YYYY-MM-DD]부터 [YYYY-MM-DD]까지</li>
+</ul>
+<p>예: 2026년10월 조사라면 A=2026-07-01~09-30, B=2026-04-01~06-30. 실제 조사일에 맞춰 정확한 날짜를 확정해야 합니다.</p>
+<h3>11-1. 업무 변화</h3>
+<p>B기간에 비해 A기간의 상태를 답해 주세요.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHG1</td>
+<td>비슷한 난이도·규모의 업무를 요구 품질에 맞춰 끝내는 데 드는 시간은 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 비슷 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 모름</td>
+</tr>
+<tr>
+<td>CHG2</td>
+<td>같은 시간 동안 요구 품질에 맞춰 완료할 수 있는 업무량은 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 비슷 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 모름</td>
+</tr>
+<tr>
+<td>CHG3</td>
+<td>비슷한 종류의 디자인 결과물의 품질은 어떻게 달라졌습니까?</td>
+<td>□ 크게 낮아짐 □ 다소 낮아짐 □ 비슷 □ 다소 높아짐 □ 크게 높아짐 □ 비교불가 □ 모름</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: 연구자 개발 회고보고. CHG1 감소와 CHG2 증가를 구분. TP와 합산하지 않음.</p>
+</blockquote>
+<h3>11-2. 개인에게 귀속된 경제적 보상</h3>
+<p>회사나 프로젝트의 전체 매출이 아니라 본인의 디자인 업무소득을 답해 주세요. 직원은 세전 급여·상여, 독립업무는 사업경비 차감 후 개인소득세 차감 전 귀속소득입니다. 겸업은 중복 없이 합산합니다. 분리 계산이 어려우면 비교불가/모름을 선택하세요. 금액을 밝히지 않아도 됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REW1</td>
+<td>B기간에 비해 A기간의 본인 디자인 업무 총소득은 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 모름 □ 응답거절</td>
+</tr>
+<tr>
+<td>REW2_EMP</td>
+<td>직원·겸업: 각 기간에 실제 지급받은 디자인 업무의 세전 급여·상여 합계는 얼마입니까?</td>
+<td>B: <strong><em>_원 / A: </em></strong>_원. 각 기간 모름·분리불가·응답거절 가능</td>
+</tr>
+<tr>
+<td>REW2_IND</td>
+<td>독립업무·겸업: 각 기간에 실제 수령한 디자인 업무대금에서 그 기간 지출한 사업경비를 뺀, 개인소득세 차감 전 본인 귀속 금액은 얼마입니까?</td>
+<td>B: <strong><em>_원 / A: </em></strong>_원. 적자·0 가능. 각 기간 모름·분리불가·응답거절 가능</td>
+</tr>
+<tr>
+<td>REW3</td>
+<td>준비·수정 등 무급활동을 포함한 실제 디자인 업무 총투입시간은 각 기간 얼마입니까?</td>
+<td>B: <strong><em>_시간 / A: </em></strong>_시간. 각 기간 모름·응답거절 가능</td>
+</tr>
+<tr>
+<td>REW4_IND</td>
+<td>독립업무: 범위·난이도·수정조건이 비교 가능한 프로젝트의 실제 계약 단가는 B 대비 A에 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 비슷 □ 다소 증가 □ 크게 증가 □ 비교가능 프로젝트 없음 □ 모름 □ 응답거절</td>
+</tr>
+<tr>
+<td>REW5</td>
+<td>A기간에 급여·보수·단가를 조정하거나 협상할 기회가 있었습니까?</td>
+<td>□ 있음 □ 없음 □ 모름</td>
+</tr>
+<tr>
+<td>REW6</td>
+<td>B 대비 A의 수주량(독립업무) 또는 배정된 유급 디자인 업무량(직원)은 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 비슷 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 모름</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: 동일 원척도가 없는 연구자 설계. REW2_IND를 수령액·지출경비의 현금 기준으로 명료화한 제안이며 발생주의 사업이익과 다릅니다. 정산 시차·설비투자·공동사업 배분은 비교오차를 만들 수 있어 인지면담 필요. REW1도 같은 기준으로 안내합니다. 사업주 급여와 귀속금액 중복 계산 금지. 직원 급여 중 디자인 몫 분리가 불가능하면 추정 강요 금지. REW6은 겸업자의 주된 소득형태(S4) 기준으로 답하게 하되 비슷함/판단불가는 비교불가를 허용하는 안입니다.</p>
+<p>연구자용: REW는 다문항 반영형 척도로 합산하지 않습니다. REW1을 변화 방향의 주지표 후보로, 금액·시간·단가를 보조지표로 검토합니다. B금액이 0·음수이면 보통의 증감률 계산 금지. 시간당 지표는 시간&gt;0일 때만 계산. 기회 없음은 보상 감소가 아니며, 비유의한 경로는 보상 정체의 증거가 아닙니다.</p>
+</blockquote>
+<h3>11-3. 해외판(Prolific) 소득 문항 — 안</h3>
+<p>국가마다 통화·세제·고용형태가 달라 금액 입력(REW2_EMP·REW2_IND)은 해외 응답자 사이에서 비교가 어렵고, 응답 부담과 거절도 크다. 아래 세 안 중 <strong>안 1을 추천</strong>하며, 본 v0.2 해외판 기본값으로 둔다.</p>
+<table>
+<thead>
+<tr>
+<th>안</th>
+<th>해외판 문항</th>
+<th>장점</th>
+<th>단점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 (추천)</strong> 변화 방향만</td>
+<td>REW1(총소득 변화 5범주) + REW3c(총투입시간 변화 5범주, 아래 신설) + REW4_IND + REW5 + REW6. 금액 입력 REW2·REW3 숫자칸은 <strong>국내판에만</strong></td>
+<td>통화·세제 문제 없음. 「성과는 올랐는데 보상은 그대로」를 REW1×CHG로 바로 볼 수 있음. 문항 2개 줄어듦</td>
+<td>변화 크기를 금액으로 못 봄</td>
+</tr>
+<tr>
+<td>2 퍼센트 변화</td>
+<td>REW1 대신 "B 대비 A 총소득은 약 몇 % 달라졌습니까?(-100~+300%)"</td>
+<td>크기를 숫자로 비교 가능, 통화 무관</td>
+<td>회상 오차 큼, 극단값 처리 필요</td>
+</tr>
+<tr>
+<td>3 현지 통화 금액</td>
+<td>REW2를 현지 통화로 받고 % 변화 계산</td>
+<td>정보량 최대</td>
+<td>국가별 세전 기준·환율 차이, 거절 많음</td>
+</tr>
+</tbody>
+</table>
+<p>안 1을 쓰면 국내·해외 공통 보상 지표는 REW1(과 REW3c·REW4~6)이고, 국내판의 금액은 보조 분석에만 쓴다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문 (해외·국내 공통)</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REW3c</td>
+<td>B기간에 비해 A기간에 준비·수정 등 무급활동을 포함한 디자인 업무 총투입시간은 어떻게 달라졌습니까?</td>
+<td>□ 크게 감소 □ 다소 감소 □ 비슷 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 모름</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>연구자용: REW3c는 연구자 설계. REW1과 함께 쓰면 「시간 대비 소득」 방향(예: 시간 증가 + 소득 동일)을 범주로 볼 수 있다.</p>
+</blockquote>
+<h2>12. 배경과 비교 가능성</h2>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BG0a</td>
+<td>연령대는 어떻게 됩니까?</td>
+<td>□ 25세 이하 □ 26–35세 □ 36–45세 □ 46–55세 □ 56세 이상 □ 응답거절</td>
+</tr>
+<tr>
+<td>BG0b</td>
+<td>성별은 무엇입니까?</td>
+<td>□ 여성 □ 남성 □ 기타 □ 응답거절</td>
+</tr>
+<tr>
+<td>BG0c</td>
+<td>최종 학력은 무엇입니까?</td>
+<td>□ 고등학교 이하 □ 전문대 □ 대학교 □ 석사 □ 박사 □ 응답거절</td>
+</tr>
+<tr>
+<td>BG1</td>
+<td>주된 디자인 분야는 무엇입니까?</td>
+<td>□ 시각·브랜드 □ 편집 □ 디지털·UX/UI □ 영상·모션 □ 제품·산업 □ 공간 □ 기타 ____</td>
+</tr>
+<tr>
+<td>BG2</td>
+<td>유급 디자인 업무 경력은 얼마입니까?</td>
+<td><strong><em>_년 </em></strong>_개월 / 응답거절</td>
+</tr>
+<tr>
+<td>BG3</td>
+<td>생성형 AI를 업무에 처음 사용한 시기는 언제입니까?</td>
+<td><strong><em>_년 </em></strong>_월 / 사용 경험 없음 / 기억불가</td>
+</tr>
+<tr>
+<td>BG4</td>
+<td>최근3개월 사용한 생성형 AI 도구·기능을 적어 주세요.</td>
+<td>____ / 없음. 고객·회사명은 적지 마세요</td>
+</tr>
+<tr>
+<td>BG4b</td>
+<td>최근3개월 전체 업무시간 중 생성형 AI를 활용한 업무의 비율은 대략 어느 정도입니까?</td>
+<td>□ 10% 미만 □ 10–29% □ 30–49% □ 50–69% □ 70% 이상 □ 모름</td>
+</tr>
+<tr>
+<td>BG5</td>
+<td>주로 사용한 생성 기능은 무엇입니까? 복수선택</td>
+<td>□ 텍스트 □ 이미지 □ 영상 □ 음성·음악 □ 코드 □ 기타 ____ □ 없음</td>
+</tr>
+<tr>
+<td>BG6</td>
+<td>조직 또는 고객이 업무상 생성형 AI 사용을 제한합니까?</td>
+<td>□ 제한 없음 □ 일부 제한 □ 전면 금지 □ 지침 없음 □ 모름 □ 해당없음</td>
+</tr>
+<tr>
+<td>BG7</td>
+<td>A·B기간 사이 업무 비교에 영향을 줄 만한 일이 있었습니까? 복수선택</td>
+<td>□ 이직·직무변경 □ 휴직·장기휴가 □ 근로형태 변경 □ 주요 고객 변경 □ 일회성 상여·대금정산 □ 해당없음 □ 기타 ____ □ 응답거절</td>
+</tr>
+<tr>
+<td>BG8</td>
+<td>조직에 소속된 경우 조직 규모는 어느 정도입니까?</td>
+<td>□ 1–4명 □ 5–49명 □ 50–299명 □ 300명 이상 □ 모름 □ 조직 없음 □ 응답거절</td>
+</tr>
+<tr>
+<td>BG9</td>
+<td>A·B기간 소득 및 시간 응답 시 어떤 자료를 참고했습니까?</td>
+<td>□ 기록 참고 □ 기억으로 추정 □ 일부 기록·일부 추정 □ 금액·시간 미응답</td>
+</tr>
+</tbody>
+</table>
+<h2>13. 마무리</h2>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>질문</th>
+<th>응답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>END1</td>
+<td>이해하기 어렵거나 본인 상황에 맞지 않았던 문항이 있습니까? 코드와 이유를 적어 주세요.</td>
+<td>자유응답: ____ (선택)</td>
+</tr>
+</tbody>
+</table>
+<p>참여해 주셔서 감사합니다. 문의는 첫 페이지의 연구자 연락처를 이용해 주세요.</p>
+<h2>부록 A. 기회보상 — 미채택 후보, 응답자 배포 제외</h2>
+<p>아래는 검증된 기존 척도가 아니라 기회보상의 범위를 논의하기 위한 연구자 작성안입니다. 더 좋은 일감·역할·고객 접근을 후보로 두었으며 교육·학습 기회는 포함하지 않았습니다. 사용자 선택 및 원척도 검토 전 채택하지 않습니다.</p>
+<p>B기간과 비교한 A기간의 상태. 응답: 크게 감소 / 다소 감소 / 비슷 / 다소 증가 / 크게 증가 / 비교불가 / 모름.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>후보 질문</th>
+<th>상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPP1</td>
+<td>전문성을 발휘할 수 있는 디자인 프로젝트를 제안받거나 배정받을 기회는 어떻게 달라졌습니까?</td>
+<td>미채택·원문 근거 미확보</td>
+</tr>
+<tr>
+<td>OPP2</td>
+<td>디자인 업무에서 더 큰 책임을 맡는 역할을 제안받을 기회는 어떻게 달라졌습니까?</td>
+<td>미채택·원문 근거 미확보</td>
+</tr>
+<tr>
+<td>OPP3</td>
+<td>새로운 고객 또는 협업 파트너와 유급 디자인 업무를 시작할 기회는 어떻게 달라졌습니까?</td>
+<td>미채택·원문 근거 미확보</td>
+</tr>
+</tbody>
+</table>
+<p>기회를 얻은 결과를 묻는 것이며 SC의 학습 노력과 구분합니다. 직원·프리랜서에서 같은 의미인지 검토해야 합니다. 경제·기회 보상을 하나의 점수로 평균하면 서로 다른 변화를 가릴 수 있습니다. ERI 또는 Total Rewards의 원문항이라고 인용하지 않습니다.</p>
+<h2>부록 B. 원문·변경 인용 명세서</h2>
+<p>문항 영문과 PDF 위치는 아래 기존 명세서와 연결합니다. 국문은 공인 한국어판이 아닌 번안 초안입니다.</p>
+<table>
+<thead>
+<tr>
+<th>출처</th>
+<th>문항</th>
+<th>원문 위치</th>
+<th>상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S01 Zhang, Yu &amp; Ma</td>
+<td>USE1–4</td>
+<td>PDF033 Table1 p.11, 측정 p.9</td>
+<td>7점 동의 원문 대응; 최종 권호 미확정</td>
+</tr>
+<tr>
+<td>S02 Bindl et al.(2019)</td>
+<td>TC1–4·SC1–4</td>
+<td>PDF019 Table2 p.9/613, 측정 p.7/611</td>
+<td>지난1주·5점 정도; 중간 국문 앵커 제안</td>
+</tr>
+<tr>
+<td>S03 Torkzadeh &amp; Doll(1999)</td>
+<td>TP1–3</td>
+<td>PDF026 Table2 p.6/332, Methods p.4/330</td>
+<td>도구→GenAI 번안</td>
+</tr>
+<tr>
+<td>S04 Janssen(2000)</td>
+<td>IWB1–9</td>
+<td>PDF057 p.6/292</td>
+<td>3개월·프리랜서 준거·중간 앵커 적응</td>
+</tr>
+<tr>
+<td>S05 Van der Heijden et al.(2018)</td>
+<td>EXP1–5</td>
+<td>PDF058 AppendixA p.12/246, 측정 p.6/240</td>
+<td>전체 응답앵커 미확보, 제안으로 표시</td>
+</tr>
+<tr>
+<td>S06 Liu et al.(2025)</td>
+<td>GAIL17</td>
+<td>PDF041 Table2 p.12, 측정 p.23</td>
+<td>EC4 고객 추가, 비사용자 타당성 미확보</td>
+</tr>
+<tr>
+<td>S07 Brougham &amp; Haar(2018)</td>
+<td>THR1–4</td>
+<td>PDF013 Table1 p.8/246</td>
+<td>STARA→GenAI, THR3 의미 변경</td>
+</tr>
+<tr>
+<td>S10 Luo·EDUCAUSE 관련 사례</td>
+<td>ACT1–4</td>
+<td>아래09 문서</td>
+<td>현재4문항·30일 일수는 연구자 재구성</td>
+</tr>
+<tr>
+<td>연구자 설계</td>
+<td>S·BG·CHG·REW·OPP·동의·마무리</td>
+<td>본 문서</td>
+<td>기존 검증척도 아님; OPP는 미채택</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="10_전체설문_원문검토·보상측정_인용_명세서_v0.1.html">원문검토 및 PDF 링크</a></li>
+<li><a href="09_ACT_활동별사용_원설문근거_인용_명세서_v0.1.html">ACT 원설문 검토</a></li>
+<li><a href="11_연구1·2_통합모형·연구질문_v0.1.html">통합 연구모형 — 내용 v0.4</a></li>
+</ul>
+<h2>부록 C. 배포·코딩 체크</h2>
+<ul>
+<li>동의문 빈칸, 정확한 A/B 날짜, 적격·사용자 분석대상 확정 전 배포 금지.</li>
+<li>EXP 원앵커, THR3·IWB5·6·GAIL_EC4의 의미 및 집단 적용성 확인.</li>
+<li>TC·SC1주 / IWB3개월 / EXP 일부1년 / 변화 두3개월은 혼합 준거. 같은 기간의 인과 과정으로 해석하지 않기. 기간 변경 시 번안 이력 기록.</li>
+<li>리커트형 응답은 전부 7점(v0.2 결정). 원척도의 5·6점을 7점으로 조정한 사실을 방법 절에 명시. 모름·적용불가·응답거절·분기 미제시를 각각 별도 결측 사유로 저장하고 0/중간값 대체 금지.</li>
+<li>ACT 0일, 소득0원·음수는 유효값. 범주형 REW를 연속금액처럼 해석하지 않기.</li>
+<li>OPP는 채택 전 분석 제외. GAIL·EXP 조절로 핵심 문항 수를 추가하지 않음.</li>
+<li>번역 검토·인지면담·예비조사로 소요시간·결측·문항 이해 확인 후 플랫폼 분기 구현과 검정력·분석계획 확정.</li>
+</ul>
+<hr />
+<h2>버전 이력</h2>
+<table>
+<thead>
+<tr>
+<th>버전</th>
+<th>날짜</th>
+<th>변경</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.1</td>
+<td>2026-10-03</td>
+<td>예비조사 검토본 최초</td>
+</tr>
+<tr>
+<td>v0.2</td>
+<td>2026-10-03</td>
+<td>7점 통일(TC·SC·TP·EXP·THR), 미사용자 종료, THR 문두 원문 구조 복원, IWB5 원문 복원, 기본정보(연령대·성별·학력·AI 업무 비율) 추가, 해외판 소득 문항 3안·REW3c 신설</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>

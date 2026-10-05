@@ -23,7 +23,7 @@
 
   { "id": "04",  "categoryId": "04",        "name": "aSSIST 수업실습",    "type": "education",  "define": "aSSIST 수업실습 학생 작업장 — 04_aSSIST/수업실습/", "status": "active", "createdAt": "2026-05-22" },
 
-  { "id": "0500","categoryId": "05",        "name": "연구가이드·이론아카이브", "type": "research", "define": "박사 연구가이드 + 이론 계보 아카이브(RBV·DC·AI) + 글쓰기 — 05_phD_Research/00_연구가이드/", "status": "active", "createdAt": "2026-06-20" },
+  { "id": "0500","categoryId": "05",        "name": "연구가이드·이론아카이브", "type": "research", "define": "박사 연구가이드 + 이론 계보 아카이브(RBV·DC·AI) + 글쓰기 — 05_phD_Research/00_연구가이드/", "status": "active", "createdAt": "2026-06-20", "researchProcessUrl": "/phd-research-model/index.html" },
   { "id": "0504","categoryId": "05",        "name": "AI애착 (본 박사논문)", "type": "research",  "define": "본 박사논문 — 일터 인간-AI 관계(애착 vs 도구) 정량 연구 — 05_phD_Research/04_AI애착/", "status": "active", "createdAt": "2026-06-12" },
   { "id": "0532","categoryId": "05",        "name": "페르소나 AI연구",     "type": "research",   "define": "SituatedAI·생산성·업무역량·애착 AI 문헌 묶음 (054/0504로 인용) — 05_phD_Research/03_페르소나/032_AI연구/", "status": "active", "createdAt": "2026-06-20" },
   { "id": "051", "categoryId": "05",        "name": "DSAPG",             "type": "research",   "define": "박사논문 IJHCS 타겟, 레퍼런스 시스템 완성 — 05_phD_Research/01_DSAPG/", "status": "active", "aliases": ["05"] },

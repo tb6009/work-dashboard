@@ -1,0 +1,495 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 사용이 업무 변화로 이어지는 과정</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: AI크래프팅_경로모형.md · 2026-09-20 19:15</div><h1>AI 사용이 업무 변화로 이어지는 과정</h1>
+<blockquote>
+<p><strong>AI에 대한 불안은 사용을 늘릴 수 있지만, 실제 업무 변화까지 만들지는 않을 수 있다. AI 활용 역량과 안전하게 시도할 수 있는 환경이 함께 필요하다.</strong></p>
+</blockquote>
+<ul>
+<li><strong>작성</strong>: 2026-09-20</li>
+<li><strong>상태</strong>: 초안 (확정본 아님)</li>
+<li><strong>대상</strong>: 디자이너의 생성형 AI 사용과 자발적인 업무 변화</li>
+<li><strong>방법</strong>: 각 논문에서 PLS-SEM(여러 변수의 관계를 한꺼번에 검증하는 통계 방법) 사용</li>
+<li><strong>웹 버전</strong>: https://claude.ai/code/artifact/257264ad-6237-4cfb-9b15-0df33c1a0f70</li>
+<li><strong>HTML 원본</strong>: <code>AI크래프팅_경로모형.html</code> (같은 폴더)</li>
+</ul>
+<p>디자이너가 생성형 AI를 사용하는 일이 업무 내용과 기술의 변화, 성과와 보상으로 어떻게 이어지는지를 세 편의 논문으로 나누어 살펴본다.</p>
+<hr />
+<h2>1. 전체 틀</h2>
+<h3>프로그램 질문</h3>
+<p>생성형 AI가 디자이너의 일에 들어왔을 때, <strong>누가 자신의 업무 범위를 넓히며 그 변화가 성과와 보상으로 이어지는가? 또 무엇이 이 과정을 돕는가?</strong></p>
+<p>이 질문을 세 부분으로 나눈다. 각 논문은 하나의 중심 질문과 하나의 핵심 조건에 집중한다.</p>
+<p><img alt="전체 틀 구간도" src="images/00_전체틀_구간도.png" /></p>
+<p>막대가 겹치는 부분은 두 논문이 같은 변수를 사용한다는 뜻이다. 같은 변수를 사용하더라도 서로 다른 질문을 검증하면 연구가 중복되지는 않는다.</p>
+<h3>각 논문이 다루는 대상</h3>
+<p>첫 번째 논문은 개인, 두 번째는 업무 설계, 세 번째는 조직 환경을 다룬다.</p>
+<table>
+<thead>
+<tr>
+<th>편</th>
+<th>주요 대상</th>
+<th>바꿀 수 있는 조건</th>
+<th>관련 이론</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1편</td>
+<td>개인 · 교육</td>
+<td>AI 활용 역량은 교육할 수 있다</td>
+<td>기술 수용 · 자발적 업무 변화</td>
+</tr>
+<tr>
+<td>2편</td>
+<td>업무 설계</td>
+<td>숙련도와 업무 부담은 일의 배치에 따라 달라진다</td>
+<td>직무 요구–자원 · 정신적 부담</td>
+</tr>
+<tr>
+<td>3편</td>
+<td>조직 문화</td>
+<td>구성원이 안전하게 시도할 수 있는 환경은 조직이 만든다</td>
+<td>대처 · 상황 재해석 · 심리적 안전감</td>
+</tr>
+</tbody>
+</table>
+<h3>주요 변수와 쉬운 뜻</h3>
+<table>
+<thead>
+<tr>
+<th>약어</th>
+<th>연구 용어</th>
+<th>쉬운 뜻</th>
+<th>모형에서의 역할</th>
+<th>등장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAX</td>
+<td>AI 불안</td>
+<td>AI가 자신의 직업과 역할을 위협할 수 있다는 불안</td>
+<td>출발 변수</td>
+<td>1 · 3</td>
+</tr>
+<tr>
+<td>USE</td>
+<td>AI 사용 수준</td>
+<td>AI를 얼마나 자주, 넓게, 다양하게 쓰는지</td>
+<td>중간 변수</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TC</td>
+<td>과업 크래프팅</td>
+<td>스스로 업무의 내용이나 방법을 바꾸는 행동</td>
+<td>중간 변수</td>
+<td>1 · 3</td>
+</tr>
+<tr>
+<td>SC</td>
+<td>스킬 크래프팅</td>
+<td>업무에 필요한 기술을 스스로 배우고 넓히는 행동</td>
+<td>중간 변수</td>
+<td>1 · 3</td>
+</tr>
+<tr>
+<td>CC</td>
+<td>인지 크래프팅</td>
+<td>자신의 일과 역할을 새롭게 해석하는 것</td>
+<td>중간 변수</td>
+<td>3</td>
+</tr>
+<tr>
+<td>TV · SV</td>
+<td>과업·기술 다양성</td>
+<td>맡는 업무와 사용하는 기술의 종류가 늘어난 정도</td>
+<td>1편 결과 / 2편 출발</td>
+<td>1 · 2</td>
+</tr>
+<tr>
+<td>LOAD</td>
+<td>인지부하</td>
+<td>처리해야 할 정보와 판단이 많아져 느끼는 정신적 부담</td>
+<td>중간 변수</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PERF</td>
+<td>업무 성과</td>
+<td>일을 더 빠르고 잘하고 새로운 결과를 만든 정도</td>
+<td>중간 변수 / 결과 변수</td>
+<td>2 · 3</td>
+</tr>
+<tr>
+<td>REW</td>
+<td>보상의 적절성</td>
+<td>자신의 노력과 성과에 비해 보상이 알맞다고 느끼는 정도</td>
+<td>최종 결과</td>
+<td>2</td>
+</tr>
+<tr>
+<td>GAIL</td>
+<td>생성형 AI 활용 역량</td>
+<td>AI를 지시하고 결과를 평가하며 책임 있게 활용하는 능력</td>
+<td>관계를 바꾸는 조건</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EXP</td>
+<td>업무 숙련도</td>
+<td>자신의 분야에서 정확하게 판단하고 일하는 능력</td>
+<td>관계를 바꾸는 조건</td>
+<td>2</td>
+</tr>
+<tr>
+<td>PSY</td>
+<td>심리적 안전감</td>
+<td>실수하거나 다른 의견을 내도 불이익을 걱정하지 않는 정도</td>
+<td>관계를 바꾸는 조건</td>
+<td>3</td>
+</tr>
+<tr>
+<td>—</td>
+<td>도입 비용·조직 지원, 조직 규모, 경력</td>
+<td>결과에 영향을 줄 수 있어 함께 확인하는 조건</td>
+<td>비교·보정 변수</td>
+<td>1 · 2 · 3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. 1편 — 누가 AI 사용을 업무 변화로 이어 가는가</h2>
+<h3>AI를 사용한다고 모두 업무를 바꾸는 것은 아니다</h3>
+<blockquote>
+<p>직업에 대한 불안 때문에 AI를 시작할 수는 있다. 그러나 단순히 사용하는 것과 실제 업무 내용이나 기술을 바꾸는 것은 다른 일이다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>최종 결과</strong></td>
+<td>과업·기술 다양성(TV · SV)</td>
+</tr>
+<tr>
+<td><strong>관계를 바꾸는 조건</strong></td>
+<td>생성형 AI 활용 역량(GAIL)</td>
+</tr>
+<tr>
+<td><strong>조사 방식</strong></td>
+<td>한 시점에 한 번 조사</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="1편 경로도" src="images/01_1편_갈림.png" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>확인할 관계</th>
+<th>예상 방향</th>
+<th>쉬운 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-H1</td>
+<td>AAX → USE</td>
+<td>증가</td>
+<td>직업에 대한 AI 불안이 높을수록 AI를 더 많이 사용할 수 있다. 불안을 피하기보다 대응하려는 행동으로 보는 가설이다.</td>
+</tr>
+<tr>
+<td>1-H2</td>
+<td>AAX → TC, SC</td>
+<td>감소</td>
+<td>불안은 AI 사용을 늘리더라도, 스스로 업무와 기술을 바꾸는 행동은 오히려 줄일 수 있다.</td>
+</tr>
+<tr>
+<td>1-H3</td>
+<td>USE → TC, SC</td>
+<td>증가</td>
+<td>AI를 여러 업무에 깊이 사용할수록 업무 방법을 바꾸고 새로운 기술을 배우는 행동이 늘어날 수 있다.</td>
+</tr>
+<tr>
+<td>1-H4</td>
+<td>TC → TV / SC → SV</td>
+<td>증가</td>
+<td>과업을 바꾸는 행동은 맡는 업무의 종류로, 기술을 배우는 행동은 사용하는 기술의 종류로 이어지는지 확인한다.</td>
+</tr>
+<tr>
+<td>1-H5</td>
+<td>GAIL × (USE → TC, SC)</td>
+<td>영향이 달라짐</td>
+<td>AI 활용 역량이 높은 사람은 같은 수준으로 AI를 사용해도 실제 업무와 기술을 더 많이 바꿀 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. 2편 — 넓어진 업무는 성과와 보상으로 이어지는가</h2>
+<h3>업무 범위가 넓어지면 무엇을 얻고 무엇을 부담하는가</h3>
+<blockquote>
+<p>다양한 업무와 기술은 성과를 높일 수 있다. 반면 처리해야 할 정보와 판단이 늘어 정신적 부담도 커질 수 있다. 높아진 성과가 실제 보상으로 이어지는지도 확인한다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>최종 결과</strong></td>
+<td>보상의 적절성(REW)</td>
+</tr>
+<tr>
+<td><strong>관계를 바꾸는 조건</strong></td>
+<td>업무 숙련도(EXP)</td>
+</tr>
+<tr>
+<td><strong>조사 방식</strong></td>
+<td>일정한 간격을 두고 두 번 조사 권장</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="2편 경로도" src="images/02_2편_대가.png" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>확인할 관계</th>
+<th>예상 방향</th>
+<th>쉬운 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2-H1</td>
+<td>TV, SV → LOAD</td>
+<td>증가</td>
+<td>맡는 업무와 사용하는 기술이 다양해질수록 처리해야 할 정보와 판단도 늘어날 수 있다.</td>
+</tr>
+<tr>
+<td>2-H2</td>
+<td>LOAD → PERF</td>
+<td>감소</td>
+<td>정신적 부담이 커지면 업무 성과가 낮아질 수 있다.</td>
+</tr>
+<tr>
+<td>2-H3</td>
+<td>TV, SV → PERF</td>
+<td>증가</td>
+<td>업무와 기술의 다양성은 정신적 부담과 별개로 업무 성과를 높일 수 있다.</td>
+</tr>
+<tr>
+<td>2-H4</td>
+<td>PERF → REW</td>
+<td>증가</td>
+<td>업무 성과가 높을수록 자신의 보상이 적절하다고 느끼는지 확인한다. 성과가 높아도 보상이 달라지지 않을 가능성도 열어 둔다.</td>
+</tr>
+<tr>
+<td>2-H5</td>
+<td>EXP × (TV, SV → LOAD)</td>
+<td>부담을 줄임</td>
+<td>숙련된 사람은 업무 범위가 넓어져도 필요한 판단을 익숙하게 처리하므로 정신적 부담이 덜할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>두 차례 조사 권장:</strong> 정신적 부담이 성과와 보상에 영향을 주려면 시간이 필요하다. 모든 질문을 한 번에 하면 그날의 기분이 여러 응답에 함께 영향을 줄 수 있다. 2주에서 1개월 정도의 간격을 두고 두 번 조사하는 방안을 검토한다.</p>
+<hr />
+<h2>4. 3편 — 어떤 환경에서 자신의 일을 새롭게 바라보는가 (박사 이후)</h2>
+<h3>안전하게 시도할 수 있는 환경이 업무 인식을 바꾸는가</h3>
+<blockquote>
+<p>AI에 대한 불안이 있더라도 실수와 새로운 시도를 허용하는 환경에서는 자신의 역할과 일의 의미를 새롭게 바라볼 수 있다.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>최종 결과</strong></td>
+<td>업무 성과(PERF)</td>
+</tr>
+<tr>
+<td><strong>관계를 바꾸는 조건</strong></td>
+<td>심리적 안전감(PSY)</td>
+</tr>
+<tr>
+<td><strong>주요 대상</strong></td>
+<td>조직 · 경영진</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="3편 경로도" src="images/03_3편_조건.png" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>확인할 관계</th>
+<th>예상 방향</th>
+<th>쉬운 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-H1</td>
+<td>AAX → CC</td>
+<td>감소</td>
+<td>AI가 자신의 직업을 위협한다고 느끼면 자신의 일과 역할을 새롭게 해석하기 어려울 수 있다.</td>
+</tr>
+<tr>
+<td>3-H2</td>
+<td>CC → TC, SC</td>
+<td>증가</td>
+<td>자신의 일을 새롭게 해석한 사람은 업무 방법을 바꾸고 필요한 기술을 배우는 행동을 더 많이 할 수 있다.</td>
+</tr>
+<tr>
+<td>3-H3</td>
+<td>CC → PERF</td>
+<td>증가</td>
+<td>일의 의미와 역할을 새롭게 이해하는 것만으로도 업무 성과가 높아질 수 있다.</td>
+</tr>
+<tr>
+<td>3-H4</td>
+<td>TC, SC → PERF</td>
+<td>증가</td>
+<td>업무 방법을 바꾸고 기술을 배우는 행동이 실제 성과로 이어지는지 확인한다.</td>
+</tr>
+<tr>
+<td>3-H5</td>
+<td>PSY × (AAX → CC)</td>
+<td>부정적 영향을 줄임</td>
+<td>실수와 새로운 시도를 허용하는 환경에서는 AI 불안이 업무에 대한 새로운 해석을 가로막는 힘이 약해질 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. 겹침 관리</h2>
+<p>세 논문은 일부 변수를 함께 사용한다. 같은 변수를 쓰더라도 연구질문과 설명하려는 과정이 다르면 서로 다른 연구가 될 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>공유</th>
+<th>등장</th>
+<th>어떻게 가르는가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AAX</strong></td>
+<td>1편 · 3편</td>
+<td>1편은 불안이 실제 업무 변경 행동에 미치는 영향을 본다. 3편은 불안이 자신의 일을 새롭게 해석하는 데 미치는 영향을 본다.</td>
+</tr>
+<tr>
+<td><strong>TC · SC</strong></td>
+<td>1편 · 3편</td>
+<td>1편은 AI 사용이 업무 변경 행동으로 이어지는 과정을 본다. 3편은 일에 대한 새로운 해석이 업무 변경 행동으로 이어지는 과정을 본다.</td>
+</tr>
+<tr>
+<td><strong>TV · SV</strong></td>
+<td>1편 · 2편</td>
+<td>1편에서는 최종 결과이고, 2편에서는 성과와 부담을 설명하는 출발점이다.</td>
+</tr>
+<tr>
+<td><strong>문헌</strong></td>
+<td>—</td>
+<td>1편은 기술 수용과 자발적 업무 변화, 2편은 직무 요구–자원과 정신적 부담, 3편은 대처·상황 재해석과 심리적 안전감 연구를 중심으로 삼는다.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. 설계 원칙</h2>
+<ol>
+<li><strong>각 변수의 자리는 분석 전에 정한다.</strong> 분석 결과가 잘 나온다는 이유로 변수의 위치를 바꾸지 않는다. 왜 그 위치에 두었는지를 이론으로 설명할 수 있어야 한다.</li>
+<li><strong>논문 한 편은 하나의 핵심 조건에 집중한다.</strong> 관계를 바꾸는 조건을 여러 개 넣으면 논문의 중심이 흐려질 수 있다.</li>
+<li><strong>교육이나 조직 운영으로 바꿀 수 있는 조건을 우선 다룬다.</strong> 타고난 성향은 필요할 때 추가 설명이나 비교 변수로 검토한다.</li>
+<li><strong>AI를 쓰는지 여부보다 어떻게 얼마나 쓰는지를 본다.</strong> 이미 많은 사람이 AI를 조금씩 사용하므로 사용의 빈도와 깊이가 더 중요하다.</li>
+<li><strong>AI를 적게 쓰는 사람도 조사에 포함한다.</strong> 최근 3개월 동안 한 번이라도 사용한 사람을 포함해야 사용 수준의 차이를 비교할 수 있다.</li>
+<li><strong>검증된 설문척도의 구조를 임의로 바꾸지 않는다.</strong> 일부 문항만 고르거나 뜻을 바꾸지 않는다. 관계 크래프팅(RC)을 제외한다면 그 이유를 밝힌다.</li>
+<li><strong>논문에서는 정확한 연구 용어를 쓴다.</strong> 예를 들어 일상적으로는 "일의 밀도"라고 설명할 수 있지만, 논문에서는 "인지부하"라고 표기한다.</li>
+</ol>
+<hr />
+<h2>7. 아직 안 정한 것</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>조사대상</td>
+<td><strong>국내와 해외 표본을 함께 조사할지 결정해야 한다.</strong> 두 집단의 응답이 같은 의미를 갖는지 먼저 검증해야 하나로 합칠 수 있다.</td>
+</tr>
+<tr>
+<td>설문척도</td>
+<td><strong>인지부하:</strong> 기존 설문척도를 이 연구에 그대로 사용할 수 있는지 확인해야 한다.</td>
+</tr>
+<tr>
+<td>설문척도</td>
+<td><strong>보상의 적절성:</strong> 한 문항으로 묻기보다 검증된 여러 문항으로 측정할 방법을 찾아야 한다.</td>
+</tr>
+<tr>
+<td>조사설계</td>
+<td><strong>2편의 조사 간격:</strong> 두 번째 조사를 2주 뒤에 할지 1개월 뒤에 할지, 일반적인 디자인 프로젝트 기간을 고려해 정한다.</td>
+</tr>
+<tr>
+<td>예상 방향</td>
+<td><strong>3편의 CC 관계:</strong> AI 불안이 업무에 대한 새로운 해석을 막을 수도 있지만, 오히려 변화의 필요성을 느끼게 할 수도 있다. 자료를 분석하기 전에 예상 방향을 정한다.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>부속 파일</h2>
+<pre><code>00_연구모델 정리/
+├── AI크래프팅_경로모형.md      ← 이 문서
+├── AI크래프팅_경로모형.html    ← 웹 버전 원본 (수정 시 여기를 고칠 것)
+└── images/
+    ├── 00_전체틀_구간도.png / .svg
+    ├── 01_1편_갈림.png / .svg
+    ├── 02_2편_대가.png / .svg
+    └── 03_3편_조건.png / .svg
+</code></pre>
+<p>다이어그램을 고칠 때는 <code>.html</code> 안의 <code>&lt;svg&gt;</code> 블록을 수정한 뒤 이미지를 다시 뽑는다. <code>.svg</code>는 HTML에서 추출해 색상 변수를 하드코딩한 사본이다.</p>
+</div></body></html>

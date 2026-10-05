@@ -7,16 +7,16 @@
   "status": "current",
   "summary": "KCS 학습모듈 제출 주간 — 전공역량·평가기준 서식을 맞추고 통합본을 v0.9, HWP를 205쪽 v0.3까지 올렸다. 대시보드는 W39 마감과 주말 이미지 포트폴리오를 반영했다.",
   "kpis": {
-    "activeProjects": 2,
+    "activeProjects": 8,
     "sessions": 3,
     "newProjects": 0,
-    "filesChanged": 87
+    "filesChanged": 514
   },
   "daily": [
     {
       "date": "2026-09-28",
       "weekday": "월",
-      "filesChanged": 17,
+      "filesChanged": 15,
       "topProjectIds": [
         "063",
         "03",
@@ -144,11 +144,12 @@
     {
       "date": "2026-09-30",
       "weekday": "수",
-      "filesChanged": 18,
+      "filesChanged": 104,
       "topProjectIds": [
         "0311",
         "063",
-        "03"
+        "03",
+        "1300"
       ],
       "entries": [
         {
@@ -161,20 +162,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 20,
-                "out": 3372,
-                "cache_read": 2466312,
-                "cache_write": 253739,
-                "messages": 10,
+                "in": 54,
+                "out": 12012,
+                "cache_read": 7400134,
+                "cache_write": 267083,
+                "messages": 27,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 20,
-              "out": 3372,
-              "cache_read": 2466312,
-              "cache_write": 253739,
-              "messages": 10
+              "in": 54,
+              "out": 12012,
+              "cache_read": 7400134,
+              "cache_write": 267083,
+              "messages": 27
             },
             "costUSD": 0
           }
@@ -202,32 +203,191 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 20260930_07_티타임즈_자연스러운이미지_영상검토_v0.1.md"
         }
       ]
     },
     {
       "date": "2026-10-01",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 12,
+      "topProjectIds": [
+        "03",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_4주차_학생별_프로젝트_파악_v0.1.md",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-5-5": {
+                "in": 50,
+                "out": 61617,
+                "cache_read": 5728433,
+                "cache_write": 175673,
+                "messages": 25,
+                "costUSD": 0
+              },
+              "claude-opus-5-5": {
+                "in": 24,
+                "out": 17977,
+                "cache_read": 3014525,
+                "cache_write": 596721,
+                "messages": 12,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 74,
+              "out": 79594,
+              "cache_read": 8742958,
+              "cache_write": 772394,
+              "messages": 37
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W40.json"
+        }
+      ]
     },
     {
       "date": "2026-10-02",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 38,
+      "topProjectIds": [
+        "021",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "021",
+          "did": "[fs scan] 20261002_수시2차_세션핵심기준.md · 20261002_수시2차_박람회질문_우선순위분석_v0.1.md · 20261002_수시2차_박람회질문_우선순위분석_v0.1_인용_명세서.md · 20261002_수시2차_지원자메타데이터_핵심그룹분석_v0.1.md · 20261002_수시2차_지원자메타데이터_핵심그룹분석_v0.1_인용_명세서.md 외 32건"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] character_preference_research.html"
+        }
+      ]
     },
     {
       "date": "2026-10-03",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 147,
+      "topProjectIds": [
+        "021",
+        "1300",
+        "0311",
+        "063",
+        "03",
+        "039",
+        "0500",
+        "01"
+      ],
+      "entries": [
+        {
+          "projectId": "021",
+          "did": "[fs scan] 20261003_영상디자인_애니메이션_비교캐러셀_콘텐츠_v0.1.md · 20261003_유사학과_비교캐러셀_일괄기획_v0.1.md · 20261003_유사학과_비교캐러셀_일괄기획_v0.2.md · 20261003_전시팝업_캐러셀_콘텐츠구성_v0.2.md · README.md 외 1건"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] PROJECT.md"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] PROJECT.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W40.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 10,
+                "out": 3242,
+                "cache_read": 876186,
+                "cache_write": 5076,
+                "messages": 5,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 3242,
+              "cache_read": 876186,
+              "cache_write": 5076,
+              "messages": 5
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] NEXT_SESSION.md"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_INDEX.md · 05_면담3회차_정리_할일_v0.1.md · 03_면담_3회차.json · 03_면담_3회차_스크립트_v0.1.md"
+        },
+        {
+          "projectId": "01",
+          "did": "[fs scan] AI_MASTER_RULES.md · CHATGPT_custom_instructions.md"
+        }
+      ]
     },
     {
       "date": "2026-10-04",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 146,
+      "topProjectIds": [
+        "0500",
+        "1300",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 18_새세션_인계_20261004.md · 19_예비조사_항목·적격·동의·앵커_결정안_v0.1.md · 00_설문원문_영한대조_검토자료집.html · 00_설문원문_영한대조_검토자료집_v0.5.html · 01_질문검토_인용_명세서.md 외 24건"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 20261004_10_한이룸_진짜같은AI모델_영상검토_v0.1.md · 20261004_유튜브_ZOk59IfTmQM_자막_사용자제공.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W40.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 32,
+                "out": 10532,
+                "cache_read": 1642805,
+                "cache_write": 149939,
+                "messages": 16,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 32,
+              "out": 10532,
+              "cache_read": 1642805,
+              "cache_write": 149939,
+              "messages": 16
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     }
   ],
   "projects": [
@@ -276,13 +436,13 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-09-30T07:19:49.320Z",
+  "buildAt": "2026-10-04T14:04:02.489Z",
   "tokens": {
     "total": {
-      "in": 294,
-      "out": 142627,
-      "cache_read": 23443107,
-      "cache_write": 1663735
+      "in": 444,
+      "out": 244635,
+      "cache_read": 39638878,
+      "cache_write": 2604488
     },
     "costUSD": 0,
     "costKRW": 0

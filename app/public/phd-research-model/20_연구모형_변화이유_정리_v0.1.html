@@ -1,0 +1,269 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>연구모형 변화 이유 정리 v0.1</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 20_연구모형_변화이유_정리_v0.1.md · 2026-10-04 23:01</div><h1>연구모형 변화 이유 정리 v0.1</h1>
+<ul>
+<li>작성: 2026-10-04</li>
+<li>비교 대상: <code>AI크래프팅_경로모형.md</code>(2026-09-20, 3편 구조) → <code>11_연구1·2_통합모형·연구질문_v0.1.html</code>(내용 v0.4, 2026-10-03) + 설문 v0.5·v0.8 반영 사항</li>
+<li>근거 문서: 04 · 05 · 06 · 07 · 11 · 12(양적검토) · 19 · 질문 검토/03 · 최종 설문/00</li>
+<li>상태: 이력 정리용. 새 결정을 추가하지 않았다. 각 항목은 원 문서의 기록을 요약한 것이다.</li>
+</ul>
+<hr />
+<h2>1. 한눈에 보는 변화</h2>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>이전 모형 (09-20)</th>
+<th>현재 모형 (10-03 v0.4)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구조</td>
+<td>논문 3편 (개인 · 업무설계 · 조직)</td>
+<td>한 번의 설문, 연구 2개</td>
+</tr>
+<tr>
+<td>연구1</td>
+<td>AAX → USE → TC·SC → TV·SV, GAIL 조절</td>
+<td>USE → TC → IWB·TP → 보상, GAIL은 USE→TC 조절, EXP는 TC→IWB·TP 조절</td>
+</tr>
+<tr>
+<td>연구2</td>
+<td>TV·SV → LOAD → PERF → REW, EXP 조절</td>
+<td>THR → USE → SC + THR → SC 직접경로, GAIL은 THR→USE 조절, EXP는 USE→SC 조절</td>
+</tr>
+<tr>
+<td>3편</td>
+<td>AAX → CC → TC·SC → PERF, PSY 조절</td>
+<td>제외 (박사 이후 과제)</td>
+</tr>
+<tr>
+<td>빠진 변수</td>
+<td>—</td>
+<td>AAX(→THR로 교체), CC, LOAD, PERF, PSY, TV·SV(주경로에서 제외, 설문 v0.5에 비교용으로 재수집)</td>
+</tr>
+<tr>
+<td>새 변수</td>
+<td>—</td>
+<td>IWB(혁신적 업무행동), TP(지각된 생산성 기여), THR(직업대체 위협·걱정), REW_AI(소득 영향 범주형)</td>
+</tr>
+<tr>
+<td>표본</td>
+<td>미정(국내·해외)</td>
+<td>유급 디자인 업무 종사자, 직원·프리랜서 포함</td>
+</tr>
+<tr>
+<td>설계</td>
+<td>1편 1회, 2편 2회 조사 권장</td>
+<td>일회 횡단 설문</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 단계별 흐름</h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>문서</th>
+<th>무엇이 바뀌었나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>AI크래프팅_경로모형</code> (09-20)</td>
+<td>3편 구조. 변수 13개 + 통제변수</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>04_연구모형_간결화_결정안</code> (10-03)</td>
+<td>한 편이 한 문장에 답하도록 USE → TC → IWB 3개 변수로 축소 제안</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>05_두축_최소모형_검토안</code></td>
+<td>축 A: USE → TC → TP (→ REW 탐색) / 축 B: CC → SC 두 축으로 재배치</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>06_원문기반_모형·변수·연구질문</code></td>
+<td>3편·CC·LOAD·PSY 제외 확정. 연구1(일·보상) / 연구2(위협·역량개발) 구도 성립</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>07_수정모형_EXP조절</code></td>
+<td>EXP를 TC 선행변수에서 TC→IWB·TP 조절변수로 이동. 연구2에서 GAIL을 THR→USE 조절로 재배치</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>11_통합모형</code> v0.4</td>
+<td>연구2 EXP를 USE→SC 조절로, THR→SC 직접경로를 그림에 명시. 연구1에 GAIL 조절·보상 연결 유지</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>12_양적검토조교</code> 검토</td>
+<td>조절 4개의 검정력, THR 명칭, 7점 통일, 회상기간 혼재 지적 → 결정 대기</td>
+</tr>
+<tr>
+<td>7</td>
+<td>설문 v0.5 · <code>19_결정안</code> · v0.8</td>
+<td>TV·SV를 비교용 변수로 재수집, REW_AI 범주형 1문항, ACT 4단계 빈도로 변경</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 변화 이유 — 변수별</h2>
+<h3>3.1 3편 구조 → 연구 2개</h3>
+<ul>
+<li><strong>지도교수 3회차 면담</strong>: "변수가 많다", "모형은 멈추고 설문 먼저". 논문 한 편이 한 문장 질문에 답해야 한다. (04 §결론, 12 §5)</li>
+<li>3편(조직·심리적 안전감)은 팀 수준 변수(PSY)와 프리랜서 표본이 충돌한다. 박사 이후 조직근로자 연구로 미룬다. (04 §현재 모형에서 옮길 변수)</li>
+<li>집단비교를 연구 3으로 만들지 않고, 자료 수집 후 비교가능성을 보고 판단한다. (06 §0)</li>
+</ul>
+<h3>3.2 TV·SV를 최종 결과에서 내림</h3>
+<ul>
+<li><code>TC→TV</code>, <code>SC→SV</code>는 신규 문헌에서도 직접 근거가 부족하다.</li>
+<li>WDQ는 변화량이 아니라 <strong>현재 다양성 수준</strong>을 잰다. "AI 도입 후 증가"를 측정하지 못한다. (04 §왜 이렇게 줄이는가 1)</li>
+<li>교수님 지적: 업무·기술 종류가 늘어나는 데서 끝나면 실무적 함의가 약하다. (04 §2)</li>
+<li>이후 설문 v0.5에서 TV4·SV4를 <strong>별도 변수로 다시 수집</strong>한다. 주경로가 아니라 <code>TC→TV→IWB·TP</code>(M1), <code>SC→SV→IWB·TP</code>(M2) 비교 후보다. 결과가 좋은 경로만 사후 확정하지 않는다. (질문 검토/03)</li>
+</ul>
+<h3>3.3 결과변수를 IWB·TP로 교체 (PERF 대신)</h3>
+<ul>
+<li>IWB(혁신적 업무행동)는 확보한 척도 중 성과에 가장 가까운 결과다. 단, 객관적 성과와 같지 않으므로 정확한 변수명을 쓴다. (04)</li>
+<li>사용자 관심인 생산성·보상에 맞추려 TP(Torkzadeh &amp; Doll, 도구의 지각된 생산성 기여 3문항)를 추가했다. (05 §2)</li>
+<li>TP와 IWB는 개념이 달라 합산하지 않고 나란히 둔다. (06 §2)</li>
+<li>남은 위험: TP는 AI 기여를 묻는 문항이라 USE와 겹쳐 판별타당도 위험이 있다. HTMT 사전 점검 필요. (12 §2)</li>
+</ul>
+<h3>3.4 LOAD(인지부하) 제외</h3>
+<ul>
+<li>새 문헌에서 AI는 정보과부하를 높이기도, 낮추기도 한다. 별도 <code>AI 사용–정보처리–성과</code> 질문에 맞는다.</li>
+<li><code>TV·SV→LOAD</code>를 직접 검증한 근거가 아니다. 척도(information overload, mental workload, intrinsic/extraneous load)마다 해석이 다르다. (04 §3, 표)</li>
+</ul>
+<h3>3.5 AAX(AI 불안) → THR(직업대체 위협·걱정)</h3>
+<ul>
+<li>AAX는 위협 인식과 불안 정서가 섞여 있다. <code>AAX→USE(+)</code>에는 반대 실증근거도 있다. (04 §4)</li>
+<li>연구2의 출발변수를 STARA(Brougham &amp; Haar, 2018) 기반 THR로 바꿨다.</li>
+<li>원문 재점검 결과 4문항 중 3문항에 "worried"가 들어 있다. 순수 인지 판단이 아니라 대체 가능성 판단과 걱정이 섞여 있어, 명칭을 "위협·걱정"으로 표시한다. 별도 AI 불안 변수는 넣지 않는다. (07 §원문 재점검)</li>
+<li>결정 대기: "인식"(원척도 충실) vs "불안"(교수님 틀). (12 결정 3)</li>
+</ul>
+<h3>3.6 CC(인지 크래프팅) 제외</h3>
+<ul>
+<li>05안에서 <code>CC→SC</code>를 축 B로 남겼지만, 두 변수만으로는 AI 특수성이 약하고 방향도 확정할 수 없다. (05 §3)</li>
+<li>06안에서 CC→SC 제안을 적용하지 않고, 연구2를 THR→USE→SC로 바꿨다. (06 §0)</li>
+</ul>
+<h3>3.7 SC의 자리: 병렬 매개 → 연구2의 결과</h3>
+<ul>
+<li>1편에서 TC·SC 병렬 매개를 두면 첫 논문의 질문이 두 갈래가 된다. (04 표)</li>
+<li>연구1은 TC(일을 바꾸는 행동), 연구2는 SC(역량 개발 행동)로 나눴다.</li>
+<li>SC는 실제 역량 향상이 아니라 개발 <strong>행동</strong>이다. (07)</li>
+</ul>
+<h3>3.8 EXP(업무 숙련도)의 이동</h3>
+<ul>
+<li>이전: 2편에서 <code>TV·SV→LOAD</code>를 완화하는 조절. 06안에서는 TC의 추가 예측변수 후보.</li>
+<li>07안: "누가 TC를 많이 하는가"가 아니라 "<strong>TC의 성과 관련성이 숙련도에 따라 달라지는가</strong>"를 묻기 위해 TC→IWB·TP 조절로 옮겼다.</li>
+<li>11 v0.4: 연구2에서도 USE→SC 조절로 지정했다.</li>
+<li>경쟁 설명 유지: 숙련자가 더 유리(증폭) vs AI가 낮은 숙련을 보완. 방향을 정(+)으로 확정하지 않는다. (07 §분석 명세)</li>
+</ul>
+<h3>3.9 GAIL(생성형 AI 리터러시)의 이동</h3>
+<ul>
+<li>연구1: USE→TC 조절 유지 (이전 1편 H5와 같은 자리).</li>
+<li>연구2: GAIL→SC 후보를 핵심 경로에서 빼고 THR→USE 조절로 재배치했다. 높은 리터러시가 위협을 적극적 사용으로 바꿀 수도, 위협과 무관하게 이미 쓰게 해 관련성을 약하게 할 수도 있다. 직접 선행근거는 미확보. (07 §연구2)</li>
+</ul>
+<h3>3.10 REW: 보상 적절성(ERI) → 소득 영향(범주형)</h3>
+<ul>
+<li>이전 REW(ERI 보상 평가 11문항)는 조직근로자용이다. 상사·승진·고용안정 문항이 프리랜서와 맞지 않는다. 실제 소득 증가와도 다른 개념이다. (05 §2, 표)</li>
+<li>보상은 지연되고 조직·고용형태의 영향을 받아 횡단 설문에서 성과의 즉각적 결과로 놓기 어렵다. (04 표)</li>
+<li>현재: REW_AI 1문항(Humlum &amp; Vestergaard, NBER WP33777 Q14a) — AI가 현재 소득에 미친 영향 증가/무영향/감소. 범주형 관찰지표로 쓰고 연속형 잠재변수로 처리하지 않는다. (19 §3)</li>
+<li>사용자 지시: 소득 질문을 "사용 전후 특정 3개월 비교"로 다루지 않는다. 결과는 증가·무영향·감소 모두 열어 둔다. (18 인계)</li>
+</ul>
+<h3>3.11 PSY(심리적 안전감) 제외</h3>
+<ul>
+<li>팀 수준 변수라 프리랜서 표본과 충돌한다. 사용자 결정으로 제외. (04 표, 18 인계)</li>
+</ul>
+<h3>3.12 조사 설계: 2회 조사 → 일회 횡단</h3>
+<ul>
+<li>이전 2편은 2주~1개월 간격 2회 조사를 권장했다.</li>
+<li>현재는 일회 횡단 설문이다. 인과·변화·실제 역량 증가를 주장하지 않고 "관련성"으로 보고한다. (04 §4, 11 해석의 경계)</li>
+</ul>
+<h2>4. 설문 쪽 후속 변화 (모형에 영향)</h2>
+<table>
+<thead>
+<tr>
+<th>버전</th>
+<th>변경</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.4</td>
+<td>핵심50 + ACT4 + REW_AI1 + 배경17 = 72코드</td>
+<td>원문 영한 대조로 확인 가능한 문항만 핵심으로</td>
+</tr>
+<tr>
+<td>v0.5</td>
+<td>TV4·SV4 추가(80코드)</td>
+<td>중간 경로 비교 후보. 원5점→7점 번안 기록</td>
+</tr>
+<tr>
+<td>19 결정안</td>
+<td>선택후보 3문항(REW_AI_MAG·CHG_AI_PERF·SKILL_VALUE) 제외 권고</td>
+<td>응답 부담, TP·THR·EXP와 겹침, 모형에 역할 없음</td>
+</tr>
+<tr>
+<td>v0.8</td>
+<td>BG1 복수선택, BG3 연도, ACT 4단계 빈도(Luo 2025 Table 4 형식)</td>
+<td>회상 부담 감소. 이전 일수 응답 3건과 합치지 말 것</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 아직 정하지 않은 것</h2>
+<ol>
+<li>조절 4개 유지(탐색적, 검정력 한계 명시) vs 1~2개로 축소 (12 결정 1)</li>
+<li>연구2를 SC에서 끝낼지, 성과·보상까지 이을지 (12 결정 2)</li>
+<li>THR 명칭: 인식 vs 불안 (12 결정 3)</li>
+<li>회상기간 통일: TC·SC 지난 1주, IWB 최근 3개월 혼재 (11, 12)</li>
+<li>REW_AI 범주형 결과와 PLS-SEM 경로의 연결 방법 (18 남은 작업 4)</li>
+<li>USE 4문항이 제작·수정 사용을 포괄하지 못하는 문제. ACT와 합산 금지 (07, 18)</li>
+<li>TV·SV 중간경로(M1·M2) 채택 여부 (질문 검토/03)</li>
+<li>경력 3년 기준, IRB·동의문 필수정보 (19 §2)</li>
+</ol>
+<h2>6. 바뀌지 않은 원칙</h2>
+<ul>
+<li>각 변수의 자리는 분석 전에 정한다. 유의한 경로만 사후 선택하지 않는다.</li>
+<li>검증된 척도의 구조를 임의로 바꾸지 않는다. 문항 cherry-pick 금지.</li>
+<li>AI를 쓰는지 여부보다 어떻게·얼마나 쓰는지를 본다.</li>
+<li>화살표는 검정할 이론적 방향이다. 일회 자기보고로 인과를 확정하지 않는다.</li>
+</ul>
+</div></body></html>

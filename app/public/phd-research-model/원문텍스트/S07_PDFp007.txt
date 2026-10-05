@@ -1,0 +1,58 @@
+                       STARA: Employees’ perceptions of our future workplace
+
+
+        the survey, the response rate for this study was 28.6%. Research on the differences between paper-
+       based and online surveys showed there to be little difference between the overall mean scores and
+        variance within the data (Deutskens, de Ruyter, & Wetzels, 2006). Ethics approval was granted by the
+        ﬁrst author’s University ethics ofﬁce (Massey University).
+
+      Sample
+     On average, participants were 32.0 year old (SD = 12.3 years), married or in a relationship (54.2%),
+       female (69.2%), and had job tenure of 4.9 years (SD = 5.8 years). On average, respondents worked
+       34.9 hr per week (SD = 12.0 hr/week). Overall, education was well spread: 37.5% had a high
+        school qualiﬁcation, 20.8% had a technical college qualiﬁcation, 26.7% had a university degree,
+      and 7.5% had a postgraduate qualiﬁcation. Due to a signiﬁcant decline in union membership in
+     New Zealand (Ryall & Blumenfeld, 2014), the majority of employees are working on individual rather
+       than collective agreements. In our study, 89.2% of respondents were on individual employment
+       agreements.
+          Like the majority of employees studied, all questions were asked in the same survey at the same time,
+       thus  creating  potential  for common-method  variance. One  test  of common-method  variance
+        (Podsakoff, MacKenzie, Lee, & Podsakoff, 2003)  is Harman’s One Factor Test and the factor
+         analysis (unrotated) resulted in seven factors, with the largest factor accounting for less than 30%
+        of the overall variance. This suggests that common-method variance is not an issue (Podsakoff &
+       Organ, 1986).
+
+      Measures
+
+        Organisational Commitment was measured with a 6-item scale (Meyer, Allen, & Smith, 1993), coded
+      1 = ‘strongly disagree,’ to 5 = ‘strongly agree’. A sample item from this measure is ‘I do not feel
+       “emotionally attached” to this organisation’. The present study found this measure to be robust
+       (α = 0.75).  Career  Satisfaction was measured  using  a 5-item  scale (Greenhaus, Parasuraman,
+    & Wormley, 1990), coded 1 = ‘strongly disagree,’ to 5 = ‘strongly agree’. The sample question
+       was  ‘I am satisﬁed with the success I have achieved in my career’ and  ‘I am satisﬁed with the
+        progress I have made toward meeting my overall career goals’. The present study found this measure
+        to be robust (α = 0.89). This  is consistent with another study that used that measure within
+     New Zealand (Haar & Brougham, 2013). Turnover Intentions were measured with a 4-item scale
+        (Kelloway, Gottlieb, & Barham, 1999), coded 1 = ‘strongly disagree,’ to 5 = ‘strongly agree’. Sample
+       items from this measure are ‘I am thinking about leaving my organisation’ and ‘I intend to ask people
+       about new job opportunities’. The present study found this measure to have excellent reliability
+       (α = 0.94).
+         Depression was measured with three items from the Axtell et al. (2002) scale. The question stem was
+        presented: ‘Thinking of the past few weeks, how much of the time has your own job made you feel
+       each of the following?’ and was followed by three adjectives: ‘Depressed’, ‘Gloomy’, and ‘Miserable’.
+      The present study found this measure to be very robust (α = 0.95). This is consistent with another
+       study that used the short measure within New Zealand (Brougham & Haar, 2013), and the full
+       measure has been validated internationally (Spell & Arnold, 2007a, 2007b). Cynicism was measured
+       with a 5-item scale (Maslach & Jackson, 1981). A sample item is ‘I have become less interested in my
+      work since I started this job’ and ‘I have become more cynical about whether my work contributes
+        anything’. The present study found this measure to be robust (α = 0.86).
+       STARA Awareness was measured using four items developed for this study, based on the job
+        insecurity measure by Armstrong-Stassen (2001). We initially deﬁned STARA for respondents stating
+       ‘Smart Technology, Automation, Robotics and Artiﬁcial Intelligence (STARA) are expected to change
+
+
+
+      JOURNAL OF MANAGEMENT & ORGANIZATION                                    245
+
+Downloaded from https://www.cambridge.org/core. IP address: 119.207.180.44, on 20 Sep 2026 at 10:52:29, subject to the Cambridge Core terms of use, available at
+https://www.cambridge.org/core/terms. https://doi.org/10.1017/jmo.2016.55

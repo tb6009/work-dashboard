@@ -1,0 +1,34 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='440' viewBox='0 0 1000 440' font-family='Apple SD Gothic Neo, Noto Sans KR, sans-serif'>
+<defs>
+<marker id='a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#15191B'/></marker>
+<marker id='m' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#A0402B'/></marker>
+<marker id='g' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#98A2A3'/></marker>
+</defs>
+<rect width='1000' height='440' fill='#FFFFFF'/>
+<text x='30' y='38' font-size='20' font-weight='700' fill='#15191B'>연구 1 — 생성형 AI 사용 → 과업 크래프팅 → 업무 결과 (EXP 조절)</text>
+<rect x='40' y='175' width='150' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='115.0' y='202.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>생성형 AI 사용</text><text x='115.0' y='221.0' text-anchor='middle' font-size='12' fill='#15191B'>USE</text>
+<rect x='300' y='175' width='150' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='375.0' y='202.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>과업 크래프팅</text><text x='375.0' y='221.0' text-anchor='middle' font-size='12' fill='#15191B'>TC (촉진형)</text>
+<rect x='620' y='85' width='170' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='705.0' y='112.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>혁신적 업무행동</text><text x='705.0' y='131.0' text-anchor='middle' font-size='12' fill='#15191B'>IWB</text>
+<rect x='620' y='265' width='170' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='705.0' y='292.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>지각된 생산성 기여</text><text x='705.0' y='311.0' text-anchor='middle' font-size='12' fill='#15191B'>TP</text>
+<rect x='480' y='180' width='110' height='50' rx='8' fill='#F0E2DD' stroke='#A0402B' stroke-width='2'/><text x='535.0' y='202.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>업무 숙련도</text><text x='535.0' y='221.0' text-anchor='middle' font-size='12' fill='#15191B'>EXP</text>
+<rect x='845' y='175' width='130' height='60' rx='8' fill='#FFFFFF' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4'/><text x='910.0' y='202.0' text-anchor='middle' font-size='15' font-weight='700' fill='#7E888A'>경제적 보상 변화</text><text x='910.0' y='221.0' text-anchor='middle' font-size='12' fill='#7E888A'>REW (탐색)</text>
+<line x1='190' y1='205' x2='298' y2='205' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<line x1='450' y1='192' x2='618' y2='115' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<line x1='450' y1='218' x2='618' y2='295' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<line x1='535' y1='180' x2='535' y2='155' stroke='#A0402B' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#m)'/>
+<line x1='535' y1='230' x2='535' y2='256' stroke='#A0402B' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#m)'/>
+<line x1='790' y1='125' x2='843' y2='195' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4' marker-end='url(#g)'/>
+<line x1='790' y1='285' x2='843' y2='215' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4' marker-end='url(#g)'/>
+<text x='244' y='195' font-size='12' fill='#116260' text-anchor='middle'>H1</text>
+<text x='520' y='128' font-size='12' fill='#116260' text-anchor='end'>H2</text>
+<text x='520' y='292' font-size='12' fill='#116260' text-anchor='end'>H3</text>
+<text x='548' y='172' font-size='11' fill='#A0402B' text-anchor='start'>H4a</text>
+<text x='548' y='250' font-size='11' fill='#A0402B' text-anchor='start'>H4b</text>
+<text x='30' y='368' font-size='12' fill='#4B5558' text-anchor='start'>분석에는 포함, 그림에서 생략: USE→IWB·TP 직접효과, EXP→IWB·TP 주효과, GAIL→TC(후보)</text>
+<line x1='30' y1='405' x2='70' y2='405' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<text x='80' y='409' font-size='12' fill='#4B5558' text-anchor='start'>제안 경로</text>
+<line x1='260' y1='405' x2='300' y2='405' stroke='#A0402B' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#m)'/>
+<text x='310' y='409' font-size='12' fill='#4B5558' text-anchor='start'>조절 (TC×EXP)</text>
+<line x1='490' y1='405' x2='530' y2='405' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4' marker-end='url(#g)'/>
+<text x='540' y='409' font-size='12' fill='#4B5558' text-anchor='start'>탐색적 관련성</text>
+</svg>

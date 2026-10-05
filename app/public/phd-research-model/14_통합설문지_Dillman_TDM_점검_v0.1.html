@@ -1,0 +1,183 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>14. 통합설문지 v0.2 — Dillman TDM 점검</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 14_통합설문지_Dillman_TDM_점검_v0.1.md · 2026-10-03 22:06</div><h1>14. 통합설문지 v0.2 — Dillman TDM 점검</h1>
+<blockquote>
+<p>작성: 2026-10-03 · v0.1
+대상: <code>12_연구1·2_통합설문지_예비조사검토본_v0.2.md</code>
+기준: <code>설문배포_Dillman_Tailored_Design_Method_참고_v0.1.md</code> (CASRAI 2차 가이드 정리본. 원저 Dillman, Smyth &amp; Christian 2014는 <strong>미확인</strong>)</p>
+</blockquote>
+<h2>한 줄 판정</h2>
+<p>설문지 <strong>본문</strong>은 TDM의 「비용 감소·신뢰」 원칙 일부를 따르고 있다. 그러나 TDM의 핵심인 <strong>접촉순서(Contact Sequence)는 아직 하나도 만들어지지 않았다.</strong> 접촉순서는 설문지 밖의 안내문 5종이라 설문지만으로는 충족할 수 없다.</p>
+<h2>1. 다섯 단계 접촉순서</h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>현재 상태</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 사전안내</td>
+<td>❌ 없음</td>
+<td></td>
+</tr>
+<tr>
+<td>2. 본 초청</td>
+<td>△ 설문 첫 화면의 참여 안내(§0)만 있음</td>
+<td>별도 초청문(메일·메신저) 없음. 개인화·직접 링크 문구 없음</td>
+</tr>
+<tr>
+<td>3. 감사·리마인더</td>
+<td>△ 설문 끝 감사 문장만 있음</td>
+<td>리마인더 없음</td>
+</tr>
+<tr>
+<td>4. 재요청</td>
+<td>❌ 없음</td>
+<td></td>
+</tr>
+<tr>
+<td>5. 최종안내</td>
+<td>❌ 없음</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>배포 경로마다 적용 방식이 다르다.
+- <strong>해외 Prolific(약 250명):</strong> 모집·알림을 플랫폼이 관리하므로 5단계를 연구자가 따로 만들지 않는다(참고문서 §2). 필요한 건 Prolific 연구 소개문 하나다.
+- <strong>국내(대표님 네트워크·지인):</strong> TDM 5단계가 실제로 필요한 경로다. 교수님이 지적한 지인 응답의 성의 부족(3회차 18:00)도 접촉 설계로 일부 줄일 수 있다.</p>
+<h2>2. 설문지 본문 — 사회적 교환 3원칙</h2>
+<table>
+<thead>
+<tr>
+<th>원칙</th>
+<th>체크 항목</th>
+<th>상태</th>
+<th>근거 위치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>비용 감소</td>
+<td>짧고 쉽게</td>
+<td>❌ 핵심 50 + 보조·배경 약 30 = 80개 안팎. 소요시간 미기재</td>
+<td>§0 「예비조사 실측 후 기입」</td>
+</tr>
+<tr>
+<td></td>
+<td>정확한 분기</td>
+<td>△ 미사용자 종료는 반영. 직원/프리랜서 분기는 REW에만 있고 IWB5·6·GAIL_EC4는 분기 대신 「적용불가」</td>
+<td>§1, §6, §9</td>
+</tr>
+<tr>
+<td></td>
+<td>모바일·행렬 테스트</td>
+<td>❌ 미실시</td>
+<td>—</td>
+</tr>
+<tr>
+<td></td>
+<td>쉬운 문항 먼저, 민감 문항 뒤</td>
+<td>✅ 사용 → 행동 → 역량 → 위협 → 소득 → 배경 순. 소득은 뒤쪽</td>
+<td>전체 순서</td>
+</tr>
+<tr>
+<td>보상 증가</td>
+<td>응답이 왜 중요한지·어떻게 쓰이는지</td>
+<td>❌ §0은 연구 주제만 말하고, 응답이 무엇에 기여하는지 설명이 없음</td>
+<td>§0 첫 단락</td>
+</tr>
+<tr>
+<td></td>
+<td>인센티브 안내</td>
+<td>❌ 「참여 사례: 유무·조건 확정」 빈칸</td>
+<td>§0</td>
+</tr>
+<tr>
+<td>신뢰 형성</td>
+<td>연구자·소속·연락처</td>
+<td>❌ 빈칸</td>
+<td>§0</td>
+</tr>
+<tr>
+<td></td>
+<td>IRB 승인번호</td>
+<td>❌ 빈칸. 교수님 IRB 사용 결정(3회차)이므로 그 승인 내용을 넣으면 됨</td>
+<td>§0</td>
+</tr>
+<tr>
+<td></td>
+<td>비밀보장 실제 수준을 정확히</td>
+<td>✅ 익명이 아닐 수 있음·삭제 한계·금액 거절 가능을 정확히 적음</td>
+<td>§0</td>
+</tr>
+<tr>
+<td></td>
+<td>자발성·중단 가능</td>
+<td>✅</td>
+<td>§0</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 해야 할 일</h2>
+<ol>
+<li>§0에 「응답이 어디에 쓰이는지」 한두 문장 추가 (보상 증가)</li>
+<li>연구자·소속·연락처·IRB 번호 채우기 (교수님 IRB 정보 받기)</li>
+<li>국내 배포용 접촉문 5종 작성: 사전안내 → 본 초청 → 감사·리마인더(약 1주 후) → 다른 표현의 재요청 → 마감 안내</li>
+<li>Prolific 연구 소개문 1종 작성</li>
+<li>예비조사로 실제 소요시간 측정 후 §0에 기입, 길이가 길면 문항 축소 검토</li>
+</ol>
+<p>3·4는 설문지가 확정된 뒤에 쓰는 게 순서다(참고문서 §6: TDM은 설문 내용이 확정된 이후의 배포 프레임).</p>
+<hr />
+<h2>버전 이력</h2>
+<table>
+<thead>
+<tr>
+<th>버전</th>
+<th>날짜</th>
+<th>변경</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0.1</td>
+<td>2026-10-03</td>
+<td>최초 점검</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>

@@ -1,0 +1,222 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 사용과 인지부하 근거수집 v0.1</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 03_AI사용과_인지부하_근거수집_v0.1.md · 2026-10-03 09:38</div><h1>AI 사용과 인지부하 근거수집 v0.1</h1>
+<ul>
+<li>작성일: 2026-10-03</li>
+<li>원문 대조: 2026-10-03, 새로 들어온 PDF 5편 확인</li>
+<li>연구모형 연결: 2편의 <code>LOAD → PERF</code>, 1편의 <code>USE</code>와 연결 가능한 대안 경로</li>
+<li>탐색 범위: 직장·업무 맥락의 AI 사용을 우선하고, 인간–AI 협업 실험과 교육·훈련 연구를 보조 근거로 구분</li>
+</ul>
+<h2>1. 결론</h2>
+<p>현재 확보한 문헌으로는 <strong>“AI 사용이 인지부하를 일관되게 높인다”</strong>고 단정할 수 없다. AI 사용은 다음 두 경로를 동시에 가질 수 있다.</p>
+<ol>
+<li><strong>인지부하 감소:</strong> 정보검색·선별·반복처리·주의배분을 AI가 지원하면 정신적 부담이 감소한다.</li>
+<li><strong>인지부하 증가:</strong> AI가 많은 정보를 생성하거나 사용자가 결과를 이해·검증·통합해야 하면 정보과부하와 추가 인지 노력이 발생한다.</li>
+</ol>
+<p>따라서 연구모형에는 단순한 <code>AI 사용 → 인지부하 증가</code>보다 <strong>AI 사용 방식 또는 AI 산출물 특성에 따른 양면 관계</strong>가 더 적합하다.</p>
+<h2>2. 핵심 논문</h2>
+<h3>A. Shao et al. (2024) — 현재 연구와 가장 직접적</h3>
+<ul>
+<li>논문: <em>Using Augmentation-Based AI Tool at Work: A Daily Investigation of Learning-Based Benefit and Challenge</em></li>
+<li>저널: <em>Journal of Management</em></li>
+<li>DOI: <a href="https://doi.org/10.1177/01492063241266503">10.1177/01492063241266503</a></li>
+<li>설계: 한국 은행 콜센터 직원 104명, 근무일 9일의 878개 일별 관측치. 하루 2회 직원 조사와 감독자의 당일 성과평가를 결합한 daily diary 연구</li>
+<li>사용 장면: 고객 통화 중 AI Agent Assist Tool이 실시간으로 제시한 정보를 직원이 열어본 통화 횟수. 생성형 AI 전반의 사용량은 아니다.</li>
+<li>측정: 정보과부하는 O’Reilly (1980)의 3문항, 7점 척도. 당일 직원에게 묻고, 성과는 감독자가 3문항으로 평가했다. AI 사용과 정보과부하는 같은 오후 조사에서 측정됐다.</li>
+<li>이론: AI augmentation + Cognitive Load Theory</li>
+<li>핵심 결과:</li>
+<li>일중 augmentation-based AI 사용 빈도 증가는 지식획득을 높여 과업성과를 높였다.</li>
+<li>동시에 AI 사용 빈도 증가는 <strong>information overload</strong>를 높였다.</li>
+<li>정보과부하는 당일 과업성과와 퇴근 후 회복을 저해했다.</li>
+<li><code>AI 사용 → 정보과부하</code> 계수 γ = .12 (p &lt; .001); 성과에 대한 간접효과 −.012, 95% CI [−.025, −.002]; 다음 날 보고한 퇴근 후 심리적 분리 곤란에 대한 간접효과 .016, 95% CI [.002, .032]. 지식획득 경로의 성과 간접효과는 .009, 95% CI [.003, .016]. 두 상반 경로를 합친 성과의 총간접효과는 유의하지 않았다.</li>
+<li>경험 개방성이 높을수록 <code>AI 사용 → 정보과부하</code>의 양(+)의 관계가 약했다. 긍정 정서는 이 관계를 유의하게 조절하지 않았다.</li>
+<li>연구모형 적용:</li>
+<li><code>USE → information overload → PERF(-)</code>의 직접 근거로 가장 적합하다.</li>
+<li>단, information overload를 <code>cognitive load</code> 전체와 동일시하면 안 된다. 저자도 정보과부하를 AI 사용에서 생기는 과도한 인지부하의 한 표현으로 다룬다.</li>
+<li>한계: AI 사용과 정보과부하가 같은 시점에 측정됐고 통화 난이도를 직접 측정하지 않았다. 관찰자료의 간접효과를 인과효과로 단정할 수 없다. 본문은 척도의 예시 1문항만 제시하고 전체 문항은 별도 Online Supplement A에 둔다.</li>
+<li>판정: <strong>핵심 1차 실증근거</strong></li>
+</ul>
+<h3>B. Boyacı, Canyakmaz, &amp; de Véricourt (2024) — 의사결정 인지노력</h3>
+<ul>
+<li>논문: <em>Human and Machine: The Impact of Machine Input on Decision Making Under Cognitive Limitations</em></li>
+<li>저널: <em>Management Science</em>, 70(2), 1258–1275</li>
+<li>DOI: <a href="https://doi.org/10.1287/mnsc.2023.4744">10.1287/mnsc.2023.4744</a></li>
+<li>연구유형: 사람의 주의가 제한된 의사결정을 <code>rational inattention</code>으로 표현한 <strong>수리 이론모형</strong>. 설문·실험으로 인지부하를 측정한 논문이 아니다.</li>
+<li>핵심 결과:</li>
+<li>모형 안에서 정확도가 높은 기계 입력도 의사결정자의 최적 인지 노력을 증가시킬 수 있다.</li>
+<li>시간압박이나 멀티태스킹으로 인지비용이 높은 조건에서 이 결과가 나타난다.</li>
+<li>연구모형 적용:</li>
+<li>AI 결과를 검토하고 자신의 판단과 통합하는 과정 자체가 추가 부하가 될 수 있다는 근거다.</li>
+<li>일반적인 자기보고 AI 사용량 연구는 아니므로 직접 경로 근거보다는 메커니즘 근거로 사용한다.</li>
+<li>판정: <strong>이론적 가능성 근거; 실증 경로 근거 아님</strong></li>
+</ul>
+<h3>C. De Bruyne et al. (2023) — AI 지원이 부하를 낮추는 가상 관제실 실험</h3>
+<ul>
+<li>논문: <em>I Spy with My AI: The Effects of AI-Based Visual Cueing on Human Operators’ Performance and Cognitive Load in CCTV Control Rooms</em></li>
+<li>저널: <em>International Journal of Industrial Ergonomics</em>, 95, 103444</li>
+<li>DOI: <a href="https://doi.org/10.1016/j.ergon.2023.103444">10.1016/j.ergon.2023.103444</a></li>
+<li>설계: 가상 CCTV 관제실에서 AI 시각 단서 제공 여부와 작업압력을 조작</li>
+<li>핵심 결과:</li>
+<li>AI 기반 시각 단서가 작업압력 수준과 무관하게 인지부하를 낮췄다.</li>
+<li>정확하고 신뢰할 수 있는 AI 보조가 제한된 주의자원의 배분을 지원했다.</li>
+<li>연구모형 적용:</li>
+<li>AI가 정보의 우선순위를 선별해 주면 LOAD가 낮아질 수 있다는 반대 경로의 근거다.</li>
+<li>특정 관제업무 실험이므로 일반 지식노동자로의 일반화에는 주의한다.</li>
+<li>판정: <strong>인지부하 감소의 직접 실험근거</strong></li>
+</ul>
+<h3>D. de Melo et al. (2020) — 지능형 가상비서의 표현방식과 부하</h3>
+<ul>
+<li>논문: <em>Reducing Cognitive Load and Improving Warfighter Problem Solving With Intelligent Virtual Assistants</em></li>
+<li>저널: <em>Frontiers in Psychology</em>, 11, 554706</li>
+<li>DOI: <a href="https://doi.org/10.3389/fpsyg.2020.554706">10.3389/fpsyg.2020.554706</a></li>
+<li>설계·측정: 대학생 등 34명의 반복측정 실험. 사막 생존 물품 우선순위 과제 뒤 NASA-TLX 6차원의 가중 총점을 측정했다.</li>
+<li>핵심 결과:</li>
+<li>음성형·구현형(embodied) 비서는 비지원 조건보다 문제해결 성과를 높였다.</li>
+<li>그러나 음성형 비서는 비지원 조건보다 주관적 총부하가 높았고(p = .015), 구현형 비서는 음성형보다 낮았으나(p = .026) 비지원 조건과 유의한 차이가 없었다(p = .864). NASA-TLX의 mental demand 단독 차이는 유의하지 않았다(p = .081).</li>
+<li>즉 AI 지원의 존재 자체보다 <strong>정보가 전달되는 방식</strong>이 인지부하를 좌우했다.</li>
+<li>연구모형 적용:</li>
+<li>AI가 항상 LOAD를 낮추는 것이 아니라, 표현 양식과 중복·반복 정보가 부하를 바꾼다는 보조 근거다.</li>
+<li>논문 제목은 군인 맥락을 제시하지만 실제 표본은 대학 모집 참가자이고 과제는 실험실의 가상 사막 생존 문제다. 일반 디자인·지식노동의 직접 근거는 아니다.</li>
+<li>판정: <strong>보조 실험근거</strong></li>
+</ul>
+<h3>E. Tang et al. (2026) — 직장인 AI 훈련과 인지부하의 하위차원</h3>
+<ul>
+<li>논문: <em>AI-Driven Adaptive Training for Utility Employees: A Three-Wave Cluster-Randomized Field Experiment on Cognitive-Load and Personalization-Fit Pathways</em></li>
+<li>저널: <em>Frontiers in Psychology</em></li>
+<li>DOI: <a href="https://doi.org/10.3389/fpsyg.2026.1944626">10.3389/fpsyg.2026.1944626</a></li>
+<li>설계: 중국 전력회사 직원 2,574명, 3시점 군집무작위 현장실험. 두 조건은 적응형 경로뿐 아니라 전달 매체·교수자 접촉·진도 조절도 달라서, 결과는 이 <strong>훈련 방식 묶음</strong>의 비교다.</li>
+<li>측정: Leppink et al. (2013)의 10문항 중국어판을 훈련 직후 적용. 내재적 3문항(α = .68), 외재적 3문항(α = .68), 학습 관련 4문항(α = .73), 각 0–10점. 교육·훈련용 문항이므로 일상 업무에 그대로 가져올 수 없다.</li>
+<li>핵심 결과:</li>
+<li>AI 적응형 훈련은 전통 훈련보다 extraneous load를 낮췄다(d = −0.34). 반대로 intrinsic load는 높였다(d = 0.28). 학습 관련 부하 차이는 작았다(d = −0.10).</li>
+<li>단일 총점의 집단 차이는 거의 없었다(d = −0.09). 서로 반대인 변화가 가려진 사례다.</li>
+<li>외재적 부하 감소를 통한 지식 점수 간접효과는 통계적으로 확인됐지만, 매개변수 자체는 무작위 조작되지 않았으므로 인과적 매개효과로 단정할 수 없다.</li>
+<li>연구모형 적용:</li>
+<li>LOAD를 단일변수로 둘지, intrinsic/extraneous load로 구분할지를 결정하는 데 중요하다.</li>
+<li>일상적인 AI 업무사용이 아니라 AI 기반 직무훈련 연구다.</li>
+<li>판정: <strong>척도·구조 결정에 중요한 보조 근거</strong></li>
+</ul>
+<h3>F. Jiang, Wu, &amp; Leung (2025) — LLM 문제해결과 주관·생리 지표</h3>
+<ul>
+<li>논문: <em>The Cognitive Impacts of Large Language Model Interactions on Problem Solving and Decision Making Using EEG Analysis</em></li>
+<li>저널: <em>Frontiers in Computational Neuroscience</em></li>
+<li>DOI: <a href="https://doi.org/10.3389/fncom.2025.1556483">10.3389/fncom.2025.1556483</a></li>
+<li>설계: 실제 GPT-4 과제를 수행한 참가자 12명이 지원·비지원 조건을 경험했다. 논문의 주된 목적은 EEG 기반 인지상태 분석모형의 성능 검증이다.</li>
+<li>핵심 결과:</li>
+<li>LLM 지원 조건의 주관적 부하(NASA-TLX)가 비지원 조건보다 낮았다(49.2 대 61.8, p = .012).</li>
+<li>전두부 theta power도 낮았다(3.07 대 4.21, p = .004). 저자들은 인지 노력이 감소한 것으로 해석했다.</li>
+<li>연구모형 적용:</li>
+<li>생성형 AI의 즉각적인 문제해결 지원이 LOAD를 낮출 수 있다는 보조 근거다.</li>
+<li>소규모의 단기 과제이며 직장 표본이 아니다. 원문에는 12명 실험이 4.6절과 4.9절에 반복 서술돼 독립 실험 두 건으로 계산하면 안 된다.</li>
+<li>판정: <strong>보조 근거; 핵심 가설의 단독 근거로 사용하지 않음</strong></li>
+</ul>
+<h2>3. 연구모형에 대한 판단</h2>
+<h3>3.1 현재 <code>TV·SV → LOAD</code> 가설과는 직접 일치하지 않는다</h3>
+<p>위 논문들의 주된 독립변수는 AI 사용 빈도, AI 조언, AI 시각지원 또는 AI 훈련이다. 따라서 이 자료만으로 <code>과업·기술 다양성 → 인지부하</code>를 직접 지지할 수 없다.</p>
+<h3>3.2 더 근거가 강한 대안모형</h3>
+<p>현재 문헌에는 다음 모형이 더 직접적으로 뒷받침된다.</p>
+<pre><code class="language-text">AI 사용 빈도
+ ├─→ 지식획득 ─→ 업무성과 증가
+ └─→ 정보과부하 ─→ 업무성과 감소 / 회복 곤란
+</code></pre>
+<p>또는 AI 지원의 질을 포함하면 다음과 같다.</p>
+<pre><code class="language-text">AI 사용
+ ├─ 정확한 선별·구조화 지원 ─→ 인지부하 감소
+ └─ 과잉정보·검증·통합 요구 ─→ 인지부하 증가
+</code></pre>
+<h3>3.3 LOAD 변수명 후보</h3>
+<table>
+<thead>
+<tr>
+<th>선택</th>
+<th>장점</th>
+<th>단점</th>
+<th>권고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cognitive load 총점</td>
+<td>모형이 단순함</td>
+<td>내재·외재부하의 반대 움직임을 감춤</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>Information overload</td>
+<td>Shao et al.과 직접 연결</td>
+<td>인지부하 전체가 아님</td>
+<td><strong>1순위</strong></td>
+</tr>
+<tr>
+<td>Mental workload / NASA-TLX</td>
+<td>직무·과업 직후 측정에 적합</td>
+<td>특정 과업 준거가 필요</td>
+<td><strong>2순위</strong></td>
+</tr>
+<tr>
+<td>Intrinsic / extraneous load</td>
+<td>이론적으로 정교함</td>
+<td>일반 직무 설문에 맞는 문항 적응 필요</td>
+<td>조건부</td>
+</tr>
+<tr>
+<td>Cognitive job demands</td>
+<td>일상 직무조사에 적합</td>
+<td>실제 경험된 부하가 아니라 요구의 정도</td>
+<td>별도 변수로 사용</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 설문 설계 권고</h2>
+<ol>
+<li>일반적인 “평소 AI 사용량”과 일반적인 “평소 인지부하”를 한 번에 묻기보다, <strong>최근 1주 또는 특정 AI 활용 업무</strong>로 시간·과업 준거를 맞춘다.</li>
+<li>현재 목적이 AI 사용의 부정적 인지경로 확인이라면 Shao et al.의 <strong>information overload</strong>가 가장 정합적이다.</li>
+<li>실제 업무 수행 직후 측정이 가능하다면 NASA-TLX의 mental demand·effort 등을 활용하는 방안이 더 타당하다.</li>
+<li>AI가 부하를 줄이는 경로도 함께 측정하려면 <code>AI output quality</code>, <code>AI reliability</code>, <code>verification effort</code>를 조건변수로 검토한다.</li>
+<li><code>work intensity</code>, <code>technostress</code>, <code>information overload</code>, <code>cognitive load</code>는 서로 관련되지만 동일한 구성개념이 아니므로 문헌과 척도를 섞지 않는다.</li>
+</ol>
+<h2>5. 후속 확보 우선순위</h2>
+<ol>
+<li>Shao et al. (2024)의 별도 Online Supplement A에서 information overload 전체 3문항과 한국어 번안문 확인</li>
+<li>일반 지식노동자의 생성형 AI 사용과 NASA-TLX/mental workload를 연결한 현장·실험 연구 추가 확보</li>
+<li>AI 산출물 검증 노력(<code>verification effort</code>)과 인지부하를 연결한 연구 확보</li>
+<li><code>task/skill variety → mental workload</code>의 비-AI 직무설계 문헌을 별도 탐색해 현재 2편의 원래 가설 검증</li>
+</ol>
+<h2>6. 검증 상태</h2>
+<ul>
+<li>이번에 새로 들어온 PDF 5편(Shao, Boyacı, de Melo, Tang, Jiang)의 본문·방법·표를 직접 대조했다. De Bruyne et al. (2023)은 이번 신규 PDF 묶음에 포함되지 않아 기존 공개 원고 확인 상태를 유지한다.</li>
+<li>Shao et al. (2024)의 전체 정보과부하 문항과 정식 한국어판은 별도 온라인 부록을 아직 확보하지 못했다.</li>
+<li>Tang et al. (2026)은 훈련 매체와 적응형 알고리즘의 효과를 분리할 수 없다. Jiang et al. (2025)은 n = 12의 보조 실험이다.</li>
+</ul>
+</div></body></html>

@@ -1,0 +1,56 @@
+Q073 - skillsattitudesuser: Attitudes on skills for AI by users  Matrix
+
+Not back | Number of rows: 4 | Number of columns: 6
+
+Please think about the skills you need in your job. Do you agree or disagree with the following
+statements?
+
+Rows: Random | Columns: Normal
+
+Rendered as Dynamic Grid
+                                      Strongly Somewhat Neither  Somewhat Strongly Don't
+                                    agree    agree     agree    disagree   disagree know
+                                                        nor
+                                                          disagree
+                                1       2        3       4        5       8
+AI has made some of my skills less 1                  
+valuable.
+AI complements my skills.       2                  
+I have specialised AI skills, such as 3                  
+those  needed  to  maintain  or
+develop AI.
+I am enthusiastic to learn more 4                  
+about AI.
+[Question shown only to AI users as identified in variable "aiuser" code 1]
+
+
+Q074 - skillsattitudesnonuser: Attitudes on skills for AI by Matrix
+non-users/non-adopters
+
+Not back | Number of rows: 4 | Number of columns: 6
+
+Do you agree or disagree with the following statements?
+
+Rows: Random | Columns: Normal
+
+Rendered as Dynamic Grid
+                                      Strongly Somewhat Neither  Somewhat Strongly Don't
+                                    agree    agree     agree    disagree   disagree know
+                                                        nor
+                                                          disagree
+                                1       2        3       4        5       8
+I worry that I do not have the skills 1                  
+to work with new technologies.
+I worry that new technologies will 2                  
+make  my  existing   skills  less
+valuable.
+I   feel   confident   that  new 3                  
+technologies will complement my
+existing skills.
+I am enthusiastic to learn how to 4                  
+work with new technologies.
+[Question shown only to AI non-users as identified in variable "aiuser" code 2 OR non-adopters in
+ variable "adopter" code 2]
+
+
+ B009 - CONSULT: WORKER CONSULTATION              End block

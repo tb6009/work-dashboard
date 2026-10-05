@@ -1,0 +1,57 @@
+Behav. Sci. 2025, 15, 811                                                                                                        23 of 35
+
+
+
+                          a 7-point Likert scale (1 = strongly disagree, 7 = strongly agree). The scale is designed to
+                              assess individuals’ overall literacy in the use of generative artificial intelligence technologies.
+                        Example items include: “I can solve common technical issues during the use of AI.” In this
+                              study, Cronbach’s α coefficient of the scale was 0.943, indicating good internal consistency.
+                                Creative Self-Efficacy. The measurement of Creative Self-Efficacy was based on the
+                               scale developed by Carmeli and Schaubroeck (2007), consisting of 8 items using a 6-point
+                             Likert scale (1 = strongly disagree, 6 = strongly agree). This scale assesses employees’
+                            confidence and belief in their ability to generate creative solutions and produce innovative
+                        outcomes in work contexts. Example items include: “I can creatively overcome many
+                             challenges”. In this study, Cronbach’s α coefficient was 0.916, indicating high reliability.
+                                Job Performance. The measurement of job performance was based on the scale devel-
+                       oped by Chen et al. (2002), consisting of 4 items using a 7-point Likert scale (1 = strongly
+                             disagree, 7 = strongly agree). This scale measures employees’ actual behavioral contribu-
+                               tions and task completion effectiveness within their organizational role, which conceptually
+                                differs from Creative Self-Efficacy in several key ways. While Creative Self-Efficacy cap-
+                              tures confidence and belief in one’s creative abilities, job performance measures observable
+                      work behaviors and outcomes such as task completion, quality standards, and organiza-
+                              tional contributions. Example items include “I can complete the tasks assigned by the
+                         department on time”. In this study, Cronbach’s α coefficient was 0.885, indicating good
+                               internal consistency.
+                               Control Variables. To improve the rigor of this study, the research included several
+                             control variables, such as employees’ gender, age, education level, work experience, and
+                        monthly income (Zhao et al., 2022; Wang et al., 2023; Baabdullah, 2024). Additionally,
+                             variables related to employee characteristics, such as job type, job rank, and political
+                                  affiliation, were also controlled for (Pinski et al., 2024). The selection of these control
+                             variables helps to further reduce the potential influence of confounding factors on this
+                             study’s results.
+
+                                   4.5. Statistical Analysis
+
+                                 This study employed SPSS27, Amos24, and R-4.3.3 software to conduct comprehensive
+                                   statistical analyses following a systematic approach. Exploratory factor analysis (EFA) was
+                         performed using SPSS, followed by confirmatory factor analysis (CFA) and reliability
+                              testing using Amos to ensure adequate measurement model properties. The primary
+                            hypothesis testing was conducted using R software through a two-stage analytical strategy:
+                                        first, hierarchical regression analysis was employed to examine direct relationships between
+                        key variables (GAIL →CSE, GAIL →Job Performance, CSE →Job Performance) while
+                              controlling for demographic and organizational factors; second, mediation effect analysis
+                      was conducted using bootstrap methodology with 5000 resamples to test indirect effects
+                       and examine the mediating role of Creative Self-Efficacy. This analytical sequence follows
+                             established best practices where direct relationships are established through regression
+                               analysis, followed by bootstrap procedures for mediation testing, which provides robust
+                            confidence intervals for indirect effects without requiring normality assumptions.
+
+                             5. Research Results
+
+                                   5.1. The Common Method Bias Test
+
+                            To minimize the impact of potential common method bias, this study implemented
+                             several measures from both procedural and statistical controls. In terms of procedural
+                               control, this study used anonymous surveys and explicitly assured participants that their
+                           data would be kept strictly confidential to reduce concerns and enhance the authenticity
+                              of their responses. Additionally, the questionnaire design prioritized simplicity and read-

@@ -1,0 +1,790 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>전체 문항 근거·영한 번안·추가 리서치 인용 명세서 v0.1</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 17_전체문항_영한대조·추가근거_인용_명세서_v0.1.md · 2026-10-03 22:42</div><h1>전체 문항 근거·영한 번안·추가 리서치 인용 명세서 v0.1</h1>
+<p>2026-10-03. 기준: 설문v0.3의 <strong>89개 고유 질문 코드 전부</strong>. 핵심50뿐 아니라 동의·선별·배경·변화·금액·미채택OPP 포함. 새 v0.4: 본문72코드, 선택후보3코드. 누락된 이전코드0.</p>
+<h2>결정 요약</h2>
+<ul>
+<li>원문 영문과 국문 의미 번역, 연구용 영문 번안과 국문 번안을 나란히 저장했다. 원문 없는 항목은 영어 번역을 원문이라고 표시하지 않았다.</li>
+<li>특정3개월 전후 비교를 소득 모듈에 강제하지 않는다. 기존 REW1을 REW_AI로 교체 제안하여 ‘AI 귀인 소득영향’을 묻는다. 코드 변경은 의미 변경을 숨기지 않기 위함.</li>
+<li>핵심50 유지. ACT4 유지하되 연구자 재구성으로 표시. 이전18코드는 삭제·보류·교체 이력을 아래에 보존했고 원파일에서 삭제하지 않았다.</li>
+<li>새 추가 후보: REW_AI_MAG(소득영향 크기), CHG_AI_PERF(성과영향), SKILL_VALUE(기술가치 하락). 본문 자동 추가하지 않음.</li>
+<li>응답자용 문항의 양끝 의미를 살리고 핵심 평정은 제안7점. v0.4 대조본은 중간2–6을 숫자로 표시하는 제안이며, v0.3의 동의·빈도 중간언어앵커와도 달라 예비검토 대상이다.</li>
+<li>기존 모형을 바꾸지 않았다. 범주형 결과의 분석법과 핵심 매개·조절모형 연결은 별도 결정 필요.</li>
+</ul>
+<h2>1. 근거의 종류</h2>
+<p>A: 직접 공개된 문항 확인(현재 번안 타당화 완료가 아님).
+B: 관련 개념·활동·조사 사례만 있음(동일 척도 아님).
+R: 연구자 설계(원문 없음). 배경·금액·기간·동의 같은 사실/절차 질문에 원척도 부재 자체는 결함이 아니다.
+H: 본문 미채택 또는 보류. 근거가 약한 문항을 추가해 길이를 늘리지 않음.</p>
+<h2>2. 핵심50 문항별 명세</h2>
+<p>원문 전체 영한 대조는 <a href="12_연구1·2_통합설문지_영한대조_원문근거보완_v0.4.html">v0.4 설문</a>의 같은 코드에서 확인한다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>원문 위치</th>
+<th>적용</th>
+<th>검증 상태·남은 수정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USE1</td>
+<td>S01 PDF p.11, Table 1 WAU1–4</td>
+<td>핵심 유지</td>
+<td>A; 정보·아이디어 활용. 제작 사용 전반을 대표하지 않음.</td>
+</tr>
+<tr>
+<td>USE2</td>
+<td>S01 PDF p.11, Table 1 WAU1–4</td>
+<td>핵심 유지</td>
+<td>A; 정보·아이디어 활용. 제작 사용 전반을 대표하지 않음.</td>
+</tr>
+<tr>
+<td>USE3</td>
+<td>S01 PDF p.11, Table 1 WAU1–4</td>
+<td>핵심 유지</td>
+<td>A; 정보·아이디어 활용. 제작 사용 전반을 대표하지 않음.</td>
+</tr>
+<tr>
+<td>USE4</td>
+<td>S01 PDF p.11, Table 1 WAU1–4</td>
+<td>핵심 유지</td>
+<td>A; 정보·아이디어 활용. 제작 사용 전반을 대표하지 않음.</td>
+</tr>
+<tr>
+<td>TC1</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 과업</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 지난1주 준거 유지. 복잡성 증가를 효율화로 해석하지 않음.</td>
+</tr>
+<tr>
+<td>TC2</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 과업</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 지난1주 준거 유지. 복잡성 증가를 효율화로 해석하지 않음.</td>
+</tr>
+<tr>
+<td>TC3</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 과업</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 지난1주 준거 유지. 복잡성 증가를 효율화로 해석하지 않음.</td>
+</tr>
+<tr>
+<td>TC4</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 과업</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 지난1주 준거 유지. 복잡성 증가를 효율화로 해석하지 않음.</td>
+</tr>
+<tr>
+<td>SC1</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 스킬</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 실제 숙련 증가가 아닌 학습·확장 행동.</td>
+</tr>
+<tr>
+<td>SC2</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 스킬</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 실제 숙련 증가가 아닌 학습·확장 행동.</td>
+</tr>
+<tr>
+<td>SC3</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 스킬</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 실제 숙련 증가가 아닌 학습·확장 행동.</td>
+</tr>
+<tr>
+<td>SC4</td>
+<td>S02 PDF p.9, Table 2 / 인쇄613, 촉진 스킬</td>
+<td>핵심 유지</td>
+<td>A; 점수5→7. 실제 숙련 증가가 아닌 학습·확장 행동.</td>
+</tr>
+<tr>
+<td>IWB1</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB2</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB3</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB4</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB5</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB6</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB7</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB8</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>IWB9</td>
+<td>S04 PDF p.6, Measures / 인쇄292</td>
+<td>핵심 유지</td>
+<td>A; 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</td>
+</tr>
+<tr>
+<td>TP1</td>
+<td>S03 PDF p.6, Table 2 P1–3 / 인쇄332</td>
+<td>핵심 유지</td>
+<td>A; application→GenAI, 점수5→7. 생산성 기여 지각이며 총성과·보상은 아님.</td>
+</tr>
+<tr>
+<td>TP2</td>
+<td>S03 PDF p.6, Table 2 P1–3 / 인쇄332</td>
+<td>핵심 유지</td>
+<td>A; application→GenAI, 점수5→7. 생산성 기여 지각이며 총성과·보상은 아님.</td>
+</tr>
+<tr>
+<td>TP3</td>
+<td>S03 PDF p.6, Table 2 P1–3 / 인쇄332</td>
+<td>핵심 유지</td>
+<td>A; application→GenAI, 점수5→7. 생산성 기여 지각이며 총성과·보상은 아님.</td>
+</tr>
+<tr>
+<td>EXP1</td>
+<td>S05 PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</td>
+</tr>
+<tr>
+<td>EXP2</td>
+<td>S05 PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</td>
+</tr>
+<tr>
+<td>EXP3</td>
+<td>S05 PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</td>
+</tr>
+<tr>
+<td>EXP4</td>
+<td>S05 PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</td>
+</tr>
+<tr>
+<td>EXP5</td>
+<td>S05 PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</td>
+</tr>
+<tr>
+<td>GAIL_BO1</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_BO2</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_BO3</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_PE1</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_PE2</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_PE3</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_QE1</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_QE2</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_QE3</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_IA1</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_IA2</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_IA3</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_EC1</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_EC2</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_EC3</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_EC4</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>GAIL_EC5</td>
+<td>S06 PDF p.12, Table 2 / 측정 pp.22–23</td>
+<td>핵심 유지</td>
+<td>A; 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</td>
+</tr>
+<tr>
+<td>THR1</td>
+<td>S07 PDF p.8, Table 1 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; STARA→GenAI. THR3 조직 미래→직업적 위치; 중립 문두 제안. 순수한 대체확률만이 아니라 걱정 포함.</td>
+</tr>
+<tr>
+<td>THR2</td>
+<td>S07 PDF p.8, Table 1 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; STARA→GenAI. THR3 조직 미래→직업적 위치; 중립 문두 제안. 순수한 대체확률만이 아니라 걱정 포함.</td>
+</tr>
+<tr>
+<td>THR3</td>
+<td>S07 PDF p.8, Table 1 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; STARA→GenAI. THR3 조직 미래→직업적 위치; 중립 문두 제안. 순수한 대체확률만이 아니라 걱정 포함.</td>
+</tr>
+<tr>
+<td>THR4</td>
+<td>S07 PDF p.8, Table 1 / 인쇄246</td>
+<td>핵심 유지</td>
+<td>A; STARA→GenAI. THR3 조직 미래→직업적 위치; 중립 문두 제안. 순수한 대체확률만이 아니라 걱정 포함.</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 본문 보조·배경 및 새 선택후보</h2>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>근거</th>
+<th>적용/상태</th>
+<th>검토</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONSENT</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>연구자 작성. 동일 원문 문항 없음.</td>
+</tr>
+<tr>
+<td>S1</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>연구자 작성. 동일 원문 문항 없음.</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>R; S06</td>
+<td>보조·연구자 작성</td>
+<td>업무 사용 선별은 연구자 설계. GAIL의 일반 GenAI 사용 선별과 동일하지 않음.</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>연구자 작성. 동일 원문 문항 없음.</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>연구자 작성. 동일 원문 문항 없음.</td>
+</tr>
+<tr>
+<td>ACT1</td>
+<td>S09; S10; R</td>
+<td>보조·연구자 작성</td>
+<td>활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</td>
+</tr>
+<tr>
+<td>ACT2</td>
+<td>S09; S10; R</td>
+<td>보조·연구자 작성</td>
+<td>활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</td>
+</tr>
+<tr>
+<td>ACT3</td>
+<td>S09; S10; R</td>
+<td>보조·연구자 작성</td>
+<td>활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</td>
+</tr>
+<tr>
+<td>ACT4</td>
+<td>S09; S10; R</td>
+<td>보조·연구자 작성</td>
+<td>활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</td>
+</tr>
+<tr>
+<td>REW_AI</td>
+<td>S08</td>
+<td>주지표·원문 기반 번안</td>
+<td>Q14a: AI chatbots→GenAI, 본인의 업무활용·디자인소득으로 좁힘. 모름·거절 추가. 과거 총소득 불변과 구분.</td>
+</tr>
+<tr>
+<td>REW_AI_MAG</td>
+<td>S08</td>
+<td>선택후보·원문 기반 번안</td>
+<td>Q14b·c를 하나의 조건부 질문으로 결합한 번안. 선택 부록, 본문 기본 제외.</td>
+</tr>
+<tr>
+<td>CHG_AI_PERF</td>
+<td>S11</td>
+<td>선택후보·원문 기반 번안</td>
+<td>Q032 p.12의 AI→GenAI, job→design-work. TP와 중복 가능하여 선택 부록. 기존 CHG3 품질과 동일하지 않음.</td>
+</tr>
+<tr>
+<td>SKILL_VALUE</td>
+<td>S11</td>
+<td>선택후보·원문 기반 번안</td>
+<td>Q073 첫행 p.27. 원5점 동의→제안7점; AI→GenAI. 현재의 가치하락 지각으로, 미래 걱정 THR/현재 숙련 EXP와 다름. 기존 모형에 자동 추가하지 않음.</td>
+</tr>
+<tr>
+<td>BG0a</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG0b</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG0c</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG1</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG2</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG3</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG4</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG4b</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG5</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG6</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>BG8</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+<tr>
+<td>END1</td>
+<td>R</td>
+<td>보조·연구자 작성</td>
+<td>배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 이전18코드의 처리 — 연구자 문항의 영한 기록</h2>
+<p>아래 EN은 기존 KO의 연구자 영문 번역이지 선행논문 원문이 아니다. 원래 응답과 전체 기간 지시문은 보존된 v0.3 참조. 이 표의 문항은 새 본문에 배포하지 않는다.</p>
+<h3>CMP1</h3>
+<ul>
+<li>기존 KO: 아래에 표시된 B기간에 유급 디자인 업무를 수행했습니까?</li>
+<li>EN (researcher translation, not a source item): Did you carry out paid design work during period B?</li>
+<li>기존 응답: □ 예 □ 아니오 □ 기억하기 어려움</li>
+<li>판정: 삭제 제안: 기간 B를 사용하지 않음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>CMP2</h3>
+<ul>
+<li>기존 KO: B기간과 A기간의 경험을 떠올려 업무·소득의 변화를 비교할 수 있습니까?</li>
+<li>EN (researcher translation, not a source item): Can you compare your work and income experiences between periods B and A?</li>
+<li>기존 응답: □ 대체로 가능 □ 일부 항목만 가능 □ 비교하기 어려움</li>
+<li>판정: 삭제 제안: 전후 두 기간 비교를 사용하지 않음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>CHG1</h3>
+<ul>
+<li>기존 KO: 비슷한 난이도·규모의 디자인 업무를 요구 품질에 맞춰 끝내는 데 드는 시간은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How has the time needed to complete comparable design work to the required quality changed?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 기억하기 어려움</li>
+<li>판정: 보류: TP1과 중복. 소득 주지표와 별도의 회고 변화문항; 동일 원척도 없음.</li>
+<li>근거 상태: S03; S08; R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>CHG2</h3>
+<ul>
+<li>기존 KO: 같은 시간 동안 요구 품질에 맞춰 완료할 수 있는 디자인 업무량은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How has the amount of design work you can complete to the required quality within the same time changed?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 기억하기 어려움</li>
+<li>판정: 보류: TP2·3과 중복. 동일 변화척도 없음.</li>
+<li>근거 상태: S03; R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>CHG3</h3>
+<ul>
+<li>기존 KO: 비슷한 종류의 디자인 결과물의 품질은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How has the quality of comparable design outputs changed?</li>
+<li>기존 응답: □ 크게 낮아짐 □ 다소 낮아짐 □ 거의 동일 □ 다소 높아짐 □ 크게 높아짐 □ 비교불가 □ 기억하기 어려움</li>
+<li>판정: 보류: Humlum Q12는 품질 개선 편익 선택이지 증감척도 아님. OECD 대안 CHG_AI_PERF는 종합성과, 품질 전용 아님.</li>
+<li>근거 상태: S08; S11; R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW1</h3>
+<ul>
+<li>기존 KO: 도입 전 B기간에 비해 도입 후 A기간의 본인 디자인 업무 총소득은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How did your total design-work income in period A after adoption compare with period B before adoption?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 기억하기 어려움 □ 응답거절</li>
+<li>판정: REW_AI로 교체 제안. 단순 전후 총소득 변화→AI 귀인 소득영향으로 구성개념 변경; 같은 코드 재사용 안 함.</li>
+<li>근거 상태: S08; R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW3c</h3>
+<ul>
+<li>기존 KO: B기간에 비해 A기간의 준비·수정 등 무급활동을 포함한 디자인 업무 총투입시간은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How did your total design-work hours, including unpaid preparation and revisions, change from period B to period A?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 기억하기 어려움</li>
+<li>판정: 보류: 시간절약/업무속도와 총노동시간은 다름. 현 원문항 없음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW4_IND</h3>
+<ul>
+<li>기존 KO: 독립업무: 범위·난이도·수정조건이 비교 가능한 프로젝트의 실제 계약 단가는 B기간에 비해 A기간에 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How did actual contract rates for projects with comparable scope, difficulty, and revision terms change from period B to period A?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교가능 프로젝트 없음 □ 기억하기 어려움 □ 응답거절</li>
+<li>판정: 보류: WTD는 현재 청구단가의 조사 사례. AI로 인한 단가 변화 원척도는 미확인.</li>
+<li>근거 상태: S13; R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW5</h3>
+<ul>
+<li>기존 KO: A기간에 급여·보수·단가를 조정하거나 협상할 기회가 있었습니까?</li>
+<li>EN (researcher translation, not a source item): During period A, did you have an opportunity to adjust or negotiate your salary, compensation, or rates?</li>
+<li>기존 응답: □ 있음 □ 없음 □ 기억하기 어려움</li>
+<li>판정: 보류: 협상 기회≠협상력≠협상 결과. 동일 원척도 미확인.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW6</h3>
+<ul>
+<li>기존 KO: B기간에 비해 A기간의 수주량(독립업무) 또는 배정된 유급 디자인 업무량(직원)은 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How did your commissioned work as an independent worker, or assigned paid design work as an employee, change from period B to period A?</li>
+<li>기존 응답: □ 크게 감소 □ 다소 감소 □ 거의 동일 □ 다소 증가 □ 크게 증가 □ 비교불가 □ 기억하기 어려움</li>
+<li>판정: 보류: 외부 계약 수요와 직원 배정량은 다른 지표. 동일 원척도 미확인.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW2_EMP</h3>
+<ul>
+<li>기존 KO: 직원·겸업: B기간과 A기간 각각 실제 지급받은 디자인 업무의 세전 급여·상여 합계는 얼마입니까?</li>
+<li>EN (researcher translation, not a source item): What was the total pretax salary and bonuses actually paid to you for design work in each of periods B and A?</li>
+<li>기존 응답: B: <strong><em>_원 / A: </em></strong>_원. 각 기간 모름·분리불가·응답거절 가능</li>
+<li>판정: 보류: 금액 질문 자체는 사용 가능하나 기간 모듈 제외에 따라 본문 제외. 동일 AI 변화 원척도 없음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW2_IND</h3>
+<ul>
+<li>기존 KO: 독립업무·겸업: B기간과 A기간 각각 실제 수령한 디자인 업무대금에서 그 기간 지출한 사업경비를 뺀, 개인소득세 차감 전 본인 귀속 금액은 얼마입니까?</li>
+<li>EN (researcher translation, not a source item): For each of periods B and A, what design payments did you actually receive, less business expenses paid, before personal income tax, attributable to you?</li>
+<li>기존 응답: B: <strong><em>_원 / A: </em></strong>_원. 적자·0 가능. 각 기간 모름·분리불가·응답거절 가능</li>
+<li>판정: 보류: 현금수령·경비·개인귀속 정의의 연구자 설계. 같은 AI 변화 원척도 없음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>REW3</h3>
+<ul>
+<li>기존 KO: 준비·수정 등 무급활동을 포함한 실제 디자인 업무 총투입시간은 각 기간 얼마입니까?</li>
+<li>EN (researcher translation, not a source item): What were your total design-work hours, including unpaid preparation and revisions, in each period?</li>
+<li>기존 응답: B: <strong><em>_시간 / A: </em></strong>_시간. 각 기간 모름·응답거절 가능</li>
+<li>판정: 보류: 두 기간 입력을 사용하지 않음.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>BG7</h3>
+<ul>
+<li>기존 KO: B기간부터 A기간까지 업무·소득 비교에 영향을 줄 만한 일이 있었습니까? 복수선택</li>
+<li>EN (researcher translation, not a source item): Were there events between periods B and A that could affect comparisons of your work and income? Select all that apply.</li>
+<li>기존 응답: □ 이직·직무변경 □ 휴직·장기휴가 □ 근로형태 변경 □ 승진·정기 급여조정 □ 주요 고객·프로젝트 변경 □ 일회성 상여·대금정산 □ 유급 업무시간 변화 □ 해당없음 □ 기타 ____ □ 응답거절</li>
+<li>판정: 보류: B/A기간 제거. 차후 경쟁설명 질문으로 재설계 가능; 이번에 자동 추가 안 함.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>BG9</h3>
+<ul>
+<li>기존 KO: §11의 업무·소득·시간 변화를 답할 때 어떤 자료를 참고했습니까?</li>
+<li>EN (researcher translation, not a source item): What information did you rely on when reporting changes in work, income, and hours in Section 11?</li>
+<li>기존 응답: □ 주로 기록 참고 □ 주로 기억으로 추정 □ 기록과 기억을 함께 사용 □ §11 미응답</li>
+<li>판정: 보류: 직접 금액·시간 비교 모듈 제거. 귀인 확신과 기록 사용 여부는 다른 질문.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>OPP1</h3>
+<ul>
+<li>기존 KO: 전문성을 발휘할 수 있는 디자인 프로젝트를 제안받거나 배정받을 기회는 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How have your opportunities to be offered or assigned design projects that use your expertise changed?</li>
+<li>기존 응답: 미채택·원문 근거 미확보</li>
+<li>판정: 미채택 유지: 동일 원척도 미확인. 고용가능성/구직 자신감으로 대체하면 구성개념 변경.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>OPP2</h3>
+<ul>
+<li>기존 KO: 디자인 업무에서 더 큰 책임을 맡는 역할을 제안받을 기회는 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How have your opportunities to be offered greater responsibility in design work changed?</li>
+<li>기존 응답: 미채택·원문 근거 미확보</li>
+<li>판정: 미채택 유지: 승진 기대·경력만족과 실제 역할기회 변화는 다름.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h3>OPP3</h3>
+<ul>
+<li>기존 KO: 새로운 고객 또는 협업 파트너와 유급 디자인 업무를 시작할 기회는 어떻게 달라졌습니까?</li>
+<li>EN (researcher translation, not a source item): How have your opportunities to begin paid design work with new clients or collaborators changed?</li>
+<li>기존 응답: 미채택·원문 근거 미확보</li>
+<li>판정: 미채택 유지: 직원·프리랜서 적용성 다름, 원척도 미확인.</li>
+<li>근거 상태: R. 동일한 원문 항목 미확인.</li>
+</ul>
+<h2>5. 이번 추가 리서치로 보완된 것과 남은 것</h2>
+<h3>5.1 OECD 공식 원설문 — 신규 PDF 저장, 실제 질문 확인</h3>
+<p><a href="https://www.oecd.org/en/about/projects/aisurveysofemployersandworkers.html">공식 프로젝트 페이지</a>에서 Worker questionnaire 링크를 따라 PDF를 확보했다. 원문33쪽. 프로젝트 페이지는2022조사 및2026반복조사를 소개하지만 PDF 자체 연도는 미표기이므로 이번 파일을 특정연도 개정판으로 단정하지 않았다.</p>
+<ul>
+<li><strong>Q032, PDF p.12:</strong> 개인 업무성과에 대한 AI의 지각된 변화. 개선·악화·무영향·모름을 모두 허용한다. CHG_AI_PERF 후보로 영한 번안. 시간·수행량·품질 세 문항의 검증척도는 아님.</li>
+<li><strong>Q073 첫행, PDF p.27:</strong> 자신의 일부 기술 가치가 낮아졌다는 경험 평가. SKILL_VALUE 후보로 영한 번안. 앞으로의 위협 예상이나 실제 역량 저하 측정과 다르다.</li>
+<li>Q057 p.20은 미래 산업임금 전망. 현재 본인의 소득 영향 질문을 대신할 수 없다.</li>
+<li>p.2의 대상은 직원이며 자영업자 제외. GenAI·디자이너·프리랜서로 확장할 때 문항 이해와 측정 동등성을 별도로 검토한다.</li>
+<li>기관의 실제 설문 문항 근거이지 여러 문항을 합산하는 검증된 잠재척도의 근거는 아니다.</li>
+</ul>
+<h3>5.2 EXP — 추가 출판사 본문을 확인했지만 원응답지 문제는 남음</h3>
+<p>Peeters et al.(2020), Measures—Human capital을 확인했다. 저자들은15개 중9개를 사용하고 일부 문항의 응답앵커 차이와 측정적합성을 논의한다. 하나의 예시 앵커가 있다는 점만으로 우리5개 전체 원응답지를 확보했다고 할 수 없다. <strong>EXP5 포함 문항별 정확한 앵커·원설문은 미확보</strong>로 유지한다. 전문성 대신 근속연수만 넣으면 다른 변수로 바뀌므로 임의 교체하지 않았다.</p>
+<h3>5.3 계약단가·협상·기회 — 조사 사례와 원척도는 구분</h3>
+<p>Write the Docs2025 공식보고서는 계약자의 현재 시급·일급·월단가를 통화와 함께 구분하고 대표 단가를 답하게 한다. 이는 REW4의 단가 단위·세금 안내를 구체화하는 참고 사례다. 그러나 AI 때문에 단가가 어떻게 변했는지, 협상력이 약화됐는지, 더 좋은 프로젝트 기회가 늘었는지에 대한 검증척도는 아니다.</p>
+<p>검색에서 발견한 업체 템플릿, 홍보성 AI 수입 조사, 학생 고용가능성 척도는 직접 대체근거로 채택하지 않았다. ‘다른 논문이 있다’는 이유만으로 현재 개념에 맞지 않는 문항을 덧붙이지 않았다. <strong>REW5 협상기회/협상력 및 OPP1–3의 정확한 대응 원척도는 이번에도 미확인</strong>이다.</p>
+<h3>5.4 ACT — 기존 두 직접 자료를 항목 수준에서 연결</h3>
+<ul>
+<li>ACT1 기획: Luo Table4의 목표·설계계획 관련 활동, 국내조사4-6 기획전략에 연결. 현재 문장 자체 원문은 아님.</li>
+<li>ACT2 탐색: 국내조사의 시장조사·아이디어 도출 및 Luo 본문의 brainstorming 사례에 연결. 참고활동 범주이지 검증된 탐색 잠재척도 아님.</li>
+<li>ACT3 제작: Luo Table4 항목14의 매체별 자료개발,19의 프로토타입 제작; 국내조사 시안제작.</li>
+<li>ACT4 수정: Luo Table4 항목8의 콘텐츠 선택·수정. 수정만 따로 분리한 현재 문항은 재구성.</li>
+<li>Luo는26활동별4범주 빈도, 국내조사는활용/계획 복수선택. 현재4활동별30일 사용일수는 어느 원문과도 동일하지 않다. 원형에 가까운4범주로 바꿀 수도 있으나 이번에는 기존응답방식을 자동변경하지 않았다.</li>
+</ul>
+<h2>6. 대안·반대 결과·미확인 사항</h2>
+<p><strong>안 A(이번 기본안):</strong> 핵심50+ACT4+소득영향1. 소득은 관찰지표로 분리하고 기간별 전후설계는 사용하지 않는다. 핵심 이론모형과 성과·소득영향 조합을 보되 둘을 자동으로 한 PLS잠재모형에 넣지 않는다.</p>
+<p><strong>안 B(선택 보완):</strong> 종합성과 변화가 필요하면 CHG_AI_PERF를 추가/선택한다. 기술 가치하락 경험이 별도 연구질문이면 SKILL_VALUE를 검토한다. 각각 TP·THR·EXP와 개념·역할이 다르므로 자동 합산하지 않는다.</p>
+<p><strong>반대 결과도 허용:</strong> AI와 소득이 함께 증가하거나, 노동시간은 줄고 소득은 유지되거나, 생산성 기여를 높게 평가하면서 소득 감소를 보고할 수 있다. 이 설문만으로 객관적인 소득 정체나 AI의 분배 인과효과를 확정할 수 없다. 무영향은 다른 원인에 의한 소득 증가·감소와 양립한다.</p>
+<p><strong>미확인:</strong> EXP 전체 원앵커, 현 프리랜서 번안의 동등성, 국내 공인 한국어판 여부, 저작권자별 사용·번안 허가, USE의 제작활용 포괄성, 현재 GAIL·EXP 조절경로의 직접 이론근거, 표본검정력 및 범주형 결과 추정법. 개인정보·동의 빈칸과 모집대상도 확정 전이다.</p>
+<h2>7. 출처·위치·검증 명세</h2>
+<h3>S01 · Zhang, X., Yu, P., &amp; Ma, L. (온라인2025; 최종권호2026). How and when generative AI use affects employee incremental and radical creativity: an empirical study in China. European Journal of Innovation Management, 29(3), 702–727.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1108/EJIM-04-2024-0466">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.9,11; Table1 WAU1–4.</li>
+<li>적용·상태: 4문항·7점 직접 확인. 원전 계보 Zhang2019/Sun2022의 최초 척도 전문은 이번 미확보. GenAI 적용문항의 직접 출처는 이 논문.</li>
+</ul>
+<h3>S02 · Bindl, U. K., Unsworth, K. L., Gibson, C. B., &amp; Stride, C. B. (2019). Job Crafting Revisited: Implications of an Extended Framework for Active Changes at Work. Journal of Applied Psychology.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1037/apl0000362">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.7,9 / 인쇄611,613; Table2.</li>
+<li>적용·상태: 촉진TC4·SC4. 원5점 정도·지난1주. 저작권·번안 사용조건 별도 확인 필요.</li>
+</ul>
+<h3>S03 · Torkzadeh, G., &amp; Doll, W. J. (1999). The development of a tool for measuring the perceived impact of information technology on work. Omega, 27, 327–339.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · </p>
+<ul>
+<li>확인 위치: PDF pp.4,6 / 인쇄330,332; Table2 P1–3.</li>
+<li>적용·상태: 지각된 IT 생산성기여3. application→GenAI, 5→7은 번안.</li>
+</ul>
+<h3>S04 · Janssen, O. (2000). Job demands, perceptions of effort–reward fairness and innovative work behaviour. Journal of Occupational and Organizational Psychology, 73, 287–302.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · </p>
+<ul>
+<li>확인 위치: PDF p.6 / 인쇄292; Measures.</li>
+<li>적용·상태: IWB9 직접 확인. 7점 빈도. 원문의 스캔문자 diYcult 등은 정상 철자로 복원, 문구는 유지.</li>
+</ul>
+<h3>S05 · Van der Heijden, B. I. J. M., Notelaers, G., Peters, P., Stoffers, J., De Lange, A. H., Froehlich, D., &amp; Van der Heijde, C. M. (2018). Development and validation of the short-form employability five-factor instrument. Journal of Vocational Behavior, 106, 236–248.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1016/j.jvb.2018.02.003">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.6,12 / 인쇄240,246; AppendixA.</li>
+<li>적용·상태: 원번호2,3,6,9,12. 문항별 전체 원앵커 미확보. 2006 PDF029 p.27과 대응 확인.</li>
+</ul>
+<h3>S06 · Liu, X., Zhang, L., &amp; Wei, X. (2025). Generative Artificial Intelligence Literacy: Scale Development and Its Effect on Job Performance. Behavioral Sciences, 15(6), 811.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.3390/bs15060811">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF p.12 Table2; pp.22–23.</li>
+<li>적용·상태: 17문항5차원. 원문 AI는 GenAI 정의. CC BY; 출처·변경 표시. AI-generated item이라는 생성과정과 후속 실증검증을 구분.</li>
+</ul>
+<h3>S07 · Brougham, D., &amp; Haar, J. (2018). Smart Technology, Artificial Intelligence, Robotics, and Algorithms (STARA): Employees’ perceptions of our future workplace. Journal of Management &amp; Organization.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1017/jmo.2016.55">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.7–8 / 인쇄245–246; Table1.</li>
+<li>적용·상태: STARA awareness4. 대체가능성1+걱정3. GenAI·프리랜서 적용의 별도 검토 필요.</li>
+</ul>
+<h3>S08 · Humlum, A., &amp; Vestergaard, E. (2025; 2026-03-13 개정 저장본). Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI. NBER Working Paper 33777.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://www.nber.org/papers/w33777">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF p.124 / 부록75 Q12–14; pp.33–34 §3.5.</li>
+<li>적용·상태: 공개된 영문 설문은 English Translation, 실제 덴마크어 대응은 p.129. Q14a 개인소득영향3범주. 다문항 보상척도·동료심사 완료 논문은 아님.</li>
+</ul>
+<h3>S09 · Luo, T., Muljana, P. S., Ren, X., &amp; Young, D. (2025; 온라인2024). Exploring instructional designers’ utilization and perspectives on generative AI tools: A mixed methods study. Educational Technology Research and Development, 73, 741–766.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1007/s11423-024-10437-y">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.9–10 / 인쇄749–750; Table4.</li>
+<li>적용·상태: 교육설계 활동26개·사용4범주. ACT4 동일 원척도 아님.</li>
+</ul>
+<h3>S10 · 디자인·문화콘텐츠 ISC. 2024 디자인 산업분야 생성형 AI 활용 인력실태 및 교육훈련 수요 조사.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · </p>
+<ul>
+<li>확인 위치: PDF p.68 질문4-6~4-8; p.73 질문12.</li>
+<li>적용·상태: 원문 언어 한국어. 디자인활동/도입후 사업체효과 근거; 개인소득 척도 아님.</li>
+</ul>
+<h3>S11 · OECD. Worker questionnaire. 공식 프로젝트 페이지에 연결된 공개본, 열람2026-10-03; PDF 자체 발행연도 미표기.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <span class="dead" title="원문 PDF는 비공개">공식 링크</span></p>
+<ul>
+<li>확인 위치: PDF p.12 Q032; p.27 Q073; p.20 Q057.</li>
+<li>적용·상태: 새 원문 저장. Q032 성과영향·Q073 기술가치하락. Q057은 미래10년 산업임금 전망이라 소득경험 대체 불가. 직원 대상, 자영업자 선별 제외. 다문항 구성타당성 검증척도로 주장하지 않음.</li>
+</ul>
+<h3>S12 · Peeters, E. R., Akkermans, J., &amp; De Cuyper, N. (2020). The Only Constant Is Change? Movement Capital and Perceived Employability. Journal of Career Assessment.</h3>
+<p><a href="https://journals.sagepub.com/doi/10.1177/1069072720918195">공식 링크</a></p>
+<ul>
+<li>확인 위치: Measures—Human capital.</li>
+<li>적용·상태: 출판사 본문 확인. 직업전문성9개 선택·응답앵커 문제 논의. 현재5개 모든 앵커의 원응답지를 제공하지 않아 EXP 미확보 해소로 처리하지 않음.</li>
+</ul>
+<h3>S13 · Write the Docs. Documentation Salary Survey Results 2025.</h3>
+<p><a href="https://www.writethedocs.org/surveys/salary-survey/2025/">공식 링크</a></p>
+<ul>
+<li>확인 위치: Contractor rates—What we asked.</li>
+<li>적용·상태: 공식 조사보고서 본문 확인. 현재 시급/일급/월단가와 통화를 구분하는 사례. AI 이후 계약단가 변화·협상력 검증척도 아님. 원문 PDF 신규 확보 아님.</li>
+</ul>
+<h3>S14 · Van der Heijde, C. M., &amp; Van der Heijden, B. I. J. M. (2006). A competence-based and multidimensional operationalization and measurement of employability.</h3>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1002/hrm.20119">공식 링크</a></p>
+<ul>
+<li>확인 위치: PDF pp.8,27 / 인쇄456,475.</li>
+<li>적용·상태: EXP 근원 문항 확인용. 현재5개 정확한 전체 원앵커 미확보 유지.</li>
+</ul>
+<h2>8. 검토 범위와 사용조건</h2>
+<p>이번에는 관련 표·척도·설문 부록과 지정 출판사 본문을 직접 재확인했다. 모든 논문의 전문을 정독하거나 척도 저자에게 원설문·허가를 요청한 것은 아니다. 웹에서 확인한 추가 자료는 원문과 위치를 기록했고 OECD PDF만 새로 다운로드했다. 저장된 기존 PDF와 이전 설문은 수정하지 않았다.</p>
+<p>영문 원문은 사용자 보유 자료의 연구용 대조를 위한 발췌다. 줄바꿈·스캔 오인식 철자만 정상화했다. 특히 APA/상용출판사 자료는 공개 웹사이트 재배포 전에 사용·번안 조건을 확인한다. 본 HTML은 로컬 검토용이며 공개 배포용 설문 서비스가 아니다. 영어 역번역·다른 번역자 교차검토·인지면담은 아직 수행하지 않았다.</p>
+</div></body></html>

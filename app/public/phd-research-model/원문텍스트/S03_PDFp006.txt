@@ -1,0 +1,64 @@
+332                       G. Torkzadeh, W.J. Doll / Omega, Int. J. Mgmt. Sci. 27 (1999) 327±339
+
+
+4.1. Purifying items                                           structure was  easy  to  interpret and  corresponding
+                                                         with the four categories described above. The range
+  Twenty four of the thirty-nine items illustrated in      for  factor loading was  0.90  to  0.92  for  task pro-
+Appendix A were eliminated because they had either       ductivity, 0.87 to 0.94 for task innovation, 0.88 to
+a  corrected-item  total  correlation  or  a  correlation      0.94 for customer  satisfaction and 0.94 to 0.96 for
+with  the  observer  criterion  less  than  0.70. About     management    control.   The    four-factor   model
+90% of eliminated items failed both criteria and the      explained 89.9% of the variance.
+remainder  failed  (about  equally)  either  corrected-         Finally, to assess criterion-related validity, the rec-
+item  correlation  or  correlation  with  the  criterion.     ommended scales for the four constructs were corre-
+Reliability  analysis  resulted  in  further  deletion  of      lated  with  the  observer  criterion  scores  for  each
+three items: coecient alpha for the task innovation      construct. The correlations for each construct and its
+items could be improved  if one item was  deleted,      corresponding observer criterion score were 0.90 for
+coecient  alpha   for  management  control  items      task productivity, 0.89 for task innovation, 0.84 for
+could  be  improved   if  two  items  were  deleted.     customer satisfaction and 0.91 for management con-
+Table 2 reports the corrected-item total correlations       trol. These  correlations are signi®cant  at p < 0.001.
+and correlations with the observer  criterion for the     Each observer criterion is more correlated with its cor-
+remaining 12 items. Coecient alpha for each con-      responding scale than  it  is with the scales measuring
+struct  is also provided  in Table  2. Once the items      the other constructs.
+were  puri®ed  and  reliability  was  established,  the       These pilot study methods enabled the researchers to
+construct validity of the four scales was examined.         verify that the four dimensions of information techno-
+                                                                 logy's impact on work made sense in terms of the end-
+4.2. Construct validity results                                   user's work  context. The  high  correlation between
+                                                           observer ratings and end-user responses support the
+  The  factor  analysis of the items  indicated  unidi-      contention that these impacts of technology on work
+mensionality of each construct. There were no mul-     can be veri®ed by trained observers as well as user re-
+tiple loadings for any category. The ratio of sample      sponse data. Thus, pilot study resulted in a 12-item
+size  to number  of  items  (7.4:1)  was  lower  than      instrument that operationalizes four constructs (task
+accepted standard (10:1), but considered adequate for      productivity,  task  innovation,  customer  satisfaction
+exploratory  analysis  at  the  pilot  stage. The  factor     and management control).
+
+
+
+Table 2
+Measures of application impact on work (n=89)
+
+                                                                              Corrected item total          Correlation with
+                                                                                      correlation                     criterion
+
+Task productivity (alpha=0.90)
+P1             this application saves me time                                        0.83                          0.80
+P2             this application increases my productivity                            0.80                          0.84
+P3             this application allows me to accomplish more work than             0.76                          0.82
+           would otherwise be possible
+
+
+Task innovation (alpha=0.95)
+I1             this application helps me create new ideas                            0.93                          0.85
+I2             this application helps me come up with new ideas                    0.91                          0.82
+I3             this application helps me try out innovative ideas                     0.82                          0.86
+
+
+Customer satisfaction (alpha=0.94)
+C1             this application improves customer service                            0.92                          0.80
+C2             this application improves customer satisfaction                       0.89                          0.81
+C3             this application helps me meet customer needs                        0.84                          0.78
+
+
+Management control (alpha=0.97)
+M1            this application helps management control the work process          0.94                          0.86
+M2            this application improves management control                        0.93                          0.88
+M3            this application helps management control performance               0.91                          0.90

@@ -1,0 +1,69 @@
+B.I.J.M. Van der Heijden et al.                                                                                  Journal of Vocational Behavior 106 (2018) 236–248
+
+
+3.2. Measures
+
+
+   Employability was assessed with Van der Heijde and Van der Heijden's (2006) measurement instrument which has proven to have
+sound psychometric qualities (see also Van der Heijden & Bakker, 2011; Van der Heijden, De Lange, Demerouti, & Van der Heijde,
+2009). The full instrument includes ﬁve sub-scales measuring: occupational expertise (15 items); anticipation and optimization (8
+items); personal ﬂexibility (8 items); corporate sense (7 items); and balance (9 items) (see Van der Heijde & Van der Heijden, 2006 for
+the full item list and see Appendix A for the short-form ﬁnal measurement instrument). The item sets were all scored on a six-point
+rating scale. Example items were: “I consider myself … competent to weigh up and reason out the ‘pros’ and ‘cons’ of particular
+decisions of working methods, materials, and techniques in my job domain” (occupational expertise) (answering categories ranging
+from “not at all” to “extremely” and Cronbach's alpha (α) ranging from 0.75 to 0.87 across the diﬀerent samples); “I consciously
+devote attention to applying my newly acquired knowledge and skills” (anticipation and optimization) (answering categories ranging
+from “never” to “very often” and α ranging from 70 to 0.80; “I adapt to developments within my organization …” (personal ﬂexibility)
+(answering categories ranging from “very badly” to “very well” and α ranging from 0.74 to 0.81; “In my organization, I take part in
+forming a common vision of values and goals” (corporate sense) (answering categories ranging from “never” to “very often” and α
+ranging from 0.72 to 0.83; and “The time I spend on my work and career development on the one hand and my personal development
+and relaxation on the other are … evenly balanced” (balance) (answering categories ranging from “not at all” to “to a considerable
+degree” and α ranging from 0.63 to 0.79. Moreover, elaborate tests of the psychometric aspects of the two nominal identical versions
+of the instrument (self-report and supervisor version) that have been developed (see Van der Heijde & Van der Heijden, 2006), that is,
+reliability and validity, testing convergent-, discriminant- and predictive validity (for career success) have yielded very promising
+results (see Van der Heijde & Van der Heijden, 2006; Van der Heijden et al., 2005).
+   Next, we will highlight the measures of the criterion variables in the order of the samples presented in this article. In Data set C,
+two criterion variables were used. Aﬀective commitment was measured using the widely adopted eight-item scale by Allen and Meyer
+(1990). The respondents had to indicate on a ﬁve-point Likert scale to which extent they agreed with the statements (with scale
+anchors ranging from “totally disagree” to “totally agree”). The two following items had low factor loadings and substantially
+decreased the psychometric qualities of the measure: “I think that I could easily become as attached to another organization as I am to
+this one” and “I do not feel a ‘strong’ sense of belonging to my organization.” Therefore, these items were eliminated from further
+analyses. The remaining six items had suﬃcient reliability with Cronbach's alpha being 0.75. Individual performance was measured
+with the self-assessment scale from Goodman and Svyantek (1999). Example items were: “You achieve the criteria for performance”
+and “You achieve the goals” (with ﬁve scale anchors ranging from “complete disagree” to “completely agree”). Cronbach's alpha was
+0.85.
+   In Data set D, innovative work behavior was included as the criterion variable. It was measured by using the thoroughly validated
+scale developed by Janssen (2000). In this nine-item scale, three items referred to idea generation, three to idea promotion, and three
+to idea realization. To prevent common-method bias, the supervisor ratings were used in our analyses. Examples for the supervisor
+ratings were: “This worker creates new ideas for improvements” (idea generation; α = 0.90); “This worker mobilizes support for
+innovative ideas” (idea promotion; α = 0.92); and “This worker transforms innovative ideas into useful applications” (idea reali-
+zation; α = 0.90). The items were scored using a seven-point rating scale with a response format ranging from “never” to “always.”
+    Finally, in Data set E, subjective career success was incorporated as the criterion variable. It was measured with Gattiker and
+Larwood's (1986) instrument, consisting of the following ﬁve sub-scales: job satisfaction (8 items, α = 0.67), interpersonal success (4
+items, α = 0.58), ﬁnancial success (3 items, α = 0.68), hierarchical success (4 items, α = 0.61), and life success (4 items, α = 0.67).
+The ﬁrst four components comprise organizational success, while the ﬁfth dimension comprises non-organizational success. Examples
+items were: “I am receiving positive feedback about my performance from all quarters” (job satisfaction); “I am respected by my
+peers” (interpersonal success); “I am drawing a high income compared to my peers” (ﬁnancial success); “I am pleased with the
+promotions I have received so far” (hierarchical success); “I am satisﬁed with my life overall” (life success). All items were scored
+using a ﬁve-point rating scale with a response format ranging from “disagree completely” to “agree completely.”
+
+
+3.3. Analyses
+
+
+  We used list-wise deletion in Mplus. Hence, individuals who had a missing on any one of the indicators were omitted from all
+further analyses. With respect to kurtosis and skewness, Mplus provides a simple piece of information, that is the scaling factor
+(Muthén & Muthén, 2013). If the scaling factor to correct the χ2 is close to 1, the multivariate normality assumption is not violated.
+The scaling factor to correct for the χ2 was 1.1682, 1.1620, and 1.0711 for, respectively, Data set C, Data set D, and Data set E.
+   Following Jöreskog and Sörbom (2001), we ﬁrst studied the exact ﬁt, that is, the chi-square (χ2) statistic using Mplus 7.11
+(Muthén & Muthén, 2013). As a perfect ﬁt is rarely obtained, Jöreskog and Sörbom advise to use an approximate ﬁt measure.
+Therefore, we incorporated the RMSEA, (P)RMSEA, CFI and TLI and the SRMR as well. The RMSEA is a measure of the average
+standardized residual per degree of freedom and values below 0.08 can be considered as favorable (Browne & Cudeck, 1993). The (P)
+RMSEA is a one-sided test of the null hypothesis stating that the RMSEA equals 0.05, comprising a close-ﬁtting model. If the p
+is > 0.05 (i.e., not statistically signiﬁcant), it can be concluded that the ﬁt of the model is “close” (Kenny, 2014). The CFI (Com-
+parative Fit Index) and TLI (Tucker-Lewis Index) are measures of the relative improvement in ﬁt of the hypothesized model compared
+with the null model and values above 0.90 can be considered favorable (Hu & Bentler, 1999; Medsker, Williams, & Holahan, 1994).
+The SRMR is a measure of the average absolute correlation residual and values below 0.10 are considered to be appropriate (Kline,
+2005). Finally, we also used descriptive measures to assess the ﬁt of the speciﬁc factor structure. Because of concerns about non-
+
+                                                               240

@@ -1,0 +1,28 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='400' viewBox='0 0 1000 400' font-family='Apple SD Gothic Neo, Noto Sans KR, sans-serif'>
+<defs>
+<marker id='a' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#15191B'/></marker>
+<marker id='m' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#A0402B'/></marker>
+<marker id='g' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='8' markerHeight='8' orient='auto'><path d='M0,0L10,5L0,10z' fill='#98A2A3'/></marker>
+</defs>
+<rect width='1000' height='400' fill='#FFFFFF'/>
+<text x='30' y='38' font-size='20' font-weight='700' fill='#15191B'>연구 2 — 직업 위협 인식 → 생성형 AI 사용 → 스킬 크래프팅 (GAIL 조절)</text>
+<rect x='40' y='185' width='160' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='120.0' y='212.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>직업 위협 인식</text><text x='120.0' y='231.0' text-anchor='middle' font-size='12' fill='#15191B'>THR (STARA)</text>
+<rect x='420' y='185' width='160' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='500.0' y='212.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>생성형 AI 사용</text><text x='500.0' y='231.0' text-anchor='middle' font-size='12' fill='#15191B'>GAIUSE (=USE)</text>
+<rect x='800' y='185' width='160' height='60' rx='8' fill='#DCEAE8' stroke='#116260' stroke-width='2'/><text x='880.0' y='212.0' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>스킬 크래프팅</text><text x='880.0' y='231.0' text-anchor='middle' font-size='12' fill='#15191B'>SC (촉진형)</text>
+<rect x='225' y='75' width='150' height='55' rx='8' fill='#F0E2DD' stroke='#A0402B' stroke-width='2'/><text x='300.0' y='99.5' text-anchor='middle' font-size='15' font-weight='700' fill='#15191B'>생성형 AI 리터러시</text><text x='300.0' y='118.5' text-anchor='middle' font-size='12' fill='#15191B'>GAIL</text>
+<line x1='200' y1='215' x2='418' y2='215' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<line x1='580' y1='215' x2='798' y2='215' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<line x1='300' y1='130' x2='300' y2='211' stroke='#A0402B' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#m)'/>
+<path d='M120,245 C120,320 880,320 880,247' fill='none' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4' marker-end='url(#g)'/>
+<text x='500' y='315' font-size='12' fill='#7E888A' text-anchor='middle'>THR → SC 직접경로 (분석 포함)</text>
+<text x='360' y='235' font-size='12' fill='#116260' text-anchor='middle'>H1</text>
+<text x='690' y='205' font-size='12' fill='#116260' text-anchor='middle'>H2</text>
+<text x='312' y='165' font-size='11' fill='#A0402B' text-anchor='start'>H3 (THR×GAIL)</text>
+<text x='30' y='348' font-size='12' fill='#4B5558' text-anchor='start'>분석에는 포함, 그림에서 생략: GAIL→GAIUSE 주효과, EXP→SC(후보). 조절 방향은 미확정</text>
+<line x1='30' y1='380' x2='70' y2='380' stroke='#15191B' stroke-width='2' marker-end='url(#a)'/>
+<text x='80' y='384' font-size='12' fill='#4B5558' text-anchor='start'>제안 경로</text>
+<line x1='260' y1='380' x2='300' y2='380' stroke='#A0402B' stroke-width='2' stroke-dasharray='5 4' marker-end='url(#m)'/>
+<text x='310' y='384' font-size='12' fill='#4B5558' text-anchor='start'>조절 (1단계 조절매개)</text>
+<line x1='490' y1='380' x2='530' y2='380' stroke='#98A2A3' stroke-width='2' stroke-dasharray='6 4' marker-end='url(#g)'/>
+<text x='540' y='384' font-size='12' fill='#4B5558' text-anchor='start'>통제·직접 경로</text>
+</svg>

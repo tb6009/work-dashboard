@@ -1,0 +1,165 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>연구모형 간결화 결정안 v0.1</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 04_연구모형_간결화_결정안_v0.1.md · 2026-10-03 09:39</div><h1>연구모형 간결화 결정안 v0.1</h1>
+<ul>
+<li>작성일: 2026-10-03</li>
+<li>기준: <code>AI크래프팅_경로모형.md</code>, 질문지 정합성 검토, 신규 인지부하 PDF 5편, 김청 교수님 3회차 면담 전사</li>
+<li>상태: <strong>검토용 제안</strong>. 기존 최종 경로모형을 변경하지 않았다.</li>
+</ul>
+<h2>결론</h2>
+<p>박사논문 또는 우선 투고할 <strong>한 편의 논문</strong>은 한 문장으로 답할 수 있어야 한다.</p>
+<blockquote>
+<p>디자이너의 업무상 생성형 AI 사용은 자발적인 과업 재설계와 관련되며, 그 재설계는 혁신적 업무행동과 관련되는가?</p>
+</blockquote>
+<p>우선 분석모형은 <code>AI 사용(USE) → 과업 크래프팅(TC) → 혁신적 업무행동(IWB)</code>의 <strong>3개 핵심 구성개념</strong>으로 줄인다. <code>USE → IWB</code> 직접 경로를 함께 두어 매개를 검토한다. 생성형 AI 활용 역량(GAIL)은 근거와 표본 크기가 충분할 때만 <strong>한 개의 조건변수</strong>로 추가한다. 실제 자료를 보고 유의한 경로만 사후 선택하지 않도록 주분석과 탐색분석을 조사 전에 문서화한다.</p>
+<pre><code class="language-text">업무상 생성형 AI 사용 ──→ 과업 크래프팅 ──→ 혁신적 업무행동
+          └───────────────────────────────→
+
+확장 검증: 생성형 AI 활용 역량이 첫 번째 화살표를 바꾸는가?
+</code></pre>
+<h2>왜 이렇게 줄이는가</h2>
+<ol>
+<li><strong>하나의 행동 메커니즘:</strong> 현재 1편은 TC와 SC를 병렬로 두고 TV·SV까지 연결한다. 이 중 <code>TC→TV</code>, <code>SC→SV</code>는 신규 문헌에서도 직접 근거가 부족하고, WDQ는 변화량이 아닌 현재 다양성 수준을 측정한다.</li>
+<li><strong>의미 있는 결과:</strong> 교수님은 업무·기술 종류가 늘어나는 데서 끝나면 실무적 함의가 약하다고 지적했다. 현재 확보한 척도 중 혁신적 업무행동(IWB)은 성과와 가장 가까운 결과 후보이지만 <strong>객관적 성과와 동일하지는 않다</strong>. 논문에서 정확한 변수명을 사용한다.</li>
+<li><strong>인지부하의 위치:</strong> 새 논문에서 AI는 정보과부하를 높이기도 하고, 과업 지원 방식에 따라 정신적 부담을 낮추기도 한다. 이는 별도의 <code>AI 사용–정보처리–성과</code> 연구질문에 적합하다. 현재 2편의 <code>TV·SV→LOAD</code>를 직접 검증한 근거는 아니다.</li>
+<li><strong>측정 가능한 것만 주경로에:</strong> AAX는 위협 인식·불안 정서가 섞여 있고, REW는 고용형태에 따라 의미가 달라지며, PSY는 팀 수준과 프리랜서 표본이 충돌한다. 이들을 우선 모형에 억지로 넣지 않는다.</li>
+</ol>
+<h2>대안 두 가지와 선택 기준</h2>
+<table>
+<thead>
+<tr>
+<th>안</th>
+<th>핵심 구조</th>
+<th>장점</th>
+<th>주의점</th>
+<th>언제 선택하나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. 권장: 사용–과업 재설계–혁신행동</strong></td>
+<td><code>USE→TC→IWB</code>; 필요 시 <code>GAIL×(USE→TC)</code></td>
+<td>디자인 업무에서 AI 사용이 실제 행동으로 이어지는지를 묻고, 실무적 결과로 끝난다</td>
+<td><code>USE→TC</code>의 직접 실증근거를 더 보강해야 한다. IWB는 자기보고 행동이며 성과 전체가 아니다</td>
+<td>연구의 중심이 ‘AI가 디자이너의 일을 어떻게 바꾸는가’일 때</td>
+</tr>
+<tr>
+<td><strong>B. 평가–크래프팅–성과</strong></td>
+<td><code>AI 도전평가→TC→업무성과</code>; AI 지식 조절은 확장</td>
+<td>He et al. (2024)의 원문 실증 경로와 가깝다</td>
+<td>‘실제 AI 사용’이 중심에서 빠지고, 기존 AAX와 도전평가는 다른 구성개념이다</td>
+<td>이론적 근거의 직접성을 최우선할 때</td>
+</tr>
+<tr>
+<td><strong>C. AI의 양면 인지효과</strong></td>
+<td><code>USE→지식획득/정보과부하→업무성과</code></td>
+<td>Shao et al. (2024)의 원문 실증모형과 가깝다</td>
+<td>job crafting 연구라는 정체성이 약해진다</td>
+<td>인지부하를 주제로 별도 논문을 쓸 때</td>
+</tr>
+</tbody>
+</table>
+<p>권장안 A는 <strong>이 연구의 고유 질문에 더 잘 맞는다는 판단</strong>이다. 경로의 실증근거가 가장 강해서 선택한 것은 아니다. 원문근거의 직접성만 보면 B·C가 유리하다. 따라서 A의 선택은 후속 원문 수집과 예비조사 결과에 따라 재평가한다.</p>
+<h2>현재 모형에서 옮길 변수</h2>
+<table>
+<thead>
+<tr>
+<th>변수</th>
+<th>권장 자리</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SC</td>
+<td>보조 분석 또는 후속 논문</td>
+<td>TC와 별개 행동으로 의미가 있으나 병렬 매개를 넣으면 첫 논문의 질문이 두 갈래가 된다. TC를 택할지 SC를 택할지 예비 인지인터뷰에서 디자이너의 업무변화와 맞는 쪽을 확인한다.</td>
+</tr>
+<tr>
+<td>TV·SV</td>
+<td>기술통계 또는 후속 종단연구</td>
+<td>현재 WDQ로는 ‘AI 도입 후 증가’를 측정하지 못한다.</td>
+</tr>
+<tr>
+<td>AAX</td>
+<td>별도 경쟁 선행변수 분석</td>
+<td><code>AAX→USE(+)</code>는 반대 실증근거가 있고 위협 인식과 불안 정서도 구분해야 한다.</td>
+</tr>
+<tr>
+<td>LOAD</td>
+<td>후속 인지효과 논문</td>
+<td>information overload, mental workload, intrinsic/extraneous load의 척도와 해석이 다르다.</td>
+</tr>
+<tr>
+<td>REW</td>
+<td>별도 보상 연구</td>
+<td>보상은 지연과 조직·고용형태의 영향을 받는다. 단일 횡단면 설문에서 성과의 즉각적 결과로 놓기 어렵다.</td>
+</tr>
+<tr>
+<td>EXP</td>
+<td>보정 또는 후속 조절분석</td>
+<td>현재 핵심 경로에서 조절이론이 충분히 특정되지 않았다.</td>
+</tr>
+<tr>
+<td>CC·PSY</td>
+<td>박사 이후 조직근로자 연구</td>
+<td>PSY의 팀 수준 문제와 CC 경로의 방향 불확실성이 남아 있다.</td>
+</tr>
+</tbody>
+</table>
+<h2>설문과 분석은 별도로 설계</h2>
+<p>교수님 면담에서 ‘일단 설문을 시작하고 문항을 보내라’는 요청과 ‘변수가 많다’는 우려가 함께 나왔다. 따라서 다음 순서가 정합적이다.</p>
+<ol>
+<li><strong>주분석을 조사 전에 확정:</strong> 3개 핵심 변수와 3개 기본 경로를 먼저 명시한다. GAIL 조절은 이론·표본·설문 부담을 보고 사전 확장으로 결정한다.</li>
+<li><strong>설문 범위와 주분석 범위를 구분:</strong> 교수님 요청에 따라 후보 구성개념을 폭넓게 수집할 수 있다. 다만 각 모듈의 사용 목적을 미리 적고, 예비조사에서 응답시간·피로·문항 적합성을 확인한다. 수집한 모든 변수를 한 PLS 모형에 넣을 필요는 없다.</li>
+<li><strong>문항의 기준기간을 명확히 설정:</strong> USE와 TC를 지난 1주 또는 지난 1개월 등 어떤 기간에 대해 물을지 결정하고, 결과 IWB는 그 이후 기간의 행동으로 측정하는 것이 좋다.</li>
+<li><strong>조사시점은 가능하면 3개:</strong> T1에 USE·GAIL·기초 정보, T2에 TC, T3에 IWB를 수집한다. 일정상 2시점만 가능하면 T1 USE·GAIL, T2 TC·IWB로 줄이되 매개경로의 시간 순서를 충분히 확인했다고 주장하지 않는다. 한 시점만 가능하면 인과·변화·매개기제 확정 표현을 피하고 관련성으로 보고한다.</li>
+<li><strong>표본 크기는 검정력으로 결정:</strong> 매개와 조절을 모두 시험하려면 예상 효과와 탈락률을 반영해 사전 power 분석 또는 시뮬레이션을 한다. PLS-SEM 사용 자체가 작은 표본과 복잡한 이론을 정당화하지 않는다.</li>
+</ol>
+<h2>결정을 미뤄야 하는 부분</h2>
+<ul>
+<li>TC와 SC 중 무엇이 디자이너의 <strong>핵심 업무변화</strong>를 더 잘 대표하는지: 이론 정의와 디자이너 인지인터뷰 필요.</li>
+<li>IWB의 조직 관련 문항이 프리랜서에게 적합한지: 표본을 조직 소속 디자이너로 한정하거나 문항 적합성을 별도 검증해야 한다.</li>
+<li>USE→TC 직접근거와 GAIL 조절효과의 크기: 현재는 인접·간접 근거가 많다.</li>
+<li>실제 성과자료나 감독자 평가가 가능한지: 가능하면 단일 자기보고 설문보다 연구의 설득력이 높아진다.</li>
+</ul>
+<h2>출처와 점검 위치</h2>
+<ul>
+<li>기준 모형: <code>AI크래프팅_경로모형.md</code> §§1–4, 7</li>
+<li>척도 제약: <code>AI크래프팅_연구모형_질문지·정합성검토_v0.1.md</code> §§1–3</li>
+<li>AI 인지효과: <code>03_AI사용과_인지부하_근거수집_v0.1.md</code> §§2–4</li>
+<li>지도교수 면담: <code>김청교수님 세미나/전사/03_면담_3회차_스크립트_v0.1.md</code> 09:29–12:15, 13:09–15:58</li>
+</ul>
+</div></body></html>

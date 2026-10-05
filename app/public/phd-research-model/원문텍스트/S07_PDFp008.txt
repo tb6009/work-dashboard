@@ -1,0 +1,64 @@
+                                     David Brougham and Jarrod Haar
+
+
+         TABLE 1. RESULTS OF EXPLORATORY FACTOR ANALYSIS FOR SMART TECHNOLOGY, ARTIFICIAL INTELLIGENCE, ROBOTICS,
+                                        AND ALGORITHMS (STARA) AWARENESS
+
+
+        Questions followed the stem ‘Thinking of your current job, please answer the following’ and
+        responses were coded 1 = ‘strongly disagree’, to 5 = ‘strongly agree’                             ITC    FL
+
+
+          1. I think my job could be replaced by STARA                                                  0.536  0.700
+          2. I am personally worried that what I do now in my job will be able to be replaced by STARA      0.756  0.876
+          3. I am personally worried about my future in my organisation due to STARA replacing employees  0.815  0.922
+          4. I am personally worried about my future in my industry due to STARA replacing employees      0.727  0.875
+
+        Eigenvalues                                                                                     2.874
+        Percentage variance                                                                     71.9%
+       Number of items in measures                                                             4 items
+        Cronbach’s α                                                                                      0.85
+
+
+         Note. FL = factor loadings; ITC = corrected item-total correlations (item scores correlated with the sum of all other item
+          scores).
+
+
+      some workplaces and jobs within the next 10 years’. This was then followed by the question stem:
+       ‘Thinking of your current job, please answer the following’. The items asked and analyses are shown in
+       Table 1.
+       To conﬁrm the factor structure, we conducted factor analysis (principal components, varimax
+        rotation) and the 4 items loaded onto a single factor with eigenvalues >1 (2.874) accounted for a
+         sizeable amount of variance (71.9%) and achieved very good reliability (α = 0.85).
+         Corrected item-total correlations were all >0.50, with a mean corrected item-total correlation of
+        0.62, and all factor loadings of all items were >0.50, ranging from 0.700 to 0.922. As these results are
+        similar to the analysis by Allen regarding a new measure created, we argue that ‘the results provided
+       support for the reliability of the measure and indicated that the items were measuring a single global
+        construct’ (2001: 423).
+        The moderator Age was measured in years. Control variables included a range of typical demo-
+        graphic variables: gender (1 = female, 0 = male), education (1 = high school, 2 = technical qualiﬁ-
+        cation, 3 = university degree, 4 = postgraduate qualiﬁcation), ethnicity (1 = white, 0 = nonwhite),
+        organisational tenure (years), and hours worked (per week). Finally, Job Insecurity was measured with
+        a 3-item scale by Armstrong-Stassen (2001), coded 1 = ‘strongly disagree,’ to 5 = ‘strongly agree’.
+     A sample item from this measure is ‘Are you personally worried about your job security?’. The present
+       study found this measure to be robust (α = 0.82). We control for job insecurity because traditional
+        psychological contract theory is one where employees are provided with job security in return for hard
+      work and performance (Virtanen, Kivimäki, Virtanen, Elovainio, & Vahtera, 2003). However, we
+        expect those employees with a greater understanding of STARA to feel less secure about their jobs, as
+       they can see the potential for their job being codiﬁed and automated. In this regard, there is no security
+        for working hard. A designer or programmer may create a robot/algorithm to do what an employee
+       does and then their job is simply replaced.
+
+
+       Analysis
+     We used hierarchical multiple-regression analysis (Cohen & Cohen, 1983) to test the inﬂuence of
+     STARA awareness on job and well-being outcomes. In total, ﬁve models were run, with control
+        variables (gender, education, organisational tenure, hours worked, and job insecurity) entered in
+       Step 1. Step 2 held the STARA awareness construct and Step 3 age (as the moderator). Step 4 held the
+
+
+
+      246                                       JOURNAL OF MANAGEMENT & ORGANIZATION
+
+Downloaded from https://www.cambridge.org/core. IP address: 119.207.180.44, on 20 Sep 2026 at 10:52:29, subject to the Cambridge Core terms of use, available at
+https://www.cambridge.org/core/terms. https://doi.org/10.1017/jmo.2016.55

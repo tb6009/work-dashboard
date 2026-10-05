@@ -1,0 +1,53 @@
+                                                   JOB CRAFTING REVISITED                                     613
+
+
+          Table 2
+          Study 1 – Principal Axis Factor Analysis (Oblimin Rotation) of Job-Crafting Strategies Factors
+
+                                                                                                                     Factor loadings
+
+                                            Item                                   1       2       3       4       5       6       7       8
+
+               I actively took on more tasks in my work.                                        .51      .00      .09      .08      .24      .05      .02      .10
+               I added complexity to my tasks by changing their structure or sequence.           .81      .11      .02      .05      .02      .04      .07      .03
+               I changed my tasks so that they were more challenging.                           .91      .00      .02      .01      .02      .07      .01      .02
+               I increased the number of difficult decisions I made in my work.                  .70      .07      .09      .06      .14      .01      .02      .03
+               I actively reduced the scope of tasks I worked on.                                .17      .58      .11      .19      .10      .09      .07      .03
+               I tried to simplify some of the tasks that I worked on.                             .00      .79      .00      .08      .12      .10      .09      .01
+               I sought to make some of my work mentally less intense.                         .08      .74      .03      .11      .02      .05      .04      .10                Association.               I actively sought to meet new people at work.                                    .05      .00      .81      .07      .06      .04      .06      .05
+               I made efforts to get to know other people at work better.                         .04      .04      .90      .02      .00      .05      .02      .01
+               I sought to interact with other people at work, regardless of how well I
+           knew them.                                                                    .02      .02      .81      .10      .06      .03      .02      .07
+               I tried to spend more time with a wide variety of people at work.                 .06      .00      .86      .03      .00      .06      .05      .05          broadly.                 Psychological        I minimized my interactions with people at work that I did not get along
+               with.                                                                           .15      .04      .04      .72      .04      .13      .06      .02publishers.publishers.           I changed my work so that I only interacted with people that I felt good                     reserved.reserved.alliedalliedAmericanareare     I triedabouttoworkingavoid situationswith.    at work where I had to meet new people.               .04.11      .03.03      .06.12      .78.71      .06.05      .01.03      .04.02      .04.02               disseminated    the        I actively tried to develop wider capabilities in my job.                           .10      .06      .00      .00      .79      .01      .03      .09itsits
+   be         I tried to learn new things at work that went beyond my core skills.               .07      .06      .01      .05      .83      .04      .05      .01ofof
+   to         I actively explored new skills to do my overall job.                               .01      .01      .02      .06      .93      .01      .05      .03
+oneone           I sought out opportunities for extending my overall skills at work.                 .02      .01      .09      .02      .87      .00      .03      .02    notthrough                              technologies,technologies,     I channeled my efforts at work towards maintaining a specific area ofororisgo                expertise.                                                                      .13      .08      .03      .01      .05      .68      .01      .09
+               I sought                       to develop those skills in my job that helped prevent negative work
+              outcomes.    andmustsimilarsimilar     user         I made sure I stayed on top of knowledge in core areas of my job.                .02.01      .00.01      .01.02      .08.00      .07.16      .83.64      .08.01      .06.05
+       andand     I tried to think of my job as a whole, rather than as separate tasks.                .04      .08      .13      .01      .06      .08      .58      .14AssociationAssociationwhole
+   or        I thought about how my job contributed to the organization’s goals.               .08      .07      .11      .08      .11      .19      .51      .06
+               I thought about new ways of viewing my overall job.                             .18      .01      .05      .03      .17      .02      .53      .26             individualparttraining,training,     I thought about ways in which my job as a whole contributed to society.          .01      .09      .15      .05      .12      .07      .56      .19
+    theinAIAI     I focused my mind on the best parts of my job, while trying to ignore those
+                parts I didn’t                                  like.                                                                                              .08      .10      .02      .05      .01      .06      .07      .52PsychologicalPsychologicalof         I assessed                       the different                                 elements of my job to determine which parts were
+             most meaningful.                                                              .07      .09      .04      .00      .00      .08      .19      .71    usecontentmining,mining,
+     this        I tried to think of my job as a set of separate tasks, rather than as a whole.        .08      .01      .07      .11      .10      .09      .33      .48   American    datadataAmerican            Note. N   421. Bold font depicts hypothesized factor loadings. F1   Promotion-oriented task crafting; F2    Prevention-oriented task crafting; F3 thepersonalreuseandand    Promotion-oriented relationship crafting; F4   Prevention-oriented relationship crafting; F5   Promotion-oriented skill crafting, F6   Prevention-orientedthe
+by bythetotexttext     skill crafting, F7   Promotion-oriented cognitive crafting, F8    Prevention-oriented cognitive crafting.
+    for forfor
+    copyrightedsolelyrequestsany       strategies is important. Studies 2 and 3 build from this foundation. In     gaging in these different types and forms of job crafting in thecopyrightedis                     includingincluding     particular, the next two studies more rigorously assess the differenti-     workplace. Finally, Study 3 replicates and extends the differentialis but
+            ation of forms of job-crafting by using confirmatory factor analyses.     relationships of job crafting forms with innovative work performance          intended       cost,rights,rights,    Second, Studies 2 and 3 investigate individuals’ motivation for en-    by showing lagged effects over time.   is   documentno       AllAlldocument at Thisarticle
+This  shared     Table 3     This
+   be      Study 1 – Path Analysis Models, Investigating Forms of Job Crafting as Predictors of Innovative Work Performance
+    may                                                                                                                                                   a                                       Model                                                             2, df                 2,   df       CFI    RMSEA   SRMR
+
+          Model 1: Baseline Model (all variables uncorrelated)                                401.26, 11     —     —    —     —         Content     Model 2: Control variables added                                                  388.72, 8         12.54, 3          .02        .34          .15
+            Introducing direct effects of job crafting on innovative work performance
+          Model 3: Adding direct effects of job crafting on innovative work performance,
+               fixing effects of job-crafting forms (promotion- vs. prevention-oriented) on
+              innovation to be equal                                                             87.70, 7       301.02, 1          .79        .17          .03
+          Model 4: Adding direct effects of job crafting on innovative work performance,
+              with effects of all job-crafting forms on innovation freed to vary                           0, 0         87.70, 7        1.00        .00          .00
+
+            Note. N   421. One-tailed p value tested.
+               a Difference assessed versus previously best model.
+            p    .01.     p    .001.

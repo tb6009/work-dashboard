@@ -1,0 +1,56 @@
+Behav. Sci. 2025, 15, 811                                                                                                        22 of 35
+
+
+
+                                Consistent with standard research ethics, participants were informed of this study’s
+                          purpose and assured of anonymity and data confidentiality. To minimize common method
+                             bias and enhance causal inference validity, a multi-wave survey design was employed.
+                          Data collection occurred in three sequential phases: Phase 1 collected GAIL scale responses
+                       and demographic information (423 responses); Phase 2 collected Creative Self-Efficacy
+                           responses (397 responses); Phase 3 collected Job Performance responses (372 responses).
+                         Response rates were 93.9% (Wave 1–2) and 93.7% (Wave 2–3), with an overall completion
+                               rate of 87.9%. After data screening, 344 valid questionnaires remained for analysis.
+
+                                   4.3. Sample Characteristics
+
+                            The final sample of 344 valid respondents from the Chinese public sector demonstrated
+                             diverse demographic characteristics that reflect the composition of China’s modern public
+                              sector workforce.
+                           Gender and Age Distribution. Regarding gender distribution, 49.71% of the respon-
+                           dents were male, and 50.29% were female, indicating a balanced gender representation. In
+                          terms of age, 20.93% were aged 25 and below, 40.41% were aged 26–35, 25.87% were aged
+                            36–45, 10.76% were aged 46–55, and 2.03% were aged 56 and above. The age distribution
+                        shows that the majority of participants (66.34%) were in the 26–45 age range, representing
+                            the core working population in China’s public sector.
+                                Marital Status and Family Structure. For marital status, 20.64% were single, 22.38%
+                        were in a relationship but unmarried, 14.83% were married without children, and 42.16%
+                        were married with children. This distribution reflects the family structure patterns typical
+                              of Chinese public sector employees, with the majority (56.99%) being married.
+                                Educational Background. In terms of education level, 2.91% held an associate degree
+                            or below, 55.81% had a bachelor’s degree, 33.14% held a master’s degree, and 8.14% held a
+                            doctoral degree. The high educational attainment is notable, with 96.09% of participants
+                           holding bachelor’s degrees or higher, and 41.28% possessing advanced degrees (master’s or
+                               doctoral), reflecting the educational requirements and professional development emphasis
+                           within China’s public sector organizations.
+                                  Professional Experience. Regarding work experience, 22.67% had worked for 5 years
+                            or less, 23.26% for 6–10 years, 27.91% for 11–15 years, 13.95% for 16–20 years, and 12.21%
+                              for over 21 years. This distribution indicates a balanced representation across different
+                              career stages, with the largest group (27.91%) having 11–15 years of experience, suggesting
+                          a mature and experienced workforce.
+                           Income Distribution. Monthly income levels were distributed as follows: 20.64%
+                         earned below 5000 RMB, 42.44% earned between 5000 and 8000 RMB, 31.10% earned be-
+                         tween 8000 and 12,000 RMB, and 5.81% earned above 12,000 RMB. The income distribution
+                                 reflects the salary structure of China’s public sector, with the majority (73.54%) earning
+                        between 5000 and 12,000 RMB monthly, which aligns with the compensation levels for
+                             professional positions in Chinese government institutions and state-owned enterprises.
+                            Sample Representativeness. This demographic profile demonstrates that the sample
+                           adequately represents the diversity of China’s public sector workforce across key character-
+                                     istics including age, education, experience, and organizational levels. The high educational
+                           attainment and professional experience levels of participants provide a solid foundation
+                               for examining Generative AI Literacy in contexts where such technologies are increasingly
+                           being deployed for governance and public service delivery.
+
+                                   4.4. Variable Measurement
+
+                               Generative Artificial Intelligence Literacy. The measurement of this construct was
+                          based on a self-developed scale. The scale consists of five dimensions and 17 items, using

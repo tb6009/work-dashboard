@@ -1,0 +1,67 @@
+Behav. Sci. 2025, 15, 811                                                                                                        12 of 35
+
+
+
+                           eliminated responses with incomplete data or failed attention checks. In terms of gender
+                                distribution, 48.56% were male and 51.44% were female. Regarding age, 20.14% were aged
+                          25 or younger, 38.85% were aged 26–35, 25.54% were aged 36–45, 10.79% were aged 46–55,
+                       and 4.68% were aged 56 or older. In terms of marital status, 23.74% were unmarried and
+                                single, 20.14% were unmarried but not single, 12.23% were married without children, and
+                         43.88% were married with children. Regarding education, 4.32% had a college degree or
+                            lower, 50.72% held a bachelor’s degree, 38.49% held a master’s degree, and 6.47% had a
+                            doctoral degree. In terms of work experience, 22.30% had 5 years or fewer, 23.74% had
+                          6–10 years, 26.26% had 11–15 years, 14.75% had 16–20 years, and 12.95% had more than
+                          21 years. Regarding monthly income, 10.79% earned below 5000 CNY, 39.21% earned
+                        between 5000 and 8000 CNY, 30.22% earned between 8000 and 12,000 CNY, and 19.78%
+                          earned more than 12,000 CNY.
+                                This study conducted exploratory factor analysis (EFA) on the 311 data points using
+                         SPSS 27.0. The results indicated a Kaiser–Meyer–Olkin (KMO) value of 0.915, which exceeds
+                            the recommended threshold of 0.7. Bartlett’s Test of Sphericity yielded a chi-square value
+                              of 5244.240 (df = 136), which was significant at the 0.1% level, indicating that the data are
+                               suitable for factor analysis. Principal component analysis was used to extract factors, with
+                           oblique rotation, and factors with eigenvalues greater than 1 were retained. The results
+                             of the EFA showed that the five extracted factors accounted for a cumulative variance of
+                           89.746%, surpassing the 60% threshold. These five dimensions were: basic operational
+                                     skills, prompt engineering ability, innovative application ability, quality evaluation ability,
+                       and compliance and ethical awareness. As shown in Table 2, the standardized factor
+                            loadings for all measurement items ranged from 0.82 to 0.92, all exceeding the 0.5 threshold,
+                             indicating good construct validity for the items.
+
+
+                             Table 2. Results of Exploratory Factor Analysis.
+
+
+             Dimension                                          AI-Generated Item                                 Factor Loading
+
+                                                                             I understand the principles and limitations of the AI I use.                    0.911
+           Basic Operational Skills                       I can proficiently utilize the core and collaborative functions of AI tools.             0.896
+                                                                      I can solve common technical problems encountered when using AI.                0.88
+                                                                          I can design effective AI prompts based on task requirements.                  0.858
+       Prompt Engineering Ability               I can optimize AI prompts by integrating technical terminology and examples.          0.843
+                                                               I can continuously refine AI prompts based on generated results and feedback.          0.869
+                                                                         I can assess the accuracy and reliability of AI-generated content.                 0.896
+         Quality Evaluation Ability                        I can assess the consistency and coherence of AI-generated content.               0.881
+                                                                       I can evaluate the logic and completeness of AI-generated content.                0.883
+                                                              I can identify and capitalize on innovative opportunities in my work through AI.        0.874
+       Innovative Application Ability                     I can generate creative and innovative ideas for my work using AI.               0.827
+                                                                          I can transform innovative ideas into tangible results using AI.                 0.832
+                                                                                         I can avoid ethical risks when using AI.                             0.895
+                                                                    I can ensure the protection of privacy and sensitive data when using AI.             0.869
+    Compliance and Ethical Awareness                       I can comply with laws and regulations related to AI usage.                   0.894
+                                                                                I can follow organizational guidelines when using AI.                       0.89
+                                                                                  I can adhere to professional ethics when using AI.                        0.859
+
+                                 Note: To reduce the reading burden on respondents and simplify the scale, the term “Generative Artificial
+                                      Intelligence” is consistently abbreviated as “AI” throughout the questionnaire, with a clear explanation provided
+                                    prior to the respondents beginning the survey. Additionally, before the formal answering process begins, the
+                                   questionnaire offers a basic introduction to Generative AI to help respondents understand the relevant concepts.
+                     A skip option is also included: if respondents indicate that they have never used Generative AI, the questionnaire
+                                      will end immediately.
+
+
+                                   2.4. Confirmatory Factor Analysis of the Scale
+
+                             To assess the fit of the factors in the Generative Artificial Intelligence Literacy Scale, this
+                          study conducted a second independent data collection using the same snowball sampling
+                        methodology and organizational targeting criteria as the EFA phase. Following the same
+                           approach, we leveraged social networks of classmates and friends to identify and recruit

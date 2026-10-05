@@ -1,0 +1,60 @@
+Q032 - impactperformanceuser: AI impact on performance of Single coded
+work
+
+Not back
+
+How do you think AI has changed your own job performance?
+
+Normal
+1      Improved it a lot
+2      Improved it a little
+3      Worsened it a little
+4      Worsened it a lot
+5      No effect
+8       Don't know
+
+
+Q033 - impactenjoymentuser: AI impact on enjoyment of Single coded
+work
+
+Not back
+
+How do you think AI has changed how much you enjoy your job?
+
+Normal
+1       Increased it a lot
+2       Increased it a little
+3       Decreased it a little
+4       Decreased it a lot
+5      No effect
+8       Don't know
+
+
+Q034 - impacthealthuser: AI impact on health and safety     Single coded
+
+Not back
+
+How do you think AI has changed your physical health and safety in the workplace?
+
+Normal
+1      Improved it a lot
+2      Improved it a little
+3      Worsened it a little
+4      Worsened it a lot
+5      No effect
+8       Don't know
+
+
+Q035 - impactmentaluser: AI impact on mental health        Single coded
+
+Not back
+
+How do you think AI has changed your mental health and well-being in the workplace?
+
+Normal
+1      Improved it a lot
+2      Improved it a little
+3      Worsened it a little
+4      Worsened it a lot
+5      No effect
+8       Don't know

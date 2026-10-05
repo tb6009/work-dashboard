@@ -1,0 +1,60 @@
+Table 1. Measurement items                                                       European Journal
+                                                                                          of Innovation
+Constructs                           Measurement items                                 Management
+
+Work-related GenAI use (Sun et al., 2022;  WAU1: In my daily work, I use GenAI assistants to obtain ideas
+Zhang et al., 2019)                     and participate in work-related discussion
+                             WAU2: In my daily work, I use GenAI assistants to acquire
+                                            solutions for work problems
+                             WAU3: In my daily work, I use GenAI assistants in my daily work
+                                              to ask work-related questions
+                             WAU4: In my daily work, I use GenAI assistants in my daily work
+                                              to get work-related knowledge
+Nonwork-related GenAI use (Sun et al.,   NAU1: In the organization, I use GenAI assistants for social
+2022; Zhang et al., 2019)                     activities advices
+                              NAU2: In the organization, I maintain close social relationships
+                                        with GenAI assistants
+                              NAU3: In the organization, I use GenAI assistants handle social
+                                                 activities
+                              NAU4: In the organization, I use GenAI assistants to take a break
+                                     from work
+                              NAU5: In the organization, I use GenAI assistants to relax and
+                                              entertain myself
+Exploitative learning (Zheng et al., 2023)   EIL1: Since using GenAI assistants, to what extent have you
+                                         continuously consolidated and learned knowledge and skills in
+                                       your business areas?
+                                      EIL2: Since using GenAI assistants, to what extent have you
+                                     improved your existing knowledge and skills?
+                                      EIL3: Since using GenAI assistants, to what extent have you
+                                       developed capabilities in gradually searching for existing
+                                            solutions to work problems?
+Exploratory learning (Zheng et al., 2023)  ERL1: Since using GenAI assistants, to what extent have you
+                                          learned new skills and knowledge in your current job?
+                                 ERL2: Since using GenAI assistants, to what extent have you
+                                         taken the initiative to learn new skills and knowledge in certain
+                                     domains?
+                                 ERL3: Since using GenAI assistants, to what extent have you
+                                         acquired entirely new skills and knowledge that are important for
+                                       your current job?
+Incremental creativity (Madjar et al.,       IC1: I am good at adapting already existing ideas at work
+2011)                                   IC2: I can easily modify previously existing work processes to suit
+                                            current needs
+                                        IC3: I can use previously existing ideas or work in an appropriate
+                                new way
+Radical creativity (Madjar et al., 2011)    RC1: I suggest radically new ways for doing my work
+                                  RC2: I can demonstrate originality at work
+                                  RC3: I can come up with highly creative ideas at work
+Perceived ease of use (Jo, 2023;         PEU1: Interaction with the GenAI assistants does not require a lot
+Moussawi et al., 2020)                     of my mental effort
+                                 PEU2: I find the GenAI assistants to be easy to use
+                                 PEU3: I found that learning to use GenAI assistants is easy for me
+Source(s): Authors’ work based on Zhang et al. (2019), Sun et al. (2022), Zheng et al. (2023), Madjar et al.
+(2011), Moussawi et al. (2020) and Jo (2023)
+
+
+
+composite reliability values for each construct ranged from 0.844 to 0.891, which exceeded the
+threshold level of 0.7, indicating good reliability. This study tested convergent validity and
+discriminant validity to assess validity. The average variance extracted (AVE) values for each
+construct exceeded 0.6, and all factor loadings values in the Table 4 exceeded 0.7, indicating
+good convergent validity. In addition, the square root of the AVE for each construct in the

@@ -1,0 +1,2036 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>디자이너의 생성형 AI 사용과 업무 경험 — 영문·한글 대조 설문 v0.5 — TV·SV 추가</title><style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
+@media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 -apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:inherit}
+h1{font-size:28px;line-height:1.3;margin:8px 0 6px}
+h2{font-size:20px;margin:44px 0 12px;padding-top:12px;border-top:2px solid var(--accent)}
+h3{font-size:16px;margin:28px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+pre,code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+pre{background:var(--soft);padding:12px;overflow-x:auto;border:1px solid var(--line)}
+blockquote{margin:12px 0;padding:4px 14px;border-left:3px solid var(--accent);color:var(--muted)}
+img{max-width:100%;height:auto;border:1px solid var(--line)}
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin:18px 0 6px}
+.forms a{display:block;border:1px solid var(--accent);padding:10px 12px;text-decoration:none}
+.forms a b{display:block}
+.forms a.primary{background:var(--accent);color:var(--bg)}
+.forms a span{font-size:12px;opacity:.75}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{border:1px solid var(--line);padding:14px}
+.files td:first-child{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:0 6px;margin-left:4px}
+.back{font-size:13px;margin-bottom:18px;display:inline-block}
+.dead{border-bottom:1px dotted var(--muted)}
+details{margin:8px 0}
+</style></head><body><div class="wrap">
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 질문 검토/12_통합설문지_TV·SV추가_v0.5.md · 2026-10-04 09:38</div><h1>디자이너의 생성형 AI 사용과 업무 경험 — 영문·한글 대조 설문 v0.5 — TV·SV 추가</h1>
+<p>2026-10-04 · 연구자 검토본 · TV·SV 8문항 본문 추가. 기존 v0.4 보존. 선택후보3 포함 전체83코드.</p>
+<h2>먼저 읽을 것</h2>
+<ul>
+<li>원문 영문, 원문 의미 번역, 실제 설문용 영문·한글을 구분했다. 영어로 작성돼 있어도 모두 원문인 것은 아니다. 국문은 공인 번역판이 아닌 검토용 번안이다.</li>
+<li>기존 핵심50 + 비교용 TV4·SV4 + ACT4 + 소득영향1 + 동의·선별·배경·마무리17 = <strong>본문80코드</strong>. 선택후보3은 별도이며, 이전89코드의 처리 내역은 17번 명세서에 전부 연결했다.</li>
+<li>§11은 두 기간 비교를 없애고 REW_AI로 교체했다. 경제적 영향은 증가·무영향·감소를 모두 허용한다. <strong>무영향≠총소득 불변</strong>이다.</li>
+<li>기존 모형의 변수 관계는 변경하지 않았다. 범주형 소득영향을 연속 잠재변수처럼 PLS-SEM에 자동 투입하지 않는다. 핵심모형과 결과별 적합한 분석을 사전 지정해야 한다.</li>
+<li>원척도5·6점→제안7점인 항목은 표시했다. 원응답지와 같은 것으로 인용하지 않는다. 원문 문항 확보와 현재 번안 타당화·사용허가는 다르다.</li>
+<li>이 문서는 출처를 보며 검토하는 설문이다. 실제 응답자에게 원문·번안·출처를 모두 보여주는 설계가 아니다. 국내판은 KO, 해외판은 adapted EN만 제시하고 연구자 메모는 제외한다.</li>
+</ul>
+<h2>참여 안내 / Participant information</h2>
+<p>이 연구는 디자이너의 생성형 AI 사용, 업무 행동 및 직업 경험을 살펴봅니다. 정답은 없으며 변화가 없거나 부정적인 경험도 그대로 답해 주세요. 참여는 자발적이며 질문을 건너뛰거나 중단할 수 있습니다. 소득 응답은 선택 사항입니다. 기관명·고객명·연락처 등 식별정보는 기재하지 마세요.</p>
+<p>This study examines designers' use of generative AI, work behaviours, and occupational experiences. There are no right answers. Please report no change or negative experiences as accurately as positive experiences. Participation is voluntary; you may skip questions or stop. Income questions are optional. Do not enter identifying details such as employer names, client names, or contact information.</p>
+<p>연구책임자·소속/Investigator and institution: [확정 필요/to be completed]
+문의/Contact: [확정 필요/to be completed]
+소요시간/Duration: [예비조사 실측/to be measured in pilot]
+사례/Compensation, 자료보관·폐기/Data retention and deletion, 철회 가능 범위/Withdrawal, 개인정보 처리/Privacy: [실제 승인 연구계획에 맞춰 영한 모두 확정/to be completed according to the approved study protocol].
+익명성·제출 후 삭제 가능성을 실제 수집 방식에 맞춰 안내해야 한다. 빈칸 상태로 배포하지 않는다.</p>
+<h2>공통 정의·분기 / Definition and routing</h2>
+<p>생성형 AI는 지시에 따라 텍스트·이미지·영상·음성·코드를 생성하거나 수정하는 기능입니다. 일반 소프트웨어의 수동 편집만 사용한 것은 포함하지 않습니다.</p>
+<p>Generative AI refers to features that generate or revise text, images, video, audio, or code in response to instructions. Using only ordinary manual editing features does not count.</p>
+<p>현재 주분석 후보: S1=예 및 S2=최근3개월 사용. 완전 비사용자는 종료. 과거 사용자만 있는 경우 별도 표본으로 보류하며 주분석에 자동 합치지 않는다. 이 적격 기준은 확정 전이다. 성인 기준·국가·모집경로 역시 배포 전 확정한다.
+Proposed primary sample: paid designers with work-related GenAI use in the past three months. Never-users exit; former-only users are not automatically pooled with recent users. Eligibility, adult age requirements, country, and recruitment rules require final approval.</p>
+<p>지난1주 업무 자체 없음, 판단불가, 적용불가, 응답거절, 분기 미제시는 별도 결측 사유로 저장한다. 0·중간값으로 대체하지 않는다. ACT의 실제0일은 유효값이다.
+Record no work in the reference week, cannot judge, not applicable, refusal, and not shown by routing separately. Do not replace them with zero or scale midpoints. Zero days on ACT is a valid answer.</p>
+<h2>1. 동의·업무 경험 / Consent and work experience</h2>
+<h3>CONSENT · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 위 안내를 읽고 자발적으로 연구에 참여하는 데 동의하십니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> Having read the study information, do you voluntarily agree to participate?</li>
+<li><strong>응답 / Response:</strong> 동의함 / 동의하지 않음→종료 · Agree / Do not agree→End</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 연구자 작성. 동일 원문 문항 없음.</li>
+</ul>
+<h3>S1 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 현재 또는 최근3개월 동안 보수를 받는 디자인 업무를 수행했습니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> Have you carried out paid design work currently or during the past three months?</li>
+<li><strong>응답 / Response:</strong> 예/아니오 · Yes/No</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 연구자 작성. 동일 원문 문항 없음.</li>
+</ul>
+<h3>S2 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 생성형 AI를 업무에 사용한 경험이 있습니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> Have you ever used generative AI for work?</li>
+<li><strong>응답 / Response:</strong> 없음→종료 / 경험 있으나 최근3개월 미사용 / 최근3개월 사용 · Never→End / Previously, but not in the past 3 months / In the past 3 months</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R; S06. 업무 사용 선별은 연구자 설계. GAIL의 일반 GenAI 사용 선별과 동일하지 않음.</li>
+</ul>
+<h3>S3 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 현재 일하는 형태를 모두 선택해 주세요.</li>
+<li><strong>EN (adapted/researcher-written):</strong> Which of the following describes your current work arrangements? Select all that apply.</li>
+<li><strong>응답 / Response:</strong> 조직 직원/독립 프리랜서/개인사업자·사업주/기타 · Employee/Freelancer/Self-employed business owner/Other</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 연구자 작성. 동일 원문 문항 없음.</li>
+</ul>
+<h3>S4 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 최근3개월 디자인 업무소득에서 가장 큰 비중을 차지한 형태는 무엇입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> Which source accounted for the largest share of your design-work income over the past three months?</li>
+<li><strong>응답 / Response:</strong> 근로소득/독립 업무소득/비슷함/소득 없음/모름 · Employment/Self-employment/About equal/No income/Don't know</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 연구자 작성. 동일 원문 문항 없음.</li>
+</ul>
+<h2>2. 업무상 AI 사용 / Work-related GenAI use</h2>
+<p>평소 업무에 대해 답하세요. / Think about your daily work.</p>
+<p><strong>응답 / Response:</strong> 7점 동의 / 1 strongly disagree–7 strongly agree. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 정보·아이디어 활용. 제작 사용 전반을 대표하지 않음.</p>
+<h3>USE1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>In my daily work, I use GenAI assistants to obtain ideas and participate in work-related discussion</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 평소 업무에서 아이디어를 얻고 업무 관련 논의를 하기 위해 생성형 AI를 사용한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>In my daily work, I use generative AI to obtain ideas and participate in work-related discussion</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 평소 업무에서 아이디어를 얻고 업무 관련 논의를 하기 위해 생성형 AI를 사용한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S01, PDF p.11, Table 1 WAU1–4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>USE2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>In my daily work, I use GenAI assistants to acquire solutions for work problems</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 평소 업무에서 업무 문제의 해결책을 얻기 위해 생성형 AI를 사용한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>In my daily work, I use generative AI to acquire solutions for work problems</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 평소 업무에서 업무 문제의 해결책을 얻기 위해 생성형 AI를 사용한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S01, PDF p.11, Table 1 WAU1–4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>USE3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>In my daily work, I use GenAI assistants in my daily work to ask work-related questions</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 평소 업무에서 업무 관련 질문을 하기 위해 생성형 AI를 사용한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>In my daily work, I use generative AI to ask work-related questions</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 평소 업무에서 업무 관련 질문을 하기 위해 생성형 AI를 사용한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S01, PDF p.11, Table 1 WAU1–4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>USE4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>In my daily work, I use GenAI assistants in my daily work to get work-related knowledge</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 평소 업무에서 업무 관련 지식을 얻기 위해 생성형 AI를 사용한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>In my daily work, I use generative AI to get work-related knowledge</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 평소 업무에서 업무 관련 지식을 얻기 위해 생성형 AI를 사용한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S01, PDF p.11, Table 1 WAU1–4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>3. 과업 크래프팅 / Promotion-oriented task crafting</h2>
+<p>지난1주 동안 다음 행동을 어느 정도 했습니까? / To what extent did you engage in these behaviours over the past week?</p>
+<p><strong>응답 / Response:</strong> 원5점 정도→제안7점 / 1 not at all–7 a great deal; past week. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 점수5→7. 지난1주 준거 유지. 복잡성 증가를 효율화로 해석하지 않음.</p>
+<h3>TC1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I actively took on more tasks in my work.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 업무에서 더 많은 과업을 적극적으로 맡았다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I actively took on more tasks in my work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 업무에서 더 많은 과업을 적극적으로 맡았다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 과업. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>TC2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I added complexity to my tasks by changing their structure or sequence.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 과업의 구조나 순서를 바꾸어 과업의 복잡성을 더했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I added complexity to my tasks by changing their structure or sequence.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 과업의 구조나 순서를 바꾸어 과업의 복잡성을 더했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 과업. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>TC3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I changed my tasks so that they were more challenging.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 과업이 더 도전적이 되도록 바꾸었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I changed my tasks so that they were more challenging.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 과업이 더 도전적이 되도록 바꾸었다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 과업. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>TC4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I increased the number of difficult decisions I made in my work.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 업무에서 내리는 어려운 의사결정의 수를 늘렸다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I increased the number of difficult decisions I made in my work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 업무에서 내리는 어려운 의사결정의 수를 늘렸다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 과업. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>4. 스킬 크래프팅 / Promotion-oriented skill crafting</h2>
+<p>지난1주 동안 다음 행동을 어느 정도 했습니까? / To what extent did you engage in these behaviours over the past week?</p>
+<p><strong>응답 / Response:</strong> 원5점 정도→제안7점 / 1 not at all–7 a great deal; past week. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 점수5→7. 실제 숙련 증가가 아닌 학습·확장 행동.</p>
+<h3>SC1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I actively tried to develop wider capabilities in my job.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 업무에서 더 폭넓은 역량을 개발하려고 적극적으로 노력했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I actively tried to develop wider capabilities in my job.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 업무에서 더 폭넓은 역량을 개발하려고 적극적으로 노력했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 스킬. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>SC2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I tried to learn new things at work that went beyond my core skills.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 핵심 기술의 범위를 넘어서는 새로운 것을 업무에서 배우려고 노력했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I tried to learn new things at work that went beyond my core skills.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 핵심 기술의 범위를 넘어서는 새로운 것을 업무에서 배우려고 노력했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 스킬. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>SC3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I actively explored new skills to do my overall job.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 전반적인 업무 수행에 필요한 새로운 기술을 적극적으로 탐색했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I actively explored new skills to do my overall job.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 전반적인 업무 수행에 필요한 새로운 기술을 적극적으로 탐색했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 스킬. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>SC4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I sought out opportunities for extending my overall skills at work.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 업무에서 전반적인 기술·역량을 넓힐 기회를 찾아보았다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I sought out opportunities for extending my overall skills at work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 업무에서 전반적인 기술·역량을 넓힐 기회를 찾아보았다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S02, PDF p.9, Table 2 / 인쇄613, 촉진 스킬. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>4a. 과업다양성 / Task Variety</h2>
+<p>현재 주로 수행하는 디자인 업무를 생각하며 답해 주세요. 여러 프로젝트를 수행한다면, 현재 주된 디자인 업무 전반을 기준으로 답해 주세요.</p>
+<p>Please think about your current main design work. If you work on multiple projects, consider your main design work as a whole.</p>
+<p><strong>응답 / Response:</strong> 1 전혀 동의하지 않음–7 매우 동의함 / 1 strongly disagree–7 strongly agree. 2–6은 숫자만 표시. 원5점→연구용7점 번안.</p>
+<p><strong>상태:</strong> 본문 추가·모형 비교용. 현재 수준을 측정하며 AI 사용 전후 증가를 직접 묻지 않는다.</p>
+<h3>TV1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job involves a great deal of task variety.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일에는 매우 다양한 과업이 포함된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job involves a great deal of task variety.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일에는 매우 다양한 과업이 포함된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.17 / 인쇄1337, Appendix TV 1. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무의 과업 다양성. TC는 과업을 바꾸는 행동, TV는 직무의 현재 특성.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>TV2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job involves doing a number of different things.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일에는 서로 다른 여러 가지 일을 하는 것이 포함된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job involves doing a number of different things.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일에는 서로 다른 여러 가지 일을 하는 것이 포함된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.17 / 인쇄1337, Appendix TV 2. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무의 과업 다양성. TC는 과업을 바꾸는 행동, TV는 직무의 현재 특성.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>TV3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job requires the performance of a wide range of tasks.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일은 폭넓은 범위의 과업 수행을 요구한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job requires the performance of a wide range of tasks.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일은 폭넓은 범위의 과업 수행을 요구한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.17 / 인쇄1337, Appendix TV 3. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무의 과업 다양성. TC는 과업을 바꾸는 행동, TV는 직무의 현재 특성.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>TV4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job involves performing a variety of tasks.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일에는 다양한 과업을 수행하는 것이 포함된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job involves performing a variety of tasks.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일에는 다양한 과업을 수행하는 것이 포함된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.17 / 인쇄1337, Appendix TV 4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무의 과업 다양성. TC는 과업을 바꾸는 행동, TV는 직무의 현재 특성.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h2>4b. 기술다양성 / Skill Variety</h2>
+<p>현재 주로 수행하는 디자인 업무를 생각하며 답해 주세요. 여러 프로젝트를 수행한다면, 현재 주된 디자인 업무 전반을 기준으로 답해 주세요.</p>
+<p>Please think about your current main design work. If you work on multiple projects, consider your main design work as a whole.</p>
+<p><strong>응답 / Response:</strong> 1 전혀 동의하지 않음–7 매우 동의함 / 1 strongly disagree–7 strongly agree. 2–6은 숫자만 표시. 원5점→연구용7점 번안.</p>
+<p><strong>상태:</strong> 본문 추가·모형 비교용. 현재 수준을 측정하며 AI 사용 전후 증가를 직접 묻지 않는다.</p>
+<h3>SV1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job requires a variety of skills.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일은 다양한 기술을 요구한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job requires a variety of skills.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일은 다양한 기술을 요구한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.18 / 인쇄1338, Appendix SV 1. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무가 요구하는 기술의 다양성. SC는 기술을 넓히려는 행동, SV는 직무의 기술 요구. EXP의 개인 전문성과 구분.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>SV2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job requires me to utilize a variety of different skills in order to complete the work.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일은 업무를 완수하기 위해 서로 다른 여러 기술을 활용하도록 요구한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job requires me to utilize a variety of different skills in order to complete the work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일은 업무를 완수하기 위해 서로 다른 여러 기술을 활용하도록 요구한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.18 / 인쇄1338, Appendix SV 2. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무가 요구하는 기술의 다양성. SC는 기술을 넓히려는 행동, SV는 직무의 기술 요구. EXP의 개인 전문성과 구분.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>SV3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job requires me to use a number of complex or high-level skills.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일은 복잡하거나 높은 수준의 기술을 여러 가지 사용하도록 요구한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job requires me to use a number of complex or high-level skills.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일은 복잡하거나 높은 수준의 기술을 여러 가지 사용하도록 요구한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.18 / 인쇄1338, Appendix SV 3. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무가 요구하는 기술의 다양성. SC는 기술을 넓히려는 행동, SV는 직무의 기술 요구. EXP의 개인 전문성과 구분.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h3>SV4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>The job requires the use of a number of skills.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>내 일은 여러 기술의 사용을 요구한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>The job requires the use of a number of skills.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>내 일은 여러 기술의 사용을 요구한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S15, PDF p.18 / 인쇄1338, Appendix SV 4. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<p>검토: 현재 직무가 요구하는 기술의 다양성. SC는 기술을 넓히려는 행동, SV는 직무의 기술 요구. EXP의 개인 전문성과 구분.
+추가 확인: 원5→7점 변경과 디자인 업무 준거는 번안. TV·SV는 별도 요인으로 보존하고 판별성 확인. 중간 경로는 탐색 비교모형으로 검토.</p>
+<h2>5. 혁신적 업무행동 / Innovative work behaviour</h2>
+<p>최근3개월 동안 얼마나 자주 했습니까? 관계자는 상사·동료·고객·협업자입니다. / How often did you do each of the following in the past three months? Stakeholders include supervisors, colleagues, clients, and collaborators.</p>
+<p><strong>응답 / Response:</strong> 7점 빈도 / 1 never–7 always; past 3 months added. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 3개월 준거·적용불가 연구자 추가. IWB6 조직 밖 관계자 확대.</p>
+<h3>IWB1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Creating new ideas for difficult issues</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>어려운 문제에 대해 새로운 아이디어를 만들었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I created new ideas for difficult issues.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>어려운 문제에 대해 새로운 아이디어를 만들었다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Searching out new working methods, techniques, or instruments</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>새로운 작업방법·기술·도구를 찾아보았다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I searched out new working methods, techniques, or instruments.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>새로운 작업방법·기술·도구를 찾아보았다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Generating original solutions for problems</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>문제에 대한 독창적인 해결책을 만들었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I generated original solutions for problems.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>문제에 대한 독창적인 해결책을 만들었다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Mobilizing support for innovative ideas</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>혁신적인 아이디어에 대한 지지를 모았다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I mobilized support for innovative ideas.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>혁신적인 아이디어에 대한 지지를 모았다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB5</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Acquiring approval for innovative ideas</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>혁신적인 아이디어에 대한 승인을 얻었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I acquired approval for innovative ideas.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>혁신적인 아이디어에 대한 승인을 얻었다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB6</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Making important organizational members enthusiastic for innovative ideas</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>중요한 조직 구성원들이 혁신적인 아이디어에 열의를 갖도록 함.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I made important work-related stakeholders enthusiastic about innovative ideas.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>업무상 중요한 관계자들이 혁신적인 아이디어에 관심과 열의를 갖도록 했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB7</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Transforming innovative ideas into useful applications</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>혁신적인 아이디어를 실제로 유용하게 활용할 수 있는 형태로 바꾸었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I transformed innovative ideas into useful applications.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>혁신적인 아이디어를 실제로 유용하게 활용할 수 있는 형태로 바꾸었다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB8</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Introducing innovative ideas into the work environment in a systematic way</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>혁신적인 아이디어를 나의 업무환경에 체계적으로 도입했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I introduced innovative ideas into my work environment in a systematic way.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>혁신적인 아이디어를 나의 업무환경에 체계적으로 도입했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>IWB9</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>Evaluating the utility of innovative ideas</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>혁신적인 아이디어의 유용성을 평가했다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I evaluated the utility of innovative ideas.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>혁신적인 아이디어의 유용성을 평가했다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S04, PDF p.6, Measures / 인쇄292. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>6. 지각된 생산성 기여 / Perceived productivity contribution</h2>
+<p>생성형 AI가 각 측면에 어느 정도 기여합니까? / To what extent does generative AI contribute to each aspect of your work?</p>
+<p><strong>응답 / Response:</strong> 원5점 정도→제안7점 / 1 not at all–7 a great deal. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> application→GenAI, 점수5→7. 생산성 기여 지각이며 총성과·보상은 아님.</p>
+<h3>TP1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>this application saves me time</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>이 응용시스템은 내 시간을 절약해 준다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>Generative AI saves me time</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>생성형 AI는 업무에 드는 시간을 절약해 준다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S03, PDF p.6, Table 2 P1–3 / 인쇄332. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>TP2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>this application increases my productivity</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>이 응용시스템은 나의 생산성을 높여 준다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>Generative AI increases my productivity</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>생성형 AI는 나의 업무 생산성을 높여 준다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S03, PDF p.6, Table 2 P1–3 / 인쇄332. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>TP3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>this application allows me to accomplish more work than would otherwise be possible</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>이 응용시스템은 그렇지 않을 때 가능한 것보다 더 많은 일을 수행할 수 있게 해 준다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>Generative AI allows me to accomplish more work than would otherwise be possible</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>생성형 AI를 사용하면 사용하지 않을 때보다 더 많은 업무를 수행할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S03, PDF p.6, Table 2 P1–3 / 인쇄332. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>7. 자기평가 직업 전문성 / Self-rated occupational expertise</h2>
+<p>AI 사용능력에 한정하지 않고 디자인 직업 영역의 능력을 평가하세요. / Rate your capabilities in your design occupation, not only your AI skills.</p>
+<p><strong>응답 / Response:</strong> 원6점→제안7점; EXP1–4 not at all competent–extremely competent / EXP5 very low–very high. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 전체 원앵커 미확보. 응답 양끝은 연구자 제안. EXP1–2 지난1년 유지; 경력 짧으면 판단불가.</p>
+<h3>EXP1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>During the past year, I was, in general, competent to perform my work accurately and with few mistakes.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>지난1년 동안 나는 전반적으로 일을 정확하고 실수가 적게 수행할 능력이 있었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>During the past year, how competent were you, in general, to perform your work accurately and with few mistakes?</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>지난 1년 동안, 전반적으로 나는 일을 정확하고 실수가 적게 수행할 능력이 어느 정도 있었습니까?</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S05, PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>EXP2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>During the past year, I was, in general, competent to take prompt decisions with respect to my approach to work.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>지난1년 동안 나는 전반적으로 업무 접근방법에 관해 신속하게 결정할 능력이 있었다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>During the past year, how competent were you, in general, to take prompt decisions about your approach to work?</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>지난 1년 동안, 전반적으로 나는 업무 접근방법에 관해 신속하게 결정할 능력이 어느 정도 있었습니까?</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S05, PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>EXP3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>In general, I am competent to distinguish main issues from side issues and to set priorities.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>전반적으로 나는 주요 문제와 부차적 문제를 구별하고 우선순위를 정할 능력이 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>In general, how competent are you to distinguish main issues from side issues and set priorities?</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>전반적으로 나는 중요한 문제와 부차적인 문제를 구별하고 우선순위를 정할 능력이 어느 정도 있습니까?</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S05, PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>EXP4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I consider myself competent to weigh up and reason out the “pros” and “cons” of particular decisions on working methods, materials, and techniques in my job domain.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 내 직업 영역의 작업방법·재료·기술에 관한 특정 결정의 장단점을 따져 판단할 능력이 있다고 생각한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>How competent are you to weigh and reason through the pros and cons of decisions about working methods, materials, and techniques in your job domain?</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 내 직업 분야의 작업방법·재료·기술에 관한 특정 결정의 장단점을 따져 판단할 능력이 어느 정도 있습니까?</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S05, PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>EXP5</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>How would you rate the quality of your skills overall?</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>자신의 전반적인 기술·역량의 질을 어떻게 평가하십니까?</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>How would you rate the quality of your skills overall?</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>자신의 전반적인 기술·역량의 질을 어떻게 평가하십니까?</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S05, PDF p.12, Appendix A 원2·3·6·9·12 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>8. 생성형 AI 리터러시 / Generative AI literacy</h2>
+<p>현재 자신에게 얼마나 해당합니까? / How well does each statement describe you at present?</p>
+<p><strong>응답 / Response:</strong> 7점 동의 / 1 strongly disagree–7 strongly agree. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> 원문 AI는 GenAI로 정의. EC4 조직→조직 또는 고객 변경. 5차원 유지; IA와 IWB 판별성 확인.</p>
+<h3>GAIL_BO1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I understand the principles and limitations of the AI I use.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 내가 사용하는 생성형 AI의 원리와 한계를 이해한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I understand the principles and limitations of the generative AI I use.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 내가 사용하는 생성형 AI의 원리와 한계를 이해한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_BO2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can proficiently utilize the core and collaborative functions of AI tools.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI 도구의 핵심 기능과 협업 기능을 능숙하게 활용할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can proficiently utilize the core and collaborative functions of generative AI tools.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI 도구의 핵심 기능과 협업 기능을 능숙하게 활용할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_BO3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can solve common technical problems encountered when using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용할 때 마주치는 일반적인 기술 문제를 해결할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can solve common technical problems encountered when using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용할 때 마주치는 일반적인 기술 문제를 해결할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_PE1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can design effective AI prompts based on task requirements.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 과업 요구사항에 맞는 효과적인 생성형 AI 프롬프트를 설계할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can design effective generative AI prompts based on task requirements.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 과업 요구사항에 맞는 효과적인 생성형 AI 프롬프트를 설계할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_PE2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can optimize AI prompts by integrating technical terminology and examples.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 전문용어와 예시를 활용하여 생성형 AI 프롬프트를 개선할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can optimize generative AI prompts by integrating technical terminology and examples.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 전문용어와 예시를 활용하여 생성형 AI 프롬프트를 개선할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_PE3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can continuously refine AI prompts based on generated results and feedback.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성된 결과와 피드백에 따라 생성형 AI 프롬프트를 지속적으로 다듬을 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can continuously refine generative AI prompts based on generated results and feedback.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성된 결과와 피드백에 따라 생성형 AI 프롬프트를 지속적으로 다듬을 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_QE1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can assess the accuracy and reliability of AI-generated content.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 정확성과 신뢰성을 평가할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can assess the accuracy and reliability of generative AI-generated content.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 정확성과 신뢰성을 평가할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_QE2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can assess the consistency and coherence of AI-generated content.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 일관성과 정합성을 평가할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can assess the consistency and coherence of generative AI-generated content.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 일관성과 정합성을 평가할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_QE3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can evaluate the logic and completeness of AI-generated content.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 논리성과 완결성을 평가할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can evaluate the logic and completeness of generative AI-generated content.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI가 만든 콘텐츠의 논리성과 완결성을 평가할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_IA1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can identify and capitalize on innovative opportunities in my work through AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 통해 업무의 혁신 기회를 찾아내고 활용할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can identify and capitalize on innovative opportunities in my work through generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 통해 업무의 혁신 기회를 찾아내고 활용할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_IA2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can generate creative and innovative ideas for my work using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용하여 업무를 위한 창의적이고 혁신적인 아이디어를 만들어낼 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can generate creative and innovative ideas for my work using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용하여 업무를 위한 창의적이고 혁신적인 아이디어를 만들어낼 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_IA3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can transform innovative ideas into tangible results using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용하여 혁신적인 아이디어를 가시적인 결과로 전환할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can transform innovative ideas into tangible results using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용하여 혁신적인 아이디어를 가시적인 결과로 전환할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_EC1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can avoid ethical risks when using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용할 때 윤리적 위험을 피할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can avoid ethical risks when using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용할 때 윤리적 위험을 피할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_EC2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can ensure the protection of privacy and sensitive data when using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용할 때 개인정보와 민감한 데이터를 보호할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can ensure the protection of privacy and sensitive data when using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용할 때 개인정보와 민감한 데이터를 보호할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_EC3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can comply with laws and regulations related to AI usage.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI 사용과 관련된 법률과 규정을 준수할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can comply with laws and regulations related to generative AI usage.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI 사용과 관련된 법률과 규정을 준수할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_EC4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can follow organizational guidelines when using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 AI를 사용할 때 조직의 지침을 따를 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can follow the organizational or client guidelines that apply to my work when using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용할 때 내 업무에 적용되는 조직 또는 고객의 지침을 따를 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>GAIL_EC5</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I can adhere to professional ethics when using AI.</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 생성형 AI를 사용할 때 직업윤리를 준수할 수 있다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I can adhere to professional ethics when using generative AI.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI를 사용할 때 직업윤리를 준수할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S06, PDF p.12, Table 2 / 측정 pp.22–23. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>9. AI 대체 위협·걱정 / AI replacement threat and worry</h2>
+<p>현재 업무와 직업적 미래를 생각하며 답하세요. / Think about your current work and occupational future.</p>
+<p><strong>응답 / Response:</strong> 원5점 동의→제안7점 / 1 strongly disagree–7 strongly agree. 2–6 숫자만 표시 / intermediate points numerically labelled. 동의는 strongly disagree–strongly agree, 빈도는 never–always, 정도는 not at all–a great deal로 구분.</p>
+<p><strong>검토:</strong> STARA→GenAI. THR3 조직 미래→직업적 위치; 중립 문두 제안. 순수한 대체확률만이 아니라 걱정 포함.</p>
+<h3>THR1</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I think my job could be replaced by STARA</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 내 일자리가 STARA로 대체될 수 있다고 생각한다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I think my job could be replaced by generative AI</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 나의 일자리가 생성형 AI로 대체될 수 있다고 생각한다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S07, PDF p.8, Table 1 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>THR2</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I am personally worried that what I do now in my job will be able to be replaced by STARA</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 현재 내 업무에서 하는 일이 STARA로 대체될 수 있다는 점이 걱정된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I am personally worried that what I do now in my job will be able to be replaced by generative AI</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 현재 업무에서 하는 일이 생성형 AI로 대체될 수 있다는 점이 걱정된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S07, PDF p.8, Table 1 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>THR3</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I am personally worried about my future in my organisation due to STARA replacing employees</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 STARA가 직원을 대체함에 따라 우리 조직에서의 나의 미래가 걱정된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I am personally worried about maintaining my current occupational position as generative AI replaces people's work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI가 사람의 업무를 대체하면서 현재의 직업적 위치를 유지하기 어려워질까 걱정된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S07, PDF p.8, Table 1 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h3>THR4</h3>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>문항</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원문 EN</td>
+<td>I am personally worried about my future in my industry due to STARA replacing employees</td>
+</tr>
+<tr>
+<td>원문 의미 KO</td>
+<td>나는 STARA가 직원을 대체함에 따라 내가 속한 산업에서의 나의 미래가 걱정된다.</td>
+</tr>
+<tr>
+<td>설문 EN (adapted)</td>
+<td>I am personally worried about my future in my industry as generative AI replaces people's work.</td>
+</tr>
+<tr>
+<td>설문 KO (번안)</td>
+<td>나는 생성형 AI가 사람의 업무를 대체하면서 내가 속한 산업에서의 직업적 미래가 걱정된다.</td>
+</tr>
+</tbody>
+</table>
+<p>출처: S07, PDF p.8, Table 1 / 인쇄246. <span class="dead" title="원문 PDF는 비공개">해당 원문</span>.</p>
+<h2>10. 활동별 사용 / Activity profile</h2>
+<p>네 활동은 서로 중복될 수 있으며 일수를 합산하지 않습니다. / Activities may overlap; do not sum the day counts.</p>
+<h3>ACT1 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 기획: 목표·문제 정의, 콘셉트 또는 작업계획 수립에 생성형 AI를 사용한 날은 며칠입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> On how many days in the past 30 days did you use generative AI for planning: defining goals or problems, developing concepts, or planning work?</li>
+<li><strong>응답 / Response:</strong> 0–30일 / 활동 자체 없음 / 기억 어려움 · 0–30 days / Did not perform this activity / Cannot recall</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> S09; S10; R. 활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</li>
+</ul>
+<h3>ACT2 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 탐색: 자료·레퍼런스·아이디어·대안을 탐색하는 데 생성형 AI를 사용한 날은 며칠입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> On how many days in the past 30 days did you use generative AI to explore information, references, ideas, or alternatives?</li>
+<li><strong>응답 / Response:</strong> 0–30일 / 활동 자체 없음 / 기억 어려움 · 0–30 days / Did not perform this activity / Cannot recall</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> S09; S10; R. 활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</li>
+</ul>
+<h3>ACT3 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 제작: 실제 업무용 텍스트·이미지·영상·음성·코드 등의 초안이나 결과물을 생성하는 데 생성형 AI를 사용한 날은 며칠입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> On how many days in the past 30 days did you use generative AI to produce drafts or deliverables, such as text, images, video, audio, or code, for work?</li>
+<li><strong>응답 / Response:</strong> 0–30일 / 활동 자체 없음 / 기억 어려움 · 0–30 days / Did not perform this activity / Cannot recall</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> S09; S10; R. 활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</li>
+</ul>
+<h3>ACT4 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 수정: 기존 초안이나 결과물을 수정·보완하는 데 생성형 AI를 사용한 날은 며칠입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> On how many days in the past 30 days did you use generative AI to revise or improve existing drafts or deliverables?</li>
+<li><strong>응답 / Response:</strong> 0–30일 / 활동 자체 없음 / 기억 어려움 · 0–30 days / Did not perform this activity / Cannot recall</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> S09; S10; R. 활동 사례는 원문 확인. 현재4분류·30일 일수는 연구자 재구성. 합산 금지.</li>
+</ul>
+<h2>11. 생성형 AI의 지각된 소득 영향 / Perceived income impact</h2>
+<p>회사 전체 매출이 아닌 본인의 디자인 업무소득을 생각하세요. 직원은 급여·상여, 독립업무는 업무대금에서 사업경비를 뺀 본인 귀속 소득입니다. 혼합직무 급여에서 디자인 몫을 구분할 수 없다면 판단 어려움을 선택하세요. 겸업은 중복 계산하지 않습니다. 이는 연구자 정의이며 직원·프리랜서 인지면담에서 검토해야 합니다.</p>
+<p>Think about your own income from design work, not your employer's total revenue. For employees, consider salary and bonuses; for independent work, consider your own income after business expenses. If you cannot distinguish design-related income in a mixed role, select Cannot judge. Do not double-count income from mixed work arrangements. These definitions require cognitive testing.</p>
+<h3>REW_AI · 주지표·원문 기반 번안</h3>
+<ul>
+<li><strong>KO:</strong> 본인이 생성형 AI를 업무에 활용한 것이 현재 디자인 업무소득에 어떤 영향을 미쳤다고 생각하십니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> How do you think your use of generative AI at work has affected your current income from design work?</li>
+<li><strong>응답 / Response:</strong> 증가 / 영향 없음 / 감소 / 판단 어려움 / 응답거절 · Increased / No effect / Decreased / Cannot judge / Prefer not to answer</li>
+<li><strong>원문 EN:</strong> Have AI chatbots affected how much you earn today?</li>
+<li><strong>원문 의미 KO:</strong> AI 챗봇이 현재 귀하가 버는 금액에 영향을 미쳤습니까?</li>
+<li><strong>출처·수정:</strong> S08. Q14a: AI chatbots→GenAI, 본인의 업무활용·디자인소득으로 좁힘. 모름·거절 추가. 과거 총소득 불변과 구분.</li>
+</ul>
+<h2>12. 배경 / Background</h2>
+<h3>BG0a · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 연령대는 어떻게 됩니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> What is your age group?</li>
+<li><strong>응답 / Response:</strong> 25세 이하/26–35/36–45/46–55/56세 이상/거절 · 25 or under/26–35/36–45/46–55/56 or over/Prefer not to answer</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG0b · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 성별은 무엇입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> What is your gender?</li>
+<li><strong>응답 / Response:</strong> 여성/남성/기타/거절 · Woman/Man/Other/Prefer not to answer</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG0c · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 최종 학력은 무엇입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> What is your highest completed level of education?</li>
+<li><strong>응답 / Response:</strong> 고교 이하/전문대/학사/석사/박사/거절 · High school or lower/Associate degree/Bachelor's/Master's/Doctorate/Prefer not to answer</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG1 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 주된 디자인 분야는 무엇입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> What is your primary design field?</li>
+<li><strong>응답 / Response:</strong> 시각·브랜드/편집/디지털·UX/UI/영상·모션/제품·산업/공간/기타 · Visual/Brand; Editorial; Digital/UX/UI; Video/Motion; Product/Industrial; Spatial; Other</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG2 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 유급 디자인 업무 경력은 얼마입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> How much paid design-work experience do you have?</li>
+<li><strong>응답 / Response:</strong> __년 __개월/거절 · __ years __ months/Prefer not to answer</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG3 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 생성형 AI를 실제 디자인 업무에 처음 사용한 시기는 언제입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> When did you first use generative AI in actual design work?</li>
+<li><strong>응답 / Response:</strong> __년 __월/기억 어려움 · __ year __ month/Cannot recall</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG4 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 최근3개월 사용한 생성형 AI 도구·기능을 적어 주세요.</li>
+<li><strong>EN (adapted/researcher-written):</strong> Which generative AI tools or features have you used in the past three months? Do not name clients or employers.</li>
+<li><strong>응답 / Response:</strong> 자유응답/없음 · Free text/None</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG4b · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 최근3개월 전체 디자인 업무시간 중 생성형 AI를 활용한 디자인 과업에 쓴 시간의 비율은 대략 어느 정도입니까? AI의 작동 대기시간만이 아니라 해당 과업에 쓴 시간을 생각해 주세요.</li>
+<li><strong>EN (adapted/researcher-written):</strong> Approximately what share of your total design-work time in the past three months was spent on tasks in which you used generative AI? Include time spent on those tasks, not just waiting for AI outputs.</li>
+<li><strong>응답 / Response:</strong> 0% / &gt;0–&lt;10% / 10–&lt;30% / 30–&lt;50% / 50–&lt;70% / 70–100% / 모름·Don't know</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG5 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 주로 사용한 생성 기능은 무엇입니까? 복수선택</li>
+<li><strong>EN (adapted/researcher-written):</strong> Which generative features have you mainly used? Select all that apply.</li>
+<li><strong>응답 / Response:</strong> 텍스트/이미지/영상/음성·음악/코드/기타/없음 · Text/Images/Video/Audio or music/Code/Other/None</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG6 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 조직 또는 고객의 요구로 업무상 생성형 AI 사용을 제한받고 있습니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> Do employer or client requirements restrict your use of generative AI at work?</li>
+<li><strong>응답 / Response:</strong> 제한 없음/일부 제한/전면 금지/조건이 서로 다름/모름/해당없음 · No restriction/Partial restrictions/Banned/Conditions differ/Don't know/Not applicable</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h3>BG8 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 조직에 소속된 경우 조직 규모는 어느 정도입니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> If you belong to an organization, approximately how many people work there?</li>
+<li><strong>응답 / Response:</strong> 1–4/5–49/50–299/300+/모름/조직없음/거절 · 1–4/5–49/50–299/300+/Don't know/No organization/Prefer not to answer</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<h2>13. 마무리 / Closing</h2>
+<h3>END1 · 보조·연구자 작성</h3>
+<ul>
+<li><strong>KO:</strong> 이해하기 어렵거나 본인 상황에 맞지 않았던 문항이 있습니까? 코드와 이유를 적어 주세요.</li>
+<li><strong>EN (adapted/researcher-written):</strong> Were any questions difficult to understand or unsuitable for your situation? Please give the item code and explain.</li>
+<li><strong>응답 / Response:</strong> 선택 자유응답 · Optional free text</li>
+<li><strong>원문 EN:</strong> 해당 문구와 동일한 원문 문항 없음 — 연구자 작성/재구성</li>
+<li><strong>출처·수정:</strong> R. 배경·표본·인지검토용 연구자 질문. 검증척도가 필요한 잠재변수 문항과 구분.</li>
+</ul>
+<p>참여해 주셔서 감사합니다. / Thank you for participating.</p>
+<h2>부록 A. 선택 보완 후보 — 본문 기본 제외</h2>
+<p>추가 근거가 확인됐지만 자동 채택하지 않았다. 채택 시 본문 문항 수와 분석계획을 갱신한다.</p>
+<h3>REW_AI_MAG · 선택후보·원문 기반 번안</h3>
+<ul>
+<li><strong>KO:</strong> 생성형 AI 업무 활용으로 디자인 업무소득이 대략 몇 퍼센트 증가하거나 감소했다고 생각하십니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> By approximately what percentage has your use of generative AI increased or decreased your income from design work?</li>
+<li><strong>응답 / Response:</strong> 증가/감소 응답자만: 5% 미만 / 5–15% / 15% 초과 / 모름 / 거절 · Only increase/decrease: Under 5% / 5–15% / Over 15% / Don't know / Prefer not to answer</li>
+<li><strong>원문 EN:</strong> How much have AI chatbots increased your earnings? / How much have AI chatbots reduced your earnings?</li>
+<li><strong>원문 의미 KO:</strong> AI 챗봇으로 소득이 얼마나 증가했습니까? / 얼마나 감소했습니까?</li>
+<li><strong>출처·수정:</strong> S08. Q14b·c를 하나의 조건부 질문으로 결합한 번안. 선택 부록, 본문 기본 제외.</li>
+</ul>
+<h3>CHG_AI_PERF · 선택후보·원문 기반 번안</h3>
+<ul>
+<li><strong>KO:</strong> 생성형 AI가 본인의 디자인 업무성과를 어떻게 변화시켰다고 생각하십니까?</li>
+<li><strong>EN (adapted/researcher-written):</strong> How do you think generative AI has changed your own design-work performance?</li>
+<li><strong>응답 / Response:</strong> 크게 개선 / 다소 개선 / 다소 악화 / 크게 악화 / 영향 없음 / 모름 · Much better / Somewhat better / Somewhat worse / Much worse / No impact / Unsure</li>
+<li><strong>원문 EN:</strong> How do you think AI has changed your own job performance?</li>
+<li><strong>원문 의미 KO:</strong> AI가 본인의 업무성과를 어떻게 변화시켰다고 생각하십니까?</li>
+<li><strong>출처·수정:</strong> S11. Q032 p.12의 AI→GenAI, job→design-work. TP와 중복 가능하여 선택 부록. 기존 CHG3 품질과 동일하지 않음.</li>
+</ul>
+<h3>SKILL_VALUE · 선택후보·원문 기반 번안</h3>
+<ul>
+<li><strong>KO:</strong> 생성형 AI로 인해 내가 가진 일부 기술·역량의 가치가 낮아졌다.</li>
+<li><strong>EN (adapted/researcher-written):</strong> Generative AI has made some of my skills less valuable.</li>
+<li><strong>응답 / Response:</strong> 1 전혀 동의하지 않음–7 매우 동의함 / 1 strongly disagree–7 strongly agree; 판단불가/Cannot judge</li>
+<li><strong>원문 EN:</strong> AI has made some of my skills less valuable.</li>
+<li><strong>원문 의미 KO:</strong> AI로 인해 내가 가진 일부 기술·역량의 가치가 낮아졌다.</li>
+<li><strong>출처·수정:</strong> S11. Q073 첫행 p.27. 원5점 동의→제안7점; AI→GenAI. 현재의 가치하락 지각으로, 미래 걱정 THR/현재 숙련 EXP와 다름. 기존 모형에 자동 추가하지 않음.</li>
+</ul>
+<h2>부록 B. 원문 응답방식 및 출처</h2>
+<ul>
+<li>USE/GAIL: 원7점 동의. TC/SC: 원5점 정도·지난1주. TP: 원5점 정도. IWB: 원7점 빈도. EXP: 원6점, 전체 문항별 원앵커 미확보. THR: 원5점 동의.</li>
+<li>REW_AI: 원3범주 증가/무영향/감소, 모름·거절은 추가. REW_AI_MAG: 원증감별5%미만/5~15%/15%초과. OECD 성과: 개선2·악화2·무영향·모름. OECD 기술가치: 원5점 동의+모름.</li>
+<li>ACT: Luo 원4범주 1 Very Often, 2 Sometimes, 3 Rarely, 4 Never. 현재0–30일 방식은 원문과 다름.</li>
+<li>실제 응답자용 영한 판본은 독립 번역검토·인지면담 후 확정. EXP·THR3·IWB6·GAIL_EC4, 직원/프리랜서 적용불가 비율 우선 확인.</li>
+</ul>
+<h3>S01</h3>
+<p>Zhang, X., Yu, P., &amp; Ma, L. (온라인2025; 최종권호2026). How and when generative AI use affects employee incremental and radical creativity: an empirical study in China. European Journal of Innovation Management, 29(3), 702–727.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1108/EJIM-04-2024-0466">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.9,11; Table1 WAU1–4. 4문항·7점 직접 확인. 원전 계보 Zhang2019/Sun2022의 최초 척도 전문은 이번 미확보. GenAI 적용문항의 직접 출처는 이 논문.</p>
+<h3>S02</h3>
+<p>Bindl, U. K., Unsworth, K. L., Gibson, C. B., &amp; Stride, C. B. (2019). Job Crafting Revisited: Implications of an Extended Framework for Active Changes at Work. Journal of Applied Psychology.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1037/apl0000362">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.7,9 / 인쇄611,613; Table2. 촉진TC4·SC4. 원5점 정도·지난1주. 저작권·번안 사용조건 별도 확인 필요.</p>
+<h3>S03</h3>
+<p>Torkzadeh, G., &amp; Doll, W. J. (1999). The development of a tool for measuring the perceived impact of information technology on work. Omega, 27, 327–339.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span></p>
+<p>위치: PDF pp.4,6 / 인쇄330,332; Table2 P1–3. 지각된 IT 생산성기여3. application→GenAI, 5→7은 번안.</p>
+<h3>S04</h3>
+<p>Janssen, O. (2000). Job demands, perceptions of effort–reward fairness and innovative work behaviour. Journal of Occupational and Organizational Psychology, 73, 287–302.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span></p>
+<p>위치: PDF p.6 / 인쇄292; Measures. IWB9 직접 확인. 7점 빈도. 원문의 스캔문자 diYcult 등은 정상 철자로 복원, 문구는 유지.</p>
+<h3>S05</h3>
+<p>Van der Heijden, B. I. J. M., Notelaers, G., Peters, P., Stoffers, J., De Lange, A. H., Froehlich, D., &amp; Van der Heijde, C. M. (2018). Development and validation of the short-form employability five-factor instrument. Journal of Vocational Behavior, 106, 236–248.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1016/j.jvb.2018.02.003">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.6,12 / 인쇄240,246; AppendixA. 원번호2,3,6,9,12. 문항별 전체 원앵커 미확보. 2006 PDF029 p.27과 대응 확인.</p>
+<h3>S06</h3>
+<p>Liu, X., Zhang, L., &amp; Wei, X. (2025). Generative Artificial Intelligence Literacy: Scale Development and Its Effect on Job Performance. Behavioral Sciences, 15(6), 811.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.3390/bs15060811">DOI/공식 페이지</a></p>
+<p>위치: PDF p.12 Table2; pp.22–23. 17문항5차원. 원문 AI는 GenAI 정의. CC BY; 출처·변경 표시. AI-generated item이라는 생성과정과 후속 실증검증을 구분.</p>
+<h3>S07</h3>
+<p>Brougham, D., &amp; Haar, J. (2018). Smart Technology, Artificial Intelligence, Robotics, and Algorithms (STARA): Employees’ perceptions of our future workplace. Journal of Management &amp; Organization.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1017/jmo.2016.55">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.7–8 / 인쇄245–246; Table1. STARA awareness4. 대체가능성1+걱정3. GenAI·프리랜서 적용의 별도 검토 필요.</p>
+<h3>S08</h3>
+<p>Humlum, A., &amp; Vestergaard, E. (2025; 2026-03-13 개정 저장본). Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI. NBER Working Paper 33777.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://www.nber.org/papers/w33777">DOI/공식 페이지</a></p>
+<p>위치: PDF p.124 / 부록75 Q12–14; pp.33–34 §3.5. 공개된 영문 설문은 English Translation, 실제 덴마크어 대응은 p.129. Q14a 개인소득영향3범주. 다문항 보상척도·동료심사 완료 논문은 아님.</p>
+<h3>S09</h3>
+<p>Luo, T., Muljana, P. S., Ren, X., &amp; Young, D. (2025; 온라인2024). Exploring instructional designers’ utilization and perspectives on generative AI tools: A mixed methods study. Educational Technology Research and Development, 73, 741–766.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1007/s11423-024-10437-y">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.9–10 / 인쇄749–750; Table4. 교육설계 활동26개·사용4범주. ACT4 동일 원척도 아님.</p>
+<h3>S10</h3>
+<p>디자인·문화콘텐츠 ISC. 2024 디자인 산업분야 생성형 AI 활용 인력실태 및 교육훈련 수요 조사.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span></p>
+<p>위치: PDF p.68 질문4-6~4-8; p.73 질문12. 원문 언어 한국어. 디자인활동/도입후 사업체효과 근거; 개인소득 척도 아님.</p>
+<h3>S11</h3>
+<p>OECD. Worker questionnaire. 공식 프로젝트 페이지에 연결된 공개본, 열람2026-10-03; PDF 자체 발행연도 미표기.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <span class="dead" title="원문 PDF는 비공개">DOI/공식 페이지</span></p>
+<p>위치: PDF p.12 Q032; p.27 Q073; p.20 Q057. 새 원문 저장. Q032 성과영향·Q073 기술가치하락. Q057은 미래10년 산업임금 전망이라 소득경험 대체 불가. 직원 대상, 자영업자 선별 제외. 다문항 구성타당성 검증척도로 주장하지 않음.</p>
+<h3>S12</h3>
+<p>Peeters, E. R., Akkermans, J., &amp; De Cuyper, N. (2020). The Only Constant Is Change? Movement Capital and Perceived Employability. Journal of Career Assessment.</p>
+<p><a href="https://journals.sagepub.com/doi/10.1177/1069072720918195">공식 원문</a></p>
+<p>위치: Measures—Human capital. 출판사 본문 확인. 직업전문성9개 선택·응답앵커 문제 논의. 현재5개 모든 앵커의 원응답지를 제공하지 않아 EXP 미확보 해소로 처리하지 않음.</p>
+<h3>S13</h3>
+<p>Write the Docs. Documentation Salary Survey Results 2025.</p>
+<p><a href="https://www.writethedocs.org/surveys/salary-survey/2025/">공식 원문</a></p>
+<p>위치: Contractor rates—What we asked. 공식 조사보고서 본문 확인. 현재 시급/일급/월단가와 통화를 구분하는 사례. AI 이후 계약단가 변화·협상력 검증척도 아님. 원문 PDF 신규 확보 아님.</p>
+<h3>S14</h3>
+<p>Van der Heijde, C. M., &amp; Van der Heijden, B. I. J. M. (2006). A competence-based and multidimensional operationalization and measurement of employability.</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span> · <a href="https://doi.org/10.1002/hrm.20119">DOI/공식 페이지</a></p>
+<p>위치: PDF pp.8,27 / 인쇄456,475. EXP 근원 문항 확인용. 현재5개 정확한 전체 원앵커 미확보 유지.</p>
+<h3>S15</h3>
+<p>Morgeson, F. P., &amp; Humphrey, S. E. (2006). The Work Design Questionnaire (WDQ): Developing and validating a comprehensive measure for assessing job design and the nature of work. Journal of Applied Psychology, 91(6), 1321–1339. https://doi.org/10.1037/0021-9010.91.6.1321</p>
+<p><span class="dead" title="원문 PDF는 비공개">저장 원문</span></p>
+<p>위치: PDF p.4 응답척도, p.17 TV4(인쇄1337), p.18 SV4(인쇄1338). 원5점→연구7점. 현재 직무의 특성을 측정하며 변화량·개인 보유능력과 구분한다.</p>
+<h2>부록 C. 적용·분석 주의</h2>
+<p>TP가 높고 REW_AI=무영향인 조합, TP가 높고 소득증가인 조합, 소득감소인 조합 모두 허용한다. 횡단 자기보고의 관련성이지 AI의 인과효과나 객관적인 보상 박탈 증거는 아니다. IWB/TP→소득영향의 비유의성만으로 불일치를 입증하지 않는다. GAIL·EXP 척도 출처가 해당 조절경로의 이론적 근거까지 입증하지 않는다.</p>
+<p>Dillman 적용: 문두·용어·응답척도를 명확히 하고 적격 분기, 중립 선택지, 모름/거절, 민감문항 뒤 배치, 인지면담과 완료시간 실측을 유지했다. 원문대조표는 연구자용이며 배포 설문에서 제외한다. TDM은 새 문항의 구성타당성 근거가 아니다. 기존15번 TDM 검토 기록을 참조하며 이번에는 접촉 일정·외부 모집을 실행하지 않았다.</p>
+<h2>부록 D. TV·SV 모형 비교용 수집</h2>
+<p>TV·SV는 본문 필수 수집 블록에 포함한다. 문항 응답을 강제한다는 의미는 아니며 기존 건너뛰기 안내를 유지한다. 기존 주모형은 기준모형으로 보존한다. TC·SC 뒤, IWB 앞에 배치한다.</p>
+<ul>
+<li>TV1–4와 SV1–4를 별도 저장하고 임의 합산하지 않는다.</li>
+<li>비교 후보: TC→TV→IWB·TP, SC→SV→IWB·TP. 기존 직접경로를 유지한 후보부터 검토한다. SC의 성과 연결은 기존 연구2에 자동 확정하는 경로가 아니라 탐색 확장이다.</li>
+<li>TV·SV를 중간에 넣지 않은 기준모형과 비교한다. 경로 방향·조절 위치·범주형 REW_AI 분석은 별도 사전 명세한다.</li>
+<li>원척도 문항 근거는 위 인과경로의 이론적 근거가 아니다. 횡단자료로 시간 순서를 확정하지 않는다.</li>
+</ul>
+</div></body></html>

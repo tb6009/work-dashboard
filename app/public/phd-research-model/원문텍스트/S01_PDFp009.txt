@@ -1,0 +1,58 @@
+   H9a. The positive association between work-related GenAI use and exploitative learning  European Journal
+            is moderated by perceived ease of use such that it is weaker in the case of high      of Innovation
+         perceived ease of use.                                                 Management
+
+   H9b. The positive association between work-related GenAI use and explorative learning
+            is moderated by perceived ease of use such that it is weaker in the case of high
+         perceived ease of use.
+
+   H9c. The positive association between nonwork-related GenAI use and exploitative
+         learning is moderated by perceived ease of use such that it is weaker in the case of
+         high perceived ease of use.
+
+   H9d. The positive association between nonwork-related GenAI use and explorative
+         learning is moderated by perceived ease of use such that it is weaker in the case of
+         high perceived ease of use.
+
+Based on the above analysis, this study introducesconceptual model to explore the relationship
+between the GenAI use and employee creativity. Our conceptual model is reflected in Figure 1.
+
+
+4. Research methods
+4.1 Measurement items
+The measurement items for each variable in this study were based on scales from the literature
+and were adapted for the research context. As shown in the Table 1, work-related and
+nonwork-related GenAI use were adapted from scales of Zhang et al. (2019) and Sun et al.
+(2022). The measurement items for exploitative and exploratory learning were adapted from
+the scales of Zheng et al. (2023). The measurement items for incremental and radical creativity
+were adapted from the scales of Madjar et al. (2011). The measurement items for perceived
+ease of use were adapted from the scales of Moussawi et al. (2020) and Jo (2023). This study
+used a seven-point Likert scale ranging from 1 (strongly disagree) to 7 (strongly agree) to
+measure all items. Given that the data collection was conducted in China, the English-Chinese
+back-translation method was adopted  to design the  questionnaire. In  addition, the
+questionnaire was designed with the help of two professors and three PhD students in the
+
+
+
+                               Perceived Ease of Use
+
+
+                                               Employee Learning
+
+                                                          Exploitative learning
+         GenAI Use                                                                 Employee Creativity
+
+     Work-related GenAI use                                                                     Incremental creativity
+
+
+
+
+
+    Nonwork-related GenAI use                                                                    Radical creativity
+
+
+                                                        Explorative learning
+
+ Source(s): Authors’ work
+
+                                   Figure 1. Research model

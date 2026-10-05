@@ -1,0 +1,59 @@
+330                       G. Torkzadeh, W.J. Doll / Omega, Int. J. Mgmt. Sci. 27 (1999) 327±339
+
+
+years  [7, 11, 17, 22, 25, 31, 33, 54, 55]. Information tech-      ted systematic and purposeful agency to the manage-
+nology facilitates innovation through learning. In dis-       rial  use  of  technology   [2, 51].  They  argue  that
+cussing   the   impact   of    `industrial   humanism     managers are interested exclusively in technology as a
+management', Long [33] suggests that employees will     means of controlling, limiting, and ultimately weaken-
+use information technology to enrich and broaden jobs      ing  their work  force. Shaiken  [51] anticipates fewer
+(i.e. innovate). Larson and Fielden  [31] suggest the        skills, less worker input and increased managerial con-
+need for task innovation or problem solving activity as       trol. He suggests that a high  level of  skill  is often
+opposed to number of word measures of productivity.     embodied in computerized systems which will lay the
+Harvey et al. [22] suggest that many innovative compa-      basis for a considerable transfer of power to manage-
+nies are using the technology and exploring new ways      ment. In some cases, sophisticated management,  es-
+to  interface with customers. In  the emerging  post-       pecially  in  small  shops  specializing  in   intricate
+industrial setting, worker skill is not the skill of execut-      prototype work, have  felt  that ecient production
+ing but the skill of problem solving and the ability to      requires  skilled workers. Under these circumstances,
+learn and innovate [25]. Work becomes heavily depen-      the machine is viewed as a tool for the worker rather
+dent on information processing, increasingly abstract      than  as a  vehicle  to  control  the  worker. Shaiken
+and mediated by sensing mechanisms. Thus, in study-      suggests that the design of the technology determines
+ing the impact of information technology, we cannot      the context  in which labor and management forces
+just study what workers do, but rather how innovative      play themselves out. Zubo suggests a more compli-
+they are in what they have to do. The overall impact      cated reality. With the diusion of management func-
+of technology is to diuse the management function in       tion, management  control has a  dierent meaning.
+new ways as work (1) becomes a fusion of working     Sometimes management is part of a group that moni-
+and learning, (2)  is identi®ed with developmental ac-      tors his/her own performance. Using a socio-technical
+tivity and (3) is organized through team relationships.        perspective, Hirschhorn [26] contends that information
+                                                         technology is used in new ways in an emerging post-
+2.2.3. Customer satisfaction                                     industrial labor process and has decisive implications
+  Information technology empowers employees to pro-      for the general texture of life. He suggests that  if we
+vide  better and  faster  service to both  internal and      are to make full use of the new technologies, we must
+external customers  [7, 17, 21, 22, 25, 26, 47]. Describing      confront the constraints imposed by management sys-
+the role of technology in service quality, Harvey et      tems, capitalistic interests and old organizational de-
+al. [22] point out the more dicult task of ``balancing       signs.
+short-term,  directly  measurable  productivity  gains
+against the more important and more pervasive, but
+more dicult to measure gains that come from produ-       3. Methods
+cing and delivering more value to the customer''. They
+suggest a model that describes how services that pro-     A literature review was conducted to ensure that a
+vide `value-added partnerships' can be created through     comprehensive list of items was generated to measure
+information technology. Failiatrault et al. [17] suggest      dimensions of application impact. The works of MIS
+a close relation between service quality, productivity      researchers   [18, 27, 33, 34, 36, 38, 43, 44, 48, 52],  works
+and customer satisfaction. They argue that improving     on the  social and economic impact of information
+productivity  can  improve  customer   satisfaction.      technology  [2, 8, 9, 24, 25, 28, 29, 33, 36, 42, 45, 51, 54, 55]
+Harvey and Filiatrault [21] review technology adoption     and works on white collar productivity [11, 20±23, 31±
+in the banking industry and  describe,  for example,      33, 47, 53] were reviewed. This literature, especially the
+how on-line technology can speed up client queries or      descriptions of information technology's impact on the
+implement client requests, increasing customer satisfac-      nature of work,  is a rich source of  illustrations or
+tion. Improved  service  quality  is perceived through     examples of how information systems are used by indi-
+close  interaction and real-time ¯ow of information.      viduals in their work context. Based upon this review,
+Information technology applications can be used to      the researchers generated thirty-nine items to measure
+create customer `empowerment'  that  will  ultimately      aspects  of impact  (see Appendix  A). A ®ve  point
+result in customer satisfaction [47].                           Likert-type scale was used where 1 = not at all, 2 = a
+                                                                                     little, 3 = moderately, 4 =much and 5 = a great deal.
+2.2.4. Management control                              The  researchers  developed a  structured  interview
+  Many authors suggest that one of the initial intents      questionnaire and process for the pilot study to: (1)
+for using a new technology is to increase management      assess  whether  the  instrument  was  capturing  the
+control.  [2, 26, 30, 51, 55]. Although technology  rede-     phenomenon desired by the researchers; (2) verify that
+®nes the possible,  it cannot determine which choices      important  aspects  of  impact  dimensions  were  not
+are taken up and to what purpose. Some have attribu-      omitted and  (3) enable an interviewer to make an

@@ -29,7 +29,7 @@ FORMS = {
 }
 
 # 공개 대상 하위 폴더 (SRC 기준). 루트는 항상 포함
-SUBDIRS = ['', '질문 검토', '질문 검토/최종 설문', '질문 검토/챕터']
+SUBDIRS = ['', '질문 검토', '질문 검토/최종 설문', '질문 검토/최종설문', '질문 검토/챕터']
 MODEL_SRC = '질문 검토/최종설문/04_연구1·2_핵심모형·보조변수_설명.html'
 MODEL_OUT = '연구모델_04_연구1·2_핵심모형·보조변수_설명.html'
 TEXT_EXT = {'.md', '.html'}
@@ -208,6 +208,7 @@ def build():
     t = strip_pdf_links(t)
     t = re.sub(r'(<body[^>]*>)', r'\1<a href="index.html" style="position:fixed;right:12px;bottom:12px;z-index:99;background:#000;color:#fff;padding:6px 10px;font:13px sans-serif;text-decoration:none">← 허브</a>', t, count=1)
     (DEST / MODEL_OUT).write_text(t, encoding='utf-8')
+    shutil.copy2(SRC / '질문 검토/최종설문/package.css', DEST / 'package.css')
 
     (DEST / 'index.html').write_text(hub(latest, older, mapping), encoding='utf-8')
     print(f'latest {len(latest)} · older {len(older)} → {DEST}')
@@ -254,62 +255,60 @@ def hub(latest, older, m):
   <a href="{F['ko_edit']}" target="_blank" rel="noopener"><b>국문 작업파일</b><span>편집 화면 · 권한 필요</span></a>
   <a href="{F['en_edit']}" target="_blank" rel="noopener"><b>영문 작업파일</b><span>편집 화면 · 권한 필요</span></a>
 </div>
-<p class="muted" style="font-size:13px">현행 설문 v0.8 초안 (2026-10-04). 본조사 배포본 아님 — 동의문 필수정보·경력 기준·IRB 확정 전.</p>
+<p class="muted" style="font-size:13px">현행 설문 v0.93 (2026-10-05, 15개 섹션 · 69개 문항 코드). 본조사 배포본 아님 — 동의문 필수정보·IRB 확정 전. 편집 화면의 게시 상태(Published)는 재확인 필요.</p>
 
 <h2>1. 바로 보기</h2>
 <div class="grid2">
- <div class="card"><b>연구모형 (현재 v0.4)</b><br>{L('11_연구1·2_통합모형·연구질문_v0.1.html', '통합모형·연구질문')}<br><span class="muted">파일명 v0.1, 내용 v0.4</span></div>
- <div class="card"><b>모형이 바뀐 이유</b><br>{L('20_연구모형_변화이유_정리_v0.1.md', '연구모형 변화 이유 정리 v0.1')}<br><span class="muted">09-20 3편 구조 → 10-03 연구 2개</span></div>
- <div class="card"><b>최종 설문 v0.8</b><br>{L('질문 검토/최종 설문/01_국문_설문지_v0.8.md', '국문 설문지')} · {L('질문 검토/최종 설문/02_영문_설문지_v0.8.md', '영문 설문지')}<br>{L('질문 검토/최종 설문/00_v0.8_변경사항과_미확정.md', 'v0.8 변경사항과 미확정')} · {L('질문 검토/최종 설문/03_확인된_질문지_영한대조_v0.8.xlsx', '영한대조 엑셀')}</div>
- <div class="card"><b>설문 원문 검토</b><br>{L('질문 검토/00_설문원문_영한대조_검토자료집_v0.5.html', '원문·영한 대조 검토자료집 v0.5')}<br>{L('12_연구1·2_통합설문지_영한대조_원문근거보완_v0.4.html', '통합설문지 영한대조 v0.4')}</div>
+ <div class="card"><b>최종 연구모델 (v1.0)</b><br><a href="{MODEL_OUT}">핵심모형·보조변수 설명</a><br>{L('26_연구1·2_최종연구모델_보고서_v1.0.html', '최종 연구모델 보고서 v1.0')}</div>
+ <div class="card"><b>최종설문 v0.93</b><br>{L('질문 검토/최종설문/00_시작.html', '패키지 시작 화면')} · {L('질문 검토/최종설문/01_최종설문_v0.93.html', '설문 정리본')}<br>{L('질문 검토/최종설문/02_문항별_영한대조·핵심근거.html', '문항별 영한대조·핵심근거')} · {L('질문 검토/최종설문/03_설문_검토보고서.html', '설문 검토보고서')}</div>
+ <div class="card"><b>모형이 바뀐 이유</b><br>{L('20_연구모형_변화이유_정리_v0.1.md', '연구모형 변화 이유 정리 v0.1')} · {L('21_연구모형_변경계기·현재모형_TV·SV_운용방침_v0.1.md', '변경 계기·TV·SV 운용방침')}<br>{L('23_연구1_TC_이득과비용_모형설명_v0.1.md', 'TC 이득과 비용')} · {L('25_연구1_권장모형·설문재구성안_v0.3.html', '권장모형·설문재구성안 v0.3')}</div>
+ <div class="card"><b>이전 단계 (참고)</b><br>{L('11_연구1·2_통합모형·연구질문_v0.1.html', '통합모형 v0.4 (10-03)')}<br>{L('질문 검토/00_설문원문_영한대조_검토자료집_v0.5.html', '원문·영한 대조 검토자료집 v0.5')}</div>
 </div>
 
 <h2>2. 연구모형 (현재)</h2>
+<p><b>핵심질문</b> — 생성형 AI를 사용하는 디자이너가 업무의 과업과 역량을 어떻게 재구성하며, 그 과정에서 생산성 기여·업무범위 확대·업무강도 증가가 어떤 조합으로 나타나는가?</p>
 <div class="grid2">
- <div><img src="images/04_연구1_EXP조절.png" alt="연구1 경로도"><p><b>연구 1 · 일의 수행</b><br>USE → TC → IWB·TP → 보상(REW_AI)<br>GAIL: USE→TC 조절 · EXP: TC→IWB·TP 조절</p></div>
- <div><img src="images/05_연구2_GAIL조절.png" alt="연구2 경로도"><p><b>연구 2 · 역량 개발 행동</b><br>THR → USE → SC + THR → SC 직접경로<br>GAIL: THR→USE 조절 · EXP: USE→SC 조절</p></div>
+ <div class="card"><b>연구 1 · AI 사용, 과업 재구성, 업무 결과</b><br>USE → TC → TP·JE·WI<br>GAIL: USE→TC 조절 · EXP: TC→TP, TC→JE, TC→WI 각각 조절<br><span class="muted">세 결과는 합치지 않는다. USE 직접경로·조절변수 주효과는 분석식에 포함.</span></div>
+ <div class="card"><b>연구 2 · 대체 위협, AI 사용, 역량 개발 행동</b><br>THR → USE → SC + THR → SC 직접경로<br>GAIL: THR→USE 조절 · EXP: USE→SC 조절<br><span class="muted">SC는 역량 개발 행동이며 실제 실력 향상과 다르다.</span></div>
 </div>
-<p class="muted" style="font-size:13px">그림은 10-03 07안 기준 이미지. 연구2 EXP 조절·THR→SC 직접경로는 11 통합모형 v0.4에서 추가됨 — 최신 그림은 통합모형 HTML 참조.</p>
+<p class="muted" style="font-size:13px">경로도는 <a href="{MODEL_OUT}">핵심모형·보조변수 설명</a> 참조. 화살표는 이론적 방향이며, 횡단 자기보고만으로 인과를 입증하지 않는다.</p>
 
 <h3>연구질문</h3>
 <table>
 <tr><th>RQ</th><th>질문</th></tr>
-<tr><td>1-1</td><td>업무상 생성형 AI 사용 수준은 촉진적 과업 크래프팅과 어떤 관련이 있으며, GAIL에 따라 달라지는가?</td></tr>
-<tr><td>1-2</td><td>AI 사용과 IWB·TP의 관련성에서 TC를 통한 간접효과가 나타나며, 그 크기는 GAIL·EXP 수준에 따라 달라지는가?</td></tr>
-<tr><td>1-3</td><td>TC와 두 업무상 결과의 관련성은 업무 숙련도에 따라 달라지는가?</td></tr>
-<tr><td>1-4</td><td>IWB·TP는 경제적 보상 변화와 어떤 관련이 있는가? (증가·무영향·감소 모두 열어 둠)</td></tr>
-<tr><td>2-1</td><td>직업대체 위협·걱정은 업무상 AI 사용 수준과 어떤 관련이 있는가?</td></tr>
-<tr><td>2-2</td><td>위협·걱정은 AI 사용을 통한 간접효과와 별개로 SC와 직접 관련되는가?</td></tr>
-<tr><td>2-3</td><td>위협·걱정과 AI 사용의 관련성은 GAIL에 따라 달라지는가?</td></tr>
-<tr><td>2-4</td><td>AI 사용과 SC의 관련성은 EXP에 따라 달라지는가?</td></tr>
+<tr><td>1-1</td><td>USE와 TC는 어떻게 관련되며 GAIL에 따라 달라지는가?</td></tr>
+<tr><td>1-2</td><td>TC는 TP·JE·WI와 각각 어떻게 관련되며 EXP에 따라 달라지는가?</td></tr>
+<tr><td>1-3</td><td>USE와 결과의 직접 관련성과 TC를 통한 조건부 간접 관련성은 어떻게 나타나는가?</td></tr>
+<tr><td>1-4</td><td>TP·JE·WI·INC_AI는 어떤 조합으로 나타나는가?</td></tr>
+<tr><td>2-1</td><td>THR은 USE 및 SC와 어떻게 관련되는가?</td></tr>
+<tr><td>2-2</td><td>THR→USE는 GAIL에 따라 달라지는가?</td></tr>
+<tr><td>2-3</td><td>USE→SC는 EXP에 따라 달라지는가?</td></tr>
+<tr><td>2-4</td><td>THR과 SC의 직접 관련성과 조건부 간접 관련성은 어떻게 나타나는가?</td></tr>
 </table>
 
-<h2>3. 연구모형 × 설문 × 구글 링크</h2>
+<h2>3. 변수 × 측정 × 출처 (설문 v0.93)</h2>
 <table>
-<tr><th>변수</th><th>측정 내용</th><th>연구1</th><th>연구2</th><th>문항</th><th>출처</th><th>설문 위치</th></tr>
-<tr><td>USE</td><td>업무상 AI 사용 (아이디어·질문·지식·문제해결)</td><td>독립</td><td>매개</td><td>4</td><td>Zhang, Yu &amp; Ma</td><td>{L('질문 검토/챕터/02_업무상 AI 사용.md', '02 업무상 AI 사용')}</td></tr>
-<tr><td>TC</td><td>촉진적 과업 크래프팅</td><td>매개</td><td>—</td><td>4</td><td>Bindl et al., 2019</td><td>{L('질문 검토/챕터/03_과업 크래프팅.md', '03 과업 크래프팅')}</td></tr>
-<tr><td>SC</td><td>스킬 크래프팅 (개발 행동)</td><td>—</td><td>결과</td><td>4</td><td>Bindl et al., 2019</td><td>{L('질문 검토/챕터/04_스킬 크래프팅.md', '04 스킬 크래프팅')}</td></tr>
-<tr><td>IWB</td><td>혁신적 업무행동</td><td>결과</td><td>—</td><td>9</td><td>Janssen, 2000</td><td>{L('질문 검토/챕터/05_혁신적 업무행동.md', '05 혁신적 업무행동')}</td></tr>
-<tr><td>TP</td><td>AI의 지각된 생산성 기여</td><td>결과</td><td>—</td><td>3</td><td>Torkzadeh &amp; Doll, 1999</td><td>{L('질문 검토/챕터/06_지각된 생산성 기여.md', '06 지각된 생산성 기여')}</td></tr>
-<tr><td>EXP</td><td>자기평가 직업 전문성</td><td>TC→IWB·TP 조절</td><td>USE→SC 조절</td><td>5</td><td>Van der Heijden et al., 2018</td><td>{L('질문 검토/챕터/07_자기평가 직업 전문성.md', '07 직업 전문성')}</td></tr>
-<tr><td>GAIL</td><td>생성형 AI 리터러시 (5차원)</td><td>USE→TC 조절</td><td>THR→USE 조절</td><td>17</td><td>Liu et al., 2025</td><td>{L('질문 검토/챕터/08_생성형 AI 리터러시.md', '08 생성형 AI 리터러시')}</td></tr>
-<tr><td>THR</td><td>AI 직업대체 위협·걱정</td><td>—</td><td>독립</td><td>4</td><td>Brougham &amp; Haar, 2018 번안</td><td>{L('질문 검토/챕터/09_AI 대체 위협·걱정.md', '09 AI 대체 위협·걱정')}</td></tr>
-<tr><td>TV·SV</td><td>과업·기술 다양성 (비교 후보)</td><td colspan="2">M1·M2 중간경로 비교용</td><td>4+4</td><td>Morgeson &amp; Humphrey, 2006</td><td>{L('질문 검토/챕터/추가_TV_원문영한대조_v0.5.md', 'TV')} · {L('질문 검토/챕터/추가_SV_원문영한대조_v0.5.md', 'SV')}</td></tr>
-<tr><td>ACT</td><td>기획·탐색·제작·수정별 사용 빈도 (4단계)</td><td colspan="2">보조 프로필 · USE와 합산 금지</td><td>4</td><td>연구자 재구성 (Luo 2025 응답형식)</td><td>{L('질문 검토/챕터/10_활동별 사용.md', '10 활동별 사용')}</td></tr>
-<tr><td>REW_AI</td><td>AI가 현재 소득에 미친 영향 (증가/무영향/감소)</td><td>보상 결과</td><td>—</td><td>1</td><td>Humlum &amp; Vestergaard, NBER WP33777 Q14a</td><td>{L('질문 검토/챕터/11_생성형 AI의 지각된 소득 영향.md', '11 소득 영향')}</td></tr>
+<tr><th>변수</th><th>측정 내용</th><th>연구1</th><th>연구2</th><th>문항</th><th>출처</th></tr>
+<tr><td>USE</td><td>업무상 생성형 AI 사용</td><td>독립</td><td>매개</td><td>4</td><td>Zhang·Yu·Ma</td></tr>
+<tr><td>TC</td><td>촉진적 과업 크래프팅 (지난 1주)</td><td>매개</td><td>—</td><td>4</td><td>Bindl et al., 2019</td></tr>
+<tr><td>TP</td><td>AI의 지각된 생산성 기여</td><td>결과</td><td>—</td><td>3</td><td>Torkzadeh &amp; Doll, 1999</td></tr>
+<tr><td>JE</td><td>담당 과업·범위 확대 (회고)</td><td>결과</td><td>—</td><td>4</td><td>연구자 개발 후보</td></tr>
+<tr><td>WI</td><td>업무강도 증가 (회고)</td><td>결과</td><td>—</td><td>5</td><td>Kubicek et al., 2015</td></tr>
+<tr><td>SC</td><td>스킬 크래프팅 (개발 행동)</td><td>—</td><td>결과</td><td>4</td><td>Bindl et al., 2019</td></tr>
+<tr><td>THR</td><td>AI 직업대체 위협·걱정</td><td>—</td><td>독립</td><td>4</td><td>Brougham &amp; Haar, 2018 번안</td></tr>
+<tr><td>GAIL</td><td>생성형 AI 리터러시</td><td>USE→TC 조절</td><td>THR→USE 조절</td><td>17</td><td>Liu·Zhang·Wei, 2025</td></tr>
+<tr><td>EXP</td><td>자기평가 직업 전문성</td><td>TC→세 결과 조절</td><td>USE→SC 조절</td><td>5</td><td>Van der Heijden et al., 2018</td></tr>
 </table>
-<p class="muted" style="font-size:13px">핵심 50문항 + TV·SV 8 + ACT 4 + REW_AI 1 + 동의·선별·배경·마무리. 응답: 국문 <a href="{F['ko_view']}">{F['ko_view']}</a> · 영문 <a href="{F['en_view']}">{F['en_view']}</a></p>
+<p class="muted" style="font-size:13px">보조 항목(핵심모형 제외): 참여·선별(CONSENT·S1·S2), 기준업무(REF), 회고 비교(PRE_AI·COMPARE), WORK_WEEK, JE_DIR, 활동별 사용 ACT1–4(USE와 합산 금지), 지각된 소득 영향 INC_AI, 배경 BG, FEEDBACK. 전체 69개 코드는 최종설문 폴더의 05_문항코드북.tsv.</p>
 
 <h2>4. 모형이 바뀐 이유 (요약)</h2>
 <table>
-<tr><th>이전 (09-20)</th><th>현재 (10-03)</th><th>이유</th></tr>
-<tr><td>논문 3편</td><td>설문 1회 · 연구 2개</td><td>지도교수 3회차 면담 "변수가 많다 · 설문 먼저". 3편(PSY)은 팀 수준 변수라 프리랜서와 충돌</td></tr>
-<tr><td>TV·SV 최종 결과</td><td>IWB·TP 결과, TV·SV는 비교 후보</td><td>WDQ는 변화량이 아닌 현재 수준. TC→TV 직접근거 부족. 실무적 함의 약함</td></tr>
-<tr><td>AAX(불안)</td><td>THR(위협·걱정)</td><td>위협 인식과 불안 정서 혼재. 원문 STARA 4문항 중 3문항에 worried 포함 → 명칭에 반영</td></tr>
-<tr><td>LOAD → PERF → REW</td><td>제외 / REW_AI 범주형</td><td>AI는 부하를 높이기도 낮추기도 함. ERI 보상척도는 조직근로자용 · 실제 소득과 다른 개념</td></tr>
-<tr><td>EXP: 부담 완화 조절</td><td>TC→IWB·TP, USE→SC 조절</td><td>"누가 TC를 많이 하나"가 아니라 "TC의 성과 관련성이 숙련도에 따라 다른가"</td></tr>
-<tr><td>CC · PSY</td><td>제외</td><td>AI 특수성 약함 · 방향 불확정 · 팀 수준 문제</td></tr>
+<tr><th>이전</th><th>현재 (v1.0, 10-05)</th><th>이유</th></tr>
+<tr><td>논문 3편 (09-20)</td><td>설문 1회 · 연구 2개</td><td>지도교수 3회차 면담 "변수가 많다 · 설문 먼저". 팀 수준 변수는 프리랜서와 충돌</td></tr>
+<tr><td>연구 1 결과: IWB·TP (10-03)</td><td>TP·JE·WI 세 병렬 결과</td><td>과업 확장이 생산성·업무범위·부담에 서로 다른 결과를 낼 수 있음. 세 결과를 '좋은 결과' 하나로 합치지 않음</td></tr>
+<tr><td>REW_AI 보상 결과</td><td>INC_AI 보조 결과 (범주형)</td><td>핵심 잠재척도에서 제외, 조합 기술용</td></tr>
+<tr><td>TV·SV 비교 후보</td><td>핵심모형 밖</td><td>운용방침은 21번 문서</td></tr>
+<tr><td>AAX(불안)</td><td>THR(위협·걱정)</td><td>원문 STARA 문항에 worried 포함 → 명칭에 반영</td></tr>
 </table>
 <p>전체 정리: {L('20_연구모형_변화이유_정리_v0.1.md', '연구모형 변화 이유 정리 v0.1 →')}</p>
 
@@ -317,11 +316,9 @@ def hub(latest, older, m):
 <table>
 <tr><th>날짜</th><th>단계</th><th>문서</th></tr>
 <tr><td>09-20</td><td>3편 경로모형 초안</td><td>{L('AI크래프팅_경로모형.html', 'AI크래프팅 경로모형')} · {L('AI크래프팅_연구모형_질문지·정합성검토_v0.1.md', '질문지·정합성 검토')}</td></tr>
-<tr><td>10-03 오전</td><td>이론근거·인지부하 근거 수집 → 간결화 · 두 축 검토</td><td>{L('01_1편_이론배경·실증근거_수집_v0.1.md', '01')} · {L('02_신규PDF_연구모델_근거점검_v0.1.md', '02')} · {L('03_AI사용과_인지부하_근거수집_v0.1.md', '03')} · {L('04_연구모형_간결화_결정안_v0.1.md', '04')} · {L('05_두축_최소모형_검토안_v0.1.md', '05')}</td></tr>
-<tr><td>10-03 낮</td><td>원문기반 연구 1·2 구도 → EXP 조절 수정모형 → 변수별 설문</td><td>{L('06_연구1·2_원문기반_모형·변수·연구질문_v0.1.md', '06')} · {L('07_**_연구1·2_수정모형_EXP조절_v0.1.md', '07')} · {L('08_**_연구1·2_변수별_설문문항_검토초안_v0.2.md', '08 v0.2')}</td></tr>
-<tr><td>10-03 저녁</td><td>통합모형 v0.4 · 양적검토 · 통합설문지 v0.1→v0.4</td><td>{L('11_연구1·2_통합모형·연구질문_v0.1.html', '11')} · {L('12_양적검토조교_11통합모형_검토_v0.1.md', '12 검토')} · {L('12_연구1·2_통합설문지_영한대조_원문근거보완_v0.4.html', '12 설문 v0.4')} · {L('14_통합설문지_Dillman_TDM_점검_v0.1.md', '14 Dillman')} · {L('17_전체문항_영한대조·추가근거_인용_명세서_v0.1.md', '17 인용')}</td></tr>
-<tr><td>10-04 오전</td><td>인계 · 예비조사 결정안 · TV·SV 추가 v0.5</td><td>{L('18_새세션_인계_20261004.md', '18 인계')} · {L('19_예비조사_항목·적격·동의·앵커_결정안_v0.1.md', '19 결정안')} · {L('질문 검토/00_설문원문_영한대조_검토자료집_v0.5.html', '자료집 v0.5')}</td></tr>
-<tr><td>10-04 밤</td><td>Google Forms 국문·영문 v0.8</td><td>{L('질문 검토/최종 설문/00_v0.8_변경사항과_미확정.md', 'v0.8 변경사항')}</td></tr>
+<tr><td>10-03</td><td>근거 수집 → 간결화 → 연구 1·2 구도 → 통합모형 v0.4 · 통합설문지</td><td>{L('04_연구모형_간결화_결정안_v0.1.md', '04')} · {L('07_**_연구1·2_수정모형_EXP조절_v0.1.md', '07')} · {L('11_연구1·2_통합모형·연구질문_v0.1.html', '11')} · {L('12_연구1·2_통합설문지_영한대조_원문근거보완_v0.4.html', '12 설문 v0.4')}</td></tr>
+<tr><td>10-04</td><td>인계 · 예비조사 결정안 · TV·SV 추가 · Google Forms v0.8</td><td>{L('18_새세션_인계_20261004.md', '18 인계')} · {L('19_예비조사_항목·적격·동의·앵커_결정안_v0.1.md', '19 결정안')} · {L('질문 검토/최종 설문/00_v0.8_변경사항과_미확정.md', 'v0.8 변경사항')}</td></tr>
+<tr><td>10-05</td><td>모형 변경 정리 · JE·WI 반영 · 권장모형 · 최종 연구모델 v1.0 · 최종설문 v0.93</td><td>{L('20_연구모형_변화이유_정리_v0.1.md', '20')} · {L('21_연구모형_변경계기·현재모형_TV·SV_운용방침_v0.1.md', '21')} · {L('24_연구1_JE반영_현재모델_인수인계_v0.2.md', '24')} · {L('25_연구1_권장모형·설문재구성안_v0.3.html', '25')} · {L('26_연구1·2_최종연구모델_보고서_v1.0.html', '26 v1.0')} · <a href="{MODEL_OUT}">최종설문 04</a></td></tr>
 </table>
 
 <h2>6. 연구 중간작업 — 최신 파일 ({len(latest)})</h2>

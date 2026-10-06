@@ -5,18 +5,18 @@
     "to": "2026-10-11"
   },
   "status": "current",
-  "summary": "0500 박사 연구모델 최종 설계 합의안(v1.0)과 최종설문 패키지 정리, 대시보드 연구모델 허브에 공개",
+  "summary": "박사 연구모델을 최종 설계 합의안 v1.0으로 정리했다. 연구 1은 USE→TC→TP·JE·WI, 연구 2는 THR→USE→SC. 설문 v0.93을 최종설문 패키지로 묶고 대시보드 연구모델 허브에 공개했다.",
   "kpis": {
     "activeProjects": 2,
     "sessions": 1,
     "newProjects": 0,
-    "filesChanged": 32
+    "filesChanged": 123
   },
   "daily": [
     {
       "date": "2026-10-05",
       "weekday": "월",
-      "filesChanged": 32,
+      "filesChanged": 49,
       "topProjectIds": [
         "0500",
         "063"
@@ -24,11 +24,11 @@
       "entries": [
         {
           "projectId": "0500",
-          "did": "[fs scan] 23_연구1_TC_이득과비용_모형설명_v0.1.md · 24_연구1_JE반영_현재모델_인수인계_v0.2.md · 25_연구1_권장모형·설문재구성안_v0.3.md · 22_연구2_현재모형_흑백_v0.1.svg · 23_연구1_TC_이득과비용_흑백_v0.1.svg 외 21건"
+          "did": "연구 1 결과변수에 JE·WI 추가, 최종 연구모델 보고서 v1.0, 설문 v0.93 최종설문 패키지 정리"
         },
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W41.json",
+          "did": "W41 주간 초안 생성",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -55,8 +55,36 @@
     {
       "date": "2026-10-06",
       "weekday": "화",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 74,
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "연구모델 허브에 「연구모델」 섹션 신설 + 새 문서 9개 공개",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 44,
+                "out": 7751,
+                "cache_read": 1857433,
+                "cache_write": 144806,
+                "messages": 22,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 44,
+              "out": 7751,
+              "cache_read": 1857433,
+              "cache_write": 144806,
+              "messages": 22
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-10-07",
@@ -89,36 +117,64 @@
       "topProjectIds": []
     }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "id": "0500",
+      "pct": 75,
+      "filesChanged": 75,
+      "imp": 5,
+      "did": "연구 1에 JE(과업 확대)·WI(업무강도)를 넣어 결과를 TP·JE·WI 세 개로 나눴다(23~25). 연구 1·2 최종 연구모델 보고서 v1.0(26)을 쓰고, Google 설문 v0.93을 최종설문 패키지(설문 정리본·영한대조·검토보고서·핵심모형 설명·코드북 69문항)로 묶었다.",
+      "nextAction": "설문 게시 상태 재확인(편집 화면 Published) · JE 신규문항과 바뀐 응답척도·기간 예비조사 검증 · 동의문·IRB 확정",
+      "deliverables": [
+        "05_phD_Research/00_연구가이드/글쓰기/00_연구모델 정리/질문 검토/최종설문",
+        "05_phD_Research/00_연구가이드/글쓰기/00_연구모델 정리/26_연구1·2_최종연구모델_보고서_v1.0.html"
+      ]
+    },
+    {
+      "id": "063",
+      "pct": 25,
+      "filesChanged": 48,
+      "imp": 3,
+      "did": "연구모델 허브 맨 위에 「연구모델」 섹션을 새로 만들고 최종설문 04 핵심모형·보조변수 설명을 링크했다. 허브를 다시 빌드해 새 문서 9개를 공개했다.",
+      "nextAction": "배포 확인"
+    }
+  ],
   "decisions": [
     {
       "date": "2026-10-05",
-      "projectId": "",
+      "projectId": "0500",
       "title": "사용자는 우선 레이아웃을 확인하려고 하므로 새 초안을 '레이아웃 테스트'로 명명했다.",
-      "description": "TODO — Claude가 채움"
+      "description": "Google 설문 v0.93 레이아웃 점검용 초안이다."
     },
     {
       "date": "2026-10-05",
-      "projectId": "",
+      "projectId": "0500",
       "title": "연구참여자에게 링크를 공유하지 않았다. 연구책임자·소속·연락처·자료보관 등의 안내가 아직 확정되지 않았다. ",
-      "description": "TODO — Claude가 채움"
+      "description": "동의문 필수정보가 확정될 때까지 응답 링크를 배포하지 않는다."
     },
     {
       "date": "2026-10-05",
-      "projectId": "",
+      "projectId": "0500",
       "title": "긴 문항은 표형의 좁은 행 라벨이 아니라 독립 객관식 문항으로 넣어 가독성을 시험했다.",
-      "description": "TODO — Claude가 채움"
+      "description": "긴 문항은 응답자 가독성 시험 결과에 따라 형식을 정한다."
+    },
+    {
+      "date": "2026-10-05",
+      "projectId": "0500",
+      "title": "연구 1의 결과를 TP·JE·WI 세 개로 나누고 하나로 합치지 않는다.",
+      "description": "EXP는 TC→세 결과 경로를 각각 조절한다. 최종 연구모델 보고서 v1.0.",
+      "isMilestone": true
     }
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-05T09:50:18.269Z",
+  "buildAt": "2026-10-05T22:40:47.017Z",
   "tokens": {
     "total": {
-      "in": 14,
-      "out": 1525,
-      "cache_read": 1008867,
-      "cache_write": 143251
+      "in": 58,
+      "out": 9276,
+      "cache_read": 2866300,
+      "cache_write": 288057
     },
     "costUSD": 0,
     "costKRW": 0

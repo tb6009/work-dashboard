@@ -1,0 +1,42 @@
+{
+  "id": "1303",
+  "currentSituation": {
+    "summary": "데이터 시각화·인포그래픽 제작 노하우를 한 곳에 모으는 저장소를 만들고, 첫 사례로 워크스페이스 AI 작업 기록을 A1 세로 포스터로 그렸다. HTML 초안 3개 뒤 A1 포스터를 v0.4에서 v0.29까지 고쳤다.",
+    "phase": "A1 포스터 v0.29 — 시작점·번호 크기 조정, 물리 출력 전",
+    "recentLogs": [
+      {
+        "date": "2026-10-10",
+        "title": "A1 포스터 v0.15 → v0.29",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/1303_DataViz/10_AI작업히스토리/A1_번호별_시작점확대_v0.29/README.md",
+        "excerpt": "10월 전체 그리드로 넓히고, 분기 표식·링·시작점·선 끝·폴더 번호를 차례로 정리했다."
+      },
+      {
+        "date": "2026-10-09",
+        "title": "HTML 초안 v0.1–0.3 → A1 포스터 v0.4–v0.14",
+        "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/1303_DataViz/10_AI작업히스토리/A1_5월확장_그레이타입_v0.14/README.md",
+        "excerpt": "세션 타임라인 HTML에서 출발해 에디토리얼·위계변화·방사형·방추형 구도를 비교했다."
+      }
+    ],
+    "blockers": [
+      "브라우저 실행과 A1 물리 출력 검증은 아직 하지 않았다."
+    ]
+  },
+  "deliverables": [
+    {
+      "title": "AI 작업 계보 A1 포스터 v0.29",
+      "filePath": "/Users/jinhyunpark/Documents/cloude_Code/13_Image/1303_DataViz/10_AI작업히스토리/A1_번호별_시작점확대_v0.29/poster_A1.svg",
+      "fileKind": "image",
+      "summary": "프로젝트별 시작점·분기·주간 활동을 한 장에 담은 A1 세로 포스터.",
+      "modifiedAt": "2026-10-10"
+    }
+  ],
+  "nextTasks": [
+    {
+      "title": "A1 시험 출력",
+      "description": "poster_A1.pdf를 594×841mm로 출력해 번호·선 굵기를 실물로 확인한다.",
+      "priority": "high",
+      "estimate": "반나절"
+    }
+  ],
+  "buildAt": "2026-10-11T10:30:00+09:00"
+}

@@ -5,12 +5,12 @@
     "to": "2026-10-11"
   },
   "status": "current",
-  "summary": "박사 연구모델을 최종 설계 합의안 v1.0으로 정리했다. 연구 1은 USE→TC→TP·JE·WI, 연구 2는 THR→USE→SC. 설문 v0.93을 최종설문 패키지로 묶고 대시보드 연구모델 허브에 공개했다.",
+  "summary": "박사 연구모델을 개요 v1.1과 설문 v0.93 패키지로 정리했다. 1303 DataViz를 새로 열어 AI 작업 계보 A1 포스터를 v0.29까지 고쳤고, Value-up 디자인터칭데이 키 비주얼·포스터·캐러셀 3종을 만들었다.",
   "kpis": {
-    "activeProjects": 2,
+    "activeProjects": 8,
     "sessions": 1,
-    "newProjects": 0,
-    "filesChanged": 123
+    "newProjects": 1,
+    "filesChanged": 190
   },
   "daily": [
     {
@@ -55,9 +55,12 @@
     {
       "date": "2026-10-06",
       "weekday": "화",
-      "filesChanged": 74,
+      "filesChanged": 100,
       "topProjectIds": [
-        "063"
+        "063",
+        "0500",
+        "03",
+        "039"
       ],
       "entries": [
         {
@@ -66,55 +69,252 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 44,
-                "out": 7751,
-                "cache_read": 1857433,
-                "cache_write": 144806,
-                "messages": 22,
+                "in": 152,
+                "out": 27201,
+                "cache_read": 8773203,
+                "cache_write": 484824,
+                "messages": 72,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 44,
-              "out": 7751,
-              "cache_read": 1857433,
-              "cache_write": 144806,
-              "messages": 22
+              "in": 152,
+              "out": 27201,
+              "cache_read": 8773203,
+              "cache_write": 484824,
+              "messages": 72
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 04_연구1·2_핵심모형·보조변수_설명.html"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 170,
+                "out": 85534,
+                "cache_read": 12563957,
+                "cache_write": 387962,
+                "messages": 83,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 170,
+              "out": 85534,
+              "cache_read": 12563957,
+              "cache_write": 387962,
+              "messages": 83
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 24_1부_목적·경과·일정브리핑_발표안_v0.1.md"
         }
       ]
     },
     {
       "date": "2026-10-07",
       "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 30,
+      "topProjectIds": [
+        "039",
+        "03",
+        "063",
+        "082",
+        "1300"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 33_6단계표준안×컨설팅표준×연간프로세스_정렬_v0.1.md · 33_디자인터칭데이_발표자료구성안_v0.2.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 44,
+                "out": 4103,
+                "cache_read": 1570702,
+                "cache_write": 81179,
+                "messages": 19,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 44,
+              "out": 4103,
+              "cache_read": 1570702,
+              "cache_write": 81179,
+              "messages": 19
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 44,
+                "out": 25687,
+                "cache_read": 3534462,
+                "cache_write": 632121,
+                "messages": 22,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 44,
+              "out": 25687,
+              "cache_read": 3534462,
+              "cache_write": 632121,
+              "messages": 22
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W41.json"
+        },
+        {
+          "projectId": "082",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 62,
+                "out": 93908,
+                "cache_read": 2709149,
+                "cache_write": 151284,
+                "messages": 31,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 62,
+              "out": 93908,
+              "cache_read": 2709149,
+              "cache_write": 151284,
+              "messages": 31
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 생성_프롬프트.md · 생성_프롬프트.md · 해설과_인용_명세서.md · 생성_프롬프트.md · 생성_프롬프트.md"
+        }
+      ]
     },
     {
       "date": "2026-10-08",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 4,
+      "topProjectIds": [
+        "082",
+        "063",
+        "1300"
+      ],
+      "entries": [
+        {
+          "projectId": "082",
+          "did": "[fs scan] README.md · 06_외부노하우_GPT·Higgsfield_모션.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 16,
+                "out": 5002,
+                "cache_read": 528192,
+                "cache_write": 205342,
+                "messages": 6,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 16,
+              "out": 5002,
+              "cache_read": 528192,
+              "cache_write": 205342,
+              "messages": 6
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W41.json"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 생성_프롬프트.md · 생성_프롬프트.md"
+        }
+      ]
     },
     {
       "date": "2026-10-09",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 7,
+      "topProjectIds": [
+        "01",
+        "063",
+        "1303"
+      ],
+      "entries": [
+        {
+          "projectId": "01",
+          "did": "[fs scan] 01_수익화_판단과_실행안_v0.1.md · 02_첫상품_판매와_검증_문안.md · 03_근거_인용_명세서.md · 04_몸과마음의과학_콘텐츠사업_검토_v0.1.md · 05_몸과마음_검토_인용_명세서.md 외 1건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W41.json"
+        },
+        {
+          "projectId": "1303",
+          "did": "1303 DataViz 저장소 신설 · AI 작업 계보 HTML 초안 v0.1–0.3 → A1 포스터 v0.4–v0.14"
+        }
+      ]
     },
     {
       "date": "2026-10-10",
       "weekday": "토",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "1303",
+        "039"
+      ],
+      "entries": [
+        {
+          "projectId": "1303",
+          "did": "A1 포스터 v0.15–v0.29 (10월 전체 그리드·분기 표식·시작점·번호 정리)"
+        },
+        {
+          "projectId": "039",
+          "did": "디자인터칭데이 키 비주얼 v0.7 확정 · 포스터 v1·v2 · 캐러셀 3종 v1·v2"
+        }
+      ]
     },
     {
       "date": "2026-10-11",
       "weekday": "일",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "1303 DataViz 히스토리·디자인터칭데이 제작과정 포트폴리오 공개, 연구모델 허브 v1.1 갱신"
+        }
+      ]
     }
   ],
   "projects": [
@@ -137,6 +337,28 @@
       "imp": 3,
       "did": "연구모델 허브 맨 위에 「연구모델」 섹션을 새로 만들고 최종설문 04 핵심모형·보조변수 설명을 링크했다. 허브를 다시 빌드해 새 문서 9개를 공개했다.",
       "nextAction": "배포 확인"
+    },
+    {
+      "id": "1303",
+      "pct": 60,
+      "filesChanged": 300,
+      "imp": 4,
+      "did": "데이터 시각화 노하우 저장소를 만들고, 워크스페이스 AI 작업 기록을 A1 세로 포스터로 그렸다. HTML 초안 v0.1–0.3 뒤 포스터를 v0.4에서 v0.29까지 26번 고쳤다(구도 비교 → 10월 전체 그리드 → 분기·시작점·번호 정리).",
+      "nextAction": "A1 시험 출력 · 번호·선 굵기 실물 확인",
+      "deliverables": [
+        "13_Image/1303_DataViz/10_AI작업히스토리"
+      ]
+    },
+    {
+      "id": "039",
+      "pct": 60,
+      "filesChanged": 250,
+      "imp": 4,
+      "did": "디자인터칭데이 불꽃 키 비주얼을 세로 9:16 v0.7로 확정했다. 포스터 스위스 타이포 v1 3안 → v2 A–E 16안, 비주얼 콘셉트 v1·v2, 고민별 캐러셀 3종(세트당 6장, 생성 시안 위 재조판)을 만들었다.",
+      "nextAction": "포스터 최종 문구·행사 일시·장소·신청 링크 확정 · 캐러셀 글자 교정",
+      "deliverables": [
+        "03_school_project/02_RISE/2026_가을_Value-up연구회/홍보자료제작"
+      ]
     }
   ],
   "decisions": [
@@ -166,15 +388,21 @@
       "isMilestone": true
     }
   ],
-  "newProjects": [],
+  "newProjects": [
+    {
+      "id": "1303",
+      "name": "1303 DataViz",
+      "reason": "13_Image/1303_DataViz 신설(10/9) — 데이터 시각화 노하우·AI 작업 계보 포스터"
+    }
+  ],
   "labelChanges": [],
-  "buildAt": "2026-10-05T22:40:47.017Z",
+  "buildAt": "2026-10-09T03:40:06.430Z",
   "tokens": {
     "total": {
-      "in": 58,
-      "out": 9276,
-      "cache_read": 2866300,
-      "cache_write": 288057
+      "in": 502,
+      "out": 242960,
+      "cache_read": 30688532,
+      "cache_write": 2085963
     },
     "costUSD": 0,
     "costKRW": 0

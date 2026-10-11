@@ -13,6 +13,7 @@ build-phd-model-portfolio.py
 import html
 import re
 import shutil
+import subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -211,6 +212,8 @@ def build():
     shutil.copy2(SRC / '질문 검토/최종설문/package.css', DEST / 'package.css')
 
     (DEST / 'index.html').write_text(hub(latest, older, mapping), encoding='utf-8')
+    # 대표 문서와 연결 자료를 마지막에 함께 생성하여 단독 복사로 인한 링크 손상을 방지한다.
+    subprocess.run(['node', str(Path(__file__).with_name('build-phd-linked-package.mjs'))], check=True)
     print(f'latest {len(latest)} · older {len(older)} → {DEST}')
 
 
@@ -240,11 +243,11 @@ def hub(latest, older, m):
     L = lambda rel, label=None: link(m, rel, label)
     F = FORMS
     body = f"""
-<div class="eyebrow">0500 연구가이드 · 박사 연구모델 작업 기록 · 2026-09-20 → 2026-10-06</div>
+<div class="eyebrow">0500 연구가이드 · 박사 연구모델 작업 기록 · 2026-09-20 → 2026-10-11</div>
 <h1>디자이너의 생성형 AI 사용과 일의 수행·역량 개발 행동</h1>
 <p class="muted">한 번의 설문, 두 개의 연구. 연구 1은 일을 바꾸는 행동과 업무상 결과·보상, 연구 2는 직업 위협과 역량 개발 행동. PLS-SEM · 일회 횡단 설문 · 유급 디자인 업무 종사자(직원·프리랜서).</p>
-<h2>연구모델 (최종 설계 합의안 v1.0 · 2026-10-05)</h2>
-<div class="card"><b>연구 1·2 핵심모형·보조변수 설명</b><br><a href="{MODEL_OUT}">{MODEL_OUT.removeprefix('연구모델_')}</a><br>
+<h2>연구모델 (연구 1·2 개요 v1.1 · 2026-10-11)</h2>
+<div class="card"><b>디자인 업무의 변화와 대응 유형 — 연구 1·2 개요 v1.1</b><br><a href="{MODEL_OUT}">{MODEL_OUT.removeprefix('연구모델_')}</a><br>
 <span class="muted">연구 1: USE → TC → TP·JE·WI (결과 3개 병렬). GAIL은 USE→TC, EXP는 TC→세 결과를 조절.<br>
 연구 2: THR → USE → SC + THR → SC 직접경로. GAIL은 첫 단계, EXP는 둘째 단계를 조절.<br>
 통합 설문 69문항 · 일회 자기보고. 본조사 검증·배포 전 — 연구자 개발 JE와 바뀐 응답척도·기간은 채택 전 검증 필요.</span></div>
@@ -259,7 +262,7 @@ def hub(latest, older, m):
 
 <h2>1. 바로 보기</h2>
 <div class="grid2">
- <div class="card"><b>최종 연구모델 (v1.0)</b><br><a href="{MODEL_OUT}">핵심모형·보조변수 설명</a><br>{L('26_연구1·2_최종연구모델_보고서_v1.0.html', '최종 연구모델 보고서 v1.0')}</div>
+ <div class="card"><b>연구모델 (개요 v1.1)</b><br><a href="{MODEL_OUT}">핵심모형·보조변수 설명</a><br>{L('26_연구1·2_최종연구모델_보고서_v1.0.html', '최종 연구모델 보고서 v1.0')}</div>
  <div class="card"><b>최종설문 v0.93</b><br>{L('질문 검토/최종설문/00_시작.html', '패키지 시작 화면')} · {L('질문 검토/최종설문/01_최종설문_v0.93.html', '설문 정리본')}<br>{L('질문 검토/최종설문/02_문항별_영한대조·핵심근거.html', '문항별 영한대조·핵심근거')} · {L('질문 검토/최종설문/03_설문_검토보고서.html', '설문 검토보고서')}</div>
  <div class="card"><b>모형이 바뀐 이유</b><br>{L('20_연구모형_변화이유_정리_v0.1.md', '연구모형 변화 이유 정리 v0.1')} · {L('21_연구모형_변경계기·현재모형_TV·SV_운용방침_v0.1.md', '변경 계기·TV·SV 운용방침')}<br>{L('23_연구1_TC_이득과비용_모형설명_v0.1.md', 'TC 이득과 비용')} · {L('25_연구1_권장모형·설문재구성안_v0.3.html', '권장모형·설문재구성안 v0.3')}</div>
  <div class="card"><b>이전 단계 (참고)</b><br>{L('11_연구1·2_통합모형·연구질문_v0.1.html', '통합모형 v0.4 (10-03)')}<br>{L('질문 검토/00_설문원문_영한대조_검토자료집_v0.5.html', '원문·영한 대조 검토자료집 v0.5')}</div>

@@ -1,6 +1,6 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>최종설문 패키지 v0.93</title><style>
+<title>최종설문 패키지 v0.94</title><style>
 :root{--bg:#fff;--fg:#111;--muted:#666;--line:#ddd;--soft:#f5f5f3;--accent:#000}
 @media (prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#999;--line:#333;--soft:#1b1b1b;--accent:#fff}}
 *{box-sizing:border-box}
@@ -32,31 +32,34 @@ img{max-width:100%;height:auto;border:1px solid var(--line)}
 .dead{border-bottom:1px dotted var(--muted)}
 details{margin:8px 0}
 </style></head><body><div class="wrap">
-<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 질문 검토/최종설문/README.md · 2026-10-05 23:50</div><h1>최종설문 패키지 v0.93</h1>
-<p>기준일: 2026-10-05</p>
-<p>이 폴더는 Google 설문 v0.93의 읽기 전용 정리본이다. ‘최종’은 현재 설계의 정리 완료를 뜻한다. 척도 타당도, IRB, 분기, 제출, 응답 저장 검증 완료를 뜻하지 않는다.</p>
+<a class="back" href="index.html">← 연구모델 정리 허브</a><div class="eyebrow">원본: 질문 검토/최종설문/README.md · 2026-10-11 09:59</div><h1>최종설문 패키지 v0.94</h1>
+<p>기준일: 2026-10-11 (최초 대조: 2026-10-05)</p>
+<p>이 폴더는 Google 설문 v0.94의 읽기 전용 정리본이다. ‘최종’은 현재 설계의 정리 완료를 뜻한다. 척도 타당도, IRB, 분기, 제출, 응답 저장 검증 완료를 뜻하지 않는다.</p>
 <h2>파일</h2>
 <ul>
 <li><code>00_시작.html</code>: 패키지 탐색용 시작 화면</li>
-<li><code>01_최종설문_v0.93.md</code>: 현재 온라인 문구를 보존한 설문 정리본</li>
-<li><code>01_최종설문_v0.93.html</code>: 설문 읽기용 HTML</li>
+<li><code>01_최종설문_v0.94.md</code>: 현재 온라인 문구를 보존한 설문 정리본</li>
+<li><code>01_최종설문_v0.94.html</code>: 설문 읽기용 HTML</li>
 <li><code>02_문항별_영한대조·핵심근거.html</code>: 핵심 49문항의 영문·한국어·출처 대조</li>
 <li><code>03_설문_검토보고서.html</code>: 내용·번역·척도·기간·측정·구현 검토</li>
 <li><code>04_연구1·2_핵심모형·보조변수_설명.html</code>: 핵심모형과 전체 조사 구성</li>
-<li><code>05_문항코드북.tsv</code>: 69개 고유 코드</li>
+<li><code>05_문항코드북.tsv</code>: 70개 고유 코드</li>
 <li><code>06_핵심근거_인용_명세서.md</code>: PDF·페이지·캡처 추적표</li>
 <li><code>근거논문/</code>: 로컬 연구용 PDF 사본</li>
 <li><code>docs/assets/</code>: 핵심 페이지 PNG 캡처</li>
 </ul>
 <h2>온라인 설문 확인 결과</h2>
 <ul>
-<li>제목: 디자이너의 생성형 AI 사용과 업무 경험 — 통합 설문 v0.93</li>
-<li>구조: 15개 섹션, 69개 고유 문항 코드</li>
+<li>제목: 디자이너의 생성형 AI 사용과 업무 경험 — 통합 설문 v0.94</li>
+<li>구조: 15개 섹션, 70개 고유 문항 코드</li>
 <li><code>JE_NEW</code>, <code>JE_LOST</code>: 온라인에 없음</li>
-<li><code>BG4</code>, <code>BG5</code>: 온라인에 있음</li>
+<li><code>BG4</code>, <code>BG_USEMODE</code>, <code>BG5</code>: 온라인에 있음</li>
 <li><code>JE3</code>, <code>WI5</code>, <code>GAIL_EC4</code>: 현재 온라인에서는 <code>해당 없음</code>이 없는 7점 선형 문항</li>
 <li><code>TC4</code>: 7점 선형 문항이나 왼쪽 끝 라벨이 비어 있음</li>
 <li>게시 상태 표시는 편집 화면에서 <code>Published</code>로 보였다. 시작 문서의 ‘비게시’ 기록과 충돌하므로 배포 상태를 다시 확인해야 한다.</li>
 </ul>
-<p>온라인 설문은 수정하지 않았다.</p>
+<p>2026-10-11 온라인 설문에 BG_USEMODE를 추가하고 v0.94로 저장했다. 분기·제출·응답 저장 시험은 미완료다.</p>
+<h2>v0.94 보조문항 업데이트</h2>
+<p>2026-10-11 v0.94: BG4 다음에 복수선택 보조문항 BG_USEMODE를 추가했다. 15개 섹션·70문항이며 핵심 49문항은 변경하지 않았다. 보기별 선택 여부를 분석하고 USE·GAIL에 합산하거나 숙련도 순위로 점수화하지 않는다. 해당 없음은 단독 선택하도록 안내하되 Google Forms에서 상충 선택을 기술적으로 차단하지는 않는다.</p>
+<p><a href="질문_검토_최종설문_07_AI활용방식_보조문항_인용_명세서_v0.94.html">문항 근거와 코딩 원칙</a></p>
 </div></body></html>

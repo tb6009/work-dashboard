@@ -1,0 +1,223 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>디자인터칭데이 홍보물 제작 과정</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+:root{--ink:#1A2B4A;--ink-70:#4a5670;--ink-45:#8a93a6;--line:#e3e1dc;--bg:#faf9f6;--warm:#C9A96E}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.65 Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 16px 80px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--warm);font-weight:700}
+h1{font-size:34px;line-height:1.25;margin:8px 0 12px}h2{font-size:22px;margin:56px 0 6px;padding-top:20px;border-top:2px solid var(--ink)}
+h3{font-size:16px;margin:28px 0 8px}.lead{color:var(--ink-70);max-width:780px}
+.notice{margin:18px 0 8px;padding:10px 14px;border-left:3px solid var(--warm);background:#fff;font-size:13px;color:var(--ink-70)}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0}.toc a{font-size:12px;padding:3px 8px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.gal.wide{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+figure{margin:0;background:#fff;border:1px solid var(--line);padding:8px}
+figure img{width:100%;display:block;background:#f1efe9}
+figcaption{font-size:12px;color:var(--ink-70);margin-top:6px;word-break:break-all}
+.tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;margin-right:4px;background:var(--ink);color:#fff}
+.tag.old{background:var(--line);color:var(--ink-70)}
+.ver{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.ver h3{margin:0 0 4px}.ver ul{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--ink-70)}
+.ver .open{font-size:12px}.nosvg{padding:28px 12px;text-align:center;font-size:12px;color:var(--ink-45);border:1px dashed var(--line);background:#fff}
+@media(max-width:700px){.ver{grid-template-columns:1fr}}
+.meta{font-size:13px;color:var(--ink-45)}footer{margin-top:64px;font-size:12px;color:var(--ink-45)}
+
+[data-gallery] img,
+.gal img, .board img, .pair img, .rej img, .lineage img, figure img { cursor: zoom-in; }
+.lb-hint{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-45,#888);
+ margin-top:10px;letter-spacing:.02em}
+.lb-hint::before{content:"⤢";font-size:13px}
+
+.lb{position:fixed;inset:0;z-index:9999;display:none;background:rgba(12,13,16,.96);
+ -webkit-user-select:none;user-select:none}
+.lb.is-open{display:block}
+.lb-stage{position:absolute;inset:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.lb-stage.is-zoom{overflow:auto;display:block;cursor:grab}
+.lb-stage.is-zoom.is-drag{cursor:grabbing}
+.lb-img{display:block;max-width:calc(100vw - 120px);max-height:calc(100vh - 150px);
+ object-fit:contain;background:#fff;box-shadow:0 8px 60px rgba(0,0,0,.5)}
+.lb-stage.is-zoom .lb-img{max-width:none;max-height:none;margin:auto}
+
+.lb-bar{position:absolute;left:0;right:0;z-index:3;display:flex;align-items:center;gap:14px;
+ padding:14px 20px;color:#fff;font-size:12.5px;line-height:1.5}
+.lb-bar.top{top:0;background:linear-gradient(rgba(0,0,0,.55),transparent)}
+/* 상단 바는 버튼만 클릭을 받고, 나머지 영역은 아래 stage로 통과시킨다 */
+.lb-bar.top{pointer-events:none}
+.lb-bar.top .lb-btn{pointer-events:auto}
+.lb-bar.bot{bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.6));justify-content:center;
+ flex-wrap:wrap;text-align:center;pointer-events:none}
+.lb-cap{flex:1;min-width:0;font-weight:600;letter-spacing:-.01em;
+ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-count{font-variant-numeric:tabular-nums;color:rgba(255,255,255,.62);white-space:nowrap}
+.lb-note{max-width:78ch;color:rgba(255,255,255,.78);font-size:13px;line-height:1.6}
+.lb-note b{color:#fff}
+
+.lb-btn{appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);
+ color:#fff;font:inherit;font-size:11.5px;font-weight:700;letter-spacing:.04em;
+ padding:6px 11px;cursor:pointer;border-radius:2px;white-space:nowrap}
+.lb-btn:hover{background:rgba(255,255,255,.16)}
+.lb-btn[aria-pressed="true"]{background:#fff;color:#111}
+.lb-btn.x{font-size:16px;line-height:1;padding:5px 10px}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+ width:52px;height:80px;display:flex;align-items:center;justify-content:center;
+ appearance:none;border:0;background:rgba(0,0,0,.28);color:#fff;font-size:26px;cursor:pointer}
+.lb-nav:hover{background:rgba(0,0,0,.55)}
+.lb-nav.prev{left:0}.lb-nav.next{right:0}
+.lb-nav[hidden]{display:none}
+@media(max-width:640px){
+  .lb-img{max-width:100vw;max-height:calc(100vh - 170px)}
+  .lb-nav{width:40px;height:62px;font-size:20px}
+  .lb-bar{padding:10px 12px;gap:8px}
+}
+</style></head><body><div class="wrap"><div class="eyebrow">039 · RISE · 2026 가을 VALUE-UP 연구회 · 2026.10.07–10</div>
+<h1>Value-up 디자인터칭데이 — 홍보물 이미지 제작 과정</h1>
+<p class="lead">경기도 중소기업을 대상으로 한 디자인터칭데이 홍보물을 만든 과정입니다. 불꽃 키 비주얼을 정하고(10/7–10), 포스터 타이포그래피와 비주얼 콘셉트를 비교한 뒤, 업종별 캐러셀 3종을 만들었습니다(10/10). 각 단계에서 고른 것과 버린 시안을 함께 보여줍니다.</p>
+<div class="notice">모든 이미지는 AI로 만든 콘셉트 시안입니다. 실제 참여기업 사례나 학교 실적, 행사장 사진이 아닙니다. 행사 일시·장소·신청 정보는 최종 확정 전 원고입니다. 공개용 JPEG 축소본.</div>
+<div class="toc"><a href="#key">1. 키 비주얼</a><a href="#concept">2. 비주얼 콘셉트</a><a href="#poster">3. 포스터</a><a href="#carousel">4. 캐러셀</a><a href="../valueup-infographics/index.html">← 9월 Value-up 인포그래픽</a></div>
+
+<h2 id="key">1. 키 비주얼 — 성냥과 불꽃</h2>
+<p class="lead">가로 커버에서 출발해(v0.1–0.4) 매체별 비율로 재구성했고, 세로 9:16에서 여섯 번 고쳐 v0.7을 확정했습니다. v0.7은 큰 불꽃의 스포크를 늘리고 과한 밝기를 누르며 구리·호박·금빛으로 색을 나눴습니다. 왼쪽 절반은 타이틀 여백입니다.</p>
+<h3>가로 커버 v0.1–0.4 (10/7)</h3><div class="gal wide"><figure><img loading="lazy" src="img/key/cover_match_firework_v0.1.jpg" alt="cover_match_firework_v0.1"><figcaption><span class="tag old">v0.1</span>cover_match_firework_v0.1</figcaption></figure><figure><img loading="lazy" src="img/key/cover_match_firework_v0.2.jpg" alt="cover_match_firework_v0.2"><figcaption><span class="tag old">v0.2</span>cover_match_firework_v0.2</figcaption></figure><figure><img loading="lazy" src="img/key/cover_match_firework_v0.3.jpg" alt="cover_match_firework_v0.3"><figcaption><span class="tag old">v0.3</span>cover_match_firework_v0.3</figcaption></figure><figure><img loading="lazy" src="img/key/cover_match_firework_v0.4.jpg" alt="cover_match_firework_v0.4"><figcaption><span class="tag old">v0.4</span>cover_match_firework_v0.4</figcaption></figure></div>
+<h3>매체별 비율 파생 (10/7)</h3><div class="gal"><figure><img loading="lazy" src="img/key/spark_grayscale_16x9_v0.1.jpg" alt="spark_grayscale_16x9_v0.1"><figcaption><span class="tag old">16x9</span>spark_grayscale_16x9_v0.1</figcaption></figure><figure><img loading="lazy" src="img/key/spark_poster_4x5_v0.1.jpg" alt="spark_poster_4x5_v0.1"><figcaption><span class="tag old">4x5</span>spark_poster_4x5_v0.1</figcaption></figure><figure><img loading="lazy" src="img/key/spark_social_1x1_v0.1.jpg" alt="spark_social_1x1_v0.1"><figcaption><span class="tag old">1x1</span>spark_social_1x1_v0.1</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.1.jpg" alt="spark_story_9x16_v0.1"><figcaption><span class="tag old">9x16</span>spark_story_9x16_v0.1</figcaption></figure><figure><img loading="lazy" src="img/key/spark_website_21x9_v0.1.jpg" alt="spark_website_21x9_v0.1"><figcaption><span class="tag old">21x9</span>spark_website_21x9_v0.1</figcaption></figure></div>
+<h3>세로 9:16 v0.2 → v0.7 확정 (10/10)</h3><div class="gal"><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.2.jpg" alt="spark_story_9x16_v0.2"><figcaption><span class="tag old">v0.2</span>spark_story_9x16_v0.2</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.3.jpg" alt="spark_story_9x16_v0.3"><figcaption><span class="tag old">v0.3</span>spark_story_9x16_v0.3</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.4.jpg" alt="spark_story_9x16_v0.4"><figcaption><span class="tag old">v0.4</span>spark_story_9x16_v0.4</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.5.jpg" alt="spark_story_9x16_v0.5"><figcaption><span class="tag old">v0.5</span>spark_story_9x16_v0.5</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.6.jpg" alt="spark_story_9x16_v0.6"><figcaption><span class="tag old">v0.6</span>spark_story_9x16_v0.6</figcaption></figure><figure><img loading="lazy" src="img/key/spark_story_9x16_v0.7.jpg" alt="spark_story_9x16_v0.7"><figcaption><span class="tag">확정 v0.7</span>spark_story_9x16_v0.7</figcaption></figure></div>
+
+<h2 id="concept">2. 비주얼 콘셉트 — 불꽃에서 디자인 역량으로</h2>
+<p class="lead">불꽃 이미지는 보존하고, 제품·커뮤니케이션·공간을 잇는 디자인 역량을 보여줄 새 방향을 검토했습니다. v1은 3안(하나의 원리·통찰에서 형태로·협업 공간), v2는 비즈니스 성장 관점을 보완한 세로 2안입니다.</p>
+<div class="gal"><figure><img loading="lazy" src="img/concept/01_design_continuum.jpg" alt="01_design_continuum"><figcaption><span class="tag old">v1</span>01_design_continuum</figcaption></figure><figure><img loading="lazy" src="img/concept/02_insight_to_form.jpg" alt="02_insight_to_form"><figcaption><span class="tag old">v1</span>02_insight_to_form</figcaption></figure><figure><img loading="lazy" src="img/concept/03_collaboration_space.jpg" alt="03_collaboration_space"><figcaption><span class="tag old">v1</span>03_collaboration_space</figcaption></figure></div><div class="gal"><figure><img loading="lazy" src="img/concept/01_hightech_software_manufacturing_9x16.jpg" alt="01_hightech_software_manufacturing_9x16"><figcaption><span class="tag">v2</span>01_hightech_software_manufacturing_9x16</figcaption></figure><figure><img loading="lazy" src="img/concept/02_design_process_9x16.jpg" alt="02_design_process_9x16"><figcaption><span class="tag">v2</span>02_design_process_9x16</figcaption></figure></div>
+
+<h2 id="poster">3. 포스터 — 스위스 타이포그래피</h2>
+<p class="lead">Pretendard SemiBold, 이탤릭 없이 흰색·회색 체계로 위계를 세웠습니다. v1 3안 뒤 v2에서 정보 그리드와 이미지 비중을 A–E 다섯 계열로 바꿔 가며 비교했습니다.</p>
+<h3>v1 3안</h3><div class="gal"><figure><img loading="lazy" src="img/poster1/A_타이포그래피.jpg" alt="A_타이포그래피"><figcaption><span class="tag old">v1</span>A_타이포그래피</figcaption></figure><figure><img loading="lazy" src="img/poster1/B_사용장면.jpg" alt="B_사용장면"><figcaption><span class="tag old">v1</span>B_사용장면</figcaption></figure><figure><img loading="lazy" src="img/poster1/C_디자인연결.jpg" alt="C_디자인연결"><figcaption><span class="tag old">v1</span>C_디자인연결</figcaption></figure></div>
+<h3>A안 (1)</h3><div class="gal"><figure><img loading="lazy" src="img/poster2/A_타이포그래피.jpg" alt="A_타이포그래피"><figcaption><span class="tag">v1</span>A_타이포그래피</figcaption></figure></div>
+<h3>B안 (1)</h3><div class="gal"><figure><img loading="lazy" src="img/poster2/B_사용장면.jpg" alt="B_사용장면"><figcaption><span class="tag">v1</span>B_사용장면</figcaption></figure></div>
+<h3>C안 (4)</h3><div class="gal"><figure><img loading="lazy" src="img/poster2/C_강점에서실행계획_UI다양화_v5.jpg" alt="C_강점에서실행계획_UI다양화_v5"><figcaption><span class="tag">v5</span>C_강점에서실행계획_UI다양화_v5</figcaption></figure><figure><img loading="lazy" src="img/poster2/C_디자인연결.jpg" alt="C_디자인연결"><figcaption><span class="tag">v1</span>C_디자인연결</figcaption></figure><figure><img loading="lazy" src="img/poster2/C_비대칭그리드_상세소개_v3.jpg" alt="C_비대칭그리드_상세소개_v3"><figcaption><span class="tag">v3</span>C_비대칭그리드_상세소개_v3</figcaption></figure><figure><img loading="lazy" src="img/poster2/C_텍스트우선_타이틀축소_v4.jpg" alt="C_텍스트우선_타이틀축소_v4"><figcaption><span class="tag">v4</span>C_텍스트우선_타이틀축소_v4</figcaption></figure></div>
+<h3>D안 (5)</h3><div class="gal"><figure><img loading="lazy" src="img/poster2/D_블랙밴드_모듈그리드_v1.jpg" alt="D_블랙밴드_모듈그리드_v1"><figcaption><span class="tag">v1</span>D_블랙밴드_모듈그리드_v1</figcaption></figure><figure><img loading="lazy" src="img/poster2/D_원본구조밀착_흑백_v3.jpg" alt="D_원본구조밀착_흑백_v3"><figcaption><span class="tag">v3</span>D_원본구조밀착_흑백_v3</figcaption></figure><figure><img loading="lazy" src="img/poster2/D_정보중심_이미지확대_v2.jpg" alt="D_정보중심_이미지확대_v2"><figcaption><span class="tag">v2</span>D_정보중심_이미지확대_v2</figcaption></figure><figure><img loading="lazy" src="img/poster2/D_지원분야추가_v4.jpg" alt="D_지원분야추가_v4"><figcaption><span class="tag">v4</span>D_지원분야추가_v4</figcaption></figure><figure><img loading="lazy" src="img/poster2/D_지원분야텍스트축소_v5.jpg" alt="D_지원분야텍스트축소_v5"><figcaption><span class="tag">v5</span>D_지원분야텍스트축소_v5</figcaption></figure></div>
+<h3>E안 (5)</h3><div class="gal"><figure><img loading="lazy" src="img/poster2/E_그리드이미지_ValueUp_v2.jpg" alt="E_그리드이미지_ValueUp_v2"><figcaption><span class="tag">v2</span>E_그리드이미지_ValueUp_v2</figcaption></figure><figure><img loading="lazy" src="img/poster2/E_이미지격자정렬_v3.jpg" alt="E_이미지격자정렬_v3"><figcaption><span class="tag">v3</span>E_이미지격자정렬_v3</figcaption></figure><figure><img loading="lazy" src="img/poster2/E_정사각타일이미지_v4.jpg" alt="E_정사각타일이미지_v4"><figcaption><span class="tag">v4</span>E_정사각타일이미지_v4</figcaption></figure><figure><img loading="lazy" src="img/poster2/E_타이포그래피전용_v1.jpg" alt="E_타이포그래피전용_v1"><figcaption><span class="tag">v1</span>E_타이포그래피전용_v1</figcaption></figure><figure><img loading="lazy" src="img/poster2/E_타일크기대비_v5.jpg" alt="E_타일크기대비_v5"><figcaption><span class="tag">v5</span>E_타일크기대비_v5</figcaption></figure></div>
+
+<h2 id="carousel">4. 캐러셀 — 고민별 3종</h2>
+<p class="lead">업종 자격이 아니라 기업의 고민별 이야기로 나눴습니다. 커버 3종(v1) 뒤, v2에서 세트당 6장으로 줄이고 AI 생성 시안 위에 로고·기준선·본문을 다시 조판한 편집본을 만들었습니다.</p>
+<h3>커버 3종 v1</h3><div class="gal"><figure><img loading="lazy" src="img/car1/A_제품제조_커버.jpg" alt="A_제품제조_커버"><figcaption><span class="tag old">v1</span>A_제품제조_커버</figcaption></figure><figure><img loading="lazy" src="img/car1/B_디지털서비스_커버.jpg" alt="B_디지털서비스_커버"><figcaption><span class="tag old">v1</span>B_디지털서비스_커버</figcaption></figure><figure><img loading="lazy" src="img/car1/C_브랜드패키지공간_커버.jpg" alt="C_브랜드패키지공간_커버"><figcaption><span class="tag old">v1</span>C_브랜드패키지공간_커버</figcaption></figure></div>
+<h3>A안 · 제품·제조 — 편집본 6장</h3><div class="gal"><figure><img loading="lazy" src="img/car2/A01_정렬편집본.jpg" alt="A01_정렬편집본"><figcaption><span class="tag">편집본</span>A01_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/A02_정렬편집본.jpg" alt="A02_정렬편집본"><figcaption><span class="tag">편집본</span>A02_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/A03_정렬편집본.jpg" alt="A03_정렬편집본"><figcaption><span class="tag">편집본</span>A03_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/A04_정렬편집본.jpg" alt="A04_정렬편집본"><figcaption><span class="tag">편집본</span>A04_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/A05_정렬편집본.jpg" alt="A05_정렬편집본"><figcaption><span class="tag">편집본</span>A05_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/A06_정렬편집본.jpg" alt="A06_정렬편집본"><figcaption><span class="tag">편집본</span>A06_정렬편집본</figcaption></figure></div><details><summary class="meta">같은 페이지의 AI 생성 시안 6장 보기</summary><div class="gal"><figure><img loading="lazy" src="img/car2raw/A01_생성시안.jpg" alt="A01_생성시안"><figcaption><span class="tag old">생성</span>A01_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/A02_생성시안.jpg" alt="A02_생성시안"><figcaption><span class="tag old">생성</span>A02_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/A03_생성시안.jpg" alt="A03_생성시안"><figcaption><span class="tag old">생성</span>A03_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/A04_생성시안.jpg" alt="A04_생성시안"><figcaption><span class="tag old">생성</span>A04_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/A05_생성시안.jpg" alt="A05_생성시안"><figcaption><span class="tag old">생성</span>A05_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/A06_생성시안.jpg" alt="A06_생성시안"><figcaption><span class="tag old">생성</span>A06_생성시안</figcaption></figure></div></details>
+<h3>B안 · 앱·디지털 서비스 — 편집본 6장</h3><div class="gal"><figure><img loading="lazy" src="img/car2/B01_정렬편집본.jpg" alt="B01_정렬편집본"><figcaption><span class="tag">편집본</span>B01_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/B02_정렬편집본.jpg" alt="B02_정렬편집본"><figcaption><span class="tag">편집본</span>B02_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/B03_정렬편집본.jpg" alt="B03_정렬편집본"><figcaption><span class="tag">편집본</span>B03_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/B04_정렬편집본.jpg" alt="B04_정렬편집본"><figcaption><span class="tag">편집본</span>B04_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/B05_정렬편집본.jpg" alt="B05_정렬편집본"><figcaption><span class="tag">편집본</span>B05_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/B06_정렬편집본.jpg" alt="B06_정렬편집본"><figcaption><span class="tag">편집본</span>B06_정렬편집본</figcaption></figure></div><details><summary class="meta">같은 페이지의 AI 생성 시안 6장 보기</summary><div class="gal"><figure><img loading="lazy" src="img/car2raw/B01_생성시안.jpg" alt="B01_생성시안"><figcaption><span class="tag old">생성</span>B01_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/B02_생성시안.jpg" alt="B02_생성시안"><figcaption><span class="tag old">생성</span>B02_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/B03_생성시안.jpg" alt="B03_생성시안"><figcaption><span class="tag old">생성</span>B03_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/B04_생성시안.jpg" alt="B04_생성시안"><figcaption><span class="tag old">생성</span>B04_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/B05_생성시안.jpg" alt="B05_생성시안"><figcaption><span class="tag old">생성</span>B05_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/B06_생성시안.jpg" alt="B06_생성시안"><figcaption><span class="tag old">생성</span>B06_생성시안</figcaption></figure></div></details>
+<h3>C안 · 브랜드·패키지·공간 — 편집본 6장</h3><div class="gal"><figure><img loading="lazy" src="img/car2/C01_정렬편집본.jpg" alt="C01_정렬편집본"><figcaption><span class="tag">편집본</span>C01_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/C02_정렬편집본.jpg" alt="C02_정렬편집본"><figcaption><span class="tag">편집본</span>C02_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/C03_정렬편집본.jpg" alt="C03_정렬편집본"><figcaption><span class="tag">편집본</span>C03_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/C04_정렬편집본.jpg" alt="C04_정렬편집본"><figcaption><span class="tag">편집본</span>C04_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/C05_정렬편집본.jpg" alt="C05_정렬편집본"><figcaption><span class="tag">편집본</span>C05_정렬편집본</figcaption></figure><figure><img loading="lazy" src="img/car2/C06_정렬편집본.jpg" alt="C06_정렬편집본"><figcaption><span class="tag">편집본</span>C06_정렬편집본</figcaption></figure></div><details><summary class="meta">같은 페이지의 AI 생성 시안 6장 보기</summary><div class="gal"><figure><img loading="lazy" src="img/car2raw/C01_생성시안.jpg" alt="C01_생성시안"><figcaption><span class="tag old">생성</span>C01_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/C02_생성시안.jpg" alt="C02_생성시안"><figcaption><span class="tag old">생성</span>C02_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/C03_생성시안.jpg" alt="C03_생성시안"><figcaption><span class="tag old">생성</span>C03_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/C04_생성시안.jpg" alt="C04_생성시안"><figcaption><span class="tag old">생성</span>C04_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/C05_생성시안.jpg" alt="C05_생성시안"><figcaption><span class="tag old">생성</span>C05_생성시안</figcaption></figure><figure><img loading="lazy" src="img/car2raw/C06_생성시안.jpg" alt="C06_생성시안"><figcaption><span class="tag old">생성</span>C06_생성시안</figcaption></figure></div></details>
+<footer>박진현 workDashboard · 원본 파일에서 자동 생성 (scripts/build-octweek-portfolios.mjs) · 클릭하면 크게 보입니다.</footer>
+</div><script>
+(function(){
+  var imgs = [], idx = 0, zoom = false;
+  var lb, stage, view, cap, count, note, zbtn, raw, prev, next;
+
+  function collect(el){
+    var scope = el.closest('[data-gallery]') || el.closest('section') || document.body;
+    return Array.prototype.slice.call(scope.querySelectorAll('img')).filter(function(i){
+      return i.naturalWidth !== 0 || i.complete || true;
+    });
+  }
+
+  function build(){
+    lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.innerHTML =
+      '<div class="lb-bar top">'
+      + '<span class="lb-cap"></span>'
+      + '<span class="lb-count"></span>'
+      + '<button class="lb-btn zoom" aria-pressed="false">100%</button>'
+      + '<a class="lb-btn raw" target="_blank" rel="noopener">새 탭에서 원본</a>'
+      + '<button class="lb-btn x" aria-label="닫기">✕</button>'
+      + '</div>'
+      + '<div class="lb-stage"><img class="lb-img" alt=""></div>'
+      + '<button class="lb-nav prev" aria-label="이전">‹</button>'
+      + '<button class="lb-nav next" aria-label="다음">›</button>'
+      + '<div class="lb-bar bot"><span class="lb-note"></span></div>';
+    document.body.appendChild(lb);
+    stage = lb.querySelector('.lb-stage');
+    view  = lb.querySelector('.lb-img');
+    cap   = lb.querySelector('.lb-cap');
+    count = lb.querySelector('.lb-count');
+    note  = lb.querySelector('.lb-note');
+    zbtn  = lb.querySelector('.zoom');
+    raw   = lb.querySelector('.raw');
+    prev  = lb.querySelector('.prev');
+    next  = lb.querySelector('.next');
+
+    lb.querySelector('.x').addEventListener('click', close);
+    prev.addEventListener('click', function(e){ e.stopPropagation(); go(-1); });
+    next.addEventListener('click', function(e){ e.stopPropagation(); go(1); });
+    zbtn.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+    stage.addEventListener('click', function(e){ if (e.target === stage) close(); });
+    view.addEventListener('click', function(e){ e.stopPropagation(); setZoom(!zoom); });
+
+    // 100% 상태에서 드래그로 이동
+    var down = false, sx = 0, sy = 0, sl = 0, st = 0;
+    stage.addEventListener('mousedown', function(e){
+      if (!zoom) return;
+      down = true; sx = e.clientX; sy = e.clientY; sl = stage.scrollLeft; st = stage.scrollTop;
+      stage.classList.add('is-drag'); e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if (!down) return;
+      stage.scrollLeft = sl - (e.clientX - sx);
+      stage.scrollTop  = st - (e.clientY - sy);
+    });
+    window.addEventListener('mouseup', function(){ down = false; stage.classList.remove('is-drag'); });
+
+    document.addEventListener('keydown', function(e){
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') go(-1);
+      else if (e.key === 'ArrowRight') go(1);
+    });
+  }
+
+  function meta(img){
+    var fig = img.closest('figure');
+    var fc = fig && fig.querySelector('figcaption');
+    return {
+      title: img.getAttribute('data-title') || img.alt || (fc ? fc.textContent.trim() : ''),
+      note: img.getAttribute('data-note')
+        || (img.closest('.pair') ? (img.closest('.pair').querySelector('.why') || {}).textContent : '')
+        || (img.closest('.rej-item') ? (img.closest('.rej-item').querySelector('.why') || {}).textContent : '')
+        || ''
+    };
+  }
+
+  function setZoom(on){
+    zoom = on;
+    stage.classList.toggle('is-zoom', on);
+    zbtn.setAttribute('aria-pressed', String(on));
+    zbtn.textContent = on ? 'FIT' : '100%';
+    if (on) {
+      stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+      stage.scrollTop  = (stage.scrollHeight - stage.clientHeight) / 2;
+    }
+  }
+
+  function show(){
+    var img = imgs[idx];
+    var m = meta(img);
+    view.src = img.currentSrc || img.src;
+    view.alt = m.title;
+    cap.textContent = m.title;
+    note.textContent = (m.note || '').trim();
+    count.textContent = (idx + 1) + ' / ' + imgs.length;
+    raw.href = img.currentSrc || img.src;
+    prev.hidden = next.hidden = imgs.length < 2;
+    setZoom(false);
+  }
+
+  function go(d){ idx = (idx + d + imgs.length) % imgs.length; show(); }
+  function close(){ lb.classList.remove('is-open'); document.body.style.overflow = ''; view.src = ''; }
+
+  document.addEventListener('click', function(e){
+    var img = e.target.closest ? e.target.closest('img') : null;
+    if (!img || img.closest('.lb') || img.closest('a[href]')) return;
+    if (!lb) build();
+    imgs = collect(img);
+    idx = Math.max(0, imgs.indexOf(img));
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    show();
+  });
+})();
+</script></body></html>

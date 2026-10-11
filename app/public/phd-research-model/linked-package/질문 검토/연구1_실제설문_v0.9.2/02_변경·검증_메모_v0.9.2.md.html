@@ -1,0 +1,60 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>연구 문서</title><style>body{max-width:1100px;margin:40px auto;padding:0 24px;font:16px/1.7 sans-serif;color:#203241}table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #ccd6df;padding:8px}img{max-width:100%}pre{white-space:pre-wrap}a{color:#216886}</style><body><h1>통합 예비 설문 v0.9.2 — 변경·검증 메모</h1>
+<h2>결과와 사용 범위</h2>
+<ul>
+<li><a href="https://docs.google.com/forms/d/1EYEVKYd25SzEJlI6gpr7WkcO-IMODqsvXfcvrbTJ6tk/edit">Google 설문 편집본</a>: 연구 1·2 통합 69개 질문 카드, 15개 섹션. 현재 비게시 상태다.</li>
+<li><code>01_통합설문_v0.9.2.md</code>와 <code>01_통합설문_v0.9.2.html</code>: 같은 문항 코드의 로컬 설문. HTML은 화면·분기 검토용이며, 제출·저장 기능이 없다.</li>
+<li><code>03_통합문항코드북_v0.9.2.tsv</code>: 문항 코드, 선택지, 제시 조건의 기준 파일.</li>
+<li>v0.9(5점)과 v0.9.1(7점)은 보존했다. 0.9.2는 0.9.1을 바탕으로 만든 예비조사 후보이며, 본조사 채택판이 아니다.</li>
+</ul>
+<h2>Claude 피드백의 채택 범위</h2>
+<table>
+<thead>
+<tr>
+<th>쟁점</th>
+<th>v0.9.2 결정</th>
+<th>남은 검증</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5점·7점</td>
+<td>TC·TP·JE·WI·SC의 7점을 유지한다. ACT는 7점 빈도 후보로 바꾼다.</td>
+<td>5점 원척도의 신뢰도·타당도가 7점 번안에 자동으로 이전되지는 않는다. 인지면담과 예비조사로 확인한다.</td>
+</tr>
+<tr>
+<td>EXP</td>
+<td>원척도의 6점 구조를 유지한다. 한국어 보기 순서를 대칭으로 정리한다.</td>
+<td>원문 응답 라벨과 번역 동등성은 미검증이다.</td>
+</tr>
+<tr>
+<td>응답 어려움</td>
+<td>일반적인 ‘판단 어려움’을 제거했다.</td>
+<td>회상이 필요한 질문의 ‘기억나지 않음’, 구조적 비해당의 ‘해당 없음’은 구분해 남긴다.</td>
+</tr>
+<tr>
+<td>과업 변화</td>
+<td>JE_NEW·JE_LOST를 예/아니오가 아닌 종류 수 범주로 묻는다.</td>
+<td>두 문항은 JE 잠재변수의 기존 검증 척도로 간주하지 않는다. 분석상 진단·보조변수다.</td>
+</tr>
+</tbody></table>
+<p>7점이 PLS-SEM에 본질적으로 유리하다는 근거는 확인하지 못했다. SmartPLS 공식 설명은 5점 Likert 응답도 등간 척도로 다룰 수 있다고 설명한다. 따라서 7점 선택의 주된 이유는 현재 설문에서 점수 체계를 줄이고 응답 구분을 세밀하게 하는 것이다. 5점과 7점의 차이가 항상 작다는 일반화도 하지 않는다. 기존 실험·비교 연구는 문항, 표본, 보기 표현에 따라 결과가 달라질 수 있음을 전제로 읽어야 한다.</p>
+<h2>선별·회상 문항 재구성</h2>
+<ul>
+<li>REF_JOB: 최근 3개월의 유급 디자인 업무 형태를 복수 선택한다. 사내 디자인팀과 외부 에이전시·파견직을 분리한다.</li>
+<li>REF_MAIN: 선택한 형태 가운데 가장 많은 시간을 쓴 한 가지를 기준 업무로 정한다. HTML은 REF_JOB에서 고르지 않은 업무를 REF_MAIN에서 선택하지 못하게 한다. Google 설문에는 이 선택지 연동이 아직 없다.</li>
+<li>REG_USE와 AI_START(반복 사용 시작 연월)는 제거했다. 반복 사용의 시작점이 모호하고, 연월 회상 부담이 크기 때문이다. 기간 변수가 꼭 필요하면 후속 인지면담에서 연도 범주나 사건 기준 회상을 시험한다.</li>
+<li>PRE_AI: ‘실제 유급 디자인 과업에 처음 사용하기 전’에 유급 디자인 업무를 했는지 묻는다. COMPARE는 전후 업무를 비교할 수 있는지 묻는다. 전후 비교 답변은 회상 자료이며, AI의 인과효과로 해석하지 않는다.</li>
+<li>JE_NEW·JE_LOST: ‘없음 / 1종류 / 2~3종류 / 4종류 이상 / 기억나지 않음’으로 묻는다. 종류 수와 업무강도·업무범위 확대는 서로 다른 개념으로 유지한다.</li>
+</ul>
+<h2>실제 확인과 미완료</h2>
+<p>확인: Google 설문 편집 화면에서 질문 코드 69개, 코드 중복 0개, 일반 ‘판단 어려움’ 선택지 0개를 확인했다. REF_JOB 복수 선택과 REF_MAIN 단일 선택을 확인했다. EXP 5개는 6점, ACT 4개는 7개 빈도 응답과 구조적 비해당 선택지로 확인했다. HTML·코드북도 69개 문항으로 생성했고, 동의→참여조건→AI 경험의 초기 분기와 일부 조건부 블록을 브라우저에서 시험했다.</p>
+<p>미완료: Google 설문의 자동 분기, REF_JOB–REF_MAIN 선택지 연동, 필수응답, 실제 제출·응답 수집 시험. HTML의 Google 스프레드시트 저장 기능도 없다. 참여설명문, 기관 심의, 번안 검증, 인지면담과 예비조사가 끝나기 전 본조사에 배포하지 않는다.</p>
+<h2>판단에 사용한 원문·공식 자료</h2>
+<ul>
+<li>Aiken (1983), <a href="https://journals.sagepub.com/doi/10.1177/001316448304300209">Number of Response Categories and Statistics on a Teacher Rating Scale</a>: 응답 범주 수와 통계량 비교. 이 연구만으로 본 설문의 두 버전 동등성을 주장하지 않는다.</li>
+<li>Masters (1974), <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1745-3984.1974.tb00970.x">The relationship between number of response categories and reliability of Likert-type questionnaires</a>: 응답 범주 수를 바꾼 비교 연구. 본 설문의 번안 타당도 증거는 아니다.</li>
+<li><a href="https://www.smartpls.com/documentation/literature/glossary/">SmartPLS glossary</a>: 5점 Likert를 등간으로 취급하는 설명. 7점의 분석상 우월성 근거로 사용하지 않는다.</li>
+<li>Belli (1998), <a href="https://pubmed.ncbi.nlm.nih.gov/9829098/">The structure of autobiographical memory and the event history calendar</a>: 과거 사건 회상에 사건 단서가 도움될 수 있다는 방법론 근거. AI 사용 시작 연월의 정확성을 보장하지 않는다.</li>
+<li><a href="https://www.cdc.gov/nchs/ccqder/question-evaluation/cognitive-interviewing.html">CDC Cognitive Interviewing</a>: 질문의 이해·회상·응답 과정을 검사하는 공식 방법 안내.</li>
+</ul>
+<p>EXP 원문 6점의 선택 이유와 한국어 라벨의 동등성, ACT 7점 빈도 라벨의 해석은 미확인이다. 인용 명세서에는 이 상태를 ‘미검증’으로 유지한다.</p>
+</body></html>

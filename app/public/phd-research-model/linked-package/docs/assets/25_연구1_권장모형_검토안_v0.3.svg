@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180" role="img" aria-labelledby="title desc">
+<title id="title">연구 1 권장모형 v0.3 — 채택 전 검토안</title>
+<desc id="desc">USE에서 TC로, TC에서 TP·JE·WI로 향하는 주경로. USE의 세 결과 직접경로와 EXP의 세 결과 주효과를 포함한다. GAIL은 USE–TC 경로의 조절 후보이며 GAIL의 TC 주효과도 추정한다. EXP 조절은 별도 탐색 후보, 소득 영향은 보조 분석이다.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#253544"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#6b7c8c"/></marker></defs>
+<rect width="1800" height="1180" fill="#fff"/>
+<g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#182b3c">
+<text x="70" y="72" font-size="20" letter-spacing="2">STUDY 1 · MODEL PROPOSAL · 2026-10-05</text>
+<text x="70" y="130" font-size="40" font-weight="700">AI 사용, 과업 크래프팅과 업무 결과</text>
+<text x="70" y="171" font-size="23" fill="#617181">v0.3 권장 검토안 · 모형 채택 및 설문 검증 전</text>
+<g fill="none" stroke="#253544" stroke-width="3" marker-end="url(#a)">
+<path d="M380 540 H590"/><path d="M890 513 L1080 350"/><path d="M890 540 H1080"/><path d="M890 567 L1080 730"/>
+</g>
+<g fill="none" stroke="#6b7c8c" stroke-width="2" marker-end="url(#b)">
+<path d="M245 480 V253 H1045 V325 H1080"/>
+<path d="M185 600 V865 H1015 V575 H1080"/>
+<path d="M245 600 V825 H1045 V760 H1080"/>
+<path d="M785 325 V480"/>
+<path d="M1540 470 H1450 V350 H1400"/><path d="M1540 535 H1400"/><path d="M1540 600 H1450 V730 H1400"/>
+</g>
+<path d="M650 325 V438 H485 V536" fill="none" stroke="#253544" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#a)"/>
+<g stroke="#253544" stroke-width="2.5" fill="#fff">
+<rect x="80" y="480" width="300" height="120" rx="8"/>
+<rect x="590" y="480" width="300" height="120" rx="8"/>
+<rect x="1080" y="290" width="320" height="120" rx="8"/>
+<rect x="1080" y="480" width="320" height="120" rx="8" fill="#f2f6fa"/>
+<rect x="1080" y="670" width="320" height="120" rx="8"/>
+<rect x="590" y="225" width="300" height="100" rx="8"/>
+<rect x="1540" y="470" width="210" height="130" rx="8"/>
+</g>
+<g text-anchor="middle">
+<g font-size="32" font-weight="700"><text x="230" y="527">USE</text><text x="740" y="527">TC</text><text x="1240" y="335">TP</text><text x="1240" y="525">JE</text><text x="1240" y="715">WI · IDS</text><text x="740" y="264">GAIL</text><text x="1645" y="512">EXP</text></g>
+<g font-size="23"><text x="230" y="566">업무상 생성형 AI 사용</text><text x="740" y="566">과업 크래프팅 행동</text><text x="1240" y="374">AI의 지각된 생산성 기여</text><text x="1240" y="562">담당 과업범위의 지각된 확대</text><text x="1240" y="754">업무강도 증가</text><text x="740" y="300">생성형 AI 리터러시</text><text x="1645" y="551">자기평가</text><text x="1645" y="580">직업 전문성</text></g>
+</g>
+<g font-size="19" fill="#617181"><text x="86" y="237">USE → 세 결과 직접경로 포함</text><text x="427" y="419">조절 후보</text><text x="801" y="390">주효과</text><text x="1460" y="420">EXP → 세 결과 주효과</text><text x="1090" y="631">JE: 연구자 작성 후보 · 문항 검증 필요</text><text x="590" y="648">현 TC는 확장·도전 행동 중심</text><text x="590" y="678">일반적인 재설계 전체로 해석하지 않음</text></g>
+<rect x="70" y="910" width="1660" height="105" rx="8" fill="#f3f5f7"/>
+<text x="95" y="947" font-size="24" font-weight="700">INC_AI · 지각된 소득 영향 — 별도 보조 분석</text>
+<text x="95" y="985" font-size="21">TP·JE·WI와의 동반 분포·관련성 확인. 핵심 결과에서 소득으로 이어지는 인과경로는 지정하지 않음.</text>
+<text x="70" y="1060" font-size="20">굵은 실선: 주경로   가는 실선: 직접경로·주효과   점선: 조절 후보</text>
+<text x="70" y="1097" font-size="20">EXP × TC의 세 조절효과는 사전 지정한 탐색 후보. GAIL의 우선 배치도 이론 검토가 필요함.</text>
+<text x="70" y="1134" font-size="20">화살표는 제안된 분석 방향. 횡단자료의 인과·완전매개를 뜻하지 않음. 결과 간 잔차 공분산은 분석에서 검토.</text>
+</g></svg>

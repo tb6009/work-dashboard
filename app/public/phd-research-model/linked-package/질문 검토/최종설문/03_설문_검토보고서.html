@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>설문 검토보고서</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="package.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">설문 검토보고서</h1>
+</header>
+<h1 id="통합-설문-v0.94-검토보고서">통합 설문 v0.94 검토보고서</h1>
+<p>기준일: 2026-10-11 (최초 대조: 2026-10-05)</p>
+<h2 id="결론">결론</h2>
+<p>현재 설문은 전문가 검토와 인지면담에 사용할 수 있는 정리본이다.
+본조사 배포본으로 확정하기에는 구현·번안·측정의 미확인 사항이 남아
+있다.</p>
+<h2 id="온라인-대조-결과">온라인 대조 결과</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>항목</th>
+<th>확인 결과</th>
+<th>판정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구조</td>
+<td>15개 섹션, 70개 고유 코드</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>최신 변경</td>
+<td>JE_NEW·JE_LOST 없음, BG4·BG_USEMODE·BG5 있음</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>핵심 문항</td>
+<td>USE4+TC4+TP3+JE3+WI5+EXP5+GAIL17+SC4+THR4=49</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>TC4</td>
+<td>7점 선형이나 왼쪽 끝 라벨이 화면에서 비어 있음</td>
+<td>수정 필요</td>
+</tr>
+<tr>
+<td>비해당 문항</td>
+<td>JE3·WI5·GAIL_EC4는 현재 선형이며 비해당 보기가 없음</td>
+<td>적용성 재검토</td>
+</tr>
+<tr>
+<td>BG4·BG_USEMODE·BG5</td>
+<td>미사용과 다른 보기의 동시 선택 차단 없음</td>
+<td>데이터 정리 규칙 필요</td>
+</tr>
+<tr>
+<td>INC_AI</td>
+<td>증가·무영향·감소 3보기, 선택 응답</td>
+<td>일치</td>
+</tr>
+<tr>
+<td>게시 상태</td>
+<td>편집 화면에 <code>Published</code> 표시</td>
+<td>시작 문서의 비게시 기록과 충돌. 즉시 재확인</td>
+</tr>
+<tr>
+<td>필수·분기</td>
+<td>실제 응답자 흐름 시험 미완료</td>
+<td>본조사 전 필수</td>
+</tr>
+</tbody>
+</table>
+<h2 id="영역별-판정">영역별 판정</h2>
+<h3 id="내용">1. 내용</h3>
+<ul>
+<li>USE는 아이디어·문제해결·질문·지식 획득 중심이다.</li>
+<li>ACT가 제작·수정 사용을 묻더라도 USE의 내용타당도를 자동 보완하지
+않는다.</li>
+<li>TC는 지난 1주 행동이다. JE·WI는 장기 회고 변화다.</li>
+<li>TC를 JE·WI 변화의 인과적 매개로 단정할 수 없다.</li>
+<li>TP는 객관적 생산성이 아니라 AI의 지각된 기여다.</li>
+</ul>
+<p>판정: <strong>인지면담 필요</strong>.</p>
+<h3 id="번역">2. 번역</h3>
+<ul>
+<li>원문이 있는 문항도 대상, 기술, 기간, 응답척도가 바뀌었다.</li>
+<li>THR은 STARA를 생성형 AI로 좁혔다.</li>
+<li>GAIL_EC4는 조직 지침에 고객 지침을 추가했다.</li>
+<li>WI3의 “짧아졌다(줄어들었다)”는 이중표현이다.</li>
+<li>JE는 직접 대응 원척도가 없는 연구자 개발 후보다.</li>
+</ul>
+<p>판정: <strong>전문가 번안 검토 필요</strong>.</p>
+<h3 id="응답척도">3. 응답척도</h3>
+<ul>
+<li>TC·TP·WI·SC 등은 원척도와 다른 7점을 사용한다.</li>
+<li>7점이 PLS-SEM에서 항상 우월하다는 근거는 확인되지 않았다.</li>
+<li>EXP는 6점이지만 현재 중간 라벨 전체가 공식 원라벨인지
+미확인이다.</li>
+<li>ACT의 <code>활동 자체를 수행하지 않음</code>은 구조적 비해당이다.
+0이나 1로 합치면 안 된다.</li>
+</ul>
+<p>판정: <strong>파일럿 전 사양 고정 필요</strong>.</p>
+<h3 id="기간과-기준업무">4. 기간과 기준업무</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>블록</th>
+<th>준거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REF_MAIN</td>
+<td>최근 3개월 중 가장 많은 시간을 쓴 유급 디자인 업무 한 가지</td>
+</tr>
+<tr>
+<td>USE</td>
+<td>평소 업무</td>
+</tr>
+<tr>
+<td>TC·SC</td>
+<td>지난 1주</td>
+</tr>
+<tr>
+<td>TP</td>
+<td>현재 AI 기여 지각</td>
+</tr>
+<tr>
+<td>JE·WI</td>
+<td>AI 사용 전과 현재의 회고 비교</td>
+</tr>
+<tr>
+<td>EXP1·2</td>
+<td>지난 1년</td>
+</tr>
+<tr>
+<td>EXP3–5·GAIL·THR</td>
+<td>전반적 현재 자기평가</td>
+</tr>
+<tr>
+<td>ACT·BG4·BG_USEMODE·BG5</td>
+<td>현재 기준업무 또는 최근 3개월</td>
+</tr>
+</tbody>
+</table>
+<p>기간 혼재는 오류가 아니라 서로 다른 개념의 결과다. 다만 응답자가
+기준을 유지하는지 인지면담으로 확인해야 한다.</p>
+<h3 id="측정모형">5. 측정모형</h3>
+<ul>
+<li>GAIL은 5영역 17문항이다. 단일 총점이나 고차요인은 별도 논증이
+필요하다.</li>
+<li>JE는 TC와 내용이 겹칠 수 있다. TC는 행동, JE는 결과적 범위 변화로
+구분한다.</li>
+<li>THR1은 대체 가능성 인식, THR2–4는 걱정이 강하다. 단일요인 적합성을
+확인한다.</li>
+<li>WI5는 직원 중심 표현이다. 프리랜서·1인 사업자 적용성을
+확인한다.</li>
+<li>횡단 자기보고 설계는 역인과와 공통방법 편향을 배제하지 못한다.</li>
+</ul>
+<p>판정: <strong>측정구조 미검증</strong>.</p>
+<h3 id="구현">6. 구현</h3>
+<p>본조사 전 다음 시험을 수행한다.</p>
+<ol type="1">
+<li>동의 거절과 유급 디자인 업무 없음의 종료 흐름을 시험한다.</li>
+<li><code>PRE_AI</code>, <code>COMPARE</code>, <code>WORK_WEEK</code>
+조건에 따른 구조적 결측을 시험한다.</li>
+<li>TC4의 왼쪽 앵커를 복구한다.</li>
+<li>JE3·WI5·GAIL_EC4의 비해당 처리를 결정한다.</li>
+<li>BG4·BG_USEMODE·BG5의 미사용 상충 응답을 검출한다.</li>
+<li>실제 제출과 스프레드시트 저장을 시험한다.</li>
+<li>게시 상태와 공개 범위를 확인한다.</li>
+</ol>
+<h2 id="대안-시나리오와-반대-가설">대안 시나리오와 반대 가설</h2>
+<h3 id="연구-1">연구 1</h3>
+<ul>
+<li>대안 A: AI 사용이 TC를 높이는 것이 아니라, 원래 과업을 적극적으로
+바꾸는 사람이 AI를 더 쓸 수 있다.</li>
+<li>대안 B: 조직의 업무량·디지털화가 USE와 TC·TP·JE·WI를 동시에 높일 수
+있다.</li>
+<li>반대 가설: 높은 전문성은 TC의 성과 효과를 강화하기보다 AI의 추가
+효용을 낮출 수 있다. 높은 전문성은 WI를 완충할 수도 있고, 더 많은 업무
+배정으로 WI를 높일 수도 있다.</li>
+</ul>
+<h3 id="연구-2">연구 2</h3>
+<ul>
+<li>대안 A: THR이 USE를 촉진하기보다 회피와 사용 감소를 일으킬 수
+있다.</li>
+<li>대안 B: USE가 SC를 높이기보다 자동화 의존으로 학습 노력을 낮출 수
+있다.</li>
+<li>반대 가설: GAIL이 높을수록 대체 가능성을 더 정확히 인식해 THR→USE의
+방향이 약해지거나 바뀔 수 있다.</li>
+</ul>
+<h2 id="권고-순서">권고 순서</h2>
+<ol type="1">
+<li>온라인 구현 오류 후보를 수정하기 전에 화면 사본을 남긴다.</li>
+<li>전문가에게 JE·WI·THR·EXP를 우선 검토받는다.</li>
+<li>직원·프리랜서·1인 사업자를 포함한 인지면담을 수행한다.</li>
+<li>파일럿에서 적용성, 결측, 요인구조, 판별성을 확인한다.</li>
+<li>분석계획과 표본계획을 사전 확정한 뒤 본조사를 게시한다.</li>
+</ol>
+<h2 id="미확인">미확인</h2>
+<ul>
+<li>실제 필수 여부와 자동 분기 전 경로.</li>
+<li>온라인 게시·공개 범위의 현재 상태.</li>
+<li>EXP의 공식 문항별 전체 앵커.</li>
+<li>번안 사용 조건과 저작권 허용 범위.</li>
+<li>실제 데이터의 신뢰도·타당도·가설 결과.</li>
+</ul>
+<section class="section"><h2>v0.94 보조문항 업데이트</h2><p>2026-10-11 v0.94: BG4 다음에 복수선택 보조문항 BG_USEMODE를 추가했다. 15개 섹션·70문항이며 핵심 49문항은 변경하지 않았다. 보기별 선택 여부를 분석하고 USE·GAIL에 합산하거나 숙련도 순위로 점수화하지 않는다. 해당 없음은 단독 선택하도록 안내하되 Google Forms에서 상충 선택을 기술적으로 차단하지는 않는다.</p><p><a  href="01_%EC%B5%9C%EC%A2%85%EC%84%A4%EB%AC%B8_v0.94.html#생성형-ai-활용-방식">추가 문항 보기</a> · <a  href="07_AI%ED%99%9C%EC%9A%A9%EB%B0%A9%EC%8B%9D_%EB%B3%B4%EC%A1%B0%EB%AC%B8%ED%95%AD_%EC%9D%B8%EC%9A%A9_%EB%AA%85%EC%84%B8%EC%84%9C_v0.94.md.html">문항 근거와 코딩 원칙</a></p></section></body>
+</html>

@@ -235,6 +235,8 @@ function Hero({
         webUrl={project.webUrl}
         designHistoryUrl={project.designHistoryUrl}
         portfolioUrl={project.portfolioUrl}
+        eventWebsiteUrl={project.eventWebsiteUrl}
+        surveyUrl={project.surveyUrl}
         processPortfolioUrl={project.processPortfolioUrl}
         mediaPortfolioUrl={project.mediaPortfolioUrl}
         assignmentGalleryUrl={project.assignmentGalleryUrl}
@@ -369,6 +371,8 @@ function ExternalLinkRow({
   webUrl,
   designHistoryUrl,
   portfolioUrl,
+  eventWebsiteUrl,
+  surveyUrl,
   processPortfolioUrl,
   mediaPortfolioUrl,
   assignmentGalleryUrl,
@@ -380,6 +384,8 @@ function ExternalLinkRow({
   webUrl?: string;
   designHistoryUrl?: string;
   portfolioUrl?: string;
+  eventWebsiteUrl?: string;
+  surveyUrl?: string;
   processPortfolioUrl?: string;
   mediaPortfolioUrl?: string;
   assignmentGalleryUrl?: string;
@@ -393,6 +399,8 @@ function ExternalLinkRow({
   if (caseStudiesUrl) links.push({ label: '이미지 케이스 스터디', href: caseStudiesUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
   if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
+  if (eventWebsiteUrl) links.push({ label: '디자인터칭데이 웹사이트', href: eventWebsiteUrl, emphasis: true });
+  if (surveyUrl) links.push({ label: '사전 신청 설문', href: surveyUrl, emphasis: true });
   if (mediaPortfolioUrl) links.push({ label: '이미지·동영상 포트폴리오', href: mediaPortfolioUrl, emphasis: true });
   if (assignmentGalleryUrl) links.push({ label: '수업과제 이미지 갤러리', href: assignmentGalleryUrl, emphasis: true });
   if (designHistoryUrl) links.push({ label: 'UI 디자인 히스토리', href: designHistoryUrl });

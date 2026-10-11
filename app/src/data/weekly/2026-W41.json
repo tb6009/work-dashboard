@@ -10,13 +10,13 @@
     "activeProjects": 8,
     "sessions": 1,
     "newProjects": 1,
-    "filesChanged": 190
+    "filesChanged": 459
   },
   "daily": [
     {
       "date": "2026-10-05",
       "weekday": "월",
-      "filesChanged": 49,
+      "filesChanged": 41,
       "topProjectIds": [
         "0500",
         "063"
@@ -55,7 +55,7 @@
     {
       "date": "2026-10-06",
       "weekday": "화",
-      "filesChanged": 100,
+      "filesChanged": 20,
       "topProjectIds": [
         "063",
         "0500",
@@ -124,7 +124,7 @@
     {
       "date": "2026-10-07",
       "weekday": "수",
-      "filesChanged": 30,
+      "filesChanged": 29,
       "topProjectIds": [
         "039",
         "03",
@@ -262,7 +262,7 @@
     {
       "date": "2026-10-09",
       "weekday": "금",
-      "filesChanged": 7,
+      "filesChanged": 6,
       "topProjectIds": [
         "01",
         "063",
@@ -286,10 +286,11 @@
     {
       "date": "2026-10-10",
       "weekday": "토",
-      "filesChanged": 0,
+      "filesChanged": 194,
       "topProjectIds": [
         "1303",
-        "039"
+        "039",
+        "03"
       ],
       "entries": [
         {
@@ -299,20 +300,99 @@
         {
           "projectId": "039",
           "did": "디자인터칭데이 키 비주얼 v0.7 확정 · 포스터 v1·v2 · 캐러셀 3종 v1·v2"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 146,
+                "out": 62519,
+                "cache_read": 9162355,
+                "cache_write": 63693,
+                "messages": 73,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 146,
+              "out": 62519,
+              "cache_read": 9162355,
+              "cache_write": 63693,
+              "messages": 73
+            },
+            "costUSD": 0
+          }
         }
       ]
     },
     {
       "date": "2026-10-11",
       "weekday": "일",
-      "filesChanged": 0,
+      "filesChanged": 165,
       "topProjectIds": [
-        "063"
+        "063",
+        "039",
+        "0500",
+        "03"
       ],
       "entries": [
         {
           "projectId": "063",
-          "did": "1303 DataViz 히스토리·디자인터칭데이 제작과정 포트폴리오 공개, 연구모델 허브 v1.1 갱신"
+          "did": "1303 DataViz 히스토리·디자인터칭데이 제작과정 포트폴리오 공개, 연구모델 허브 v1.1 갱신",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 108,
+                "out": 25010,
+                "cache_read": 12275915,
+                "cache_write": 61224,
+                "messages": 54,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 108,
+              "out": 25010,
+              "cache_read": 12275915,
+              "cache_write": 61224,
+              "messages": 54
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] README_수정안내.md · index.html · index_수정전_20261011.html · index_행사정보수정전_20261011.html · 행사장소_확인메모_20261011.md"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_시작.html · 01_최종설문_v0.94.html · 01_최종설문_v0.94.md · 02_문항별_영한대조·핵심근거.html · 02_문항별_영한대조·핵심근거.md 외 9건"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 32,
+                "out": 22082,
+                "cache_read": 3526152,
+                "cache_write": 50764,
+                "messages": 16,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 32,
+              "out": 22082,
+              "cache_read": 3526152,
+              "cache_write": 50764,
+              "messages": 16
+            },
+            "costUSD": 0
+          }
         }
       ]
     }
@@ -396,13 +476,13 @@
     }
   ],
   "labelChanges": [],
-  "buildAt": "2026-10-09T03:40:06.430Z",
+  "buildAt": "2026-10-11T01:15:15.689Z",
   "tokens": {
     "total": {
-      "in": 502,
-      "out": 242960,
-      "cache_read": 30688532,
-      "cache_write": 2085963
+      "in": 788,
+      "out": 352571,
+      "cache_read": 55652954,
+      "cache_write": 2261644
     },
     "costUSD": 0,
     "costKRW": 0

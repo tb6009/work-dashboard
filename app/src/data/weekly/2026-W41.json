@@ -10,7 +10,7 @@
     "activeProjects": 8,
     "sessions": 1,
     "newProjects": 1,
-    "filesChanged": 471
+    "filesChanged": 522
   },
   "daily": [
     {
@@ -286,7 +286,7 @@
     {
       "date": "2026-10-10",
       "weekday": "토",
-      "filesChanged": 196,
+      "filesChanged": 197,
       "topProjectIds": [
         "1303",
         "039",
@@ -335,7 +335,7 @@
     {
       "date": "2026-10-11",
       "weekday": "일",
-      "filesChanged": 175,
+      "filesChanged": 225,
       "topProjectIds": [
         "063",
         "039",
@@ -349,20 +349,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 140,
-                "out": 30323,
-                "cache_read": 16413927,
-                "cache_write": 76422,
-                "messages": 70,
+                "in": 162,
+                "out": 33421,
+                "cache_read": 19359338,
+                "cache_write": 84050,
+                "messages": 81,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 140,
-              "out": 30323,
-              "cache_read": 16413927,
-              "cache_write": 76422,
-              "messages": 70
+              "in": 162,
+              "out": 33421,
+              "cache_read": 19359338,
+              "cache_write": 84050,
+              "messages": 81
             },
             "costUSD": 0
           }
@@ -481,13 +481,13 @@
     }
   ],
   "labelChanges": [],
-  "buildAt": "2026-10-11T07:57:26.992Z",
+  "buildAt": "2026-10-11T11:32:28.112Z",
   "tokens": {
     "total": {
-      "in": 840,
-      "out": 362170,
-      "cache_read": 61013642,
-      "cache_write": 2527288
+      "in": 862,
+      "out": 365268,
+      "cache_read": 63959053,
+      "cache_write": 2534916
     },
     "costUSD": 0,
     "costKRW": 0

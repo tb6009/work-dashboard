@@ -25,7 +25,7 @@ DEST = Path(__file__).resolve().parent.parent / 'app/public/phd-research-model'
 FORMS = {
     'ko_view': 'https://forms.gle/Q4ipz4b7sfZNQ3389',
     'en_view': 'https://forms.gle/hX9dTrbGmHEbNF7t5',
-    'ko_edit': 'https://docs.google.com/forms/d/1tW9U3ITL9q6wtN9CZzcoKysQVnwiK-2tulUHsX8cs2w/edit',
+    'ko_edit': 'https://docs.google.com/forms/d/1n1aQJ70Sk2c3uS-1bUFb7w3tiD-PtfrpFNptyrqQseA/edit',
     'en_edit': 'https://docs.google.com/forms/d/1noo3b2gQ16l1QFmml_wnBQL0AaQEOZsf44oSwg6-xJ0/edit',
 }
 
@@ -102,7 +102,7 @@ def collect():
     for sub in SUBDIRS:
         d = SRC / sub
         for p in sorted(d.iterdir()):
-            if p.is_file() and p.suffix in TEXT_EXT | DOWNLOAD_EXT and not p.name.startswith('.'):
+            if p.is_file() and p.suffix in TEXT_EXT | DOWNLOAD_EXT and not p.name.startswith('.') and 'Claude_웹사이트_일괄배포_인계' not in p.name:
                 files.append(p)
     # 시리즈 그룹: (폴더, 버전 뺀 stem, 확장자 계열)
     groups = {}
@@ -250,20 +250,20 @@ def hub(latest, older, m):
 <div class="card"><b>디자인 업무의 변화와 대응 유형 — 연구 1·2 개요 v1.1</b><br><a href="{MODEL_OUT}">{MODEL_OUT.removeprefix('연구모델_')}</a><br>
 <span class="muted">연구 1: USE → TC → TP·JE·WI (결과 3개 병렬). GAIL은 USE→TC, EXP는 TC→세 결과를 조절.<br>
 연구 2: THR → USE → SC + THR → SC 직접경로. GAIL은 첫 단계, EXP는 둘째 단계를 조절.<br>
-통합 설문 69문항 · 일회 자기보고. 본조사 검증·배포 전 — 연구자 개발 JE와 바뀐 응답척도·기간은 채택 전 검증 필요.</span></div>
+통합 설문 70문항 · 일회 자기보고. 본조사 검증·배포 전 — 연구자 개발 JE와 바뀐 응답척도·기간은 채택 전 검증 필요.</span></div>
 
 <div class="forms">
-  <a class="primary" href="{F['ko_view']}" target="_blank" rel="noopener"><b>설문 참여 · 국문</b><span>Google Forms 응답 링크</span></a>
-  <a class="primary" href="{F['en_view']}" target="_blank" rel="noopener"><b>Survey · English</b><span>Google Forms response link</span></a>
-  <a href="{F['ko_edit']}" target="_blank" rel="noopener"><b>국문 작업파일</b><span>편집 화면 · 권한 필요</span></a>
-  <a href="{F['en_edit']}" target="_blank" rel="noopener"><b>영문 작업파일</b><span>편집 화면 · 권한 필요</span></a>
+  <a class="primary" href="{F['ko_view']}" target="_blank" rel="noopener"><b>설문 참여 · 국문 (v0.8)</b><span>이전 응답 링크 · v0.94 응답 링크 미등록</span></a>
+  <a class="primary" href="{F['en_view']}" target="_blank" rel="noopener"><b>Survey · English (v0.8)</b><span>영문은 v0.94와 미동기화</span></a>
+  <a href="{F['ko_edit']}" target="_blank" rel="noopener"><b>국문 작업파일 v0.94</b><span>편집 화면 · 권한 필요</span></a>
+  <a href="{F['en_edit']}" target="_blank" rel="noopener"><b>영문 작업파일 (v0.8)</b><span>편집 화면 · 권한 필요</span></a>
 </div>
-<p class="muted" style="font-size:13px">현행 설문 v0.93 (2026-10-05, 15개 섹션 · 69개 문항 코드). 본조사 배포본 아님 — 동의문 필수정보·IRB 확정 전. 편집 화면의 게시 상태(Published)는 재확인 필요.</p>
+<p class="muted" style="font-size:13px">현행 설문 v0.94 (2026-10-11, 15개 섹션 · 70개 문항 코드 · AI 활용 방식 보조문항 BG_USEMODE 추가). 본조사 배포본 아님 — 동의문 필수정보·IRB 확정 전. 편집 화면의 게시 상태(Published)는 재확인 필요.</p>
 
 <h2>1. 바로 보기</h2>
 <div class="grid2">
  <div class="card"><b>연구모델 (개요 v1.1)</b><br><a href="{MODEL_OUT}">핵심모형·보조변수 설명</a><br>{L('26_연구1·2_최종연구모델_보고서_v1.0.html', '최종 연구모델 보고서 v1.0')}</div>
- <div class="card"><b>최종설문 v0.93</b><br>{L('질문 검토/최종설문/00_시작.html', '패키지 시작 화면')} · {L('질문 검토/최종설문/01_최종설문_v0.93.html', '설문 정리본')}<br>{L('질문 검토/최종설문/02_문항별_영한대조·핵심근거.html', '문항별 영한대조·핵심근거')} · {L('질문 검토/최종설문/03_설문_검토보고서.html', '설문 검토보고서')}</div>
+ <div class="card"><b>최종설문 v0.94</b><br>{L('질문 검토/최종설문/00_시작.html', '패키지 시작 화면')} · {L('질문 검토/최종설문/01_최종설문_v0.94.html', '설문 정리본 v0.94')}<br>{L('질문 검토/최종설문/02_문항별_영한대조·핵심근거.html', '문항별 영한대조·핵심근거')} · {L('질문 검토/최종설문/03_설문_검토보고서.html', '설문 검토보고서')}</div>
  <div class="card"><b>모형이 바뀐 이유</b><br>{L('20_연구모형_변화이유_정리_v0.1.md', '연구모형 변화 이유 정리 v0.1')} · {L('21_연구모형_변경계기·현재모형_TV·SV_운용방침_v0.1.md', '변경 계기·TV·SV 운용방침')}<br>{L('23_연구1_TC_이득과비용_모형설명_v0.1.md', 'TC 이득과 비용')} · {L('25_연구1_권장모형·설문재구성안_v0.3.html', '권장모형·설문재구성안 v0.3')}</div>
  <div class="card"><b>이전 단계 (참고)</b><br>{L('11_연구1·2_통합모형·연구질문_v0.1.html', '통합모형 v0.4 (10-03)')}<br>{L('질문 검토/00_설문원문_영한대조_검토자료집_v0.5.html', '원문·영한 대조 검토자료집 v0.5')}</div>
 </div>
@@ -302,7 +302,7 @@ def hub(latest, older, m):
 <tr><td>GAIL</td><td>생성형 AI 리터러시</td><td>USE→TC 조절</td><td>THR→USE 조절</td><td>17</td><td>Liu·Zhang·Wei, 2025</td></tr>
 <tr><td>EXP</td><td>자기평가 직업 전문성</td><td>TC→세 결과 조절</td><td>USE→SC 조절</td><td>5</td><td>Van der Heijden et al., 2018</td></tr>
 </table>
-<p class="muted" style="font-size:13px">보조 항목(핵심모형 제외): 참여·선별(CONSENT·S1·S2), 기준업무(REF), 회고 비교(PRE_AI·COMPARE), WORK_WEEK, JE_DIR, 활동별 사용 ACT1–4(USE와 합산 금지), 지각된 소득 영향 INC_AI, 배경 BG, FEEDBACK. 전체 69개 코드는 최종설문 폴더의 05_문항코드북.tsv.</p>
+<p class="muted" style="font-size:13px">보조 항목(핵심모형 제외): 참여·선별(CONSENT·S1·S2), 기준업무(REF), 회고 비교(PRE_AI·COMPARE), WORK_WEEK, JE_DIR, 활동별 사용 ACT1–4(USE와 합산 금지), 지각된 소득 영향 INC_AI, 배경 BG(AI 활용 방식 BG_USEMODE 포함), FEEDBACK. 전체 70개 코드는 최종설문 폴더의 05_문항코드북.tsv.</p>
 
 <h2>4. 모형이 바뀐 이유 (요약)</h2>
 <table>

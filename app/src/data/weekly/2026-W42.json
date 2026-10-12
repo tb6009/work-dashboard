@@ -1,0 +1,144 @@
+{
+  "week": "2026-W42",
+  "range": {
+    "from": "2026-10-12",
+    "to": "2026-10-18"
+  },
+  "status": "current",
+  "summary": "디자인터칭데이 행사 정보를 10:00–12:00 · The이음으로 확정해 캐러셀·포스터·웹사이트를 고쳤고, VITAL 소개 캐러셀 8장과 시설 사진을 더했다. 현장실습 기업 안내 12장과 캡스톤 총장보고 10장을 디자인했다.",
+  "kpis": {
+    "activeProjects": 4,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 63
+  },
+  "daily": [
+    {
+      "date": "2026-10-12",
+      "weekday": "월",
+      "filesChanged": 63,
+      "topProjectIds": [
+        "039",
+        "03",
+        "1303",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "행사 정보 수정(10:00–12:00 · The이음) · VITAL 캐러셀 8장 · 포스터 전체 비교 · 웹사이트 시설 사진"
+        },
+        {
+          "projectId": "03",
+          "did": "현장실습 기업 안내 12장 · 캡스톤 총장보고 10장 v0.1–v0.3"
+        },
+        {
+          "projectId": "1303",
+          "did": "A1 포스터 v0.30 최근 기록 갱신"
+        },
+        {
+          "projectId": "063",
+          "did": "디자인터칭데이 웹사이트 v2–v5 배포 · 제작과정 포트폴리오 갱신 · W41 마감"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "039",
+      "pct": 45,
+      "filesChanged": 80,
+      "imp": 4,
+      "did": "행사 시간·장소 확정(10:00–12:00 · 경기도경제과학진흥원 지하 1층 The이음)에 맞춰 정보가 든 캐러셀·포스터 페이지만 다시 만들었다. VITAL 소개 캐러셀 8장, 포스터 전체 비교, 웹사이트 시설 사진(메이커스파라다이스·V-SHOP)을 더해 행사 웹사이트 v2–v5를 배포했다.",
+      "nextAction": "VITAL 캐러셀 검토 · 연구모임 실제 사진 적용 · 게시",
+      "deliverables": [
+        "03_school_project/02_RISE/2026_가을_Value-up연구회/홍보자료제작"
+      ]
+    },
+    {
+      "id": "03",
+      "pct": 25,
+      "filesChanged": 120,
+      "imp": 3,
+      "did": "표준현장실습학기제 기업용 안내 PPT를 시안 v0.1–v0.4를 거쳐 12장으로 고도화했다. 캡스톤 2026-1 결과의 총장보고 10장을 텍스트 → 이미지 → 그리드 v0.3 순서로 만들었다.",
+      "nextAction": "총장보고 수치 원문 대조 · 전달",
+      "deliverables": [
+        "03_school_project/2026_가을학기/2026_이순행교수님자료/산출물"
+      ]
+    },
+    {
+      "id": "1303",
+      "pct": 10,
+      "filesChanged": 2,
+      "imp": 2,
+      "did": "AI 작업 계보 A1 포스터를 최근 기록까지 넣어 v0.30으로 갱신했다.",
+      "nextAction": "A1 시험 출력"
+    },
+    {
+      "id": "063",
+      "pct": 20,
+      "filesChanged": 60,
+      "imp": 3,
+      "did": "디자인터칭데이 웹사이트와 RISE 버튼 2개(웹사이트·사전 신청 설문)를 공개하고 v2–v5를 차례로 배포했다. 디자인터칭데이 제작과정 포트폴리오에 공통 캐러셀 v2–v14·업종별·VITAL·행사정보 수정을 추가했다.",
+      "nextAction": "주중 갱신"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-12",
+      "projectId": "039",
+      "title": "행사를 10:00–12:00, 경기도경제과학진흥원 지하 1층 The이음으로 확정했다.",
+      "description": "정보가 들어간 캐러셀·포스터·웹사이트만 다시 만들고 나머지 이미지는 유지했다.",
+      "isMilestone": true
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-10-12T06:09:57.994Z",
+  "tokens": {
+    "total": {
+      "in": 78,
+      "out": 12804,
+      "cache_read": 7735947,
+      "cache_write": 872470
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

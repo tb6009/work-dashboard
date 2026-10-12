@@ -152,11 +152,37 @@ function buildTouchingDay() {
     return `<h3>${k}안 · ${name} — 편집본 6장</h3>${gal(fin)}<details><summary class="meta">같은 페이지의 AI 생성 시안 6장 보기</summary>${gal(raw)}</details>`;
   });
 
-  const body = `<div class="eyebrow">039 · RISE · 2026 가을 VALUE-UP 연구회 · 2026.10.07–10</div>
+
+  // 5. 공통 캐러셀 v2 → v14 (10/11)
+  const IG = join(H, 'instagram');
+  const carVers = ls(IG).filter(d => /^carousel-v\d+$/.test(d)).sort((a, b) => +a.slice(10) - +b.slice(10));
+  const firstLine = d => { const f = ls(join(IG, d)).find(x => x.endsWith('.md')); if (!f) return ''; const l = readFileSync(join(IG, d, f), 'utf-8').split('\n').find(x => x.trim() && !x.startsWith('#')); return (l || '').replace(/^- /, '').replace(/\/Users\/\S+/g, '').slice(0, 90); };
+  const carHist = carVers.map(d => fig(img(join(IG, d), 'preview.jpg', `cv/${d}`), firstLine(d), d.replace('carousel-', ''), d !== carVers.at(-1)));
+  const FIN = join(IG, 'final_20261011');
+  const finPages = ls(FIN).filter(f => f.endsWith('.png')).map(f => fig(img(FIN, f, 'cfinal'), f.replace('.png', ''), '최종'));
+
+  // 6. 업종별 캐러셀 A·B·C 6장 + VITAL 8장 (10/11)
+  const sets6 = [['A_제품제조_6페이지_v1', 'A · 제품·제조'], ['B_앱디지털_6페이지_v1', 'B · 앱·디지털 서비스'], ['C_브랜드패키지공간_6페이지_v1', 'C · 브랜드·패키지·공간'], ['VITAL_8페이지_시안_v1', 'VITAL 소개 8장']];
+  const setHtml = sets6.filter(([d]) => existsSync(join(IG, d))).map(([d, name]) =>
+    `<h3>${name}</h3>` + gal(ls(join(IG, d)).filter(f => /^[A-C]?\d+\.png$/.test(f)).map(f => fig(img(join(IG, d), f, `set/${d.slice(0, 5)}`), f.replace('.png', '')))));
+  const layout = ['ABC_layout_test_v1', 'ABC_layout_test_v2', 'ABC_layout_test_v3'].filter(d => existsSync(join(IG, d)))
+    .map(d => fig(img(join(IG, d), 'preview.jpg', `lt/${d.slice(-2)}`), d.replace('ABC_layout_test_', '레이아웃 테스트 '), d.slice(-2), true));
+
+  // 7. 포스터 비교·웹 그리드 포스터
+  const PC = join(H, '포스터_전체비교_20261012'), PW = join(H, 'poster-web-grid-v1');
+  const pcmp = ls(PC).filter(f => f.endsWith('.jpg')).map(f => fig(img(PC, f, 'pcmp'), f.replace('.jpg', '').replace(/_/g, ' '), '비교', true));
+  const pweb = existsSync(join(PW, 'design-touching-day-poster.png')) ? [fig(img(PW, 'design-touching-day-poster.png', 'pweb'), '웹 그리드 포스터 (최신)', '현재')] : [];
+
+  // 8. 10/12 행사 정보 수정 — 수정 전·후
+  const FX = join(H, '행사정보수정_20261012');
+  const fixPairs = [['A', 'A_제품제조_6페이지_v1', 'A06.png'], ['B', 'B_앱디지털_6페이지_v1', 'B06.png'], ['C', 'C_브랜드패키지공간_6페이지_v1', 'C06.png']]
+    .filter(([k, d, f]) => existsSync(join(FX, k, f)) && existsSync(join(IG, d, f)))
+    .flatMap(([k, d, f]) => [fig(img(join(IG, d), f, `fix/before${k}`), `${f} 수정 전 (10:00–14:00 · 코워킹스페이스)`, '전', true), fig(img(join(FX, k), f, `fix/after${k}`), `${f} 수정 후 (10:00–12:00 · The이음)`, '후')]);
+  const body = `<div class="eyebrow">039 · RISE · 2026 가을 VALUE-UP 연구회 · 2026.10.07–12</div>
 <h1>Value-up 디자인터칭데이 — 홍보물 이미지 제작 과정</h1>
 <p class="lead">경기도 중소기업을 대상으로 한 디자인터칭데이 홍보물을 만든 과정입니다. 불꽃 키 비주얼을 정하고(10/7–10), 포스터 타이포그래피와 비주얼 콘셉트를 비교한 뒤, 업종별 캐러셀 3종을 만들었습니다(10/10). 각 단계에서 고른 것과 버린 시안을 함께 보여줍니다.</p>
 <div class="notice">모든 이미지는 AI로 만든 콘셉트 시안입니다. 실제 참여기업 사례나 학교 실적, 행사장 사진이 아닙니다. 행사 일시·장소·신청 정보는 최종 확정 전 원고입니다. 공개용 JPEG 축소본.</div>
-<div class="toc"><a href="#key">1. 키 비주얼</a><a href="#concept">2. 비주얼 콘셉트</a><a href="#poster">3. 포스터</a><a href="#carousel">4. 캐러셀</a><a href="../valueup-infographics/index.html">← 9월 Value-up 인포그래픽</a></div>
+<div class="toc"><a href="#key">1. 키 비주얼</a><a href="#concept">2. 비주얼 콘셉트</a><a href="#poster">3. 포스터</a><a href="#carousel">4. 캐러셀</a><a href="#carousel2">5. 공통 캐러셀 v2–v14</a><a href="#sets">6. 업종별·VITAL</a><a href="#poster2">7. 포스터 비교</a><a href="#fix">8. 행사정보 수정</a><a href="../design-touching-day/index.html">행사 웹사이트 →</a><a href="../valueup-infographics/index.html">← 9월 Value-up 인포그래픽</a></div>
 
 <h2 id="key">1. 키 비주얼 — 성냥과 불꽃</h2>
 <p class="lead">가로 커버에서 출발해(v0.1–0.4) 매체별 비율로 재구성했고, 세로 9:16에서 여섯 번 고쳐 v0.7을 확정했습니다. v0.7은 큰 불꽃의 스포크를 늘리고 과한 밝기를 누르며 구리·호박·금빛으로 색을 나눴습니다. 왼쪽 절반은 타이틀 여백입니다.</p>
@@ -176,7 +202,25 @@ ${p2.join('\n')}
 <h2 id="carousel">4. 캐러셀 — 고민별 3종</h2>
 <p class="lead">업종 자격이 아니라 기업의 고민별 이야기로 나눴습니다. 커버 3종(v1) 뒤, v2에서 세트당 6장으로 줄이고 AI 생성 시안 위에 로고·기준선·본문을 다시 조판한 편집본을 만들었습니다.</p>
 <h3>커버 3종 v1</h3>${gal(k1)}
-${k2.join('\n')}`;
+${k2.join('\n')}
+
+<h2 id="carousel2">5. 공통 캐러셀 — v2에서 v14까지 (10/11)</h2>
+<p class="lead">인스타그램에 올릴 공통 캐러셀 5장(1080×1350)을 하루 동안 열세 번 고쳤습니다. 기존 이미지를 다시 쓰고(v3), 흰 배경·코발트 포인트로 정리한 뒤(v4), 글자 크기·이미지 비율·번호 정렬·배경색 보정을 차례로 맞춰 v14를 승인했습니다. 각 버전 설명은 그 폴더 수정 기록의 첫 줄입니다.</p>
+${gal(carHist)}
+<h3>최종 승인본 v14 — 업로드 5장</h3>${gal(finPages)}
+
+<h2 id="sets">6. 업종별 캐러셀·VITAL 소개 (10/11)</h2>
+<p class="lead">공통 캐러셀 뒤에 고민별 A·B·C 세트를 6장씩, VITAL 그룹 소개를 8장으로 만들었습니다. 먼저 이미지·텍스트·다이어그램 중심 레이아웃을 세 번 시험했습니다.</p>
+${gal(layout, true)}
+${setHtml.join('\n')}
+
+<h2 id="poster2">7. 포스터 — 전체 비교와 웹 그리드 포스터 (10/12)</h2>
+<p class="lead">그동안 만든 포스터 시안을 계열별로 모아 비교하고, 웹사이트와 같은 그리드로 짠 포스터를 현재안으로 두었습니다.</p>
+${gal(pcmp, true)}${gal(pweb, true)}
+
+<h2 id="fix">8. 행사 정보 수정 (10/12)</h2>
+<p class="lead">행사 시간이 10:00–12:00으로, 장소가 경기도경제과학진흥원 지하 1층 The이음으로 확정되어, 정보가 들어간 페이지만 다시 만들었습니다. 나머지 이미지는 그대로 두었습니다.</p>
+${gal(fixPairs)}`;
   writeFileSync(join(OUT, 'index.html'), page('디자인터칭데이 홍보물 제작 과정', 'build-octweek-portfolios.mjs', body));
   console.log('valueup-touchingday: done');
 }

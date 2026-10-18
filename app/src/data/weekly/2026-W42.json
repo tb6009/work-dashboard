@@ -7,16 +7,16 @@
   "status": "current",
   "summary": "디자인터칭데이 행사 정보를 10:00–12:00 · The이음으로 확정해 캐러셀·포스터·웹사이트를 고쳤고, VITAL 소개 캐러셀 8장과 시설 사진을 더했다. 현장실습 기업 안내 12장과 캡스톤 총장보고 10장을 디자인했다.",
   "kpis": {
-    "activeProjects": 4,
+    "activeProjects": 7,
     "sessions": 0,
     "newProjects": 0,
-    "filesChanged": 63
+    "filesChanged": 2222
   },
   "daily": [
     {
       "date": "2026-10-12",
       "weekday": "월",
-      "filesChanged": 63,
+      "filesChanged": 206,
       "topProjectIds": [
         "039",
         "03",
@@ -30,7 +30,27 @@
         },
         {
           "projectId": "03",
-          "did": "현장실습 기업 안내 12장 · 캡스톤 총장보고 10장 v0.1–v0.3"
+          "did": "현장실습 기업 안내 12장 · 캡스톤 총장보고 10장 v0.1–v0.3",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 46,
+                "out": 20305,
+                "cache_read": 5154265,
+                "cache_write": 125853,
+                "messages": 23,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 46,
+              "out": 20305,
+              "cache_read": 5154265,
+              "cache_write": 125853,
+              "messages": 23
+            },
+            "costUSD": 0
+          }
         },
         {
           "projectId": "1303",
@@ -38,45 +58,278 @@
         },
         {
           "projectId": "063",
-          "did": "디자인터칭데이 웹사이트 v2–v5 배포 · 제작과정 포트폴리오 갱신 · W41 마감"
+          "did": "디자인터칭데이 웹사이트 v2–v5 배포 · 제작과정 포트폴리오 갱신 · W41 마감",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 134,
+                "out": 26363,
+                "cache_read": 17922658,
+                "cache_write": 828599,
+                "messages": 63,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 134,
+              "out": 26363,
+              "cache_read": 17922658,
+              "cache_write": 828599,
+              "messages": 63
+            },
+            "costUSD": 0
+          }
         }
       ]
     },
     {
       "date": "2026-10-13",
       "weekday": "화",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 93,
+      "topProjectIds": [
+        "063",
+        "082",
+        "0500",
+        "03",
+        "039",
+        "1300"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 14,
+                "out": 2361,
+                "cache_read": 595361,
+                "cache_write": 26187,
+                "messages": 7,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 14,
+              "out": 2361,
+              "cache_read": 595361,
+              "cache_write": 26187,
+              "messages": 7
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] 샘플_words.json · 김현정교수님_터닝포인트 팀장리더십[조직]_7차시_vol9.0_컷목록.json · 04_1차편집_XML.py",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 30,
+                "out": 13268,
+                "cache_read": 1410315,
+                "cache_write": 15545,
+                "messages": 10,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 30,
+              "out": 13268,
+              "cache_read": 1410315,
+              "cache_write": 15545,
+              "messages": 10
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 28_연구질문_재검토_사용자제공_피드백·검토의견_20261013_v0.1.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 52,
+                "out": 12755,
+                "cache_read": 2280338,
+                "cache_write": 215743,
+                "messages": 24,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 52,
+              "out": 12755,
+              "cache_read": 2280338,
+              "cache_write": 215743,
+              "messages": 24
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 01_녹취_전사본_v0.1.md"
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] PROJECT.md"
+        }
+      ]
     },
     {
       "date": "2026-10-14",
       "weekday": "수",
       "filesChanged": 0,
-      "topProjectIds": []
+      "topProjectIds": [
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json"
+        }
+      ]
     },
     {
       "date": "2026-10-15",
       "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 1503,
+      "topProjectIds": [
+        "063",
+        "0500",
+        "03",
+        "1300"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 01_선행연구로_배우는_문헌검토_스터디가이드_v0.1.md · log.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] SKILL.md · catalog.json · classifications.json · gallery.html · stats.json 외 1457건",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 106,
+                "out": 61050,
+                "cache_read": 8206691,
+                "cache_write": 194795,
+                "messages": 53,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 106,
+              "out": 61050,
+              "cache_read": 8206691,
+              "cache_write": 194795,
+              "messages": 53
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 검증결과_20261015.json · 검토보고서_20261015.md · 시각문법_검토업데이트_20261015.json · build.mjs · review.py 외 4건"
+        }
+      ]
     },
     {
       "date": "2026-10-16",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 51,
+      "topProjectIds": [
+        "1300",
+        "063",
+        "0500",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 시각문법_최종수정본_전체이력.json · build.mjs · external_corrections.json · finalize.py · prepare_workbook.py 외 4건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 01_설문개정검토_v0.95.html · 01_설문개정검토_v0.95.md · 10_JE추가_인용_명세서_v0.95.md · 10_JE추가·WI설명_변경기록_v0.95.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 00_추출목록_및_변경요청.md · 01_디자인제작기초_원문추출.md · 02_스토리텔링_원문추출.md · 03_시각디자인리서치_원문추출.md · 04_디자인실무프로젝트Ⅰ_원문추출.md 외 2건"
+        }
+      ]
     },
     {
       "date": "2026-10-17",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 87,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 01_연구계획서_수정본_v0.92.html · 01_연구계획서_수정본_v0.92.md · model1_moderation_20261017.svg · model2_moderation_20261017.svg"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json"
+        }
+      ]
     },
     {
       "date": "2026-10-18",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 282,
+      "topProjectIds": [
+        "0500",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_연구개요_v0.93.html · 01_연구계획서_v0.93.html · 01_연구계획서_v0.93.md · 02_연구계획서_인용_명세서_v0.93.html · 02_연구계획서_인용_명세서_v0.93.md 외 6건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W42.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 98,
+                "out": 21799,
+                "cache_read": 5110149,
+                "cache_write": 130066,
+                "messages": 49,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 98,
+              "out": 21799,
+              "cache_read": 5110149,
+              "cache_write": 130066,
+              "messages": 49
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     }
   ],
   "projects": [
@@ -130,15 +383,398 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-12T06:09:57.994Z",
+  "buildAt": "2026-10-18T06:57:34.654Z",
   "tokens": {
     "total": {
-      "in": 78,
-      "out": 12804,
-      "cache_read": 7735947,
-      "cache_write": 872470
+      "in": 480,
+      "out": 157901,
+      "cache_read": 40679777,
+      "cache_write": 1536788
     },
     "costUSD": 0,
     "costKRW": 0
+  },
+  "projectTokenUsage": {
+    "codex": [
+      {
+        "date": "2026-10-12",
+        "projectId": "03",
+        "in": 537874,
+        "out": 71932,
+        "cache_read": 16230656,
+        "cache_write": 0,
+        "requests": 138,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 537874,
+            "out": 71932,
+            "cache_read": 16230656,
+            "cache_write": 0,
+            "messages": 138
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-12",
+        "projectId": "039",
+        "in": 623173,
+        "out": 42615,
+        "cache_read": 14359680,
+        "cache_write": 0,
+        "requests": 107,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 623173,
+            "out": 42615,
+            "cache_read": 14359680,
+            "cache_write": 0,
+            "messages": 107
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-12",
+        "projectId": "1303",
+        "in": 248120,
+        "out": 10302,
+        "cache_read": 1451136,
+        "cache_write": 0,
+        "requests": 21,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 248120,
+            "out": 10302,
+            "cache_read": 1451136,
+            "cache_write": 0,
+            "messages": 21
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "projectId": "03",
+        "in": 94547,
+        "out": 9305,
+        "cache_read": 1092992,
+        "cache_write": 0,
+        "requests": 19,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 94547,
+            "out": 9305,
+            "cache_read": 1092992,
+            "cache_write": 0,
+            "messages": 19
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "projectId": "039",
+        "in": 420601,
+        "out": 11332,
+        "cache_read": 1085696,
+        "cache_write": 0,
+        "requests": 18,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 420601,
+            "out": 11332,
+            "cache_read": 1085696,
+            "cache_write": 0,
+            "messages": 18
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "projectId": "0500",
+        "in": 732675,
+        "out": 64391,
+        "cache_read": 12540544,
+        "cache_write": 0,
+        "requests": 92,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 74087,
+            "out": 3324,
+            "cache_read": 563328,
+            "cache_write": 0,
+            "messages": 11
+          },
+          "gpt-6-astra": {
+            "in": 658588,
+            "out": 61067,
+            "cache_read": 11977216,
+            "cache_write": 0,
+            "messages": 81
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference",
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "projectId": "1300",
+        "in": 601530,
+        "out": 76205,
+        "cache_read": 14919936,
+        "cache_write": 0,
+        "requests": 105,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 601530,
+            "out": 76205,
+            "cache_read": 14919936,
+            "cache_write": 0,
+            "messages": 105
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "projectId": "1303",
+        "in": 282150,
+        "out": 53139,
+        "cache_read": 13632384,
+        "cache_write": 0,
+        "requests": 92,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 282150,
+            "out": 53139,
+            "cache_read": 13632384,
+            "cache_write": 0,
+            "messages": 92
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "projectId": "1300",
+        "in": 85630,
+        "out": 3875,
+        "cache_read": 463232,
+        "cache_write": 0,
+        "requests": 8,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 85630,
+            "out": 3875,
+            "cache_read": 463232,
+            "cache_write": 0,
+            "messages": 8
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "projectId": "03",
+        "in": 202538,
+        "out": 14164,
+        "cache_read": 3304576,
+        "cache_write": 0,
+        "requests": 41,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 202538,
+            "out": 14164,
+            "cache_read": 3304576,
+            "cache_write": 0,
+            "messages": 41
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "projectId": "0500",
+        "in": 608881,
+        "out": 38385,
+        "cache_read": 4874240,
+        "cache_write": 0,
+        "requests": 33,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 498210,
+            "out": 23607,
+            "cache_read": 4233216,
+            "cache_write": 0,
+            "messages": 24
+          },
+          "gpt-6.1-sol": {
+            "in": 110671,
+            "out": 14778,
+            "cache_read": 641024,
+            "cache_write": 0,
+            "messages": 9
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-17",
+        "projectId": "0500",
+        "in": 1883949,
+        "out": 83264,
+        "cache_read": 12076288,
+        "cache_write": 0,
+        "requests": 84,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 1037219,
+            "out": 47162,
+            "cache_read": 7111808,
+            "cache_write": 0,
+            "messages": 55
+          },
+          "gpt-6-astra": {
+            "in": 846730,
+            "out": 36102,
+            "cache_read": 4964480,
+            "cache_write": 0,
+            "messages": 29
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-18",
+        "projectId": "0500",
+        "in": 1496128,
+        "out": 142191,
+        "cache_read": 23511168,
+        "cache_write": 0,
+        "requests": 169,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 1496128,
+            "out": 142191,
+            "cache_read": 23511168,
+            "cache_write": 0,
+            "messages": 169
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      }
+    ],
+    "audit": {
+      "response-id": 1115,
+      "assigned": 927,
+      "unassigned": 188
+    },
+    "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
+  },
+  "externalAI": {
+    "codex": {
+      "byModel": {
+        "gpt-6.1-sol": {
+          "in": 4541300,
+          "cached": 79247616,
+          "out": 396469,
+          "turns": 654,
+          "costUSD": 0.0
+        },
+        "gpt-6-astra": {
+          "in": 4533429,
+          "cached": 67474432,
+          "out": 390336,
+          "turns": 461,
+          "costUSD": 132.33
+        }
+      },
+      "costUSD": 132.33,
+      "costByDay": {
+        "2026-10-12": 14.75,
+        "2026-10-13": 46.36,
+        "2026-10-15": 0.0,
+        "2026-10-16": 10.4,
+        "2026-10-17": 15.24,
+        "2026-10-18": 45.58
+      },
+      "audit": {
+        "response-id": 1115,
+        "assigned": 927,
+        "unassigned": 188
+      },
+      "unpricedModels": [
+        "gpt-6.1-sol"
+      ],
+      "images": 18,
+      "imagesByDay": {
+        "2026-10-12": 11,
+        "2026-10-15": 5,
+        "2026-10-16": 2
+      }
+    },
+    "gemini": {
+      "byModel": {
+        "gemini-3.8-flash-tiered": {
+          "in": 125711,
+          "cached": 146662,
+          "out": 21912,
+          "requests": 17,
+          "costUSD": 0.0
+        },
+        "gemini-3.8-flash-n": {
+          "in": 510549,
+          "cached": 6507600,
+          "out": 63536,
+          "requests": 93,
+          "costUSD": 0.0
+        }
+      },
+      "costUSD": 0.0,
+      "estimated": true,
+      "audit": {
+        "databasesSeen": 33,
+        "olderThanWeek": 30,
+        "requestsDecoded": 110
+      },
+      "projectAttribution": "unavailable",
+      "unpricedModels": [
+        "gemini-3.8-flash-tiered",
+        "gemini-3.8-flash-n"
+      ]
+    },
+    "totalUSD": 132.33,
+    "totalKRW": 186306,
+    "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
+    "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
+    "costCoverage": "partial-historical-price-table-not-reverified"
   }
 }

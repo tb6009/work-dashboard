@@ -51,5 +51,7 @@ cd "$WORKDIR" && /usr/local/bin/node scripts/extract-from-filesystem.mjs "$WEEK_
 # 토큰 사용량 캡처 (Claude Code transcript → 모델별 비용)
 cd "$WORKDIR" && /usr/local/bin/node scripts/extract-token-usage.mjs "$WEEK_ID" >> "$LOG" 2>&1 || true
 
+cd "$WORKDIR" && python3 scripts/extract-external-ai-usage.py "$WEEK_ID" >> "$LOG" 2>&1 || true
+
 echo "$(date -u +%FT%TZ) [ok] ${WEEK_ID} 캡처 완료" >> "$LOG"
 exit 0

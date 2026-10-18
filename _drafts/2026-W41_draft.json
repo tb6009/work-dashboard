@@ -1,0 +1,94 @@
+{
+  "week": "2026-W41",
+  "range": {
+    "from": "2026-10-05",
+    "to": "2026-10-11"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 0,
+    "sessions": 1,
+    "newProjects": 0,
+    "filesChanged": 5
+  },
+  "daily": [
+    {
+      "date": "2026-10-05",
+      "weekday": "월",
+      "filesChanged": 5,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "사용자는 우선 레이아웃을 확인하려고 하므로 새 초안을 '레이아웃 테스트'로 명명했다.",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "연구참여자에게 링크를 공유하지 않았다. 연구책임자·소속·연락처·자료보관 등의 안내가 아직 확정되지 않았다. ",
+      "description": "TODO — Claude가 채움"
+    },
+    {
+      "date": "2026-10-05",
+      "projectId": "",
+      "title": "긴 문항은 표형의 좁은 행 라벨이 아니라 독립 객관식 문항으로 넣어 가독성을 시험했다.",
+      "description": "TODO — Claude가 채움"
+    }
+  ],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-10-05T09:41:07.656Z",
+  "_meta": {
+    "extractedBy": "extract-week.mjs",
+    "extractedAt": "2026-10-05T09:41:07.656Z",
+    "todoFields": [
+      "summary",
+      "projects[].imp",
+      "projects[].nextAction",
+      "decisions[].description",
+      "labelChanges"
+    ]
+  }
+}

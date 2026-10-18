@@ -491,5 +491,390 @@
     },
     "costUSD": 0,
     "costKRW": 0
+  },
+  "projectTokenUsage": {
+    "codex": [
+      {
+        "date": "2026-10-05",
+        "projectId": "0500",
+        "in": 4164443,
+        "out": 316720,
+        "cache_read": 104776064,
+        "cache_write": 0,
+        "requests": 801,
+        "byModel": {
+          "gpt-6-sol": {
+            "in": 3240117,
+            "out": 201026,
+            "cache_read": 89463936,
+            "cache_write": 0,
+            "messages": 672
+          },
+          "gpt-6-astra": {
+            "in": 694148,
+            "out": 82893,
+            "cache_read": 11687808,
+            "cache_write": 0,
+            "messages": 88
+          },
+          "gpt-5.6-sol": {
+            "in": 230178,
+            "out": 32801,
+            "cache_read": 3624320,
+            "cache_write": 0,
+            "messages": 41
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "projectId": "039",
+        "in": 289702,
+        "out": 51108,
+        "cache_read": 5417216,
+        "cache_write": 0,
+        "requests": 46,
+        "byModel": {
+          "gpt-5.6-sol": {
+            "in": 289702,
+            "out": 51108,
+            "cache_read": 5417216,
+            "cache_write": 0,
+            "messages": 46
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "projectId": "0500",
+        "in": 407982,
+        "out": 27097,
+        "cache_read": 4701056,
+        "cache_write": 0,
+        "requests": 35,
+        "byModel": {
+          "gpt-5.6-sol": {
+            "in": 139257,
+            "out": 1833,
+            "cache_read": 766848,
+            "cache_write": 0,
+            "messages": 6
+          },
+          "gpt-6-astra": {
+            "in": 268725,
+            "out": 25264,
+            "cache_read": 3934208,
+            "cache_write": 0,
+            "messages": 29
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "projectId": "039",
+        "in": 899889,
+        "out": 104550,
+        "cache_read": 23496064,
+        "cache_write": 0,
+        "requests": 176,
+        "byModel": {
+          "gpt-5.6-sol": {
+            "in": 206238,
+            "out": 38568,
+            "cache_read": 9126144,
+            "cache_write": 0,
+            "messages": 60
+          },
+          "gpt-6-astra": {
+            "in": 308036,
+            "out": 48660,
+            "cache_read": 9888000,
+            "cache_write": 0,
+            "messages": 72
+          },
+          "gpt-6-sol": {
+            "in": 385615,
+            "out": 17322,
+            "cache_read": 4481920,
+            "cache_write": 0,
+            "messages": 44
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference",
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "projectId": "1300",
+        "in": 111523,
+        "out": 17473,
+        "cache_read": 1322624,
+        "cache_write": 0,
+        "requests": 24,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 81073,
+            "out": 16829,
+            "cache_read": 1180544,
+            "cache_write": 0,
+            "messages": 20
+          },
+          "gpt-6-sol": {
+            "in": 30450,
+            "out": 644,
+            "cache_read": 142080,
+            "cache_write": 0,
+            "messages": 4
+          }
+        },
+        "attribution": [
+          "explicit-user-path",
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "projectId": "1300",
+        "in": 109359,
+        "out": 9427,
+        "cache_read": 872832,
+        "cache_write": 0,
+        "requests": 10,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 109359,
+            "out": 9427,
+            "cache_read": 872832,
+            "cache_write": 0,
+            "messages": 10
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "projectId": "1303",
+        "in": 552903,
+        "out": 149719,
+        "cache_read": 20483200,
+        "cache_write": 0,
+        "requests": 151,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 552903,
+            "out": 149719,
+            "cache_read": 20483200,
+            "cache_write": 0,
+            "messages": 151
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-10",
+        "projectId": "039",
+        "in": 2171116,
+        "out": 219480,
+        "cache_read": 59385088,
+        "cache_write": 0,
+        "requests": 419,
+        "byModel": {
+          "gpt-6-sol": {
+            "in": 267607,
+            "out": 24328,
+            "cache_read": 7302784,
+            "cache_write": 0,
+            "messages": 45
+          },
+          "gpt-6-astra": {
+            "in": 1091596,
+            "out": 148575,
+            "cache_read": 36022784,
+            "cache_write": 0,
+            "messages": 265
+          },
+          "gpt-6.1-sol": {
+            "in": 811913,
+            "out": 46577,
+            "cache_read": 16059520,
+            "cache_write": 0,
+            "messages": 109
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-10",
+        "projectId": "1303",
+        "in": 204709,
+        "out": 48303,
+        "cache_read": 10679680,
+        "cache_write": 0,
+        "requests": 71,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 204709,
+            "out": 48303,
+            "cache_read": 10679680,
+            "cache_write": 0,
+            "messages": 71
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "projectId": "039",
+        "in": 1664331,
+        "out": 110391,
+        "cache_read": 40374400,
+        "cache_write": 0,
+        "requests": 289,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 1664331,
+            "out": 110391,
+            "cache_read": 40374400,
+            "cache_write": 0,
+            "messages": 289
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "projectId": "063",
+        "in": 199830,
+        "out": 28936,
+        "cache_read": 11056384,
+        "cache_write": 0,
+        "requests": 65,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 199830,
+            "out": 28936,
+            "cache_read": 11056384,
+            "cache_write": 0,
+            "messages": 65
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      }
+    ],
+    "audit": {
+      "response-id": 2418,
+      "assigned": 2087,
+      "unassigned": 331
+    },
+    "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
+  },
+  "externalAI": {
+    "codex": {
+      "byModel": {
+        "gpt-6-sol": {
+          "in": 4606058,
+          "cached": 114570368,
+          "out": 275153,
+          "turns": 868,
+          "costUSD": 0.0
+        },
+        "gpt-6-astra": {
+          "in": 4586418,
+          "cached": 95706368,
+          "out": 497033,
+          "turns": 713,
+          "costUSD": 166.42
+        },
+        "gpt-5.6-sol": {
+          "in": 1134085,
+          "cached": 23441536,
+          "out": 154878,
+          "turns": 187,
+          "costUSD": 17.01
+        },
+        "gpt-6.1-sol": {
+          "in": 3424288,
+          "cached": 89650176,
+          "out": 381246,
+          "turns": 650,
+          "costUSD": 0.0
+        }
+      },
+      "costUSD": 183.43,
+      "costByDay": {
+        "2026-10-05": 35.58,
+        "2026-10-06": 20.75,
+        "2026-10-07": 23.02,
+        "2026-10-08": 4.85,
+        "2026-10-09": 27.98,
+        "2026-10-10": 54.37,
+        "2026-10-11": 16.89
+      },
+      "audit": {
+        "response-id": 2418,
+        "assigned": 2087,
+        "unassigned": 331
+      },
+      "unpricedModels": [
+        "gpt-6-sol",
+        "gpt-6.1-sol"
+      ],
+      "images": 113,
+      "imagesByDay": {
+        "2026-10-07": 22,
+        "2026-10-08": 6,
+        "2026-10-10": 85
+      }
+    },
+    "gemini": {
+      "byModel": {
+        "gemini-3.8-flash-n": {
+          "in": 345859,
+          "cached": 1433586,
+          "out": 23240,
+          "requests": 24,
+          "costUSD": 0.0
+        }
+      },
+      "costUSD": 0.0,
+      "estimated": true,
+      "audit": {
+        "databasesSeen": 30,
+        "olderThanWeek": 29,
+        "requestsDecoded": 24
+      },
+      "projectAttribution": "unavailable",
+      "unpricedModels": [
+        "gemini-3.8-flash-n"
+      ]
+    },
+    "totalUSD": 183.43,
+    "totalKRW": 258249,
+    "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
+    "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
+    "costCoverage": "partial-historical-price-table-not-reverified"
   }
 }

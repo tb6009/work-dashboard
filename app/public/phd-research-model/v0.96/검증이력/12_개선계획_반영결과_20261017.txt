@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>12_개선계획_반영결과_20261017</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="apa-references.css" />
+  <link rel="stylesheet" href="proposal-responsive.css" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#개선계획-반영-결과" id="toc-개선계획-반영-결과">개선계획
+반영 결과</a>
+<ul>
+<li><a href="#반영-결과" id="toc-반영-결과">1. 반영 결과</a></li>
+<li><a href="#보존한-결정" id="toc-보존한-결정">2. 보존한 결정</a></li>
+<li><a href="#근거와-불확실성" id="toc-근거와-불확실성">3. 근거와
+불확실성</a></li>
+<li><a href="#다음-수행" id="toc-다음-수행">4. 다음 수행</a></li>
+<li><a href="#파일과-이력" id="toc-파일과-이력">5. 파일과 이력</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="개선계획-반영-결과">개선계획 반영 결과</h1>
+<p>2026-10-17 · 연구계획서 v0.92 유지 / 설문 v0.95 유지.</p>
+<h2 id="반영-결과">1. 반영 결과</h2>
+<div class="table-scroll"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>반영 위치</th>
+<th>수행 내용·상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>본문§8</td>
+<td>약한 관계와 부적 관계를 구분. 반영</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>§1·2.1·5.2</td>
+<td>일반 TC·SC와 AI 적응 배경·THR 범위를 구분. 반영</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>§4.3·5.2·6.1·7</td>
+<td>시간 준거 표와 관련성 해석 원칙. 최초 사용 경과 기간 미측정 명시.
+반영</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>§5.3·6.1·6.2, 실행명세§4</td>
+<td>JE 경험 지표 정의·순변화 혼동·문항별 분모·면담안. 문서 반영 / 실제
+면담 후속</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>§2.4·2.5·3</td>
+<td>열 개 핵심 구조경로·여섯 조절경로의 추론·반대 설명·근거 수준·사전
+비방향 RQ. 반영 / 직접 근거 보강 후속</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>§4.3–4.5</td>
+<td>THR→USE→SC 곱, 공분산, 확장 사양, 통합식·표준화 차이. 반영 / 최종 주
+분석·추정법 미확정</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>§5.1·6.1·6.3, 실행명세·코딩안</td>
+<td>모집 결정표·적격 분모·보기/결측 코드·점수화안. 반영 / 목표
+표본·언어·채널 후속</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>§5.5</td>
+<td>도구·기능·ACT 구분, 사용 조합 분포 탐색 범위. 반영</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>§5.4·6.2, 실행명세</td>
+<td>WI5 적용 불가능과 점수 비교 유보 원칙. 문서 반영 / 실제 적용 확인
+후속</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>§2.3·8</td>
+<td>TC·SC 차이·차이 불명확 시 기여와 해석. 반영</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>본문 인용·§11·명세서</td>
+<td>J./X. Zhang 구분, 중복 마침표·인용 정리, 검증 이력 부록 이동.
+반영</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>§6.4·6.5, 실행명세§5·6</td>
+<td>검정군·Holm/FDR 기본안·응답 품질·자료 관리. 문서 반영 / 기관
+조건·보관기간 후속</td>
+</tr>
+</tbody>
+</table></div>
+<p>‘반영’은 문서 수정 완료다. 직접 근거 확보·인지면담·예비조사·검정력
+계산·기관 승인·온라인 분기 시험을 완료했다는 뜻은 아니다. 최종 주 분석
+사양과 모집 조건은 본조사 전에 고정해야 한다.</p>
+<h2 id="보존한-결정">2. 보존한 결정</h2>
+<p>연구1 GAIL×USE→TC와 EXP×TC→TP·JE·WI를 유지했다. 연구2 GAIL×THR→USE와
+EXP×USE→SC를 유지했다. THR→SC 직접경로와 SC→세 결과도 유지했다.
+JE_VOL·JE_IMP와 WI 다섯 문항의 문구를 보존했다. 전체72·핵심49문항은
+바꾸지 않았다. 반응형 모형·클릭 확대·표 스크롤·행간2.016을 유지했다.</p>
+<h2 id="근거와-불확실성">3. 근거와 불확실성</h2>
+<p>이번 작업에서는 기존 로컬 원문 중 Bindl(2019) PDF7·9쪽, Liu(2025)
+PDF12쪽, J. Zhang(2026) PDF4–5쪽, Bakker·Oerlemans(2019) PDF10–11쪽을
+텍스트로 재열람했다. 행동·척도·분석 방법과 경쟁 설명의 적용 범위를
+점검했다. 나머지 문헌은 이전 인용 명세서의 검증 이력을 승계했다. 새
+논문이나 검증하지 않은 수치를 추가하지 않았다.</p>
+<p>AI 변화가 적응 행동을 촉발하는 시간적 과정은 현재 횡단 설문으로
+확정하지 않는다. 업무 확대가 행동을 촉발하는 역방향, 조직 요구의 공통
+원인, AI 지원만으로 높은 TP·JE가 나타나는 대안을 유지했다. 전체
+선행연구의 부재나 모든 조절경로의 직접 검증을 주장하지 않는다.</p>
+<h2 id="다음-수행">4. 다음 수행</h2>
+<ol type="1">
+<li>연구2 기본·민감도 사양과 추정법을 사전 확정한다.</li>
+<li>모집 범위·언어·검정력·목표 표본을 정한다.</li>
+<li>JE·WI5·GAIL 적용과 기간 이해를 인지면담한다.</li>
+<li>예비조사 후 점수화·결측·품질 기준을 고정한다.</li>
+<li>기관 요구·참여 안내·실제 온라인 분기를 검수한다.</li>
+</ol>
+<h2 id="파일과-이력">5. 파일과 이력</h2>
+<p>수정 전 파일은 <code>개정전_20261017_개선계획반영전/</code>에
+보존했다. 기존 검토보고서09와 개선계획10은 당시 기록으로 유지했다.
+설문04·원문항 코드북05·모형SVG는 수정하지 않았다. 보기·결측 코딩안은 원
+코드북과 구분한 새 파일이다.</p>
+</body>
+</html>

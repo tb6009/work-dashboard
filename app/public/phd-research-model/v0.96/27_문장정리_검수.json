@@ -1,0 +1,17 @@
+{
+  "01_연구계획서_v0.96": {
+    "before_chars": 34495,
+    "after_chars": 32399,
+    "reduction_pct": 6.1
+  },
+  "06_이론적배경·연구공백_v0.96": {
+    "before_chars": 13749,
+    "after_chars": 12062,
+    "reduction_pct": 12.3
+  },
+  "07_연구질문·분석대응_v0.96": {
+    "before_chars": 2359,
+    "after_chars": 2163,
+    "reduction_pct": 8.3
+  }
+}

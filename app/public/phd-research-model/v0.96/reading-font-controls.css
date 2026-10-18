@@ -1,0 +1,12 @@
+/* Compact reading controls beside the title; print layout stays unchanged. */
+.reading-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.reading-title-row>h1{flex:1 1 240px;margin-right:0}
+.reading-controls{display:inline-flex;align-items:center;gap:3px;flex:0 0 auto;padding:4px;background:#f3f7f6;border:1px solid #dae5e1;border-radius:10px;color:#31534e;font:12px/1.4 -apple-system,"Apple SD Gothic Neo",sans-serif;box-shadow:0 2px 6px #183b4008;box-sizing:border-box;margin:0 0 0 auto}
+.reading-controls button{font:inherit;font-weight:600;padding:5px 7px;margin:0;border:0;border-radius:6px;background:transparent;color:#31534e;cursor:pointer;min-height:30px;min-width:30px;transition:background .15s}
+.reading-controls button:hover{background:#dfece7}
+.reading-controls button:focus-visible{outline:2px solid #167d73;outline-offset:2px}
+.reading-controls button:disabled{opacity:.35;cursor:default}
+.reading-controls output{min-width:52px;text-align:center;font-size:11px;color:#657d77;font-variant-numeric:tabular-nums}
+@media screen{[data-reading-size]{font-size:calc(var(--reading-base) + var(--reading-offset,0px))!important}}
+@media(max-width:520px){.reading-title-row{gap:4px}.reading-controls{margin-bottom:12px}}
+@media print{.reading-controls{display:none!important}.reading-title-row{display:block}}

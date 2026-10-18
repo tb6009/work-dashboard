@@ -1,0 +1,46 @@
+# 신규 논문 검토 — 인용 명세서 2026-10-13
+
+검증 원칙: 아래 ‘확인’은 해당 보유 PDF에서의 확인이다. 출판사 최신 상태·원자료 재분석을 뜻하지 않는다. PDF 쪽은 파일 첫 장을 1로 센다. 연구 연결은 검토자의 해석이며 원논문의 주장과 구분한다. 리뷰 안에서 인용된 1차 연구는 이번에 읽은 원문으로 가장하지 않는다.
+
+| 근거 ID | 문헌 | 근거 | 위치 | 적용 | 검증 상태 |
+|---|---|---|---|---|---|
+| E01 | [PDF019, PDF pp.1, 8, 17, 24 / 인쇄 pp.605, 612, 621, 628](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/03_TaskCrafting_업무확장/PDF019_Job_Crafting_Revisited_Implications_of_an_Extended_Framework_for_Active_Changes_at_Work_a97d5028.pdf>) | SC 차원과 혁신적 업무성과; Study 1 promotion skill crafting B=.32, SE=.04, p<.001 | pp.1, 8, 17, 24 / 인쇄 pp.605, 612, 621, 628 | SC를 설명변수로 둘 수 있는 인접 근거. TP·JE·WI 직접 검정 아님 | 직접 원문·결과·부록 이미지 확인 |
+| E02 | [PDF092, PDF pp.5–6, 8 / 인쇄 pp.599–600, 602](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/Generation AI- Job Crafting by Entry-Level Professionals in the Age of Generative AI.pdf>) | 27명 인터뷰·57일 관찰; 자동화·고차원 과업·새 스킬 | pp.5–6, 8 / 인쇄 pp.599–600, 602 | USE→SC·과업 변화의 질적 과정 근거 | 직접 원문 확인; PDF010과 텍스트 동일 |
+| E03 | [PDF074, PDF pp.1, 12–13, 18](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/09_디자인업무·활용활동/PDF074_Generative_AI_Changing_Work_Systematic_Review_of_Practitioner-led_Work_Transformations_through__6a4729ac.pdf>) | 23편 리뷰; 스킬 증가 없는 능력 보완·학습 생략·검수 노동 | pp.1, 12–13, 18 | SC가 모든 JE의 필수 매개라는 주장에 대한 반대 근거 | 리뷰 원문 확인; 리뷰 내 개별 연구의 원문은 이번에 재검증하지 않음 |
+| E04 | [PDF092, PDF p.9 / 인쇄 p.603](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/Generation AI- Job Crafting by Entry-Level Professionals in the Age of Generative AI.pdf>) | 관리자 기대 상승, 과도한 의존·시간 소모 | p.9 / 인쇄 p.603 | 효율과 부담의 공존; SC→WI 인과효과는 아님 | 직접 원문 확인 |
+| E05 | [PDF086, PDF pp.1–2, 6, 11, 14 / 인쇄 pp.697–698, 702, 707, 710](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/03_TaskCrafting_업무확장/PDF086_Top_Down_and_Bottom_Up_Work_Design_A_Multilevel_Perspective_on_How_Job_Crafting_and_Work_Charac_529f6160.pdf>) | 상향·하향 직무설계, 시간에 따른 직무특성 변화, 혼합된 기존 근거 | pp.1–2, 6, 11, 14 / 인쇄 pp.697–698, 702, 707, 710 | 외부와 자발의 공존·역방향·기간 검토 | 리뷰 원문 확인; 새 실증 결과가 아님; 인용된 개별 연구는 미대조 |
+| E06 | [PDF091, PDF pp.33–38, 43, 49 / 인쇄 pp.26–31, 36, 42](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/Exploring Potential Downsides of Job Crafting.pdf>) | 내발/외발 동기 설문 N=636, 실험 N=338; 외발 동기–CWB r=.23; 내발 r=−.02 비유의 | pp.33–38, 43, 49 / 인쇄 pp.26–31, 36, 42 | 동기 구분의 실증 근거. JE·WI 및 AI 효과 검증 아님 | 직접 방법·결과 확인; 학위논문 |
+| E07 | [PDF091, PDF pp.34, 37, 69, 99 / 인쇄 pp.27, 30, 62, 92](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/Exploring Potential Downsides of Job Crafting.pdf>) | 26문항 중 EFA 후16개; 삭제 이탤릭; 내발 학습 시나리오에 외부 압력 혼입 | pp.34, 37, 69, 99 / 인쇄 pp.27, 30, 62, 92 | 문항 차용의 제한·SC 자발성 추론 경계 | 본문·부록 이미지 확인; 독립 CFA·디자인 적용은 미확보 |
+| E08 | [PDF089, PDF pp.21–24, 31–32, 36, 43–44, 55–57](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/09_디자인업무·활용활동/nature.com_articles_s41598-026-59097-3_reference.pdf>) | 수용성·인지부하·관여·자기지각 창의성; 도구유형 A7; 본문 불일치 | pp.21–24, 31–32, 36, 43–44, 55–57 | 디자인 인접연구·보조 유형 질문; 조절방향 인용 보류 | 보유 Accepted Manuscript 직접 확인; 최종판·정정 미확인 |
+| E09 | [PDF088, PDF pp.1–2, 11–13 / 인쇄 pp.103–104, 113–115](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/09_디자인업무·활용활동/What is Design Creativity?.pdf>) | 디자인 창의성의 맥락적·통합적 설명 | pp.1–2, 11–13 / 인쇄 pp.103–104, 113–115 | 서론의 디자인 직무 맥락 | 원문 확인; 재인용 수치 미검증 |
+| E10 | [PDF090, PDF pp.1–2, 9–10, 12–14 / 본문 pp.1, 8–13](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/Creativity_Constraints.pdf>) | 제약의 내재·타인부과·자기부과 및 혼합 | pp.1–2, 9–10, 12–14 / 본문 pp.1, 8–13 | 외부/자발 구분의 개념적 보완 | 원문 확인; JE 측정 검증 아님 |
+| E11 | [PDF093, PDF pp.4–9; 특히 p.7 Table 4](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/how job crafting is related to the individual readiness.pdf>) | N=500; 일부 크래프팅 차원–변화 준비도; p값·공선성 문제 | pp.4–9; 특히 p.7 Table 4 | 차원 구분·경쟁 설명; SC 및 AI 연구 아님 | 원문·표 이미지 확인; 충돌 수치의 재인용 유보 |
+| E12 | [PDF049, PDF pp.1, 4–6, 10](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/03_TaskCrafting_업무확장/AI×JobCrafting_인접연구_FrontPsychol16-1612245.pdf>) | N=370, 2회 조사; AI 전환→직무불안→일반 크래프팅; AI 지식 조절 | pp.1, 4–6, 10 | THR→적응 행동의 인접 근거; 변수·조절 위치 차이 명시 | 원문 방법·문항·결과 확인. 직무불안·크래프팅·AI 지식은 모두 2차에서 측정 |
+| E13 | [PDF087, PDF pp.1–2, 10–11](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/05_성과·보상/OECD_AI_worker_questionnaire_공식원설문_20261003.pdf>) | 과업 대체·신규 발생, 업무 속도·순서 통제 질문 | pp.1–2, 10–11 | JE·WI의 보조 측정 구조 | 질문 직접 확인; OECD 귀속은 기존 파일명·기록 기준; 발행연도·공식 URL 미확인 |
+
+## 보존한 페이지 캡처
+
+- [N03_PDFp031.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N03_PDFp031.png>)
+- [N03_PDFp036.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N03_PDFp036.png>)
+- [N03_PDFp043.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N03_PDFp043.png>)
+- [N03_PDFp055.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N03_PDFp055.png>)
+- [N03_PDFp056.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N03_PDFp056.png>)
+- [N05_PDFp099.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N05_PDFp099.png>)
+- [N06_PDFp009.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N06_PDFp009.png>)
+- [N07_PDFp007.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/N07_PDFp007.png>)
+- [PDF019_PDFp008.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/PDF019_PDFp008.png>)
+- [PDF019_PDFp024.png](</Users/jinhyunpark/Documents/cloude_Code/05_phD_Research/00_연구가이드/글쓰기/선행연구/docs/assets/20261013_신규검토/PDF019_PDFp024.png>)
+
+캡처 접두어 대응: N03=PDF089, N05=PDF091, N06=PDF092, N07=PDF093. PDF019는 기존 ID다. 페이지 이미지는 원본을 수정하지 않고 렌더링했다.
+
+## 서지와 파일 추적
+
+신규 문헌의 저자·연도·유형·DOI·해시는 각 문헌카드와 `00_PDF파일목록_20261013.json`에 기록했다. 『Generation AI』의 동일 문헌 사본은 PDF010·PDF081·PDF092다. 효과 근거 수를 셀 때 중복 집계하지 않는다.
+
+## 미확인·유보
+
+- SC→현재 TP·JE·WI 세 경로의 직접 근거는 미확보.
+- OECD 귀속의 공식 URL·발행연도는 별도 검증 필요.
+- PDF089 결과/논의 방향과 사용빈도 측정 서술은 내부 불일치가 있어 해석 유보.
+- PDF093 p값·차원별 문항수 서술은 내부 불일치가 있어 확정 수치로 사용하지 않음.
+- 학위논문 문항의 부분 차용·번안은 기존 타당도를 그대로 승계하지 않음.

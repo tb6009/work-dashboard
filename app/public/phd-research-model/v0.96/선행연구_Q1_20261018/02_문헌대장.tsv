@@ -1,0 +1,36 @@
+ID	갈래	저자(연도)	제목	저널·출처	DOI	Q1판단(추정)	원문상태	파일	읽은판본	연구변수 연결
+P01	A	Bruning & Campion (2018)	A role–resource approach–avoidance model of job crafting	Academy of Management Journal 61(2)	10.5465/amj.2015.0604	Q1	확보	pdf/P01_Bruning_Campion2018_AMJ.pdf	저자 수락원고	TC·JE(work role expansion)
+P02	A	Rudolph et al. (2017)	Job crafting: A meta-analysis of relationships with individual differences, job characteristics, and work outcomes	Journal of Vocational Behavior 102	10.1016/j.jvb.2017.05.008	Q1	확보	pdf/P02_Rudolph2017_JVB_meta.pdf	수락원고	TC·SC 결과 메타 근거
+P03	A	Tims, Bakker & Derks (2012)	Development and validation of the job crafting scale	Journal of Vocational Behavior 80(1)	10.1016/j.jvb.2011.05.009	Q1	확보	pdf/P03_Tims2012_JVB.pdf	출판본	JD-R 기반 크래프팅 정의
+P04	C·F	Dell'Acqua et al. (2023/2026)	Navigating the jagged technological frontier	HBS WP 24-013 → Organization Science(2026)	출판본 DOI 미확인	Q1(출판본)	확보(WP)	pdf/P04_DellAcqua2023_JaggedFrontier_WP.pdf	워킹페이퍼	TP·EXP 조절
+P05	C·F	Brynjolfsson, Li & Raymond (2025)	Generative AI at work	Quarterly Journal of Economics 140(2)	10.1093/qje/qjae044	Q1	확보(프리프린트)	pdf/P05_Brynjolfsson_Li_Raymond_GenAIatWork_preprint.pdf	arXiv v2	TP·EXP 조절
+P06	C	Eloundou et al. (2024)	GPTs are GPTs: Labor market impact potential of LLMs	Science 384	10.1126/science.adj1962	Q1	확보(프리프린트)	pdf/P06_Eloundou_GPTsareGPTs_preprint.pdf	arXiv	직업 노출도(배경)
+P07	C·F	Cui et al. (2026)	The effects of generative AI on high-skilled work: Three field experiments with software developers	Management Science	출판본 DOI 미확인	Q1(출판본)	확보(초안)	pdf/P07_Cui_etal_CopilotExperiments_draft.pdf	초안	TP·EXP 조절
+P08	B	Mayer, Baygi & Buwalda (2025)	Generation AI: Job crafting by entry-level professionals in the age of generative AI	Business & Information Systems Engineering 67(5)	10.1007/s12599-025-00959-x	Q1	확보	pdf/P08_GenerationAI_JobCrafting_BISE2025.pdf	출판본(OA)	AI×TC 질적 근거
+P09	G	Lee (2024)	Reflecting on cultural labour in the time of AI	Media, Culture & Society	DOI 미기재(확인 필요)	Q1	확보	pdf/P09_Lee2024_CulturalLabour_AI_MCS.pdf	출판본	THR·창작노동 불안정성
+P10	C·D	Humlum & Vestergaard (2026)	(구제목 Large language models, small labor market effects)	NBER/워킹페이퍼	-	WP	확보	pdf/P10_Humlum_Vestergaard2026_WP.pdf	2026-03 WP	TP·JE(새 과업)·시간 재배분
+P11	D·E	Chang et al. (2024)	Does AI-driven technostress promote or hinder employees' AI adoption intention?	Psychology Research and Behavior Management	확인 필요	Q1 아님 추정(보조)	확보	pdf/P11_AI_technostress_adoption_PRBM2024.pdf	출판본	THR→USE 양방향(보조)
+P12	C·G	Teutloff et al. (2025)	Winners and losers of generative AI: Early evidence of shifts in freelancer demand	Journal of Economic Behavior & Organization 235	10.1016/j.jebo.2024.106845	Q1	확보	pdf/P12_Teutloff2025_JEBO.pdf	출판본(UCL 저장소)	해외 대응자료·대체/보완
+P13	G	Zhou & Lee (2024)	Generative artificial intelligence, human creativity, and art	PNAS Nexus 3(3)	10.1093/pnasnexus/pgae052	확인 필요(신생지)	확보	pdf/P13_Zhou_Lee2024_PNASNexus.pdf	출판본	디자인·창작 생산성
+P15	G·F	Doshi & Hauser (2024)	Generative AI enhances individual creativity but reduces the collective diversity of novel content	Science Advances 10(28)	10.1126/sciadv.adn5290	Q1	확보(프리프린트)	pdf/P15_Doshi_Hauser2024_SciAdv.pdf	arXiv	창작·저숙련 이득
+P16	C·E	Humlum & Vestergaard (2025)	The unequal adoption of ChatGPT exacerbates existing inequalities among workers	PNAS 122(1)	10.1073/pnas.2414972121	Q1	확보	pdf/P16_Humlum_Vestergaard2025_PNAS.pdf	출판본	해외 대응자료(직업별 채택)
+P17	E	Park, Woo & Kim (2024)	Attitudes towards artificial intelligence at work: Scale development and validation	Journal of Occupational and Organizational Psychology 97(3)	10.1111/joop.12502	Q1	확보(프리프린트)	pdf/P17_JOOP_AttitudesAI_scale2024.pdf	OSF 프리프린트	THR 대안 척도(직무불안정·사용불안)
+P18	C·F	Noy & Zhang (2023)	Experimental evidence on the productivity effects of generative artificial intelligence	Science 381	10.1126/science.adh2586	Q1	확보(프리프린트)	pdf/P18_Noy_Zhang2023_Science_preprint.pdf	MIT 초안	TP·과업 재구성·EXP
+P19	C·G	Hui, Reshef & Zhou (2024)	The short-term effects of generative AI on employment: Evidence from an online labor market	Organization Science 35(6)	10.1287/orsc.2023.18441	Q1	확보(SSRN판)	pdf/P19_Hui_Reshef_Zhou_OrgSci_WP.pdf	SSRN WP	해외 대응자료(디자인 프리랜서)
+P20	C·G	Gmyrek et al. (2025)	Generative AI and jobs: A refined global index of occupational exposure	ILO Working Paper 140	-	국제기구 보고서	확보	pdf/P20_ILO_WP140_2025.pdf	출판본	해외 대응자료(디자이너 노출도)
+M01	A	Wrzesniewski & Dutton (2001)	Crafting a job	Academy of Management Review 26(2)	10.5465/amr.2001.4378011	Q1	미확보	-	-	TC 원 정의
+M02	A	Zhang & Parker (2019)	Reorienting job crafting research: A hierarchical structure	Journal of Organizational Behavior 40(2)	10.1002/job.2332	Q1	미확보	-	-	TC·SC 위계 구조
+M03	A	Lichtenthaler & Fischbach (2019)	A meta-analysis on promotion- and prevention-focused job crafting	European Journal of Work and Organizational Psychology 28(1)	10.1080/1359432X.2018.1527767	Q1	미확보	-	-	촉진형 선택 근거
+M04	A·D	Bakker & Demerouti (2017)	Job demands–resources theory: Taking stock and looking forward	Journal of Occupational Health Psychology 22(3)	10.1037/ocp0000056	Q1	미확보	-	-	WI·자원 이론
+M05	B	Parker & Grote (2022)	Automation, algorithms, and beyond: Why work design matters more than ever in a digital world	Applied Psychology 71(4)	10.1111/apps.12241	Q1	미확보(다운로드 차단)	-	-	AI×업무설계 이론틀
+M06	B	Parker, Morgeson & Johns (2017)	One hundred years of work design research	Journal of Applied Psychology 102(3)	10.1037/apl0000106	Q1	미확보	-	-	업무설계 계보
+M07	D	Mazmanian, Orlikowski & Yates (2013)	The autonomy paradox	Organization Science 24(5)	10.1287/orsc.1120.0806	Q1	미확보(다운로드 실패)	-	-	기술 → 강도 역설
+M08	D	Chesley (2014)	ICT use, work intensification and employee strain and distress	Work, Employment and Society 28(4)	10.1177/0950017013500112	Q1	미확보	-	-	기술 → WI
+M09	D	Tarafdar et al. (2007)	The impact of technostress on role stress and productivity	Journal of Management Information Systems 24(1)	10.2753/MIS0742-1222240109	Q1	미확보	-	-	기술스트레스 계보
+M10	C·G	Demirci, Hannane & Zhu (2025)	Who is AI replacing? The impact of generative AI on online freelancing platforms	Management Science 71(10)	10.1287/mnsc.2024.05420	Q1	미확보(저장소 요청제)	-	-	해외 대응자료(이미지 작업 수요)
+M11	G·E	Lysyakov & Viswanathan (2023)	Threatened by AI: Analyzing users' responses to the introduction of AI in a crowd-sourcing platform	Information Systems Research	확인 필요	Q1	미확보	-	-	디자이너의 AI 위협 대응(핵심)
+M12	B·E	(2023) STARA awareness와 서비스직 잡크래프팅	Smart technology and service employees' job crafting	Journal of Retailing and Consumer Services	확인 필요	Q1	미확보	-	-	THR→크래프팅
+M13	D	(2025) JD-R 관점 AI의 이중 영향	Insights from the JD-R model: AI's dual impact on employees' work and life well-being	International Journal of Information Management	확인 필요	Q1	미확보	-	-	AI 요구·자원 양면
+M14	D	(2025) 직원–생성형 AI 협업의 어두운 면	The dark side of employee-generative AI collaboration in the workplace	International Journal of Information Management	확인 필요	Q1	미확보	-	-	생성형 AI 부담
+M15	G	(2025) 광고대행사 생성형 AI 통합	Exploring the integration of generative AI in advertising agencies: A co-creative process model	Journal of Advertising Research	확인 필요	Q1 추정	미확보	-	-	크리에이티브 업무 과정
+M16	F	Dell'Acqua et al. (2026) 출판본	Navigating the jagged technological frontier (출판본)	Organization Science	확인 필요	Q1	미확보	-	-	P04 출판본 대조용

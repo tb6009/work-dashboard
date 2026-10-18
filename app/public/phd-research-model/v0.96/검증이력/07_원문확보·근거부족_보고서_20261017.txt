@@ -1,0 +1,67 @@
+# 원문 확보·근거 부족 보고서 — 연구계획서 v0.92
+
+확인일: 2026-10-17. 이번 범위는 현재 본문·측정 출처 점검이다. 체계적 문헌고찰 또는 경로별 추가 검색의 완료를 뜻하지 않는다.
+
+## 1. 결과
+
+참고문헌 11편은 모두 로컬 원문 PDF를 찾았다. WI PDF는 선행연구 하위 폴더가 아닌 글쓰기 폴더에 있었다. 원문 파일이 없다는 문제와 근거가 부족하다는 문제를 구분한다. 기존 검토서의 일부 복사본 링크는 현재 깨져 있지만 원문 자체는 존재한다.
+
+Zhang, Yu, Ma 논문의 최종 권호를 확인했다. APA 목록은 2026년, 29권 3호, 702–727쪽을 사용한다. 로컬 PDF에는 권호가 없고 2024년 접수·수정·승인 날짜가 있다. 이 날짜를 최종 출판연도로 사용하지 않는다. 두 Zhang 논문은 APA 본문 인용에서 Zhang, Cui, & Chai(2026)와 Zhang, Yu, & Ma(2026)로 구별한다.
+
+## 2. 원문·서지 점검표
+
+| 항목 | 확인 결과 | 남은 한계 |
+|---|---|---|
+| TC·SC / Bindl et al., 2019 | 원문 PDF 첫쪽·측정·Table 2 재열람 | 촉진형 행동만 측정, 실제 능력 향상 아님 |
+| USE / Zhang, Yu, & Ma, 2026 | 로컬 원문 pp.9·11; 출판사 최종 권호 확인 | 정보·아이디어 사용에 치우침, 제작 사용 포괄성 제한 |
+| TP / Torkzadeh & Doll, 1999 | 원문 Table 2, p.6/332 세 문항 재확인 | application→GenAI 번안, 객관성과 아님 |
+| WI / Kubicek et al., 2015 | 출판 PDF 17쪽, Table 3 PDFp.10/906 재확인 | AI 회고 준거·7점 변경·프리랜서 WI5 적합성 |
+| EXP / Van der Heijden et al., 2018 | 첫쪽·Appendix A PDFp.12 재확인 | 모든 문항별 공식 응답 앵커는 미확보 |
+| GAIL / Liu et al., 2025 | 첫쪽·Table 2 PDFp.12 확인 | 국문 번안·총점/고차구조·비사용자 적용 |
+| THR / Brougham & Haar, 2018 | 첫쪽·측정·Table 1 pp.7–8 재열람 | STARA→GenAI, THR3·프리랜서 준거 변경 |
+| Zhang, Cui, & Chai, 2026 | 보유 원문 서지와 기존 방법·결과 기록 대조 | fsQCA, 일반 성과; 세 결과의 순효과 아님 |
+| Brosch et al., 2026 | 실제 읽은 Stanford 공개판 유지, IZA18999 새로 확인 | 워킹페이퍼, 버전 동일성 전체 대조 미수행 |
+| Bakker & Oerlemans, 2019 | 보유 출판본 표지·서지 확인 | Tims계열 행동, 에너지 소모 ≠ WI |
+| Dai et al., 2026 | 원문·출판사 페이지 확인 | SC 단독 아님, 비유의·CFI·본문 설명 주의 |
+
+## 3. 원문 추가 확보 또는 내용 보완이 필요한 항목
+
+### 우선 1 — 연구모형의 이론적 설명
+
+GAIL×USE→TC, EXP×TC→TP·JE·WI, GAIL×THR→USE, EXP×USE→SC의 정확한 위치를 지지하는 직접 근거는 현재 명세서에서 충분히 확보하지 못했다. GAIL·EXP 원척도 논문이 있다고 이 조절경로가 검증된 것은 아니다. 각 경로에 대해 자원·능력·위협 대응 논증과 경쟁 방향을 연결해야 한다. 추가 문헌의 원문 방법·결과 확인 후 방향 가설 또는 탐색 지위를 결정한다.
+
+SC→JE·WI는 현재 변수와 동일한 직접 실증 근거가 미확보다. SC→TP도 혁신성과·일반성과의 인접 근거가 중심이다. 해당 경로를 연구질문으로 두는 현재 처리는 유지한다. ‘아무도 연구하지 않았다’는 공백 주장은 유보한다.
+
+### 우선 2 — 가까운 후보 연구 전체 본문
+
+Zeng와 Wang(2024)의 AOM 초록은 AI 유용성–SC–과업성과를 다룬다. 출판사 초록과 저자 기관의 발표 이력은 확인했다. 전체 발표문·문항·시점·계수표는 미확보다. 본문 참고문헌과 가설 근거에 확정 채택하지 않았다.
+
+- [출판사 초록](https://journals.aom.org/doi/abs/10.5465/AMPROC.2024.20410abstract)
+- [저자 소속기관 발표 이력](https://cem.cau.edu.cn/art/2021/7/22/art_34875_181.html)
+
+Ranganathan·Ye의 현장 과정 자료는 기존 저자 설명·기관 인터뷰 수준이다. 완전한 학술 연구보고서의 방법·분석은 확보하지 못했다. 현재 APA 본문 목록에 추가하지 않았다. 자발적 확대가 조직 요구로 굳어지는 시간적 과정을 입증하려면 이 자료 또는 후속 종단자료가 필요하다.
+
+### 우선 3 — 측정의 검증과 근원 자료
+
+- EXP: 2018 원문 Appendix A의 다섯 문항은 확보했다. 각 문항의 공식 전체 응답 앵커·원 설문 또는 저자 매뉴얼이 필요하다. 원문이 통째로 없다는 뜻은 아니다.
+- USE: 2026 논문이 각색한 Zhang et al.(2019), Sun et al.(2022)의 근원 척도는 이번에 직접 대조하지 않았다. 현재 직접 출처는 2026 논문 Table 1로 명확히 쓴다.
+- JE1–3·JE_VOL·JE_IMP: 연구자 개발 문항이다. 찾지 못한 원척도 번역으로 표시하지 않는다. 내용타당도·인지면담·판별타당도 검토가 필요하다.
+- WI: 원문은 지난5년·5점 준거다. 현재 설문은 AI 사용전 비교·7점이다. 이 변경을 원척도 그대로라고 표현하지 않는다. WI5의 1인 프리랜서 적합성을 확인해야 한다.
+- THR·GAIL·EXP: 국문 번안, 프리랜서 준거와 점수화 구조를 검증해야 한다.
+
+### 우선 4 — 방법론·현장 근거
+
+현재 본문에는 조건부 간접 관련성, 측정 타당도, 계수 차이 검정과 LPA의 수행 원칙이 있다. 그러나 방법론 원문 참고문헌은 아직 충분히 붙지 않았다. 추정법·표본 계획을 고정한 뒤 해당 방법의 원문을 확인해 추가해야 한다. 확정하지 않은 분석법의 매뉴얼을 임의로 늘리지 않았다.
+
+사전인터뷰 8명은 기존 문서의 기록이다. 동의·원자료·분석 과정은 이번 미검증이다. 서론의 연구자 관찰로 제한하고, 정식 질적 결과로 쓸 때 자료와 분석 근거를 보완한다.
+
+## 4. 이번에 실제 확인한 웹 출처
+
+- [USE 출판사 최종 서지](https://www.emerald.com/ejim/article-abstract/29/3/702/1252001/How-and-when-generative-AI-use-affects-employee?redirectedFrom=fulltext): 검색에 노출된 출판사 서지 대조. 페이지 전체 직접 열람은 오류. 로컬 논문 본문 확보와 구분.
+- [WI 대학 공식 서지](https://ucrisportal.univie.ac.at/en/publications/development-and-validation-of-an-instrument-for-assessing-job-dem/): 직접 열람, 저자 순서·2015·24(6)·898–913 확인.
+- [EXP 대학 공식 서지](https://researchinnovation.kingston.ac.uk/en/publications/development-and-validation-of-the-short-form-employability-five-f-2/): 기관 기록과 로컬 출판본 대조.
+- [TP 출판사 서지](https://www.sciencedirect.com/science/article/abs/pii/S0305048398000498): 검색 노출 메타데이터와 로컬 첫쪽 대조.
+- [Brosch IZA 등록](https://www.iza.org/en/publications/dp/18999/task-expansion-with-generative-ai-experimental-evidence-on-middle-skilled-early-career-workers): IZA18999 존재 확인. 읽은 Stanford 판본과 별도 판본관리 필요.
+- [Dai 출판사 원문](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1767375/full): 직접 열람.
+
+DOI 리졸버, MDPI·일부 출판사 페이지는 접근 오류가 있었다. 이를 원문 없음으로 처리하지 않고 로컬 보유본을 읽었다. 검색 결과 URL을 참고문헌 출처로 쓰지 않았다. 본문 사용 문헌 11편은 원문 보유, 후보·근원 척도·방법론 보완은 미완료로 구분한다.

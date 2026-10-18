@@ -1,0 +1,27 @@
+# APA 7판 참고문헌 — 연구계획서 v0.92
+
+확인일: 2026-10-17. 본문 실제 사용·측정 출처 11편. 저자명 알파벳순, 제목 sentence case, 학술지·권 이탤릭, DOI URL 표기.
+
+Bakker, A. B., & Oerlemans, W. G. M. (2019). Daily job crafting and momentary work engagement: A self-determination and self-regulation perspective. *Journal of Vocational Behavior, 112*, 417–430. https://doi.org/10.1016/j.jvb.2018.12.005
+
+Bindl, U. K., Unsworth, K. L., Gibson, C. B., & Stride, C. B. (2019). Job crafting revisited: Implications of an extended framework for active changes at work. *Journal of Applied Psychology, 104*(5), 605–628. https://doi.org/10.1037/apl0000362
+
+Brosch, H., Langer, C., Lergetporer, P., Mueller, S., Pfeifer, H., & Tschoepe, N. (2026). *Task expansion with generative AI: Experimental evidence on middle-skilled, early-career workers* [Working paper]. Stanford Digital Economy Lab. https://digitaleconomy.stanford.edu/app/uploads/2026/10/AI_Task_Expansion_07102026.pdf
+
+Brougham, D., & Haar, J. (2018). Smart technology, artificial intelligence, robotics, and algorithms (STARA): Employees’ perceptions of our future workplace. *Journal of Management & Organization, 24*(2), 239–257. https://doi.org/10.1017/jmo.2016.55
+
+Dai, Y., Wang, W., Tims, M., Guan, X., & Yu, H. (2026). Employee ambidextrous job crafting in organizations: Theoretical model, scale development, and dual-path effects mechanisms. *Frontiers in Psychology, 17*, Article 1767375. https://doi.org/10.3389/fpsyg.2026.1767375
+
+Kubicek, B., Paškvan, M., & Korunka, C. (2015). Development and validation of an instrument for assessing job demands arising from accelerated change: The intensification of job demands scale (IDS). *European Journal of Work and Organizational Psychology, 24*(6), 898–913. https://doi.org/10.1080/1359432X.2014.979160
+
+Liu, X., Zhang, L., & Wei, X. (2025). Generative artificial intelligence literacy: Scale development and its effect on job performance. *Behavioral Sciences, 15*(6), Article 811. https://doi.org/10.3390/bs15060811
+
+Torkzadeh, G., & Doll, W. J. (1999). The development of a tool for measuring the perceived impact of information technology on work. *Omega, 27*(3), 327–339. https://doi.org/10.1016/S0305-0483(98)00049-8
+
+Van der Heijden, B. I. J. M., Notelaers, G., Peters, P., Stoffers, J. M. M., De Lange, A. H., Froehlich, D. E., & Van der Heijde, C. M. (2018). Development and validation of the short-form employability five-factor instrument. *Journal of Vocational Behavior, 106*, 236–248. https://doi.org/10.1016/j.jvb.2018.02.003
+
+Zhang, J., Cui, J., & Chai, X. (2026). Job crafting in innovative digital contexts: A configurational analysis of behavioral pathways to performance. *Journal of Innovation & Knowledge, 11*, Article 100874. https://doi.org/10.1016/j.jik.2025.100874
+
+Zhang, X., Yu, P., & Ma, L. (2026). How and when generative AI use affects employee incremental and radical creativity: An empirical study in China. *European Journal of Innovation Management, 29*(3), 702–727. https://doi.org/10.1108/EJIM-04-2024-0466
+
+워킹페이퍼의 기관명은 확인한 배포기관이다. IZA Discussion Paper No. 18999의 존재도 확인했으나, 이번에는 실제 읽은 Stanford 2026-10-07 판본으로 인용한다. 두 판본을 독립 연구로 중복 집계하지 않는다.

@@ -1,0 +1,8 @@
+/* Screen reading controls; print retains the document layout. */
+.reading-controls{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px;background:#edf5f3;border:1px solid #c6d9d4;color:#183b40;font:14px/1.5 sans-serif;margin:12px auto;max-width:900px;box-sizing:border-box}
+.reading-controls button{font:inherit;padding:8px 12px;margin:0;border:1px solid #8eaaa3;border-radius:5px;background:white;color:#183b40;cursor:pointer;min-height:40px}
+.reading-controls button:focus-visible{outline:3px solid #167d73;outline-offset:2px}
+.reading-controls button:disabled{opacity:.45;cursor:default}
+.reading-controls small{font:12px/1.5 sans-serif;letter-spacing:normal}
+@media screen{[data-reading-size]{font-size:calc(var(--reading-base) + var(--reading-offset,0px))!important}}
+@media print{.reading-controls{display:none!important}}

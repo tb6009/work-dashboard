@@ -1,0 +1,13 @@
+/* 연구계획서 전용: 기존 행간 1.68 × 1.2 = 2.016 */
+body{max-width:1120px;margin:0 auto;padding:32px clamp(16px,4vw,48px) 80px;background:#fff;font-size:16px;line-height:2.016;overflow-wrap:break-word}
+header#title-block-header{padding:0 0 20px;background:transparent;color:var(--ink);border-bottom:1px solid var(--line);margin-bottom:24px}
+header#title-block-header h1{font-size:clamp(22px,3vw,32px);line-height:1.404}
+body>h1{font-size:clamp(25px,3.5vw,38px);line-height:1.45;letter-spacing:-.035em;margin:30px 0}
+h2{font-size:clamp(21px,2.5vw,27px);line-height:1.5;margin:42px 0 16px}h3{line-height:1.5;margin:30px 0 12px}p,li,td,th{line-height:2.016}p{margin:0 0 1em}li{margin:.25em 0}ul,ol{padding-left:1.5em}
+#TOC{background:#f2f6f7;border:1px solid var(--line);padding:20px 24px;border-radius:10px;margin:24px 0 38px}#TOC ul{margin:4px 0}#TOC a{text-decoration:none}
+.model-frame{margin:24px 0;padding:12px;border:1px solid var(--line);border-radius:10px;background:white;text-align:center}
+.model-frame>a{display:block}.model-frame img{display:block;width:auto;max-width:100%;height:auto;max-height:72vh;max-height:72svh;margin:auto;object-fit:contain}
+.model-frame figcaption{margin:10px 0 0;color:var(--sub);font-size:13px;line-height:1.6}
+.table-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0}table{margin:0;font-size:14px;min-width:560px}th{position:static}th,td{padding:10px 12px}blockquote{margin:20px 0;padding:12px 20px;border-left:3px solid var(--blue);background:#f2f7f8}pre{max-width:100%;overflow:auto}code{overflow-wrap:anywhere}.references p{line-height:2.016}
+@media(max-width:600px){body{padding:20px 16px 50px;font-size:15px}#TOC{padding:14px 16px}#TOC ul{padding-left:1.15em}.model-frame{padding:4px;margin:18px -8px}.model-frame img{max-height:66svh}h2{margin-top:32px}table{font-size:13px}.references p{padding-left:1.4em;text-indent:-1.4em}}
+@media print{body{max-width:none;padding:0;font-size:10pt}#TOC{break-after:page}.model-frame img{max-height:180mm;max-width:100%}.model-frame{break-inside:avoid}.model-frame figcaption{display:none}.table-scroll{overflow:visible}table{min-width:0;font-size:9pt}}

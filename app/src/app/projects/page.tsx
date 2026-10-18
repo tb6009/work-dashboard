@@ -4,10 +4,10 @@ import {
   PROJECTS,
   loadWeek,
   getCurrentWeekId,
-  getVisibleCategories,
   groupProjectsByCategory,
 } from '@/lib/data';
 import { TYPE_COLOR, TYPE_LABEL } from '@/lib/projectTypes';
+import projectLatest from '@/data/project-latest.json';
 import type { ProjectMeta, ProjectContribution, LabelStatus, ProjectType } from '@/types/dashboard';
 
 export const dynamic = 'force-dynamic';
@@ -60,10 +60,14 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
     typeCounts[t] = visible.filter(p => p.type === t).length;
   }
 
-  // 카테고리 그루핑 — 2026-05-17 재구조화 이후 추가
-  const categories = getVisibleCategories();
+  // 최신순 — 프로젝트 폴더 안 가장 최근 수정 파일 시각 (scripts/extract-project-latest.mjs). 없으면 createdAt, 같으면 ID순
+  const lastDate = (p: ProjectMeta) => (projectLatest as Record<string, string>)[p.id] ?? p.createdAt ?? '';
   const groupedFiltered = groupProjectsByCategory(filtered);
   const archivedFiltered = groupedFiltered.get('_archived') ?? [];
+  const archivedIds = new Set(archivedFiltered.map(p => p.id));
+  const recentFiltered = filtered
+    .filter(p => !archivedIds.has(p.id))
+    .sort((a, b) => lastDate(b).localeCompare(lastDate(a)) || sortByIdAscending(a, b));
 
   return (
     <PageShell active="projects">
@@ -88,7 +92,7 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
                 marginBottom: 'var(--sp-2)',
               }}
             >
-              PROJECTS · ASCENDING BY ID
+              PROJECTS · LATEST FIRST
             </div>
             <h1
               style={{
@@ -164,11 +168,11 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
           {filter === 'all' ? 'All Projects' : `${labelOf(filter)} Projects`}
         </h2>
         <div style={{ fontSize: 'var(--text-xs)', color: 'var(--gray-400)' }}>
-          {filtered.length}개 · 10대 카테고리 그루핑 · 카드 클릭 → 상세
+          {filtered.length}개 · 최근 수정 파일 순 · 카드 클릭 → 상세
         </div>
       </div>
 
-      {/* CATEGORY SECTIONS — 2026-05-17 재구조화 반영, 항상 펼쳐진 수직 스택 */}
+      {/* 최신순 단일 목록 — 삭제된 폴더만 마지막에 따로 */}
       {filtered.length === 0 ? (
         <div
           style={{
@@ -184,21 +188,9 @@ export default async function ProjectsIndexPage({ searchParams }: PageProps) {
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sp-10)' }}>
-          {categories.map(cat => {
-            const projects = groupedFiltered.get(cat.id) ?? [];
-            if (projects.length === 0) return null;
-            return (
-              <section key={cat.id}>
-                <CategoryHeader
-                  id={cat.id}
-                  label={cat.label}
-                  description={cat.description}
-                  count={projects.length}
-                />
-                <ActiveProjectsGrid projects={projects} contributions={contribMap} />
-              </section>
-            );
-          })}
+          <section>
+            <ActiveProjectsGrid projects={recentFiltered} contributions={contribMap} />
+          </section>
 
           {/* 삭제된 폴더 (04 antigravity · 07 AIDX) — 이력 보존용, 마지막에 약하게 노출 */}
           {archivedFiltered.length > 0 && (
@@ -362,7 +354,7 @@ function FilterChips({ active, counts }: FilterChipsProps) {
           marginLeft: 'auto',
         }}
       >
-        ID 오름차순 · 카드 클릭 → 상세
+        최근 수정 파일 순 · 카드 클릭 → 상세
       </span>
     </div>
   );

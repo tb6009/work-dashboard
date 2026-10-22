@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "연구계획서 v0.96 서론·이론적 배경을 원문 대조로 다시 점검했고, C-2 자율전공학과 연구 사업계획서 HWP 최종본을 만들었다. Value-up 연구회 교수용 PPT·디자인 퀵체크와 ICCS 학생 코칭 포스터 v0.8을 만들고, 시각문법 공간 도식 개선판을 공개했다.",
   "kpis": {
-    "activeProjects": 6,
+    "activeProjects": 7,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 381
+    "filesChanged": 395
   },
   "daily": [
     {
@@ -138,11 +138,12 @@
     {
       "date": "2026-10-22",
       "weekday": "목",
-      "filesChanged": 274,
+      "filesChanged": 288,
       "topProjectIds": [
         "1300",
         "063",
-        "01"
+        "01",
+        "03"
       ],
       "entries": [
         {
@@ -155,20 +156,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 28,
-                "out": 6642,
-                "cache_read": 3212238,
-                "cache_write": 18827,
-                "messages": 14,
+                "in": 66,
+                "out": 18154,
+                "cache_read": 7458347,
+                "cache_write": 501175,
+                "messages": 33,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 28,
-              "out": 6642,
-              "cache_read": 3212238,
-              "cache_write": 18827,
-              "messages": 14
+              "in": 66,
+              "out": 18154,
+              "cache_read": 7458347,
+              "cache_write": 501175,
+              "messages": 33
             },
             "costUSD": 0
           }
@@ -193,6 +194,30 @@
               "cache_read": 2026570,
               "cache_write": 34319,
               "messages": 18
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 20,
+                "out": 6050,
+                "cache_read": 1408436,
+                "cache_write": 307114,
+                "messages": 10,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 20,
+              "out": 6050,
+              "cache_read": 1408436,
+              "cache_write": 307114,
+              "messages": 10
             },
             "costUSD": 0
           }
@@ -310,13 +335,13 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-22T08:59:39+09:00",
+  "buildAt": "2026-10-22T07:49:50.961Z",
   "tokens": {
     "total": {
-      "in": 184,
-      "out": 79429,
-      "cache_read": 11803015,
-      "cache_write": 344778
+      "in": 242,
+      "out": 96991,
+      "cache_read": 17457560,
+      "cache_write": 1134240
     },
     "costUSD": 0,
     "costKRW": 0
@@ -494,6 +519,27 @@
       },
       {
         "date": "2026-10-22",
+        "projectId": "01",
+        "in": 54178,
+        "out": 424,
+        "cache_read": 88832,
+        "cache_write": 0,
+        "requests": 3,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 54178,
+            "out": 424,
+            "cache_read": 88832,
+            "cache_write": 0,
+            "messages": 3
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-22",
         "projectId": "063",
         "in": 47479,
         "out": 41882,
@@ -536,9 +582,9 @@
       }
     ],
     "audit": {
-      "response-id": 838,
+      "response-id": 841,
       "unassigned": 368,
-      "assigned": 470
+      "assigned": 473
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -546,10 +592,10 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 5495340,
-          "cached": 160239872,
-          "out": 564461,
-          "turns": 767,
+          "in": 5549518,
+          "cached": 160328704,
+          "out": 564885,
+          "turns": 770,
           "costUSD": 0.0
         },
         "gpt-6-astra": {
@@ -568,9 +614,9 @@
         "2026-10-22": 0.0
       },
       "audit": {
-        "response-id": 838,
+        "response-id": 841,
         "unassigned": 368,
-        "assigned": 470
+        "assigned": 473
       },
       "unpricedModels": [
         "gpt-6.1-sol"

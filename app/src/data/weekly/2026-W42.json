@@ -4,13 +4,13 @@
     "from": "2026-10-12",
     "to": "2026-10-18"
   },
-  "status": "current",
+  "status": "past",
   "summary": "연구계획서를 v0.92에서 v0.96까지 고쳐 인쇄본까지 확인했다. 디자인터칭데이 행사 정보를 확정해 홍보물·웹사이트를 고쳤고, 시각문법 마스터 최종수정본과 현장실습·총장보고 자료를 만들었다.",
   "kpis": {
     "activeProjects": 7,
     "sessions": 6,
     "newProjects": 0,
-    "filesChanged": 2234
+    "filesChanged": 2358
   },
   "daily": [
     {
@@ -295,10 +295,11 @@
     {
       "date": "2026-10-18",
       "weekday": "일",
-      "filesChanged": 294,
+      "filesChanged": 418,
       "topProjectIds": [
         "0500",
-        "063"
+        "063",
+        "1300"
       ],
       "entries": [
         {
@@ -311,23 +312,27 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 232,
-                "out": 58687,
-                "cache_read": 12650861,
-                "cache_write": 428380,
-                "messages": 116,
+                "in": 236,
+                "out": 59111,
+                "cache_read": 12914085,
+                "cache_write": 429968,
+                "messages": 118,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 232,
-              "out": 58687,
-              "cache_read": 12650861,
-              "cache_write": 428380,
-              "messages": 116
+              "in": 236,
+              "out": 59111,
+              "cache_read": 12914085,
+              "cache_write": 429968,
+              "messages": 118
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "1300",
+          "did": "[fs scan] 01_공통프롬프트_10개.md · 02_A세션_시각문법없음.md · 03_B세션_시각문법있음.md · 04_평가표와근거.md · PROJECT_CONTEXT.md 외 35건"
         }
       ]
     }
@@ -433,13 +438,13 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-18T13:21:13.156Z",
+  "buildAt": "2026-10-18T14:59:18.099Z",
   "tokens": {
     "total": {
-      "in": 614,
-      "out": 194789,
-      "cache_read": 48220489,
-      "cache_write": 1835102
+      "in": 618,
+      "out": 195213,
+      "cache_read": 48483713,
+      "cache_write": 1836690
     },
     "costUSD": 0,
     "costKRW": 0
@@ -723,11 +728,11 @@
       {
         "date": "2026-10-18",
         "projectId": "0500",
-        "in": 1703740,
-        "out": 163502,
-        "cache_read": 41535744,
+        "in": 1784820,
+        "out": 166888,
+        "cache_read": 41890304,
         "cache_write": 0,
-        "requests": 271,
+        "requests": 278,
         "byModel": {
           "gpt-6-astra": {
             "in": 1703740,
@@ -735,17 +740,25 @@
             "cache_read": 41535744,
             "cache_write": 0,
             "messages": 271
+          },
+          "gpt-6.1-sol": {
+            "in": 81080,
+            "out": 3386,
+            "cache_read": 354560,
+            "cache_write": 0,
+            "messages": 7
           }
         },
         "attribution": [
-          "explicit-user-path"
+          "explicit-user-path",
+          "same-turn-tool-path-inference"
         ]
       }
     ],
     "audit": {
-      "response-id": 1217,
-      "assigned": 1029,
-      "unassigned": 188
+      "response-id": 1399,
+      "assigned": 1036,
+      "unassigned": 363
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -753,10 +766,10 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 4541300,
-          "cached": 79247616,
-          "out": 396469,
-          "turns": 654,
+          "in": 5218943,
+          "cached": 102823808,
+          "out": 458967,
+          "turns": 836,
           "costUSD": 0.0
         },
         "gpt-6-astra": {
@@ -777,18 +790,19 @@
         "2026-10-18": 66.75
       },
       "audit": {
-        "response-id": 1217,
-        "assigned": 1029,
-        "unassigned": 188
+        "response-id": 1399,
+        "assigned": 1036,
+        "unassigned": 363
       },
       "unpricedModels": [
         "gpt-6.1-sol"
       ],
-      "images": 18,
+      "images": 68,
       "imagesByDay": {
         "2026-10-12": 11,
         "2026-10-15": 5,
-        "2026-10-16": 2
+        "2026-10-16": 2,
+        "2026-10-18": 50
       }
     },
     "gemini": {

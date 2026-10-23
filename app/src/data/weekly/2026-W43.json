@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "연구계획서 v0.96 서론·이론적 배경을 원문 대조로 다시 점검했고, C-2 자율전공학과 연구 사업계획서 HWP 최종본을 만들었다. Value-up 연구회 교수용 PPT·디자인 퀵체크와 ICCS 학생 코칭 포스터 v0.8을 만들고, 시각문법 공간 도식 개선판을 공개했다.",
   "kpis": {
-    "activeProjects": 7,
+    "activeProjects": 8,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 395
+    "filesChanged": 403
   },
   "daily": [
     {
@@ -138,7 +138,7 @@
     {
       "date": "2026-10-22",
       "weekday": "목",
-      "filesChanged": 288,
+      "filesChanged": 279,
       "topProjectIds": [
         "1300",
         "063",
@@ -156,20 +156,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 66,
-                "out": 18154,
-                "cache_read": 7458347,
-                "cache_write": 501175,
-                "messages": 33,
+                "in": 78,
+                "out": 20071,
+                "cache_read": 8518726,
+                "cache_write": 742033,
+                "messages": 38,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 66,
-              "out": 18154,
-              "cache_read": 7458347,
-              "cache_write": 501175,
-              "messages": 33
+              "in": 78,
+              "out": 20071,
+              "cache_read": 8518726,
+              "cache_write": 742033,
+              "messages": 38
             },
             "costUSD": 0
           }
@@ -227,8 +227,94 @@
     {
       "date": "2026-10-23",
       "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 17,
+      "topProjectIds": [
+        "063",
+        "09",
+        "02"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W43.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 6,
+                "out": 3765,
+                "cache_read": 877590,
+                "cache_write": 6645,
+                "messages": 3,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 6,
+              "out": 3765,
+              "cache_read": 877590,
+              "cache_write": 6645,
+              "messages": 3
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-sonnet-5-5": {
+                "in": 954,
+                "out": 26453,
+                "cache_read": 67879101,
+                "cache_write": 2973381,
+                "messages": 477,
+                "costUSD": 0
+              },
+              "claude-opus-5-5": {
+                "in": 222,
+                "out": 105806,
+                "cache_read": 12486026,
+                "cache_write": 134429,
+                "messages": 86,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 1176,
+              "out": 132259,
+              "cache_read": 80365127,
+              "cache_write": 3107810,
+              "messages": 563
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "02",
+          "did": "[fs scan] CLAUDE.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 24,
+                "out": 7329,
+                "cache_read": 1023990,
+                "cache_write": 40062,
+                "messages": 11,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 24,
+              "out": 7329,
+              "cache_read": 1023990,
+              "cache_write": 40062,
+              "messages": 11
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     },
     {
       "date": "2026-10-24",
@@ -335,13 +421,13 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-22T07:49:50.961Z",
+  "buildAt": "2026-10-23T04:24:39.969Z",
   "tokens": {
     "total": {
-      "in": 242,
-      "out": 96991,
-      "cache_read": 17457560,
-      "cache_write": 1134240
+      "in": 1460,
+      "out": 242261,
+      "cache_read": 100784646,
+      "cache_write": 4529615
     },
     "costUSD": 0,
     "costKRW": 0
@@ -582,8 +668,8 @@
       }
     ],
     "audit": {
-      "response-id": 841,
-      "unassigned": 368,
+      "response-id": 898,
+      "unassigned": 425,
       "assigned": 473
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
@@ -592,10 +678,10 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 5549518,
-          "cached": 160328704,
-          "out": 564885,
-          "turns": 770,
+          "in": 5785580,
+          "cached": 169259008,
+          "out": 604776,
+          "turns": 827,
           "costUSD": 0.0
         },
         "gpt-6-astra": {
@@ -614,17 +700,17 @@
         "2026-10-22": 0.0
       },
       "audit": {
-        "response-id": 841,
-        "unassigned": 368,
+        "response-id": 898,
+        "unassigned": 425,
         "assigned": 473
       },
       "unpricedModels": [
         "gpt-6.1-sol"
       ],
-      "images": 59,
+      "images": 75,
       "imagesByDay": {
         "2026-10-21": 29,
-        "2026-10-22": 30
+        "2026-10-22": 46
       }
     },
     "gemini": {

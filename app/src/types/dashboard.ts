@@ -35,6 +35,8 @@ export interface ProjectMeta {
   researchProcessUrl?: string;   // 리서치·제작 전 과정을 한 페이지로 묶은 허브 (하위 버전 아카이브 포함)
   researchProcessLabel?: string; // researchProcessUrl 버튼 이름 (없으면 기본 이름)
   caseStudiesUrl?: string;       // 프로젝트·케이스 단위 이미지 사례연구 웹 인덱스
+  finalCaseUrl?: string;         // 대표 케이스 최종본 (타이틀 하단 버튼)
+  finalCaseLabel?: string;       // finalCaseUrl 버튼 이름
   appUrl?: string;           // 실행 가능한 앱/데모 페이지 (내부 정적 경로 또는 외부 URL). 상세 페이지에 "실행" 버튼으로 노출.
 }
 

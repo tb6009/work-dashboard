@@ -243,6 +243,8 @@ function Hero({
         researchProcessUrl={project.researchProcessUrl}
         researchProcessLabel={project.researchProcessLabel}
         caseStudiesUrl={project.caseStudiesUrl}
+        finalCaseUrl={project.finalCaseUrl}
+        finalCaseLabel={project.finalCaseLabel}
         appUrl={project.appUrl}
       />
       <div
@@ -380,6 +382,8 @@ function ExternalLinkRow({
   researchProcessUrl,
   researchProcessLabel,
   caseStudiesUrl,
+  finalCaseUrl,
+  finalCaseLabel,
   appUrl,
 }: {
   projectName: string;
@@ -394,12 +398,15 @@ function ExternalLinkRow({
   researchProcessUrl?: string;
   researchProcessLabel?: string;
   caseStudiesUrl?: string;
+  finalCaseUrl?: string;
+  finalCaseLabel?: string;
   appUrl?: string;
 }) {
   const links: { label: string; href: string; emphasis?: boolean }[] = [];
   if (appUrl) links.push({ label: '▶ 챗봇 테스트', href: appUrl, emphasis: true });
   if (researchProcessUrl) links.push({ label: researchProcessLabel ?? '전체 프로세스 + 버전 아카이브', href: researchProcessUrl, emphasis: true });
   if (caseStudiesUrl) links.push({ label: '이미지 케이스 스터디', href: caseStudiesUrl, emphasis: true });
+  if (finalCaseUrl) links.push({ label: finalCaseLabel ?? '대표 케이스 최종본', href: finalCaseUrl, emphasis: true });
   if (portfolioUrl) links.push({ label: '비주얼 포트폴리오', href: portfolioUrl, emphasis: true });
   if (processPortfolioUrl) links.push({ label: '주중 작업과정 포트폴리오', href: processPortfolioUrl, emphasis: true });
   if (eventWebsiteUrl) links.push({ label: '디자인터칭데이 웹사이트', href: eventWebsiteUrl, emphasis: true });

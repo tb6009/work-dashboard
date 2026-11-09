@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "연구계획서 v0.96 서론·이론적 배경을 원문 대조로 다시 점검했고, C-2 자율전공학과 연구 사업계획서 HWP 최종본을 만들었다. Value-up 연구회 교수용 PPT·디자인 퀵체크와 ICCS 학생 코칭 포스터 v0.8을 만들고, 시각문법 공간 도식 개선판을 공개했다.",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 10,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 403
+    "filesChanged": 889
   },
   "daily": [
     {
@@ -138,7 +138,7 @@
     {
       "date": "2026-10-22",
       "weekday": "목",
-      "filesChanged": 279,
+      "filesChanged": 278,
       "topProjectIds": [
         "1300",
         "063",
@@ -227,11 +227,12 @@
     {
       "date": "2026-10-23",
       "weekday": "금",
-      "filesChanged": 17,
+      "filesChanged": 159,
       "topProjectIds": [
         "063",
         "09",
-        "02"
+        "02",
+        "0311"
       ],
       "entries": [
         {
@@ -240,20 +241,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 6,
-                "out": 3765,
-                "cache_read": 877590,
-                "cache_write": 6645,
-                "messages": 3,
+                "in": 64,
+                "out": 14126,
+                "cache_read": 9635186,
+                "cache_write": 34034,
+                "messages": 32,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 6,
-              "out": 3765,
-              "cache_read": 877590,
-              "cache_write": 6645,
-              "messages": 3
+              "in": 64,
+              "out": 14126,
+              "cache_read": 9635186,
+              "cache_write": 34034,
+              "messages": 32
             },
             "costUSD": 0
           }
@@ -272,20 +273,20 @@
                 "costUSD": 0
               },
               "claude-opus-5-5": {
-                "in": 222,
-                "out": 105806,
-                "cache_read": 12486026,
-                "cache_write": 134429,
-                "messages": 86,
+                "in": 250,
+                "out": 117277,
+                "cache_read": 15360246,
+                "cache_write": 499195,
+                "messages": 98,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 1176,
-              "out": 132259,
-              "cache_read": 80365127,
-              "cache_write": 3107810,
-              "messages": 563
+              "in": 1204,
+              "out": 143730,
+              "cache_read": 83239347,
+              "cache_write": 3472576,
+              "messages": 575
             },
             "costUSD": 0
           }
@@ -296,37 +297,167 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 24,
-                "out": 7329,
-                "cache_read": 1023990,
-                "cache_write": 40062,
-                "messages": 11,
+                "in": 64,
+                "out": 23890,
+                "cache_read": 3309495,
+                "cache_write": 68751,
+                "messages": 31,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 24,
-              "out": 7329,
-              "cache_read": 1023990,
-              "cache_write": 40062,
-              "messages": 11
+              "in": 64,
+              "out": 23890,
+              "cache_read": 3309495,
+              "cache_write": 68751,
+              "messages": 31
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] v0.14_변경및구조검증.json · 20261023_센터검토반영과_참고자료_인용_명세서.md"
         }
       ]
     },
     {
       "date": "2026-10-24",
       "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 67,
+      "topProjectIds": [
+        "09",
+        "0311",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "09",
+          "did": "[fs scan] README.md · checks.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 20,
+                "out": 5901,
+                "cache_read": 3245730,
+                "cache_write": 22784,
+                "messages": 10,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 20,
+              "out": 5901,
+              "cache_read": 3245730,
+              "cache_write": 22784,
+              "messages": 10
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 20261024_강동훈검토의견_검토와_인용_명세서.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W43.json"
+        }
+      ]
     },
     {
       "date": "2026-10-25",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 278,
+      "topProjectIds": [
+        "0311",
+        "063",
+        "03",
+        "09",
+        "082"
+      ],
+      "entries": [
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 20261025_p52_수정전_문제진단.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W43.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 8,
+                "out": 2844,
+                "cache_read": 1567358,
+                "cache_write": 2968,
+                "messages": 4,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 8,
+              "out": 2844,
+              "cache_read": 1567358,
+              "cache_write": 2968,
+              "messages": 4
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 176,
+                "out": 133818,
+                "cache_read": 18262534,
+                "cache_write": 453997,
+                "messages": 86,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 176,
+              "out": 133818,
+              "cache_read": 18262534,
+              "cache_write": 453997,
+              "messages": 86
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] PROJECT.md"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] package-lock.json · KineticType.tsx · Root.tsx · 07_키네틱타입_만드는법.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 169,
+                "out": 65594,
+                "cache_read": 14645417,
+                "cache_write": 101714,
+                "messages": 64,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 169,
+              "out": 65594,
+              "cache_read": 14645417,
+              "cache_write": 101714,
+              "messages": 64
+            },
+            "costUSD": 0
+          }
+        }
+      ]
     }
   ],
   "projects": [
@@ -421,13 +552,13 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-23T04:24:39.969Z",
+  "buildAt": "2026-10-25T13:31:18.523Z",
   "tokens": {
     "total": {
-      "in": 1460,
-      "out": 242261,
-      "cache_read": 100784646,
-      "cache_write": 4529615
+      "in": 1959,
+      "out": 488811,
+      "cache_read": 152423006,
+      "cache_write": 5531922
     },
     "costUSD": 0,
     "costKRW": 0
@@ -665,12 +796,152 @@
         "attribution": [
           "same-turn-tool-path-inference"
         ]
+      },
+      {
+        "date": "2026-10-23",
+        "projectId": "01",
+        "in": 88456,
+        "out": 6851,
+        "cache_read": 1068928,
+        "cache_write": 0,
+        "requests": 17,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 88456,
+            "out": 6851,
+            "cache_read": 1068928,
+            "cache_write": 0,
+            "messages": 17
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "projectId": "03",
+        "in": 163238,
+        "out": 26018,
+        "cache_read": 6629504,
+        "cache_write": 0,
+        "requests": 58,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 163238,
+            "out": 26018,
+            "cache_read": 6629504,
+            "cache_write": 0,
+            "messages": 58
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "projectId": "092",
+        "in": 323434,
+        "out": 77143,
+        "cache_read": 19178112,
+        "cache_write": 0,
+        "requests": 120,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 323434,
+            "out": 77143,
+            "cache_read": 19178112,
+            "cache_write": 0,
+            "messages": 120
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "projectId": "03",
+        "in": 2021154,
+        "out": 181121,
+        "cache_read": 35082496,
+        "cache_write": 0,
+        "requests": 262,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 567173,
+            "out": 18839,
+            "cache_read": 4086656,
+            "cache_write": 0,
+            "messages": 29
+          },
+          "gpt-6-astra": {
+            "in": 1453981,
+            "out": 162282,
+            "cache_read": 30995840,
+            "cache_write": 0,
+            "messages": 233
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "projectId": "092",
+        "in": 270544,
+        "out": 915,
+        "cache_read": 1059456,
+        "cache_write": 0,
+        "requests": 5,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 270544,
+            "out": 915,
+            "cache_read": 1059456,
+            "cache_write": 0,
+            "messages": 5
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-10-25",
+        "projectId": "03",
+        "in": 4055427,
+        "out": 726239,
+        "cache_read": 267590400,
+        "cache_write": 0,
+        "requests": 1558,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 1888494,
+            "out": 307490,
+            "cache_read": 144852608,
+            "cache_write": 0,
+            "messages": 720
+          },
+          "gpt-6-astra": {
+            "in": 2166933,
+            "out": 418749,
+            "cache_read": 122737792,
+            "cache_write": 0,
+            "messages": 838
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
       }
     ],
     "audit": {
-      "response-id": 898,
-      "unassigned": 425,
-      "assigned": 473
+      "response-id": 3312,
+      "unassigned": 819,
+      "assigned": 2493
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -678,54 +949,71 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 5785580,
-          "cached": 169259008,
-          "out": 604776,
-          "turns": 827,
+          "in": 10075031,
+          "cached": 408847872,
+          "out": 1143236,
+          "turns": 2030,
           "costUSD": 0.0
         },
         "gpt-6-astra": {
-          "in": 659984,
-          "cached": 9849472,
-          "out": 39142,
-          "turns": 71,
-          "costUSD": 18.41
+          "in": 4671025,
+          "cached": 181348864,
+          "out": 668050,
+          "turns": 1282,
+          "costUSD": 261.46
         }
       },
-      "costUSD": 18.41,
+      "costUSD": 261.46,
       "costByDay": {
         "2026-10-19": 6.63,
         "2026-10-20": 0.0,
         "2026-10-21": 11.78,
-        "2026-10-22": 0.0
+        "2026-10-22": 0.0,
+        "2026-10-23": 0.0,
+        "2026-10-24": 60.45,
+        "2026-10-25": 182.61
       },
       "audit": {
-        "response-id": 898,
-        "unassigned": 425,
-        "assigned": 473
+        "response-id": 3312,
+        "unassigned": 819,
+        "assigned": 2493
       },
       "unpricedModels": [
         "gpt-6.1-sol"
       ],
-      "images": 75,
+      "images": 94,
       "imagesByDay": {
         "2026-10-21": 29,
-        "2026-10-22": 46
+        "2026-10-22": 46,
+        "2026-10-23": 11,
+        "2026-10-24": 4,
+        "2026-10-25": 4
       }
     },
     "gemini": {
-      "byModel": {},
-      "costUSD": 0,
+      "byModel": {
+        "gemini-4-argon-trial": {
+          "in": 361716,
+          "cached": 3639335,
+          "out": 66511,
+          "requests": 31,
+          "costUSD": 0.0
+        }
+      },
+      "costUSD": 0.0,
       "estimated": true,
       "audit": {
-        "databasesSeen": 33,
-        "olderThanWeek": 33
+        "databasesSeen": 34,
+        "olderThanWeek": 33,
+        "requestsDecoded": 31
       },
       "projectAttribution": "unavailable",
-      "unpricedModels": []
+      "unpricedModels": [
+        "gemini-4-argon-trial"
+      ]
     },
-    "totalUSD": 18.41,
-    "totalKRW": 25919,
+    "totalUSD": 261.46,
+    "totalKRW": 368107,
     "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
     "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
     "costCoverage": "partial-historical-price-table-not-reverified"

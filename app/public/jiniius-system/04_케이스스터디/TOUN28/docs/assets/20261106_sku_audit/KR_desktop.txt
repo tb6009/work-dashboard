@@ -1,0 +1,216 @@
+- heading [level=1]:
+  - link:
+    - /url: https://www.toun28.com
+- list:
+  - link "톤28 미션":
+    - /url: https://www.toun28.com/renew/mission/main
+  - link "STORY":
+    - /url: https://www.toun28.com/promotion/product/peptacica
+  - link "STORE":
+    - /url: https://www.toun28.com/renew/product
+  - link "ARCHIVE":
+    - /url: https://www.toun28.com/renew/archive
+  - link "B2B 문의":
+    - /url: https://www.toun28.com/inquiry/b2b
+  - link "마이페이지":
+    - /url: https://www.toun28.com/mycare
+  - link "로그인":
+    - /url: /login
+  - link:
+    - /url: https://www.toun28.com/renew/cart
+  - button "언어 선택"
+- button
+- list:
+  - link "더 퍼스트 블루 펩타이드":
+    - /url: https://www.toun28.com/renew/product?category=304
+  - link "스킨케어":
+    - /url: https://www.toun28.com/renew/product?category=26
+  - list:
+    - link "펩타시카 (광채/리프팅)":
+      - /url: https://www.toun28.com/renew/product?category=256
+    - link "비타시카 (미백/잡티)":
+      - /url: https://www.toun28.com/renew/product?category=283
+    - link "히알시카 (진정/수분)":
+      - /url: https://www.toun28.com/renew/product?category=257
+  - link "헤어케어":
+    - /url: https://www.toun28.com/renew/product?category=21
+  - link "바디케어":
+    - /url: https://www.toun28.com/renew/product?category=27
+  - link "제로웨이스트":
+    - /url: https://www.toun28.com/renew/product?category=116
+  - link "전 제품":
+    - /url: https://www.toun28.com/renew/product
+  - link "마이페이지":
+    - /url: https://www.toun28.com/mycare
+  - link "톤28 미션":
+    - /url: https://www.toun28.com/renew/mission/main
+  - link "STORY":
+    - /url: https://www.toun28.com/promotion/product/peptacica
+- list:
+  - link "한국어":
+    - /url: https://www.toun28.com
+  - link "English":
+    - /url: https://www.toun28.com/eng
+- button "로그인"
+- generic: FACE 라인별
+- generic: 탄력광채
+- paragraph: 🔥 지금 134명이 보고 있어요!
+- img "Product Image1"
+- heading "글로우 크림&세럼 50ml" [level=3]
+- strong: 42,000원
+- strong: 30%
+- strong: 29,400원
+- link "+크루할인":
+  - /url: "#none"
+- strong: 26,460 원
+- text: 최대 적립원
+- link "크루가격으로 구매하고 싶다면? 크루 가입하고 돌아오기":
+  - /url: "#none"
+  - text: 크루가격으로 구매하고 싶다면?
+  - text: 크루 가입하고 돌아오기
+- button
+- generic: 화잘먹∙피부광채
+- heading "제품 특징" [level=6]
+- paragraph: 이층상의 제형으로 수상층의 병풀추출물과 유상층의 세콜지가 피부의 겉과 속을 이중케어하며 화잘먹 피부로 가꾸어 줍니다.
+- generic: 글로우 크림&세럼 50ml
+- button
+- generic: "1"
+- button
+- generic: 29,400원
+- generic: 배송비
+- generic: +3,000원
+- generic: 최종 금액
+- generic: 32,400원
+- button "장바구니"
+- button "공식몰 구매하고 혜택 받기 구매하기"
+- text: 가입 없이 간편하게 구매해요
+- table:
+  - rowgroup:
+    - row "구매하기":
+      - cell "구매하기":
+        - link "구매하기":
+          - /url: "#"
+          - generic: 구매하기
+- paragraph:
+  - text: 공식몰 회원 구매 시,
+  - strong: 쿠폰·마일리지·사은품 혜택
+  - text: 을 받을 수 있습니다
+- emphasis: 게이지
+- generic: "4.97"
+- paragraph: 총 1,875건
+- list:
+  - listitem: 더보기
+- heading "AI 후기 인사이트" [level=5]
+- term: 메이크업 전에 발라 베이스가 들뜨지 않는 촉촉 세럼
+- definition: 건성·수부지 피부 사용자 중심으로, 메이크업 전 사용 시 베이스가 들뜨지 않고 밀착되며 속건조 완화와 촉촉한 피부 컨디션 유지에 대한 만족도가 높게 나타났습니다.
+- definition:
+  - generic: 메이크업 전 사용
+  - generic: 화장 잘 먹음
+  - generic: 밀림 없음
+  - generic: 촉촉함 유지
+  - generic: 속건조 완화
+  - generic: 피부결 정돈
+- button "상세설명"
+- button "구매후기(1,875)"
+- img "글로우 크림 앤 세럼 50ml의 이층상 제형, 병풀과 세콜지 성분, 화장 밀착과 피부 광채 사용 평가 소개."
+- img "글로우 크림 앤 세럼의 올리브영 스킨케어 실시간 판매량 1위 안내 배너. 이미지 표기 기준일은 2026년 3월 23일."
+- img "더현대 서울 팝업 베스트셀러 안내 배너."
+- img "병풀과 크림·세럼 이층상으로 피부 광채와 화장 밀착을 돕는 글로우 크림 앤 세럼 제품 소개."
+- 'img "글로우 크림 앤 세럼 사용 시험: 피부 광채 412.45%, 피부 수분 67.84%, 메이크업 지속력 80.91% 개선 자료."'
+- img "크림층의 세라마이드·콜레스테롤·지방산과 세럼층의 병풀추출물 20,000ppm·CICA PDRN을 설명한 이층상 제형."
+- img "글로우 크림 앤 세럼의 탄력, 수분 밸런스, 장벽, 톤 균일성 등 화장 밀착 관련 성분 설계 설명."
+- img "유광형 글로우 크림 앤 세럼의 피부 광채·수분·탄력과 메이크업 지속력 안내 및 해남 병풀 재배 과정."
+- img "글로우 크림 앤 세럼의 민감 피부 일차 자극 시험과 미백·주름개선 기능성 표시. 병을 흔들어 섞은 뒤 스포이드로 바르는 사용법."
+- img "펩타시카 라인의 토너, 세럼패드, 세럼, 크림, 크림 인텐시브 및 겔마스크 단계별 사용 순서."
+- img "톤28 해남 병풀 농장과 원료에서 제품까지의 제조 철학 소개."
+- img "글로우 크림 앤 세럼 FAQ. 토너 다음 단계에서 아침·저녁 사용, 다른 제품과 함께 사용, 색소와 향료 및 임신 중 사용 안내."
+- article "글로우 크림&세럼 50ml":
+  - heading "글로우 크림&세럼 50ml" [level=2]
+  - paragraph: 이층상의 제형으로 수상층의 병풀추출물과 유상층의 세콜지가 피부의 겉과 속을 이중케어하며 화잘먹 피부로 가꾸어 줍니다.
+  - heading "제품 특징" [level=3]
+  - paragraph: 화잘먹∙피부광채
+  - heading "상세 이미지 안내" [level=3]
+  - list:
+    - listitem: 글로우 크림 앤 세럼 50ml의 이층상 제형, 병풀과 세콜지 성분, 화장 밀착과 피부 광채 사용 평가 소개.
+    - listitem: 글로우 크림 앤 세럼의 올리브영 스킨케어 실시간 판매량 1위 안내 배너. 이미지 표기 기준일은 2026년 3월 23일.
+    - listitem: 더현대 서울 팝업 베스트셀러 안내 배너.
+    - listitem: 병풀과 크림·세럼 이층상으로 피부 광채와 화장 밀착을 돕는 글로우 크림 앤 세럼 제품 소개.
+    - listitem: "글로우 크림 앤 세럼 사용 시험: 피부 광채 412.45%, 피부 수분 67.84%, 메이크업 지속력 80.91% 개선 자료."
+    - listitem: 크림층의 세라마이드·콜레스테롤·지방산과 세럼층의 병풀추출물 20,000ppm·CICA PDRN을 설명한 이층상 제형.
+    - listitem: 글로우 크림 앤 세럼의 탄력, 수분 밸런스, 장벽, 톤 균일성 등 화장 밀착 관련 성분 설계 설명.
+    - listitem: 유광형 글로우 크림 앤 세럼의 피부 광채·수분·탄력과 메이크업 지속력 안내 및 해남 병풀 재배 과정.
+    - listitem: 글로우 크림 앤 세럼의 민감 피부 일차 자극 시험과 미백·주름개선 기능성 표시. 병을 흔들어 섞은 뒤 스포이드로 바르는 사용법.
+    - listitem: 펩타시카 라인의 토너, 세럼패드, 세럼, 크림, 크림 인텐시브 및 겔마스크 단계별 사용 순서.
+    - listitem: 톤28 해남 병풀 농장과 원료에서 제품까지의 제조 철학 소개.
+    - listitem: 글로우 크림 앤 세럼 FAQ. 토너 다음 단계에서 아침·저녁 사용, 다른 제품과 함께 사용, 색소와 향료 및 임신 중 사용 안내.
+  - heading "용량 또는 중량" [level=3]
+  - paragraph: 50ml
+  - heading "권장 피부 유형" [level=3]
+  - paragraph: 모든 피부용, 건성/민감성 추천
+  - heading "사용 방법" [level=3]
+  - paragraph: 본 품을 충분히 흔들어 잘 섞은 후 적당량을 취해 피부에 골고루 펴 바른다.
+  - heading "전성분" [level=3]
+  - paragraph: 정제수, 코코-카프릴레이트/카프레이트, 프로판다이올, 스쿠알란, 글리세린, 병풀추출물, 나이아신아마이드, 펜틸렌글라이콜, 1,2-헥산다이올, 폴리글리세릴-10라우레이트, 부틸렌글라이콜, 트라이소듐에틸렌다이아민다이석시네이트, 하이드록시에틸셀룰로오스, 에틸헥실글리세린, 잔탄검, 카프릴릴글라이콜, 아데노신, 말라카이트추출물, 녹차추출물, 카프릴릭/카프릭트라이글리세라이드, 황련뿌리추출물, 알지닌, 덱스트린, 카카오추출물, 소듐하이알루로네이트, 폴리글리세릴-3메틸글루코오스다이스테아레이트, 하이드로제네이티드레시틴, 소듐디엔에이, 다이소듐포스페이트, 폴리솔베이트60, 병풀잎수, 소듐포스페이트, 판테놀, 세라마이드엔피, 스테아릭애씨드, 콜레스테롤, 락토바실러스/쌀발효물, 락토바실러스/콩발효추출물, 효모/율무씨발효여과물, 효모/감자추출물발효여과물, 락토바실러스/인삼뿌리발효여과물, 바실러스/쌀겨추출물/콩추출물발효여과물, 효모/쌀겨발효물, 하이드로제네이티드포스파티딜콜린, 수크로오스스테아레이트, 세테아릴알코올, 아세틸헥사펩타이드-8, 병풀잎추출물, 병풀뿌리추출물, 병풀잎/줄기추출물, 마데카소사이드, 아시아티코사이드, 마데카식애씨드, 아시아틱애씨드, 병풀잎/줄기가루
+- term: 필수표기정보
+- definition:
+  - term: 제품명
+  - definition: 톤28 해남 404 글로우 크림앤세럼
+  - term: 용량 또는 중량
+  - definition: 50ml
+  - term: 제품 주요 사양
+  - definition: 모든 피부용, 건성/민감성 추천
+  - term: 사용기한 및 개봉 후 사용기한
+  - definition:
+    - text: "유효기간: 개봉 전 30개월"
+    - text: 개봉 후 12개월
+  - term: 사용방법
+  - definition: 본 품을 충분히 흔들어 잘 섞은 후 적당량을 취해 피부에 골고루 펴 바른다.
+  - term: 제조업자
+  - definition: 별도 표기
+  - term: 책임판매업자
+  - definition: (주) 톤28
+  - term: 제조국
+  - definition: 한국
+  - term: 기능성유무
+  - definition:
+    - text: 미백, 주름개선 이중 기능성 화장품
+    - text: 효능효과ㅣ피부의 미백에 도움을 줍니다. 피부의 주름개선에 도움을 줍니다.
+    - text: 용법용량ㅣ본 품을 충분히 흔들어 잘 섞은 후 적당량을 취해 피부에 골고루 펴 바른다.
+  - term: 전성분
+  - definition: 정제수, 코코-카프릴레이트/카프레이트, 프로판다이올, 스쿠알란, 글리세린, 병풀추출물, 나이아신아마이드, 펜틸렌글라이콜, 1,2-헥산다이올, 폴리글리세릴-10라우레이트, 부틸렌글라이콜, 트라이소듐에틸렌다이아민다이석시네이트, 하이드록시에틸셀룰로오스, 에틸헥실글리세린, 잔탄검, 카프릴릴글라이콜, 아데노신, 말라카이트추출물, 녹차추출물, 카프릴릭/카프릭트라이글리세라이드, 황련뿌리추출물, 알지닌, 덱스트린, 카카오추출물, 소듐하이알루로네이트, 폴리글리세릴-3메틸글루코오스다이스테아레이트, 하이드로제네이티드레시틴, 소듐디엔에이, 다이소듐포스페이트, 폴리솔베이트60, 병풀잎수, 소듐포스페이트, 판테놀, 세라마이드엔피, 스테아릭애씨드, 콜레스테롤, 락토바실러스/쌀발효물, 락토바실러스/콩발효추출물, 효모/율무씨발효여과물, 효모/감자추출물발효여과물, 락토바실러스/인삼뿌리발효여과물, 바실러스/쌀겨추출물/콩추출물발효여과물, 효모/쌀겨발효물, 하이드로제네이티드포스파티딜콜린, 수크로오스스테아레이트, 세테아릴알코올, 아세틸헥사펩타이드-8, 병풀잎추출물, 병풀뿌리추출물, 병풀잎/줄기추출물, 마데카소사이드, 아시아티코사이드, 마데카식애씨드, 아시아틱애씨드, 병풀잎/줄기가루
+  - term: 주의사항
+  - definition:
+    - strong: 사용할 때의 주의사항
+    - text: 1. 화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우에는 전문의 등과 상담할 것
+    - text: 2. 상처가 있는 부위 등에는 사용을 자제할 것
+    - strong: 보관 및 취급 시 주의사항
+    - text: 1) 어린이의 손이 닿지 않는 곳에 보관할 것
+    - text: 2) 직사광선을 피해서 보관할 것
+  - term: 품질보증기준
+  - definition: 본 상품에 이상이 있을 경우 공정 거래위원회 고시 ‘소비자 분쟁해결기준’에 의거 교환 또는 환불받을 수 있습니다.
+  - term: 소비자상담관련 번호
+  - definition: 고객상담센터 1588-3512
+- link "회사 소개":
+  - /url: https://www.toun28.com/renew/mission/main
+- link "B2B":
+  - /url: https://www.toun28.com/inquiry/b2b
+- link "인재영입":
+  - /url: https://toun28.career.greetinghr.com/
+- link "이용약관":
+  - /url: https://www.toun28.com/terms
+- link "개인정보 취급방침":
+  - /url: https://www.toun28.com/privacy
+- link "반품·교환 안내":
+  - /url: https://www.toun28.com/return-policy
+- generic: (주)톤28 사업자 정보
+- list:
+  - strong: 전화문의
+  - link "1588-3512":
+    - /url: tel:1588-3512
+  - listitem: 궁금하신 점은 화면 우측 하단의 상담 버튼을 통해 문의해 주세요
+- paragraph:
+  - strong: 상담가능시간
+  - text: 평일 10:00 ~ 19:00 (Break 13:00 ~ 14:00)
+- generic: © TOUN28 2021 | All right reserved.
+- button "TOUN28 상담 버튼":
+  - generic: TOUN28 상담 버튼

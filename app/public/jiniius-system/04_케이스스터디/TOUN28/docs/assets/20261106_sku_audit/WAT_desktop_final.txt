@@ -1,0 +1,977 @@
+- banner:
+  - link "香港．消費淨值滿HK$399免運費":
+    - /url: /zh-hk/home_delivery
+    - generic: 香港．消費淨值滿HK$399免運費
+  - link "立即成為易賞錢會員盡享獨家優惠":
+    - /url: /zh-hk/member-benefits
+    - generic: 立即成為易賞錢會員盡享獨家優惠
+  - link "首次APP下單買滿$450 輸入 NEWAPP 即減$50":
+    - /url: /zh-hk/offline_coupon
+    - generic: 首次APP下單買滿$450 輸入 NEWAPP 即減$50
+  - link "下載屈臣氏手機APP":
+    - /url: /zh-hk/
+  - link "尋找屈臣氏門市":
+    - /url: /zh-hk/store-finder
+  - link "Blog":
+    - /url: /zh-hk/blog
+  - text: 繁體
+  - generic: 門店 及 服務
+  - text: 
+  - generic: 登入
+  - text:  
+  - button "0 我的購物袋":
+    - generic: "0"
+    - generic: 我的購物袋
+  - text:   
+  - searchbox "在這裡搜尋..."
+  - generic: 尖友補給
+  - generic: 搜尋
+  - link:
+    - /url: /zh-hk/
+  - link "雙11多重賞":
+    - /url: /zh-hk/promo-double11_2026
+  - link "屈臣氏獨家":
+    - /url: /zh-hk/promo-watsons_collection
+  - link "保健":
+    - /url: /zh-hk/lc/040000
+  - link "美肌護膚":
+    - /url: /zh-hk/Skincare/lc/010000
+  - link "醫美":
+    - /url: /zh-hk/lc/400000
+  - link "美妝":
+    - /url: /zh-hk/lc/020000
+  - link "個人護理":
+    - /url: /zh-hk/Personal-Care/lc/030000
+  - link "頭髮護理":
+    - /url: /zh-hk/lc/300000
+  - link "母嬰":
+    - /url: /zh-hk/lc/060000
+  - link "寵物":
+    - /url: /zh-hk/lc/100000
+  - link "日用品":
+    - /url: /zh-hk/lc/080000
+  - link "原箱優惠":
+    - /url: /zh-hk/promo-virtual_bundle
+  - button "previous" [disabled]:
+    - generic: 
+  - button "next" [disabled]:
+    - generic: 
+  - link "品牌":
+    - /url: /zh-hk/b/brandList
+  - link "提防詐騙，如收到有關訂單、送貨或退款的可疑訊息，請提高警覺。切勿透露個人資料、信用卡資料、密碼或一次性密碼（OTP），並請透過官方客服渠道核實。":
+    - /url: /zh-hk/
+    - generic: 提防詐騙，如收到有關訂單、送貨或退款的可疑訊息，請提高警覺。切勿透露個人資料、信用卡資料、密碼或一次性密碼（OTP），並請透過官方客服渠道核實。
+  - link "免運費門市取貨，滿$250 合作自取點自取免運費，淨額消費滿$399，免費送貨上門！":
+    - /url: /zh-hk/shopping_tutorial
+    - generic: 免運費門市取貨，滿$250 合作自取點自取免運費，淨額消費滿$399，免費送貨上門！
+  - link "首次APP下單買滿$450 輸入 [NEWAPP] 即減$50":
+    - /url: /zh-hk/promo-AboutiWatsons
+    - generic: 首次APP下單買滿$450 輸入 [NEWAPP] 即減$50
+- main [active]:
+  - link "首頁":
+    - /url: /zh-hk/
+  - generic: /
+  - link "美肌護膚":
+    - /url: /zh-hk/%E7%BE%8E%E8%82%8C%E8%AD%B7%E8%86%9A/lc/010000
+  - generic: /
+  - link "面部護理":
+    - /url: /zh-hk/%E7%BE%8E%E8%82%8C%E8%AD%B7%E8%86%9A/%E9%9D%A2%E9%83%A8%E8%AD%B7%E7%90%86/c/010200
+  - generic: /
+  - link "精華":
+    - /url: /zh-hk/%E7%BE%8E%E8%82%8C%E8%AD%B7%E8%86%9A/%E7%B2%BE%E8%8F%AF/c/010202
+  - generic: /
+  - heading "CICA PDRN™ 抹茶水光透亮精華" [level=1]
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - img "CICA PDRN™ 抹茶水光透亮精華 image"
+  - heading "TOUN28" [level=2]:
+    - link "TOUN28":
+      - /url: /zh-hk/all-brands/b/120189/toun28
+  - generic: CICA PDRN™ 抹茶水光透亮精華
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - link "12 評論":
+    - /url: javascript:void(0)
+  - generic: "|售出100+件"
+  - button "wishlist":
+  - button "share":
+  - generic: 優惠券專區 (1)
+  - generic: 新顧客優惠：於屈臣氏網店首次購買精選產品滿$138即免運費
+  - generic: 有效日期至 13/11/2026
+  - button "立即領取"
+  - generic: HK$196.00 8折
+  - generic: "RRP HK$245.00 (慳: HK$49.00)"
+  - form "item-counter":
+    - generic: 數量
+    - button "minus":
+      - generic: 
+    - spinbutton "input-val": "1"
+    - button "plus":
+      - generic: 
+  - button "加入購物袋":
+    - generic: 加入購物袋
+  - button " 查看門市庫存 (可能有時間誤差)":
+    - generic: 
+    - generic: 查看門市庫存 (可能有時間誤差)
+  - button "送貨方式"
+  - button "預計送貨時間"
+  - generic: 送貨到府
+  - generic: 門店取貨
+  - generic: 合作自取點
+  - link "Clean Beauty  ":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabIsCleanBeauty:true
+    - generic: Clean Beauty
+    - generic: 
+    - generic: 
+  - link "重複使用  ":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabRefillPackType:%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8
+    - generic: 重複使用
+    - generic: 
+    - generic: 
+  - link "可持續紙品  ":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabBetterIngredients:%E5%8F%AF%E6%8C%81%E7%BA%8C%E7%B4%99%E5%93%81
+    - generic: 可持續紙品
+    - generic: 
+    - generic: 
+  - link "無塑料包裝  ":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabBetterPackaging:%E7%84%A1%E5%A1%91%E6%96%99%E5%8C%85%E8%A3%9D
+    - generic: 無塑料包裝
+    - generic: 
+    - generic: 
+  - generic: 產品編號
+  - generic: "825334"
+  - generic: 相關類別
+  - generic: 變更
+  - link "角鯊烷 ":
+    - /url: /zh-hk/keywordplp/%E8%A7%92%E9%AF%8A%E7%83%B7?displayKeyword=%E8%A7%92%E9%AF%8A%E7%83%B7&categoryCode=010000&productCode=825334&isIngredientsRelatedTag=true
+    - generic: 角鯊烷
+    - generic: 
+  - link "QUALITY 1ST 激光速效至臻系列 最高級別VC+抗衰老眼膜 (10片) image":
+    - /url: /zh-hk/quality-1st-%E6%BF%80%E5%85%89%E9%80%9F%E6%95%88%E8%87%B3%E8%87%BB%E7%B3%BB%E5%88%97-%E6%9C%80%E9%AB%98%E7%B4%9A%E5%88%A5vc-%E6%8A%97%E8%A1%B0%E8%80%81%E7%9C%BC%E8%86%9C-10%E7%89%87/p/BP_826519
+    - img "QUALITY 1ST 激光速效至臻系列 最高級別VC+抗衰老眼膜 (10片) image"
+  - link "DR JOU DR.JOU六重玻尿酸深層極保濕面膜 (7片) image":
+    - /url: /zh-hk/dr-jou-dr.jou%E5%85%AD%E9%87%8D%E7%8E%BB%E5%B0%BF%E9%85%B8%E6%B7%B1%E5%B1%A4%E6%A5%B5%E4%BF%9D%E6%BF%95%E9%9D%A2%E8%86%9C-7%E7%89%87/p/BP_820631
+    - img "DR JOU DR.JOU六重玻尿酸深層極保濕面膜 (7片) image"
+  - link "DR JOU DR.JOU六重玻尿酸深層極潤白面膜 (7片) image":
+    - /url: /zh-hk/dr-jou-dr.jou%E5%85%AD%E9%87%8D%E7%8E%BB%E5%B0%BF%E9%85%B8%E6%B7%B1%E5%B1%A4%E6%A5%B5%E6%BD%A4%E7%99%BD%E9%9D%A2%E8%86%9C-7%E7%89%87/p/BP_820632
+    - img "DR JOU DR.JOU六重玻尿酸深層極潤白面膜 (7片) image"
+  - link "大米 ":
+    - /url: /zh-hk/keywordplp/%E5%A4%A7%E7%B1%B3?displayKeyword=%E5%A4%A7%E7%B1%B3&categoryCode=010000&productCode=825334&isIngredientsRelatedTag=true
+    - generic: 大米
+    - generic: 
+  - link "BIFESTA 毛孔淨緻深層卸妝紙 (防水妝適用) 46片裝 (款式隨機發貨) image":
+    - /url: /zh-hk/bifesta-%E6%AF%9B%E5%AD%94%E6%B7%A8%E7%B7%BB%E6%B7%B1%E5%B1%A4%E5%8D%B8%E5%A6%9D%E7%B4%99-%E9%98%B2%E6%B0%B4%E5%A6%9D%E9%81%A9%E7%94%A8-46%E7%89%87%E8%A3%9D-%E6%AC%BE%E5%BC%8F%E9%9A%A8%E6%A9%9F%E7%99%BC%E8%B2%A8/p/BP_263903
+    - img "BIFESTA 毛孔淨緻深層卸妝紙 (防水妝適用) 46片裝 (款式隨機發貨) image"
+  - link "A.H.C. 瞬效淨膚B5微導入潔顏乳180毫升 image":
+    - /url: /zh-hk/a.h.c.-%E7%9E%AC%E6%95%88%E6%B7%A8%E8%86%9Ab5%E5%BE%AE%E5%B0%8E%E5%85%A5%E6%BD%94%E9%A1%8F%E4%B9%B3180%E6%AF%AB%E5%8D%87/p/BP_803398
+    - img "A.H.C. 瞬效淨膚B5微導入潔顏乳180毫升 image"
+  - link "德妃 DERMAFIRM DERMAFIRM R4 紫蘇舒緩修護爽膚水 150ML image":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-dermafirm-r4-%E7%B4%AB%E8%98%87%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E7%88%BD%E8%86%9A%E6%B0%B4-150ml/p/BP_822625
+    - img "德妃 DERMAFIRM DERMAFIRM R4 紫蘇舒緩修護爽膚水 150ML image"
+  - link "玻尿酸鈉 ":
+    - /url: /zh-hk/keywordplp/%E7%8E%BB%E5%B0%BF%E9%85%B8%E9%88%89?displayKeyword=%E7%8E%BB%E5%B0%BF%E9%85%B8%E9%88%89&categoryCode=010000&productCode=825334&isIngredientsRelatedTag=true
+    - generic: 玻尿酸鈉
+    - generic: 
+  - link "凡士林 凡士林強力補水面膜10片裝 image":
+    - /url: /zh-hk/%E5%87%A1%E5%A3%AB%E6%9E%97-%E5%87%A1%E5%A3%AB%E6%9E%97%E5%BC%B7%E5%8A%9B%E8%A3%9C%E6%B0%B4%E9%9D%A2%E8%86%9C10%E7%89%87%E8%A3%9D/p/BP_823943
+    - img "凡士林 凡士林強力補水面膜10片裝 image"
+  - link "舒特膚 舒特膚 積雪草舒敏修復精華液 30毫升 image":
+    - /url: /zh-hk/%E8%88%92%E7%89%B9%E8%86%9A-%E8%88%92%E7%89%B9%E8%86%9A-%E7%A9%8D%E9%9B%AA%E8%8D%89%E8%88%92%E6%95%8F%E4%BF%AE%E5%BE%A9%E7%B2%BE%E8%8F%AF%E6%B6%B2-30%E6%AF%AB%E5%8D%87/p/BP_816264
+    - img "舒特膚 舒特膚 積雪草舒敏修復精華液 30毫升 image"
+  - link "TARGETPRO BY WATSONS 水楊酸煥膚潔膚露500毫升 image":
+    - /url: /zh-hk/targetpro-by-watsons-%E6%B0%B4%E6%A5%8A%E9%85%B8%E7%85%A5%E8%86%9A%E6%BD%94%E8%86%9A%E9%9C%B2500%E6%AF%AB%E5%8D%87/p/BP_819902
+    - img "TARGETPRO BY WATSONS 水楊酸煥膚潔膚露500毫升 image"
+  - generic: 產品推薦
+  - button "previous" [disabled]:
+    - generic: 
+  - button "next":
+    - generic: 
+  - link "product detail":
+    - /url: /zh-hk/toun28-pdrn-%E5%A4%9C%E9%96%93%E5%AF%86%E9%9B%86%E7%B4%B0%E8%83%9E%E4%BF%AE%E8%AD%B7%E9%9C%9C/p/BP_825331
+    - img "TOUN28 PDRN 夜間密集細胞修護霜 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/toun28-pdrn-%E5%A4%9C%E9%96%93%E5%AF%86%E9%9B%86%E7%B4%B0%E8%83%9E%E4%BF%AE%E8%AD%B7%E9%9C%9C/p/BP_825331
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (7)
+  - generic: HK$180.00
+  - generic: RRPHK$225.00
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E8%B6%85%E7%B4%9A%E6%B0%B4%E6%BD%A4%E5%87%9D%E8%86%A0%E7%B6%A0%E6%B4%B2%E5%AE%89%E7%93%B6%E9%9D%A2%E8%86%9C5s/p/BP_825626
+    - img "S.NATURE S.NATURE 超級水潤凝膠綠洲安瓶面膜5S image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E8%B6%85%E7%B4%9A%E6%B0%B4%E6%BD%A4%E5%87%9D%E8%86%A0%E7%B6%A0%E6%B4%B2%E5%AE%89%E7%93%B6%E9%9D%A2%E8%86%9C5s/p/BP_825626
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (0)
+  - generic: HK$99.00
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E7%A9%8D%E9%9B%AA%E8%8D%89%E9%80%8F%E6%98%8E%E8%B3%AA%E9%85%B8%E4%BF%9D%E6%BF%95%E9%9D%A2%E9%9C%9C75ml/p/BP_823655
+    - img "SKIN1004 積雪草透明質酸保濕面霜75ML image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E7%A9%8D%E9%9B%AA%E8%8D%89%E9%80%8F%E6%98%8E%E8%B3%AA%E9%85%B8%E4%BF%9D%E6%BF%95%E9%9D%A2%E9%9C%9C75ml/p/BP_823655
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (2)
+  - generic: HK$109.00
+  - generic: RRPHK$169.00
+  - link "product detail":
+    - /url: /zh-hk/toun28-%E6%B2%B9%E6%95%8F%E9%80%80%E7%B4%85%E7%B4%B0%E7%B7%BB%E6%AF%9B%E5%AD%94%E5%87%9D%E9%9C%9C/p/BP_825330
+    - img "TOUN28 油敏退紅細緻毛孔凝霜 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/toun28-%E6%B2%B9%E6%95%8F%E9%80%80%E7%B4%85%E7%B4%B0%E7%B7%BB%E6%AF%9B%E5%AD%94%E5%87%9D%E9%9C%9C/p/BP_825330
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (1)
+  - generic: HK$168.00
+  - generic: RRPHK$210.00
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E9%A6%AC%E9%81%94%E5%8A%A0%E6%96%AF%E5%8A%A0%E7%A9%8D%E9%9B%AA%E8%8D%89%E8%88%92%E7%B7%A9%E6%80%A5%E6%95%91%E7%88%BD%E8%86%9A%E6%A3%8970%E7%89%87/p/BP_823652
+    - img "SKIN1004 馬達加斯加積雪草舒緩急救爽膚棉70片 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E9%A6%AC%E9%81%94%E5%8A%A0%E6%96%AF%E5%8A%A0%E7%A9%8D%E9%9B%AA%E8%8D%89%E8%88%92%E7%B7%A9%E6%80%A5%E6%95%91%E7%88%BD%E8%86%9A%E6%A3%8970%E7%89%87/p/BP_823652
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (6)
+  - generic: HK$109.00
+  - generic: RRPHK$149.00
+  - link "product detail":
+    - /url: /zh-hk/toun28-%E7%8E%BB%E5%B0%BF%E9%85%B8cica%E9%9B%B6%E6%95%8F%E9%8E%96%E6%B0%B4%E4%BF%9D%E6%BF%95%E9%9D%A2%E9%9C%9C/p/BP_825376
+    - img "TOUN28 玻尿酸CICA零敏鎖水保濕面霜 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/toun28-%E7%8E%BB%E5%B0%BF%E9%85%B8cica%E9%9B%B6%E6%95%8F%E9%8E%96%E6%B0%B4%E4%BF%9D%E6%BF%95%E9%9D%A2%E9%9C%9C/p/BP_825376
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (1)
+  - generic: HK$204.00
+  - generic: RRPHK$255.00
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E9%A6%AC%E9%81%94%E5%8A%A0%E6%96%AF%E5%8A%A0%E7%A9%8D%E9%9B%AA%E8%8D%89%E6%B0%B4%E5%87%9D%E4%BF%9D%E6%BF%95%E9%9D%A2%E8%86%9C5%E7%89%87/p/BP_823650
+    - img "SKIN1004 馬達加斯加積雪草水凝保濕面膜5片 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E9%A6%AC%E9%81%94%E5%8A%A0%E6%96%AF%E5%8A%A0%E7%A9%8D%E9%9B%AA%E8%8D%89%E6%B0%B4%E5%87%9D%E4%BF%9D%E6%BF%95%E9%9D%A2%E8%86%9C5%E7%89%87/p/BP_823650
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (4)
+  - generic: HK$79.00
+  - generic: RRPHK$109.00
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E6%B0%B4%E6%BC%BE%E8%A7%92%E9%AF%8A%E7%83%B7%E4%BF%9D%E6%BF%95%E9%9C%9C/p/BP_825621
+    - img "S.NATURE S.NATURE 水漾角鯊烷保濕霜 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E6%B0%B4%E6%BC%BE%E8%A7%92%E9%AF%8A%E7%83%B7%E4%BF%9D%E6%BF%95%E9%9C%9C/p/BP_825621
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (0)
+  - generic: HK$169.00
+  - link "product detail":
+    - /url: /zh-hk/menokin-30%E7%A7%92%E6%A5%B5%E9%80%9F%E5%85%8D%E6%B4%97%E6%B3%A1%E6%B3%A1%E9%9D%A2%E8%86%9C-%E8%88%92%E7%B7%A9%E9%8E%AE%E9%9D%9C-95%E6%AF%AB%E5%8D%87/p/BP_826044
+    - img "MENOKIN 30秒極速免洗泡泡面膜 (舒緩鎮靜) 95毫升 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/menokin-30%E7%A7%92%E6%A5%B5%E9%80%9F%E5%85%8D%E6%B4%97%E6%B3%A1%E6%B3%A1%E9%9D%A2%E8%86%9C-%E8%88%92%E7%B7%A9%E9%8E%AE%E9%9D%9C-95%E6%AF%AB%E5%8D%87/p/BP_826044
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (0)
+  - generic: HK$158.00
+  - generic: RRPHK$220.00
+  - link "product detail":
+    - /url: /zh-hk/dr.reju-%E9%BA%97%E7%8F%A0%E5%A5%A7pdrn%E4%BF%AE%E5%BE%A9%E5%85%A8%E6%95%88%E9%9C%9C%E5%8D%87%E7%B4%9A%E7%89%8820g-%E6%96%B0%E8%88%8A%E5%8C%85%E8%A3%9D%E9%9A%A8%E6%A9%9F%E7%99%BC%E8%B2%A8/p/BP_822167
+    - img "DR.REJU 麗珠奧PDRN修復全效霜升級版20G (新舊包裝隨機發貨) image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/dr.reju-%E9%BA%97%E7%8F%A0%E5%A5%A7pdrn%E4%BF%AE%E5%BE%A9%E5%85%A8%E6%95%88%E9%9C%9C%E5%8D%87%E7%B4%9A%E7%89%8820g-%E6%96%B0%E8%88%8A%E5%8C%85%E8%A3%9D%E9%9A%A8%E6%A9%9F%E7%99%BC%E8%B2%A8/p/BP_822167
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (23)
+  - generic: HK$219.00
+  - generic: RRPHK$299.00
+  - link "product detail":
+    - /url: /zh-hk/ongredients-ongredients-%E8%82%8C%E8%86%9A%E9%98%B2%E8%AD%B7%E8%88%92%E7%B7%A9%E9%9D%A2%E8%86%9C5-1/p/BP_823576
+    - img "ONGREDIENTS ONGREDIENTS 肌膚防護舒緩面膜5+1 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/ongredients-ongredients-%E8%82%8C%E8%86%9A%E9%98%B2%E8%AD%B7%E8%88%92%E7%B7%A9%E9%9D%A2%E8%86%9C5-1/p/BP_823576
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (4)
+  - generic: HK$69.00
+  - generic: RRPHK$99.00
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E7%A9%8D%E9%9B%AA%E8%8D%89%E7%8E%AB%E7%91%B0%E9%B9%BD%E7%B7%8A%E8%87%B4%E6%AF%9B%E5%AD%94%E6%80%A5%E6%95%91%E6%B3%A5%E6%A3%92/p/BP_823659
+    - img "SKIN1004 積雪草玫瑰鹽緊致毛孔急救泥棒 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/skin1004-%E7%A9%8D%E9%9B%AA%E8%8D%89%E7%8E%AB%E7%91%B0%E9%B9%BD%E7%B7%8A%E8%87%B4%E6%AF%9B%E5%AD%94%E6%80%A5%E6%95%91%E6%B3%A5%E6%A3%92/p/BP_823659
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (2)
+  - generic: HK$99.00
+  - generic: RRPHK$119.00
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E6%B0%B4%E6%BD%A4%E7%B6%A0%E6%B4%B2%E4%BF%9D%E6%BF%95%E7%88%BD%E8%86%9A%E6%B0%B4300ml/p/BP_825625
+    - img "S.NATURE S.NATURE 水潤綠洲保濕爽膚水300ML image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/s.nature-s.nature-%E6%B0%B4%E6%BD%A4%E7%B6%A0%E6%B4%B2%E4%BF%9D%E6%BF%95%E7%88%BD%E8%86%9A%E6%B0%B4300ml/p/BP_825625
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (0)
+  - generic: HK$159.00
+  - link "product detail":
+    - /url: /zh-hk/dr.reju-dr.reju-all-pdrn%E5%85%A8%E6%95%88%E4%BF%AE%E5%BE%A9%E8%82%8C%E8%86%9A%E5%86%8D%E7%94%9F%E9%9D%A2%E8%86%9C-36%E6%AF%AB%E5%8D%87x4%E7%89%87/p/BP_824639
+    - img "DR.REJU DR.REJU ALL PDRN全效修復肌膚再生面膜 36毫升X4片 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/dr.reju-dr.reju-all-pdrn%E5%85%A8%E6%95%88%E4%BF%AE%E5%BE%A9%E8%82%8C%E8%86%9A%E5%86%8D%E7%94%9F%E9%9D%A2%E8%86%9C-36%E6%AF%AB%E5%8D%87x4%E7%89%87/p/BP_824639
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (5)
+  - generic: HK$138.00
+  - generic: RRPHK$169.00
+  - link "product detail":
+    - /url: /zh-hk/skintific-pdrn-%E5%86%8D%E7%94%9F%E8%86%A0%E5%8E%9F%E5%85%89%E6%84%9F%E9%9D%A2%E9%9C%9C-30%E5%85%8B/p/BP_824627
+    - img "SKINTIFIC PDRN 再生膠原光感面霜 30克 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/skintific-pdrn-%E5%86%8D%E7%94%9F%E8%86%A0%E5%8E%9F%E5%85%89%E6%84%9F%E9%9D%A2%E9%9C%9C-30%E5%85%8B/p/BP_824627
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (11)
+  - generic: HK$158.00
+  - link "product detail":
+    - /url: /zh-hk/naturals-by-watsons-%E5%87%9D%E6%99%82%E7%85%A5%E9%BD%A1%E8%86%A0%E5%9B%8A%E5%87%9D%E9%9C%9C50ml/p/BP_825598
+    - img "NATURALS BY WATSONS 凝時煥齡膠囊凝霜50ML image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/naturals-by-watsons-%E5%87%9D%E6%99%82%E7%85%A5%E9%BD%A1%E8%86%A0%E5%9B%8A%E5%87%9D%E9%9C%9C50ml/p/BP_825598
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (0)
+  - generic: HK$139.00
+  - generic: RRPHK$149.00
+  - link "product detail":
+    - /url: /zh-hk/rozoe-%E5%A4%A7%E9%A6%AC%E5%A3%AB%E9%9D%A9%E7%8E%AB%E7%91%B0%E7%B4%94%E9%9C%B250ml/p/BP_823011
+    - img "ROZOE 大馬士革玫瑰純露50ML image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/rozoe-%E5%A4%A7%E9%A6%AC%E5%A3%AB%E9%9D%A9%E7%8E%AB%E7%91%B0%E7%B4%94%E9%9C%B250ml/p/BP_823011
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (4)
+  - generic: HK$108.80
+  - generic: RRPHK$128.00
+  - link "product detail":
+    - /url: /zh-hk/%E6%A1%83%E7%91%9E%E4%B8%B9-%E6%A1%83%E7%91%9E%E4%B8%B9-5%E9%87%8D%E5%88%86%E5%AD%90%E9%87%98%E6%BB%8B%E9%A4%8A%E5%85%A8%E5%A4%A9%E5%80%99%E4%BF%9D%E6%BF%95%E7%B2%BE%E8%8F%AF-100-%E6%AF%AB%E5%8D%87/p/BP_819807
+    - img "桃瑞丹 桃瑞丹 5重分子釘滋養全天候保濕精華 100 毫升 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/%E6%A1%83%E7%91%9E%E4%B8%B9-%E6%A1%83%E7%91%9E%E4%B8%B9-5%E9%87%8D%E5%88%86%E5%AD%90%E9%87%98%E6%BB%8B%E9%A4%8A%E5%85%A8%E5%A4%A9%E5%80%99%E4%BF%9D%E6%BF%95%E7%B2%BE%E8%8F%AF-100-%E6%AF%AB%E5%8D%87/p/BP_819807
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (1)
+  - generic: HK$129.00
+  - generic: RRPHK$195.00
+  - link "product detail":
+    - /url: /zh-hk/anua-anua-pdrn%E9%80%8F%E6%98%8E%E8%B3%AA%E9%85%B8%E6%B0%B4%E5%85%89%E8%86%A0%E5%9B%8A%E5%99%B4%E9%9C%A730%E6%AF%AB%E5%8D%87/p/BP_824059
+    - img "ANUA ANUA PDRN透明質酸水光膠囊噴霧30毫升 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/anua-anua-pdrn%E9%80%8F%E6%98%8E%E8%B3%AA%E9%85%B8%E6%B0%B4%E5%85%89%E8%86%A0%E5%9B%8A%E5%99%B4%E9%9C%A730%E6%AF%AB%E5%8D%87/p/BP_824059
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (9)
+  - generic: HK$89.00
+  - generic: RRPHK$119.00
+  - link "product detail":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-r4-%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E9%80%8F%E4%BA%AE%E9%98%B2%E6%9B%AC%E9%9C%9C/p/BP_823850
+    - img "德妃 DERMAFIRM R4 舒緩修護透亮防曬霜 image"
+  - button "加入購物袋"
+  - button "wishlist":
+  - link "product detail":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-r4-%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E9%80%8F%E4%BA%AE%E9%98%B2%E6%9B%AC%E9%9C%9C/p/BP_823850
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: (5)
+  - generic: HK$144.00
+  - generic: RRPHK$288.00
+  - button "優惠 (贈品送完即止)":
+    - generic: 優惠 (贈品送完即止)
+  - button "產品資料":
+    - generic: 產品資料
+  - button "送貨方式":
+    - generic: 送貨方式
+  - button "previous" [disabled]:
+    - generic: 
+  - button "next" [disabled]:
+    - generic: 
+  - generic: 優惠 (贈品送完即止)
+  - text: ": (7)"
+  - link "買精選護膚及沐浴露產品, 送Cerave長效保濕修復 7ML ":
+    - /url: /zh-hk/promotion-code/153394
+    - text: 買精選護膚及沐浴露產品, 送Cerave長效保濕修復 7ML
+    - generic: 
+  - link "購買任何護膚產品滿$259, 送 PLEUVOIR 純素香氛護手霜30毫升 - 扁柏木皮革乙支. 數量有限 , 送完即止。不適用於任何特快模式。 ":
+    - /url: /zh-hk/promotion-code/206117
+    - text: 購買任何護膚產品滿$259, 送 PLEUVOIR 純素香氛護手霜30毫升 - 扁柏木皮革乙支. 數量有限 , 送完即止。不適用於任何特快模式。
+    - generic: 
+  - link "563_Free Hankie ":
+    - /url: /zh-hk/promotion-code/217663
+    - text: 563_Free Hankie
+    - generic: 
+  - link "購買護膚/化妝產品滿$199, 送SOFINA ANGE LONG KEEP BASE UV ORANGE Mini 5ml。數量有限, 送完即止。不適用於任何特快模式。[網店限定] ":
+    - /url: /zh-hk/promotion-code/217726
+    - text: 購買護膚/化妝產品滿$199, 送SOFINA ANGE LONG KEEP BASE UV ORANGE Mini 5ml。數量有限, 送完即止。不適用於任何特快模式。[網店限定]
+    - generic: 
+  - link "購買TOUN28 產品滿2件，即送CICA PDRN™ 積雪草深度保濕面膜1片及抹茶水光透亮精華24毫升贈品 1件。 ":
+    - /url: /zh-hk/promotion-code/218001
+    - text: 購買TOUN28 產品滿2件，即送CICA PDRN™ 積雪草深度保濕面膜1片及抹茶水光透亮精華24毫升贈品 1件。
+    - generic: 
+  - link "購買TOUN28 產品滿1件，即送CICA PDRN™ 積雪草深度保濕面膜1片 ":
+    - /url: /zh-hk/promotion-code/218000
+    - text: 購買TOUN28 產品滿1件，即送CICA PDRN™ 積雪草深度保濕面膜1片
+    - generic: 
+  - link "購買護膚/化妝產品滿$150, 送$50屈臣氏電子現金券。電子現金券有效期為 9/11/2026 - 29/11/2026，於下次購買任何護膚/化妝產品滿$150可使用一張。 ":
+    - /url: /zh-hk/promotion-code/218679
+    - text: 購買護膚/化妝產品滿$150, 送$50屈臣氏電子現金券。電子現金券有效期為 9/11/2026 - 29/11/2026，於下次購買任何護膚/化妝產品滿$150可使用一張。
+    - generic: 
+  - generic: 比較類似商品
+  - button "previous" [disabled]:
+    - generic: 
+  - button "next":
+    - generic: 
+  - generic: 價格
+  - generic: 包裝規格
+  - generic: 評分
+  - generic: 原產地
+  - generic: 特點
+  - generic: 成份
+  - generic: 這個商品
+  - link "product detail":
+    - /url: /zh-hk/toun28-cica-pdrn%E2%84%A2-%E6%8A%B9%E8%8C%B6%E6%B0%B4%E5%85%89%E9%80%8F%E4%BA%AE%E7%B2%BE%E8%8F%AF/p/BP_825334
+    - img "TOUN28 CICA PDRN™ 抹茶水光透亮精華 image"
+  - link "查看更多":
+    - /url: /zh-hk/toun28-cica-pdrn%E2%84%A2-%E6%8A%B9%E8%8C%B6%E6%B0%B4%E5%85%89%E9%80%8F%E4%BA%AE%E7%B2%BE%E8%8F%AF/p/BP_825334
+    - generic: 查看更多
+  - link "CICA PDRN™ 抹茶水光透亮精華":
+    - /url: /zh-hk/toun28-cica-pdrn%E2%84%A2-%E6%8A%B9%E8%8C%B6%E6%B0%B4%E5%85%89%E9%80%8F%E4%BA%AE%E7%B2%BE%E8%8F%AF/p/BP_825334
+    - generic: CICA PDRN™ 抹茶水光透亮精華
+  - text:     
+  - generic: HK$196.00
+  - generic: 8折
+  - generic: RRP HK$245.00
+  - generic: 50毫克
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (12)
+  - generic: 韓國
+  - link "Clean Beauty ":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabIsCleanBeauty:true
+    - generic: Clean Beauty
+    - generic: 
+    - text: 
+  - text:   
+  - generic: 水、椰油辛酸酯/癸酸酯、丙二醇、角鯊烷、甘油、積雪草萃取、菸鹼醯胺、戊二醇、1,2-己二醇、聚甘油-10月桂酸酯、丁二醇、乙二胺二琥珀酸三鈉、羥乙基纖維素、乙基己基甘油、黃原膠、辛甘醇、腺苷、孔雀石萃取物、茶葉萃取物、辛酸/癸酸甘油三酯、黃連根萃取物、精胺酸、糊精、可可萃取物、透明質酸鈉、聚甘油-3甲基葡萄糖二硬脂酸酯、氫化卵磷脂、DNA鈉、磷酸氫二鈉、聚山梨醇酯60、積雪草葉水、磷酸鈉、泛醇神經醯胺NP、硬脂酸、膽固醇、乳酸桿菌/米發酵物、乳酸桿菌/大豆發酵物萃取物、酵母菌/薏苡仁發酵濾液、酵母菌/馬鈴薯萃取物發酵濾液、乳酸棒菌/人參根發酵濾液、芽孢桿菌/米糠/大豆發酵濾液、酵母菌/米糠發酵物、氫化磷脂酰膽鹼、蔗糖硬脂酸酯、鯨蠟硬脂醇、乙醯基六肽-8、積雪草葉萃取物、積雪草根萃取物、積雪草葉/莖萃取物、羥基積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草酸、羥基積雪草酸、羥基積雪草酸、羥基積雪草酸莖積雪草苷、羥基積雪草酸、羥基積雪草酸菌葉
+  - link "product detail":
+    - /url: /zh-hk/olay-olay-%E6%96%B0%E7%94%9F%E9%AB%98%E6%95%88%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E6%AF%AB%E5%8D%87/p/BP_816228
+    - img "OLAY OLAY 新生高效緊緻精華 30毫升 image"
+  - link "查看更多":
+    - /url: /zh-hk/olay-olay-%E6%96%B0%E7%94%9F%E9%AB%98%E6%95%88%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E6%AF%AB%E5%8D%87/p/BP_816228
+    - generic: 查看更多
+  - link "OLAY 新生高效緊緻精華 30毫升":
+    - /url: /zh-hk/olay-olay-%E6%96%B0%E7%94%9F%E9%AB%98%E6%95%88%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E6%AF%AB%E5%8D%87/p/BP_816228
+    - generic: OLAY 新生高效緊緻精華 30毫升
+  - text:     
+  - generic: HK$239.90
+  - generic: 30毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (1)
+  - generic: 中國
+  - generic: "-"
+  - generic: OLAY 新生高效緊緻精華 30毫升
+  - link "product detail":
+    - /url: /zh-hk/targetpro-by-watsons-%E5%85%A8%E9%9D%A2%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF/p/BP_819062
+    - img "TARGETPRO BY WATSONS 全面修護精華 image"
+  - link "查看更多":
+    - /url: /zh-hk/targetpro-by-watsons-%E5%85%A8%E9%9D%A2%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF/p/BP_819062
+    - generic: 查看更多
+  - link "全面修護精華":
+    - /url: /zh-hk/targetpro-by-watsons-%E5%85%A8%E9%9D%A2%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF/p/BP_819062
+    - generic: 全面修護精華
+  - text:     
+  - generic: HK$199.00
+  - generic: 30毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (22)
+  - generic: 日本
+  - link "可持續紙品":
+    - /url: /zh-hk/c/1?q=:topRated:category:1:elabBetterPackaging:%E5%8F%AF%E6%8C%81%E7%BA%8C%E7%B4%99%E5%93%81
+    - generic: 可持續紙品
+    - text: 
+  - generic: N/A
+  - link "product detail":
+    - /url: /zh-hk/skintific-5x%E7%A5%9E%E7%B6%93%E9%86%AF%E8%83%BA%E4%BF%9D%E6%BF%95%E4%BF%AE%E5%BE%A9%E7%B2%BE%E8%8F%AF20%E6%AF%AB%E5%8D%87/p/BP_822646
+    - img "SKINTIFIC 5X神經醯胺保濕修復精華20毫升 image"
+  - link "查看更多":
+    - /url: /zh-hk/skintific-5x%E7%A5%9E%E7%B6%93%E9%86%AF%E8%83%BA%E4%BF%9D%E6%BF%95%E4%BF%AE%E5%BE%A9%E7%B2%BE%E8%8F%AF20%E6%AF%AB%E5%8D%87/p/BP_822646
+    - generic: 查看更多
+  - link "5X神經醯胺保濕修復精華20毫升":
+    - /url: /zh-hk/skintific-5x%E7%A5%9E%E7%B6%93%E9%86%AF%E8%83%BA%E4%BF%9D%E6%BF%95%E4%BF%AE%E5%BE%A9%E7%B2%BE%E8%8F%AF20%E6%AF%AB%E5%8D%87/p/BP_822646
+    - generic: 5X神經醯胺保濕修復精華20毫升
+  - text:     
+  - generic: HK$109.00
+  - generic: 20 毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (12)
+  - generic: "-"
+  - generic: "-"
+  - generic: 5倍神經醯胺 BFL益生元 積雪草
+  - link "product detail":
+    - /url: /zh-hk/%E5%A6%AE%E7%B6%AD%E9%9B%85-%E5%A6%AE%E7%B6%AD%E9%9B%85%E7%B4%B0%E8%83%9E%E6%BF%80%E6%B4%BB%E4%B8%89%E5%8D%80%E6%8F%90%E6%8B%89%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E4%BA%B3%E5%8D%87/p/BP_814395
+    - img "妮維雅 妮維雅細胞激活三區提拉緊緻精華 30亳升 image"
+  - link "查看更多":
+    - /url: /zh-hk/%E5%A6%AE%E7%B6%AD%E9%9B%85-%E5%A6%AE%E7%B6%AD%E9%9B%85%E7%B4%B0%E8%83%9E%E6%BF%80%E6%B4%BB%E4%B8%89%E5%8D%80%E6%8F%90%E6%8B%89%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E4%BA%B3%E5%8D%87/p/BP_814395
+    - generic: 查看更多
+  - link "妮維雅細胞激活三區提拉緊緻精華 30亳升":
+    - /url: /zh-hk/%E5%A6%AE%E7%B6%AD%E9%9B%85-%E5%A6%AE%E7%B6%AD%E9%9B%85%E7%B4%B0%E8%83%9E%E6%BF%80%E6%B4%BB%E4%B8%89%E5%8D%80%E6%8F%90%E6%8B%89%E7%B7%8A%E7%B7%BB%E7%B2%BE%E8%8F%AF-30%E4%BA%B3%E5%8D%87/p/BP_814395
+    - generic: 妮維雅細胞激活三區提拉緊緻精華 30亳升
+  - text:     
+  - generic: HK$231.00
+  - generic: 75折
+  - generic: RRP HK$309.00
+  - generic: 30毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (29)
+  - generic: 波蘭
+  - generic: "-"
+  - generic: NA
+  - link "product detail":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-dermafirm-r4-%E7%B4%AB%E8%98%87%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF%E6%B6%B2-30ml/p/BP_822626
+    - img "德妃 DERMAFIRM DERMAFIRM R4 紫蘇舒緩修護精華液 30ML image"
+  - link "查看更多":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-dermafirm-r4-%E7%B4%AB%E8%98%87%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF%E6%B6%B2-30ml/p/BP_822626
+    - generic: 查看更多
+  - link "DERMAFIRM R4 紫蘇舒緩修護精華液 30ML":
+    - /url: /zh-hk/%E5%BE%B7%E5%A6%83-dermafirm-dermafirm-r4-%E7%B4%AB%E8%98%87%E8%88%92%E7%B7%A9%E4%BF%AE%E8%AD%B7%E7%B2%BE%E8%8F%AF%E6%B6%B2-30ml/p/BP_822626
+    - generic: DERMAFIRM R4 紫蘇舒緩修護精華液 30ML
+  - text:     
+  - generic: HK$134.00
+  - generic: 5折
+  - generic: RRP HK$268.00
+  - generic: 30毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (5)
+  - generic: 韓國
+  - generic: "-"
+  - generic: 水, 丁二醇, 甘油, 丙二醇, 1,2-己二醇, 泛醇/維他命B5, 聚甘油-4 癸酸酯, 卡波姆, 尿囊素, 氨丁三醇, 聚丙烯酰基二甲基牛磺酸鈉, 香料/香精, 乙基己基甘油, 腺苷, 乙二胺四乙酸二鈉, 透明質酸鈉/玻尿酸鈉, 積雪草提取物, 氫化卵磷脂, 甘油丙烯酸酯/丙烯酸共聚物, 馬齒莧提取物, 辛酸/癸酸甘油三酯, PVM/MA共聚物, 北美金縷梅提取物, 磺酸鈉, 水解膠原蛋白, 精氨酸, 三太-1 銅, 棕櫚酰三太-1, 紫蘇葉提取物, 藍桉葉提取物, 表面活性素鈉, 鯨蠟醇磷酸鉀, β-葡聚糖, 乙酰基六太-8, 棕櫚酰五太-4, 三太-1, 甘氨酸, 絲氨酸, 天冬氨酸, 谷氨酸, 亮氨酸, 賴氨酸, 丙氨酸, 脯氨酸, 苯丙氨酸, 蘇氨酸, 纈氨酸, 異亮氨酸, 酪氨酸, 組氨酸, 半胱氨酸, 蛋氨酸
+  - link "product detail":
+    - /url: /zh-hk/quality-1st-quality-first-%E6%BF%80%E5%85%89%E9%80%9F%E6%95%88%E7%B3%BB%E5%88%97-%E9%AB%98%E6%BF%83%E5%BA%A6%E7%B6%AD%E4%BB%96%E5%91%BDc%E6%AF%9B%E5%AD%94%E8%AD%B7%E7%90%86%E7%B2%BE%E8%8F%AF-30ml/p/BP_824958
+    - img "QUALITY 1ST QUALITY FIRST 激光速效系列 高濃度維他命C毛孔護理精華 30ML image"
+  - link "查看更多":
+    - /url: /zh-hk/quality-1st-quality-first-%E6%BF%80%E5%85%89%E9%80%9F%E6%95%88%E7%B3%BB%E5%88%97-%E9%AB%98%E6%BF%83%E5%BA%A6%E7%B6%AD%E4%BB%96%E5%91%BDc%E6%AF%9B%E5%AD%94%E8%AD%B7%E7%90%86%E7%B2%BE%E8%8F%AF-30ml/p/BP_824958
+    - generic: 查看更多
+  - link "QUALITY FIRST 激光速效系列 高濃度維他命C毛孔護理精華 30ML":
+    - /url: /zh-hk/quality-1st-quality-first-%E6%BF%80%E5%85%89%E9%80%9F%E6%95%88%E7%B3%BB%E5%88%97-%E9%AB%98%E6%BF%83%E5%BA%A6%E7%B6%AD%E4%BB%96%E5%91%BDc%E6%AF%9B%E5%AD%94%E8%AD%B7%E7%90%86%E7%B2%BE%E8%8F%AF-30ml/p/BP_824958
+    - generic: QUALITY FIRST 激光速效系列 高濃度維他命C毛孔護理精華 30ML
+  - text:     
+  - generic: HK$89.00
+  - generic: 65折
+  - generic: RRP HK$138.00
+  - generic: 30ML
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (1)
+  - generic: 日本
+  - generic: "-"
+  - generic: 半乳糖酵母樣菌發酵產物、菸鹼醯胺、丁二醇、雙甘油、抗壞血酸葡萄苷、抗壞血酸（純維他命C）、棕櫚酸抗壞血酸酯磷酸酯三鈉、抗壞血酸磷酸酯鎂、神經醯胺 NP、甜菜鹼、積雪草萃取、黃芩根萃取、虎杖根萃取、光果甘草根萃取、茶葉萃取、迷苔香葉萃取、母菊花萃取、黃檗樹皮萃取。
+  - link "product detail":
+    - /url: /zh-hk/a.h.c.-ahc-%E7%9E%AC%E6%95%88%E4%BF%9D%E6%BF%95b5%E5%BE%AE%E5%B0%8E%E5%85%A5biome%E7%B2%BE%E8%8F%AF%E8%B3%A6%E6%B4%BB%E8%82%8C%E5%BA%95%E6%B6%B2-30%E6%AF%AB%E5%8D%87/p/BP_807959
+    - img "A.H.C. AHC 瞬效保濕B5微導入BIOME精華賦活肌底液 30毫升 image"
+  - link "查看更多":
+    - /url: /zh-hk/a.h.c.-ahc-%E7%9E%AC%E6%95%88%E4%BF%9D%E6%BF%95b5%E5%BE%AE%E5%B0%8E%E5%85%A5biome%E7%B2%BE%E8%8F%AF%E8%B3%A6%E6%B4%BB%E8%82%8C%E5%BA%95%E6%B6%B2-30%E6%AF%AB%E5%8D%87/p/BP_807959
+    - generic: 查看更多
+  - link "AHC 瞬效保濕B5微導入BIOME精華賦活肌底液 30毫升":
+    - /url: /zh-hk/a.h.c.-ahc-%E7%9E%AC%E6%95%88%E4%BF%9D%E6%BF%95b5%E5%BE%AE%E5%B0%8E%E5%85%A5biome%E7%B2%BE%E8%8F%AF%E8%B3%A6%E6%B4%BB%E8%82%8C%E5%BA%95%E6%B6%B2-30%E6%AF%AB%E5%8D%87/p/BP_807959
+    - generic: AHC 瞬效保濕B5微導入BIOME精華賦活肌底液 30毫升
+  - text:     
+  - generic: HK$139.00
+  - generic: 49折
+  - generic: RRP HK$287.00
+  - generic: 12X30毫升
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: (33)
+  - generic: 韓國
+  - generic: "-"
+  - generic: "-"
+  - generic: 產品資料
+  - generic: 隱藏
+  - generic: 描述
+  - text: 專為追求極致透亮、玻璃水光肌設計的科研級妝前高效發光精華乳。採用獨特的雙層搖勻拿鐵質地，將深層屏障修護與高階水光注入完美結合。核心注入獨家 CICA PDRN 99™ 活性複合成分，能精準調節油水平衡。
+  - heading "原產地" [level=4]
+  - paragraph: 韓國
+  - heading "優點" [level=4]
+  - paragraph: 經臨床實證，能即時提升肌膚水光高達 412.45%，並長效維持長達 24 小時的持久妝前光澤。不僅能瞬間為肌底密集灌水，更能由源頭修護因壓力引發的粗糙，大幅提升後續底妝的服貼度、持久力與透明感，專治熬夜暗沉與妝後卡粉起屑等痛點，一抹折射出宛如天生的原生高級水光。
+  - heading "產品用法" [level=4]
+  - paragraph: 使用前請充分搖勻。取適量均勻塗抹於肌膚。
+  - heading "成分組合" [level=4]
+  - paragraph: 水、椰油辛酸酯/癸酸酯、丙二醇、角鯊烷、甘油、積雪草萃取、菸鹼醯胺、戊二醇、1,2-己二醇、聚甘油-10月桂酸酯、丁二醇、乙二胺二琥珀酸三鈉、羥乙基纖維素、乙基己基甘油、黃原膠、辛甘醇、腺苷、孔雀石萃取物、茶葉萃取物、辛酸/癸酸甘油三酯、黃連根萃取物、精胺酸、糊精、可可萃取物、透明質酸鈉、聚甘油-3甲基葡萄糖二硬脂酸酯、氫化卵磷脂、DNA鈉、磷酸氫二鈉、聚山梨醇酯60、積雪草葉水、磷酸鈉、泛醇神經醯胺NP、硬脂酸、膽固醇、乳酸桿菌/米發酵物、乳酸桿菌/大豆發酵物萃取物、酵母菌/薏苡仁發酵濾液、酵母菌/馬鈴薯萃取物發酵濾液、乳酸棒菌/人參根發酵濾液、芽孢桿菌/米糠/大豆發酵濾液、酵母菌/米糠發酵物、氫化磷脂酰膽鹼、蔗糖硬脂酸酯、鯨蠟硬脂醇、乙醯基六肽-8、積雪草葉萃取物、積雪草根萃取物、積雪草葉/莖萃取物、羥基積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草苷、羥基積雪草酸、羥基積雪草酸、氫莖積雪草酸、羥基積雪草酸、羥基積雪草酸、羥基積雪草酸莖積雪草苷、羥基積雪草酸、羥基積雪草酸菌葉
+  - heading "送貨詳情" [level=4]
+  - paragraph: NA
+  - heading "每包件數" [level=4]
+  - paragraph: 50毫克
+  - heading "儲存方式" [level=4]
+  - paragraph: 請存放於陰涼乾燥處，避免陽光直射。
+  - heading "提示" [level=4]
+  - paragraph: 僅限外用，且僅限成人使用。避免接觸眼睛。請置於兒童不能接觸的地方。請勿塗抹於受損或刺激的皮膚上。
+  - heading "寬" [level=4]
+  - paragraph: "4.5"
+  - heading "高" [level=4]
+  - paragraph: "12"
+  - heading "深" [level=4]
+  - paragraph: "4.5"
+  - generic: 送貨方式
+  - button "隱藏"
+  - paragraph:
+    - text: 1. 送貨到府（受衛生署條例規管產品除外 ）
+    - text: 訂單總額淨值滿$399免運費（商戶直送產品除外），選取「特快送」並於早上9點至下午7點下單，最快30分鐘內送到。
+  - paragraph:
+    - text: 2. 門店取貨（商戶直送產品除外）
+    - text: 超過160間門市滿$50免費店取，選取「特快門店取貨」最快30分鐘可取貨。
+  - paragraph:
+    - text: 3. 順豐智能櫃（受衛生署條例規管或商戶直送產品除外）
+    - text: 買滿$250免費順豐智能櫃自提點自取，服務範圍包括香港島、九龍、新界、各大小屋邨、屋苑商場等。
+  - paragraph:
+    - text: 4.內地跨境直郵
+    - text: 訂單總額淨值滿$500免運費 (嬰兒尿片/ 成人尿片/ 商戶直送產品除外)。
+  - heading "評論" [level=2]
+  - generic: "4.8"
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - generic: 
+  - list:
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: "10"
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: "2"
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: "0"
+    - generic: 
+    - generic: 
+    - generic: "0"
+    - generic: 
+    - generic: "0"
+  - img "icon"
+  - generic: 評論總結
+  - generic: 用戶認爲產品質地清爽、薄透、吸收快，好推勻，無厚重膜感、不黏膩。保濕度夠，改善乾燥，肌膚平滑有微水光，T字部位不油。成分適合不穩定膚況，可作妝前乳，使粉底與潤色防曬更服貼。外觀獨特，想要回購。
+  - text: 展示更多
+  - generic: 12 評論
+  - button "寫評論"
+  - text: 
+  - button "全部"
+  - button "最新"
+  - img "product_review_desc_icon"
+  - text: 真實評論
+  - link "J** 1 個顧客看完此評論後而購買      1 星期前 我唔鍾意朝早搽太多層，會覺得好笠。呢支就啱我，質地薄身，推開之後好快就吸收，之後直接防曬都冇問題。保濕度又夠，對我呢種懶人嚟講非常方便。 讚好 review-comment 回覆 share 分享":
+    - /url: javascript:void(0)
+    - generic: J**
+    - generic: "1"
+    - text: 個顧客看完此評論後而購買
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 1 星期前
+    - generic: 我唔鍾意朝早搽太多層，會覺得好笠。呢支就啱我，質地薄身，推開之後好快就吸收，之後直接防曬都冇問題。保濕度又夠，對我呢種懶人嚟講非常方便。
+    - generic: 讚好
+    - button "review-comment 回覆":
+      - img "review-comment"
+      - generic: 回覆
+    - button "share":
+    - generic: 分享
+  - link "K**      1 星期前 我揀護膚品都會比較小心，呢支用落覺得幾舒服，質地清爽又容易推開。搽完唔會有厚重膜感，皮膚摸落滑滑地。最近皮膚狀態唔穩定時都會拎佢出嚟用。 讚好 review-comment 回覆 share 分享":
+    - /url: javascript:void(0)
+    - generic: K**
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 1 星期前
+    - generic: 我揀護膚品都會比較小心，呢支用落覺得幾舒服，質地清爽又容易推開。搽完唔會有厚重膜感，皮膚摸落滑滑地。最近皮膚狀態唔穩定時都會拎佢出嚟用。
+    - generic: 讚好
+    - button "review-comment 回覆":
+      - img "review-comment"
+      - generic: 回覆
+    - button "share":
+    - generic: 分享
+  - button "更多 ":
+    - generic: 更多
+    - generic: 
+  - list:
+    - link "瀏覽 美肌護膚 ":
+      - /url: /zh-hk/%E7%BE%8E%E8%82%8C%E8%AD%B7%E8%86%9A/lc/010000
+      - text: 瀏覽 美肌護膚
+      - generic: 
+    - link "瀏覽 精華 ":
+      - /url: /zh-hk/%E7%BE%8E%E8%82%8C%E8%AD%B7%E8%86%9A/%E7%B2%BE%E8%8F%AF/c/010202
+      - text: 瀏覽 精華
+      - generic: 
+    - link "瀏覽 TOUN28 ":
+      - /url: /zh-hk/all-brands/b/120189/toun28
+      - text: 瀏覽 TOUN28
+      - generic: 
+  - text:        
+  - generic: 您經常同時購買
+  - generic: 當前
+  - img "TOUN28 CICA PDRN™ 抹茶水光透亮精華 image"
+  - generic: 
+  - link "TOUN28 PDRN 夜間密集細胞修護霜 image":
+    - /url: /zh-hk/toun28-pdrn-%E5%A4%9C%E9%96%93%E5%AF%86%E9%9B%86%E7%B4%B0%E8%83%9E%E4%BF%AE%E8%AD%B7%E9%9C%9C/p/BP_825331
+    - img "TOUN28 PDRN 夜間密集細胞修護霜 image"
+  - checkbox "[當前] CICA PDRN™ 抹茶水光透亮精華 RRP HK$245.00 HK$196.00" [checked]: 
+  - generic: "[當前] CICA PDRN™ 抹茶水光透亮精華"
+  - text: RRP
+  - generic: HK$245.00
+  - generic: HK$196.00
+  - checkbox "PDRN 夜間密集細胞修護霜 RRP HK$225.00 HK$180.00": 
+  - generic: PDRN 夜間密集細胞修護霜
+  - text: RRP
+  - generic: HK$225.00
+  - generic: HK$180.00
+  - generic: 加入選項到購物袋
+  - generic: "總數: HK$196.00"
+  - generic: 
+- contentinfo:
+  - link "1 image":
+    - /url: /zh-hk/
+    - img "1 image"
+  - link "2 image":
+    - /url: /zh-hk/
+    - img "2 image"
+  - text: 下載屈臣氏手機APP
+  - text: 最佳網購體驗盡在屈臣氏手機APP
+  - link "20230301 Web3 Homepage AppDownload image":
+    - /url: https://watsonshk.app.link/8l6HwQlOqxb
+    - img "20230301 Web3 Homepage AppDownload image"
+  - link "google image":
+    - /url: https://play.google.com/store/apps/details?id=com.ndn.android.watsons
+    - img "google image"
+  - link "IOS image":
+    - /url: https://apps.apple.com/hk/app/watsons-hk/id479512803
+    - img "IOS image"
+  - link "HUAWEI image":
+    - /url: https://appgallery.huawei.com/#/app/C101804037
+    - img "HUAWEI image"
+  - generic: 關於我們
+  - link "關於屈臣氏":
+    - /url: /zh-hk/promo-who_we_are
+  - link "加入我們":
+    - /url: https://www.watsons.com.hk/watsonshk_career
+  - link "成為屈臣氏香港合作伙伴":
+    - /url: /zh-hk/become-our-partner
+  - link "屈臣氏分店":
+    - /url: /zh-hk/store-finder
+  - link "可持續消費":
+    - /url: /zh-hk/promo-sustainability
+  - link "容器回收計劃":
+    - /url: https://www.watsons.com.hk/promo-recycling_program
+  - generic: 屈臣氏網店
+  - link "手機購物應用程式介紹":
+    - /url: /zh-hk/promo-AboutiWatsons
+  - link "網上購物流程":
+    - /url: /zh-hk/shopping_tutorial
+  - link "屈臣氏結帳流程":
+    - /url: https://www.watsons.com.hk/checkout_tutorial
+  - link "分享產品評論":
+    - /url: https://www.watsons.com.hk/review_and_reward
+  - generic: 貼心服務
+  - link "送貨到府":
+    - /url: /zh-hk/home_delivery
+  - link "屈臣氏特快送":
+    - /url: /zh-hk/expressservice
+  - link "門店取貨":
+    - /url: /zh-hk/clickandcollect
+  - link "門店取貨到付":
+    - /url: /zh-hk/pay_and_pick
+  - link "商戶直送":
+    - /url: /zh-hk/supplier_direct_delivery
+  - link "合作自取點":
+    - /url: /zh-hk/pickup_service_partner
+  - link "內地跨境直郵":
+    - /url: /zh-hk/cross_border_tutorial
+  - link "訂購計劃":
+    - /url: /zh-hk/subscription
+  - link "優先預訂":
+    - /url: /zh-hk/pre_order
+  - link "「屈臣氏 eDr」視像醫生":
+    - /url: /zh-hk/watsons_edr
+  - link "屈臣醫健氏":
+    - /url: /zh-hk/promo-watsons_health_professional_team
+  - generic: 易賞錢會員
+  - link "易賞錢優惠":
+    - /url: /zh-hk/member-benefits
+  - link "滙豐 easy 信用卡優惠":
+    - /url: /zh-hk/vop/enrollment
+  - link "好友邀請獎賞":
+    - /url: /zh-hk/friendgetfriend
+  - link "Asia One Pass 一卡隨享":
+    - /url: /zh-hk/asia_one_pass
+  - link "VIP會員獨家禮遇":
+    - /url: https://www.watsons.com.hk/viprewards
+  - generic: 客戶服務
+  - link "常見問題":
+    - /url: /zh-hk/myaccount-faq
+  - link "聯絡我們":
+    - /url: /zh-hk/contactUs
+  - generic: 網站聲明
+  - link "私隱政策":
+    - /url: /zh-hk/privacy-policy
+  - link "條款及細則":
+    - /url: /zh-hk/terms-conditions
+  - link "免責聲明":
+    - /url: /zh-hk/NoticeOnDisclaimer
+  - link "無障礙聲明":
+    - /url: /zh-hk/accessibility-statement-page
+  - img "icon-close-chat"
+  - img "bot avatar image image"
+  - generic: Wello 小幫手
+  - button "change font"
+  - button "clear context"
+  - img "icon-minify-chat"
+  - generic: 
+- generic:      

@@ -1,0 +1,117 @@
+- link "Skip to content":
+  - /url: "#MainContent"
+- region "Announcement":
+  - link "\"Enjoy free shipping with order $400 or up\"":
+    - /url: /collections
+    - paragraph:
+      - text: "\"Enjoy free shipping with order $400 or up\""
+- banner:
+  - button "Menu":
+  - link "TOUN28 HK":
+    - /url: /
+    - img "TOUN28 HK"
+  - button "Search":
+  - link "Cart":
+    - /url: /cart
+    - generic: Cart
+- main:
+  - region "Gallery Viewer":
+    - link "Skip to product information":
+      - /url: "#ProductInfo-template--24036172595570__main"
+    - button "Slide left" [disabled]:
+    - generic: "1"
+    - generic: /
+    - generic: of
+    - generic: "4"
+    - button "Slide right":
+  - paragraph: TOUN28 HK
+  - heading "Haenam 404 Glow Cream & Serum" [level=1]
+  - status:
+    - generic: Regular price
+    - generic: HK$245.00
+  - generic: Quantity
+  - button "Decrease quantity for Haenam 404 Glow Cream &amp; Serum":
+    - generic: Decrease quantity for Haenam 404 Glow Cream &amp; Serum
+  - spinbutton "Quantity": "1"
+  - button "Increase quantity for Haenam 404 Glow Cream &amp; Serum":
+    - generic: Increase quantity for Haenam 404 Glow Cream &amp; Serum
+  - button "Add to cart":
+    - generic: Add to cart
+  - button "Buy it now"
+  - link "Buy Now at HK Watsons":
+    - /url: https://www.watsons.com.hk/en/toun28-haenam-404-glow-cream-serum/p/BP_825334
+  - paragraph:
+    - emphasis: Free delivery for total purchase over HKD$400
+  - button "Volume" [expanded]:
+    - heading "Volume" [level=2]
+  - paragraph: 50ml
+  - button "How to use" [expanded] [active]:
+    - heading "How to use" [level=2]
+  - paragraph: Shake well before use so that the dual-layer latte essence milk blends perfectly. Use morning and night after washing your face or after using toner. Take an appropriate amount, apply evenly over the entire face, and gently pat until fully absorbed.
+  - button "Order Policy":
+    - heading "Order Policy" [level=2]
+  - button "Share":
+    - text: Share
+  - heading "More information" [level=2]
+  - list:
+    - heading "Active ingredient" [level=3]
+    - paragraph: Haenam 404 Organic Centella Asiatica Extract** (Pesticide-Free Cultivation) / TOUN28 Proprietary H-CICA / CICA PDRN / Acetyl Hexapeptide-8
+    - heading "Function" [level=3]
+    - paragraph:
+      - text: "Specialized H-CICA & CICA PDRN: Provides ultimate soothing and repair, stabilizes damaged skin bases, and establishes a healthy defensive foundation for the skin."
+      - text: "5-Fold Barrier Golden Triangle (Ceramide + Cholesterol + Fatty Acid): Perfectly mimics the skin's natural sebum, infusing a high concentration of Vitamin B5 (Panthenol) for deep moisture locking and long-lasting barrier reinforcement."
+      - text: "Peptide-8 + Hyaluronic Acid: Infuses abundant moisture while working synergistically to enhance elasticity, allowing the skin to radiate an ultimate, dewy glow from within."
+- heading "Subscribe to our emails" [level=2]
+- paragraph: Be the first to know about new collections and exclusive offers.
+- textbox "Email"
+- generic: Email
+- button "Subscribe":
+- contentinfo:
+  - heading "Quick links" [level=2]
+  - list:
+    - link "Blog News":
+      - /url: /blogs/news
+    - link "About Us":
+      - /url: /pages/about-us
+    - link "Contact Us":
+      - /url: /pages/contact
+    - link "Order Policy":
+      - /url: /pages/contact
+  - heading "Where to find us ..." [level=2]
+  - paragraph:
+    - strong: Hong Kong Watsons
+    - emphasis: (
+    - link "https://www.watsons.com.hk/zh-hk/all-brands/list/120189/toun28":
+      - /url: https://www.watsons.com.hk/zh-hk/all-brands/list/120189/toun28
+      - emphasis: https://www.watsons.com.hk/zh-hk/all-brands/list/120189/toun28
+    - emphasis: )
+  - paragraph:
+    - strong: Cosme
+    - emphasis: (G/F-3/F., Yue Hwa International Building., 1 Kowloon Park Drive & No.7 Ashley Road, KLN)
+  - list:
+    - link "Facebook":
+      - /url: https://www.facebook.com/toun28hk/
+      - generic: Facebook
+    - link "Instagram":
+      - /url: https://www.instagram.com/toun28_hk/
+      - generic: Instagram
+    - link "YouTube":
+      - /url: https://www.youtube.com/@toun28official
+      - generic: YouTube
+  - heading "Country/region" [level=2]
+  - button "Hong Kong SAR | HKD $":
+    - generic: Hong Kong SAR | HKD $
+  - generic: Payment methods
+  - list:
+    - img "Apple Pay"
+    - img "Google Pay"
+    - img "Mastercard"
+    - img "Visa"
+  - text: © 2026,
+  - link "TOUN28 HK":
+    - /url: /
+  - link:
+    - /url: https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+- status
+- button "Chat. Open chat":
+  - generic: Chat

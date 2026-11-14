@@ -1,0 +1,427 @@
+- text: Poor Great Poor Great Poor Great
+- button "Skip to content"
+- group "1 / 2":
+  - paragraph: FREE SHIPPING ON ORDERS OVER $75
+- group "2 / 2":
+  - paragraph: Welcome to toun28
+- banner:
+  - button "Open menu":
+  - link "Homepage":
+    - /url: /
+  - navigation:
+    - list:
+      - link "Sign in":
+        - /url: https://global.toun28.com/customer_authentication/redirect?locale=en&region_country=US
+      - button "Cart":
+        - generic: Cart
+- main:
+  - group "1 / 7":
+    - img "Glow cream and Serum"
+  - group "2 / 7":
+    - img "Glow cream and Serum"
+  - group "3 / 7":
+    - img "Glow cream and Serum"
+  - group "4 / 7":
+    - img "Glow cream and Serum"
+  - group "5 / 7":
+    - img "Glow cream and Serum"
+  - group "6 / 7":
+    - img "Glow cream and Serum"
+  - group "7 / 7":
+    - img "Glow cream and Serum"
+  - group "1 / 7":
+    - button "상품 미디어 1 보기":
+      - img "Glow cream and Serum"
+  - group "2 / 7":
+    - button "상품 미디어 2 보기":
+      - img "Glow cream and Serum"
+  - group "3 / 7":
+    - button "상품 미디어 3 보기":
+      - img "Glow cream and Serum"
+  - group "4 / 7":
+    - button "상품 미디어 4 보기":
+      - img "Glow cream and Serum"
+  - group "5 / 7":
+    - button "상품 미디어 5 보기":
+      - img "Glow cream and Serum"
+  - group "6 / 7":
+    - button "상품 미디어 6 보기":
+      - img "Glow cream and Serum"
+  - group "7 / 7":
+    - button "상품 미디어 7 보기":
+      - img "Glow cream and Serum"
+  - heading "Glow cream and Serum" [level=1]
+  - generic "Rated 4.91 out of 5":
+    - generic: ★
+    - generic: ★
+    - generic: ★
+    - generic: ★
+    - generic: ★
+  - link "11 Reviews":
+    - /url: "#shopify-product-reviews"
+  - generic: Glow Boosting
+  - generic: Skin Smoothing
+  - generic: Long-Lasting Makeup Wear
+  - paragraph: The dual-layer formula combines a Centella Asiatica extract water phase with a nourishing oil phase, delivering double care to both the surface and deeper layers of the skin for a smooth, makeup-ready complexion.
+  - generic: 1.69 fl.oz (50ml / 1ea)
+  - text: "[Order Information]"
+  - text: ㆍFree shipping on orders over $75
+  - text: "[Shipping Information]"
+  - text: ㆍCurrently shipping to the 48 contiguous U.S. states and Washington, D.C.
+  - text: ㆍShipping is not available to Alaska, Hawaii, U.S. territories, and military addresses (APO/FPO/DPO)
+  - text: ㆍShipping will begin on April 9, and delivery may take up to 4 weeks.
+  - text: ㆍWe will do our best to ship your order as quickly as possible. Thank you for your understanding due to increased order volume.
+  - text: "[Product Information]"
+  - text: "ㆍToner expiration date: September 21, 2027"
+  - text: "ㆍSerum expiration date: March 11, 2027"
+  - text: "ㆍCream expiration date: December 14, 2026"
+  - text: · The ribbon in the image is for presentation purposes and is not included in the product.
+  - text: · The lid of Toner is made of plastic, not aluminum.
+  - button "수량 감소": −
+  - spinbutton: "1"
+  - button "수량 증가": +
+  - button "Add To Cart $49.99":
+    - generic: Add To Cart
+    - generic: $49.99
+  - link "More payment options":
+    - /url: "#"
+  - tablist "Product recommendations":
+    - tab "FULL COLLECTION" [selected]
+  - tabpanel:
+    - link "Peptacica Cream 2.0 (Tube Type)":
+      - /url: /products/toun28-peptacica-cream2-0
+      - img "Peptacica Cream 2.0 (Tube Type)"
+    - generic: Peptacica Cream 2.0 (Tube Type)
+    - generic: Calming radiance repair cream
+    - button "Add To Cart $47.99":
+      - generic: Add To Cart
+      - generic: $47.99
+    - button "View more"
+  - img "Glow cream and Serum"
+  - heading "Key Benefits" [level=2]
+  - heading "Perfect Makeup Adherence" [level=4]
+  - paragraph: Helps makeup apply smoother and adhere longer
+  - heading "Long-Lasting Glow" [level=4]
+  - paragraph: Maintains radiant glow for up to 24 hours
+  - heading "Instant Skin Radiance" [level=4]
+  - paragraph: Leaves skin instantly brighter and healthier looking
+  - img "Key Benefits"
+  - group "1 / 1":
+    - heading "How to Use Glow cream & Serum" [level=3]:
+      - text: How to Use
+      - text: Glow cream & Serum
+    - text: After toner, shake well to mix both layers.
+    - text: Apply evenly with the dropper and gently pat for absorption.
+  - heading "Elevate Your Skin, Step by Step" [level=2]
+  - img "PREP"
+  - paragraph:
+    - strong: STEP 1
+    - text: PREP
+  - paragraph: Peptacica Toner
+  - img "HYDRATE"
+  - paragraph:
+    - strong: STEP 2
+    - text: HYDRATE
+  - paragraph: Peptacica Serum Pads
+  - img "REPAIR"
+  - paragraph:
+    - strong: STEP 3
+    - text: REPAIR
+  - paragraph: Peptacica Serum or Glow Cream & Serum
+  - img "NOURISH"
+  - paragraph:
+    - strong: STEP 4
+    - text: NOURISH
+  - paragraph: Peptacica Cream
+  - img "RADIANCE"
+  - paragraph:
+    - strong: STEP 5
+    - text: RADIANCE
+  - paragraph: Peptacica Intensive Cream
+  - img "RESTORE"
+  - paragraph:
+    - strong: EXTRA CARE
+    - text: RESTORE
+  - paragraph: Peptacica Gel Mask
+  - heading "Key Ingredients" [level=2]
+  - term: Cica PDRN 99™ -
+  - definition: A high-purity Centella-derived PDRN that helps calm irritated skin and support skin regeneration for a healthier complexion.
+  - term: Centella Asiatica Extract (20,000 ppm) +
+  - term: Ceramide Barrier Complex +
+  - term: Full Ingredients +
+  - heading "Explore the Collection" [level=2]
+  - group "1 / 8":
+    - article:
+      - link "Peptacica Cream 2.0 (Tube Type) Peptacica Cream 2.0 (Tube Type) Calming radiance repair cream Add To Cart $47.99":
+        - /url: /products/toun28-peptacica-cream2-0
+        - img "Peptacica Cream 2.0 (Tube Type)"
+        - heading "Peptacica Cream 2.0 (Tube Type)" [level=3]
+        - paragraph: Calming radiance repair cream
+        - generic: Add To Cart
+        - generic: $47.99
+  - group "2 / 8":
+    - article:
+      - link "Peptacica Cream Intensive Peptacica Cream Intensive Deep hydration barrier cream Add To Cart $57.99":
+        - /url: /products/peptacica-cream-intensive
+        - img "Peptacica Cream Intensive"
+        - heading "Peptacica Cream Intensive" [level=3]
+        - paragraph: Deep hydration barrier cream
+        - generic: Add To Cart
+        - generic: $57.99
+  - group "3 / 8":
+    - article:
+      - link "Peptacica Lifting Glow Gel mask (4ea) Peptacica Lifting Glow Gel mask (4ea) Centella glow lifting mask Add To Cart $54.99":
+        - /url: /products/peptacica-lefting-glow-gel-mask
+        - img "Peptacica Lifting Glow Gel mask (4ea)"
+        - heading "Peptacica Lifting Glow Gel mask (4ea)" [level=3]
+        - paragraph: Centella glow lifting mask
+        - generic: Add To Cart
+        - generic: $54.99
+  - group "4 / 8":
+    - article:
+      - link "Peptacica Serum Peptacica Serum Firming glow lift serum Add To Cart $45.99":
+        - /url: /products/toun28-peptacica-serum
+        - img "Peptacica Serum"
+        - heading "Peptacica Serum" [level=3]
+        - paragraph: Firming glow lift serum
+        - generic: Add To Cart
+        - generic: $45.99
+  - group "5 / 8":
+    - article:
+      - link "Peptacica Serum Pads (60ea) Peptacica Serum Pads (60ea) Radiance lifting serum pad Add To Cart $34.99":
+        - /url: /products/peptacica-serum-pads
+        - img "Peptacica Serum Pads (60ea)"
+        - heading "Peptacica Serum Pads (60ea)" [level=3]
+        - paragraph: Radiance lifting serum pad
+        - generic: Add To Cart
+        - generic: $34.99
+  - group "6 / 8":
+    - article:
+      - link "Peptacica Set Peptacica Set Peptacica calming glow collection Add To Cart $138.97":
+        - /url: /products/toun28-peptacica-set
+        - img "Peptacica Set"
+        - heading "Peptacica Set" [level=3]
+        - paragraph: Peptacica calming glow collection
+        - generic: Add To Cart
+        - generic: $138.97
+  - group "7 / 8":
+    - article:
+      - link "Peptacica Cream Peptacica Cream Healthy glow boost cream Add To Cart $53.99":
+        - /url: /products/toun28-peptacica-cream
+        - img "Peptacica Cream"
+        - heading "Peptacica Cream" [level=3]
+        - paragraph: Healthy glow boost cream
+        - generic: Add To Cart
+        - generic: $53.99
+  - group "8 / 8":
+    - article:
+      - link "Peptacica Toner Peptacica Toner Radiance awakening toner Add To Cart $38.99":
+        - /url: /products/toun28-peptacica-toner
+        - img "Peptacica Toner"
+        - heading "Peptacica Toner" [level=3]
+        - paragraph: Radiance awakening toner
+        - generic: Add To Cart
+        - generic: $38.99
+  - button "Previous slide" [disabled]:
+    - generic: ‹
+  - button "Next slide":
+    - generic: ›
+  - paragraph: FAQ
+  - heading "Still wondering? Here’s what you might want to know." [level=2]:
+    - text: Still wondering?
+    - text: Here’s what you might want to know.
+  - term:
+    - button "When is the best time to use this serum?" [expanded]:
+      - generic: When is the best time to use this serum?
+  - definition:
+    - generic: Use it after cleansing and toner as the next step in your routine. It works well in both morning and evening routines to help support balanced, healthy-looking skin.
+  - term:
+    - button "Can I use it with other skincare products?":
+      - generic: Can I use it with other skincare products?
+  - term:
+    - button "Does it contain artificial colorants?":
+      - generic: Does it contain artificial colorants?
+  - term:
+    - button "Does it contain artificial fragrance?":
+      - generic: Does it contain artificial fragrance?
+  - term:
+    - button "Can it be used during pregnancy?":
+      - generic: Can it be used during pregnancy?
+  - heading "You may also like" [level=2]
+  - heading "Reviews" [level=2]
+  - paragraph: "4.9"
+  - paragraph: 11 reviews
+  - img "Verified checkmark":
+    - paragraph: Verified
+  - button "91% (10) reviews with 5 star rating":
+    - generic: "5"
+    - img "5 out of 5 stars":
+      - generic: 
+    - generic: "10"
+  - button "9% (1) reviews with 4 star rating":
+    - generic: "4"
+    - img "4 out of 5 stars":
+      - generic: 
+    - generic: "1"
+  - button "0% (0) reviews with 3 star rating":
+    - generic: "3"
+    - img "3 out of 5 stars":
+      - generic: 
+    - generic: "0"
+  - button "0% (0) reviews with 2 star rating":
+    - generic: "2"
+    - img "2 out of 5 stars":
+      - generic: 
+    - generic: "0"
+  - button "0% (0) reviews with 1 star rating":
+    - generic: "1"
+    - img "1 out of 5 stars":
+      - generic: 
+    - generic: "0"
+  - button "Write a review"
+  - button "Filters":
+  - generic: Sort by
+  - combobox "Sort by":
+    - option "Most Recent" [selected]
+    - option "Highest Rating"
+    - option "Lowest Rating"
+    - option "Only Pictures"
+    - option "Pictures First"
+    - option "Videos First"
+    - option "Most Helpful"
+  - status
+  - img "5 out of 5 stars":
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - generic: S
+  - generic "Sierra M."
+  - paragraph: makeup goes on sooo smooth omg
+  - paragraph:
+    - text: I prefer minimal skincare, especially before workouts or during the day.
+    - text: This is light enough that it doesn’t feel heavy, but still gives my skin a nice glow.
+  - paragraph:
+    - text: I use it mostly in the morning, and it makes my skin look more hydrated without feeling sticky
+    - text: It fits really well into a simple routine.
+  - button "More":
+    - paragraph: More
+  - img "5 out of 5 stars":
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - generic: M
+  - generic "Madeline C."
+  - paragraph: glass skin but make it chill
+  - paragraph:
+    - text: I usually avoid anything labeled “glow” because it tends to feel greasy or too heavy under makeup.
+    - text: But this one feels different !! it’s lightweight and layers really cleanly into the skin. I’ve been using the serum first, then the cream, mostly in the morning.
+    - text: What I noticed is that it gives a subtle, natural glow rather than a shiny or oily finish. My skin just looks more even and healthy.
+  - paragraph:
+    - text: It also works really well under makeup. My foundation sits better and doesn’t look as dry or patchy by midday.
+    - text: It’s not a dramatic effect, but it makes my skin look more “put together,” which is exactly what I wanted.
+  - button "More":
+    - paragraph: More
+  - img "5 out of 5 stars":
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - generic: M
+  - generic "Melissa T."
+  - paragraph: clean glow all day vibe
+  - paragraph:
+    - text: I’ve tested a wide range of glow-focused products, and many of them rely on surface-level shine rather than actual skin improvement.
+    - text: This one feels more structured in its approach. It provides hydration, supports the skin barrier, and creates a subtle glow as a result, rather than forcing it.
+    - text: With consistent use, my skin appears more even and slightly more luminous.
+    - text: It’s not a quick fix, but it performs reliably over time.
+  - paragraph: I would describe it as a “skin-conditioning glow” rather than a cosmetic glow product<3333
+  - button "More":
+    - paragraph: More
+  - img "5 out of 5 stars":
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - generic: D
+  - generic "Danielle S."
+  - paragraph: this combo is lowkey insane
+  - paragraph:
+    - text: My skin has been looking dull lately, especially with not getting enough sleep. I wanted something that could help brighten my overall look without adding too many extra steps.
+    - text: I started using both the serum and cream together, mostly in the morning. The texture is light and easy to apply, and it doesn’t feel heavy at all.
+    - text: What I really like is that it gives my skin a soft glow without looking greasy. It just makes my face look more refreshed.
+    - text: After about a week, my skin looked a bit more even and less tired.
+  - paragraph: It’s not a strong treatment product, but it definitely helps improve how my skin looks day to day.
+  - button "More":
+    - paragraph: More
+  - img "5 out of 5 stars":
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+    - generic: 
+  - generic: C
+  - generic "Courtney W."
+  - paragraph: dewy but not doing too much
+  - paragraph:
+    - text: I don’t have time for complicated skincare, so I like products that are quick and effective.
+    - text: This is easy to use and gives my skin a more refreshed look.
+    - text: It’s not too heavy, and I like how it makes my skin look less dull.
+  - paragraph: Works well for everyday use!
+  - button "More":
+    - paragraph: More
+  - navigation "Pagination Navigation":
+    - button "Go to previous page":
+    - button "Go to page 1":
+      - generic: "1"
+    - button "Go to page 2":
+      - generic: "2"
+    - button "Go to page 3":
+      - generic: "3"
+    - button "Go to next page":
+- contentinfo:
+  - heading "Stay Up To Date" [level=3]
+  - paragraph: By submitting this form, you agree to receive recurring automated promotional and personalized marketing emails from TOUN28 at the email address provided.
+  - textbox "Your email"
+  - button "Subscribe"
+  - heading "SHOP" [level=3]
+  - list:
+    - link "Shop All":
+      - /url: /collections/all
+    - link "Skin Care":
+      - /url: /collections/skin-care
+    - link "Hair Care":
+      - /url: /collections/hair-care
+    - link "Body Care":
+      - /url: /collections/hair-care%EC%82%AC%EB%B3%B8
+  - heading "ABOUT" [level=3]
+  - list:
+    - link "Our Story":
+      - /url: /pages/about
+    - link "Archive":
+      - /url: /blogs/archive
+  - heading "HELP" [level=3]
+  - list:
+    - link "Contact":
+      - /url: /pages/contact
+  - heading "COMMUNITY" [level=3]
+  - list:
+    - link "Instagram":
+      - /url: https://www.instagram.com/toun28_global/
+    - link "TikTok":
+      - /url: https://www.tiktok.com/@toun28.collab
+  - generic: © 2026 TOUN28. All Rights Reserved.
+  - list:
+    - link "Terms of Service":
+      - /url: /policies/terms-of-service
+    - link "Privacy Policy":
+      - /url: /policies/privacy-policy
+    - link "Refund Policy":
+      - /url: /policies/refund-policy
+    - link "Shipping Policy":
+      - /url: /policies/shipping-policy

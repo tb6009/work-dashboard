@@ -1,0 +1,473 @@
+- link "dp-이미지":
+  - /url: javascript:;
+  - img "dp-이미지"
+- button "close"
+- banner
+- list:
+  - button
+  - generic: レビュー
+  - button:
+  - button "Search":
+    - text: Search
+  - button:
+- text: 検索履歴がありません。
+- paragraph:
+  - generic: "4.9"
+  - generic: (1,010件のレビュー)
+- heading "動画&フォトレビュー(738個)" [level=3]
+- link "さらに表示":
+  - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Review/ReviewContents.aspx?gd_no=1191283124&group_code=2
+- list:
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=131918437&pit=1&contents_cnt=1
+    - paragraph
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133828240&pit=1&contents_cnt=4
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=125163029&pit=1&contents_cnt=6
+    - paragraph
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133316442&pit=1&contents_cnt=9
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133266693&pit=1&contents_cnt=11
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133266027&pit=1&contents_cnt=13
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133229678&pit=1&contents_cnt=14
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133227257&pit=1&contents_cnt=16
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133227175&pit=1&contents_cnt=18
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133227075&pit=1&contents_cnt=22
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133226985&pit=1&contents_cnt=25
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133224333&pit=1&contents_cnt=27
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133222012&pit=1&contents_cnt=30
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133220257&pit=1&contents_cnt=32
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133218196&pit=1&contents_cnt=36
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133214733&pit=1&contents_cnt=38
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133211909&pit=1&contents_cnt=40
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133210117&pit=1&contents_cnt=44
+    - paragraph
+    - img "image"
+  - link "image":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?sort=P&gd_no=1191283124&rno=133209772&pit=1&contents_cnt=46
+    - paragraph
+    - img "image"
+  - link "image さらに表示":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Review/ReviewContents.aspx?gd_no=1191283124
+    - paragraph
+    - img "image"
+    - paragraph:
+      - generic: さらに表示
+- strong:
+  - text: リアルレビュー (126個)
+  - button "help"
+- link "さらに表示":
+  - /url: ../My/RealReviewsSimple.aspx?goodsCode=1191283124&noheader=&iflyyn=
+- list:
+  - link "Best 艶と保湿ができる抹茶セラム✨️ [サンプルマーケット]サンプルマーケットで商品を無償で頂きました💖Qoo10のサンプルマーケットで当選しました！ありがとうございます😊まず、ほんのり抹茶のような香りがして、メイクに癒されます🌿でもほんのり、というくらいで香りは全然きつくはないです。使用前は2層に分かれていますが、軽く振るとしっかり混ざるので、使う時の分離具合は気になりませんでした。色味はほとんど付かず、トーンアップというよりは「ツヤと保湿」をプラスしてくれるような印象です。夏場はサラッサラになるタイプのパウダーを使うことが多いのですが、その前に仕込んでおくと、表面はさらっとしているのに内側はしっとり保湿されているような感覚があり、乾燥しにくく感じました！💖手持ちのTfitのクッションファンデーションとDiorのリキッドファンデーションのどちらの前に使っても、ヨレたりモロモロが出たりすることはなく、相性も問題ありませんでした。ナチュラルなツヤ感や保湿感を求めている方には使いやすいアイテムだと思います。サンプルで試せてよかったです。引き続き使ってみたいと思います！✨️":
+    - /url: ../My/RealReviews.aspx?review_no=131002347&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: Best
+    - generic: 艶と保湿ができる抹茶セラム✨️
+    - generic: "[サンプルマーケット]サンプルマーケットで商品を無償で頂きました💖Qoo10のサンプルマーケットで当選しました！ありがとうございます😊まず、ほんのり抹茶のような香りがして、メイクに癒されます🌿でもほんのり、というくらいで香りは全然きつくはないです。使用前は2層に分かれていますが、軽く振るとしっかり混ざるので、使う時の分離具合は気になりませんでした。色味はほとんど付かず、トーンアップというよりは「ツヤと保湿」をプラスしてくれるような印象です。夏場はサラッサラになるタイプのパウダーを使うことが多いのですが、その前に仕込んでおくと、表面はさらっとしているのに内側はしっとり保湿されているような感覚があり、乾燥しにくく感じました！💖手持ちのTfitのクッションファンデーションとDiorのリキッドファンデーションのどちらの前に使っても、ヨレたりモロモロが出たりすることはなく、相性も問題ありませんでした。ナチュラルなツヤ感や保湿感を求めている方には使いやすいアイテムだと思います。サンプルで試せてよかったです。引き続き使ってみたいと思います！✨️"
+  - link "Best サンプルマーケット当選しました。 サンプルマーケット当選しました。混ぜて使う、セラム層だけ使う、クリーム層だけ使うの3パターンで夜に使ってみました。どれも、翌朝の化粧のノリがいいです。クリーム層だけは1番ベタつくかなと思いながら使いましたが、ベタつきはあまり感じなかったです。セラム層だけはさっぱり感があるような。混ぜて使うのが1番ですかね。ほんのり緑茶の香りがして癒されます。":
+    - /url: ../My/RealReviews.aspx?review_no=130932593&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: Best
+    - generic: サンプルマーケット当選しました。
+    - generic: サンプルマーケット当選しました。混ぜて使う、セラム層だけ使う、クリーム層だけ使うの3パターンで夜に使ってみました。どれも、翌朝の化粧のノリがいいです。クリーム層だけは1番ベタつくかなと思いながら使いましたが、ベタつきはあまり感じなかったです。セラム層だけはさっぱり感があるような。混ぜて使うのが1番ですかね。ほんのり緑茶の香りがして癒されます。
+  - link "Best 不思議な塗り心地 サンプルマーケットで商品を無償で提供していただきました。完全に分離すると上のクリーム部分は全体の1/3弱で、混ぜると抹茶ミルクみたい。肌にのせて塗り拡げる時は、サラサラのオイルを塗ってるような感じ、なのに塗り拡げるとサラッとしている、今までにない美容液。今の時期、マット系の下地やファンデ、フィックスミストで仕上げますが、ずっと潤いが続いていてびっくりしました。これは良いものをいただきました、お気に入りに登録します。":
+    - /url: ../My/RealReviews.aspx?review_no=130920904&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: Best
+    - generic: 不思議な塗り心地
+    - generic: サンプルマーケットで商品を無償で提供していただきました。完全に分離すると上のクリーム部分は全体の1/3弱で、混ぜると抹茶ミルクみたい。肌にのせて塗り拡げる時は、サラサラのオイルを塗ってるような感じ、なのに塗り拡げるとサラッとしている、今までにない美容液。今の時期、マット系の下地やファンデ、フィックスミストで仕上げますが、ずっと潤いが続いていてびっくりしました。これは良いものをいただきました、お気に入りに登録します。
+  - link "サンプルマーケット サンプルマーケットで商品を無償で頂きました。見た目が抹茶ラテのような美味しそうなセラムです🍵クリーム層と水分層に分かれていてよく振ってから使うよー！このセラム、とてもしっとり保湿力があるのにイヤなベタベタ感や油分感がなく、いつでも使いやすいセラムでした😍メイク前に使ってもよかったです！シカPDPNなどの成分も嬉しいし敏感な時でも刺激なく使えました！おススメです😍":
+    - /url: ../My/RealReviews.aspx?review_no=127221334&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: サンプルマーケット
+    - generic: サンプルマーケットで商品を無償で頂きました。見た目が抹茶ラテのような美味しそうなセラムです🍵クリーム層と水分層に分かれていてよく振ってから使うよー！このセラム、とてもしっとり保湿力があるのにイヤなベタベタ感や油分感がなく、いつでも使いやすいセラムでした😍メイク前に使ってもよかったです！シカPDPNなどの成分も嬉しいし敏感な時でも刺激なく使えました！おススメです😍
+  - link "【サンプルマーケット】サンプルマーケットでいただきました！ サンプルマーケットでいただきました！ありがとうございます🌟抹茶PDRN気になっていたので嬉しいです！ 本当に抹茶ラテみたいでかわいいです！笑さらっとしたテクスチャですが保湿力はしっかりありました！使い続けてツヤ感期待しています！":
+    - /url: ../My/RealReviews.aspx?review_no=127031501&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: 【サンプルマーケット】サンプルマーケットでいただきました！
+    - generic: サンプルマーケットでいただきました！ありがとうございます🌟抹茶PDRN気になっていたので嬉しいです！ 本当に抹茶ラテみたいでかわいいです！笑さらっとしたテクスチャですが保湿力はしっかりありました！使い続けてツヤ感期待しています！
+  - link "【サンプルマーケットで商品を無償で頂きました！！】 またまた当選ありがとうございます〜！✨✨今回当たったのは抹茶グロウセラム！白のクリームと緑の美容液の2層に別れてて優しく振るとクリーミーな白と緑のマーブルになってめっちゃ綺麗！使う時はしっかり混ぜてから使ってます。使ってみるとほのかに抹茶の香りが.....！でもほんのりなので顔につけても匂わないです。ほどよい保湿感で気に入ってたのでいつの間にか結構使ってました(* ˊ꒳ˋ*)混ぜずに使ってみたい気持ちもあるのですがこの黄金比を崩したくなくて.....w母も気に入ったみたいでちょくちょく借りてます(*ˊᵕˋ*)ガラス瓶なので落とさないように注意！":
+    - /url: ../My/RealReviews.aspx?review_no=131386582&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: 【サンプルマーケットで商品を無償で頂きました！！】
+    - generic: またまた当選ありがとうございます〜！✨✨今回当たったのは抹茶グロウセラム！白のクリームと緑の美容液の2層に別れてて優しく振るとクリーミーな白と緑のマーブルになってめっちゃ綺麗！使う時はしっかり混ぜてから使ってます。使ってみるとほのかに抹茶の香りが.....！でもほんのりなので顔につけても匂わないです。ほどよい保湿感で気に入ってたのでいつの間にか結構使ってました(* ˊ꒳ˋ*)混ぜずに使ってみたい気持ちもあるのですがこの黄金比を崩したくなくて.....w母も気に入ったみたいでちょくちょく借りてます(*ˊᵕˋ*)ガラス瓶なので落とさないように注意！
+  - link "サンプルマーケットで無償でいただきました サンプルマーケットで無償でいただきました！こちらの商品、とても使いやすい😍しっとりしてるのにツヤも出る感じでシワも目立たなくなってる気がします‼️夜に使用すると翌日までしっかり保湿してくれる感じがあり、とても良い商品だと思います‼️これからも使い続けたいです‼️":
+    - /url: ../My/RealReviews.aspx?review_no=131127154&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: サンプルマーケットで無償でいただきました
+    - generic: サンプルマーケットで無償でいただきました！こちらの商品、とても使いやすい😍しっとりしてるのにツヤも出る感じでシワも目立たなくなってる気がします‼️夜に使用すると翌日までしっかり保湿してくれる感じがあり、とても良い商品だと思います‼️これからも使い続けたいです‼️
+  - link "サンプルマーケットで商品を無償で頂きました インナードライの混合肌です。肌の赤みやごわつきが気になるときに使うと、落ち着く感じがします。 クリームとセラムが1本になっているので、ベタつかないのに内側からふっくら潤うのが良いです。 ただ使う前に毎回振らないと使えないので少しめんどくさいけど、気にならないくらいいい商品です。":
+    - /url: ../My/RealReviews.aspx?review_no=130993451&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: サンプルマーケットで商品を無償で頂きました
+    - generic: インナードライの混合肌です。肌の赤みやごわつきが気になるときに使うと、落ち着く感じがします。 クリームとセラムが1本になっているので、ベタつかないのに内側からふっくら潤うのが良いです。 ただ使う前に毎回振らないと使えないので少しめんどくさいけど、気にならないくらいいい商品です。
+  - link "サンプルマーケットでいただきました！ コックリしてるのにベタつかない！！パサつかないし、かなり保湿されてる感覚はあるのに、ベタつく感じはなかったです！不思議！メイク乗りもよかった！皮脂が出てきても、テカってるというよりかはツヤに見える感じ！！（肌質と使ってる化粧品にもよるかも…）しかも使うたびに抹茶の香りがふわっと広がって落ち着きます！！そして見た目が可愛い！！混ぜる時もラテ作ってるみたいで毎回楽しいです！":
+    - /url: ../My/RealReviews.aspx?review_no=130941461&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: サンプルマーケットでいただきました！
+    - generic: コックリしてるのにベタつかない！！パサつかないし、かなり保湿されてる感覚はあるのに、ベタつく感じはなかったです！不思議！メイク乗りもよかった！皮脂が出てきても、テカってるというよりかはツヤに見える感じ！！（肌質と使ってる化粧品にもよるかも…）しかも使うたびに抹茶の香りがふわっと広がって落ち着きます！！そして見た目が可愛い！！混ぜる時もラテ作ってるみたいで毎回楽しいです！
+  - link "可愛い！！ サンプルマーケットでいただきました🥰💕︎抹茶というか抹茶ラテ🍵🍼のようなすごくいい匂いで使いながらすごく癒されます💖白の部分だけ使うとしっとり、緑の部分だけ使うとさっぱり、2層混ぜるとちょうど良くなると書いてあったんですが、本当に感じました！2層混ぜるとサラサラしててベタつかないのにすごくしっとりしていて、それでいてツヤ肌に見える。乾燥肌の人や冬に大活躍しそうだなと思います🎶これからたくさん使います😆︎‪💕︎‪":
+    - /url: ../My/RealReviews.aspx?review_no=130884768&goodsCode=1191283124&noheader=&iflyyn=
+    - generic: 可愛い！！
+    - generic: サンプルマーケットでいただきました🥰💕︎抹茶というか抹茶ラテ🍵🍼のようなすごくいい匂いで使いながらすごく癒されます💖白の部分だけ使うとしっとり、緑の部分だけ使うとさっぱり、2層混ぜるとちょうど良くなると書いてあったんですが、本当に感じました！2層混ぜるとサラサラしててベタつかないのにすごくしっとりしていて、それでいてツヤ肌に見える。乾燥肌の人や冬に大活躍しそうだなと思います🎶これからたくさん使います😆︎‪💕︎‪
+- strong:
+  - generic: お客様の声（AI要約）
+  - button "AI 툴팁":
+    - generic: AI 툴팁
+- paragraph: AIで生成された文章です。カスタマーレビューはお客様個人の感想・意見であり、Qoo10の公式的な見解を示すものではありません。
+- list:
+  - button "👍 保湿が続く":
+    - generic: 👍 保湿が続く
+  - button "化粧ノリが良い":
+    - generic: 化粧ノリが良い
+  - button "塗り心地が良い":
+    - generic: 塗り心地が良い
+  - button "仕上がりがさらっと":
+    - generic: 仕上がりがさらっと
+  - button "CICAとPDRNが効果的":
+    - generic: CICAとPDRNが効果的
+  - button "ツヤが自然":
+    - generic: ツヤが自然
+  - button "パケが可愛い":
+    - generic: パケが可愛い
+  - button "+3":
+    - generic: "+3"
+- list:
+  - button "動画＆フォトを見る":
+    - generic: 動画＆フォトを見る
+  - button "評価の低い順":
+    - generic: 評価の低い順
+- list:
+  - paragraph:
+    - generic: 40PERCENT
+  - paragraph: 2 /5
+  - paragraph:
+    - generic: ba8***
+    - generic: 2026.02.26
+  - button "0"
+  - paragraph:
+    - generic: "肌タイプ: 混合肌"
+    - generic: "肌トーン: イエベ"
+    - generic: "肌の悩み: ニキビ・肌荒れ, シミ"
+  - list:
+    - generic: 保湿力イマイチ
+    - generic: テクスチャー満足です
+    - generic: 香り満足です
+  - paragraph: 2月13日購入で到着が25日。発送までにかなり時間を要しているようでした。到着後は分離しているので、しっかりふって写真のような状態(まさに抹茶)になります。
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125170441&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125170441&priority=2
+      - img "image"
+  - paragraph:
+    - generic: 60PERCENT
+  - paragraph: 3 /5
+  - paragraph:
+    - generic: akr***
+    - generic: 2026.02.26
+  - button "0"
+  - paragraph:
+    - generic: "肌タイプ: 乾燥肌"
+    - generic: "肌トーン: ブルベ"
+    - generic: "肌の悩み: 毛穴, 乾燥"
+  - list:
+    - generic: 保湿力満足です
+    - generic: テクスチャー満足です
+    - generic: 香り満足です
+  - paragraph:
+    - text: 少しとろみがあるけど、肌に馴染んだあとは
+    - text: 全然べとつきはない！
+    - text: 色合いが可愛らしくて抹茶感すごいけど
+    - text: 匂いは全くないので抹茶嫌いな人でも全然使えます🍵🌿‬
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125166684&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125166684&priority=2
+      - img "image"
+  - paragraph:
+    - generic: 60PERCENT
+  - paragraph: 3 /5
+  - paragraph:
+    - generic: mil***
+    - generic: 2026.02.25
+  - button "0"
+  - paragraph:
+    - generic: "肌タイプ: 混合肌"
+    - generic: "肌トーン: ブルベ"
+    - generic: "肌の悩み: ニキビ・肌荒れ, 毛穴, 乾燥"
+  - list:
+    - generic: 保湿力満足です
+    - generic: テクスチャー満足です
+    - generic: 香り満足です
+  - paragraph:
+    - text: セラムの上にクリームが入っていて、それぞれで使えるのと混ぜても使えて、気分や肌の調子によって3通りの使い方が出来るのがすごくよいです！
+    - text: CICAとPDRNに加えて、抹茶のカテキン成分がどう効いてくるのか楽しみです！
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125149437&priority=1
+      - img "image"
+  - paragraph:
+    - generic: 60PERCENT
+  - paragraph: 3 /5
+  - paragraph:
+    - generic: je1***
+    - generic: 2026.02.24
+  - button "0"
+  - paragraph:
+    - generic: "肌タイプ: 乾燥肌"
+    - generic: "肌トーン: イエベ"
+    - generic: "肌の悩み: 乾燥"
+  - list:
+    - generic: 保湿力満足です
+    - generic: テクスチャー満足です
+    - generic: 香り満足です
+  - paragraph: 乾燥肌ですが、しっかりうるおうのにベタつかないのが◎
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125136262&priority=1
+      - img "image"
+  - paragraph:
+    - generic: 60PERCENT
+  - paragraph: 3 /5
+  - paragraph:
+    - generic: aaa***
+    - generic: 2026.02.23
+  - button "0"
+  - paragraph:
+    - generic: "肌タイプ: 乾燥肌"
+    - generic: "肌トーン: イエベ"
+    - generic: "肌の悩み: ニキビ・肌荒れ, 毛穴, くすみ・色むら, 乾燥, しわ・たるみ, シミ"
+  - list:
+    - generic: 保湿力満足です
+    - generic: テクスチャー満足です
+    - generic: 香り満足です
+  - paragraph: テクスチャーはさらさらではあるが、元々使ってるのより若干重め、匂いが全くしないわけではないのでそこが気にならない方はいいかもです
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=125129882&priority=1
+      - img "image"
+  - paragraph:
+    - generic: 80PERCENT
+  - paragraph: 4 /5
+  - paragraph:
+    - generic: yui***
+    - generic: 2026.09.26
+  - button "0"
+  - paragraph:
+    - generic: "オプション: 選択:抹茶セラム 50ml"
+    - generic: "肌タイプ: 敏感肌"
+    - generic: "肌トーン: ブルベ"
+    - generic: "肌の悩み: ニキビ・肌荒れ, 毛穴, くすみ・色むら, しわ・たるみ"
+  - list:
+    - generic: スペシャルケア満足です
+    - generic: 浸透力満足です
+    - generic: テクスチャー満足です
+  - paragraph:
+    - text: 2層タイプの美容液で、使う前に振ると抹茶ラテのような色になるのが面白いです🍵✨
+    - text: みずみずしく伸びるのに、なじませるとしっとりした使い心地✨️
+    - text: グリーンティーのような爽やかな香りも好みでした🌿
+    - text: 朝のメイク前にも使いやすく、ファンデーションなどもなじませやすいように感じました🤍
+    - text: 肌がなめらかに整ったような仕上がりもお気に入り☺️
+    - text: セラムとクリームを肌の状態に合わせて使い分けられる3WAY仕様なのも便利です♪
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133365432&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133365432&priority=2
+      - img "image"
+  - paragraph:
+    - generic: 80PERCENT
+  - paragraph: 4 /5
+  - paragraph:
+    - generic: JOK***
+    - generic: 2026.09.20
+  - button "0"
+  - paragraph:
+    - generic: "オプション: 選択:抹茶セラム 50ml"
+    - generic: "肌タイプ: 脂性肌"
+    - generic: "肌トーン: ブルベ"
+    - generic: "肌の悩み: 毛穴, くすみ・色むら"
+  - list:
+    - generic: スペシャルケア満足です
+    - generic: 浸透力満足です
+    - generic: テクスチャー満足です
+  - paragraph: 見た目が抹茶っぽくて少し珍しいセラムだったので使ってみました。使う前に振ってから肌にのせるタイプで、思ったよりさらっとした使い心地です。肌に馴染ませた後はベタつかず、ほどよくしっとりします。朝に使っても重たく感じにくかったので、普段のスキンケアに取り入れやすいと思いました。乾燥が気になるときにも使いやすそうです。
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133228139&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133228139&priority=2
+      - img "image"
+  - paragraph:
+    - generic: 80PERCENT
+  - paragraph: 4 /5
+  - paragraph:
+    - generic: JOK***
+    - generic: 2026.09.20
+  - button "0"
+  - paragraph:
+    - generic: "オプション: 選択:抹茶セラム 50ml"
+    - generic: "肌タイプ: 脂性肌"
+    - generic: "肌トーン: ブルベ"
+    - generic: "肌の悩み: 毛穴, くすみ・色むら"
+  - list:
+    - generic: スペシャルケア満足です
+    - generic: 浸透力満足です
+    - generic: テクスチャー満足です
+  - paragraph: 抹茶のような色味が珍しくて気になり、使ってみました。最初は少し重たそうに見えましたが、肌に伸ばすと意外と軽く、すっと馴染みます。ベタつきが残る感じもあまりなく、塗った後は肌がしっとりしていました。乾燥が気になるときは少し多めに使っていますが、それでも使いやすいです。見た目も可愛く、使うのが楽しくなるセラムです。
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133228087&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133228087&priority=2
+      - img "image"
+  - paragraph:
+    - generic: 80PERCENT
+  - paragraph: 4 /5
+  - paragraph:
+    - generic: piy***
+    - generic: 2026.09.20
+  - button "0"
+  - paragraph:
+    - generic: "オプション: 選択:抹茶セラム 50ml"
+    - generic: "肌タイプ: 混合肌"
+    - generic: "肌トーン: イエベ"
+    - generic: "肌の悩み: ニキビ・肌荒れ, 毛穴, シミ"
+  - list:
+    - generic: スペシャルケア満足です
+    - generic: 浸透力満足です
+    - generic: テクスチャー満足です
+  - paragraph:
+    - text: CICAやPDRN成分が入っていて期待できそうです！
+    - text: さらっとしたテクスチャーで肌に浸透してくれます！
+    - text: 特にメイク前に使用したいと思います！
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133212646&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133212646&priority=2
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133212646&priority=3
+      - img "image"
+  - paragraph:
+    - generic: 80PERCENT
+  - paragraph: 4 /5
+  - paragraph:
+    - generic: mok***
+    - generic: 2026.09.19
+  - button "0"
+  - paragraph:
+    - generic: "オプション: 選択:抹茶セラム 50ml"
+    - generic: "肌タイプ: 乾燥肌"
+    - generic: "肌トーン: イエベ"
+    - generic: "肌の悩み: 乾燥, しわ・たるみ, シミ"
+  - list:
+    - generic: スペシャルケア満足です
+    - generic: 浸透力満足です
+    - generic: テクスチャー満足です
+  - paragraph:
+    - text: 見た目のインパクトに惹かれました！
+    - text: 使用する前にシェイクすると抹茶ミルクみたいな見た目に変化！
+    - text: テクスチャーはスーッと軽やかでベタつきもなくて使いやすい！香りもないので幅広い人が使いやすいところも嬉しい。
+  - list:
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133189175&priority=1
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133189175&priority=2
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133189175&priority=3
+      - img "image"
+    - link "image":
+      - /url: https://m.qoo10.jp/gmkt.inc/Mobile/My/ViewReview.aspx?review_no=133189175&priority=4
+      - img "image"
+- button "閉じる"
+- list:
+  - text: 人気レビュー順
+  - text: 新着順
+  - text: 評価の高い順
+  - text: 評価の低い順
+- button "top"
+- contentinfo:
+  - list:
+    - button "ホーム":
+      - generic: ホーム
+    - button "お気に入り":
+      - generic: お気に入り
+    - button "検索":
+      - generic: 検索
+    - button "MY":
+      - generic: MY
+    - button "最近見た商品":
+      - generic: 最近見た商品
+  - link "会社概要":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/AboutCompany.aspx
+  - link "利用規約":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/UserAgreement.aspx
+  - link "個人情報保護方針":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/PrivacyPolicy.aspx
+  - link "外部送信ポリシー":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/CookiePolicy.aspx
+  - generic: PC画面
+  - link "Qoo10大学":
+    - /url: https://article-university.qoo10.jp/
+  - link "今すぐアプリダウンロード!":
+    - /url: market://details?id=net.giosis.shopping.jp
+  - link "ホーム":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/
+  - link "透明性向上のための取組":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/DigitalPlatform.aspx
+  - link "カスタマーハラスメント対応方針":
+    - /url: https://m.qoo10.jp/gmkt.inc/Mobile/Company/CustomerHarassment.aspx
+  - paragraph: Copyright © 2026 イーベイ
+  - img "PCI DSS"

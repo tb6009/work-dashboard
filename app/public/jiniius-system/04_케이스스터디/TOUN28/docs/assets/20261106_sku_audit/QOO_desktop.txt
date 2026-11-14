@@ -1,0 +1,269 @@
+- list:
+  - button "Home"
+  - textbox "Remove Search":
+    - /placeholder: Qoo10で商品を探してみよう！
+  - button "Remove"
+  - button "Search":
+    - text: Search
+  - text: 検索履歴がありません。
+  - button "MY":
+    - text: MY
+  - button "Notice":
+    - text: Notice
+  - button:
+- navigation:
+  - list:
+    - link "スキンケア":
+      - /url: https://www.qoo10.jp/cat/120000012?g=2
+    - link "基礎化粧品":
+      - /url: https://www.qoo10.jp/cat/120000012/220000159
+    - link "美容液":
+      - /url: https://www.qoo10.jp/cat/120000012/220000159/320001623
+- img "SUPER SALE"
+- list:
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+  - button "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム":
+    - img "【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム"
+- button "Prev"
+- button "Next"
+- strong: "1"
+- text: / 2
+- generic: Full Image Btn
+- link "ショップ情報 ショップへ":
+  - /url: javascript:void(0);
+  - text: ショップ情報
+  - paragraph: ショップへ
+- term:
+  - img "Brand logo"
+- definition:
+  - paragraph: TOUN28(トーン28)公式
+  - paragraph: パワーセラー
+  - paragraph:
+    - generic: 96 PERCENT
+  - paragraph: "4.8"
+  - button "999+":
+    - generic: 999+
+- list:
+  - link "お知らせ・Q&A":
+    - /url: javascript:void(0);
+  - link "ショップへお問い合わせ":
+    - /url: javascript:void(0);
+- generic: 公式ショップ
+- text: 送料無料
+- link "トーン28":
+  - /url: https://www.qoo10.jp/gmkt.inc/Search/Brand.aspx?brandno=104216
+- text: 【公式】【NEW】【海南404】ペプタシカ抹茶セラム 50ml／グロウセラム＆クリーム／メイクノリUP美容液／肌キメ＆バリアケア／シカPDRN／ヒアルロン酸／メイクノリ爆上がり／メイク映えセラム
+- generic: 話題のメイクノリUP＆メイク映えセラム
+- button "お気に入り"
+- button "シェア シェア シェア(1%)":
+  - img "シェア"
+  - text: シェア シェア(1%)
+- generic: 37% OFF
+- generic: 4,670 円
+- generic: 2,899円
+- generic: 2,609 円
+- generic: メガポ時
+- button "More":
+  - generic: More
+- button "全てのクーポン":
+  - generic: 全てのクーポン
+- generic: メガポ10%
+- button "メガポイント 261P 還元で、 実質価格 2,348 円":
+  - text: メガポイント
+  - generic: 261P
+  - text: 還元で、
+  - text: 実質価格
+  - text: 2,348
+  - generic: 円
+- text: 円 円 円 円
+- generic: ポイント獲得
+- button "tooltip"
+- text: 最大
+- generic: 282P
+- text: 貯まる
+- text: (
+- generic: "21"
+- text: +
+- generic: "261"
+- text: )
+- generic: 追加割引クーポン
+- button "coupon label tooltip"
+- generic: +250円ショップカート割
+- link "95PERCENT 4.9/5 (1,010) もっと見る":
+  - /url: javascript:void(0);
+  - paragraph:
+    - generic: 95PERCENT
+  - paragraph: 4.9/5
+  - paragraph: (1,010)
+  - paragraph: もっと見る
+- strong: お客様の声（AI要約）
+- button "ai tooltip":
+  - generic: ai tooltip
+- list:
+  - paragraph: 使い心地がなめらかで、保湿が続くところがお気に入りです。肌になじみやすく、さらっとした仕上がりなのに自然なツヤも出て、化粧ノリが良いのも嬉しいです。CICAとPDRNの組み合わせにも満足していて、毎日使うのが楽しみになりました。これからもリピートして使いたいです。
+- list:
+  - link "Best 艶と保湿ができる抹茶セラム✨️ [サンプルマーケット]サンプルマーケットで商品を無償で頂きました💖Qoo10のサンプルマーケットで当選しました！ありがとうございます😊まず、ほんのり抹茶のような香りがして、メイクに癒されます🌿でもほんのり、というくらいで香りは全然きつくはないです。使用前は2層に分かれていますが、軽く振るとしっかり混ざるので、使う時の分離具合は気になりませんでした。色味はほとんど付かず、トーンアップというよりは「ツヤと保湿」をプラスしてくれるような印象です。夏場はサラッサラになるタイプのパウダーを使うことが多いのですが、その前に仕込んでおくと、表面はさらっとしているのに内側はしっとり保湿されているような感覚があり、乾燥しにくく感じました！💖手持ちのTfitのクッションファンデーションとDiorのリキッドファンデーションのどちらの前に使っても、ヨレたりモロモロが出たりすることはなく、相性も問題ありませんでした。ナチュラルなツヤ感や保湿感を求めている方には使いやすいアイテムだと思います。サンプルで試せてよかったです。引き続き使ってみたいと思います！✨️":
+    - /url: javascript:void(0);
+    - generic: Best
+    - generic: 艶と保湿ができる抹茶セラム✨️
+    - generic: "[サンプルマーケット]サンプルマーケットで商品を無償で頂きました💖Qoo10のサンプルマーケットで当選しました！ありがとうございます😊まず、ほんのり抹茶のような香りがして、メイクに癒されます🌿でもほんのり、というくらいで香りは全然きつくはないです。使用前は2層に分かれていますが、軽く振るとしっかり混ざるので、使う時の分離具合は気になりませんでした。色味はほとんど付かず、トーンアップというよりは「ツヤと保湿」をプラスしてくれるような印象です。夏場はサラッサラになるタイプのパウダーを使うことが多いのですが、その前に仕込んでおくと、表面はさらっとしているのに内側はしっとり保湿されているような感覚があり、乾燥しにくく感じました！💖手持ちのTfitのクッションファンデーションとDiorのリキッドファンデーションのどちらの前に使っても、ヨレたりモロモロが出たりすることはなく、相性も問題ありませんでした。ナチュラルなツヤ感や保湿感を求めている方には使いやすいアイテムだと思います。サンプルで試せてよかったです。引き続き使ってみたいと思います！✨️"
+  - link "Best サンプルマーケット当選しました。 サンプルマーケット当選しました。混ぜて使う、セラム層だけ使う、クリーム層だけ使うの3パターンで夜に使ってみました。どれも、翌朝の化粧のノリがいいです。クリーム層だけは1番ベタつくかなと思いながら使いましたが、ベタつきはあまり感じなかったです。セラム層だけはさっぱり感があるような。混ぜて使うのが1番ですかね。ほんのり緑茶の香りがして癒されます。":
+    - /url: javascript:void(0);
+    - generic: Best
+    - generic: サンプルマーケット当選しました。
+    - generic: サンプルマーケット当選しました。混ぜて使う、セラム層だけ使う、クリーム層だけ使うの3パターンで夜に使ってみました。どれも、翌朝の化粧のノリがいいです。クリーム層だけは1番ベタつくかなと思いながら使いましたが、ベタつきはあまり感じなかったです。セラム層だけはさっぱり感があるような。混ぜて使うのが1番ですかね。ほんのり緑茶の香りがして癒されます。
+  - link "Best 不思議な塗り心地 サンプルマーケットで商品を無償で提供していただきました。完全に分離すると上のクリーム部分は全体の1/3弱で、混ぜると抹茶ミルクみたい。肌にのせて塗り拡げる時は、サラサラのオイルを塗ってるような感じ、なのに塗り拡げるとサラッとしている、今までにない美容液。今の時期、マット系の下地やファンデ、フィックスミストで仕上げますが、ずっと潤いが続いていてびっくりしました。これは良いものをいただきました、お気に入りに登録します。":
+    - /url: javascript:void(0);
+    - generic: Best
+    - generic: 不思議な塗り心地
+    - generic: サンプルマーケットで商品を無償で提供していただきました。完全に分離すると上のクリーム部分は全体の1/3弱で、混ぜると抹茶ミルクみたい。肌にのせて塗り拡げる時は、サラサラのオイルを塗ってるような感じ、なのに塗り拡げるとサラッとしている、今までにない美容液。今の時期、マット系の下地やファンデ、フィックスミストで仕上げますが、ずっと潤いが続いていてびっくりしました。これは良いものをいただきました、お気に入りに登録します。
+- heading "お得な特典" [level=4]
+- img "PayPay"
+- generic: 最大10％
+- text: 戻ってくる
+- img "Paidy"
+- generic: 最大全額*キャッシュバック
+- text: "*還元上限1万円"
+- img "Paypal"
+- generic: Qポイント最大10,000円分
+- text: プレゼント
+- img "Atone"
+- text: 翌月払いで
+- generic: 全員5%キャッシュバック
+- heading "配送情報" [level=4]
+- list:
+  - generic: 送料無料 ~
+  - generic: 地域別追加送料
+  - button "送料の計算"
+  - generic: 海外配送(韓国)
+  - text: ":"
+  - generic: 佐川急便 ,ヤマト運輸 ,日本郵便
+  - generic: 本日決済で11月11日以内に発送
+- separator
+- list:
+  - button "配送情報の詳細"
+  - button "キャンセル/返品/払い戻しに関する事項"
+- img "qoo10 authenticity"
+- img "ブランド公式認定ショップ安心してお買い求めください。当店はブランド公認の正規販売店です。正規品のみを取り扱い、公式サポートに対応しております。※正規店以外でご購入された商品はサポート対象外となる場合がございます。"
+- tablist:
+  - tab "商品情報" [selected]:
+    - generic: 商品情報
+  - tab "お知らせ・Q&A 2":
+    - generic: お知らせ・Q&A
+    - generic: "2"
+  - tab "レビュー 1,010":
+    - generic: レビュー
+    - generic: 1,010
+- heading "商品説明 商品番号 1191283124 のURLをコピー" [level=4]:
+  - text: 商品説明
+  - button "商品番号 1191283124 のURLをコピー": "商品番号: 1191283124"
+- button "もっと見る"
+- heading "お知らせ・Q&A" [level=4]
+- link "2 件":
+  - /url: javascript:void(0);
+  - generic: "2"
+  - text: 件
+- list:
+  - term: タイプ
+  - definition: Q&A
+- heading "レビュー" [level=4]
+- paragraph:
+  - generic: 1,010
+  - text: 件のレビュー
+- paragraph:
+  - generic: 95PERCENT
+- paragraph:
+  - generic: "4.9"
+  - generic: /5
+- button "もっと見る"
+- strong:
+  - generic: お客様の声（AI要約）
+  - button "AI 툴팁":
+    - generic: AI 툴팁
+- paragraph: "*AIで生成された文章であり、カスタマーレビューはお客様自身の感想・意見であって、Qoo10の公式見解を示すものではありません"
+- list:
+  - button "👍 保湿が続く":
+    - generic: 👍 保湿が続く
+  - button "化粧ノリが良い":
+    - generic: 化粧ノリが良い
+  - button "塗り心地が良い":
+    - generic: 塗り心地が良い
+  - button "仕上がりがさらっと":
+    - generic: 仕上がりがさらっと
+  - button "CICAとPDRNが効果的":
+    - generic: CICAとPDRNが効果的
+  - button "ツヤが自然":
+    - generic: ツヤが自然
+  - button "パケが可愛い":
+    - generic: パケが可愛い
+  - button "リピートしたい":
+    - generic: リピートしたい
+  - button "大容量":
+    - generic: 大容量
+  - button "期待が高い":
+    - generic: 期待が高い
+- link "ブランド ブランド商品をさらに表示":
+  - /url: https://www.qoo10.jp/gmkt.inc/Search/Brand.aspx?brandno=104216
+  - text: ブランド
+  - paragraph: ブランド商品をさらに表示
+- term:
+- definition: トーン28
+- list
+- link:
+  - /url: javascript:void(0);
+- list
+- link:
+  - /url: javascript:void(0);
+- list
+- list
+- heading [level=4]
+- list
+- heading [level=2]
+- list
+- heading [level=4]
+- list
+- button "ご注意":
+  - text: ご注意
+  - paragraph
+- button "報告する":
+  - text: 報告する
+  - paragraph
+- text: 検索履歴がありません。
+- contentinfo:
+  - link "会社概要":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/AboutCompany.aspx
+  - link "利用規約":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/UserAgreement.aspx
+  - link "個人情報保護方針":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/PrivacyPolicy.aspx
+  - link "外部送信ポリシー":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/CookiePolicy.aspx
+  - link "アフィリエイト":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/AboutCompany.aspx?partnership=1
+  - link "出店者登録":
+    - /url: https://university.qoo10.jp/store-setup/?utm_source=company&utm_medium=bottom&utm_content=link&utm_campaign=qoo10university
+  - link "Qoo10大学":
+    - /url: https://article-university.qoo10.jp/
+  - link "カスタマーセンター":
+    - /url: https://www.qoo10.jp/gmkt.inc/CS/NHelpHome.aspx
+  - link "Qsafeプログラム":
+    - /url: https://www.qoo10.jp/gmkt.inc/Qsafe/QsafeIntro.aspx
+  - link "取引DPF法への対応":
+    - /url: https://www.onlinemarketplace.jp/initiatives/initiatives_detail02/
+  - link "透明性向上のための取組":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/DigitalPlatform.aspx
+  - link "カスタマーハラスメント 対応方針":
+    - /url: https://www.qoo10.jp/gmkt.inc/Company/CustomerHarassment.aspx
+  - paragraph: Copyright © 2026 イーベイ
+  - link "PCI DSS":
+    - /url: ""
+    - img "PCI DSS"

@@ -1,0 +1,125 @@
+{
+  "JP_latest10": {
+    "n": 10,
+    "visual_positive": [
+      "JP01",
+      "JP02",
+      "JP03",
+      "JP06",
+      "JP07",
+      "JP08",
+      "JP09",
+      "JP10"
+    ],
+    "visual_purchase": [
+      "JP01",
+      "JP03",
+      "JP06"
+    ],
+    "makeup_experience": [
+      "JP02",
+      "JP04"
+    ],
+    "skin_glow": [],
+    "light_non_greasy": [],
+    "eco_packaging": [],
+    "counterexample": []
+  },
+  "JP_low10": {
+    "n": 10,
+    "visual_positive": [
+      "JL02",
+      "JL06",
+      "JL07",
+      "JL08",
+      "JL10"
+    ],
+    "visual_purchase": [],
+    "makeup_experience": [],
+    "skin_glow": [],
+    "light_non_greasy": [],
+    "eco_packaging": [],
+    "counterexample": [
+      "JL01",
+      "JL05"
+    ]
+  },
+  "KR_latest20": {
+    "n": 20,
+    "visual_positive": [
+      "KR02",
+      "KR05",
+      "KR19"
+    ],
+    "visual_purchase": [
+      "KR05",
+      "KR19"
+    ],
+    "makeup_experience": [
+      "KR03",
+      "KR04",
+      "KR07",
+      "KR08",
+      "KR10",
+      "KR13",
+      "KR17",
+      "KR18",
+      "KR19"
+    ],
+    "skin_glow": [],
+    "light_non_greasy": [],
+    "eco_packaging": [],
+    "counterexample": []
+  },
+  "US_all11": {
+    "n": 11,
+    "visual_positive": [],
+    "visual_purchase": [],
+    "makeup_experience": [
+      "US04",
+      "US06"
+    ],
+    "skin_glow": [
+      "US01",
+      "US04",
+      "US06",
+      "US08",
+      "US11"
+    ],
+    "light_non_greasy": [
+      "US04",
+      "US06",
+      "US10",
+      "US11"
+    ],
+    "eco_packaging": [],
+    "counterexample": []
+  },
+  "WAT_all12": {
+    "n": 12,
+    "visual_positive": [
+      "HK06",
+      "HK07"
+    ],
+    "visual_purchase": [
+      "HK06"
+    ],
+    "makeup_experience": [
+      "HK08",
+      "HK10"
+    ],
+    "skin_glow": [],
+    "light_non_greasy": [
+      "HK01",
+      "HK02",
+      "HK04",
+      "HK05",
+      "HK06",
+      "HK10"
+    ],
+    "eco_packaging": [
+      "HK03"
+    ],
+    "counterexample": []
+  }
+}

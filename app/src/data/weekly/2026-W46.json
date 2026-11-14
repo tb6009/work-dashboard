@@ -7,16 +7,16 @@
   "status": "current",
   "summary": "jiniius 시스템을 16번 독립 프로젝트로 세우고 케이스를 4개로 늘렸다. 계원 입시 검색은 학과별 지도 v0.7(검색어 394개·연결 1,040개)과 SNS 관계망까지 만들었다. 기람테크는 강점 진단·딥체크에서 전시 콘텐츠 기획과 디자인 3안으로 넘어갔다. 컨텍스트 엔지니어링 워크숍 원고·장표와 RISE 기업협력 배너 5장을 만들었고, 보물AI는 이미지 개선 중간보고와 802장 시트·크롭을 마쳤다. 아주대 62기 현수막과 KCS 중간보고서도 진행했다.",
   "kpis": {
-    "activeProjects": 9,
+    "activeProjects": 8,
     "sessions": 6,
     "newProjects": 1,
-    "filesChanged": 404
+    "filesChanged": 550
   },
   "daily": [
     {
       "date": "2026-11-09",
       "weekday": "월",
-      "filesChanged": 38,
+      "filesChanged": 37,
       "topProjectIds": [
         "063",
         "03",
@@ -104,7 +104,7 @@
     {
       "date": "2026-11-11",
       "weekday": "수",
-      "filesChanged": 100,
+      "filesChanged": 91,
       "topProjectIds": [
         "063",
         "0310",
@@ -264,11 +264,13 @@
     {
       "date": "2026-11-14",
       "weekday": "토",
-      "filesChanged": 45,
+      "filesChanged": 201,
       "topProjectIds": [
         "0813",
         "063",
-        "03"
+        "03",
+        "0812",
+        "039"
       ],
       "entries": [
         {
@@ -277,7 +279,27 @@
         },
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W46.json"
+          "did": "[fs scan] 2026-W46.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 100,
+                "out": 26148,
+                "cache_read": 7394885,
+                "cache_write": 61561,
+                "messages": 44,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 100,
+              "out": 26148,
+              "cache_read": 7394885,
+              "cache_write": 61561,
+              "messages": 44
+            },
+            "costUSD": 0
+          }
         },
         {
           "projectId": "03",
@@ -302,6 +324,14 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "0812",
+          "did": "[fs scan] 22_디자인편_2027동향_리서치계획_v0.1.md · HANDOFF.md"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 배너01_기업협력개요.svg · 배너02_진단과상담.svg · 배너03_협력프로그램.svg · 배너04_학과와프로젝트.svg · 배너05_제작촬영시설.svg"
         }
       ]
     },
@@ -427,13 +457,13 @@
     "16"
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-14T04:15:06.250Z",
+  "buildAt": "2026-11-14T06:36:09.693Z",
   "tokens": {
     "total": {
-      "in": 970,
-      "out": 338735,
-      "cache_read": 52359068,
-      "cache_write": 3107468
+      "in": 1070,
+      "out": 364883,
+      "cache_read": 59753953,
+      "cache_write": 3169029
     },
     "costUSD": 0,
     "costKRW": 0
@@ -835,18 +865,18 @@
       {
         "date": "2026-11-14",
         "projectId": "01",
-        "in": 225774,
-        "out": 4547,
-        "cache_read": 1961344,
+        "in": 611187,
+        "out": 111392,
+        "cache_read": 32348288,
         "cache_write": 0,
-        "requests": 18,
+        "requests": 273,
         "byModel": {
           "gpt-6-astra": {
-            "in": 225774,
-            "out": 4547,
-            "cache_read": 1961344,
+            "in": 611187,
+            "out": 111392,
+            "cache_read": 32348288,
             "cache_write": 0,
-            "messages": 18
+            "messages": 273
           }
         },
         "attribution": [
@@ -876,9 +906,9 @@
       }
     ],
     "audit": {
-      "response-id": 2349,
-      "assigned": 1139,
-      "unassigned": 1210
+      "response-id": 2608,
+      "assigned": 1394,
+      "unassigned": 1214
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -893,11 +923,11 @@
           "costUSD": 0
         },
         "gpt-6-astra": {
-          "in": 4939276,
-          "cached": 161341440,
-          "out": 580750,
-          "turns": 1135,
-          "costUSD": 239.77
+          "in": 5325709,
+          "cached": 192004864,
+          "out": 687892,
+          "turns": 1394,
+          "costUSD": 279.66
         },
         "codex-auto-review": {
           "in": 40202,
@@ -907,19 +937,19 @@
           "costUSD": 0
         }
       },
-      "costUSD": 239.77,
+      "costUSD": 279.66,
       "costByDay": {
         "2026-11-09": 10.31,
         "2026-11-10": 5.45,
         "2026-11-11": 32.42,
         "2026-11-12": 43.51,
         "2026-11-13": 137.49,
-        "2026-11-14": 10.59
+        "2026-11-14": 50.48
       },
       "audit": {
-        "response-id": 2349,
-        "assigned": 1139,
-        "unassigned": 1210
+        "response-id": 2608,
+        "assigned": 1394,
+        "unassigned": 1214
       },
       "unpricedModels": [
         "gpt-6.1-sol",
@@ -946,8 +976,8 @@
       "projectAttribution": "unavailable",
       "unpricedModels": []
     },
-    "totalUSD": 239.77,
-    "totalKRW": 337570,
+    "totalUSD": 279.66,
+    "totalKRW": 393731,
     "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
     "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
     "costCoverage": "partial-historical-price-table-not-reverified"

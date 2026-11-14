@@ -130,6 +130,8 @@ const EXPLICIT = {
   '08_project/0813_보물AI': '0813',
   '08_project/0814_보물AI_이미지평가': '0813',
   '08_project/0815_톤28_마케팅관찰': '0815',
+  '16_jiniius': '16',
+  '08_project/080_Jiniius': '16',
   '08_project/081_Anchornode': '081',
   '08_project/082_ICCS': '082',
   '08_project/083_촬영용스크립트': '083',

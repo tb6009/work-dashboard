@@ -5,23 +5,276 @@
     "to": "2026-11-15"
   },
   "status": "current",
-  "summary": "주 시작. 보물AI 듀얼트랙 이미지 5장을 만들고, 지난주 작업을 대시보드와 주간보고서에 반영했다.",
+  "summary": "jiniius 시스템을 16번 독립 프로젝트로 세우고 케이스를 4개로 늘렸다. 계원 입시 검색은 학과별 지도 v0.7(검색어 394개·연결 1,040개)과 SNS 관계망까지 만들었다. 기람테크는 강점 진단·딥체크에서 전시 콘텐츠 기획과 디자인 3안으로 넘어갔다. 컨텍스트 엔지니어링 워크숍 원고·장표와 RISE 기업협력 배너 5장을 만들었고, 보물AI는 이미지 개선 중간보고와 802장 시트·크롭을 마쳤다. 아주대 62기 현수막과 KCS 중간보고서도 진행했다.",
   "kpis": {
-    "activeProjects": 2,
-    "sessions": 1,
-    "newProjects": 0,
-    "filesChanged": 1
+    "activeProjects": 9,
+    "sessions": 6,
+    "newProjects": 1,
+    "filesChanged": 404
   },
   "daily": [
     {
       "date": "2026-11-09",
       "weekday": "월",
+      "filesChanged": 38,
+      "topProjectIds": [
+        "063",
+        "03",
+        "0813",
+        "0311"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 86,
+                "out": 49592,
+                "cache_read": 8097177,
+                "cache_write": 220195,
+                "messages": 43,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 86,
+              "out": 49592,
+              "cache_read": 8097177,
+              "cache_write": 220195,
+              "messages": 43
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 82,
+                "out": 11939,
+                "cache_read": 2745289,
+                "cache_write": 286573,
+                "messages": 28,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 82,
+              "out": 11939,
+              "cache_read": 2745289,
+              "cache_write": 286573,
+              "messages": 28
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0813",
+          "did": "[fs scan] GPT_듀얼트랙_10대오브젝트_카메라앵글_프롬프트북.md · all267_dual_track_5views_v3.json · all267_object_prompts_v2.json · audit_580panels_quantitative.json · generation_prompts.json 외 17건"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 01_중간보고서_양식기입용_작성안_v0.1.md · 02_작성근거_인용명세와확인사항.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "화",
       "filesChanged": 1,
       "topProjectIds": [
+        "0311",
+        "063"
+      ],
+      "entries": [
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 01_KCS_분류체계부터_수행준거_지식기술태도_v0.1.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "수",
+      "filesChanged": 100,
+      "topProjectIds": [
+        "063",
+        "0310",
+        "03"
+      ],
+      "entries": [
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json"
+        },
+        {
+          "projectId": "0310",
+          "did": "[fs scan] 01_기람테크_강점진단_v0.1.md · 02_강점진단_인용_명세서.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-haiku-5-5": {
+                "in": 10,
+                "out": 2671,
+                "cache_read": 9620,
+                "cache_write": 25038,
+                "messages": 5,
+                "costUSD": 0
+              },
+              "claude-opus-5-5": {
+                "in": 310,
+                "out": 97345,
+                "cache_read": 16783740,
+                "cache_write": 521784,
+                "messages": 121,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 320,
+              "out": 100016,
+              "cache_read": 16793360,
+              "cache_write": 546822,
+              "messages": 126
+            },
+            "costUSD": 0
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "목",
+      "filesChanged": 86,
+      "topProjectIds": [
+        "03",
+        "063",
+        "0311",
+        "0695",
+        "039"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 244,
+                "out": 92381,
+                "cache_read": 12001569,
+                "cache_write": 477893,
+                "messages": 89,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 244,
+              "out": 92381,
+              "cache_read": 12001569,
+              "cache_write": 477893,
+              "messages": 89
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json"
+        },
+        {
+          "projectId": "0311",
+          "did": "[fs scan] 37_제출용최종본_표지·위치_4자대조_20261109.md"
+        },
+        {
+          "projectId": "0695",
+          "did": "[fs scan] build_banner.py · index.html · 현수막_B_4000x800_윤곽선.svg · 현수막_B_4000x800_편집용.svg"
+        },
+        {
+          "projectId": "039",
+          "did": "[fs scan] 01_배너5장_내용검토와_구성제안_v0.1.md · 02_배너_인용_명세서_v0.1.md · PROJECT.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "weekday": "금",
+      "filesChanged": 134,
+      "topProjectIds": [
+        "039",
+        "063",
+        "03",
+        "0695",
+        "0813"
+      ],
+      "entries": [
+        {
+          "projectId": "039",
+          "did": "[fs scan] 디자인제안_편집기준.md · 배너01_A안_본문10pt.svg · 배너01_B안_본문10pt.svg · 배너01_C안_본문10pt.svg"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json"
+        },
+        {
+          "projectId": "03",
+          "did": "[fs scan] 20261113_영업활동_인용_명세서.md · 20261113_영업활동_주요발견과_콘텐츠강화_v0.1.md · PROJECT.md",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 222,
+                "out": 82427,
+                "cache_read": 12010809,
+                "cache_write": 1254537,
+                "messages": 87,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 222,
+              "out": 82427,
+              "cache_read": 12010809,
+              "cache_write": 1254537,
+              "messages": 87
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0695",
+          "did": "[fs scan] build_banner.py · index.html · 현수막_B_4000x800_윤곽선.svg · 현수막_B_4000x800_윤곽선_AI호환.svg · 현수막_B_4000x800_편집용.svg 외 1건"
+        },
+        {
+          "projectId": "0813",
+          "did": "[fs scan] 보물AI_연구결과보고서_인용_명세서.md · 전체802장_판정정본.json · 보완149장_생성큐.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "weekday": "토",
+      "filesChanged": 45,
+      "topProjectIds": [
+        "0813",
         "063",
         "03"
       ],
       "entries": [
+        {
+          "projectId": "0813",
+          "did": "[fs scan] page_01.json · page_02.json · page_03.json · page_04.json · page_05.json 외 26건"
+        },
         {
           "projectId": "063",
           "did": "[fs scan] 2026-W46.json"
@@ -32,55 +285,25 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 12,
-                "out": 1606,
-                "cache_read": 253420,
-                "cache_write": 84156,
-                "messages": 4,
+                "in": 16,
+                "out": 2380,
+                "cache_read": 710864,
+                "cache_write": 321448,
+                "messages": 6,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 12,
-              "out": 1606,
-              "cache_read": 253420,
-              "cache_write": 84156,
-              "messages": 4
+              "in": 16,
+              "out": 2380,
+              "cache_read": 710864,
+              "cache_write": 321448,
+              "messages": 6
             },
             "costUSD": 0
           }
         }
       ]
-    },
-    {
-      "date": "2026-11-10",
-      "weekday": "화",
-      "filesChanged": 0,
-      "topProjectIds": []
-    },
-    {
-      "date": "2026-11-11",
-      "weekday": "수",
-      "filesChanged": 0,
-      "topProjectIds": []
-    },
-    {
-      "date": "2026-11-12",
-      "weekday": "목",
-      "filesChanged": 0,
-      "topProjectIds": []
-    },
-    {
-      "date": "2026-11-13",
-      "weekday": "금",
-      "filesChanged": 0,
-      "topProjectIds": []
-    },
-    {
-      "date": "2026-11-14",
-      "weekday": "토",
-      "filesChanged": 0,
-      "topProjectIds": []
     },
     {
       "date": "2026-11-15",
@@ -91,41 +314,571 @@
   ],
   "projects": [
     {
-      "id": "0813",
-      "pct": 50,
+      "id": "16",
+      "pct": 30,
+      "filesChanged": 0,
+      "imp": 5,
+      "did": "MNS 연관검색 10단계 추적과 관계망 시각화, 16_jiniius 독립 이관(v1.0), 계원 소표본→학과 확장→수집 원장→v0.7 시스템 연결·SNS 관계망, 경기남부 4개 예술대학 계획과 출발 화면 UI 초안.",
+      "nextAction": "경기남부 초안 검토 · 계원 입시 유입 지표 확보"
+    },
+    {
+      "id": "0310",
+      "pct": 20,
+      "filesChanged": 0,
+      "imp": 4,
+      "did": "강점 진단과 초기 컨설팅 장표 v0.2~v0.4, 딥체크 주요 발견 문서화, 유닛 2·3 전시 콘텐츠 구체화와 스케치, 콘텐츠기획서 v0.2, 전시 디자인 3안.",
+      "nextAction": "전시 디자인 3안 중 방향 선택"
+    },
+    {
+      "id": "039",
+      "pct": 12,
       "filesChanged": 0,
       "imp": 3,
-      "did": "듀얼트랙 프롬프트로 이미지 5장을 생성했다.",
-      "nextAction": "이미지 평가"
+      "did": "기업 Value-up 소개 배너 5장 구성 v0.2~v0.4, 시안 3종 중 B안 전체 제작, 진단지 여백·실제 자료 이미지 반영.",
+      "nextAction": "배너 최종 확인"
+    },
+    {
+      "id": "0813",
+      "pct": 10,
+      "filesChanged": 0,
+      "imp": 3,
+      "did": "듀얼트랙 이미지 5장, 대표 미팅 장표 원고 v3.1·화면 컨셉 v1.0, 이미지 개선 중간보고 v1.0, 전체 802장 30컷 4K 시트와 프롬프트 번호별 크롭.",
+      "nextAction": "대표 미팅 후 개선 범위 확정"
+    },
+    {
+      "id": "0695",
+      "pct": 8,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "현수막 A·B 테스트, 5:1 HTML·SVG 제작 v0.4~v1.6, 장소 수정본 저장.",
+      "nextAction": "현수막 출력"
+    },
+    {
+      "id": "0311",
+      "pct": 7,
+      "filesChanged": 0,
+      "imp": 3,
+      "did": "KCS 역량체계 정리, 중간보고서 v0.3 작성과 향후 연구계획 문체 수정, 표지·위치 코드 정합.",
+      "nextAction": "중간보고서 제출"
+    },
+    {
+      "id": "132",
+      "pct": 4,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "스토리텔링 9주차 자료 정리.",
+      "nextAction": "10주차 준비"
+    },
+    {
+      "id": "1300",
+      "pct": 3,
+      "filesChanged": 0,
+      "imp": 1,
+      "did": "1301 이미지 코퍼스 문제 원본·엑셀 위치 확인.",
+      "nextAction": "-"
     },
     {
       "id": "063",
-      "pct": 50,
+      "pct": 6,
       "filesChanged": 0,
-      "imp": 3,
-      "did": "W44·W45 요약·결정을 채우고 신규 프로젝트 4개(0812·0813·0815·0695)를 등록했다.",
-      "nextAction": "배포 확인"
+      "imp": 2,
+      "did": "W44·W45 마감 커밋, 신규 프로젝트 포트폴리오 페이지, jiniius 누적형 사이트와 16번 프로젝트 등록.",
+      "nextAction": "jiniius 기록 주간 누적"
     }
   ],
-  "decisions": [],
-  "newProjects": [],
+  "decisions": [
+    {
+      "date": "2026-11-12",
+      "projectId": "16",
+      "title": "jiniius를 16번 독립 프로젝트로",
+      "description": "080 안의 케이스들을 16_jiniius로 옮기고 공통 프로세스·UI 규격·새 케이스 양식을 분리했다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-11-12",
+      "projectId": "16",
+      "title": "복잡한 지도와 간편 요약을 분리",
+      "description": "계원 학과별 지도에서 관계망 상세와 한눈에 보기를 나눴다. 다른 대학 전공명은 선택 학과로 분류하지 않는다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-11-13",
+      "projectId": "16",
+      "title": "추천 노출과 실제 클릭을 구분",
+      "description": "검색 추천은 노출 관계일 뿐 수험생 이동이 아니다. 미확인은 연결 없음으로 단정하지 않는다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-11-14",
+      "projectId": "16",
+      "title": "경기남부 4개 예술대학 케이스 착수",
+      "description": "4학교×3엔진 최대 10단계. 검색량과 추천 근거를 분리하고 독립 검증 에이전트를 둔다.",
+      "isMilestone": true
+    },
+    {
+      "date": "2026-11-13",
+      "projectId": "0310",
+      "title": "컨설팅에서 전시 콘텐츠 기획으로",
+      "description": "딥체크 발견을 바탕으로 유닛 2·3 전시 콘텐츠와 콘텐츠기획서를 만들었다.",
+      "isMilestone": false
+    }
+  ],
+  "newProjects": [
+    "16"
+  ],
   "labelChanges": [],
-  "buildAt": "2026-11-09T00:30:58.275Z",
+  "buildAt": "2026-11-14T04:15:06.250Z",
   "tokens": {
     "total": {
-      "in": 12,
-      "out": 1606,
-      "cache_read": 253420,
-      "cache_write": 84156
+      "in": 970,
+      "out": 338735,
+      "cache_read": 52359068,
+      "cache_write": 3107468
     },
     "costUSD": 0,
     "costKRW": 0
   },
   "projectTokenUsage": {
-    "codex": [],
+    "codex": [
+      {
+        "date": "2026-11-09",
+        "projectId": "03",
+        "in": 546523,
+        "out": 14663,
+        "cache_read": 4109824,
+        "cache_write": 0,
+        "requests": 32,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 546523,
+            "out": 14663,
+            "cache_read": 4109824,
+            "cache_write": 0,
+            "messages": 32
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-10",
+        "projectId": "03",
+        "in": 112675,
+        "out": 23333,
+        "cache_read": 3161088,
+        "cache_write": 0,
+        "requests": 29,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 112675,
+            "out": 23333,
+            "cache_read": 3161088,
+            "cache_write": 0,
+            "messages": 29
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-10",
+        "projectId": "0815",
+        "in": 139050,
+        "out": 5449,
+        "cache_read": 2010880,
+        "cache_write": 0,
+        "requests": 17,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 139050,
+            "out": 5449,
+            "cache_read": 2010880,
+            "cache_write": 0,
+            "messages": 17
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "projectId": "03",
+        "in": 392296,
+        "out": 10087,
+        "cache_read": 824448,
+        "cache_write": 0,
+        "requests": 17,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 392296,
+            "out": 10087,
+            "cache_read": 824448,
+            "cache_write": 0,
+            "messages": 17
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "projectId": "039",
+        "in": 183526,
+        "out": 43806,
+        "cache_read": 11683584,
+        "cache_write": 0,
+        "requests": 71,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 183526,
+            "out": 43806,
+            "cache_read": 11683584,
+            "cache_write": 0,
+            "messages": 71
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "projectId": "063",
+        "in": 5817,
+        "out": 2435,
+        "cache_read": 949248,
+        "cache_write": 0,
+        "requests": 6,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 5817,
+            "out": 2435,
+            "cache_read": 949248,
+            "cache_write": 0,
+            "messages": 6
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "projectId": "0815",
+        "in": 152736,
+        "out": 5145,
+        "cache_read": 1323776,
+        "cache_write": 0,
+        "requests": 10,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 152736,
+            "out": 5145,
+            "cache_read": 1323776,
+            "cache_write": 0,
+            "messages": 10
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "projectId": "1303",
+        "in": 149122,
+        "out": 4417,
+        "cache_read": 733440,
+        "cache_write": 0,
+        "requests": 6,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 149122,
+            "out": 4417,
+            "cache_read": 733440,
+            "cache_write": 0,
+            "messages": 6
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-12",
+        "projectId": "01",
+        "in": 770874,
+        "out": 73829,
+        "cache_read": 20289024,
+        "cache_write": 0,
+        "requests": 146,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 770874,
+            "out": 73829,
+            "cache_read": 20289024,
+            "cache_write": 0,
+            "messages": 146
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-12",
+        "projectId": "039",
+        "in": 164974,
+        "out": 24342,
+        "cache_read": 5949440,
+        "cache_write": 0,
+        "requests": 41,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 164974,
+            "out": 24342,
+            "cache_read": 5949440,
+            "cache_write": 0,
+            "messages": 41
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-12",
+        "projectId": "0694",
+        "in": 421044,
+        "out": 23498,
+        "cache_read": 33200256,
+        "cache_write": 0,
+        "requests": 84,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 421044,
+            "out": 23498,
+            "cache_read": 33200256,
+            "cache_write": 0,
+            "messages": 84
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-12",
+        "projectId": "0815",
+        "in": 13126,
+        "out": 10947,
+        "cache_read": 1161216,
+        "cache_write": 0,
+        "requests": 9,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 13126,
+            "out": 10947,
+            "cache_read": 1161216,
+            "cache_write": 0,
+            "messages": 9
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "01",
+        "in": 1107077,
+        "out": 158566,
+        "cache_read": 58161280,
+        "cache_write": 0,
+        "requests": 422,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 1052023,
+            "out": 153452,
+            "cache_read": 57657984,
+            "cache_write": 0,
+            "messages": 414
+          },
+          "gpt-6.1-sol": {
+            "in": 55054,
+            "out": 5114,
+            "cache_read": 503296,
+            "cache_write": 0,
+            "messages": 8
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "03",
+        "in": 259619,
+        "out": 66927,
+        "cache_read": 12189312,
+        "cache_write": 0,
+        "requests": 90,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 105380,
+            "out": 6909,
+            "cache_read": 445696,
+            "cache_write": 0,
+            "messages": 5
+          },
+          "gpt-6-astra": {
+            "in": 154239,
+            "out": 60018,
+            "cache_read": 11743616,
+            "cache_write": 0,
+            "messages": 85
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "039",
+        "in": 75955,
+        "out": 28403,
+        "cache_read": 8472320,
+        "cache_write": 0,
+        "requests": 53,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 75955,
+            "out": 28403,
+            "cache_read": 8472320,
+            "cache_write": 0,
+            "messages": 53
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "0694",
+        "in": 538433,
+        "out": 5126,
+        "cache_read": 4032512,
+        "cache_write": 0,
+        "requests": 36,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 538433,
+            "out": 5126,
+            "cache_read": 4032512,
+            "cache_write": 0,
+            "messages": 36
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "082",
+        "in": 14332,
+        "out": 7598,
+        "cache_read": 3070592,
+        "cache_write": 0,
+        "requests": 13,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 14332,
+            "out": 7598,
+            "cache_read": 3070592,
+            "cache_write": 0,
+            "messages": 13
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "projectId": "1303",
+        "in": 59631,
+        "out": 13191,
+        "cache_read": 1832192,
+        "cache_write": 0,
+        "requests": 24,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 59631,
+            "out": 13191,
+            "cache_read": 1832192,
+            "cache_write": 0,
+            "messages": 24
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "projectId": "01",
+        "in": 225774,
+        "out": 4547,
+        "cache_read": 1961344,
+        "cache_write": 0,
+        "requests": 18,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 225774,
+            "out": 4547,
+            "cache_read": 1961344,
+            "cache_write": 0,
+            "messages": 18
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "projectId": "03",
+        "in": 215025,
+        "out": 15864,
+        "cache_read": 3201536,
+        "cache_write": 0,
+        "requests": 15,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 215025,
+            "out": 15864,
+            "cache_read": 3201536,
+            "cache_write": 0,
+            "messages": 15
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      }
+    ],
     "audit": {
-      "response-id": 52,
-      "unassigned": 52
+      "response-id": 2349,
+      "assigned": 1139,
+      "unassigned": 1210
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -133,27 +886,52 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 82341,
-          "cached": 5864064,
-          "out": 9278,
-          "turns": 52,
-          "costUSD": 0.0
+          "in": 5704876,
+          "cached": 247092352,
+          "out": 559172,
+          "turns": 1212,
+          "costUSD": 0
+        },
+        "gpt-6-astra": {
+          "in": 4939276,
+          "cached": 161341440,
+          "out": 580750,
+          "turns": 1135,
+          "costUSD": 239.77
+        },
+        "codex-auto-review": {
+          "in": 40202,
+          "cached": 38144,
+          "out": 202,
+          "turns": 2,
+          "costUSD": 0
         }
       },
-      "costUSD": 0.0,
+      "costUSD": 239.77,
       "costByDay": {
-        "2026-11-09": 0.0
+        "2026-11-09": 10.31,
+        "2026-11-10": 5.45,
+        "2026-11-11": 32.42,
+        "2026-11-12": 43.51,
+        "2026-11-13": 137.49,
+        "2026-11-14": 10.59
       },
       "audit": {
-        "response-id": 52,
-        "unassigned": 52
+        "response-id": 2349,
+        "assigned": 1139,
+        "unassigned": 1210
       },
       "unpricedModels": [
-        "gpt-6.1-sol"
+        "gpt-6.1-sol",
+        "codex-auto-review"
       ],
-      "images": 17,
+      "images": 116,
       "imagesByDay": {
-        "2026-11-09": 17
+        "2026-11-09": 17,
+        "2026-11-11": 4,
+        "2026-11-12": 4,
+        "2026-11-13": 81,
+        "2026-11-14": 10
       }
     },
     "gemini": {
@@ -161,15 +939,15 @@
       "costUSD": 0,
       "estimated": true,
       "audit": {
-        "databasesSeen": 44,
+        "databasesSeen": 60,
         "olderThanWeek": 43,
-        "outsideOrAmbiguousWeek": 1
+        "outsideOrAmbiguousWeek": 17
       },
       "projectAttribution": "unavailable",
       "unpricedModels": []
     },
-    "totalUSD": 0.0,
-    "totalKRW": 0,
+    "totalUSD": 239.77,
+    "totalKRW": 337570,
     "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
     "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
     "costCoverage": "partial-historical-price-table-not-reverified"

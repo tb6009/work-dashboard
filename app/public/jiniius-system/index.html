@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jiniius 시스템</title>
+<style>
+:root{--bg:#f8f7f2;--card:#fff;--ink:#202b25;--sub:#5b6660;--line:#cfd8cf;--accent:#23533c;--tag:#e6ece4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141815;--card:#1c221e;--ink:#e8eee9;--sub:#a3ada6;--line:#334037;--accent:#8fd0ab;--tag:#25302a}}
+:root[data-theme="dark"]{--bg:#141815;--card:#1c221e;--ink:#e8eee9;--sub:#a3ada6;--line:#334037;--accent:#8fd0ab;--tag:#25302a}
+*{box-sizing:border-box;font-style:normal}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 Pretendard,"Apple SD Gothic Neo",system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:56px 16px 88px}a{color:var(--accent);text-underline-offset:4px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.15;letter-spacing:-.04em;margin:0 0 12px}h2{margin:56px 0 16px;padding-top:16px;border-top:1px solid var(--line);font-size:22px}
+.lead{color:var(--sub);max-width:720px;font-size:17px}
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:28px}
+.t{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px}.t b{display:block;font-size:28px}.t small{color:var(--sub)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.case .no{font-size:13px;color:var(--sub)}.case h3{margin:2px 0 4px;font-size:20px}.case .st{display:inline-block;background:var(--tag);border-radius:4px;padding:1px 8px;font-size:13px}
+.case p{font-size:15px;color:var(--sub)}.m{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}.m b{font-size:16px}
+.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}.tl li{position:relative;padding:0 0 22px 20px}
+.tl li:before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl .d{font-size:13px;color:var(--sub)}.tl .c{font-size:13px;background:var(--tag);border-radius:4px;padding:0 6px;margin-left:6px}.tl h4{margin:2px 0;font-size:16px}.tl p{margin:0;color:var(--sub);font-size:15px}
+.note{font-size:13px;color:var(--sub)}
+</style></head><body><main>
+<h1>jiniius 시스템</h1>
+<p class="lead">검색 추천 관계와 소비자 반응에서 가설을 찾고, 기업 실적과 실험으로 마케팅 행동을 검증하는 조사 체계입니다. 케이스가 늘어날 때마다 이 페이지에 쌓입니다.</p>
+<div class="totals" id="totals"></div>
+<h2>케이스</h2><div class="cases" id="cases"></div>
+<h2>방법론</h2>
+<p><a href="00_방법론/index.html">연구방법과 추적 설계</a> · <a href="00_방법론/insight-process.html">인사이트 도출 과정</a> · <a href="00_방법론/writing.html">조사와 보고서 작성 기준</a> · <a href="00_방법론/references.html">참고문헌</a></p>
+<h2>진행 기록</h2><ul class="tl" id="tl"></ul>
+<p class="note">검색 추천은 화면에 노출된 관계이며, 실제 사용자의 이동이나 지원·구매 전환을 뜻하지 않습니다. 기업 자료와 원자료는 이 페이지에 싣지 않습니다.</p>
+</main>
+<script>
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+Promise.all([fetch('cases.json').then(r=>r.json()),fetch('timeline.json').then(r=>r.json())]).then(([cs,tl])=>{
+ const sum=k=>cs.reduce((a,c)=>a+(typeof c.metrics[k]==='number'?c.metrics[k]:0),0);
+ document.getElementById('totals').innerHTML=[['케이스',cs.length],['누적 검색어',sum('검색어').toLocaleString()],['기록',tl.length],['최근 갱신',tl.map(e=>e.date).sort().pop()]].map(([l,v])=>`<div class="t"><b>${v}</b><small>${l}</small></div>`).join('');
+ document.getElementById('cases').innerHTML=cs.map(c=>`<div class="case"><div class="no">CASE ${esc(c.id)} · ${esc(c.field)} · ${esc(c.start)} 시작</div><h3>${c.link?`<a href="${esc(c.link)}">${esc(c.name)}</a>`:esc(c.name)}</h3><span class="st">${esc(c.status)}</span><p>${esc(c.summary)}</p><div class="m">${Object.entries(c.metrics).map(([k,v])=>`<span>${esc(k)} <b>${typeof v==='number'?v.toLocaleString():esc(v)}</b></span>`).join('')}</div></div>`).join('');
+ document.getElementById('tl').innerHTML=tl.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<li><span class="d">${esc(e.date)}</span><span class="c">${esc(e.case)}</span><h4>${esc(e.title)}</h4><p>${esc(e.text)}</p></li>`).join('');
+});
+</script></body></html>

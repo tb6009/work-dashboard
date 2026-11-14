@@ -27,12 +27,13 @@ h1{font-size:clamp(34px,6vw,58px);line-height:1.15;letter-spacing:-.04em;margin:
 <h2>진행 기록</h2><ul class="tl" id="tl"></ul>
 <p class="note">검색 추천은 화면에 노출된 관계이며, 실제 사용자의 이동이나 지원·구매 전환을 뜻하지 않습니다. 기업 자료와 원자료는 이 페이지에 싣지 않습니다.</p>
 </main>
+<script src="data.js"></script>
 <script>
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-Promise.all([fetch('cases.json').then(r=>r.json()),fetch('timeline.json').then(r=>r.json())]).then(([cs,tl])=>{
+(([cs,tl])=>{
  const sum=k=>cs.reduce((a,c)=>a+(typeof c.metrics[k]==='number'?c.metrics[k]:0),0);
  document.getElementById('totals').innerHTML=[['케이스',cs.length],['누적 검색어',sum('검색어').toLocaleString()],['기록',tl.length],['최근 갱신',tl.map(e=>e.date).sort().pop()]].map(([l,v])=>`<div class="t"><b>${v}</b><small>${l}</small></div>`).join('');
  document.getElementById('cases').innerHTML=cs.map(c=>`<div class="case"><div class="no">CASE ${esc(c.id)} · ${esc(c.field)} · ${esc(c.start)} 시작</div><h3>${c.link?`<a href="${esc(c.link)}">${esc(c.name)}</a>`:esc(c.name)}</h3><span class="st">${esc(c.status)}</span><p>${esc(c.summary)}</p><div class="m">${Object.entries(c.metrics).map(([k,v])=>`<span>${esc(k)} <b>${typeof v==='number'?v.toLocaleString():esc(v)}</b></span>`).join('')}</div></div>`).join('');
  document.getElementById('tl').innerHTML=tl.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<li><span class="d">${esc(e.date)}</span><span class="c">${esc(e.case)}</span><h4>${esc(e.title)}</h4><p>${esc(e.text)}</p></li>`).join('');
-});
+})([window.CASES,window.TIMELINE]);
 </script></body></html>

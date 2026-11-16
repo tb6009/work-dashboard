@@ -10,7 +10,7 @@
     "activeProjects": 8,
     "sessions": 6,
     "newProjects": 1,
-    "filesChanged": 550
+    "filesChanged": 719
   },
   "daily": [
     {
@@ -264,7 +264,7 @@
     {
       "date": "2026-11-14",
       "weekday": "토",
-      "filesChanged": 201,
+      "filesChanged": 189,
       "topProjectIds": [
         "0813",
         "063",
@@ -283,20 +283,20 @@
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
-                "in": 100,
-                "out": 26148,
-                "cache_read": 7394885,
-                "cache_write": 61561,
-                "messages": 44,
+                "in": 146,
+                "out": 34873,
+                "cache_read": 10943703,
+                "cache_write": 77908,
+                "messages": 62,
                 "costUSD": 0
               }
             },
             "total": {
-              "in": 100,
-              "out": 26148,
-              "cache_read": 7394885,
-              "cache_write": 61561,
-              "messages": 44
+              "in": 146,
+              "out": 34873,
+              "cache_read": 10943703,
+              "cache_write": 77908,
+              "messages": 62
             },
             "costUSD": 0
           }
@@ -338,8 +338,46 @@
     {
       "date": "2026-11-15",
       "weekday": "일",
-      "filesChanged": 0,
-      "topProjectIds": []
+      "filesChanged": 181,
+      "topProjectIds": [
+        "03",
+        "063",
+        "0812"
+      ],
+      "entries": [
+        {
+          "projectId": "03",
+          "did": "[fs scan] README.md · build.py · index.html · pages.json · P01.svg 외 9건"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] 2026-W46.json",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 8,
+                "out": 920,
+                "cache_read": 631599,
+                "cache_write": 181185,
+                "messages": 4,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 8,
+              "out": 920,
+              "cache_read": 631599,
+              "cache_write": 181185,
+              "messages": 4
+            },
+            "costUSD": 0
+          }
+        },
+        {
+          "projectId": "0812",
+          "did": "[fs scan] 23_디자인편_동향종합_v0.1.md · 00_카탈로그_CN.md · 03_蓝色光标_致投资人信_AI营销科技公司.md · 05_艾瑞咨询_2025中国营销智能体研究报告.md · 00_카탈로그_EU.md 외 16건"
+        }
+      ]
     }
   ],
   "projects": [
@@ -353,11 +391,11 @@
     },
     {
       "id": "0310",
-      "pct": 20,
+      "pct": 25,
       "filesChanged": 0,
-      "imp": 4,
-      "did": "강점 진단과 초기 컨설팅 장표 v0.2~v0.4, 딥체크 주요 발견 문서화, 유닛 2·3 전시 콘텐츠 구체화와 스케치, 콘텐츠기획서 v0.2, 전시 디자인 3안.",
-      "nextAction": "전시 디자인 3안 중 방향 선택"
+      "imp": 5,
+      "did": "딥체크 전시를 엿새 만에 리서치에서 부스 공간까지 진행했다. 강점 진단·초기 컨설팅 장표 20장, 영업자료 152행 분석, 연구 근거와 유닛 2·3 문안, 콘텐츠기획서 v0.2, 디자인 방향 3안, 세로형 벽면 8페이지 v0.1→v0.12, 디자인 1·2·3과 6×3m 부스 공간 3안 비교·3D 보기.",
+      "nextAction": "실제 부스 도면 대조 · 세 디자인 중 선택"
     },
     {
       "id": "039",
@@ -392,6 +430,14 @@
       "nextAction": "중간보고서 제출"
     },
     {
+      "id": "063",
+      "pct": 6,
+      "filesChanged": 0,
+      "imp": 2,
+      "did": "W44·W45 마감 커밋, 신규 프로젝트 포트폴리오 페이지, jiniius 누적형 사이트와 16번 프로젝트 등록.",
+      "nextAction": "jiniius 기록 주간 누적"
+    },
+    {
       "id": "132",
       "pct": 4,
       "filesChanged": 0,
@@ -406,14 +452,6 @@
       "imp": 1,
       "did": "1301 이미지 코퍼스 문제 원본·엑셀 위치 확인.",
       "nextAction": "-"
-    },
-    {
-      "id": "063",
-      "pct": 6,
-      "filesChanged": 0,
-      "imp": 2,
-      "did": "W44·W45 마감 커밋, 신규 프로젝트 포트폴리오 페이지, jiniius 누적형 사이트와 16번 프로젝트 등록.",
-      "nextAction": "jiniius 기록 주간 누적"
     }
   ],
   "decisions": [
@@ -451,19 +489,33 @@
       "title": "컨설팅에서 전시 콘텐츠 기획으로",
       "description": "딥체크 발견을 바탕으로 유닛 2·3 전시 콘텐츠와 콘텐츠기획서를 만들었다.",
       "isMilestone": false
+    },
+    {
+      "date": "2026-11-13",
+      "projectId": "0310",
+      "title": "부스 기준을 3×3m 2개·벽면 4개로",
+      "description": "콘텐츠기획서 v0.2에서 공간 기준을 바로잡고 벽면별 문안·근거를 묶었다.",
+      "isMilestone": false
+    },
+    {
+      "date": "2026-11-16",
+      "projectId": "0310",
+      "title": "v0.12를 디자인 1로, 세 안을 부스 공간에서 비교",
+      "description": "디자인 2·3을 독립적으로 만들고 6×3m 전면 개방 부스에 배치해 3D로 비교한다.",
+      "isMilestone": true
     }
   ],
   "newProjects": [
     "16"
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-14T06:36:09.693Z",
+  "buildAt": "2026-11-15T14:39:11.302Z",
   "tokens": {
     "total": {
-      "in": 1070,
-      "out": 364883,
-      "cache_read": 59753953,
-      "cache_write": 3169029
+      "in": 1124,
+      "out": 374528,
+      "cache_read": 63934370,
+      "cache_write": 3366561
     },
     "costUSD": 0,
     "costKRW": 0
@@ -865,18 +917,25 @@
       {
         "date": "2026-11-14",
         "projectId": "01",
-        "in": 611187,
-        "out": 111392,
-        "cache_read": 32348288,
+        "in": 2525085,
+        "out": 491066,
+        "cache_read": 170962176,
         "cache_write": 0,
-        "requests": 273,
+        "requests": 1241,
         "byModel": {
           "gpt-6-astra": {
-            "in": 611187,
-            "out": 111392,
-            "cache_read": 32348288,
+            "in": 1697710,
+            "out": 483880,
+            "cache_read": 161198848,
             "cache_write": 0,
-            "messages": 273
+            "messages": 1202
+          },
+          "gpt-6.1-sol": {
+            "in": 827375,
+            "out": 7186,
+            "cache_read": 9763328,
+            "cache_write": 0,
+            "messages": 39
           }
         },
         "attribution": [
@@ -886,18 +945,123 @@
       {
         "date": "2026-11-14",
         "projectId": "03",
-        "in": 215025,
-        "out": 15864,
-        "cache_read": 3201536,
+        "in": 577687,
+        "out": 52237,
+        "cache_read": 13015680,
         "cache_write": 0,
-        "requests": 15,
+        "requests": 103,
         "byModel": {
           "gpt-6-astra": {
-            "in": 215025,
-            "out": 15864,
-            "cache_read": 3201536,
+            "in": 577687,
+            "out": 52237,
+            "cache_read": 13015680,
             "cache_write": 0,
-            "messages": 15
+            "messages": 103
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "projectId": "039",
+        "in": 98753,
+        "out": 15587,
+        "cache_read": 4242304,
+        "cache_write": 0,
+        "requests": 48,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 98753,
+            "out": 15587,
+            "cache_read": 4242304,
+            "cache_write": 0,
+            "messages": 48
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "projectId": "0500",
+        "in": 425878,
+        "out": 7855,
+        "cache_read": 26851840,
+        "cache_write": 0,
+        "requests": 66,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 425878,
+            "out": 7855,
+            "cache_read": 26851840,
+            "cache_write": 0,
+            "messages": 66
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "projectId": "063",
+        "in": 2815,
+        "out": 608,
+        "cache_read": 1367040,
+        "cache_write": 0,
+        "requests": 6,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 2815,
+            "out": 608,
+            "cache_read": 1367040,
+            "cache_write": 0,
+            "messages": 6
+          }
+        },
+        "attribution": [
+          "same-turn-tool-path-inference"
+        ]
+      },
+      {
+        "date": "2026-11-15",
+        "projectId": "03",
+        "in": 40474,
+        "out": 24184,
+        "cache_read": 6386944,
+        "cache_write": 0,
+        "requests": 31,
+        "byModel": {
+          "gpt-6-astra": {
+            "in": 40474,
+            "out": 24184,
+            "cache_read": 6386944,
+            "cache_write": 0,
+            "messages": 31
+          }
+        },
+        "attribution": [
+          "explicit-user-path"
+        ]
+      },
+      {
+        "date": "2026-11-15",
+        "projectId": "0500",
+        "in": 1293414,
+        "out": 1981,
+        "cache_read": 11820288,
+        "cache_write": 0,
+        "requests": 30,
+        "byModel": {
+          "gpt-6.1-sol": {
+            "in": 1293414,
+            "out": 1981,
+            "cache_read": 11820288,
+            "cache_write": 0,
+            "messages": 30
           }
         },
         "attribution": [
@@ -906,9 +1070,9 @@
       }
     ],
     "audit": {
-      "response-id": 2608,
-      "assigned": 1394,
-      "unassigned": 1214
+      "response-id": 3873,
+      "assigned": 2631,
+      "unassigned": 1242
     },
     "note": "Codex output includes reasoning; cached input is a subset of input, separated here. Same-turn tool-path attribution is an inference. Claude entry.tokens unchanged. Unassigned usage is not distributed."
   },
@@ -916,18 +1080,18 @@
     "codex": {
       "byModel": {
         "gpt-6.1-sol": {
-          "in": 5704876,
-          "cached": 247092352,
-          "out": 559172,
-          "turns": 1212,
+          "in": 8562857,
+          "cached": 305052672,
+          "out": 597558,
+          "turns": 1420,
           "costUSD": 0
         },
         "gpt-6-astra": {
-          "in": 5325709,
-          "cached": 192004864,
-          "out": 687892,
-          "turns": 1394,
-          "costUSD": 279.66
+          "in": 6821579,
+          "cached": 338305024,
+          "out": 1123743,
+          "turns": 2451,
+          "costUSD": 462.71
         },
         "codex-auto-review": {
           "in": 40202,
@@ -937,31 +1101,33 @@
           "costUSD": 0
         }
       },
-      "costUSD": 279.66,
+      "costUSD": 462.71,
       "costByDay": {
         "2026-11-09": 10.31,
         "2026-11-10": 5.45,
         "2026-11-11": 32.42,
         "2026-11-12": 43.51,
         "2026-11-13": 137.49,
-        "2026-11-14": 50.48
+        "2026-11-14": 225.53,
+        "2026-11-15": 8
       },
       "audit": {
-        "response-id": 2608,
-        "assigned": 1394,
-        "unassigned": 1214
+        "response-id": 3873,
+        "assigned": 2631,
+        "unassigned": 1242
       },
       "unpricedModels": [
         "gpt-6.1-sol",
         "codex-auto-review"
       ],
-      "images": 116,
+      "images": 136,
       "imagesByDay": {
         "2026-11-09": 17,
         "2026-11-11": 4,
         "2026-11-12": 4,
         "2026-11-13": 81,
-        "2026-11-14": 10
+        "2026-11-14": 29,
+        "2026-11-15": 1
       }
     },
     "gemini": {
@@ -976,8 +1142,8 @@
       "projectAttribution": "unavailable",
       "unpricedModels": []
     },
-    "totalUSD": 279.66,
-    "totalKRW": 393731,
+    "totalUSD": 462.71,
+    "totalKRW": 651445,
     "note": "단가는 기존 2026-09-28 표 유지·미재검증. 미등록 모델 비용 제외(0원 의미 아님). Gemini 교차 주간 대화 제외·프로젝트 귀속 미확인. API 정가 환산(구독 요금 아님). Gemini 필드 해석은 추정. 이미지 장당 단가 미확인이라 장수만 표기.",
     "pricingSource": "developers.openai.com/api/docs/pricing · ai.google.dev/gemini-api/docs/pricing (2026-09-28 확인)",
     "costCoverage": "partial-historical-price-table-not-reverified"

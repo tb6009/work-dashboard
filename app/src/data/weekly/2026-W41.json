@@ -58,12 +58,17 @@
       "weekday": "화",
       "filesChanged": 18,
       "topProjectIds": [
+        "039",
         "063",
         "0500",
-        "03",
-        "039"
+        "03"
       ],
       "entries": [
+        {
+          "projectId": "039",
+          "did": "작업 프로젝트 · 생성 파일 · 디자인 터칭데이 대표 문구·사례 재선정 · 디자인 터칭데이 홍보 대표 이미지 큐레이션 · 디자인 리서치 프로세스·자동화 체계 정리",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261006_log.md"
+        },
         {
           "projectId": "063",
           "did": "연구모델 허브에 「연구모델」 섹션 신설 + 새 문서 9개 공개",
@@ -111,11 +116,6 @@
             },
             "costUSD": 0
           }
-        },
-        {
-          "projectId": "039",
-          "did": "작업 프로젝트 · 생성 파일 · 디자인 터칭데이 대표 문구·사례 재선정 · 디자인 터칭데이 홍보 대표 이미지 큐레이션 · 디자인 리서치 프로세스·자동화 체계 정리",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261006_log.md"
         }
       ]
     },
@@ -131,6 +131,11 @@
         "1300"
       ],
       "entries": [
+        {
+          "projectId": "039",
+          "did": "Value-up 홍보 사이트 콘텐츠 기준 · 협업 프로젝트 내용 초안 · 협업 프로젝트 발표 초안 제작 · SYNC·SKF 기반 시각화 보완 · 발표자료 타이포그래피·문구 정교화 · 커버 사진 생성",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261007_log.md"
+        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -180,11 +185,6 @@
           }
         },
         {
-          "projectId": "039",
-          "did": "Value-up 홍보 사이트 콘텐츠 기준 · 협업 프로젝트 내용 초안 · 협업 프로젝트 발표 초안 제작 · SYNC·SKF 기반 시각화 보완 · 발표자료 타이포그래피·문구 정교화 · 커버 사진 생성",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261007_log.md"
-        },
-        {
           "projectId": "1300",
           "did": "[fs scan] 생성_프롬프트.md · 생성_프롬프트.md · 해설과_인용_명세서.md · 생성_프롬프트.md · 생성_프롬프트.md"
         }
@@ -195,9 +195,9 @@
       "weekday": "목",
       "filesChanged": 4,
       "topProjectIds": [
+        "1300",
         "082",
-        "063",
-        "1300"
+        "063"
       ],
       "entries": [
         {
@@ -217,11 +217,11 @@
       "filesChanged": 6,
       "topProjectIds": [
         "01",
-        "063",
-        "1303",
         "131",
         "068",
-        "1300"
+        "1300",
+        "1303",
+        "063"
       ],
       "entries": [
         {
@@ -256,21 +256,26 @@
       "weekday": "토",
       "filesChanged": 209,
       "topProjectIds": [
-        "1303",
         "039",
+        "0310",
+        "1303",
         "03",
-        "063",
-        "0310"
+        "063"
       ],
       "entries": [
-        {
-          "projectId": "1303",
-          "did": "A1 포스터 v0.15–v0.29 (10월 전체 그리드·분기 표식·시작점·번호 정리)"
-        },
         {
           "projectId": "039",
           "did": "SPARK 세로 이미지 수정 · SPARK 원경 불꽃·시점 재수정 · SPARK 세로 타이틀 배경 · SPARK 세로 이미지 점화·원경 보완 · SPARK 큰 불꽃 교체와 점화 위치 조정 · SPARK 큰 불꽃 디테일·연기 조정",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261010_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "타입 겹침 수정 및 비주얼3안 기획 · 기존 컨펌 시안 탐색 · 포스터3단 모듈 재구성 · 비즈니스 성장 비주얼 방향 보완 · 비주얼 v2 생성 · 비주얼 적용 시안 및 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261010_log.md"
+        },
+        {
+          "projectId": "1303",
+          "did": "A1 포스터 v0.15–v0.29 (10월 전체 그리드·분기 표식·시작점·번호 정리)"
         },
         {
           "projectId": "03",
@@ -295,11 +300,6 @@
             },
             "costUSD": 0
           }
-        },
-        {
-          "projectId": "0310",
-          "did": "타입 겹침 수정 및 비주얼3안 기획 · 기존 컨펌 시안 탐색 · 포스터3단 모듈 재구성 · 비즈니스 성장 비주얼 방향 보완 · 비주얼 v2 생성 · 비주얼 적용 시안 및 수정",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261010_log.md"
         }
       ]
     },
@@ -308,9 +308,9 @@
       "weekday": "일",
       "filesChanged": 80,
       "topProjectIds": [
+        "0500",
         "063",
         "039",
-        "0500",
         "03"
       ],
       "entries": [
@@ -455,7 +455,7 @@
     }
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-16T00:39:40.490Z",
+  "buildAt": "2026-11-16T00:56:57.220Z",
   "tokens": {
     "total": {
       "in": 862,

@@ -40,13 +40,18 @@
       "weekday": "화",
       "filesChanged": 261,
       "topProjectIds": [
+        "039",
         "063",
         "0500",
-        "039",
         "03",
         "0812"
       ],
       "entries": [
+        {
+          "projectId": "039",
+          "did": "0302 2026_가을_Value-up연구회 — 교수 오리엔테이션·디자인 진단지 (세션 2026-10-19~27) · 디자인터칭데이 — 경영적 AX 자료 검토 · 디자인터칭데이 — 기업별 AX 심층 보완 · VITAL 그룹 A4 와이어프레임 · 유상희 코치 프로필 이미지 · VITAL 와이어프레임 v0.2 및 사진 v2",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261027_log.md"
+        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -72,11 +77,6 @@
           }
         },
         {
-          "projectId": "039",
-          "did": "0302 2026_가을_Value-up연구회 — 교수 오리엔테이션·디자인 진단지 (세션 2026-10-19~27) · 디자인터칭데이 — 경영적 AX 자료 검토 · 디자인터칭데이 — 기업별 AX 심층 보완 · VITAL 그룹 A4 와이어프레임 · 유상희 코치 프로필 이미지 · VITAL 와이어프레임 v0.2 및 사진 v2",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261027_log.md"
-        },
-        {
           "projectId": "0500",
           "did": "[fs scan] 00_이동기록_20261027.md"
         },
@@ -91,10 +91,10 @@
       "weekday": "수",
       "filesChanged": 21,
       "topProjectIds": [
-        "063",
+        "0812",
         "039",
         "0500",
-        "0812"
+        "063"
       ],
       "entries": [
         {
@@ -120,9 +120,9 @@
       "filesChanged": 24,
       "topProjectIds": [
         "03",
-        "063",
         "039",
-        "132"
+        "132",
+        "063"
       ],
       "entries": [
         {
@@ -167,9 +167,9 @@
       "weekday": "금",
       "filesChanged": 20,
       "topProjectIds": [
-        "063",
+        "132",
         "0310",
-        "132"
+        "063"
       ],
       "entries": [
         {
@@ -189,42 +189,18 @@
       "weekday": "토",
       "filesChanged": 625,
       "topProjectIds": [
-        "063",
         "1300",
-        "0310",
-        "03",
-        "01",
         "132",
+        "0310",
         "0812",
         "15",
+        "01",
         "1303",
-        "131"
+        "131",
+        "063",
+        "03"
       ],
       "entries": [
-        {
-          "projectId": "03",
-          "did": "[ai] (no file changes)",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 28,
-                "out": 9556,
-                "cache_read": 1331172,
-                "cache_write": 11038,
-                "messages": 8,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 28,
-              "out": 9556,
-              "cache_read": 1331172,
-              "cache_write": 11038,
-              "messages": 8
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "01",
           "did": "01_admin — AI 사용 방식 종합 검토",
@@ -284,6 +260,30 @@
           "projectId": "131",
           "did": "마음이의 업무 내재화 설명 장표 구상 · 마음이 7장면 연필 스토리보드 · 마음이 장면 1 정본 렌더",
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 28,
+                "out": 9556,
+                "cache_read": 1331172,
+                "cache_write": 11038,
+                "messages": 8,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 28,
+              "out": 9556,
+              "cache_read": 1331172,
+              "cache_write": 11038,
+              "messages": 8
+            },
+            "costUSD": 0
+          }
         }
       ]
     },
@@ -292,9 +292,9 @@
       "weekday": "일",
       "filesChanged": 11,
       "topProjectIds": [
-        "063",
         "131",
         "0812",
+        "063",
         "15"
       ],
       "entries": [
@@ -422,7 +422,7 @@
     "0812"
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-16T00:39:44.138Z",
+  "buildAt": "2026-11-16T00:57:12.389Z",
   "tokens": {
     "total": {
       "in": 282,

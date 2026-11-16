@@ -18,41 +18,17 @@
       "weekday": "월",
       "filesChanged": 82,
       "topProjectIds": [
-        "063",
         "0500",
-        "03",
-        "039",
-        "09",
         "1300",
         "1303",
+        "063",
+        "039",
         "082",
-        "068"
+        "068",
+        "03",
+        "09"
       ],
       "entries": [
-        {
-          "projectId": "03",
-          "did": "[ai] (no file changes)",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 114,
-                "out": 51248,
-                "cache_read": 6277004,
-                "cache_write": 178476,
-                "messages": 56,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 114,
-              "out": 51248,
-              "cache_read": 6277004,
-              "cache_write": 178476,
-              "messages": 56
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "0500",
           "did": "박사연구 선행문헌 검토 범위 점검 · v0.96 연구계획 평가 · 05_phD_Research — 선행연구 후속고찰·APA7 · JoVE 샘플 선별·형식·내용·현재 연구 적용 분석 · v0.96 JoVE 서론·이론적 배경 원문 검증 초안",
@@ -89,6 +65,30 @@
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
         },
         {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 114,
+                "out": 51248,
+                "cache_read": 6277004,
+                "cache_write": 178476,
+                "messages": 56,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 114,
+              "out": 51248,
+              "cache_read": 6277004,
+              "cache_write": 178476,
+              "messages": 56
+            },
+            "costUSD": 0
+          }
+        },
+        {
           "projectId": "09",
           "did": "[fs scan] 20261019_코치모집_인용_명세서.md"
         }
@@ -99,9 +99,9 @@
       "weekday": "화",
       "filesChanged": 29,
       "topProjectIds": [
+        "03",
         "0500",
         "063",
-        "03",
         "16"
       ],
       "entries": [
@@ -152,12 +152,27 @@
       "filesChanged": 276,
       "topProjectIds": [
         "1300",
-        "063",
+        "132",
         "01",
-        "03",
-        "132"
+        "063",
+        "03"
       ],
       "entries": [
+        {
+          "projectId": "1300",
+          "did": "시각문법 수업 비교 이미지 제작 · 시각문법 자료 — 대시보드용 통합 보관 · 사진 질감 — 엑셀 항목 검토 · 사진 입자감 논문 탐색 · 프린트 입자감과 필름 레퍼런스 레이아웃 수정, PPT 샘플 · 필름 PPT 샘플 v3 글자 확대",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "수업 포스터 공간 도식·서술형 해설 개선 · 실제 필름·후지필름 시뮬레이션 레퍼런스와 사용자 교정 · 언어 반영 / 실제 사례 반영 11쌍 제작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
+        {
+          "projectId": "01",
+          "did": "세션 — 01_admin AI 셋팅 현황 파악 · 스타터킷 제작 (Claude Code) · 1402_심리적안전감 — 강의 흐름 검토와 이미지 제작 · 1402 이미지 인·아웃 타이밍 v0.2 · 1402 심리적 안전감 — 22장 이미지 패키지 제작 · 1402 edit01 기준 이미지 22장 배치 XML",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -183,21 +198,6 @@
           }
         },
         {
-          "projectId": "1300",
-          "did": "시각문법 수업 비교 이미지 제작 · 시각문법 자료 — 대시보드용 통합 보관 · 사진 질감 — 엑셀 항목 검토 · 사진 입자감 논문 탐색 · 프린트 입자감과 필름 레퍼런스 레이아웃 수정, PPT 샘플 · 필름 PPT 샘플 v3 글자 확대",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
-        },
-        {
-          "projectId": "132",
-          "did": "수업 포스터 공간 도식·서술형 해설 개선 · 실제 필름·후지필름 시뮬레이션 레퍼런스와 사용자 교정 · 언어 반영 / 실제 사례 반영 11쌍 제작",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
-        },
-        {
-          "projectId": "01",
-          "did": "세션 — 01_admin AI 셋팅 현황 파악 · 스타터킷 제작 (Claude Code) · 1402_심리적안전감 — 강의 흐름 검토와 이미지 제작 · 1402 이미지 인·아웃 타이밍 v0.2 · 1402 심리적 안전감 — 22장 이미지 패키지 제작 · 1402 edit01 기준 이미지 22장 배치 XML",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
-        },
-        {
           "projectId": "063",
           "did": "[fs scan] data.ts · build-visual-grammar-spatial.py"
         }
@@ -208,13 +208,33 @@
       "weekday": "금",
       "filesChanged": 154,
       "topProjectIds": [
-        "063",
-        "09",
         "02",
+        "063",
         "0311",
-        "131"
+        "131",
+        "09"
       ],
       "entries": [
+        {
+          "projectId": "02",
+          "did": "02_Data_Kaywon/08_입시업무자동화 (신규)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "063 workDashboard — 시각문법 공개본·W43·도메인 (10-20~10-23)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
+        {
+          "projectId": "0311",
+          "did": "학습모듈개발 프로젝트 시작 · 학습모듈 외부검토 의견 파악 · AI교육혁신센터 전공역량 HWP 검토 의견 확인 · 센터 검토 반영 HWP v0.14 및 참고자료 재검토 · 2026 중간평가 QnA 프로젝트 시작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "중간평가 QnA 근거 기반 구성 · QnA 이미지·장표 병렬 제작 · 몸과 마음 QnA HTML 장표·연구 소개 초안 · QnA 연구 설명의 학생 장표 통합 · QnA 제목 수정·서술형 설명 보강 · QnA 서술형 본문 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
         {
           "projectId": "09",
           "did": "[ai] (no file changes)",
@@ -246,26 +266,6 @@
             },
             "costUSD": 0
           }
-        },
-        {
-          "projectId": "02",
-          "did": "02_Data_Kaywon/08_입시업무자동화 (신규)",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
-        },
-        {
-          "projectId": "063",
-          "did": "063 workDashboard — 시각문법 공개본·W43·도메인 (10-20~10-23)",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
-        },
-        {
-          "projectId": "0311",
-          "did": "학습모듈개발 프로젝트 시작 · 학습모듈 외부검토 의견 파악 · AI교육혁신센터 전공역량 HWP 검토 의견 확인 · 센터 검토 반영 HWP v0.14 및 참고자료 재검토 · 2026 중간평가 QnA 프로젝트 시작",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
-        },
-        {
-          "projectId": "131",
-          "did": "중간평가 QnA 근거 기반 구성 · QnA 이미지·장표 병렬 제작 · 몸과 마음 QnA HTML 장표·연구 소개 초안 · QnA 연구 설명의 학생 장표 통합 · QnA 제목 수정·서술형 설명 보강 · QnA 서술형 본문 수정",
-          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
         }
       ]
     },
@@ -274,10 +274,10 @@
       "weekday": "토",
       "filesChanged": 67,
       "topProjectIds": [
-        "09",
         "0311",
-        "063",
-        "03"
+        "03",
+        "09",
+        "063"
       ],
       "entries": [
         {
@@ -302,12 +302,12 @@
       "filesChanged": 298,
       "topProjectIds": [
         "0311",
-        "063",
-        "03",
-        "09",
-        "082",
         "131",
-        "132"
+        "03",
+        "132",
+        "063",
+        "09",
+        "082"
       ],
       "entries": [
         {
@@ -453,7 +453,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-11-16T00:39:42.928Z",
+  "buildAt": "2026-11-16T00:57:06.533Z",
   "tokens": {
     "total": {
       "in": 1959,

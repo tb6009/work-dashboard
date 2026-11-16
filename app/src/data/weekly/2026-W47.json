@@ -7,20 +7,21 @@
   "status": "current",
   "summary": "TODO — Claude가 한 줄 요약 작성",
   "kpis": {
-    "activeProjects": 2,
+    "activeProjects": 4,
     "sessions": 0,
     "newProjects": 0,
-    "filesChanged": 69
+    "filesChanged": 71
   },
   "daily": [
     {
       "date": "2026-11-16",
       "weekday": "월",
-      "filesChanged": 69,
+      "filesChanged": 71,
       "topProjectIds": [
+        "0310",
+        "16",
         "063",
-        "03",
-        "0310"
+        "03"
       ],
       "entries": [
         {
@@ -29,8 +30,57 @@
           "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261116_log.md"
         },
         {
+          "projectId": "16",
+          "did": "JINIIUS 4개 예술대학 학교별 테스트 시안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261116_log.md"
+        },
+        {
+          "projectId": "03",
+          "did": "[ai] (no file changes)",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 10,
+                "out": 1642,
+                "cache_read": 1047583,
+                "cache_write": 8999,
+                "messages": 5,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 10,
+              "out": 1642,
+              "cache_read": 1047583,
+              "cache_write": 8999,
+              "messages": 5
+            },
+            "costUSD": 0
+          }
+        },
+        {
           "projectId": "063",
-          "did": "[fs scan] auto-capture-activity.sh · extract-daily-entries.mjs · extract-from-filesystem.mjs"
+          "did": "[fs scan] auto-capture-activity.sh · extract-daily-entries.mjs · extract-from-filesystem.mjs",
+          "tokens": {
+            "byModel": {
+              "claude-opus-5-5": {
+                "in": 166,
+                "out": 55018,
+                "cache_read": 17943583,
+                "cache_write": 111517,
+                "messages": 72,
+                "costUSD": 0
+              }
+            },
+            "total": {
+              "in": 166,
+              "out": 55018,
+              "cache_read": 17943583,
+              "cache_write": 111517,
+              "messages": 72
+            },
+            "costUSD": 0
+          }
         }
       ]
     },
@@ -75,13 +125,13 @@
   "decisions": [],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-11-16T00:39:47.758Z",
+  "buildAt": "2026-11-16T01:34:15.153Z",
   "tokens": {
     "total": {
-      "in": 74,
-      "out": 19220,
-      "cache_read": 7673129,
-      "cache_write": 40392
+      "in": 176,
+      "out": 56660,
+      "cache_read": 18991166,
+      "cache_write": 120516
     },
     "costUSD": 0,
     "costKRW": 0

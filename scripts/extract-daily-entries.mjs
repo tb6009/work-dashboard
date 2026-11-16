@@ -238,7 +238,12 @@ function processWeekly(weekFile) {
       else merged.push(e);
     }
     day.entries = merged;
-    for (const e of merged) if (!day.topProjectIds.includes(e.projectId)) day.topProjectIds.push(e.projectId);
+    // 로그에 적힌 프로젝트를 앞에 둔다 (일간 막대 색·대표 프로젝트)
+    const logIds = entries.map(e => e.projectId);
+    const rest = [...day.topProjectIds, ...merged.map(e => e.projectId)].filter(id => !logIds.includes(id));
+    day.topProjectIds = [...new Set([...logIds, ...rest])];
+    // 로그 기반 entries를 목록 앞에 표시
+    day.entries = [...merged].sort((a, b) => (logIds.includes(b.projectId) ? 1 : 0) - (logIds.includes(a.projectId) ? 1 : 0));
     updated++;
   }
 

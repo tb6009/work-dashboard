@@ -7,104 +7,46 @@
   "status": "past",
   "summary": "디자인터칭데이 기업지원 자료와 VITAL 소개자료를 만들었다. 산업동향 책은 목차 v0.4·서론·전체초안 v0.6까지 썼고, 스킬 만들기 강의자료·학생 실험 매거진·마음이 7장면 스토리보드와 감정 아이콘을 제작했다.",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 11,
     "sessions": 7,
     "newProjects": 1,
-    "filesChanged": 421
+    "filesChanged": 1327
   },
   "daily": [
     {
       "date": "2026-10-26",
       "weekday": "월",
-      "filesChanged": 7,
+      "filesChanged": 365,
       "topProjectIds": [
         "063",
         "082",
         "039",
-        "03"
+        "03",
+        "0812"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
-        },
-        {
-          "projectId": "082",
-          "did": "[ai] (no file changes)",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 26,
-                "out": 3472,
-                "cache_read": 2125664,
-                "cache_write": 481234,
-                "messages": 10,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 26,
-              "out": 3472,
-              "cache_read": 2125664,
-              "cache_write": 481234,
-              "messages": 10
-            },
-            "costUSD": 0
-          }
-        },
-        {
           "projectId": "039",
-          "did": "[fs scan] 01_디자인터칭데이_자료정리_v0.1.md · 02_참여기업_검토자료_v0.1.md"
+          "did": "[fs scan] 01_디자인터칭데이_자료정리_v0.1.md · 02_참여기업_검토자료_v0.1.md · 00_수집목록.md · 04_기업별_지원내용과_지원필요사항_v0.1.md · 05_디자인터칭데이_멘토용_기업카드_v0.1.html 외 2건"
         },
         {
-          "projectId": "03",
-          "did": "[ai] (no file changes)",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 134,
-                "out": 91325,
-                "cache_read": 8769762,
-                "cache_write": 311585,
-                "messages": 65,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 134,
-              "out": 91325,
-              "cache_read": 8769762,
-              "cache_write": 311585,
-              "messages": 65
-            },
-            "costUSD": 0
-          }
+          "projectId": "0812",
+          "did": "[fs scan] 01_기획안_초안_v0.1.md · 02_큰흐름_v0.1.md · 00_검증보고_v0.1.md · 00_수집카탈로그.md · 00_원문요청_DOI목록_v0.1.md 외 353건"
         }
       ]
     },
     {
       "date": "2026-10-27",
       "weekday": "화",
-      "filesChanged": 33,
+      "filesChanged": 261,
       "topProjectIds": [
         "063",
         "0500",
         "039",
-        "03"
+        "03",
+        "0812"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
-        },
-        {
-          "projectId": "0500",
-          "did": "[fs scan] 00_이동기록_20261027.md"
-        },
-        {
-          "projectId": "039",
-          "did": "[fs scan] NEXT_SESSION.md"
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -128,30 +70,47 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "039",
+          "did": "0302 2026_가을_Value-up연구회 — 교수 오리엔테이션·디자인 진단지 (세션 2026-10-19~27) · 디자인터칭데이 — 경영적 AX 자료 검토 · 디자인터칭데이 — 기업별 AX 심층 보완 · VITAL 그룹 A4 와이어프레임 · 유상희 코치 프로필 이미지 · VITAL 와이어프레임 v0.2 및 사진 v2",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261027_log.md"
+        },
+        {
+          "projectId": "0500",
+          "did": "[fs scan] 00_이동기록_20261027.md"
+        },
+        {
+          "projectId": "0812",
+          "did": "[fs scan] 02_수집자료_핵심종합_v1.0.md · 03_효과적인방법_v0.1.md · 00_수집기준.md · 00_수동요청_M1.md · 00_카탈로그_M1.md 외 223건"
         }
       ]
     },
     {
       "date": "2026-10-28",
       "weekday": "수",
-      "filesChanged": 4,
+      "filesChanged": 21,
       "topProjectIds": [
         "063",
         "039",
-        "0500"
+        "0500",
+        "0812"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
+          "projectId": "0812",
+          "did": "0812_산업동향book — 프로젝트 재개 · 0812_산업동향book — 의미·행동 학습 기반과 위키·그래프 · 산업동향 학습 — 제품 의미론과 사람의 변화 · 산업동향 학습 — 정보 신뢰와 판단 · 산업동향 학습 — 신뢰 단서와 광고 회피 · 산업동향 논지 수정 — 능동적 실험",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261028_log.md"
         },
         {
           "projectId": "039",
-          "did": "[fs scan] VITAL_도서_QR.svg"
+          "did": "VITAL 도서 QR · 디자인터칭데이 — 개인 AX 수준 진단",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261028_log.md"
         },
         {
           "projectId": "0500",
-          "did": "[fs scan] 04_통합설문_v0.96.1_연결본.md"
+          "did": "05_phD_Research — 설문 v0.96.1: 활동 국가 문항·영문 구글설문·Prolific 초안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261028_log.md"
         }
       ]
     },
@@ -161,12 +120,14 @@
       "filesChanged": 24,
       "topProjectIds": [
         "03",
-        "063"
+        "063",
+        "039",
+        "132"
       ],
       "entries": [
         {
           "projectId": "03",
-          "did": "[ai] (no file changes)",
+          "did": "디자인실무프로젝트2 — 프로젝트 시작 및 맥락 파악 · 포트폴리오 정리 실습 샘플 생성 · 학생용 PT 내용 구성 · 학생용 HTML 강의자료 제작 · 코첼라 템플릿 적용 · 이가은 템플릿 분석 및 스킬 패키지",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -186,11 +147,18 @@
               "messages": 24
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261029_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
+          "projectId": "039",
+          "did": "homework — Value-up 연구회 이번 주 작업 확인 · homework 노션 저장 기능 업그레이드 · 노션 디자인실무프로젝트 생성 및 보고서 저장 · 투시 검수 플러그인 이관 · AI 적용교과목 프로파일 사전 파악 · UI/UX 기획 AI역량 프로파일 입력 완료",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261029_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "AI 적용교과목 프로파일 전체 보완",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261029_log.md"
         }
       ]
     },
@@ -200,43 +168,39 @@
       "filesChanged": 20,
       "topProjectIds": [
         "063",
-        "0310"
+        "0310",
+        "132"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
+          "projectId": "132",
+          "did": "AI 스토리텔링 프로파일 재구성 · AI 스토리텔링 오류 정정 · 리서치·UI/UX AI 공통 능력단위 문구 통일 · AI 상세내용 별도 추출 · AI 수행준거 간결화 · 시각디자인리서치 합의 내용 저장",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261030_log.md"
         },
         {
           "projectId": "0310",
-          "did": "[fs scan] 03_사업분야_웹사이트_검토_20261030.md · 04_사업검토_인용_명세서_20261030.md · 20261030_log.md · 검토자료목록_20261030.json"
+          "did": "기람테크 사업 커뮤니케이션 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261030_log.md"
         }
       ]
     },
     {
       "date": "2026-10-31",
       "weekday": "토",
-      "filesChanged": 332,
+      "filesChanged": 625,
       "topProjectIds": [
         "063",
         "1300",
         "0310",
         "03",
-        "01"
+        "01",
+        "132",
+        "0812",
+        "15",
+        "1303",
+        "131"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
-        },
-        {
-          "projectId": "1300",
-          "did": "[fs scan] 20261031_8주차AB_신규자료_파악.md"
-        },
-        {
-          "projectId": "0310",
-          "did": "[fs scan] 내용.md · 페이지와이미지.json · 내용.md · 페이지와이미지.json · 내용.md 외 285건"
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -263,7 +227,7 @@
         },
         {
           "projectId": "01",
-          "did": "[ai] (no file changes)",
+          "did": "01_admin — AI 사용 방식 종합 검토",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -283,21 +247,70 @@
               "messages": 8
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "1300",
+          "did": "1300·1301·1302 프로젝트 시작 · 8주차 A·B 신규 자료 파악 · 마스터02 고도화 접근 검토 · 핵심 방향 저장과 전체 과제의 학생 경험 리뷰 · 학생 인사이트의 토큰 효율 자료화 · 데이터코퍼스 오류목록과 에이전트 최소 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "시각문법 최종본 확인 및 앞선 안내 정정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "기람테크 3개 사업분야 자료 정리 · 기람테크 회사소개 시각자료 선별 · 기람테크 회사소개 일러스트 시안 · 학생 실험 HTML 매거진 제작 · 학생 실험 매거진 상세화 및 디자인 수정 · 기람테크 실사화 시안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "0812",
+          "did": "0812_산업동향book — 프로젝트 재개 · 0812_산업동향book — 목차 v0.2 검토 · 0812_산업동향book — 목차 v0.3 작성 · 0812_산업동향book — 목차 v0.3 집필 근거자료집 · 0812_산업동향book — 핵심 근거 2차 필터링·재검증 · 0812_산업동향book — 목차 v0.4와 서론 초안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "15",
+          "did": "산업동향book — 인지 한계·AI slop과 운영 대응 · AI 사용 특징: 전체 프로젝트 로그 분석과 강의 원고",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "1303",
+          "did": "1303 AI 작업 히스토리 — 10월31일 최신 v0.37 · AI 활용 강의 60분 구성으로 변경 · AI 스타터킷 v0.2 기반 실습 구체화 · 업무 내재화 관점의 AI 강의 장표 원고",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "마음이의 업무 내재화 설명 장표 구상 · 마음이 7장면 연필 스토리보드 · 마음이 장면 1 정본 렌더",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261031_log.md"
         }
       ]
     },
     {
       "date": "2026-11-01",
       "weekday": "일",
-      "filesChanged": 1,
+      "filesChanged": 11,
       "topProjectIds": [
-        "063"
+        "063",
+        "131",
+        "0812",
+        "15"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W44.json"
+          "projectId": "131",
+          "did": "마음이 문제 상황 스토리보드 v0.2 · 마음이 7장면 분리·PT용 확대 · 마음이 장면 2 제목 변경 · 콘텍스트 엔지니어링 커버 3안 스케치 · 커버 B안 무문자 배경 레이아웃 · 커버 B안 브라운 명암·심도 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261101_log.md"
+        },
+        {
+          "projectId": "0812",
+          "did": "산업동향book — v0.6 Word 변환 · 산업동향 도서 디자인·편집 프로젝트 착수 · Codex · 산업동향 도서 — 비주얼 리서치와 커버 1안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261101_log.md"
+        },
+        {
+          "projectId": "15",
+          "did": "[fs scan] 03_컨텍스트엔지니어링_인용_명세서.md · 04_컨텍스트엔지니어링_PT정리_v0.1.md · 04_컨텍스트엔지니어링_PT정리_v0.2.md · 05_내업무프로세스_컨텍스트엔지니어링기준_v0.1.md"
         }
       ]
     }
@@ -409,7 +422,7 @@
     "0812"
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-01T03:41:24.648Z",
+  "buildAt": "2026-11-16T00:39:44.138Z",
   "tokens": {
     "total": {
       "in": 282,
@@ -685,7 +698,7 @@
           "cached": 28897536,
           "out": 109792,
           "turns": 214,
-          "costUSD": 0.0
+          "costUSD": 0
         },
         "gpt-6-astra": {
           "in": 5793157,
@@ -699,7 +712,7 @@
           "cached": 277504,
           "out": 1766,
           "turns": 13,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
       "costUSD": 331.14,
@@ -734,10 +747,10 @@
           "cached": 40283513,
           "out": 348760,
           "requests": 263,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
-      "costUSD": 0.0,
+      "costUSD": 0,
       "estimated": true,
       "audit": {
         "databasesSeen": 40,

@@ -45,6 +45,9 @@ with open('$WEEKLY_JSON', 'w') as f:
   fi
 fi
 
+# 일일 로그 기반 작업 내용 (로그 우선)
+cd "$WORKDIR" && /usr/local/bin/node scripts/extract-daily-entries.mjs "$WEEK_ID" >> "$LOG" 2>&1 || true
+
 # 파일시스템 활동 캡처
 cd "$WORKDIR" && /usr/local/bin/node scripts/extract-from-filesystem.mjs "$WEEK_ID" >> "$LOG" 2>&1 || true
 

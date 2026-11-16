@@ -1,0 +1,89 @@
+{
+  "week": "2026-W47",
+  "range": {
+    "from": "2026-11-16",
+    "to": "2026-11-22"
+  },
+  "status": "current",
+  "summary": "TODO — Claude가 한 줄 요약 작성",
+  "kpis": {
+    "activeProjects": 2,
+    "sessions": 0,
+    "newProjects": 0,
+    "filesChanged": 69
+  },
+  "daily": [
+    {
+      "date": "2026-11-16",
+      "weekday": "월",
+      "filesChanged": 69,
+      "topProjectIds": [
+        "063",
+        "03",
+        "0310"
+      ],
+      "entries": [
+        {
+          "projectId": "0310",
+          "did": "기람테크 전시 · 기람테크 전시 · 작업 현황 인계",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261116_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] auto-capture-activity.sh · extract-daily-entries.mjs · extract-from-filesystem.mjs"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "weekday": "화",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-11-18",
+      "weekday": "수",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-11-19",
+      "weekday": "목",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-11-20",
+      "weekday": "금",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-11-21",
+      "weekday": "토",
+      "filesChanged": 0,
+      "topProjectIds": []
+    },
+    {
+      "date": "2026-11-22",
+      "weekday": "일",
+      "filesChanged": 0,
+      "topProjectIds": []
+    }
+  ],
+  "projects": [],
+  "decisions": [],
+  "newProjects": [],
+  "labelChanges": [],
+  "buildAt": "2026-11-16T00:39:47.758Z",
+  "tokens": {
+    "total": {
+      "in": 74,
+      "out": 19220,
+      "cache_read": 7673129,
+      "cache_write": 40392
+    },
+    "costUSD": 0,
+    "costKRW": 0
+  }
+}

@@ -7,10 +7,10 @@
   "status": "current",
   "summary": "연구계획서 v0.96 서론·이론적 배경을 원문 대조로 다시 점검했고, C-2 자율전공학과 연구 사업계획서 HWP 최종본을 만들었다. Value-up 연구회 교수용 PPT·디자인 퀵체크와 ICCS 학생 코칭 포스터 v0.8을 만들고, 시각문법 공간 도식 개선판을 공개했다.",
   "kpis": {
-    "activeProjects": 10,
+    "activeProjects": 15,
     "sessions": 4,
     "newProjects": 0,
-    "filesChanged": 889
+    "filesChanged": 929
   },
   "daily": [
     {
@@ -22,37 +22,13 @@
         "0500",
         "03",
         "039",
-        "09"
+        "09",
+        "1300",
+        "1303",
+        "082",
+        "068"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 6,
-                "out": 1562,
-                "cache_read": 287203,
-                "cache_write": 113156,
-                "messages": 3,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 6,
-              "out": 1562,
-              "cache_read": 287203,
-              "cache_write": 113156,
-              "messages": 3
-            },
-            "costUSD": 0
-          }
-        },
-        {
-          "projectId": "0500",
-          "did": "[fs scan] 00_확장영역_누락점검_20261019.md"
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -78,8 +54,39 @@
           }
         },
         {
+          "projectId": "0500",
+          "did": "박사연구 선행문헌 검토 범위 점검 · v0.96 연구계획 평가 · 05_phD_Research — 선행연구 후속고찰·APA7 · JoVE 샘플 선별·형식·내용·현재 연구 적용 분석 · v0.96 JoVE 서론·이론적 배경 원문 검증 초안",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
+          "projectId": "1300",
+          "did": "문헌고찰 방법 학습·디자인 샘플 수행",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
+          "projectId": "1303",
+          "did": "연구 변화·세분화 시각화 제안 · 계원예대 학생 코치 모집 문구와 시각화 구성 · 계원 학생 코칭 포스터 초안 v0.1 · 학생 코칭 포스터 v0.5 담당 인원 변경 · 학생 코칭 포스터 v0.6 최대 담당 인원 조정 · 학생 코칭 포스터 v0.7 사무국 연락처 추가",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "063 workDashboard — W42 보강 · 전체 프로젝트 최신순 정렬 (10-18~10-19)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
           "projectId": "039",
-          "did": "[fs scan] 01_교수오리엔테이션_구성초안_v0.1.md"
+          "did": "Value-up 연구회 프로젝트 시작 · 디자인 퀵체크 v0.4 검토 · 디자인 퀵체크 v0.5 수정 및 통합 운영 논의 · 연구 이력 시각화 3안 제작 · 디자인 퀵체크 PPT 및 교수 오리엔테이션 기획 · 퀵체크 PPT 3단 그리드·글꼴·제목 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
+          "projectId": "082",
+          "did": "ICCS 학생 코칭 포스터 자산 확인",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
+        },
+        {
+          "projectId": "068",
+          "did": "학생 코칭 포스터 v0.3 및 ICCS 로고 확보 · 학생 코칭 포스터 v0.4 로고 배경 일치",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261019_log.md"
         },
         {
           "projectId": "09",
@@ -90,19 +97,26 @@
     {
       "date": "2026-10-20",
       "weekday": "화",
-      "filesChanged": 2,
+      "filesChanged": 29,
       "topProjectIds": [
         "0500",
-        "063"
+        "063",
+        "03",
+        "16"
       ],
       "entries": [
+        {
+          "projectId": "03",
+          "did": "MNS 데이터 이관 준비 (03_school_project/MNServe → 15_Data이관)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261020_log.md"
+        },
         {
           "projectId": "0500",
           "did": "[fs scan] 다운로드_대장.json · 다운로드_대장_네트워크재시도.json"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json"
+          "projectId": "16",
+          "did": "[fs scan] 00_데이터명세서_전체.md · README.md · _파일목록.md · 데이터명세서.md · 01_사용방법과_활용.md 외 22건"
         }
       ]
     },
@@ -119,85 +133,31 @@
       "entries": [
         {
           "projectId": "03",
-          "did": "[fs scan] PROJECT.md"
+          "did": "C-2 자율전공학과 연구 착수 · C-2 기존 연구 검토 · C-2 사업계획서 개정 지점 검토 · 05_phD_Research: v0.96 서론·이론적 배경 재점검 및 인용 추적 · C-2 성과 기준 내부 보관 결정 · C-2 최종본 작성 전 수정방향 확정 기록",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261021_log.md"
         },
         {
           "projectId": "0500",
-          "did": "[fs scan] 다운로드_대장_추가추적.json"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json"
+          "did": "[fs scan] 00_읽는순서·검토범위.md · 01_JoVE_서론·이론적배경_통합수정본_APA.md · 02_이론적배경_수정본_APA.md · 03_서론·이론적배경_인용_명세서.md · 04_APA7_참고문헌·판본.md 외 12건"
         },
         {
           "projectId": "1300",
-          "did": "[fs scan] 00_제작명세와프롬프트.md · generation_sources.json · image_specs.json · prepare_teaching.py · render_teaching.mjs"
+          "did": "[fs scan] 00_제작명세와프롬프트.md · prepare_teaching.py · render_teaching.mjs"
         }
       ]
     },
     {
       "date": "2026-10-22",
       "weekday": "목",
-      "filesChanged": 278,
+      "filesChanged": 276,
       "topProjectIds": [
         "1300",
         "063",
         "01",
-        "03"
+        "03",
+        "132"
       ],
       "entries": [
-        {
-          "projectId": "1300",
-          "did": "[fs scan] PROJECT_CONTEXT.md · CASE.md · CASE.md · CASE.md · CASE.md 외 70건"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 78,
-                "out": 20071,
-                "cache_read": 8518726,
-                "cache_write": 742033,
-                "messages": 38,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 78,
-              "out": 20071,
-              "cache_read": 8518726,
-              "cache_write": 742033,
-              "messages": 38
-            },
-            "costUSD": 0
-          }
-        },
-        {
-          "projectId": "01",
-          "did": "[fs scan] 05_AI_기본지침_사용법.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 36,
-                "out": 19977,
-                "cache_read": 2026570,
-                "cache_write": 34319,
-                "messages": 18,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 36,
-              "out": 19977,
-              "cache_read": 2026570,
-              "cache_write": 34319,
-              "messages": 18
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -221,44 +181,40 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "1300",
+          "did": "시각문법 수업 비교 이미지 제작 · 시각문법 자료 — 대시보드용 통합 보관 · 사진 질감 — 엑셀 항목 검토 · 사진 입자감 논문 탐색 · 프린트 입자감과 필름 레퍼런스 레이아웃 수정, PPT 샘플 · 필름 PPT 샘플 v3 글자 확대",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "수업 포스터 공간 도식·서술형 해설 개선 · 실제 필름·후지필름 시뮬레이션 레퍼런스와 사용자 교정 · 언어 반영 / 실제 사례 반영 11쌍 제작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
+        {
+          "projectId": "01",
+          "did": "세션 — 01_admin AI 셋팅 현황 파악 · 스타터킷 제작 (Claude Code) · 1402_심리적안전감 — 강의 흐름 검토와 이미지 제작 · 1402 이미지 인·아웃 타이밍 v0.2 · 1402 심리적 안전감 — 22장 이미지 패키지 제작 · 1402 edit01 기준 이미지 22장 배치 XML",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261022_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] data.ts · build-visual-grammar-spatial.py"
         }
       ]
     },
     {
       "date": "2026-10-23",
       "weekday": "금",
-      "filesChanged": 159,
+      "filesChanged": 154,
       "topProjectIds": [
         "063",
         "09",
         "02",
-        "0311"
+        "0311",
+        "131"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 64,
-                "out": 14126,
-                "cache_read": 9635186,
-                "cache_write": 34034,
-                "messages": 32,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 64,
-              "out": 14126,
-              "cache_read": 9635186,
-              "cache_write": 34034,
-              "messages": 32
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "09",
           "did": "[ai] (no file changes)",
@@ -293,31 +249,23 @@
         },
         {
           "projectId": "02",
-          "did": "[fs scan] CLAUDE.md · PROJECT.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 64,
-                "out": 23890,
-                "cache_read": 3309495,
-                "cache_write": 68751,
-                "messages": 31,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 64,
-              "out": 23890,
-              "cache_read": 3309495,
-              "cache_write": 68751,
-              "messages": 31
-            },
-            "costUSD": 0
-          }
+          "did": "02_Data_Kaywon/08_입시업무자동화 (신규)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "063 workDashboard — 시각문법 공개본·W43·도메인 (10-20~10-23)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
         },
         {
           "projectId": "0311",
-          "did": "[fs scan] v0.14_변경및구조검증.json · 20261023_센터검토반영과_참고자료_인용_명세서.md"
+          "did": "학습모듈개발 프로젝트 시작 · 학습모듈 외부검토 의견 파악 · AI교육혁신센터 전공역량 HWP 검토 의견 확인 · 센터 검토 반영 HWP v0.14 및 참고자료 재검토 · 2026 중간평가 QnA 프로젝트 시작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "중간평가 QnA 근거 기반 구성 · QnA 이미지·장표 병렬 제작 · 몸과 마음 QnA HTML 장표·연구 소개 초안 · QnA 연구 설명의 학생 장표 통합 · QnA 제목 수정·서술형 설명 보강 · QnA 서술형 본문 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261023_log.md"
         }
       ]
     },
@@ -328,86 +276,43 @@
       "topProjectIds": [
         "09",
         "0311",
-        "063"
+        "063",
+        "03"
       ],
       "entries": [
         {
-          "projectId": "09",
-          "did": "[fs scan] README.md · checks.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 20,
-                "out": 5901,
-                "cache_read": 3245730,
-                "cache_write": 22784,
-                "messages": 10,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 20,
-              "out": 5901,
-              "cache_read": 3245730,
-              "cache_write": 22784,
-              "messages": 10
-            },
-            "costUSD": 0
-          }
-        },
-        {
           "projectId": "0311",
-          "did": "[fs scan] 20261024_강동훈검토의견_검토와_인용_명세서.md"
+          "did": "학습모듈 강동훈 검토 의견 검토 · 학습모듈 p31 스터디 팁 구성 · 학습모듈 스터디 팁 학생용 언어 조정 · 학습모듈 스터디 팁 확정 반영 · 관찰 설명 한국어 윤문 · 과제 팁 문구 통일",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261024_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json"
+          "projectId": "03",
+          "did": "p31 연구자 관점 원문 재대조와 참고자료 연결 · p13 유사 문제 교재 전체 검색 · 사과 이미지 수정 및 표 문장 반영 · 수행 과제 레이아웃 및 타이포그래피 명칭 · p144 수정 저장 · 작업 항목 용어 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261024_log.md"
+        },
+        {
+          "projectId": "09",
+          "did": "[fs scan] README.md · checks.json"
         }
       ]
     },
     {
       "date": "2026-10-25",
       "weekday": "일",
-      "filesChanged": 278,
+      "filesChanged": 298,
       "topProjectIds": [
         "0311",
         "063",
         "03",
         "09",
-        "082"
+        "082",
+        "131",
+        "132"
       ],
       "entries": [
         {
-          "projectId": "0311",
-          "did": "[fs scan] 20261025_p52_수정전_문제진단.md"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W43.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 8,
-                "out": 2844,
-                "cache_read": 1567358,
-                "cache_write": 2968,
-                "messages": 4,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 8,
-              "out": 2844,
-              "cache_read": 1567358,
-              "cache_write": 2968,
-              "messages": 4
-            },
-            "costUSD": 0
-          }
-        },
-        {
           "projectId": "03",
-          "did": "[ai] (no file changes)",
+          "did": "학습모듈 v0.36 수정본 · HWP v0.36 조판 진행 · HWP v0.36 제작·검수 완료 · 학습모듈 — KCS 원본 서식 분석과 이미지 출처 통합 · 학습모듈 v0.40 r4 — 새 창 인계",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -427,35 +332,31 @@
               "messages": 86
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261025_log.md"
+        },
+        {
+          "projectId": "0311",
+          "did": "학습모듈52쪽 문제 진단 · 학습모듈48–62쪽 전체 내용 점검 · 학습모듈 전체 서술 지침 보완 · 48–62쪽 수정안 작성 · 학습모듈 목차·제목 검수 기준 반영 · 학습모듈 v0.26 통합 및 제목·안내 검수",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261025_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "13_Image/1310_마음이 신설 — 캐릭터 아카이브·디자인가이드 (10/24~10/25, Claude)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261025_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "최신 원고v0.38 — 그림2-5 사용자 확정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261025_log.md"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] package-lock.json · KineticType.tsx · Root.tsx · Title1402.tsx · Title1402v2.tsx 외 1건"
         },
         {
           "projectId": "09",
           "did": "[fs scan] PROJECT.md"
-        },
-        {
-          "projectId": "082",
-          "did": "[fs scan] package-lock.json · KineticType.tsx · Root.tsx · 07_키네틱타입_만드는법.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 169,
-                "out": 65594,
-                "cache_read": 14645417,
-                "cache_write": 101714,
-                "messages": 64,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 169,
-              "out": 65594,
-              "cache_read": 14645417,
-              "cache_write": 101714,
-              "messages": 64
-            },
-            "costUSD": 0
-          }
         }
       ]
     }
@@ -552,7 +453,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-25T13:31:18.523Z",
+  "buildAt": "2026-11-16T00:39:42.928Z",
   "tokens": {
     "total": {
       "in": 1959,
@@ -953,7 +854,7 @@
           "cached": 408847872,
           "out": 1143236,
           "turns": 2030,
-          "costUSD": 0.0
+          "costUSD": 0
         },
         "gpt-6-astra": {
           "in": 4671025,
@@ -966,10 +867,10 @@
       "costUSD": 261.46,
       "costByDay": {
         "2026-10-19": 6.63,
-        "2026-10-20": 0.0,
+        "2026-10-20": 0,
         "2026-10-21": 11.78,
-        "2026-10-22": 0.0,
-        "2026-10-23": 0.0,
+        "2026-10-22": 0,
+        "2026-10-23": 0,
         "2026-10-24": 60.45,
         "2026-10-25": 182.61
       },
@@ -997,10 +898,10 @@
           "cached": 3639335,
           "out": 66511,
           "requests": 31,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
-      "costUSD": 0.0,
+      "costUSD": 0,
       "estimated": true,
       "audit": {
         "databasesSeen": 34,

@@ -7,16 +7,16 @@
   "status": "past",
   "summary": "박사 연구모델을 개요 v1.1과 설문 v0.94(70문항) 패키지로 정리했다. 1303 DataViz를 새로 열어 AI 작업 계보 A1 포스터를 v0.29까지 고쳤고, Value-up 디자인터칭데이 키 비주얼·포스터·캐러셀을 만들어 공통 캐러셀 v14를 최종 승인했다.",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 11,
     "sessions": 1,
     "newProjects": 1,
-    "filesChanged": 522
+    "filesChanged": 383
   },
   "daily": [
     {
       "date": "2026-10-05",
       "weekday": "월",
-      "filesChanged": 41,
+      "filesChanged": 40,
       "topProjectIds": [
         "0500",
         "063"
@@ -24,7 +24,8 @@
       "entries": [
         {
           "projectId": "0500",
-          "did": "연구 1 결과변수에 JE·WI 추가, 최종 연구모델 보고서 v1.0, 설문 v0.93 최종설문 패키지 정리"
+          "did": "작업 프로젝트 · 생성·수정 파일 · 연구 2 주모형 SVG 작성 · 연구 1 TC 이득·비용 모형 초안 · 연구 1 종속변수 문헌·측정 검토 · IDS 원개발 논문 확보 후 대조",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261005_log.md"
         },
         {
           "projectId": "063",
@@ -55,7 +56,7 @@
     {
       "date": "2026-10-06",
       "weekday": "화",
-      "filesChanged": 20,
+      "filesChanged": 18,
       "topProjectIds": [
         "063",
         "0500",
@@ -88,10 +89,6 @@
           }
         },
         {
-          "projectId": "0500",
-          "did": "[fs scan] 04_연구1·2_핵심모형·보조변수_설명.html"
-        },
-        {
           "projectId": "03",
           "did": "[ai] (no file changes)",
           "tokens": {
@@ -117,14 +114,15 @@
         },
         {
           "projectId": "039",
-          "did": "[fs scan] 24_1부_목적·경과·일정브리핑_발표안_v0.1.md"
+          "did": "작업 프로젝트 · 생성 파일 · 디자인 터칭데이 대표 문구·사례 재선정 · 디자인 터칭데이 홍보 대표 이미지 큐레이션 · 디자인 리서치 프로세스·자동화 체계 정리",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261006_log.md"
         }
       ]
     },
     {
       "date": "2026-10-07",
       "weekday": "수",
-      "filesChanged": 29,
+      "filesChanged": 26,
       "topProjectIds": [
         "039",
         "03",
@@ -133,30 +131,6 @@
         "1300"
       ],
       "entries": [
-        {
-          "projectId": "039",
-          "did": "[fs scan] 33_6단계표준안×컨설팅표준×연간프로세스_정렬_v0.1.md · 33_디자인터칭데이_발표자료구성안_v0.2.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 44,
-                "out": 4103,
-                "cache_read": 1570702,
-                "cache_write": 81179,
-                "messages": 19,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 44,
-              "out": 4103,
-              "cache_read": 1570702,
-              "cache_write": 81179,
-              "messages": 19
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -180,10 +154,6 @@
             },
             "costUSD": 0
           }
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W41.json"
         },
         {
           "projectId": "082",
@@ -210,6 +180,11 @@
           }
         },
         {
+          "projectId": "039",
+          "did": "Value-up 홍보 사이트 콘텐츠 기준 · 협업 프로젝트 내용 초안 · 협업 프로젝트 발표 초안 제작 · SYNC·SKF 기반 시각화 보완 · 발표자료 타이포그래피·문구 정교화 · 커버 사진 생성",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261007_log.md"
+        },
+        {
           "projectId": "1300",
           "did": "[fs scan] 생성_프롬프트.md · 생성_프롬프트.md · 해설과_인용_명세서.md · 생성_프롬프트.md · 생성_프롬프트.md"
         }
@@ -226,36 +201,13 @@
       ],
       "entries": [
         {
-          "projectId": "082",
-          "did": "[fs scan] README.md · 06_외부노하우_GPT·Higgsfield_모션.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 16,
-                "out": 5002,
-                "cache_read": 528192,
-                "cache_write": 205342,
-                "messages": 6,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 16,
-              "out": 5002,
-              "cache_read": 528192,
-              "cache_write": 205342,
-              "messages": 6
-            },
-            "costUSD": 0
-          }
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W41.json"
-        },
-        {
           "projectId": "1300",
-          "did": "[fs scan] 생성_프롬프트.md · 생성_프롬프트.md"
+          "did": "1300·1301·1302 코퍼스 플러그인 구성 검토 · Nano Banana·GPT 이미지 공통 코퍼스 플러그인",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261008_log.md"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] README.md · 06_외부노하우_GPT·Higgsfield_모션.md"
         }
       ]
     },
@@ -266,32 +218,49 @@
       "topProjectIds": [
         "01",
         "063",
-        "1303"
+        "1303",
+        "131",
+        "068",
+        "1300"
       ],
       "entries": [
         {
-          "projectId": "01",
-          "did": "[fs scan] 01_수익화_판단과_실행안_v0.1.md · 02_첫상품_판매와_검증_문안.md · 03_근거_인용_명세서.md · 04_몸과마음의과학_콘텐츠사업_검토_v0.1.md · 05_몸과마음_검토_인용_명세서.md 외 1건"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W41.json"
-        },
-        {
           "projectId": "1303",
-          "did": "1303 DataViz 저장소 신설 · AI 작업 계보 HTML 초안 v0.1–0.3 → A1 포스터 v0.4–v0.14"
+          "did": "1303_DataViz 신설 · AI 작업 히스토리 인포그래픽 기획",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261009_log.md"
+        },
+        {
+          "projectId": "01",
+          "did": "워크스페이스 자산의 수익화 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261009_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "몸과 마음의 과학 콘텐츠 사업 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261009_log.md"
+        },
+        {
+          "projectId": "068",
+          "did": "0811_코칭 — 프로젝트 시작 컨텍스트 확인 · 0811_코칭 — MCC 고난도 문항 판단 구조 탐색 · 0811_코칭 — 사용자 분석을 반영한 문제 작성 기준 · 0811_코칭 — 현주가이드 반영 · 0811_코칭 — 클로드·Codex 지침 상호 검토 · 0811_코칭 — 시범 문제 5문항",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261009_log.md"
+        },
+        {
+          "projectId": "1300",
+          "did": "이미지 제작 폴더 정리",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261009_log.md"
         }
       ]
     },
     {
       "date": "2026-10-10",
       "weekday": "토",
-      "filesChanged": 197,
+      "filesChanged": 209,
       "topProjectIds": [
         "1303",
         "039",
         "03",
-        "063"
+        "063",
+        "0310"
       ],
       "entries": [
         {
@@ -300,7 +269,8 @@
         },
         {
           "projectId": "039",
-          "did": "디자인터칭데이 키 비주얼 v0.7 확정 · 포스터 v1·v2 · 캐러셀 3종 v1·v2"
+          "did": "SPARK 세로 이미지 수정 · SPARK 원경 불꽃·시점 재수정 · SPARK 세로 타이틀 배경 · SPARK 세로 이미지 점화·원경 보완 · SPARK 큰 불꽃 교체와 점화 위치 조정 · SPARK 큰 불꽃 디테일·연기 조정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261010_log.md"
         },
         {
           "projectId": "03",
@@ -327,15 +297,16 @@
           }
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] aiplus.svg"
+          "projectId": "0310",
+          "did": "타입 겹침 수정 및 비주얼3안 기획 · 기존 컨펌 시안 탐색 · 포스터3단 모듈 재구성 · 비즈니스 성장 비주얼 방향 보완 · 비주얼 v2 생성 · 비주얼 적용 시안 및 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261010_log.md"
         }
       ]
     },
     {
       "date": "2026-10-11",
       "weekday": "일",
-      "filesChanged": 225,
+      "filesChanged": 80,
       "topProjectIds": [
         "063",
         "039",
@@ -345,7 +316,7 @@
       "entries": [
         {
           "projectId": "063",
-          "did": "1303 DataViz 히스토리·디자인터칭데이 제작과정 포트폴리오 공개, 연구모델 허브 v1.1 갱신",
+          "did": "연구문서 최신본 정합성 수정 · 행사장소 재확인 및 안내 문구 삭제 · 행사 장소 사용자 최종 표기 반영 · 영문 업로드 패키지 · 웹사이트 기준 포스터 초안 및 컨텍스트 인수인계 · 전문가 영역 수정",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -365,15 +336,18 @@
               "messages": 81
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261011_log.md"
         },
         {
           "projectId": "039",
-          "did": "공통 캐러셀 v2→v14 최종 승인 · 업종별 A·B·C 6장 세트 · 웹사이트 전문가 명단·시설 사진"
+          "did": "RISE 대시보드 바로가기 연결 · AIPLUS Value-up 인스타그램 테스트 게시 준비 · 캐러셀 v2 제작 · Value-up 캐러셀 v12 · 캐러셀 v13 · 캐러셀 v14",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261011_log.md"
         },
         {
           "projectId": "0500",
-          "did": "연구 1·2 설명문 교체 · 설문 v0.94(BG_USEMODE 추가, 70문항) · 연결 문서 패키지"
+          "did": "박사연구 문서 연결 패키지",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261011_log.md"
         },
         {
           "projectId": "03",
@@ -481,7 +455,7 @@
     }
   ],
   "labelChanges": [],
-  "buildAt": "2026-10-11T11:32:28.112Z",
+  "buildAt": "2026-11-16T00:39:40.490Z",
   "tokens": {
     "total": {
       "in": 862,
@@ -799,7 +773,7 @@
           "cached": 114570368,
           "out": 275153,
           "turns": 868,
-          "costUSD": 0.0
+          "costUSD": 0
         },
         "gpt-6-astra": {
           "in": 4586418,
@@ -820,7 +794,7 @@
           "cached": 89650176,
           "out": 381246,
           "turns": 650,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
       "costUSD": 183.43,
@@ -856,10 +830,10 @@
           "cached": 1433586,
           "out": 23240,
           "requests": 24,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
-      "costUSD": 0.0,
+      "costUSD": 0,
       "estimated": true,
       "audit": {
         "databasesSeen": 30,

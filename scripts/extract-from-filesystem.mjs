@@ -99,6 +99,8 @@ const EXPLICIT = {
   '03_school_project/01_수업/코첼라': '038',
   '03_school_project/02_RISE': '039',
   '03_school_project/03_산학프로젝트/기람테크': '0310',
+  '03_school_project/03_산학프로젝트/01_기람테크 프로젝트': '0310',
+  '03_school_project/03_산학프로젝트/01_기람테크 리서치': '0310',
   '03_school_project/2026_가을학기/교내 연구/2026_학습모듈개발': '0311',
   '04_aSSIST/수업실습': '04',
   // 05: 2026-06-20 전면 재구조화 — 본연구 01~04 번호화 + 지원폴더(_봇·_방법론·_코퍼스)
@@ -131,6 +133,7 @@ const EXPLICIT = {
   '08_project/0814_보물AI_이미지평가': '0813',
   '08_project/0815_톤28_마케팅관찰': '0815',
   '16_jiniius': '16',
+  '15_Data이관/00_Context_Engineering': '15',
   '08_project/080_Jiniius': '16',
   '08_project/081_Anchornode': '081',
   '08_project/082_ICCS': '082',
@@ -184,6 +187,9 @@ const EXCLUDE_DIR = new Set([
   '_backups', '_backups_20260424', '_drafts', '.smart-env',
 ]);
 const EXCLUDE_REL = [
+  // 대시보드 자신의 데이터 갱신은 작업 기록이 아니다
+  '06_Personal_Project/063_workDashboard/app/src/data',
+  '06_Personal_Project/063_workDashboard/app/public',
   '00_personal/data',
   '00_personal/reports/daily',
   '00_personal/reports/weekly',
@@ -234,7 +240,7 @@ function walk(dir) {
 for (const cat of Object.keys({
   '01_admin': 1, '02_Data_Kaywon': 1, '02_Communication_Kaywon': 1, '03_school_project': 1, '04_aSSIST': 1,
   '05_phD_Research': 1, '06_Personal_Project': 1, '08_project': 1,
-  '09_몸과마음의과학': 1, '10_보고살피다': 1, '13_Image': 1,
+  '09_몸과마음의과학': 1, '10_보고살피다': 1, '13_Image': 1, '15_Data이관/00_Context_Engineering': 1, '16_jiniius': 1,
 })) {
   const root = join(WORKSPACE, cat);
   if (existsSync(root)) walk(root);

@@ -7,47 +7,25 @@
   "status": "current",
   "summary": "jiniius 시스템을 16번 독립 프로젝트로 세우고 케이스를 4개로 늘렸다. 계원 입시 검색은 학과별 지도 v0.7(검색어 394개·연결 1,040개)과 SNS 관계망까지 만들었다. 기람테크는 강점 진단·딥체크에서 전시 콘텐츠 기획과 디자인 3안으로 넘어갔다. 컨텍스트 엔지니어링 워크숍 원고·장표와 RISE 기업협력 배너 5장을 만들었고, 보물AI는 이미지 개선 중간보고와 802장 시트·크롭을 마쳤다. 아주대 62기 현수막과 KCS 중간보고서도 진행했다.",
   "kpis": {
-    "activeProjects": 8,
+    "activeProjects": 14,
     "sessions": 6,
     "newProjects": 1,
-    "filesChanged": 719
+    "filesChanged": 2295
   },
   "daily": [
     {
       "date": "2026-11-09",
       "weekday": "월",
-      "filesChanged": 37,
+      "filesChanged": 35,
       "topProjectIds": [
         "063",
         "03",
         "0813",
-        "0311"
+        "0311",
+        "1300",
+        "0695"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 86,
-                "out": 49592,
-                "cache_read": 8097177,
-                "cache_write": 220195,
-                "messages": 43,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 86,
-              "out": 49592,
-              "cache_read": 8097177,
-              "cache_write": 220195,
-              "messages": 43
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -74,11 +52,27 @@
         },
         {
           "projectId": "0813",
-          "did": "[fs scan] GPT_듀얼트랙_10대오브젝트_카메라앵글_프롬프트북.md · all267_dual_track_5views_v3.json · all267_object_prompts_v2.json · audit_580panels_quantitative.json · generation_prompts.json 외 17건"
+          "did": "보물AI 듀얼트랙 5장 생성 · 1402_심리적안전감 — 프로젝트 마무리 정리 · 보물AI 대표 미팅 장표 원고 v3.1 · 보물AI 대표 미팅 화면 구성 컨셉 v1.0 · 보물AI 이미지 개선 중간보고 v1.0",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261109_log.md"
+        },
+        {
+          "projectId": "1300",
+          "did": "1301 이미지 코퍼스 엑셀 위치 확인",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261109_log.md"
+        },
+        {
+          "projectId": "0695",
+          "did": "아주대 MBA 62기 로고 검색",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261109_log.md"
         },
         {
           "projectId": "0311",
-          "did": "[fs scan] 01_중간보고서_양식기입용_작성안_v0.1.md · 02_작성근거_인용명세와확인사항.md"
+          "did": "KCS 중간보고서 작성안 · KCS 중간보고서 v0.3 기준 작성 · 중간보고서 향후 연구계획 문체 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261109_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] PROJECT.md"
         }
       ]
     },
@@ -88,37 +82,41 @@
       "filesChanged": 1,
       "topProjectIds": [
         "0311",
-        "063"
+        "063",
+        "1300",
+        "0815"
       ],
       "entries": [
         {
           "projectId": "0311",
-          "did": "[fs scan] 01_KCS_분류체계부터_수행준거_지식기술태도_v0.1.md"
+          "did": "KCS 역량체계 Markdown 정리",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261110_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json"
+          "projectId": "1300",
+          "did": "1301 이미지 코퍼스 문제 원본 확인",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261110_log.md"
+        },
+        {
+          "projectId": "0815",
+          "did": "톤28 관찰 절차의 플러그인 전환",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261110_log.md"
         }
       ]
     },
     {
       "date": "2026-11-11",
       "weekday": "수",
-      "filesChanged": 91,
+      "filesChanged": 282,
       "topProjectIds": [
         "063",
         "0310",
-        "03"
+        "03",
+        "0815",
+        "15",
+        "16"
       ],
       "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json"
-        },
-        {
-          "projectId": "0310",
-          "did": "[fs scan] 01_기람테크_강점진단_v0.1.md · 02_강점진단_인용_명세서.md"
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -150,19 +148,42 @@
             },
             "costUSD": 0
           }
+        },
+        {
+          "projectId": "0815",
+          "did": "마케팅 추적 설계 시스템",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261111_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "기람테크 강점 진단 · 기람테크 초기 컨설팅 장표 구성 v0.2 · 기람테크 흑백 장표 v0.3 · 기람테크 PPT 및 웹 커버 v0.4 · 기람테크 프로젝트 / 딥체크 시작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261111_log.md"
+        },
+        {
+          "projectId": "15",
+          "did": "폴더 이름 변경 — Context Engineering · Context Engineering 노트 전사와 강의 보충 · 손글씨 전사 교정 · 손글씨 전사 추가 교정 · AI Slop 노트 교정과 설명 추가 · 환경과 참여자 논의 내용 반영",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261111_log.md"
+        },
+        {
+          "projectId": "16",
+          "did": "080 jiniius시스템 — 콕스타 프로세스 점검과 10단계 확장 · 080 jiniius시스템 — 실제 연관검색 깊이 10 추적 v7.0 · 080 jiniius시스템 — 경로 시각화와 마케팅 인사이트 · 080 jiniius시스템 — TOUN28 방식 관계망으로 시각화 교정 · 080 jiniius시스템 — 세 브랜드 한국어 추적·댓글·SNS",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261111_log.md"
         }
       ]
     },
     {
       "date": "2026-11-12",
       "weekday": "목",
-      "filesChanged": 86,
+      "filesChanged": 438,
       "topProjectIds": [
         "03",
         "063",
         "0311",
         "0695",
-        "039"
+        "039",
+        "16",
+        "132",
+        "0310"
       ],
       "entries": [
         {
@@ -190,117 +211,103 @@
           }
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json"
+          "projectId": "16",
+          "did": "080 jiniius시스템 — 여정 그룹과 관계·유입량 설명 · jiniius시스템 · 패스와 군집의 인터랙션 개선 · jiniius 마케팅 정리 저장과 지도 감도 조정 · jiniius 키워드 지표 호버 · 16_jiniius 독립 프로젝트 이관 · 16_jiniius / 03_계원 시작 계획",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261112_log.md"
+        },
+        {
+          "projectId": "132",
+          "did": "스토리텔링 9주차 자료 (03_school_project/2026_가을학기/스토리텔링/9주차 자료)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261112_log.md"
         },
         {
           "projectId": "0311",
-          "did": "[fs scan] 37_제출용최종본_표지·위치_4자대조_20261109.md"
+          "did": "KCS 학습모듈 (2026_학습모듈개발) — 표지·위치 코드 정합",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261112_log.md"
         },
         {
           "projectId": "0695",
-          "did": "[fs scan] build_banner.py · index.html · 현수막_B_4000x800_윤곽선.svg · 현수막_B_4000x800_편집용.svg"
+          "did": "아주대62기 현수막 A·B 테스트 · B안 슬림 구성 테스트 · 현수막 HTML·SVG 5:1 제작 · 현수막 v0.4 배치 수정 · 현수막 v0.5 세로 위치 수정 · 현수막 v0.6 로고 상단 글씨 제거",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261112_log.md"
         },
         {
           "projectId": "039",
-          "did": "[fs scan] 01_배너5장_내용검토와_구성제안_v0.1.md · 02_배너_인용_명세서_v0.1.md · PROJECT.md"
+          "did": "RISE 연구회 — 기업 Value-up 소개 배너 5장 내용 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261112_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "[fs scan] 03_리서치계획_1113내용정리_v0.1.md · 04_전시그래픽_콘텐츠배치안_v0.1.md · 05_리서치보강_전시콘텐츠근거_v0.1.md · 06_전시그래픽_인용_명세서.md · 06_전시그래픽_콘텐츠원고_v0.1.md 외 5건"
         }
       ]
     },
     {
       "date": "2026-11-13",
       "weekday": "금",
-      "filesChanged": 134,
+      "filesChanged": 672,
       "topProjectIds": [
         "039",
         "063",
         "03",
         "0695",
-        "0813"
+        "0813",
+        "0310",
+        "15",
+        "16",
+        "131"
       ],
       "entries": [
         {
           "projectId": "039",
-          "did": "[fs scan] 디자인제안_편집기준.md · 배너01_A안_본문10pt.svg · 배너01_B안_본문10pt.svg · 배너01_C안_본문10pt.svg"
+          "did": "RISE 기업협력 배너 시안 3종 · B안 전체 5장 제작 · 배너 상단 설명과 본문 간격 조정 · 2페이지 진단지 여백 확대 · 2페이지 진단지 하단 간격 추가 확대",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json"
+          "projectId": "0310",
+          "did": "기람테크 / 딥체크 주요 발견 문서화 · 기람테크 프로젝트 작업 재개 · 기람테크 실행 프로젝트 세션 시작 · 기람테크 전시 콘텐츠 구체화 — 기존 내용 파악 · 기람테크 유닛 2·3 전시 콘텐츠 구체화 · 기람테크 전시 스케치",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
         },
         {
-          "projectId": "03",
-          "did": "[fs scan] 20261113_영업활동_인용_명세서.md · 20261113_영업활동_주요발견과_콘텐츠강화_v0.1.md · PROJECT.md",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 222,
-                "out": 82427,
-                "cache_read": 12010809,
-                "cache_write": 1254537,
-                "messages": 87,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 222,
-              "out": 82427,
-              "cache_read": 12010809,
-              "cache_write": 1254537,
-              "messages": 87
-            },
-            "costUSD": 0
-          }
+          "projectId": "15",
+          "did": "컨텍스트 엔지니어링 경험 중심 강의 개정 · 컨텍스트 엔지니어링 워크숍 — 부록·디자인 제안 · 워크숍 운영·환경 설명 개정 · 워크숍 장표 MD 구성 · 장표 본문 정리 · 워크숍 배포 폴더 구성",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
+        },
+        {
+          "projectId": "16",
+          "did": "수집 원장·열람·가독성 v0.5 · 추천 연결 한눈에 보기 v0.6 · v0.7 시스템 연결 · SNS 관계망 UI · SNS 후보·공통 연결 보완 · 브라우저 SNS 직접 확인",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
+        },
+        {
+          "projectId": "131",
+          "did": "마음이 감정표현 적용 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
         },
         {
           "projectId": "0695",
-          "did": "[fs scan] build_banner.py · index.html · 현수막_B_4000x800_윤곽선.svg · 현수막_B_4000x800_윤곽선_AI호환.svg · 현수막_B_4000x800_편집용.svg 외 1건"
+          "did": "아주대62기 현수막 장소 수정 및 AI 저장",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
         },
         {
           "projectId": "0813",
-          "did": "[fs scan] 보물AI_연구결과보고서_인용_명세서.md · 전체802장_판정정본.json · 보완149장_생성큐.json"
+          "did": "보물AI 연구결과보고 및 보완 이미지 출력 완료 · 보물AI 프롬프트 수정 내역 엑셀 · 보물AI 수정 제작본 원본 번호 저장 · 보물AI 보고서 및 개별 이미지 v2 교정 · 번호 자물쇠 참고 형태 유지 v3 · 오류 6건 통합 수정 시트 v4",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261113_log.md"
         }
       ]
     },
     {
       "date": "2026-11-14",
       "weekday": "토",
-      "filesChanged": 189,
+      "filesChanged": 671,
       "topProjectIds": [
         "0813",
         "063",
         "03",
         "0812",
-        "039"
+        "039",
+        "16",
+        "0310"
       ],
       "entries": [
-        {
-          "projectId": "0813",
-          "did": "[fs scan] page_01.json · page_02.json · page_03.json · page_04.json · page_05.json 외 26건"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 146,
-                "out": 34873,
-                "cache_read": 10943703,
-                "cache_write": 77908,
-                "messages": 62,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 146,
-              "out": 34873,
-              "cache_read": 10943703,
-              "cache_write": 77908,
-              "messages": 62
-            },
-            "costUSD": 0
-          }
-        },
         {
           "projectId": "03",
           "did": "[ai] (no file changes)",
@@ -326,56 +333,59 @@
           }
         },
         {
-          "projectId": "0812",
-          "did": "[fs scan] 22_디자인편_2027동향_리서치계획_v0.1.md · HANDOFF.md"
+          "projectId": "0813",
+          "did": "보물AI 전체802장 30컷4K 시트 생성 완료 · 보물AI 802장 프롬프트 번호별 정밀 크롭",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261114_log.md"
+        },
+        {
+          "projectId": "16",
+          "did": "지도 v0.9 · 경기남부 4개 예술대학 — 새 채팅 준비 · 경기남부 4개 대학 — 추가 운영 지시 반영 · 경기남부 4개 예술대학 출발 화면 수집·UI 초안 · 경기남부 4개 예술대학 — 실제 경로 확장 완료 · 경기남부 4개 예술대학 — 구글·전공 확장과 군집 v0.3",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261114_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "기람테크 전시 디자인 3안 · 기람테크 — 기존 비주얼 리서치 재확인 · 기람테크 전시 콘셉트 ABC 시각화 · 기람테크 원본 로고 적용 · C안 단독 수정 · C안 직원 표정 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261114_log.md"
         },
         {
           "projectId": "039",
-          "did": "[fs scan] 배너01_기업협력개요.svg · 배너02_진단과상담.svg · 배너03_협력프로그램.svg · 배너04_학과와프로젝트.svg · 배너05_제작촬영시설.svg"
+          "did": "RISE 연구회 배너 AI 변환 · 배너 5개 아트보드 통합 및 이미지 임베드",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261114_log.md"
+        },
+        {
+          "projectId": "0812",
+          "did": "[fs scan] 22_디자인편_2027동향_리서치계획_v0.1.md · 00_검증보고_v0.1.md · 00_수집기준.md · 00_수집카탈로그.md · 01_字节Seed团队_Seedream4_0_发布.md 외 95건"
         }
       ]
     },
     {
       "date": "2026-11-15",
       "weekday": "일",
-      "filesChanged": 181,
+      "filesChanged": 196,
       "topProjectIds": [
         "03",
         "063",
-        "0812"
+        "0812",
+        "0310",
+        "16"
       ],
       "entries": [
         {
-          "projectId": "03",
-          "did": "[fs scan] README.md · build.py · index.html · pages.json · P01.svg 외 9건"
+          "projectId": "0310",
+          "did": "기람테크 세로형 전시 8페이지 HTML·SVG · 1500×3000mm 전시 8페이지 문안·다이어그램 기획 · 8페이지 한 장 테스트 보드 · 전시 테스트 디자인 검토 · P3 측정 원리 재제작 · 기람테크 P3–P5 정교화 v0.3",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261115_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W46.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 8,
-                "out": 920,
-                "cache_read": 631599,
-                "cache_write": 181185,
-                "messages": 4,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 8,
-              "out": 920,
-              "cache_read": 631599,
-              "cache_write": 181185,
-              "messages": 4
-            },
-            "costUSD": 0
-          }
+          "projectId": "03",
+          "did": "[fs scan] 별지 제5호_시각디자인과 현장실습학기제 학과 운영 계획서_초안.md"
         },
         {
           "projectId": "0812",
-          "did": "[fs scan] 23_디자인편_동향종합_v0.1.md · 00_카탈로그_CN.md · 03_蓝色光标_致投资人信_AI营销科技公司.md · 05_艾瑞咨询_2025中国营销智能体研究报告.md · 00_카탈로그_EU.md 외 16건"
+          "did": "[fs scan] 23_디자인편_동향종합_v0.1.md · 24_방향원고_만들기는쉬워지고_검토_v0.1.md · 25_공동도서_일정과_원고형식_v0.1.md · 26_공동도서_진현장_목차_v0.1.md · 26_공동도서_진현장_목차_v0.2.md 외 42건"
+        },
+        {
+          "projectId": "16",
+          "did": "[fs scan] build_initial_ui.py · build_insights_latest.py · 핵심인사이트_업데이트원본.json · 01_4개학교_출발화면_v0.1.html · 02_핵심인사이트_최신.html 외 3건"
         }
       ]
     }
@@ -509,7 +519,7 @@
     "16"
   ],
   "labelChanges": [],
-  "buildAt": "2026-11-15T14:39:11.302Z",
+  "buildAt": "2026-11-16T00:39:46.586Z",
   "tokens": {
     "total": {
       "in": 1124,

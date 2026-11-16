@@ -151,6 +151,69 @@ function parseLog(text, logFilePath) {
     });
 }
 
+
+/* ── 2026-10 이후 로그 형식: "## 제목" 블록 + "- 프로젝트: 경로" 줄 ──────────
+ * 블록 제목만 노출한다(본문 미노출). 프로젝트는 ① 블록 안 프로젝트 경로
+ * ② 제목·경로의 번호 ③ 키워드 ④ 직전 블록 순으로 정한다. */
+const FS_SRC = readFileSync(join(__dirname, 'extract-from-filesystem.mjs'), 'utf-8');
+const PATH_MAP = [...FS_SRC.matchAll(/^\s*'([^']+)':\s*'([^']+)',/gm)]
+  .map(m => [m[1], m[2]]).filter(([, id]) => knownIds.has(id))
+  .sort((a, b) => b[0].length - a[0].length);
+const KEYWORDS = [
+  [/컨텍스트\s*엔지니어링|context\s*engineering|워크숍|강의\s*원고|손글씨\s*전사|ai\s*slop/i, '15'],
+  [/기수\s*로고|시안02/i, '0695'], [/전시|부스/i, '0310'],
+  [/수집\s*원장|추천\s*연결|sns\s*(관계망|후보|직접)|시스템\s*연결|지도\s*v\d/i, '16'],
+  [/자물쇠|숫자\s*\d?\s*방향|프롬프트\s*수정/i, '0813'],
+  [/기람|딥체크/i, '0310'], [/jiniius|지니어스|콕스타|경기남부/i, '16'],
+  [/아주대|현수막|62기/i, '0695'], [/보물\s*ai/i, '0813'], [/kcs|학습모듈|중간보고서/i, '0311'],
+  [/rise|value-?up|연구회/i, '039'], [/스토리텔링|맥클라우드/i, '132'], [/톤28|toun28/i, '0815'],
+  [/산업동향/i, '0812'], [/코퍼스|corpus|1301/i, '1300'], [/dataviz|1303|작업\s*히스토리/i, '1303'],
+  [/대시보드|workdashboard/i, '063'], [/마음이|higgsfield/i, '131'],
+  [/prolific|qualtrics|smartpls|pls-sem|박사\s*(연구|설문)|연구모형/i, '0500'],
+  [/임차in|아이엔/i, '089'], [/에듀피스/i, '085'], [/wcif/i, '0691'], [/코칭|icf/i, '068'],
+];
+const SKIP_TITLE = /^(작업\s*요약|요약|다음\s*작업|생성|수정|검수|결정|메모)$/;
+
+function idByPath(text) {
+  if (!text) return null;
+  for (const [prefix, id] of PATH_MAP) if (text.includes(prefix)) return id;
+  return null;
+}
+function idByKeyword(text) {
+  if (!text) return null;
+  for (const [re, id] of KEYWORDS) if (re.test(text)) return id;
+  return null;
+}
+function idFromText(text) {
+  return idByPath(text) ?? idByKeyword(text) ?? extractIdFromMention(text);
+}
+
+function parseHeadingLog(text, logFilePath) {
+  const sections = text.split(/\n(?=##\s)/).filter(sec => /^##\s/.test(sec));
+  const blocks = [];
+  let prevId = null;
+  for (const sec of sections) {
+    const lines = sec.split('\n');
+    const title = lines[0].replace(/^##\s+/, '').replace(/[*`]/g, '').trim();
+    if (!title || SKIP_TITLE.test(title) || GENERIC_TITLES.has(title)) continue;
+    const projLine = lines.find(l => /^\s*-?\s*(작업\s*)?프로젝트\s*[:：]/.test(l)) ?? '';
+    const head = lines.slice(1, 4).join(' ');
+    const t = title.replace(/^\d{4}-\d{2}-\d{2}\s*/, '');
+    const id = idByPath(projLine) ?? idByKeyword(projLine) ?? idByKeyword(t) ?? idByPath(t) ?? idByPath(head) ?? idByKeyword(head) ?? prevId;
+    if (!id) continue;
+    prevId = id;
+    const shortTitle = title.replace(/^\d{4}-\d{2}-\d{2}\s*/, '').slice(0, 80);
+    const b = blocks.find(x => x.projectId === id);
+    if (b) { if (!b.titles.includes(shortTitle)) b.titles.push(shortTitle); }
+    else blocks.push({ projectId: id, titles: [shortTitle] });
+  }
+  return blocks.map(b => ({
+    projectId: b.projectId,
+    did: b.titles.slice(0, 6).join(' · ').slice(0, 300),
+    logFilePath,
+  }));
+}
+
 function processWeekly(weekFile) {
   const path = join(WEEKLY_DIR, weekFile);
   const weekly = JSON.parse(readFileSync(path, 'utf-8'));
@@ -164,12 +227,18 @@ function processWeekly(weekFile) {
       continue;
     }
     const text = readFileSync(logPath, 'utf-8');
-    const entries = parseLog(text, logPath);
-    if (entries.length === 0) {
-      if (day.entries) delete day.entries;
-      continue;
+    let entries = parseLog(text, logPath);
+    if (entries.length === 0) entries = parseHeadingLog(text, logPath);
+    if (entries.length === 0) continue;
+    // 기존 entries(토큰 정보)는 보존하고, 같은 프로젝트는 로그 내용으로 did 교체
+    const merged = (day.entries ?? []).filter(e => !String(e.did).startsWith('[fs scan]'));
+    for (const e of entries) {
+      const ex = merged.find(m => m.projectId === e.projectId);
+      if (ex) { ex.did = e.did; ex.logFilePath = e.logFilePath; }
+      else merged.push(e);
     }
-    day.entries = entries;
+    day.entries = merged;
+    for (const e of merged) if (!day.topProjectIds.includes(e.projectId)) day.topProjectIds.push(e.projectId);
     updated++;
   }
 

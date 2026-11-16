@@ -7,30 +7,33 @@
   "status": "past",
   "summary": "연구계획서를 v0.92에서 v0.96까지 고쳐 인쇄본까지 확인했다. 디자인터칭데이 행사 정보를 확정해 홍보물·웹사이트를 고쳤고, 시각문법 마스터 최종수정본과 현장실습·총장보고 자료를 만들었다.",
   "kpis": {
-    "activeProjects": 7,
+    "activeProjects": 11,
     "sessions": 6,
     "newProjects": 0,
-    "filesChanged": 2358
+    "filesChanged": 2095
   },
   "daily": [
     {
       "date": "2026-10-12",
       "weekday": "월",
-      "filesChanged": 206,
+      "filesChanged": 69,
       "topProjectIds": [
         "039",
         "03",
         "1303",
-        "063"
+        "063",
+        "068",
+        "0310"
       ],
       "entries": [
         {
           "projectId": "039",
-          "did": "행사 정보 수정(10:00–12:00 · The이음) · VITAL 캐러셀 8장 · 포스터 전체 비교 · 웹사이트 시설 사진"
+          "did": "RISE 디자인터칭데이 — 공간사진 시안 · RISE 캐러셀 프로젝트별 재업로드 묶음 · RISE 포스터 행사정보 확정본 재출력 · RISE 포스터 A2 변환 · RISE A2 재조판 테스트 v1 · RISE A2 재조판 테스트 v2",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
         },
         {
           "projectId": "03",
-          "did": "현장실습 기업 안내 12장 · 캡스톤 총장보고 10장 v0.1–v0.3",
+          "did": "표준현장실습 기업용 PPT 디자인 고도화 사전 검토 · 현장실습 PPT 디자인 테스트 출력 · 현장실습 디자인 시안 v0.2 · 현장실습 디자인 시안 v0.3 · 현장실습 디자인 시안 v0.4 · 현장실습 기업용 안내 전체 12장 디자인 고도화 완료",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -50,15 +53,17 @@
               "messages": 23
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
         },
         {
           "projectId": "1303",
-          "did": "A1 포스터 v0.30 최근 기록 갱신"
+          "did": "1303 AI 작업 히스토리 v0.30 갱신",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
         },
         {
           "projectId": "063",
-          "did": "디자인터칭데이 웹사이트 v2–v5 배포 · 제작과정 포트폴리오 갱신 · W41 마감",
+          "did": "행사 시간·장소 변경 · V-SHOP 사진 순서 변경",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -78,78 +83,39 @@
               "messages": 63
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
+        },
+        {
+          "projectId": "068",
+          "did": "VITAL 캐러셀 8장 간단 시안 · 0811 코칭 검토자료 내용 파악 · 0811 코칭 문항 검증체계 구축 · 0811 코칭 검증 기반 100문항 생성 · 0811_코칭 — 코치님 피드백 파악·반영 준비",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
+        },
+        {
+          "projectId": "0310",
+          "did": "캡스톤 원본 이미지 적용 · 캡스톤 그리드·사진·다이어그램 고도화",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261012_log.md"
         }
       ]
     },
     {
       "date": "2026-10-13",
       "weekday": "화",
-      "filesChanged": 93,
+      "filesChanged": 88,
       "topProjectIds": [
         "063",
         "082",
         "0500",
         "03",
         "039",
-        "1300"
+        "1300",
+        "1303",
+        "0813"
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W42.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 14,
-                "out": 2361,
-                "cache_read": 595361,
-                "cache_write": 26187,
-                "messages": 7,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 14,
-              "out": 2361,
-              "cache_read": 595361,
-              "cache_write": 26187,
-              "messages": 7
-            },
-            "costUSD": 0
-          }
-        },
-        {
-          "projectId": "082",
-          "did": "[fs scan] 샘플_words.json · 김현정교수님_터닝포인트 팀장리더십[조직]_7차시_vol9.0_컷목록.json · 04_1차편집_XML.py",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 30,
-                "out": 13268,
-                "cache_read": 1410315,
-                "cache_write": 15545,
-                "messages": 10,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 30,
-              "out": 13268,
-              "cache_read": 1410315,
-              "cache_write": 15545,
-              "messages": 10
-            },
-            "costUSD": 0
-          }
-        },
-        {
-          "projectId": "0500",
-          "did": "[fs scan] 28_연구질문_재검토_사용자제공_피드백·검토의견_20261013_v0.1.md"
-        },
-        {
           "projectId": "03",
-          "did": "[ai] (no file changes)",
+          "did": "보물AI — 산학프로젝트 시작 및 상위 인덱싱 · 보물AI — 공동연구 PDF 요구사항 추출 · 보물AI — 이미지 폴더 탐색 · 보물AI — 1300·1301·1302 지식 기반 품질 개선 접근 검토 · 보물AI — 첫 100장 하네스 기준 검토 보고서 · 보물AI 300번째까지 검토",
           "tokens": {
             "byModel": {
               "claude-opus-5-5": {
@@ -169,11 +135,36 @@
               "messages": 24
             },
             "costUSD": 0
-          }
+          },
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261013_log.md"
+        },
+        {
+          "projectId": "0500",
+          "did": "연구가이드 — 연구질문 피드백 등록 · 연구가이드 — 신규 선행문헌 코퍼스 등록 및 연구 연결 검토 · 연구가이드 — 연구 2 개정 대화 정리 및 Claude 인계 · 연구가이드 — 과업·역량 재구성 통합 관점 확정 및 다음 세션 인계 · 연구가이드 — 수정본 작성 보류 및 이전 버전 개정 전 검토 · 연구가이드 — 연구 2 모형 수정 선행연구 1차 추적",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261013_log.md"
         },
         {
           "projectId": "039",
-          "did": "[fs scan] 01_녹취_전사본_v0.1.md"
+          "did": "039 RISE · 2026 가을 Value-up연구회 — 1회 연구모임 회의록 · 13_Image — 자연스러운 이미지 연구 2차 + 1302 레퍼런스 케이스 (세션 2026-10-04~10-13) · RISE — Codex 웹사이트·캐러셀·A2 포스터 작업 인계 저장 · RISE — 이 채팅의 웹사이트·인스타그램 캐러셀 작업 로그 저장 · RISE 디자인터칭데이 작업량 표현 점검 · RISE — 한정진 코치 소개 수정",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261013_log.md"
+        },
+        {
+          "projectId": "1303",
+          "did": "1303 AI 작업 히스토리 — 10월 13일 갱신 · AI 작업 히스토리 — Claude 인계 로그 저장 · 1303 AI 작업 히스토리 — 최신 원천 재수집 v0.32 · 063 토큰 수집 로직·1303 시각화 재계산 · 1303 도구별 원 표식 비교 샘플 · 1303 폴더 색·AI 코어 테스트 v0.2",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261013_log.md"
+        },
+        {
+          "projectId": "0813",
+          "did": "보물AI 첫 100장 재검토 v2",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261013_log.md"
+        },
+        {
+          "projectId": "063",
+          "did": "[fs scan] TOKEN_RECALCULATION_20261013.md · codex-token-records.py · extract-external-ai-usage.py · test-codex-token-records.py"
+        },
+        {
+          "projectId": "082",
+          "did": "[fs scan] 샘플_words.json · 김현정교수님_터닝포인트 팀장리더십[조직]_7차시_vol9.0_컷목록.json · 04_1차편집_XML.py"
         },
         {
           "projectId": "1300",
@@ -187,12 +178,6 @@
       "filesChanged": 0,
       "topProjectIds": [
         "063"
-      ],
-      "entries": [
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W42.json"
-        }
       ]
     },
     {
@@ -207,47 +192,24 @@
       ],
       "entries": [
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W42.json"
-        },
-        {
-          "projectId": "0500",
-          "did": "[fs scan] 01_선행연구로_배우는_문헌검토_스터디가이드_v0.1.md · log.md"
+          "projectId": "1300",
+          "did": "14_MOV/2026_하쿠바 — 영상 편집 준비 (10-13~10-15)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261015_log.md"
         },
         {
           "projectId": "03",
-          "did": "[fs scan] SKILL.md · catalog.json · classifications.json · gallery.html · stats.json 외 1457건",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 106,
-                "out": 61050,
-                "cache_read": 8206691,
-                "cache_write": 194795,
-                "messages": 53,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 106,
-              "out": 61050,
-              "cache_read": 8206691,
-              "cache_write": 194795,
-              "messages": 53
-            },
-            "costUSD": 0
-          }
+          "did": "[fs scan] SKILL.md · catalog.json · classifications.json · gallery.html · stats.json 외 1484건"
         },
         {
-          "projectId": "1300",
-          "did": "[fs scan] 검증결과_20261015.json · 검토보고서_20261015.md · 시각문법_검토업데이트_20261015.json · build.mjs · review.py 외 4건"
+          "projectId": "0500",
+          "did": "[fs scan] 32_연구질문_고도화_과업·역량_통합관점_v0.3.md · 01_선행연구로_배우는_문헌검토_스터디가이드_v0.1.md · 02_문장과_인용의_구조_스터디가이드_v0.1.md · log.md"
         }
       ]
     },
     {
       "date": "2026-10-16",
       "weekday": "금",
-      "filesChanged": 51,
+      "filesChanged": 49,
       "topProjectIds": [
         "1300",
         "063",
@@ -257,19 +219,18 @@
       "entries": [
         {
           "projectId": "1300",
-          "did": "[fs scan] 시각문법_최종수정본_전체이력.json · build.mjs · external_corrections.json · finalize.py · prepare_workbook.py 외 4건"
-        },
-        {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W42.json"
-        },
-        {
-          "projectId": "0500",
-          "did": "[fs scan] 01_설문개정검토_v0.95.html · 01_설문개정검토_v0.95.md · 10_JE추가_인용_명세서_v0.95.md · 10_JE추가·WI설명_변경기록_v0.95.md"
+          "did": "— 시각문법 최종수정본 · 연구가이드 — JE 두 유형 추가, WI 의미 설명 · 연구가이드 — WI와 업무수행 불안 구분·적용 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261016_log.md"
         },
         {
           "projectId": "03",
-          "did": "[fs scan] 00_추출목록_및_변경요청.md · 01_디자인제작기초_원문추출.md · 02_스토리텔링_원문추출.md · 03_시각디자인리서치_원문추출.md · 04_디자인실무프로젝트Ⅰ_원문추출.md 외 2건"
+          "did": "교과과정개편 — 교과목 추출 · 교과과정개편 — 원본서식 HWP 제작",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261016_log.md"
+        },
+        {
+          "projectId": "0500",
+          "did": "연구가이드 — 개정 실행 지침 통합 · 연구계획서 수정본 v0.92 작성",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261016_log.md"
         }
       ]
     },
@@ -279,60 +240,50 @@
       "filesChanged": 87,
       "topProjectIds": [
         "0500",
-        "063"
+        "063",
+        "021"
       ],
       "entries": [
         {
-          "projectId": "0500",
-          "did": "[fs scan] 01_연구계획서_수정본_v0.92.html · 01_연구계획서_수정본_v0.92.md · model1_moderation_20261017.svg · model2_moderation_20261017.svg"
+          "projectId": "021",
+          "did": "워크스페이스 용량 정리 (cloude_Code 전체)",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261017_log.md"
         },
         {
-          "projectId": "063",
-          "did": "[fs scan] 2026-W42.json"
+          "projectId": "0500",
+          "did": "연구계획서 v0.92 개선계획 실행 · 연구계획서 요약문 저자 수정 반영 · 연구 배경·문제의식 저자 수정 반영 · 연구계획서 v0.921 생성 · v0.921 과업·역량 관점 설명 수정 · 저자 개정 서두 기반 전체 정합성 검토",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261017_log.md"
         }
       ]
     },
     {
       "date": "2026-10-18",
       "weekday": "일",
-      "filesChanged": 418,
+      "filesChanged": 299,
       "topProjectIds": [
         "0500",
         "063",
-        "1300"
+        "1300",
+        "1303"
       ],
       "entries": [
         {
           "projectId": "0500",
-          "did": "[fs scan] 00_연구개요_v0.93.html · 01_연구계획서_v0.93.html · 01_연구계획서_v0.93.md · 02_연구계획서_인용_명세서_v0.93.html · 02_연구계획서_인용_명세서_v0.93.md 외 6건"
+          "did": "연구계획서 v0.93 전체 집필 완료 · v0.93 통합 메인페이지·이론 보강·변수 출처 · v0.93 원문 대조·실제 설문지 화면 · 설문 원문 영어 병기·공간 최적화 · v0.96 통합·종료 판단·선행연구 보강 · 시각문법 이미지 A/B 테스트 패키지",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261018_log.md"
+        },
+        {
+          "projectId": "1303",
+          "did": "박사 연구 변화 사전 탐색",
+          "logFilePath": "/Users/jinhyunpark/Documents/cloude_Code/docs/logs/20261018_log.md"
         },
         {
           "projectId": "063",
-          "did": "[fs scan] 2026-W42.json",
-          "tokens": {
-            "byModel": {
-              "claude-opus-5-5": {
-                "in": 236,
-                "out": 59111,
-                "cache_read": 12914085,
-                "cache_write": 429968,
-                "messages": 118,
-                "costUSD": 0
-              }
-            },
-            "total": {
-              "in": 236,
-              "out": 59111,
-              "cache_read": 12914085,
-              "cache_write": 429968,
-              "messages": 118
-            },
-            "costUSD": 0
-          }
+          "did": "[fs scan] AGENTS.md · next-env.d.ts · package-lock.json · package.json · page.tsx 외 2건"
         },
         {
           "projectId": "1300",
-          "did": "[fs scan] 01_공통프롬프트_10개.md · 02_A세션_시각문법없음.md · 03_B세션_시각문법있음.md · 04_평가표와근거.md · PROJECT_CONTEXT.md 외 35건"
+          "did": "[fs scan] 01_공통프롬프트_10개.md · 02_A세션_시각문법없음.md · 03_B세션_시각문법있음.md · 04_평가표와근거.md · execution_manifest.json 외 111건"
         }
       ]
     }
@@ -438,7 +389,7 @@
   ],
   "newProjects": [],
   "labelChanges": [],
-  "buildAt": "2026-10-18T14:59:18.099Z",
+  "buildAt": "2026-11-16T00:39:41.686Z",
   "tokens": {
     "total": {
       "in": 618,
@@ -770,7 +721,7 @@
           "cached": 102823808,
           "out": 458967,
           "turns": 836,
-          "costUSD": 0.0
+          "costUSD": 0
         },
         "gpt-6-astra": {
           "in": 4741041,
@@ -784,7 +735,7 @@
       "costByDay": {
         "2026-10-12": 14.75,
         "2026-10-13": 46.36,
-        "2026-10-15": 0.0,
+        "2026-10-15": 0,
         "2026-10-16": 10.4,
         "2026-10-17": 15.24,
         "2026-10-18": 66.75
@@ -812,17 +763,17 @@
           "cached": 146662,
           "out": 21912,
           "requests": 17,
-          "costUSD": 0.0
+          "costUSD": 0
         },
         "gemini-3.8-flash-n": {
           "in": 510549,
           "cached": 6507600,
           "out": 63536,
           "requests": 93,
-          "costUSD": 0.0
+          "costUSD": 0
         }
       },
-      "costUSD": 0.0,
+      "costUSD": 0,
       "estimated": true,
       "audit": {
         "databasesSeen": 33,
